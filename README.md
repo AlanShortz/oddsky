@@ -77,10 +77,11 @@ explained by any catalogue.**
 - **Hunt H-0004, stars that go dark** ([hunts/H-0004](hunts/H-0004)): the 2,356 WISE-selected R CrB candidates of Tisserand+2020,
   re-examined in 2018-2026 ZTF and ATLAS data for their first recorded decline. The classifier was calibrated on real R CrB stars
   first (14 of 14 that declined, 0 of 12 that never do). In the north every star that fades like an R CrB star and is bright enough
-  for ZTF was already in a catalogue, which is a result. What was not in any catalogue: **[OS-0013](cases/OS-0013)**, a red giant
-  eclipsed for two weeks every 386 days by something about 80 solar radii across, deeper in blue, with no secondary eclipse: the
-  epsilon Aurigae configuration at a one-year period. Gaia, ZTF and VSX had all missed it because each eclipse lasts 4% of the orbit.
-  Two predictions are sealed; the referee's report and the independent ATLAS record are in the case. The southern half of the
+  for ZTF was already in a catalogue, which is a result. What nobody had reported: **[OS-0015](cases/OS-0015)**, a dust-shrouded star
+  near a star-forming region that goes dark for a week every 385.7 days, four times in four years, deeper in blue, with no
+  secondary eclipse: a translucent dust structure on a one-year orbit. Periodogram-based classifiers never saw it because each
+  eclipse lasts 4% of the orbit. The referee found a fourth eclipse we had missed and removed our "red giant" framing before it
+  went anywhere. Two predictions are sealed; the ATLAS record is the independent check. The southern half of the
   candidate list is still queued on the ATLAS server.
 - **Two hunts parked**, with reasons written down: infrared afterglows of planetary collisions
   ([H-0002](hunts/H-0002), which needs bulk NEOWISE access) and new R CrB stars (H-0003; Gaia DR3 already mined by
@@ -151,7 +152,7 @@ Blind trial over MCP: `claude mcp add oddsky-trial -- uv run oddsky mcp --blind 
 | [OS-0010](cases/OS-0010) | NSV 1302: the young star nobody classified | interpreted |
 | [OS-0011](cases/OS-0011) | a new Algol-type binary, P = 2.52961 d | interpreted |
 | [OS-0012](cases/OS-0012) | the invisible companion that wasn't: a new K+K binary, P = 11.9008 d | closed |
-| [OS-0013](cases/OS-0013) | a red giant eclipsed for two weeks every 386 days by something 80 suns wide | anomaly |
+| [OS-0015](cases/OS-0015) | a dust-shrouded star that goes dark for a week every 385.7 days | anomaly |
 
 Each one is an open invitation to investigate.
 

@@ -52,10 +52,10 @@ down so you can overrule it quickly. In rough priority order:
   should tell them what we found; whether to invite them as co-authors is your call.
 - **Venue.** RNAAS for one or two stars; AJ/MNRAS if the yield and the calibration make a method paper.
 
-## OS-0013: the 386-day eclipser (decisions for you)
+## OS-0015: the 385.7-day eclipser (decisions for you)
 
-- Is a ~80 Rsun dusty occulter on a one-year orbit around a 2.4 kpc giant physically sensible, and which is the better
-  frame: a post-main-sequence binary with a circumsecondary disk (EE Cep, epsilon Aur, Gaia17bpp, TYC 2505-672-1) or a
+- The referee's numbers: L ~ 20-100 Lsun, R under ~10 Rsun, Class II SED, 4 arcsec from IRAS 18180-1342, 18-day contact
+  chord = R_star + R_occulter = 67-97 Rsun for 1-3 Msun, depths changing 0.2-0.4 mag per orbit. Which is the better frame: a post-main-sequence binary with a circumsecondary disk (EE Cep, epsilon Aur, Gaia17bpp, TYC 2505-672-1) or a
   young binary with a warped circumbinary disk (KH 15D, but at 386 d)? The star is a SPICY YSO candidate and sits at
   b = +0.4 degrees.
 - What follow-up settles it: a spectrum at maximum (giant vs. young star), and photometry of the next eclipses

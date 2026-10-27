@@ -28,12 +28,15 @@ through the same pipeline as the calibration set: the classifier's recall on the
 
 **What survived.**
 
-- **[OS-0013](../../cases/OS-0013)**, Tisserand candidate 2682 (2MASS J18205507-1340452). Not an R CrB star: a red giant at 2.4 kpc,
-  flat for years, with three sharp 1.7-2.2 mag eclipses in ZTF (2019, 2021, 2022) and a fourth caught in ingress (2023), deeper in
-  blue, on **P = 385.7 +/- 1 d**, no secondary. An eclipse lasting ~4% of a one-year orbit means the occulter is ~80 Rsun across: a
-  dusty disk around a companion, the epsilon Aurigae / EE Cep configuration at a one-year period. Not in VSX; Gaia DR3 and the ZTF
-  classifiers missed it because the eclipses are too brief for a periodogram. Two predictions sealed (2027 quiet season, 2028
-  January eclipse). Referee report and the ATLAS record (2017-2026, independent of ZTF) in the case directory.
+- **[OS-0015](../../cases/OS-0015)**, Tisserand candidate 2682 (2MASS J18205507-1340452). Not an R CrB star. A dust-shrouded
+  star at 2.4 kpc, 4 arcsec from the star-forming region IRAS 18180-1342, steady to 0.1-0.2 mag, with **four full-depth eclipses in
+  four consecutive years** (2019-2022) in ZTF: 1.5-1.65 mag in r, 1.8-2.2 in g, each about two weeks long, on a strict
+  **P = 385.7 +/- 0.5 d** (O-C under 0.7 d), no secondary. The occulter is a translucent, reddening, evolving dust structure on a
+  one-year orbit, around a companion of an evolved star or in the disk of a young binary. The referee found the fourth eclipse we had
+  missed, killed the "red giant" and "80 solar radii" framing (the star is 20-100 Lsun, so the 18-day chord is star plus occulter),
+  and showed the star was already a "dubious" ATLAS variable and a Gaia DR2 LPV candidate; the eclipses themselves were never
+  reported. Mundane explanations about 5%. Two predictions sealed (2027 quiet season, 2028 January eclipse); ATLAS 2015-2026 is the
+  pending independent check.
 - **Tisserand candidate 41** (2MASS J07235669-1240141), one of Karambelkar+2024's eight "RCB-cand" stars: 4.5-mag aperiodic fades and
   recoveries across ATLAS and ZTF 2016-2026, but the field is crowded and most ATLAS exposures are flagged. Needs a careful case;
   not claimed.

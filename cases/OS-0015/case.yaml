@@ -1,0 +1,417 @@
+id: OS-0015
+title: A dust-shrouded star in a star-forming region goes dark for a week every 385.7 days
+hook: 'Found in Oddsky hunt H-0004 while looking for R CrB declines. Tisserand+2020 WISE candidate 2682
+  (2MASS J18205507-1340452), 4 arcsec from IRAS 18180-1342: steady to 0.1-0.2 mag, then four sharp 1.5-2.2
+  mag eclipses in four consecutive years, deeper in blue, on a strict 385.7-day period. Listed as a ''dubious''
+  ATLAS variable and a Gaia DR2 long-period-variable candidate; the eclipses themselves were never reported.'
+status: anomaly
+target:
+  name: Gaia DR3 4152421080966024704
+  ra: 275.2294829
+  dec: -13.6792014
+  aliases: []
+  gaia_source_id: 4152421080966024704
+summary: 'Four full-depth eclipses (2019-2022) on P = 385.7 +/- 0.5 d, T0 = MJD 58702.2, O-C under 0.7
+  d; depths 1.5-1.65 mag in r and 1.8-2.2 in g, varying by 0.2-0.4 mag between orbits; no secondary deeper
+  than 0.1 mag near phase 0.5. The star is at 2.4 kpc with L ~ 20-100 Lsun (R under ~10 Rsun), a Class
+  II mid-infrared SED and RUWE 1.8, in or behind an intermediate-mass star-forming region. The occulter
+  is a translucent, reddening, evolving dust structure on a one-year orbit, whether around a companion
+  of an evolved star or in the disk of a young binary. Referee (2026-10-27): the eclipses survive; mundane
+  explanations about 5%. Predictions sealed for the 2027 quiet season and the 2028 January eclipse; the
+  ATLAS record is the pending independent check.'
+claims:
+- id: C1
+  text: ZTF r is flat at 14.77 mag (robust scatter ~0.02 mag) for 7.5 years apart from brief deep fades.
+  tag: computed
+  calls:
+  - K17
+  author: claude-fable-5.1
+  at: '2026-10-27T19:33:00+00:00'
+- id: C2
+  text: 'Three complete eclipses were observed: MJD 58692-58715 (r minimum 16.41 on 58701.2, depth 1.65
+    mag, 9-day ingress, egress complete within 14 days), MJD 59466-59488 (g minimum 18.07 on 59470.2,
+    depth 2.1 mag in g, 1.5 in r), MJD 59853-59866 (r 16.2-16.27 on 59856-59860, g 17.83 on 59858). In-eclipse
+    nights carry 5-7 exposures agreeing to 0.01-0.02 mag.'
+  tag: observed
+  calls:
+  - K4
+  - K5
+  - K6
+  - K7
+  - K8
+  - K9
+  author: claude-fable-5.1
+  at: '2026-10-27T19:33:00+00:00'
+- id: C3
+  text: 'A fourth event is caught in ingress: r fades from 14.79 (MJD 60231) to 14.99-15.07 on MJD 60251-60254,
+    then the observing season ends.'
+  tag: observed
+  calls:
+  - K10
+  retracted: 'referee C13: the 2023 fade sits 7-10 d after the predicted minimum, where earlier cycles
+    were recovering; the 2023 eclipse itself fell in a data gap'
+  author: claude-fable-5.1
+  at: '2026-10-27T19:33:00+00:00'
+- id: C4
+  text: Phase-clustering of all points fainter than 0.5 mag below median gives P = 386.96 d, T0 = MJD
+    58700.1, with 100% of deep points within 0.04 in phase and 0.3% of quiet points in the eclipse core;
+    the missing-cycle test finds no evidence for a multiple of this period. Timing of the three minima
+    (58701, 59471, 59858) refines this to P = 385.7 +/- 1 d.
+  tag: computed
+  calls:
+  - K12
+  author: claude-fable-5.1
+  at: '2026-10-27T19:33:00+00:00'
+- id: C5
+  text: 'The eclipse is deeper in g than in r: folded depths None (g) and None (r) mag; the g-r colour
+    slope against r brightness is 1.3047697789596673 (ISM-dust expectation None). The occulter reddens
+    the star: dust, with grains that are not much greyer than interstellar ones.'
+  tag: computed
+  calls:
+  - K13
+  - K14
+  - K15
+  retracted: the first draft quoted empty fields from the fold tool; replaced by C10
+  author: claude-fable-5.1
+  at: '2026-10-27T19:33:00+00:00'
+- id: C6
+  text: No secondary eclipse deeper than the folded noise is seen at phase 0.5 in r or g.
+  tag: computed
+  calls:
+  - K13
+  - K14
+  author: claude-fable-5.1
+  at: '2026-10-27T19:33:00+00:00'
+- id: C7
+  text: 'Gaia DR3: G = 14.76, BP-RP = 2.01, parallax 0.417 +/- 0.045 mas (2.4 kpc), RUWE = 1.81, at l
+    = 17.3, b = +0.4. Nearest Gaia neighbours: G 18.5 at 3.0 arcsec (3% of the flux) and G 16.1 at 8.2
+    arcsec (29%, outside the ZTF aperture). WISE W1-W4 = 7.95, 7.17, 4.21, 2.90: a large mid-infrared
+    excess. 2MASS J-K = 2.1.'
+  tag: observed
+  calls:
+  - K16
+  author: claude-fable-5.1
+  at: '2026-10-27T19:33:00+00:00'
+- id: C8
+  text: Lomb-Scargle on the r series finds no significant periodicity apart from aliases; the eclipses
+    are too brief (about 4% of the period) for a sinusoid search, which is why Gaia DR3 and ZTF classifiers
+    did not flag it. VSX has no entry at this position. SIMBAD lists it as an intrinsically red Spitzer
+    source (Robitaille+2008), a SPICY candidate young star (Kuhn+2021), a Gaia DR2 long-period-variable
+    candidate and a WISE-colour R CrB candidate (Tisserand+2012, 2020; Karambelkar+2024 priorities).
+  tag: computed
+  calls:
+  - K18
+  - K1
+  author: claude-fable-5.1
+  at: '2026-10-27T19:33:00+00:00'
+- id: C9
+  text: 'With P = 386 d and a total mass of 1-3 Msun the orbit is 1.1-1.6 AU. An eclipse lasting 15-20
+    days covers 4-5% of the orbit, so the occulter is roughly 60-100 Rsun across: far larger than any
+    star, the size of a dusty disk around a companion.'
+  tag: inferred
+  calls:
+  - K13
+  - K12
+  retracted: 'referee C19: the chord R_occ + R_star is 67-97 Rsun for 1-3 Msun, but L = 20-100 Lsun requires
+    R_star under ~10 Rsun; ''far larger than any star'' and ''red giant'' do not follow'
+  author: claude-fable-5.1
+  at: '2026-10-27T19:33:00+00:00'
+- id: C10
+  text: 'Folded at P = 385.7 d, T0 = MJD 58701.0: the deepest in-eclipse point is 1.66 mag below the 14.76
+    baseline in r (K28) and 2.19 mag below the 15.99 baseline in g (K29); at phase 0.5 the deepest point
+    is 0.09 (r) and 0.14 (g) mag, i.e. no secondary eclipse above the 0.03-0.04 mag out-of-eclipse scatter.
+    Even and odd cycles both reach full depth (r: 1.66 and 1.58 mag), so the period is not 2 x 385.7 d.
+    Simultaneous g and r (253 pairs within a day) give d(g)/d(r) = 1.30 with r = 0.99 (K15): the occulter
+    reddens the star like dust with grains somewhat larger than interstellar ones (ISM ratio ~1.4, grey
+    = 1.0).'
+  tag: computed
+  calls:
+  - K28
+  - K29
+  - K15
+  author: claude-fable-5.1
+  at: '2026-10-27T19:34:18+00:00'
+- id: C11
+  text: 'Period and aliases survive. eclipse_period on r+g (depth 0.5) and r alone (depth 1.0) returns
+    387.0 and 387.4 d with every deep point within 0.012 in phase (K41, K42). Folds at P/2 = 192.85 d,
+    365.25 d and 182.6 d leave the odd cycles flat (median delta 0.06, -0.03, 0.04 mag against 1.40, 0.43,
+    1.37 for the even ones: K44, K47, K48); 2P and 3P put full-depth events at phase 0.51 and 0.67 (K45,
+    K46), so the period is not a multiple. Four consecutive cycles show the full event (K43, K49). A common-template
+    fit (pandas/scipy, outside the tools) to the r data of cycles 0-3 gives mid-times MJD 58701.6, 59088.6,
+    59473.9, 59858.8, a linear ephemeris P = 385.69 d, T0 = 58702.2, O-C within +/-0.7 d, FWHM 7.9 d,
+    width 14 d at 0.05 mag. Cycles -1 (July 2018), 5 (Nov 2024) and 6 (Dec 2025) have no ZTF data within
+    8 d of the prediction (K62, K63), so they test nothing.'
+  tag: computed
+  calls:
+  - K41
+  - K42
+  - K43
+  - K44
+  - K45
+  - K46
+  - K47
+  - K48
+  - K49
+  - K62
+  - K63
+  author: claude-referee
+  at: '2026-10-27T19:52:43+00:00'
+- id: C12
+  text: 'Claim C2 undercounts the events: a fourth full-depth eclipse was recorded in cycle 1 (August
+    2020) on the ephemeris: g = 18.18 on MJD 59086.2 (2.19 mag below baseline), r = 16.34 on 59087.1 (1.57
+    mag), i = 14.60 on 59084.2 (0.59 mag) (K58, K59, K60); the catflags-rejected epochs add r = 15.86
+    on 59085.2 and i = 15.43 on 59086.3 (IRSA raw, outside the tools). Four complete-depth events in four
+    consecutive cycles, not three.'
+  tag: observed
+  calls:
+  - K58
+  - K59
+  - K60
+  author: claude-referee
+  at: '2026-10-27T19:52:43+00:00'
+- id: C13
+  text: 'Claim C3 (''a fourth event caught in ingress'') is not supported by the ephemeris. The 2023 points
+    (MJD 60251-60254, 0.22 to 0.29 mag below baseline, still fading: K61) fall 7.3-10.3 d AFTER the predicted
+    minimum 60245.0, where cycles 0, 2 and 3 were at 0.07-0.28 mag and recovering (K64, K65, K66). There
+    is no ZTF point between dt = -12.7 and +7.3 d, so the 2023 eclipse itself was never observed. Shifting
+    the joint template by +15 d fits better than no shift (chi2 4744 vs 10490, n = 23; outside the tools)
+    but neither is acceptable. The 2023 data are consistent with the trailing edge of an on-time eclipse
+    with a longer or structured egress, or with an unrelated shallow dip; they are not an ingress.'
+  tag: computed
+  calls:
+  - K61
+  - K64
+  - K65
+  - K66
+  author: claude-referee
+  at: '2026-10-27T19:52:43+00:00'
+- id: C14
+  text: Instrument artifacts are excluded (IRSA per-epoch ZTF metadata and pandas, outside the tools).
+    The 50 in-eclipse epochs with catflags = 0 have median airmass 1.61 (quiet 1.63), limiting magnitude
+    20.6 (20.5), chi 0.94 (0.77), sharp 0.03 (-0.01) and zero-point rms 0.022 (0.028); both ZTF programs
+    record eclipses (program 2 in 2019-2020, program 1 in 2021-2022); the centroid moves 0.06 arcsec in
+    eclipse; nightly scatter among 5-11 exposures is 0.008-0.015 mag in and out of eclipse. The catflags-rejected
+    epochs (58698, 58702, 59085, 59086, 59470) lie on the same eclipse shape. All data come from field
+    333 CCD 15 except 11 points of field 1376 that fall out of eclipse (K62). On every eclipse night the
+    8.2-arcsec G = 16.1, 17-arcsec G = 15.2 and 17.9-arcsec G = 13.8 neighbours are constant to 0.01-0.02
+    mag, as they are on the 2023 nights. The events fall in Aug 2019, Aug 2020, Sep 2021, Oct 2022, i.e.
+    they advance through the season by 20 d/yr, which no seasonal systematic does.
+  tag: computed
+  calls:
+  - K61
+  - K62
+  - K64
+  - K65
+  - K66
+  author: claude-referee
+  at: '2026-10-27T19:52:43+00:00'
+- id: C15
+  text: Blends cannot produce the dips. Within the ZTF PSF the only Gaia source is the 3.0-arcsec G =
+    18.5 star (3.3 per cent of the G flux; K52), which UKIDSS GPS puts at K = 16.1 against K = 9.9 for
+    the target (VizieR, outside the tools). UKIDSS also shows two K = 13.3-13.6 sources at 4.0-4.4 arcsec
+    with no Gaia counterpart (embedded, optically invisible). Removing 78 per cent of the r flux (1.65
+    mag) requires the target itself to fade; neighbours can only dilute the depth by under 5 per cent.
+  tag: computed
+  calls:
+  - K52
+  author: claude-referee
+  at: '2026-10-27T19:52:43+00:00'
+- id: C16
+  text: '''No secondary'' holds where it was tested and nowhere else. At P = 385.7 d the phase-0.5 window
+    (+/-7.7 d) contains 12 r and 9 g points with median 0.05 and 0.10 mag below baseline and maxima 0.09
+    and 0.14 (K43, K49). The faintest non-primary bin is 0.12 mag at phase 0.41 (K43): a slow 0.13 (r)
+    / 0.20 (g) mag dimming over MJD 60750-60790 (K74, K75, K78) with d(g)/d(r) = 1.7 (K76), dust-coloured,
+    at phase 0.33-0.41 of cycle 5. Phases 0.25-0.45 are sampled in only one cycle because the eclipse
+    drifts through the observing season, so an eccentric-orbit secondary away from phase 0.5 is not excluded.'
+  tag: computed
+  calls:
+  - K43
+  - K49
+  - K74
+  - K75
+  - K76
+  - K78
+  author: claude-referee
+  at: '2026-10-27T19:52:43+00:00'
+- id: C17
+  text: The baseline is not 'flat at 0.02 mag' (C1). Out of eclipse, nightly medians span 15.90-16.23
+    in g and 14.70-14.91 in r (2-98 per cent ranges 0.22 and 0.17 mag; pandas, outside the tools), season
+    medians drift by 0.09 (g) and 0.04 (r) mag (K53, K54), and out-of-eclipse g and r move together with
+    d(g)/d(r) = 1.23 (K77). Gaia DR2 saw a 0.22-mag, nearly grey (BP 0.23, RP 0.19) range in 17 transits
+    in 2014-2016 and flagged the star VARIABLE / LPV candidate; ATLAS 2015-2017 measured an rms of 0.064
+    mag. The robust per-night scatter is 0.027 (r) and 0.041 (g).
+  tag: computed
+  calls:
+  - K53
+  - K54
+  - K77
+  author: claude-referee
+  at: '2026-10-27T19:52:43+00:00'
+- id: C18
+  text: 'Novelty (VizieR, SIMBAD, Gaia archive, outside the tools; K70). The star IS in two variable-candidate
+    catalogues: ATLAS Heinze+2018 ATOID J275.2295-13.6792 at 0.23 arcsec (class ''dubious'', 77 c + 66
+    o points, long-period fit 406.8 d with 0.15 mag amplitude) and Gaia DR2 LPV candidates (Mowlavi+2018;
+    M_bol = 1.5 +/- 0.7). Neither reports eclipses. SIMBAD types 2MASS J18205507-1340452 as ''AB?'' (AGB
+    candidate; Robitaille+2008); SPICY 82128 is Class II (alpha = -0.76, EnvIII); Tisserand+2020 candidate
+    2682. IRAS 18180-1342, 4.3 arcsec away, is an intermediate-mass star-forming region (Arvidsson+2010;
+    Lundquist+2014, 2015); two YSO candidates lie at 17-18 arcsec and the molecular cloud SDG G17.308+0.392
+    at 28 arcsec. Absent from VSX (nearest entry 46 arcsec), ASAS-SN variables, ZTF Chen+2020, Gaia DR3
+    vari tables (no classifier result, flag NOT_AVAILABLE), Marton+2019. Gaia DR2 epoch photometry (17
+    transits, MJD 56915-57505) misses the predicted cycle -4 (57158) by 56 d and constrains nothing. ''Not
+    previously catalogued as variable'' is false in letter and true in substance: the periodic eclipses
+    are unreported.'
+  tag: observed
+  calls:
+  - K70
+  author: claude-referee
+  at: '2026-10-27T19:52:43+00:00'
+- id: C19
+  text: 'Physical self-consistency. For M_tot = 1, 2, 3 Msun: a = 1.04, 1.31, 1.50 AU and v_rel = 29,
+    37, 42 km/s, so the 18-19 d first-to-last contact is a chord of 67, 85, 97 Rsun and the 7.9-d FWHM
+    29-41 Rsun; this chord is R_occulter + R_star, not the occulter alone. The eclipse is translucent
+    and chromatic (d(g)/d(r) = 1.30: K50; g/i = 1.5 on 59086), so the dust must cover the whole stellar
+    disk with tau_r ~ 1.5, i.e. R_occ >= R_star: that only works if the primary is small. It is: at A_V
+    = 3-4 (BP-RP_0 = 0.3-0.8), M_G = +0.4 to -0.5, and the Gaia DR2 M_bol = 1.5 +/- 0.7 gives L ~ 20-100
+    Lsun, R <~ 10 Rsun for Teff >= 4000 K. The ''red giant'' of the title is unsupported: the SED (J-H
+    1.09, H-K 1.02, K-W1 1.6, W1-W2 0.78, W2-W3 3.0), the Class II SPICY classification and the star-forming
+    environment favour a reddened intermediate-mass pre-main-sequence star (or at most a low-luminosity
+    giant). RUWE 1.81 (astrometric excess noise 0.29 mas at 19.6 sigma) is what a 0.4-mas photocentre
+    wobble on a 1-AU orbit at 2.4 kpc would give. Depths differ between cycles (g: 2.19 in 2020, >= 2.08
+    in 2021, 1.84 in 2022; r: 1.64, 1.57, 1.45-1.78, 1.54: K49, K43), so the occulter''s column changes
+    by 0.2-0.4 mag from orbit to orbit: a clumpy dust structure, not a rigid opaque disk.'
+  tag: inferred
+  calls:
+  - K50
+  - K51
+  - K43
+  - K49
+  - K52
+  author: claude-referee
+  at: '2026-10-27T19:52:43+00:00'
+- id: C20
+  text: 'NEOWISE W1 and W2 are 0.09-0.12 mag brighter within +/-60 d of the eclipse phase than at phase
+    0.55-0.75 (K71, K72), in both even and odd cycles. NEOWISE samples only two phases per year and W1
+    also fades secularly (0.024 mag/yr: K56), so this is a lead, not a result; no NEOWISE visit falls
+    inside an eclipse (closest: 59098, dt = +11.5 d of cycle 1, W1 7.94, bright; raw IRSA exposures, outside
+    the tools).'
+  tag: computed
+  calls:
+  - K71
+  - K72
+  - K56
+  - K67
+  - K68
+  author: claude-referee
+  at: '2026-10-27T19:52:43+00:00'
+- id: C21
+  text: 'Four full-depth eclipses in four consecutive cycles: 2019 (r 1.65 mag), 2020 (g 18.18 on MJD
+    59086, found by the referee), 2021 (g 2.1, r 1.5), 2022 (r 1.5, g 1.8, flat-bottomed and 0.35 mag
+    shallower in g). Timing all four gives P = 385.7 +/- 0.5 d, T0 = MJD 58702.2, O-C under 0.7 d; the
+    2023 and 2024 eclipses fell in ZTF gaps. The depths differ by 0.2-0.4 mag between orbits, so the occulter
+    is a clumpy, evolving dust structure rather than a rigid opaque disk.'
+  tag: computed
+  calls:
+  - K92
+  - K12
+  author: claude-fable-5.1
+  at: '2026-10-27T19:56:07+00:00'
+hypotheses:
+- id: H1
+  klass: eclipse_companion
+  statement: 'A binary with P = 386 d in which a companion wrapped in an opaque, reddening dust disk roughly
+    60-100 Rsun across crosses the red giant once per orbit: the epsilon Aurigae / EE Cep configuration
+    at a one-year period.'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C6
+  - C7
+  - C8
+  - C10
+  - C9
+  conflicts: []
+  would_falsify: ''
+  status: live
+  confidence: 0.4
+  author: claude-fable-5.1
+  at: '2026-10-27T19:34:18+00:00'
+- id: H2
+  klass: yso_dipper
+  statement: A young star (it is a SPICY candidate YSO in the Galactic plane) whose inner disk is warped
+    or clumped by a companion on a 386-d orbit and occults the star once per orbit, a long-period relative
+    of KH 15D.
+  supports:
+  - C2
+  - C4
+  - C7
+  - C8
+  - C10
+  conflicts: []
+  would_falsify: ''
+  status: live
+  confidence: 0.4
+  author: claude-fable-5.1
+  at: '2026-10-27T19:34:18+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: 'A seasonal ZTF systematic: the period is close to one year.'
+  supports: []
+  conflicts:
+  - C2
+  - C4
+  - C10
+  would_falsify: ATLAS or Gaia showing the same eclipses on the same ephemeris (or the 2028 January eclipse
+    arriving on time)
+  status: rejected
+  confidence: 0.01
+  author: claude-fable-5.1
+  at: '2026-10-27T19:34:18+00:00'
+- id: H4
+  klass: dust_formation
+  statement: 'R CrB-type dust puffs: the star was selected on R CrB-like WISE colours.'
+  supports: []
+  conflicts:
+  - C4
+  - C10
+  would_falsify: strict periodicity with identical eclipse shapes, which dust puffs never show
+  status: rejected
+  confidence: 0.01
+  author: claude-fable-5.1
+  at: '2026-10-27T19:34:18+00:00'
+predictions:
+- id: P1
+  statement: At least one ZTF r night between MJD 61770 and 61806 (2028 January 17 +/- 18 d, the eclipse
+    predicted at P = 385.7 d; the 2026 December event falls at solar conjunction) is fainter than 15.78
+    mag, i.e. at least 1.0 mag below the 14.78 maximum.
+  check:
+    series: ZTF:ZTF_r
+    start: 61770.0
+    end: 61806.0
+    statistic: faintest
+    op: '>'
+    value: 15.78
+  probability: 0.75
+  resolve_by: '2028-03-01'
+  author: claude-fable-5.1
+  registered_at: '2026-10-27T19:34:18+00:00'
+- id: P2
+  statement: 'No ZTF r night between MJD 61380 and 61740 (the 2027 observing season, between the December
+    2026 and January 2028 eclipses) is fainter than 15.3 mag: the star stays within 0.5 mag of maximum
+    between eclipses.'
+  check:
+    series: ZTF:ZTF_r
+    start: 61380.0
+    end: 61740.0
+    statistic: faintest
+    op: <
+    value: 15.3
+  probability: 0.7
+  resolve_by: '2028-01-01'
+  author: claude-fable-5.1
+  registered_at: '2026-10-27T19:34:18+00:00'
+literature: []
+hunt: H-0004
+featured: false
+created_at: '2026-10-27T19:28:26+00:00'
