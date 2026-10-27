@@ -1,0 +1,60 @@
+{
+ "id": "T20-1422",
+ "ra": 310.9035944,
+ "dec": 59.5477203,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "ZTF J204336.86+593252.0",
+   "VariabilityType": "M",
+   "Period": "542.4349372",
+   "MaxMag": "18.670 r",
+   "MinMag": "(2.439) r",
+   "Discoverer": "Zwicky Transient Facility (ZTF)",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "IRAS 20424+5921",
+   "otype": "C*",
+   "sep": 0.16052598589553124,
+   "nref": 9
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [],
+ "variability": {
+  "summary": {
+   "num_selected_g_fov": 56,
+   "mean_mag_g_fov": 17.22084,
+   "std_dev_mag_g_fov": 0.50912416,
+   "range_mag_g_fov": 1.9999725,
+   "skewness_mag_g_fov": -0.60566396,
+   "in_vari_long_period_variable": true,
+   "in_vari_eclipsing_binary": false,
+   "in_vari_rrlyrae": false,
+   "in_vari_cepheid": false,
+   "in_vari_short_timescale": false,
+   "in_vari_agn": false,
+   "in_vari_classification_result": true
+  },
+  "long_period_variable": {
+   "frequency": 0.0017589285924199,
+   "frequency_error": 0.000112364054,
+   "amplitude": 0.8035218,
+   "median_delta_wl_rp": 9.124,
+   "is_cstar": true,
+   "period_days": 568.527911996825
+  },
+  "classifier": {
+   "best_class_name": "LPV",
+   "best_class_score": 0.91678834
+  }
+ },
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 1.93575,
+ "w1_w2_range": 0.8055000000000008,
+ "w1_w2_corr": 0.28503755067973463
+}

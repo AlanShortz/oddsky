@@ -13,7 +13,7 @@ from ..case.model import now
 from ..case.store import CaseStore, _jsonable
 
 # Effective blending radii (arcsec): roughly the PSF FWHM or photometric aperture.
-RADII = {"NEOWISE": 6.1, "ASAS-SN": 16.0, "TESS": 42.0, "ZTF": 2.0, "AAVSO": 5.0}
+RADII = {"NEOWISE": 6.1, "ASAS-SN": 16.0, "TESS": 42.0, "ZTF": 2.0, "AAVSO": 5.0, "ATLAS": 8.0}
 
 Check = dict
 
@@ -92,7 +92,7 @@ def neowise_quality(store: CaseStore) -> list[Check]:
 def independent_confirmation(store: CaseStore) -> list[Check]:
     """Has anyone else seen it? The most important question in astronomy."""
     out = []
-    optical = [s for s in store.surveys() if s in ("aavso", "asassn", "ztf", "tess")]
+    optical = [s for s in store.surveys() if s in ("aavso", "asassn", "ztf", "atlas", "tess")]
     if not [o for o in optical if o != "tess"]:
         return [_check("confirmation", "Independent optical confirmation", "warn",
                        "the only optical data are TESS: one spacecraft, normalised per sector. Nothing here has "
@@ -170,7 +170,7 @@ def aliases(store: CaseStore) -> list[Check]:
             if "peaks" not in pg:
                 continue
             top = pg["peaks"][0]
-            if s in ("aavso", "asassn", "ztf") and any("day" in f for f in top["alias_flags"]):
+            if s in ("aavso", "asassn", "ztf", "atlas") and any("day" in f for f in top["alias_flags"]):
                 # Nightly sampling: the day alias dominates. Report the best period longer than 2 d too.
                 longer = periodogram(g, min_period=2.0, max_period=span / 2, n_peaks=3, samples=8000)["peaks"][0]
                 top = {**top, "alias_flags": top["alias_flags"] + [
@@ -187,7 +187,7 @@ def aliases(store: CaseStore) -> list[Check]:
 
 def onset_coverage(store: CaseStore) -> list[Check]:
     out = []
-    for s in ("aavso", "asassn", "ztf"):
+    for s in ("aavso", "asassn", "ztf", "atlas"):
         if s not in store.surveys():
             continue
         df = store.series(s)

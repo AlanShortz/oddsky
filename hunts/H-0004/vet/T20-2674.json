@@ -1,0 +1,41 @@
+{
+ "id": "T20-2674",
+ "ra": 274.868522,
+ "dec": -12.2737094,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "ZTF J181928.18-121634.3",
+   "VariabilityType": "EW",
+   "Period": "0.3013982",
+   "MaxMag": "17.833 r",
+   "MinMag": "(0.343) r",
+   "Discoverer": "Zwicky Transient Facility (ZTF)",
+   "AUID": null
+  },
+  {
+   "Name": "ZTF J181928.44-121625.3",
+   "VariabilityType": "SR",
+   "Period": "102.9390367",
+   "MaxMag": "19.243 g",
+   "MinMag": "(0.764) g",
+   "Discoverer": "Zwicky Transient Facility (ZTF)",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "ZTF J181928.44-121625.3",
+   "otype": "LP*",
+   "sep": 0.05222471758237763,
+   "nref": 5
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": NaN,
+ "w1_w2_range": null,
+ "w1_w2_corr": null
+}

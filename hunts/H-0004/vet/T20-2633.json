@@ -1,0 +1,32 @@
+{
+ "id": "T20-2633",
+ "ra": 272.6898458,
+ "dec": -15.7690712,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "Gaia DR3 4145889908872163584",
+   "VariabilityType": "SR|M",
+   "Period": "398.3",
+   "MaxMag": "15.96 G",
+   "MinMag": "18.20 G",
+   "Discoverer": "Gaia collaboration",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "2MASS J18104558-1546089",
+   "otype": "LP*",
+   "sep": 0.41211338277199183,
+   "nref": 2
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": NaN,
+ "w1_w2_range": null,
+ "w1_w2_corr": null
+}

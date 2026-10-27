@@ -67,3 +67,19 @@ def test_retracted_claims_stay_in_the_record(dusty_case):
     tb.retract_claim("OS-0001", "C1", "probe, not a claim")
     c = dusty_case.load()
     assert c.claims[0].retracted == "probe, not a claim" and len(c.claims) == 1
+
+
+def test_hunt_field_round_trips_and_exports(dusty_case):
+    from oddsky.export import export_web
+
+    c = dusty_case.load()
+    c.hunt = "H-0004"
+    dusty_case.save(c)
+    assert dusty_case.load().hunt == "H-0004"
+    out = dusty_case.path.parent.parent / "web" / "data"
+    ids = export_web(out)
+    assert "OS-0001" in ids
+    import json
+
+    index = json.loads((out / "index.json").read_text())
+    assert next(i for i in index["cases"] if i["id"] == "OS-0001")["hunt"] == "H-0004"

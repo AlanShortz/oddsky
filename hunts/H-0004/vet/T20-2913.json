@@ -1,0 +1,77 @@
+{
+ "id": "T20-2913",
+ "ra": 299.276579,
+ "dec": 19.9954675,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "RS Sge",
+   "VariabilityType": "RVB",
+   "Period": "81.3",
+   "MaxMag": "10.8 V",
+   "MinMag": "14.2 V",
+   "Discoverer": "Maximilian Wolf (1905)",
+   "AUID": "000-BCJ-818"
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "V* RS Sge",
+   "otype": "RV*",
+   "sep": 0.06324045550290434,
+   "nref": 18
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [
+  {
+   "source_id": 1823328795328595328,
+   "sep_arcsec": 2.049,
+   "phot_g_mean_mag": 20.378,
+   "flux_ratio_G": 0.001
+  },
+  {
+   "source_id": 1823328795307414272,
+   "sep_arcsec": 2.86,
+   "phot_g_mean_mag": 20.823,
+   "flux_ratio_G": 0.001
+  },
+  {
+   "source_id": 1823328589148984960,
+   "sep_arcsec": 7.312,
+   "phot_g_mean_mag": 20.111,
+   "flux_ratio_G": 0.002
+  },
+  {
+   "source_id": 1823328589156500608,
+   "sep_arcsec": 9.283,
+   "phot_g_mean_mag": 21.187,
+   "flux_ratio_G": 0.001
+  }
+ ],
+ "variability": {
+  "summary": {
+   "num_selected_g_fov": 48,
+   "mean_mag_g_fov": 12.067211,
+   "std_dev_mag_g_fov": 1.1243879,
+   "range_mag_g_fov": 3.1419759,
+   "skewness_mag_g_fov": 0.044413112,
+   "in_vari_long_period_variable": false,
+   "in_vari_eclipsing_binary": false,
+   "in_vari_rrlyrae": false,
+   "in_vari_cepheid": false,
+   "in_vari_short_timescale": false,
+   "in_vari_agn": false,
+   "in_vari_classification_result": true
+  },
+  "classifier": {
+   "best_class_name": "LPV",
+   "best_class_score": 0.005747092
+  }
+ },
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 0.9094999999999995,
+ "w1_w2_range": 0.6414999999999997,
+ "w1_w2_corr": 0.2590495859521943
+}

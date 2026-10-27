@@ -1,0 +1,40 @@
+{
+ "id": "T20-2428",
+ "ra": 262.0688367,
+ "dec": -24.8443071,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "NSV 22105",
+   "VariabilityType": "CWA",
+   "Period": "9.832361",
+   "MaxMag": "13.746 Ic",
+   "MinMag": "(0.842) Ic",
+   "Discoverer": null,
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "Terz V 2265",
+   "otype": "WV*",
+   "sep": 0.02760676397697818,
+   "nref": 8
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 21,
+ "w1_median": 9.8265,
+ "w1_range": 1.0214999999999996,
+ "w1_first": 9.705,
+ "w1_last": 10.561,
+ "w2_median": 8.984,
+ "w2_range": 0.9320000000000004,
+ "w2_first": 8.8215,
+ "w2_last": 9.6235,
+ "w1_w2_median": 0.8834999999999997,
+ "w1_w2_range": 0.12449999999999939,
+ "w1_w2_corr": 0.7098517212142876
+}

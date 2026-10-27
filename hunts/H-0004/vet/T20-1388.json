@@ -1,0 +1,32 @@
+{
+ "id": "T20-1388",
+ "ra": 298.7062863,
+ "dec": 30.7325013,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "ZTF J195449.50+304356.9",
+   "VariabilityType": "SR",
+   "Period": "161.3961275",
+   "MaxMag": "19.785 r",
+   "MinMag": "(0.576) r",
+   "Discoverer": "Zwicky Transient Facility (ZTF)",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "IRAS 19528+3035",
+   "otype": "LP*",
+   "sep": 0.07441660078872704,
+   "nref": 4
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 1.3159999999999998,
+ "w1_w2_range": 0.9290000000000003,
+ "w1_w2_corr": -0.3551129211852139
+}

@@ -1,0 +1,60 @@
+{
+ "id": "T20-2484",
+ "ra": 265.6647475,
+ "dec": -6.4437767,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "Gaia DR3 4169177702585021440",
+   "VariabilityType": "SR|M",
+   "Period": "645.0",
+   "MaxMag": "15.49 G",
+   "MinMag": "18.39 G",
+   "Discoverer": "Gaia collaboration",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "IRAS 17399-0625",
+   "otype": "AB*",
+   "sep": 0.37002779103427785,
+   "nref": 5
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [],
+ "variability": {
+  "summary": {
+   "num_selected_g_fov": 53,
+   "mean_mag_g_fov": 17.208712,
+   "std_dev_mag_g_fov": 0.94384974,
+   "range_mag_g_fov": 2.8924816,
+   "skewness_mag_g_fov": -0.76247185,
+   "in_vari_long_period_variable": true,
+   "in_vari_eclipsing_binary": false,
+   "in_vari_rrlyrae": false,
+   "in_vari_cepheid": false,
+   "in_vari_short_timescale": false,
+   "in_vari_agn": false,
+   "in_vari_classification_result": true
+  },
+  "long_period_variable": {
+   "frequency": 0.001550434668286,
+   "frequency_error": 0.00010496846,
+   "amplitude": 1.2792857,
+   "median_delta_wl_rp": 16.412,
+   "is_cstar": true,
+   "period_days": 644.9804177208554
+  },
+  "classifier": {
+   "best_class_name": "LPV",
+   "best_class_score": 0.80257577
+  }
+ },
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": NaN,
+ "w1_w2_range": null,
+ "w1_w2_corr": null
+}

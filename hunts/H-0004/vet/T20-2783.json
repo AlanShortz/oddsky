@@ -1,0 +1,30 @@
+{
+ "id": "T20-2783",
+ "ra": 281.8584384,
+ "dec": 6.2146852,
+ "verdict": "rcb_like",
+ "vsx": [],
+ "simbad": [
+  {
+   "main_id": "IRAS 18450+0609",
+   "otype": "*",
+   "sep": 0.12879589407936415,
+   "nref": 2
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 4,
+ "w1_median": 8.1845,
+ "w1_range": 0.11500000000000021,
+ "w1_first": 8.127,
+ "w1_last": 8.242,
+ "w2_median": 7.268,
+ "w2_range": 0.3144999999999998,
+ "w2_first": 7.329,
+ "w2_last": 7.259,
+ "w1_w2_median": 0.6999999999999993,
+ "w1_w2_range": 0.37950000000000106,
+ "w1_w2_corr": 0.6691561747429271
+}

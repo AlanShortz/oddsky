@@ -18,7 +18,8 @@
    "n_claims": 18,
    "n_hypotheses": 6,
    "n_predictions": 3,
-   "featured": true
+   "featured": true,
+   "hunt": null
   },
   {
    "id": "OS-0002",
@@ -47,7 +48,8 @@
    "n_claims": 0,
    "n_hypotheses": 0,
    "n_predictions": 0,
-   "featured": false
+   "featured": false,
+   "hunt": null
   },
   {
    "id": "OS-0003",
@@ -79,7 +81,8 @@
    "n_claims": 25,
    "n_hypotheses": 3,
    "n_predictions": 3,
-   "featured": false
+   "featured": false,
+   "hunt": null
   },
   {
    "id": "OS-0004",
@@ -110,7 +113,8 @@
    "n_claims": 0,
    "n_hypotheses": 0,
    "n_predictions": 0,
-   "featured": false
+   "featured": false,
+   "hunt": null
   },
   {
    "id": "OS-0005",
@@ -139,7 +143,8 @@
    "n_claims": 0,
    "n_hypotheses": 0,
    "n_predictions": 0,
-   "featured": false
+   "featured": false,
+   "hunt": null
   },
   {
    "id": "OS-0006",
@@ -173,7 +178,8 @@
    "n_claims": 0,
    "n_hypotheses": 0,
    "n_predictions": 0,
-   "featured": false
+   "featured": false,
+   "hunt": null
   },
   {
    "id": "OS-0007",
@@ -195,7 +201,8 @@
    "n_claims": 0,
    "n_hypotheses": 0,
    "n_predictions": 0,
-   "featured": false
+   "featured": false,
+   "hunt": null
   },
   {
    "id": "OS-0008",
@@ -211,7 +218,8 @@
    "n_claims": 0,
    "n_hypotheses": 0,
    "n_predictions": 0,
-   "featured": false
+   "featured": false,
+   "hunt": null
   },
   {
    "id": "OS-0009",
@@ -227,7 +235,8 @@
    "n_claims": 0,
    "n_hypotheses": 0,
    "n_predictions": 0,
-   "featured": false
+   "featured": false,
+   "hunt": null
   },
   {
    "id": "OS-0010",
@@ -248,7 +257,8 @@
    "n_claims": 6,
    "n_hypotheses": 4,
    "n_predictions": 0,
-   "featured": false
+   "featured": false,
+   "hunt": null
   },
   {
    "id": "OS-0011",
@@ -270,7 +280,8 @@
    "n_claims": 4,
    "n_hypotheses": 1,
    "n_predictions": 0,
-   "featured": false
+   "featured": false,
+   "hunt": null
   },
   {
    "id": "OS-0012",
@@ -292,7 +303,29 @@
    "n_claims": 20,
    "n_hypotheses": 6,
    "n_predictions": 0,
-   "featured": false
+   "featured": false,
+   "hunt": null
+  },
+  {
+   "id": "OS-0013",
+   "title": "A red giant eclipsed for two weeks every 386 days by something 80 suns wide",
+   "hook": "Found in Oddsky hunt H-0004 while looking for R CrB declines. Tisserand+2020 WISE candidate 2682 (2MASS J18205507-1340452): flat for years, then three sharp 1.7-2.2 mag eclipses in ZTF, deeper in blue, on a 386-day period that ZTF, Gaia and VSX had all missed because each eclipse lasts only 4% of the orbit.",
+   "status": "anomaly",
+   "target": "Gaia DR3 4152421080966024704",
+   "series": [
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "NEOWISE_EXP:W1",
+    "NEOWISE_EXP:W2",
+    "ZTF:ZTF_g",
+    "ZTF:ZTF_i",
+    "ZTF:ZTF_r"
+   ],
+   "n_claims": 10,
+   "n_hypotheses": 4,
+   "n_predictions": 2,
+   "featured": false,
+   "hunt": "H-0004"
   }
  ],
  "scorecards": [

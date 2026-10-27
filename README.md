@@ -46,7 +46,7 @@ single point of failure.
 | | |
 |---|---|
 | **The observatory** | 24 MCP tools: case overview, light curves, changepoints, excursions (dips and flares), Lomb-Scargle with spectral-window alias flags, cross-band colour slopes, WISE colour and infrared-excess temperature, Gaia neighbours, and tools for recording claims, hypotheses and predictions. `oddsky tools` lists them. |
-| **Archives** | Gaia DR3 (context, neighbours, variability), NEOWISE 2014-2024 (quality-cut, visit-binned), AAVSO (a century of amateur photometry), TESS (SPOC/QLP), ZTF, ASAS-SN. Every cut is written to provenance. |
+| **Archives** | Gaia DR3 (context, neighbours, variability), NEOWISE 2014-2024 (quality-cut, visit-binned), AAVSO (a century of amateur photometry), TESS (SPOC/QLP), ZTF, ATLAS (whole-sky forced photometry, 2015-), ASAS-SN. Every cut is written to provenance. |
 | **The Skeptic** | Deterministic artifact checks: blends inside each survey's beam, saturation, single-observer data, series that start mid-event (against Gaia's baseline), colour coherence across bands, survey-rhythm aliases, unobserved onsets, TESS dips on momentum dumps and sector edges, RUWE. It is code, so it cannot be talked out of a warning. |
 | **Cases** | A case is a directory (`cases/OS-0001/`): `case.yaml` holds the argument, `data/` the evidence, and `ledger.jsonl` every tool call with a digest of its result. Fork = fork. Review = pull request. `oddsky replay OS-0001` re-runs the ledger. |
 | **Trials** | Blind (identity, coordinates and dates scrubbed; name the explanation), hindsight (data cut at a date; forecast what happens next, graded against what actually happened), and salted (real data with planted spacecraft artifacts). Answers are sha256-sealed before anyone runs. |
@@ -74,6 +74,14 @@ explained by any catalogue.**
   independent measurement, labelled as such.
 - **NSV 1302** ([OS-0010](cases/OS-0010)): a "suspected variable" since the photographic era, characterised as an
   irregular young-star dipper in Per OB2.
+- **Hunt H-0004, stars that go dark** ([hunts/H-0004](hunts/H-0004)): the 2,356 WISE-selected R CrB candidates of Tisserand+2020,
+  re-examined in 2018-2026 ZTF and ATLAS data for their first recorded decline. The classifier was calibrated on real R CrB stars
+  first (14 of 14 that declined, 0 of 12 that never do). In the north every star that fades like an R CrB star and is bright enough
+  for ZTF was already in a catalogue, which is a result. What was not in any catalogue: **[OS-0013](cases/OS-0013)**, a red giant
+  eclipsed for two weeks every 386 days by something about 80 solar radii across, deeper in blue, with no secondary eclipse: the
+  epsilon Aurigae configuration at a one-year period. Gaia, ZTF and VSX had all missed it because each eclipse lasts 4% of the orbit.
+  Two predictions are sealed; the referee's report and the independent ATLAS record are in the case. The southern half of the
+  candidate list is still queued on the ATLAS server.
 - **Two hunts parked**, with reasons written down: infrared afterglows of planetary collisions
   ([H-0002](hunts/H-0002), which needs bulk NEOWISE access) and new R CrB stars (H-0003; Gaia DR3 already mined by
   the experts, and our candidates were a VY Scl binary, a Mira, an S star and a T Tauri star).
@@ -143,6 +151,7 @@ Blind trial over MCP: `claude mcp add oddsky-trial -- uv run oddsky mcp --blind 
 | [OS-0010](cases/OS-0010) | NSV 1302: the young star nobody classified | interpreted |
 | [OS-0011](cases/OS-0011) | a new Algol-type binary, P = 2.52961 d | interpreted |
 | [OS-0012](cases/OS-0012) | the invisible companion that wasn't: a new K+K binary, P = 11.9008 d | closed |
+| [OS-0013](cases/OS-0013) | a red giant eclipsed for two weeks every 386 days by something 80 suns wide | anomaly |
 
 Each one is an open invitation to investigate.
 

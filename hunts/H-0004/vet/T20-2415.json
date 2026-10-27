@@ -1,0 +1,32 @@
+{
+ "id": "T20-2415",
+ "ra": 261.0163138,
+ "dec": -23.1729249,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "OGLE-BLG-LPV-237745",
+   "VariabilityType": "M",
+   "Period": "485.8",
+   "MaxMag": "15.227 Ic",
+   "MinMag": "(2.816) Ic",
+   "Discoverer": "P. Iwanek et al. (OGLE)",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "IRAS 17210-2307",
+   "otype": "Mi*",
+   "sep": 0.08706129793082326,
+   "nref": 5
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 0.3500000000000001,
+ "w1_w2_range": 0.9664999999999995,
+ "w1_w2_corr": -0.46919582866931964
+}

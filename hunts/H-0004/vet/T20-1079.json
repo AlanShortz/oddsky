@@ -1,0 +1,64 @@
+{
+ "id": "T20-1079",
+ "ra": 134.3576647,
+ "dec": 17.3477753,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "NSV 18091",
+   "VariabilityType": "M",
+   "Period": "391",
+   "MaxMag": "18.2 CV",
+   "MinMag": "21.0 CV",
+   "Discoverer": null,
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "IRAS 08546+1732",
+   "otype": "C*",
+   "sep": 0.043573698170402096,
+   "nref": 22
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [],
+ "variability": {
+  "summary": {
+   "num_selected_g_fov": 40,
+   "mean_mag_g_fov": 19.226175,
+   "std_dev_mag_g_fov": 0.682036,
+   "range_mag_g_fov": 2.3279457,
+   "skewness_mag_g_fov": -0.0074209124,
+   "in_vari_long_period_variable": true,
+   "in_vari_eclipsing_binary": false,
+   "in_vari_rrlyrae": false,
+   "in_vari_cepheid": false,
+   "in_vari_short_timescale": false,
+   "in_vari_agn": false,
+   "in_vari_classification_result": true
+  },
+  "long_period_variable": {
+   "frequency": 0.0024311111443029,
+   "frequency_error": 0.000212256,
+   "amplitude": 0.9028712,
+   "median_delta_wl_rp": 1.894,
+   "is_cstar": false,
+   "period_days": 411.334546486455
+  },
+  "classifier": {
+   "best_class_name": "LPV",
+   "best_class_score": 0.8566563
+  }
+ },
+ "neowise_status": "ok",
+ "n_visits": 2,
+ "w1_median": 8.24,
+ "w1_range": 0.35050000000000026,
+ "w1_first": 8.24,
+ "w1_last": 8.019,
+ "w1_w2_median": 1.3564999999999996,
+ "w1_w2_range": 0.41550000000000065,
+ "w1_w2_corr": 0.48937922148041574
+}

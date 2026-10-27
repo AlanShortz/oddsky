@@ -1,0 +1,40 @@
+{
+ "id": "T20-2454",
+ "ra": 264.0824528,
+ "dec": -28.9800479,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "OGLE-BLG-T2CEP-0494",
+   "VariabilityType": "RVB",
+   "Period": "33.4718",
+   "MaxMag": "14.971 Ic",
+   "MinMag": "(0.995) Ic",
+   "Discoverer": "I. Soszynski et al. (OGLE)",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "OGLE BLG653.3  55060",
+   "otype": "cC*",
+   "sep": 0.11784488196151173,
+   "nref": 12
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 19,
+ "w1_median": 9.165,
+ "w1_range": 0.9400000000000013,
+ "w1_first": 9.071,
+ "w1_last": 9.165,
+ "w2_median": 8.676,
+ "w2_range": 1.2670000000000012,
+ "w2_first": 8.367,
+ "w2_last": 8.386,
+ "w1_w2_median": 0.7875000000000005,
+ "w1_w2_range": 0.24849999999999994,
+ "w1_w2_corr": 0.28649526147308774
+}

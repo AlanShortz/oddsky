@@ -1,0 +1,32 @@
+{
+ "id": "T20-2805",
+ "ra": 283.5125045,
+ "dec": 0.2597781,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "FASTT 1211",
+   "VariabilityType": "M",
+   "Period": "372.5",
+   "MaxMag": "18.757 r",
+   "MinMag": "(4.189) r",
+   "Discoverer": null,
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "OGLE GD-LPV-22509",
+   "otype": "Mi*",
+   "sep": 0.08426632984111221,
+   "nref": 6
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": NaN,
+ "w1_w2_range": null,
+ "w1_w2_corr": null
+}

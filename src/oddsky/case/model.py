@@ -123,6 +123,7 @@ class Case(BaseModel):
     predictions: list[Prediction] = Field(default_factory=list)
     literature: list[Reference] = Field(default_factory=list)
     resolution: dict[str, Any] | None = None
+    hunt: str | None = None  # e.g. "H-0004": the systematic search that opened this case
     featured: bool = False
     created_at: str = Field(default_factory=now)
 

@@ -9,7 +9,7 @@ import { stamp, stampLegend, ladder, statusPill, agentBlock, emptyNote, sectionH
 import { renderMarkdown, inline } from './markdown.js';
 import { trialTeaser } from './pages.js';
 
-const SURVEY_NAMES = { gaia: 'Gaia DR3', neowise: 'NEOWISE', aavso: 'AAVSO', ztf: 'ZTF', asassn: 'ASAS-SN', tess: 'TESS' };
+const SURVEY_NAMES = { gaia: 'Gaia DR3', neowise: 'NEOWISE', aavso: 'AAVSO', ztf: 'ZTF', atlas: 'ATLAS', asassn: 'ASAS-SN', tess: 'TESS' };
 
 export function renderCase(payload, { home = false, index = null } = {}) {
   const c = payload?.case ?? {};
@@ -37,7 +37,8 @@ export function renderCase(payload, { home = false, index = null } = {}) {
         target.name ? h('span', { class: 'target-name' }, target.name) : null,
         target.ra != null ? h('span', null, `α ${fmtRA(target.ra)}`) : null,
         target.dec != null ? h('span', null, `δ ${fmtDec(target.dec)}`) : null,
-        gaiaAlias || target.gaia_source_id ? h('span', { class: 'hide-md' }, gaiaAlias ?? `Gaia DR3 ${target.gaia_source_id}`) : null),
+        gaiaAlias || target.gaia_source_id ? h('span', { class: 'hide-md' }, gaiaAlias ?? `Gaia DR3 ${target.gaia_source_id}`) : null,
+        c.hunt ? h('span', { title: 'opened by a systematic hunt' }, `hunt ${c.hunt}`) : null),
       h('div', { class: 'case-status', title: 'Where this case stands on the discovery ladder' }, ladder(c.status, { compact: true }))),
     h('h1', { class: 'case-title' }, c.title || target.name || id),
     c.hook ? h('p', { class: 'case-hook' }, inline(c.hook)) : null,

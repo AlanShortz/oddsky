@@ -1,0 +1,91 @@
+{
+ "id": "T20-2439",
+ "ra": 263.25231,
+ "dec": -24.7424296,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "Gaia DR3 4110315008338448896",
+   "VariabilityType": "CWA",
+   "Period": "13.0253",
+   "MaxMag": "15.59 G",
+   "MinMag": "17.01 G",
+   "Discoverer": "Gaia collaboration",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "ATO J263.2523-24.7424",
+   "otype": "WV*",
+   "sep": 0.132259606027789,
+   "nref": 5
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [
+  {
+   "source_id": 4110315008317136000,
+   "sep_arcsec": 3.641,
+   "phot_g_mean_mag": 20.632,
+   "flux_ratio_G": 0.021
+  },
+  {
+   "source_id": 4110315008353178112,
+   "sep_arcsec": 6.017,
+   "phot_g_mean_mag": 19.587,
+   "flux_ratio_G": 0.055
+  },
+  {
+   "source_id": 4110315008315271424,
+   "sep_arcsec": 7.995,
+   "phot_g_mean_mag": 20.213,
+   "flux_ratio_G": 0.031
+  },
+  {
+   "source_id": 4110315008314015616,
+   "sep_arcsec": 8.537,
+   "phot_g_mean_mag": 19.888,
+   "flux_ratio_G": 0.041
+  },
+  {
+   "source_id": 4110315008317576832,
+   "sep_arcsec": 8.633,
+   "phot_g_mean_mag": 20.858,
+   "flux_ratio_G": 0.017
+  }
+ ],
+ "variability": {
+  "summary": {
+   "num_selected_g_fov": 33,
+   "mean_mag_g_fov": 16.374514,
+   "std_dev_mag_g_fov": 0.40447104,
+   "range_mag_g_fov": 1.4225546,
+   "skewness_mag_g_fov": 0.115385845,
+   "in_vari_long_period_variable": false,
+   "in_vari_eclipsing_binary": false,
+   "in_vari_rrlyrae": false,
+   "in_vari_cepheid": true,
+   "in_vari_short_timescale": false,
+   "in_vari_agn": false,
+   "in_vari_classification_result": true
+  },
+  "classifier": {
+   "best_class_name": "CEP",
+   "best_class_score": 0.079501025
+  }
+ },
+ "neowise_status": "ok",
+ "n_visits": 20,
+ "w1_median": 9.5275,
+ "w1_range": 0.9789999999999992,
+ "w1_first": 9.305499999999999,
+ "w1_last": 9.312,
+ "w2_median": 8.5715,
+ "w2_range": 0.9209999999999994,
+ "w2_first": 8.386,
+ "w2_last": 8.383,
+ "w1_w2_median": 0.9685000000000006,
+ "w1_w2_range": 0.0945000000000018,
+ "w1_w2_corr": 0.3079104010411133
+}

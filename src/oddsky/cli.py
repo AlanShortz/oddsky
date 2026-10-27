@@ -24,7 +24,7 @@ def _echo(obj) -> None:
 @app.command("open")
 def open_cmd(name: str, title: Annotated[str | None, typer.Option()] = None,
              hook: Annotated[str, typer.Option()] = "", fetch: bool = True,
-             surveys: Annotated[str, typer.Option(help="comma list")] = "gaia,neowise,aavso,ztf,asassn,tess"):
+             surveys: Annotated[str, typer.Option(help="comma list")] = "gaia,neowise,aavso,ztf,atlas,asassn,tess"):
     """Open a case on a real star by name and fetch its data."""
     from .fetch import fetch as do_fetch
     from .fetch import open_case
@@ -36,7 +36,7 @@ def open_cmd(name: str, title: Annotated[str | None, typer.Option()] = None,
 
 
 @app.command("fetch")
-def fetch_cmd(case: str, surveys: Annotated[str, typer.Option()] = "gaia,neowise,aavso,ztf,asassn,tess"):
+def fetch_cmd(case: str, surveys: Annotated[str, typer.Option()] = "gaia,neowise,aavso,ztf,atlas,asassn,tess"):
     """(Re)fetch archive data for a case."""
     from .case.store import CaseStore
     from .fetch import fetch

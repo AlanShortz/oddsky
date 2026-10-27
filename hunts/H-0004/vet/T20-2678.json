@@ -1,0 +1,22 @@
+{
+ "id": "T20-2678",
+ "ra": 274.944736,
+ "dec": -21.2297167,
+ "verdict": "rcb_like",
+ "vsx": [],
+ "simbad": [
+  {
+   "main_id": "IRAS 18167-2115",
+   "otype": "*",
+   "sep": 0.051690600254976606,
+   "nref": 2
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 1.0942500000000002,
+ "w1_w2_range": 0.25400000000000045,
+ "w1_w2_corr": 0.7306800584953071
+}

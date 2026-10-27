@@ -1,0 +1,21 @@
+star,verdict,depth,rate,n_ev
+DY Per,rcb_like,4.82,0.087,3
+GU Sgr,rcb_like,3.53,0.036,1
+RS Tel,no_event,0.0,0.0,0
+RT Nor,no_event,0.0,0.02,0
+RY Sgr,mira_like,0.0,0.0,0
+RZ Nor,rcb_like,1.95,0.09,3
+R CrB,rcb_like,8.45,0.32,3
+SU Tau,rcb_like,8.63,0.363,7
+SV Sge,rcb_like,6.69,0.16,1
+S Aps,rcb_like,5.47,0.105,2
+UV Cas,no_event,0.0,0.0,0
+UW Cen,mira_like,1.02,0.0,1
+U Aqr,rcb_like,7.05,0.031,1
+V3795 Sgr,artifact,0.0,0.167,0
+V482 Cyg,rcb_like,5.11,0.222,2
+V854 Cen,rcb_like,7.84,0.279,3
+V CrA,rcb_like,6.84,0.2,3
+WX CrA,mira_like,3.65,0.0,1
+XX Cam,no_event,0.0,0.0,0
+Z UMi,rcb_like,7.7,0.275,3

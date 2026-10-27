@@ -1,0 +1,36 @@
+{
+ "id": "T20-260",
+ "ra": 285.0967305,
+ "dec": -15.6543999,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "V2088 Sgr",
+   "VariabilityType": "SRA:",
+   "Period": "186",
+   "MaxMag": "14.2 p",
+   "MinMag": "<16.0 p",
+   "Discoverer": null,
+   "AUID": "000-BFG-461"
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "V* V2088 Sgr",
+   "otype": "LP*",
+   "sep": 0.05100264993932919,
+   "nref": 3
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w2_median": 8.894,
+ "w2_range": 0.0,
+ "w2_first": 8.894,
+ "w2_last": 8.894,
+ "w1_w2_median": NaN,
+ "w1_w2_range": null,
+ "w1_w2_corr": null
+}

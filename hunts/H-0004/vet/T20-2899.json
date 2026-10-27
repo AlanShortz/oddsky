@@ -1,0 +1,85 @@
+{
+ "id": "T20-2899",
+ "ra": 295.4752015,
+ "dec": 34.3741384,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "IRAS 19400+3415",
+   "VariabilityType": "M",
+   "Period": "480",
+   "MaxMag": "19.950 r",
+   "MinMag": "(2.297) r",
+   "Discoverer": "Trygve Prestgard",
+   "AUID": "000-BMK-903"
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "IRAS 19400+3415",
+   "otype": "Mi*",
+   "sep": 0.11245114636392098,
+   "nref": 5
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [
+  {
+   "source_id": 2047123357668604288,
+   "sep_arcsec": 4.34,
+   "phot_g_mean_mag": 20.989,
+   "flux_ratio_G": 0.04
+  },
+  {
+   "source_id": 2047123288949123840,
+   "sep_arcsec": 7.281,
+   "phot_g_mean_mag": 20.269,
+   "flux_ratio_G": 0.077
+  },
+  {
+   "source_id": 2047123357668607744,
+   "sep_arcsec": 9.182,
+   "phot_g_mean_mag": 20.722,
+   "flux_ratio_G": 0.051
+  },
+  {
+   "source_id": 2047123353360678912,
+   "sep_arcsec": 9.226,
+   "phot_g_mean_mag": 17.599,
+   "flux_ratio_G": 0.901
+  }
+ ],
+ "variability": {
+  "summary": {
+   "num_selected_g_fov": 50,
+   "mean_mag_g_fov": 17.217325,
+   "std_dev_mag_g_fov": 1.2275573,
+   "range_mag_g_fov": 3.6700666,
+   "skewness_mag_g_fov": 0.29516017,
+   "in_vari_long_period_variable": true,
+   "in_vari_eclipsing_binary": false,
+   "in_vari_rrlyrae": false,
+   "in_vari_cepheid": false,
+   "in_vari_short_timescale": false,
+   "in_vari_agn": false,
+   "in_vari_classification_result": true
+  },
+  "long_period_variable": {
+   "frequency": 0.0017939143746788,
+   "frequency_error": 0.00016396692,
+   "amplitude": 1.7071439,
+   "median_delta_wl_rp": 6.766,
+   "is_cstar": false,
+   "period_days": 557.4402067986382
+  },
+  "classifier": {
+   "best_class_name": "LPV",
+   "best_class_score": 0.86742854
+  }
+ },
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 0.9187499999999997,
+ "w1_w2_range": 0.49749999999999917,
+ "w1_w2_corr": -0.36818279666239306
+}
