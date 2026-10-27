@@ -74,6 +74,14 @@ explained by any catalogue.**
   independent measurement, labelled as such.
 - **NSV 1302** ([OS-0010](cases/OS-0010)): a "suspected variable" since the photographic era, characterised as an
   irregular young-star dipper in Per OB2.
+- **The whole infrared sky, then a star that vanished** ([hunt H-0002](hunts/H-0002)). We read all 146.6 billion NEOWISE
+  detections (2014-2024) for 176.9 million stars on Google Cloud in under two hours, for a few dollars. The question was
+  which Sun-like stars suddenly grew hot dust, as ASASSN-21qj did. The pipeline recovered ASASSN-21qj blind at 79σ. After
+  Skeptic and referee vetting, two of the 224 flags survive. In **[OS-0014](cases/OS-0014)**, a G dwarf 420 pc away
+  **vanished for ~95 days in 2017**, with more than 99.5% of its light blocked, nearly grey across four optical filters.
+  ASAS-SN, SkyMapper and NEOWISE saw it independently, and comparison stars stayed steady. Afterwards a warm infrared glow
+  appeared, and it was still there in 2024. As far as SIMBAD, VSX, the alert streams and the literature show, nobody has
+  reported it. In [OS-0013](cases/OS-0013), a K dwarf grew ~1000 K dust between two visits in 2018.
 - **Hunt H-0004, stars that go dark** ([hunts/H-0004](hunts/H-0004)): the 2,356 WISE-selected R CrB candidates of Tisserand+2020,
   re-examined in 2018-2026 ZTF and ATLAS data for their first recorded decline. The classifier was calibrated on real R CrB stars
   first (14 of 14 that declined, 0 of 12 that never do). In the north every star that fades like an R CrB star and is bright enough
@@ -83,12 +91,11 @@ explained by any catalogue.**
   eclipse lasts 4% of the orbit. The referee found a fourth eclipse we had missed and removed our "red giant" framing before it
   went anywhere. Two predictions are sealed; the ATLAS record is the independent check. The southern half of the
   candidate list is still queued on the ATLAS server.
-- **Two hunts parked**, with reasons written down: infrared afterglows of planetary collisions
-  ([H-0002](hunts/H-0002), which needs bulk NEOWISE access) and new R CrB stars (H-0003; Gaia DR3 already mined by
-  the experts, and our candidates were a VY Scl binary, a Mira, an S star and a T Tauri star).
+- **One hunt parked**: new R CrB stars (H-0003). Gaia DR3 has already been mined by the experts, and our candidates were a VY
+  Scl binary, a Mira, an S star and a T Tauri star.
 
-No headline discovery yet. What we have is a pipeline that finds real, small, new things, and that caught our own
-false positive before the internet did. Feynman would have liked that part best.
+OS-0014 is the first result here that a professional might call a discovery, pending their check, spectra and Gaia DR4.
+The pipeline also caught our own false positive before the internet did. Feynman would have liked that part best.
 
 ## Strange Stars Trial 001
 
@@ -152,6 +159,8 @@ Blind trial over MCP: `claude mcp add oddsky-trial -- uv run oddsky mcp --blind 
 | [OS-0010](cases/OS-0010) | NSV 1302: the young star nobody classified | interpreted |
 | [OS-0011](cases/OS-0011) | a new Algol-type binary, P = 2.52961 d | interpreted |
 | [OS-0012](cases/OS-0012) | the invisible companion that wasn't: a new K+K binary, P = 11.9008 d | closed |
+| [OS-0013](cases/OS-0013) | an infrared excess that appeared in 2018 (K dwarf) | anomaly |
+| [OS-0014](cases/OS-0014) | **the star that vanished for three months** (G dwarf, 2017) | anomaly |
 | [OS-0015](cases/OS-0015) | a dust-shrouded star that goes dark for a week every 385.7 days | anomaly |
 
 Each one is an open invitation to investigate.

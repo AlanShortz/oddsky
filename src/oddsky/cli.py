@@ -104,19 +104,21 @@ def mcp_cmd(blind: Annotated[Path | None, typer.Option(help="serve one blind tri
 
 
 @app.command("replay")
-def replay_cmd(case: str, strict: bool = False):
+def replay_cmd(case: str, strict: bool = False, seal: bool = False):
     """Re-run every analysis call in a case's ledger and check the results still match their digests.
     Calls recorded with an older oddsky version that no longer match are reported as drift; they
     fail only with --strict (replay them exactly by checking out that version)."""
     from .replay import replay
 
-    res = replay(case)
+    res = replay(case, seal=seal)
     for r in res:
-        mark = "✓" if r["match"] else ("~" if r["drift"] else "✗")
+        mark = "✓" if r["match"] else ("~" if r["drift"] or r["platform_drift"] else "✗")
         typer.echo(f" {mark} {r['id']} {r['tool']} {r.get('note', '')}")
-    bad = sum(not r["match"] and not r["drift"] for r in res)
+    bad = sum(not r["match"] and not r["drift"] and not r["platform_drift"] for r in res)
     drift = sum(r["drift"] for r in res)
-    typer.echo(f"{len(res) - bad - drift}/{len(res)} reproduced, {drift} drifted across versions, {bad} failed")
+    pdrift = sum(r["platform_drift"] for r in res)
+    typer.echo(f"{len(res) - bad - drift - pdrift}/{len(res)} reproduced, {drift} drifted across versions, "
+               f"{pdrift} differ only across platforms, {bad} failed")
     if bad or (strict and drift):
         raise typer.Exit(1)
 
