@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 
 from oddsky.sky.neowise_pixel import afterglow_flag, features, visits

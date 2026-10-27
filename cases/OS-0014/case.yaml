@@ -1,0 +1,251 @@
+id: OS-0014
+title: The star that vanished for three months
+hook: In spring 2017 a G dwarf 420 parsecs away disappeared, more than 99.5% of its light gone for about
+  95 days. Afterwards it began to glow in the infrared. Nobody noticed.
+status: anomaly
+target:
+  name: AllWISE 2779036401351050434
+  ra: 278.27585
+  dec: -36.12034
+  aliases: []
+  gaia_source_id: 6733428488637673984
+summary: 'Gaia DR3 6733428488637673984, a G0 dwarf (possibly a spectroscopic binary), was blocked by more
+  than 99.5% for 95-100 days in 2017. NEOWISE watched the fade begin within one day, ASAS-SN lost the
+  star completely (18 epochs), and SkyMapper measured it 5.4-6.0 mag faint, nearly the same in four filters.
+  Comparison stars in the same frames stay steady. A 6-day ingress and a 95-day duration imply an occulter
+  at least 0.15 AU across, orbiting at 1 AU or more. Six to twelve months later a warm (about 650 K, two-band
+  colour temperature) infrared excess appeared and was still present in 2024. Found by Oddsky hunt H-0002
+  (full-sky NEOWISE), refereed: astrophysical and on this system at 97% or better. Leading idea: a dusty
+  disk around an unseen companion (cf. epsilon Aur, EE Cep). No causal link between the occultation and
+  the glow is claimed.'
+claims:
+- id: C1
+  text: 'Field test (IRSA Gator neowiser_p1bs_psd within 150" of the target; outside the tools): 18 field
+    stars with W2 9.5-12.5 change by dW1 = +0.010 (robust sigma 0.007) and dW2 = +0.018 (robust sigma
+    0.007) across MJD 58106, with none brightening; per-visit field zero-points are within +-0.02 mag.
+    The target''s -0.047 / -0.193 step is not a field systematic.'
+  tag: computed
+  calls:
+  - K17
+  - K18
+  author: claude-referee
+  at: '2026-10-27T18:06:11+00:00'
+- id: C2
+  text: 'Centroid and blends: the mean WISE position (relative to the Gaia position propagated with pm)
+    moves by 0.011 +- 0.011" (RA) and 0.005 +- 0.008" (Dec) across the step, which places any contaminant
+    within ~0.3" of the star. CatWISE2020 has no other source within 15"; unWISE has only a W1-only source
+    at 12.6" with 0.4% of the W1 flux; Gaia sources within 6.1" total 0.5% of G. No saturation (w1sat
+    = w2sat = 0). The quality cuts'' 35% exposure loss comes from saa_sep < 0 frames, and the step is
+    present in the kept frames.'
+  tag: computed
+  calls:
+  - K12
+  - K22
+  retracted: 'Superseded by a corrected claim: the exposure cuts are driven by SAA proximity (70 of 299)
+    and moon masking (36), not by SAA alone.'
+  author: claude-referee
+  at: '2026-10-27T18:06:11+00:00'
+- id: C3
+  text: 'The ''odd visit'' at MJD 57840 (2017 Mar 28) is a coherent, physical occultation, not an artifact.
+    Across all 14 exposures spanning 0.98 d the star fades monotonically: W1 from 1.15 to 3.65 mag below
+    baseline (2.5 mag/day) and W2 from 0.41 to 2.03 mag below (1.65 mag/day). It was still deepening when
+    the visit ended. The fitted positions stay within 0.2" of the Gaia position, w1/w2rchi2 are 0.6-1.3,
+    and cc_flags are 0000. Field stars measured in the same scans and frames are within +-0.03 mag (median
+    per scan). Because the star crosses different detector positions in successive scans, a detector-local
+    artifact is excluded. The visits at MJD 57647 and 58008 are normal, so the event lasted between 0.98
+    d and ~360 d.'
+  tag: observed
+  calls:
+  - K15
+  - K16
+  author: claude-referee
+  at: '2026-10-27T18:06:11+00:00'
+- id: C4
+  text: 'The 57840 dimming is strongly chromatic: the magnitude ratio dW1/dW2 is 2.8 at the start and
+    settles to 1.8 at the deepest point, steeper than ISM A_W1/A_W2 ~ 1.3-1.5, and the residual light
+    at maximum observed depth has W1-W2 = +1.59. This points to extinction by small dust grains rather
+    than a grey opaque body (stellar or planetary eclipse); a 1-day-plus ingress is impossible for an
+    eclipse in a 1.8-d binary. Equivalent ISM A_V >~ 60 mag at the deepest point (inferred). That residual
+    colour matches the colour of the excess seen later (W1-W2 ~ 1.55, ~650 K), but whether the residual
+    is extincted starlight or dust emission cannot be separated with two bands.'
+  tag: computed
+  calls:
+  - K15
+  - K16
+  - K19
+  retracted: Partly superseded. The W1/W2 chromaticity at MJD 57840 stands, but SkyMapper shows the optical
+    occultation at maximum depth (2017-05-25) is nearly grey across v, g, r, i (5.4-6.0 mag), so "small
+    grains, not an opaque body" no longer follows. Replaced by C12.
+  author: claude-referee
+  at: '2026-10-27T18:06:11+00:00'
+- id: C5
+  text: 'Gaia DR3 RV for this star: 4.66 +- 8.47 km/s from 7 transits, rv_amplitude_robust = 51.1 km/s,
+    rv_chisq_pvalue = 0.0, rv_renormalised_gof = 11.6. An 8.5 km/s error is far larger than expected at
+    G = 12.46. The star is RV-variable and probably a spectroscopic binary (not proven with 7 transits).
+    TESS shows a 1.79-1.99 d modulation (per sector), smooth and single-humped, 1.2-1.6% peak-to-peak,
+    with amplitude changing between sectors, consistent with spot modulation of a fast rotator (K13, K14).
+    Together these suggest a tidally synchronised, chromospherically active binary (BY Dra / RS CVn-like)
+    or a young fast rotator. It is not ''Sun-like'' in activity or multiplicity, and that wording should
+    change.'
+  tag: observed
+  calls:
+  - K13
+  - K14
+  - K10
+  retracted: Superseded by C14. The TIC contamination ratio is 0.41, so the 1.8-d TESS modulation is not
+    securely on the target, and Gaia flags duplicated_source; the RV-variability statement is kept with
+    these caveats.
+  author: claude-referee
+  at: '2026-10-27T18:06:11+00:00'
+- id: C6
+  text: 'Pre-event photosphere: AllWISE 2010 epochs give W1 11.07/11.06, W2 11.08/11.10, equal to the
+    2014-2017 NEOWISE baseline; AllWISE W1-W3 = -0.18 +- 0.16 and Ks-W1 = 0.02 are photospheric. Excess
+    onset lies between MJD 58008 and 58204, with W2 excess 20% in 2018-20 and 23% in 2022-24, and T_BB
+    690 -> 610 K (K19, K20). For a blackbody, L_IR/L* ~ 0.005 at an equilibrium distance ~0.24 AU (L ~
+    1.7 Lsun). Post-onset W2 scatter (0.037 mag) is 3 times the pre-onset scatter (0.012), so the excess
+    varies.'
+  tag: computed
+  calls:
+  - K19
+  - K20
+  - K11
+  author: claude-referee
+  at: '2026-10-27T18:06:11+00:00'
+- id: C7
+  text: 'Gaia DR3 G-band photometric scatter, sqrt(n_obs)/flux_over_error, is at the 65th percentile of
+    692 stars with G within 0.3 mag inside 1 deg. Gaia therefore did not sample the 2017 dip: catching
+    even one 9-CCD transit at -2 mag would have cut flux_over_error from ~2400 to ~100. BP/RP flux_over_error
+    is half the field median, a likely crowding effect at b = -12. Gaia neither confirms nor refutes the
+    dip.'
+  tag: computed
+  calls:
+  - K10
+  author: claude-referee
+  at: '2026-10-27T18:06:11+00:00'
+- id: C8
+  text: 'Interpretation (inferred): a deep, chromatic, day-plus occultation followed ~6-12 months later
+    by a persistent, variable ~650 K excess is the sequence expected if a dust cloud (for example from
+    a collision) first transited the star and then spread into a warm, optically thin structure, as in
+    HD 166191 (Su et al. 2022) and ASASSN-21qj (Kenworthy et al. 2023). The 57840 visit therefore strengthens
+    the case rather than undermining it. The occultation was observed independently of the step search
+    and is the single most compelling datum.'
+  tag: inferred
+  calls:
+  - K15
+  - K16
+  - K19
+  - K20
+  retracted: 'Analogy overstated: in HD 166191 and ASASSN-21qj the IR rise preceded the dust transit,
+    whereas here the occultation came first. Replaced by C10.'
+  author: claude-referee
+  at: '2026-10-27T18:06:11+00:00'
+- id: C9
+  text: 'Centroid and blends: the mean WISE position (relative to the Gaia position propagated with pm)
+    moves by 0.011 +- 0.011" (RA) and 0.005 +- 0.008" (Dec) across the step, which places any contaminant
+    within ~0.3" of the star. CatWISE2020 has no other source within 15"; unWISE has only a W1-only source
+    at 12.6" with 0.4% of the W1 flux; Gaia sources within 6.1" total 0.5% of G. No saturation (w1sat
+    = w2sat = 0). Of 299 exposures, 70 fall at saa_sep <= 0 and 36 are moon-masked, which drives the 35%
+    cut rate; the step is present in the clean frames.'
+  tag: computed
+  calls:
+  - K12
+  - K22
+  author: claude-referee
+  at: '2026-10-27T18:06:27+00:00'
+- id: C10
+  text: 'Interpretation (inferred): a deep, chromatic, day-plus occultation (2017-03-28) followed 6-12
+    months later by a persistent, variable ~650 K excess fits a dust-producing event in the system: a
+    dust clump transiting the star, then warm optically thin dust. The pairing of a dust transit with
+    an IR brightening has precedents in HD 166191 (Su et al. 2022) and ASASSN-21qj (Kenworthy et al. 2023),
+    although in both of those the IR rise came first. If the star is a close binary, BD+20 307 (a 3.4-d
+    binary with extreme warm dust) is the closest analogue. The 57840 visit strengthens the case.'
+  tag: inferred
+  calls:
+  - K15
+  - K16
+  - K19
+  - K20
+  retracted: Superseded by C13. The occultation lasted ~95-100 d with a ~6-d ingress, which puts the occulter
+    at >~1 AU (probably tens of AU), not in the ~0.24 AU warm-dust zone, so the single collisional-cloud
+    picture is no longer favoured.
+  author: claude-referee
+  at: '2026-10-27T18:07:34+00:00'
+- id: C11
+  text: 'Optical confirmation (ASAS-SN Sky Patrol V and SkyMapper DR4, via the literature sub-agent; outside
+    the tools; data in /tmp/osref/lit): ASAS-SN V is 12.70 +- 0.02 until MJD 57828.4, then 12.82 on 57831.3
+    and 15.46 +- 0.06 on 57837.4. Fifteen epochs from 57839.3 to 57911.4 are non-detections with forced
+    flux 0.0-1.1 (+-0.38) against a baseline of 32.0, i.e. >3.5 mag deep. It reappears at 14.64 on 57923.3
+    and is back to 12.68 by 57933.3. All 8 ASAS-SN comparison stars (V 10.7-14.3) are detected at normal
+    flux (median ratio 0.995-1.012) in all 19 window epochs. SkyMapper on 2017-05-25 (MJD 57898.6) measures
+    the star at its own position (within 0.17") at v 19.1/19.7, g 18.58, r 18.30, i 18.31: 5.4-6.0 mag
+    below its 2014 values, and it is normal again on 57952-57974. The 2017 event is a ~95-100 d, near-total
+    (>=99.5%) occultation seen by three independent instruments.'
+  tag: observed
+  calls:
+  - K15
+  - K16
+  author: claude-referee
+  at: '2026-10-27T18:32:25+00:00'
+- id: C12
+  text: 'Event geometry: the ingress went from -0.11 to -2.76 mag in V within ~6 d (MJD 57831-57837),
+    and W1 deepened from -1.15 to -3.65 mag in 1 d at 57840. At MJD 57839.3 V was already >3.5 mag deep
+    while W1 at 57839.9 was only 1.15 mag deep, so the ingress was strongly chromatic (deeper in the optical
+    and at shorter IR wavelengths; dW1/dW2 = 1.8-2.8). At maximum depth the optical is nearly grey (v-i
+    depths 5.4-6.0 mag), consistent with an optically thick core and a small-grain penumbra. With a ~6-d
+    ingress across a 2.2 Rsun stellar diameter the transverse speed is ~3 km/s (a lower limit if the edge
+    is soft or oblique). A 95-d chord then implies a structure >~0.15 AU across, moving slowly: Keplerian
+    at ~100 AU for a sharp edge, and in any case >~1 AU because the chord would otherwise exceed the orbit.
+    That rules out an occulter in the ~0.24 AU warm-dust zone.'
+  tag: inferred
+  calls:
+  - K15
+  - K16
+  author: claude-referee
+  at: '2026-10-27T18:32:25+00:00'
+- id: C13
+  text: 'Multiplicity caveats: the Gaia DR3 RV error of 8.5 km/s, rv_amplitude_robust 51 km/s and rv_chisq_pvalue
+    0 (7 transits) make the star RV-variable and a probable spectroscopic binary. However, Gaia flags
+    duplicated_source = True, and with only 7 transits a processing cause cannot be excluded. The TESS
+    1.8-d modulation (1.2-1.6% peak-to-peak, K13, K14) cannot be securely attributed to the target, because
+    the TIC contamination ratio is 0.41: a ~4-5% variable neighbour would produce it. The star should
+    be called ''G0 dwarf, possibly a binary'', not ''Sun-like''.'
+  tag: observed
+  calls:
+  - K13
+  - K14
+  - K10
+  author: claude-referee
+  at: '2026-10-27T18:32:25+00:00'
+- id: C14
+  text: 'Interpretation (inferred): the leading explanation is a one-off, near-total, ~95-d occultation
+    by an extended dusty structure crossing the line of sight at AU-to-tens-of-AU scales. Analogues are
+    long-duration disk eclipses such as epsilon Aur, EE Cep, Gaia17bpp and ASASSN-24fw, where a circumsecondary
+    disk around an unseen companion transits the star. The warm (~650 K) excess that appeared 6-12 months
+    later must come from dust much closer in (or from a self-luminous companion or disk), so its link
+    to the occulter is plausible but unproven. A collision-produced cloud (ASASSN-21qj-like) is a secondary
+    option. Three independent instruments see the occultation, and the excess is on-source to 0.3", so
+    an instrumental cause is <2%.'
+  tag: inferred
+  calls:
+  - K15
+  - K16
+  - K19
+  - K20
+  author: claude-referee
+  at: '2026-10-27T18:32:25+00:00'
+- id: C15
+  text: 'VarWISE (Paz et al. 2026; via the sub-agent) gives a latent-artifact likelihood of 0.55 for this
+    source. This classifier score is presumably driven by the 57840 visit and is overridden by the evidence
+    here: field stars normal in the same frames, a smooth fade across different detector positions, and
+    simultaneous optical confirmation by ASAS-SN. No prior literature on the 2017 occultation or the IR
+    excess was found (SIMBAD, VSX and the literature search are empty).'
+  tag: computed
+  calls:
+  - K21
+  author: claude-referee
+  at: '2026-10-27T18:32:25+00:00'
+hypotheses: []
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T17:44:22+00:00'

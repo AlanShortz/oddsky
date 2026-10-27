@@ -1,0 +1,425 @@
+{
+  "gaia": {
+    "G": 13.5192995,
+    "bp_rp": 1.2942934,
+    "parallax_mas": 4.039277636572375,
+    "parallax_over_error": 340.04785,
+    "ruwe": 1.0216122,
+    "teff_gspphot": 4774.4604,
+    "non_single_star": 0,
+    "phot_variable_flag": "VARIABLE",
+    "distance_pc": 247.56901851603692,
+    "abs_G": 6.550818025428318,
+    "sep_from_target_coords_arcsec": 0.0428631036315769
+  },
+  "gaia_variability": {
+    "summary": {
+      "num_selected_g_fov": 46,
+      "mean_mag_g_fov": 13.519231,
+      "std_dev_mag_g_fov": 0.0089209415,
+      "range_mag_g_fov": 0.030345393,
+      "skewness_mag_g_fov": 0.26538646,
+      "in_vari_long_period_variable": false,
+      "in_vari_eclipsing_binary": false,
+      "in_vari_rrlyrae": false,
+      "in_vari_cepheid": false,
+      "in_vari_short_timescale": false,
+      "in_vari_agn": false,
+      "in_vari_classification_result": true
+    },
+    "classifier": {
+      "best_class_name": "SOLAR_LIKE",
+      "best_class_score": 0.66158634
+    }
+  },
+  "neighbors": [
+    {
+      "source_id": 5792808351315837440,
+      "sep_arcsec": 6.9593,
+      "phot_g_mean_mag": 18.4923,
+      "bp_rp": 1.4889,
+      "dG": 4.973,
+      "flux_ratio_G": 0.0103,
+      "parallax": 0.4827,
+      "ruwe": 0.997
+    },
+    {
+      "source_id": 5792808351322473984,
+      "sep_arcsec": 7.8606,
+      "phot_g_mean_mag": 16.3682,
+      "bp_rp": 1.0317,
+      "dG": 2.8489,
+      "flux_ratio_G": 0.0725,
+      "parallax": 0.6199,
+      "ruwe": 1.026
+    },
+    {
+      "source_id": 5792808420041954816,
+      "sep_arcsec": 13.3576,
+      "phot_g_mean_mag": 15.8864,
+      "bp_rp": 1.3672,
+      "dG": 2.3671,
+      "flux_ratio_G": 0.113,
+      "parallax": 0.1009,
+      "ruwe": 1.0018
+    },
+    {
+      "source_id": 5792808351322471680,
+      "sep_arcsec": 16.2654,
+      "phot_g_mean_mag": 14.4026,
+      "bp_rp": 0.9587,
+      "dG": 0.8833,
+      "flux_ratio_G": 0.4433,
+      "parallax": 0.9229,
+      "ruwe": 1.0012
+    },
+    {
+      "source_id": 5792808351324472832,
+      "sep_arcsec": 17.5932,
+      "phot_g_mean_mag": 19.0217,
+      "bp_rp": 1.0169,
+      "dG": 5.5024,
+      "flux_ratio_G": 0.0063,
+      "parallax": 0.4383,
+      "ruwe": 1.0542
+    },
+    {
+      "source_id": 5792808351319639552,
+      "sep_arcsec": 18.9086,
+      "phot_g_mean_mag": 20.0531,
+      "bp_rp": 1.2963,
+      "dG": 6.5338,
+      "flux_ratio_G": 0.0024,
+      "parallax": 0.04,
+      "ruwe": 1.0447
+    },
+    {
+      "source_id": 5792808420043951488,
+      "sep_arcsec": 19.2199,
+      "phot_g_mean_mag": 20.208,
+      "bp_rp": 1.041,
+      "dG": 6.6887,
+      "flux_ratio_G": 0.0021,
+      "parallax": 0.2058,
+      "ruwe": 0.9633
+    },
+    {
+      "source_id": 5792808351322469376,
+      "sep_arcsec": 20.2489,
+      "phot_g_mean_mag": 16.2144,
+      "bp_rp": 1.0063,
+      "dG": 2.6951,
+      "flux_ratio_G": 0.0836,
+      "parallax": 0.5978,
+      "ruwe": 0.9744
+    },
+    {
+      "source_id": 5792808454402031744,
+      "sep_arcsec": 20.8898,
+      "phot_g_mean_mag": 20.6362,
+      "bp_rp": 0.9347,
+      "dG": 7.1169,
+      "flux_ratio_G": 0.0014,
+      "parallax": -1.2727,
+      "ruwe": 1.1189
+    },
+    {
+      "source_id": 5792808385682211200,
+      "sep_arcsec": 21.4783,
+      "phot_g_mean_mag": 17.1188,
+      "bp_rp": 0.9856,
+      "dG": 3.5995,
+      "flux_ratio_G": 0.0363,
+      "parallax": 0.394,
+      "ruwe": 1.0393
+    },
+    {
+      "source_id": 5792808420041951360,
+      "sep_arcsec": 21.7187,
+      "phot_g_mean_mag": 17.1706,
+      "bp_rp": 1.0724,
+      "dG": 3.6513,
+      "flux_ratio_G": 0.0346,
+      "parallax": 0.454,
+      "ruwe": 1.0752
+    },
+    {
+      "source_id": 5792808420043952768,
+      "sep_arcsec": 21.724,
+      "phot_g_mean_mag": 20.1426,
+      "bp_rp": 1.88,
+      "dG": 6.6233,
+      "flux_ratio_G": 0.0022,
+      "parallax": 0.7731,
+      "ruwe": 0.9897
+    },
+    {
+      "source_id": 5792808385684210688,
+      "sep_arcsec": 21.9142,
+      "phot_g_mean_mag": 17.58,
+      "bp_rp": 0.9576,
+      "dG": 4.0607,
+      "flux_ratio_G": 0.0238,
+      "parallax": 0.3979,
+      "ruwe": 0.9842
+    },
+    {
+      "source_id": 5792808351319638400,
+      "sep_arcsec": 22.0317,
+      "phot_g_mean_mag": 20.3757,
+      "bp_rp": 0.7367,
+      "dG": 6.8564,
+      "flux_ratio_G": 0.0018,
+      "parallax": -0.217,
+      "ruwe": 1.0139
+    },
+    {
+      "source_id": 5792808420043952640,
+      "sep_arcsec": 24.0624,
+      "phot_g_mean_mag": 16.9594,
+      "bp_rp": 1.1606,
+      "dG": 3.4401,
+      "flux_ratio_G": 0.0421,
+      "parallax": 0.3538,
+      "ruwe": 7.8403
+    },
+    {
+      "source_id": 5792808385675573632,
+      "sep_arcsec": 24.551,
+      "phot_g_mean_mag": 18.8458,
+      "bp_rp": 1.2284,
+      "dG": 5.3265,
+      "flux_ratio_G": 0.0074,
+      "parallax": 0.2453,
+      "ruwe": 1.0363
+    },
+    {
+      "source_id": 5792808385684211840,
+      "sep_arcsec": 25.4349,
+      "phot_g_mean_mag": 18.2662,
+      "bp_rp": 1.3772,
+      "dG": 4.7469,
+      "flux_ratio_G": 0.0126,
+      "parallax": 0.5237,
+      "ruwe": 1.0241
+    },
+    {
+      "source_id": 5792808351315823360,
+      "sep_arcsec": 28.6967,
+      "phot_g_mean_mag": 20.9328,
+      "bp_rp": NaN,
+      "dG": 7.4135,
+      "flux_ratio_G": 0.0011,
+      "parallax": NaN,
+      "ruwe": NaN
+    },
+    {
+      "source_id": 5792808351322839040,
+      "sep_arcsec": 29.6922,
+      "phot_g_mean_mag": 16.1463,
+      "bp_rp": 0.9541,
+      "dG": 2.627,
+      "flux_ratio_G": 0.089,
+      "parallax": 0.5213,
+      "ruwe": 1.0341
+    },
+    {
+      "source_id": 5792808347021413248,
+      "sep_arcsec": 29.8466,
+      "phot_g_mean_mag": 18.8372,
+      "bp_rp": 0.8865,
+      "dG": 5.3179,
+      "flux_ratio_G": 0.0075,
+      "parallax": -0.3487,
+      "ruwe": 1.0347
+    }
+  ],
+  "tess": {
+    "sectors": {
+      "12": {
+        "author": "QLP",
+        "exptime": 1800.0,
+        "crowdsap": null,
+        "flfrcsap": null,
+        "t_start": 58624.472418616526,
+        "t_end": 58652.36820312077,
+        "desat_mjd": [
+          58627.618277301546,
+          58630.74330041092,
+          58633.868315945845,
+          58636.993321691174,
+          58642.70162781561,
+          58645.826607410796,
+          58648.95157923177
+        ],
+        "flux_column": "flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "38": {
+        "author": "QLP",
+        "exptime": 600.0,
+        "crowdsap": null,
+        "flfrcsap": null,
+        "t_start": 59333.360555263236,
+        "t_end": 59360.04854424903,
+        "desat_mjd": [
+          59333.471669586375,
+          59335.84673604136,
+          59343.944155486766,
+          59344.68028225517,
+          59345.38863033708,
+          59350.41649438534,
+          59354.43738030596,
+          59357.20824253047
+        ],
+        "flux_column": "flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "39": {
+        "author": "QLP",
+        "exptime": 600.0,
+        "crowdsap": null,
+        "flfrcsap": null,
+        "t_start": 59361.277718334924,
+        "t_end": 59389.21500350395,
+        "desat_mjd": [
+          59364.34717220394,
+          59365.67356279725,
+          59368.23606206011,
+          59373.63187702,
+          59377.763787883334,
+          59379.597100113984,
+          59383.69426565198,
+          59388.61779245408
+        ],
+        "flux_column": "flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "65": {
+        "author": "QLP",
+        "exptime": 200.0,
+        "crowdsap": null,
+        "flfrcsap": null,
+        "t_start": 60068.23767949501,
+        "t_end": 60096.08991621062,
+        "desat_mjd": [
+          60068.23767949501,
+          60068.239994379226,
+          60068.242309262976,
+          60075.682294101454,
+          60075.68460895913,
+          60075.6869238168,
+          60083.18936582049,
+          60083.19168067258,
+          60083.19399552513,
+          60089.96720812796,
+          60089.96952295536,
+          60089.97183778277
+        ],
+        "flux_column": "flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "66": {
+        "author": "QLP",
+        "exptime": 200.0,
+        "crowdsap": null,
+        "flfrcsap": null,
+        "t_start": 60097.1732541956,
+        "t_end": 60125.92751202546,
+        "desat_mjd": [
+          60097.1732541956,
+          60097.17556901928,
+          60104.60378291784,
+          60104.606097714044,
+          60111.68936371384,
+          60111.69167850632,
+          60111.6939932988,
+          60118.74943153281,
+          60118.75174629921,
+          60123.723857349716,
+          60123.726172111,
+          60123.728486872744,
+          60123.73080163449,
+          60123.73311639577,
+          60123.73543115752,
+          60123.737745919265,
+          60123.74006068101,
+          60123.74237544229,
+          60123.777096867096,
+          60123.77941162884,
+          60123.78172639059
+        ],
+        "flux_column": "flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "93": {
+        "author": "QLP",
+        "exptime": 200.0,
+        "crowdsap": null,
+        "flfrcsap": null,
+        "t_start": 60829.356721693184,
+        "t_end": 60855.5508177639,
+        "desat_mjd": [
+          60829.356721693184,
+          60829.35903650895,
+          60829.36135132518,
+          60836.0395759698,
+          60836.04189076554,
+          60836.044205560815,
+          60842.845045652706,
+          60842.84736044286,
+          60842.849675233476,
+          60849.6018901607,
+          60849.60420492757,
+          60849.60651969444
+        ],
+        "flux_column": "flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "100": {
+        "author": "QLP",
+        "exptime": 200.0,
+        "crowdsap": null,
+        "flfrcsap": null,
+        "t_start": 61073.48830183502,
+        "t_end": 61099.96282622544,
+        "desat_mjd": [
+          61073.48830183502,
+          61073.49061664846,
+          61080.363298508804,
+          61080.365613322705,
+          61086.98366567399,
+          61086.98598048743,
+          61086.98829530133,
+          61093.81699576229,
+          61093.81931057619,
+          61093.821625389624
+        ],
+        "flux_column": "flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "101": {
+        "author": "QLP",
+        "exptime": 200.0,
+        "crowdsap": null,
+        "flfrcsap": null,
+        "t_start": 61100.17578327237,
+        "t_end": 61126.303085591644,
+        "desat_mjd": [
+          61100.17578327237,
+          61100.17809808627,
+          61106.76605783962,
+          61106.76837265305,
+          61113.24753620522,
+          61113.24985101912,
+          61113.25216583256,
+          61119.75447755726,
+          61119.75679237116,
+          61119.75910718506
+        ],
+        "flux_column": "flux",
+        "relative": "delta-mag vs sector median"
+      }
+    }
+  }
+}

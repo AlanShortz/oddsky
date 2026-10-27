@@ -52,7 +52,7 @@ with ThreadPoolExecutor(4) as ex:
             close = g[g.sep < 2.0]
             m = (close.sort_values("g").iloc[0] if len(close) else None)
             if m is not None:
-                r.update(gaia_id=int(m.source_id), G=m.g, bp_rp=m.bp_rp, parallax=m.parallax, poe=m.poe, ruwe=m.ruwe, teff=m.teff, sep=m.sep)
+                r.update(gaia_id=str(int(m.source_id)), G=m.g, bp_rp=m.bp_rp, parallax=m.parallax, poe=m.poe, ruwe=m.ruwe, teff=m.teff, sep=m.sep)
                 others = g[g.source_id != m.source_id]
                 bright = others[others.g < m.g + 2.5]
                 r["blend_n"] = int(len(bright))
@@ -61,9 +61,15 @@ with ThreadPoolExecutor(4) as ex:
 g = pd.DataFrame(rows)
 v = cand.merge(g, on="allwise_cntr", how="left")
 v["absG"] = v.G + 5 * np.log10(v.parallax.clip(lower=1e-3) / 100)
+# Dust already present in 2010? A bare photosphere has W1-W3 ~ 0 and W1-W4 ~ 0 (FGK).
+v["w1_w3_allwise"] = v.w1_base - v.w3mpro_allwise
+v["prior_dust"] = v.w1_w3_allwise > 0.5
 v["stellar"] = v.poe > 5
 v["sunlike"] = v.stellar & v.bp_rp.between(0.5, 1.6) & v.absG.between(2.0, 7.5) & (v.ruwe < 1.4)
 v["clean"] = v.blend_n.fillna(0).eq(0) & v.pair_with.isna()
-v["tier"] = np.select([v.sunlike & v.clean, v.stellar & v.clean, v.clean], ["A: Sun-like, clean", "B: other star, clean", "C: no Gaia parallax"], "D: blend/pair")
+v["tier"] = np.select(
+    [v.sunlike & v.clean & ~v.prior_dust, v.stellar & v.clean & ~v.prior_dust, v.stellar & v.clean, v.clean & ~v.stellar.fillna(False)],
+    ["A: Sun-like, clean, no prior dust", "B: other star, clean, no prior dust", "C: star with dust before 2010",
+     "E: no parallax (galaxy/AGN? nuclear flare)"], "D: blend or pair")
 v.to_parquet(here / "vetted.parquet", index=False)
 print(v.tier.value_counts().to_string(), flush=True)

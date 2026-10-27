@@ -1,5 +1,7 @@
 """Write a Cloud Batch job spec: N tasks, each processing a slice of a pixel list."""
-import json, sys
+import json
+import sys
+
 name, pixel_list, n_pix, per_task, parallelism, run = sys.argv[1], sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), sys.argv[6]
 tasks = -(-n_pix // per_task)
 cmd = ("set -euo pipefail; PIP_DISABLE_PIP_VERSION_CHECK=1 pip install -q --root-user-action=ignore --no-cache-dir numpy==2.* pandas==2.* pyarrow==21.* && "

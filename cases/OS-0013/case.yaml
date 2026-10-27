@@ -1,0 +1,140 @@
+id: OS-0013
+title: An infrared excess that appeared in 2018
+hook: A K dwarf 250 parsecs away was a bare photosphere for four years. Then, between two NEOWISE visits
+  in 2018, 1000 K dust appeared around it, and it is still there.
+status: anomaly
+target:
+  name: Gaia DR3 5792808347020475136
+  ra: 220.96627
+  dec: -76.19612
+  aliases: []
+  gaia_source_id: 5792808347020475136
+summary: 'Gaia DR3 5792808347020475136, a K3 main-sequence star, was photospheric from 2010 to 2017. Between
+  two NEOWISE visits in 2018 its W1 and W2 rose by 0.17 and 0.36 mag (33-38 sigma); the excess (16% and
+  38% of the star) has a ~1000 K colour temperature and persisted into 2024. Twenty-seven field stars
+  stay flat, the WISE position does not move, and the star is not young. Its variability is catalogued
+  in VarWISE (Paz et al. 2026) as a long-period variable; Oddsky''s contribution is the interpretation.
+  No optical dimming was seen in 2018. Refereed: about 93% astrophysical.'
+claims:
+- id: C1
+  text: 'Field test (IRSA Gator neowiser_p1bs_psd, all exposures within 300" of the target; outside the
+    tools): 27 AllWISE-matched field stars with pre-step W2 9.5-12.5 show median post-minus-pre change
+    dW1 = +0.006 mag (robust sigma 0.005, none brighter by >0.1) and dW2 = +0.014 (robust sigma 0.005)
+    across MJD 58260; per-visit field zero-points stay within +-0.02 mag in every visit. The target''s
+    -0.168 (W1) / -0.359 (W2) step is >30 sigma outside the field distribution. The 2018 step is not a
+    local photometric, background, scan-pattern or calibration systematic.'
+  tag: computed
+  calls:
+  - K13
+  - K14
+  author: claude-referee
+  at: '2026-10-27T18:05:48+00:00'
+- id: C2
+  text: 'Centroid and PSF-fit quality across the step (single exposures, Gaia DR3 position propagated
+    with pm -22.1/-13.4 mas/yr; outside the tools): the mean WISE position moves by 0.004 +- 0.006" (RA)
+    and 0.012 +- 0.005" (Dec) between 9 pre-step and 12 post-step visits; w1rchi2 3.65 -> 3.54, w2rchi2
+    1.33 -> 1.44; nb = 1, ph_qual AA, w1sat = w2sat = 0 in every visit. For a ~25% combined flux increase
+    this places any contaminating source within ~0.2" of the K dwarf.'
+  tag: computed
+  calls:
+  - K12
+  - K13
+  author: claude-referee
+  at: '2026-10-27T18:05:48+00:00'
+- id: C3
+  text: 'No catalogued IR neighbour can be responsible: unWISE has a W1-only source 7.4" away at 5% of
+    the target''s W1 flux (undetected in W2), CatWISE2020 a W1 14.7 source at 9.4", AllWISE sources at
+    13.2" (W1 13.2) and 16.2" (W1 12.35), and a W1 8.75 star at 32" that sets the ''h'' halo flag. Each
+    of those three AllWISE neighbours is itself flat across 2018 (dW2 +0.026, +0.027, +0.007 mag), and
+    any of them brightening enough to add 39% of the target''s W2 flux would drag the centroid by >2".'
+  tag: computed
+  calls:
+  - K12
+  author: claude-referee
+  at: '2026-10-27T18:05:48+00:00'
+- id: C4
+  text: 'Pre-event photosphere: AllWISE 2010 single-exposure epochs (MJD 55257, 55438) give W1 11.18/11.20,
+    W2 11.23/11.24, identical to the 2014-2017 NEOWISE baseline (11.188/11.259); AllWISE W1-W3 = 0.17
+    +- 0.10 and 2MASS Ks-W1 = 0.06 are photospheric for a K3 dwarf. The excess appeared between MJD 58178.5
+    and 58341.7 (2018 Feb 26 - Aug 8); the first post-step visit was the brightest in W2 (10.82), then
+    a plateau at 10.86-10.94 through 2024.'
+  tag: computed
+  calls:
+  - K11
+  - K15
+  - K16
+  author: claude-referee
+  at: '2026-10-27T18:05:48+00:00'
+- id: C5
+  text: 'Energetics (blackbody, inferred): excess colour W1-W2 ~ 0.87 mag gives T ~ 1040-1050 K (K15,
+    K16); for a blackbody this is L_IR/L* ~ 0.02, an emitting area ~8 times the stellar disk, and an equilibrium
+    distance ~0.04 AU for L ~ 0.3 Lsun. Larger, cooler areas are possible for small superheated grains.
+    A fractional luminosity of ~2% sustained for 6 years is extreme-debris-disk territory (ID8, ASASSN-21qj,
+    BD+20 307 range).'
+  tag: inferred
+  calls:
+  - K15
+  - K16
+  author: claude-referee
+  at: '2026-10-27T18:05:48+00:00'
+- id: C6
+  text: 'Not a pre-main-sequence or obviously young star: with GSP-Phot A_G = 0.24 and E(BP-RP) = 0.13,
+    the star sits at M_G0 ~ 6.31, (BP-RP)0 ~ 1.17, on the K3V main sequence (no PMS overluminosity), with
+    logg 4.58. Heliocentric UVW = (-24.1, -18.4, -2.7) km/s (RV -0.47 +- 1.9 km/s, 17 transits) differs
+    from Chamaeleon I/II, eps Cha and LCC (U ~ -8 to -11, W ~ -6 to -10 km/s) by >12 km/s. It is 6-12
+    deg from the Chamaeleon clouds on the sky, but at 247 pc it is not kinematically associated. An age
+    of ~>100 Myr is likely but unproven; lithium is needed.'
+  tag: computed
+  calls:
+  - K10
+  author: claude-referee
+  at: '2026-10-27T18:05:48+00:00'
+- id: C7
+  text: 'TESS is weaker than the case implies: sectors S100 and S101 contain orbit-length ramps of 0.2-0.4
+    mag and a flat +0.6 mag offset lasting 5 days (MJD 61107-61111), which are pipeline/scattered-light
+    systematics, so dips there are uninterpretable. Per-sector Lomb-Scargle peaks wander from 6.6 to 20
+    d at low power, so the ''~11 d'' rotation period is not established. The other sectors (2019-2025)
+    show no dips beyond ~5% at 30-min noise of 1.6% (K18, K19). There is no optical photometry of any
+    kind across the 2018 onset.'
+  tag: computed
+  calls:
+  - K18
+  - K19
+  - K17
+  author: claude-referee
+  at: '2026-10-27T18:05:48+00:00'
+- id: C8
+  text: 'Optical across the onset (outside the tools; ASAS-SN V and SkyMapper DR4 via the sub-agent):
+    ASAS-SN V is 13.41 with robust scatter 0.036 over 2014-2018, and flat from MJD 58160 to 58378 apart
+    from a gap at 58243-58300. A ~0.1-mag bright excursion at 58300-58306 also appears in an ASAS-SN comparison
+    star and is likely systematic. SkyMapper on 2018-04-24 (MJD 58232, inside the 58178-58341 onset window)
+    gives u 16.52, v 16.19, g 14.12, r 13.55, matching 2014 to 0.03 mag. There is no optical dip or flash
+    beyond ~0.1-0.15 mag in ASAS-SN (diluted by ~1.6x through blending with the 16" neighbour and HD 128641),
+    which argues against a bright engulfment- or merger-type optical outburst unless it fell in the May-June
+    2018 gap.'
+  tag: observed
+  calls:
+  - K10
+  author: claude-referee
+  at: '2026-10-27T18:32:25+00:00'
+- id: C9
+  text: 'Prior catalogue status (via the sub-agent): VarWISE (Paz et al. 2026) already lists this source
+    as a WISE variable with W1/W2 amplitudes 0.18/0.375, classified ''lpv'' (long-period variable). The
+    IR variability is therefore catalogued, but the classification is wrong (a K3V main-sequence dwarf
+    is not an LPV) and the step-plus-reddening, IR-excess interpretation is new. SIMBAD and the literature
+    contain nothing beyond Gaia/VSX [ROT]. Not a member of Chamaeleon I/II, eps Cha or LCC in the membership
+    lists checked. The AllWISE ''hh00'' cc_flags come from HD 128641 (V 9.66, F0V) at 32", which is flat.
+    The TIC contamination ratio is 3.78: the target supplies only ~21% of the TESS aperture flux, so TESS
+    dip limits on the star are ~5x weaker than they appear.'
+  tag: observed
+  calls:
+  - K12
+  - K18
+  - K19
+  author: claude-referee
+  at: '2026-10-27T18:32:25+00:00'
+hypotheses: []
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T17:43:43+00:00'
