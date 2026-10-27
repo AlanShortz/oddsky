@@ -29,7 +29,7 @@ log = logging.getLogger("h0004")
 here = Path("hunts/H-0004")
 lc_dir = here / "lc"
 raw_dir = lc_dir / "atlas_raw"
-tasks_file = lc_dir / "atlas_tasks.json"
+tasks_file = lc_dir / "atlas_tasks.json"  # overridden by --tasks-file so two accounts can run disjoint lists
 
 
 def load_tasks() -> dict:
@@ -150,7 +150,12 @@ def main() -> None:
     ap.add_argument("--south-first", action="store_true", help="ATLAS: start where ZTF cannot see")
     ap.add_argument("--in-flight", type=int, default=4, help="ATLAS tasks queued at once (be polite)")
     ap.add_argument("--priority", action="store_true", help="ATLAS: best candidates first (see code)")
+    ap.add_argument("--tasks-file", default=None, help="ATLAS task registry (default lc/atlas_tasks.json)")
+    ap.add_argument("--slice", default=None, help="ATLAS: take every k-th star starting at i, as i/k (e.g. 1/2)")
     a = ap.parse_args()
+    global tasks_file
+    if a.tasks_file:
+        tasks_file = Path(a.tasks_file)
     lc_dir.mkdir(parents=True, exist_ok=True)
     raw_dir.mkdir(parents=True, exist_ok=True)
     cand = pd.read_csv(here / a.file)
@@ -184,6 +189,9 @@ def main() -> None:
                        # a good parallax that says "dwarf" rules out an R CrB star: last, not never
                        + 10 * ((r.get("poe", pd.Series(0, index=r.index)) > 5) & (r.get("abs_g", pd.Series(-9, index=r.index)) > -1)).astype(int))
             rows = r.sort_values(["_p", "dec"])
+        if a.slice:
+            i, k = (int(x) for x in a.slice.split("/"))
+            rows = rows.iloc[i::k]
         atlas_phase(rows, in_flight=a.in_flight)
     log.info("done")
 
