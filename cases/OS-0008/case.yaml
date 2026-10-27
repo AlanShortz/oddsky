@@ -1,0 +1,17 @@
+id: OS-0008
+title: Control A
+hook: A quiet G star in TESS's continuous viewing zone. Used in trials as a canvas for planted artifacts.
+status: observation
+target:
+  name: Gaia DR3 1633269723578294016
+  ra: 268.42233
+  dec: 66.02871
+  aliases: []
+  gaia_source_id: 1633269723578294016
+summary: ''
+claims: []
+hypotheses: []
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:06:50+00:00'

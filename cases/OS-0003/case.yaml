@@ -1,0 +1,40 @@
+id: OS-0003
+title: The eclipse that comes back every 5.6 years
+hook: Every 2,050 days something dark and enormous passes in front of this star, and every time the shadow
+  looks different.
+status: observation
+target:
+  name: EE Cep
+  ra: 332.3448097633
+  dec: 55.75673796510001
+  aliases:
+  - TIC 329020872
+  - LAMOST J220922.75+554524.2
+  - Gaia DR3 2197941958898810240
+  - '[JE82] 1110'
+  - AAVSO 2205+55
+  - ALS 12159
+  - BD+55  2693
+  - EM* CDS 1305
+  - GEN# +0.05502693
+  - GSC 03973-00715
+  - HBHA 5704-39
+  - LS III +55   24
+  - TYC 3973-715-1
+  - UBV M   3940
+  - V* EE Cep
+  - '[BBB73]  74'
+  - '[KW97] 61-42'
+  - 2MASS J22092274+5545242
+  - UCAC3 292-178067
+  - Gaia DR1 2197941954587810688
+  - Gaia DR2 2197941958898810240
+  gaia_source_id: 2197941958898810240
+  otype: Be*
+summary: ''
+claims: []
+hypotheses: []
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T05:57:44+00:00'

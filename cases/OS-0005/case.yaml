@@ -1,0 +1,54 @@
+id: OS-0005
+title: Breathing in, breathing out
+hook: A giant star swelling and shrinking every 14 months, brightening a thousandfold. Strange to the
+  eye, ordinary to astrophysics.
+status: observation
+target:
+  name: R Cyg
+  ra: 294.20565827354
+  dec: 50.19992431583001
+  aliases:
+  - TYC 3564-982-1
+  - TIC 27082559
+  - ASASSN-V J193649.33+501200.0
+  - WISEA J193649.35+501159.5
+  - WISE J193649.33+501159.4
+  - AKARI-IRC-V1 J1936493+501159
+  - Gaia DR3 2135109439204739200
+  - AAVSO 1934+49
+  - AG+50 1398
+  - BD+49  3064
+  - CCDM J19368+5013A
+  - CSS 1150
+  - DO 37531
+  - GC 27152
+  - GCRV 12027
+  - GEN# +1.00185456
+  - GSC 03564-00982
+  - HD 185456
+  - IDS 19341+4959 A
+  - IRAS 19354+5005
+  - IRC +50301
+  - PPM  37581
+  - RAFGL 2422
+  - S1* 616
+  - SAO  31822
+  - SKY# 36602
+  - V* R Cyg
+  - '[LFO93] 1935+50'
+  - '[LMW2001] 686'
+  - 2MASS J19364937+5011597
+  - WDS J19368+5012A
+  - ASAS J193650+5012.0
+  - WEB 16927
+  - Gaia DR2 2135109439204739200
+  - KIC 11868592
+  gaia_source_id: 2135109439204739200
+  otype: S*
+summary: ''
+claims: []
+hypotheses: []
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:01:49+00:00'

@@ -1,0 +1,96 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  query:
+    adql: SELECT source_id, ra, dec, parallax, parallax_over_error, pmra, pmdec, ruwe, phot_g_mean_mag,
+      phot_bp_mean_mag, phot_rp_mean_mag, bp_rp, phot_variable_flag, teff_gspphot, distance_gspphot, non_single_star,
+      DISTANCE(POINT(325.67834770733,43.58607440069), POINT(ra,dec))*3600 AS sep_arcsec FROM gaiadr3.gaia_source
+      WHERE 1=CONTAINS(POINT(ra,dec), CIRCLE(325.67834770733,43.58607440069,0.008333333333333333)) ORDER
+      BY sep_arcsec
+  retrieved_at: '2026-10-27T06:04:25+00:00'
+  rows_raw: 19
+  rows_kept: 19
+  cuts: []
+  notes: []
+  status: ok
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  query:
+    catalog: neowiser_p1bs_psd
+    spatial: cone
+    radius: 3.0
+    radunits: arcsec
+    objstr: 325.67834770733 43.58607440069
+    outfmt: 1
+    selcols: mjd,w1mpro,w1sigmpro,w2mpro,w2sigmpro,qual_frame,qi_fact,saa_sep,moon_masked,cc_flags,ph_qual,w1sat,w2sat,nb,na,w1snr,w2snr,w1rchi2,w2rchi2
+  retrieved_at: '2026-10-27T06:05:05+00:00'
+  rows_raw: 396
+  rows_kept: 42
+  cuts:
+  - 'W1: qual_frame > 0 removed 75'
+  - 'W1: w1rchi2 < 5x source median removed 10'
+  - 'W2: qual_frame > 0 removed 75'
+  - 'W2: cc_flags[1] == ''0'' removed 1'
+  - 'W2: w2rchi2 < 5x source median removed 6'
+  notes:
+  - rows_kept counts 6-month visits (W1 and W2), not exposures
+  status: ok
+aavso:
+  archive: AAVSO International Database (VSX api.delim)
+  query:
+    view: api.delim
+    ident: SS Cyg
+    delimiter: '|'
+  retrieved_at: '2026-10-27T06:05:41+00:00'
+  rows_raw: 932644
+  rows_kept: 564704
+  cuts: []
+  notes:
+  - 'observers (good points): SHPI:76939, JM:46811, ATE:40918, GFB:31550, PVA:30229, LMN:28682, LMA:26924,
+    MXL:17524, CCHD:16685, JSJA:15231, BJAK:14525, HBB:12678'
+  - upper limits, discrepant (val=T) and visual estimates are kept but flagged
+  - matched AAVSO name 'SS Cyg'
+  status: ok
+ztf:
+  archive: IRSA ZTF light curve service
+  query:
+    POS: CIRCLE 325.67834770733 43.58607440069 0.000556
+    BANDNAME: g,r,i
+    FORMAT: csv
+    BAD_CATFLAGS_MASK: '32768'
+  retrieved_at: '2026-10-27T06:05:46+00:00'
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  notes:
+  - no ZTF source (target may be brighter than ZTF saturation, ~12.5 mag)
+  status: empty
+asassn:
+  archive: ASAS-SN Sky Patrol (pyasassn)
+  query:
+    ra: 325.67834770733
+    dec: 43.58607440069
+    radius_arcsec: 5.0
+  retrieved_at: '2026-10-27T06:06:14+00:00'
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  notes:
+  - 'Sky Patrol light-curve service failed: ZeroDivisionError: integer modulo by zero'
+  status: unavailable
+tess:
+  archive: MAST TESS light curves via lightkurve
+  query:
+    ra: 325.67834770733
+    dec: 43.58607440069
+    authors:
+    - SPOC
+    - TESS-SPOC
+    - QLP
+  retrieved_at: '2026-10-27T06:06:17+00:00'
+  rows_raw: 343604
+  rows_kept: 15993
+  cuts:
+  - binned to 10-min medians per sector (good and flagged cadences kept apart)
+  notes:
+  - 'TESS magnitudes are relative (delta-mag vs each sector''s median); sectors: 15, 16, 56, 76, 83'
+  status: ok

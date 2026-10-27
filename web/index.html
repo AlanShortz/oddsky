@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oddsky — investigate strange stars with your AI agent</title>
+  <meta name="description" content="A real star, its data, and the argument about what it is. Point your own AI agent at real telescope data: every claim is tagged, every number has a receipt, and predictions are graded by the sky.">
+  <meta name="theme-color" content="#f6f1e6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#140d0b" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oddsky">
+  <meta property="og:title" content="Oddsky — investigate strange stars with your AI agent">
+  <meta property="og:description" content="The universe is an open question. Real telescope data, your own AI agent, and findings anyone can check: every claim tagged, every number with a receipt, predictions graded by the sky.">
+  <meta property="og:image" content="og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Oddsky — investigate strange stars with your AI agent">
+  <meta name="twitter:description" content="The universe is an open question. Real telescope data, your own AI agent, and findings anyone can check.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/oddsky.css">
+  <script>
+    // Pick the theme before first paint: ?theme= override, then a saved choice, then the OS.
+    (function () {
+      var q = /[?&]theme=(dark|light)/.exec(location.search + location.hash), t = q && q[1];
+      if (!t) { try { t = localStorage.getItem('oddsky-theme'); } catch (e) {} }
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip" href="#app" onclick="document.getElementById('app').focus(); return false;">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="wordmark" href="#/" aria-label="Oddsky, home">
+        <span class="wm-text">oddsky</span><svg class="wm-star" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16.3 4.2c-.2 3.9.1 8 .3 11.6M16.6 15.8c.3 4.1-.1 8.2-.5 12.1M5.6 10.3c3.6 1.6 7.2 3.6 10.9 5.6M16.5 15.9c3.5 2.1 6.9 4.1 10.4 5.7M26.6 9.6c-3.4 2-6.8 4.1-10.1 6.3M16.5 15.9c-3.5 2.2-7 4.3-10.7 6.1"/>
+        </svg>
+      </a>
+      <p class="tagline">The universe is an open question.</p>
+      <nav class="nav" aria-label="Main">
+        <a href="#/cases" data-route="cases">Cases</a>
+        <a href="#/trials" data-route="trials">Trials</a>
+        <a href="#/about" data-route="about">About</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false"><span class="theme-dot" aria-hidden="true"></span><span class="theme-label">red-light</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="wrap" tabindex="-1" aria-live="polite">
+    <p class="loading">Pointing the telescope…</p>
+  </main>
+
+  <footer class="colophon">
+    <div class="wrap colophon-inner">
+      <div class="quotes">
+        <blockquote>
+          <p>“The first principle is that you must not fool yourself — and you are the easiest person to fool.”</p>
+          <footer>Richard Feynman, <cite>Cargo Cult Science</cite>, 1974</footer>
+        </blockquote>
+        <blockquote>
+          <p>“There must be no barriers to freedom of inquiry.”</p>
+          <footer>J. Robert Oppenheimer, 1949</footer>
+        </blockquote>
+      </div>
+      <div class="credits">
+        <p><strong>Oddsky</strong> is open source under the MIT licence. <a href="https://github.com/oddsky-org/oddsky" rel="noopener" target="_blank">Source on GitHub</a>.</p>
+        <p>Data: Gaia (ESA/DPAC) · NEOWISE (NASA/JPL, IPAC/IRSA) · the observers of the AAVSO International Database · ASAS-SN · ZTF (Caltech/IPAC) · TESS (NASA, via MAST). Each case lists exactly which archive rows it used.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

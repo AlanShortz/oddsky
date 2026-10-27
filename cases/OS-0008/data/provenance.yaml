@@ -1,0 +1,72 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  query:
+    adql: SELECT source_id, ra, dec, parallax, parallax_over_error, pmra, pmdec, ruwe, phot_g_mean_mag,
+      phot_bp_mean_mag, phot_rp_mean_mag, bp_rp, phot_variable_flag, teff_gspphot, distance_gspphot, non_single_star,
+      DISTANCE(POINT(268.42233,66.02871), POINT(ra,dec))*3600 AS sep_arcsec FROM gaiadr3.gaia_source WHERE
+      1=CONTAINS(POINT(ra,dec), CIRCLE(268.42233,66.02871,0.008333333333333333)) ORDER BY sep_arcsec
+  retrieved_at: '2026-10-27T06:06:51+00:00'
+  rows_raw: 3
+  rows_kept: 3
+  cuts: []
+  notes: []
+  status: ok
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  query:
+    catalog: neowiser_p1bs_psd
+    spatial: cone
+    radius: 3.0
+    radunits: arcsec
+    objstr: 268.42233 66.02871
+    outfmt: 1
+    selcols: mjd,w1mpro,w1sigmpro,w2mpro,w2sigmpro,qual_frame,qi_fact,saa_sep,moon_masked,cc_flags,ph_qual,w1sat,w2sat,nb,na,w1snr,w2snr,w1rchi2,w2rchi2
+  retrieved_at: '2026-10-27T06:08:17+00:00'
+  rows_raw: 11100
+  rows_kept: 44
+  cuts:
+  - 'W1: qual_frame > 0 removed 895'
+  - 'W1: cc_flags[0] == ''0'' removed 7'
+  - 'W1: ph_qual[0] in (A,B) removed 2'
+  - 'W1: nb == 1 (no blending) removed 7'
+  - 'W1: w1rchi2 < 5x source median removed 523'
+  - 'W2: qual_frame > 0 removed 895'
+  - 'W2: cc_flags[1] == ''0'' removed 12'
+  - 'W2: ph_qual[1] in (A,B) removed 18'
+  - 'W2: nb == 1 (no blending) removed 7'
+  - 'W2: w2rchi2 < 5x source median removed 288'
+  notes:
+  - rows_kept counts 6-month visits (W1 and W2), not exposures
+  status: ok
+ztf:
+  archive: IRSA ZTF light curve service
+  query:
+    POS: CIRCLE 268.42233 66.02871 0.000556
+    BANDNAME: g,r,i
+    FORMAT: csv
+    BAD_CATFLAGS_MASK: '32768'
+  retrieved_at: '2026-10-27T06:08:17+00:00'
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  notes:
+  - no ZTF source (target may be brighter than ZTF saturation, ~12.5 mag)
+  status: empty
+tess:
+  archive: MAST TESS light curves via lightkurve
+  query:
+    ra: 268.42233
+    dec: 66.02871
+    authors:
+    - SPOC
+    - TESS-SPOC
+    - QLP
+  retrieved_at: '2026-10-27T06:08:45+00:00'
+  rows_raw: 43276
+  rows_kept: 12979
+  cuts:
+  - binned to 10-min medians per sector (good and flagged cadences kept apart)
+  notes:
+  - 'TESS magnitudes are relative (delta-mag vs each sector''s median); sectors: 14, 15, 16, 19, 22, 23,
+    25, 26'
+  status: ok

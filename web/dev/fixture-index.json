@@ -1,0 +1,421 @@
+{
+ "cases": [
+  {
+   "id": "OS-0001",
+   "title": "The star that glowed before it dimmed",
+   "hook": "In 2018 this Sun-like star began to glow in the infrared. Three years later it nearly vanished in visible light. What happened in between?",
+   "status": "observation",
+   "target": "ASASSN-21qj",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:I",
+    "AAVSO:R",
+    "AAVSO:V",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 8,
+   "n_hypotheses": 4,
+   "n_predictions": 3,
+   "featured": true
+  },
+  {
+   "id": "OS-0002",
+   "title": "The most mysterious star in the galaxy (allegedly)",
+   "hook": "Boyajian's Star: irregular dips of up to 22% that no planet could make. Aliens were proposed. Dust was found.",
+   "status": "observation",
+   "target": "KIC 8462852",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:Blue-Vis.",
+    "AAVSO:CR",
+    "AAVSO:CV",
+    "AAVSO:I",
+    "AAVSO:R",
+    "AAVSO:SG",
+    "AAVSO:SI",
+    "AAVSO:SR",
+    "AAVSO:TG",
+    "AAVSO:U",
+    "AAVSO:V",
+    "AAVSO:Vis.",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  },
+  {
+   "id": "OS-0003",
+   "title": "The eclipse that comes back every 5.6 years",
+   "hook": "Every 2,050 days something dark and enormous passes in front of this star, and every time the shadow looks different.",
+   "status": "observation",
+   "target": "EE Cep",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:CV",
+    "AAVSO:Green-Vis.",
+    "AAVSO:I",
+    "AAVSO:N/A",
+    "AAVSO:R",
+    "AAVSO:RJ",
+    "AAVSO:SG",
+    "AAVSO:SI",
+    "AAVSO:SR",
+    "AAVSO:TB",
+    "AAVSO:TG",
+    "AAVSO:TR",
+    "AAVSO:U",
+    "AAVSO:V",
+    "AAVSO:Vis.",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  },
+  {
+   "id": "OS-0004",
+   "title": "The star that smokes",
+   "hook": "For months it shines steadily; then it vanishes by eight magnitudes, as if someone blew out a candle. It makes its own soot.",
+   "status": "observation",
+   "target": "R CrB",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:Blue-Vis.",
+    "AAVSO:CR",
+    "AAVSO:CV",
+    "AAVSO:Green-Vis.",
+    "AAVSO:I",
+    "AAVSO:N/A",
+    "AAVSO:R",
+    "AAVSO:TB",
+    "AAVSO:TG",
+    "AAVSO:TR",
+    "AAVSO:U",
+    "AAVSO:V",
+    "AAVSO:Vis.",
+    "AAVSO:Yellow-Vis.",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  },
+  {
+   "id": "OS-0005",
+   "title": "Breathing in, breathing out",
+   "hook": "A giant star swelling and shrinking every 14 months, brightening a thousandfold. Strange to the eye, ordinary to astrophysics.",
+   "status": "observation",
+   "target": "R Cyg",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:CR",
+    "AAVSO:CV",
+    "AAVSO:Green-Vis.",
+    "AAVSO:H",
+    "AAVSO:I",
+    "AAVSO:IJ",
+    "AAVSO:J",
+    "AAVSO:N/A",
+    "AAVSO:R",
+    "AAVSO:RJ",
+    "AAVSO:SG",
+    "AAVSO:TG",
+    "AAVSO:V",
+    "AAVSO:Vis.",
+    "TESS:TESS"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  },
+  {
+   "id": "OS-0006",
+   "title": "The star that won't stay quiet",
+   "hook": "Every few weeks, for a century of amateur records, it leaps fiftyfold in brightness in a day. Something is feeding on its neighbour.",
+   "status": "observation",
+   "target": "SS Cyg",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:Blue-Vis.",
+    "AAVSO:CR",
+    "AAVSO:CV",
+    "AAVSO:Green-Vis.",
+    "AAVSO:I",
+    "AAVSO:N/A",
+    "AAVSO:R",
+    "AAVSO:SG",
+    "AAVSO:SI",
+    "AAVSO:SR",
+    "AAVSO:TB",
+    "AAVSO:TG",
+    "AAVSO:TR",
+    "AAVSO:U",
+    "AAVSO:V",
+    "AAVSO:Vis.",
+    "AAVSO:Yellow-Vis.",
+    "NEOWISE:W1",
+    "NEOWISE:W2"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  }
+ ],
+ "scorecards": [
+  {
+   "trial": "strange-stars-001",
+   "mode": "blind",
+   "agent": "claude-opus-5.5 (Claude Code subagent)",
+   "run_at": "2026-10-27T11:20:00+00:00",
+   "answers_sha256": "25305005ac7f24d47c55a3e9a3444ece7df34d39a2a7ed73de060265a389e272",
+   "summary": {
+    "n": 8,
+    "top1": 0.625,
+    "top2": 1.0,
+    "brier": 0.326
+   },
+   "cases": [
+    {
+     "case": "T01",
+     "truth": "dust_occultation",
+     "ranked": [
+      {
+       "klass": "dust_occultation",
+       "p": 0.55
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.25
+      },
+      {
+       "klass": "yso_dipper",
+       "p": 0.12
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.28,
+     "notes": "Long, asymmetric dimming with B/I ratio near ISM dust; no periodicity."
+    },
+    {
+     "case": "T02",
+     "truth": "pulsation",
+     "ranked": [
+      {
+       "klass": "pulsation",
+       "p": 0.8
+      },
+      {
+       "klass": "dust_formation",
+       "p": 0.1
+      },
+      {
+       "klass": "normal",
+       "p": 0.05
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.053,
+     "notes": "Clean 312-day period in ASAS-SN; NEOWISE in phase."
+    },
+    {
+     "case": "T03",
+     "truth": "artifact_blend",
+     "ranked": [
+      {
+       "klass": "eruptive",
+       "p": 0.4
+      },
+      {
+       "klass": "artifact_blend",
+       "p": 0.35
+      },
+      {
+       "klass": "rotation_spots",
+       "p": 0.1
+      }
+     ],
+     "top1": false,
+     "top2": true,
+     "brier": 0.595,
+     "notes": "Flagged the 4.1\" neighbour but still led with an outburst. The Skeptic warned; the agent under-weighted it."
+    },
+    {
+     "case": "T04",
+     "truth": "dust_formation",
+     "ranked": [
+      {
+       "klass": "dust_formation",
+       "p": 0.6
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.25
+      },
+      {
+       "klass": "collision_debris",
+       "p": 0.08
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.23,
+     "notes": "Sudden 4-mag drop, slow recovery, IR brightening during the decline: R CrB-like."
+    },
+    {
+     "case": "T05",
+     "truth": "normal",
+     "ranked": [
+      {
+       "klass": "rotation_spots",
+       "p": 0.45
+      },
+      {
+       "klass": "normal",
+       "p": 0.4
+      },
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.1
+      }
+     ],
+     "top1": false,
+     "top2": true,
+     "brier": 0.573,
+     "notes": "Over-read a 0.02-mag TESS wiggle; the honest answer was 'nothing to explain'."
+    },
+    {
+     "case": "T06",
+     "truth": "eclipse_companion",
+     "ranked": [
+      {
+       "klass": "eclipse_companion",
+       "p": 0.7
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.2
+      },
+      {
+       "klass": "yso_dipper",
+       "p": 0.05
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.133,
+     "notes": "Two dips 1,180 days apart with identical shape."
+    },
+    {
+     "case": "T07",
+     "truth": "artifact_instrumental",
+     "ranked": [
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.65
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.2
+      },
+      {
+       "klass": "normal",
+       "p": 0.1
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.173,
+     "notes": "Period equals the TESS orbit (13.7 d); recovered from the alias check."
+    },
+    {
+     "case": "T08",
+     "truth": "collision_debris",
+     "ranked": [
+      {
+       "klass": "dust_occultation",
+       "p": 0.45
+      },
+      {
+       "klass": "collision_debris",
+       "p": 0.4
+      },
+      {
+       "klass": "dust_formation",
+       "p": 0.1
+      }
+     ],
+     "top1": false,
+     "top2": true,
+     "brier": 0.573,
+     "notes": "Saw the IR-before-optical ordering but preferred a pre-existing disk."
+    }
+   ],
+   "predictions": []
+  },
+  {
+   "trial": "hindsight-001",
+   "mode": "hindsight",
+   "agent": "claude-opus-5.5 (Claude Code subagent)",
+   "run_at": "2026-10-27T12:05:00+00:00",
+   "answers_sha256": "b668c77ddba1facf679dfe866efa9fedfdb89595af77f36647c54749f110f5a4",
+   "summary": {
+    "n": 5,
+    "brier": 0.144
+   },
+   "cases": [],
+   "predictions": [
+    {
+     "case": "H01",
+     "statement": "V will be fainter than its pre-cut median by more than 0.5 mag within 200 days.",
+     "probability": 0.7,
+     "outcome": "true",
+     "observed": 1.21
+    },
+    {
+     "case": "H01",
+     "statement": "The dimming will last longer than 400 days.",
+     "probability": 0.55,
+     "outcome": "false",
+     "observed": 0.0
+    },
+    {
+     "case": "H02",
+     "statement": "The next minimum of the 312-day cycle will fall within \u00b120 days of the predicted date.",
+     "probability": 0.85,
+     "outcome": "true",
+     "observed": 6.0
+    },
+    {
+     "case": "H03",
+     "statement": "W2 will brighten by more than 0.2 mag at the next NEOWISE visit.",
+     "probability": 0.4,
+     "outcome": "false",
+     "observed": 0.04
+    },
+    {
+     "case": "H04",
+     "statement": "The star will return to within 0.1 mag of its baseline by the end of the window.",
+     "probability": 0.6,
+     "outcome": "unresolvable",
+     "observed": null
+    }
+   ]
+  }
+ ]
+}

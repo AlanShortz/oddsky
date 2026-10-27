@@ -1,0 +1,49 @@
+[project]
+name = "oddsky"
+version = "0.2.0"
+description = "An open observatory your AI agent can use. The universe is an open question."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11,<3.15"
+authors = [{ name = "Alan Shortz" }, { name = "the advisor" }]
+dependencies = [
+  "astropy>=6",
+  "astroquery>=0.4.7",
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "pandas>=2,<3",
+  "pyarrow>=14",
+  "pydantic>=2.6",
+  "typer>=0.12",
+  "pyyaml>=6",
+  "httpx>=0.27",
+  "matplotlib>=3.8",
+  "mcp>=2.3,<3",
+]
+
+[project.optional-dependencies]
+asassn = ["skypatrol>=0.6"]
+tess = ["lightkurve>=2.4"]
+all = ["skypatrol>=0.6", "lightkurve>=2.4"]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+oddsky = "oddsky.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/oddsky"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
