@@ -1,0 +1,274 @@
+id: T07
+title: Trial star T07
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: 'Gaia context: G=11.76, BP-RP=0.78, abs G=3.52 at ~444 pc, RUWE 0.82: a single-looking F-type
+    main-sequence or slightly evolved dwarf. It is monitored unusually intensively: ~81k AAVSO V points
+    from 89+ observers over ~4000 d, plus BVRI and TESS.'
+  tag: observed
+  calls:
+  - K1
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:44+00:00'
+- id: C2
+  text: 'Over ~4000 d the V light curve is quiet at the 5% level: no excursion beyond max(4 sigma, 0.05
+    mag) in 1-d bins, 2-98% amplitude 0.12 mag, and no secular trend (slope 0.0014 mag/yr). 10-d bin medians
+    wander by a few hundredths of a magnitude, at least partly from changes in the observer mix.'
+  tag: computed
+  calls:
+  - K3
+  - K4
+  - K5
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:45+00:00'
+- id: C3
+  text: A ~10-day dip of ~2.5% sits at days ~1405-1414. V is 0.025 mag fainter than the preceding window
+    (31 sigma) and 0.024 mag fainter than the following window (36 sigma). The dip appears in B (0.020-0.025),
+    I (0.020) and R (0.022, 2.3 sigma), so it is seen in several bands and by many observers (>1400 V
+    points in the window).
+  tag: computed
+  calls:
+  - K9
+  - K10
+  - K13
+  - K11
+  - K15
+  - K14
+  - K16
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:45+00:00'
+- id: C4
+  text: 'TESS shows a short, isolated ~1.3% dip at day ~1936.7, lasting ~0.8 d on a flat sector. Simultaneous
+    AAVSO V bins at days 1936.9-1937.1 are ~0.03 mag fainter than the surrounding nights (compare_windows:
+    0.037 mag, 22 sigma). So ground photometry independently confirms the TESS dip.'
+  tag: observed
+  calls:
+  - K22
+  - K27
+  - K25
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:46+00:00'
+- id: C5
+  text: A blend is excluded for the dips. The nearest Gaia neighbour (1.8") supplies 0.46% of the G flux,
+    and everything inside the AAVSO beam totals 0.5%, so no neighbour can make a 2-3% dip. The Skeptic
+    finds no saturation and no momentum-dump coincidence for the TESS dip (Sb).
+  tag: computed
+  calls:
+  - K2
+  - K28
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:47+00:00'
+- id: C6
+  text: 'NEOWISE shows no warm-dust signature over ~3650 d: W1 is flat to 0.004 mag, W1-W2 ~ -0.03 (photospheric),
+    there is no positive W1/W2 excess after day 1000, and W1 does not correlate with colour.'
+  tag: computed
+  calls:
+  - K18
+  - K19
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:47+00:00'
+- id: C7
+  text: The 0.17-0.27 mag B and I excursions found by find_excursions rest on only 1-3 observers per bin
+    and are absent from the densely sampled V curve at the same epochs (e.g. days 2172-2324). They are
+    most likely observer zero-point or calibration artifacts, not real dips.
+  tag: inferred
+  calls:
+  - K6
+  - K7
+  - K5
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:48+00:00'
+- id: C8
+  text: An F star with no IR excess, no blend, and repeated, aperiodic, multi-band, independently confirmed
+    few-percent dips lasting from ~1 d to ~10 d best fits occultation by circumstellar material (dust/debris
+    clumps). Spots, pulsation and YSO disks fit poorly for an F dwarf with flat IR and a flat continuum
+    between dips.
+  tag: inferred
+  calls:
+  - K10
+  - K13
+  - K22
+  - K25
+  - K19
+  - K28
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:49+00:00'
+- id: C9
+  text: The combination (F dwarf at ~450 pc, V~11.9, a faint neighbour at ~2" with ~0.5% flux, few-percent
+    aperiodic dips with no IR excess, and an extraordinarily dense multi-observer AAVSO campaign) matches
+    KIC 8462852 (Boyajian's star). This is recognition, not evidence; the conclusions above stand on the
+    data alone.
+  tag: speculated
+  calls:
+  - K1
+  - K28
+  - K2
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:50+00:00'
+- id: C10
+  text: There is no convincing periodicity. The V periodogram top peaks (1838 d, 1123 d) are comparable
+    to the ~4000-d baseline and vulnerable to observer-mix trends. The TESS top peak (15.9 d) has very
+    low power (0.027).
+  tag: computed
+  calls:
+  - K29
+  - K21
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:50+00:00'
+hypotheses:
+- id: H1
+  klass: dust_occultation
+  statement: Aperiodic few-percent dips of an F dwarf caused by circumstellar dust/debris clumps (optically
+    thin, little total area, or cold) crossing the line of sight. No warm IR excess goes with them.
+  supports:
+  - C3
+  - C4
+  - C5
+  - C6
+  - C8
+  - C10
+  conflicts: []
+  would_falsify: Dips shown to be strongly achromatic in a way inconsistent with any dust (needs >cm grains);
+    a strict periodicity with identical eclipse shapes; or a matching warm IR excess forming first (would
+    favour collision_debris).
+  status: live
+  confidence: 0.62
+  author: claude-opus-5.5
+  at: '2026-10-27T06:24:07+00:00'
+- id: H2
+  klass: collision_debris
+  statement: The occulting material is debris from a planetary collision or disrupted bodies.
+  supports:
+  - C3
+  - C4
+  conflicts:
+  - C6
+  would_falsify: Continued absence of any W1/W2 excess before or after the dips.
+  status: live
+  confidence: 0.08
+  author: claude-opus-5.5
+  at: '2026-10-27T06:24:08+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: A companion or its extended (dusty) disk/ring produces the dips.
+  supports:
+  - C4
+  - C5
+  conflicts:
+  - C10
+  - C1
+  would_falsify: No repeat at any fixed period over ~4000 d; RUWE and non_single_star show no companion.
+  status: live
+  confidence: 0.07
+  author: claude-opus-5.5
+  at: '2026-10-27T06:24:08+00:00'
+- id: H4
+  klass: artifact_instrumental
+  statement: Dips are pipeline/observer artifacts (TESS systematics, AAVSO zero-point shifts).
+  supports:
+  - C7
+  conflicts:
+  - C3
+  - C4
+  - C5
+  would_falsify: Simultaneous detection by TESS and many independent ground observers, which is already
+    seen for the day-1936.7 dip.
+  status: live
+  confidence: 0.05
+  author: claude-opus-5.5
+  at: '2026-10-27T06:24:09+00:00'
+- id: H5
+  klass: normal
+  statement: An ordinary quiet F star; the apparent dips are noise or observer offsets.
+  supports:
+  - C2
+  - C7
+  conflicts:
+  - C3
+  - C4
+  would_falsify: The 30-sigma multi-band day-1405-1414 dip and the TESS+AAVSO day-1936.7 dip.
+  status: live
+  confidence: 0.04
+  author: claude-opus-5.5
+  at: '2026-10-27T06:24:10+00:00'
+- id: H6
+  klass: dust_formation
+  statement: The star itself produces the dust episodically.
+  supports:
+  - C3
+  conflicts:
+  - C1
+  - C6
+  would_falsify: A main-sequence F dwarf has no known dust-forming mechanism; no IR excess.
+  status: live
+  confidence: 0.04
+  author: claude-opus-5.5
+  at: '2026-10-27T06:24:11+00:00'
+- id: H7
+  klass: rotation_spots
+  statement: Spot modulation.
+  supports: []
+  conflicts:
+  - C4
+  - C10
+  would_falsify: Isolated sub-day dips on a flat continuum and no rotation period.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T06:24:12+00:00'
+- id: H8
+  klass: yso_dipper
+  statement: Young star with inner-disk extinction.
+  supports:
+  - C3
+  conflicts:
+  - C6
+  - C1
+  would_falsify: No NIR/MIR excess; main-sequence luminosity.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:24:12+00:00'
+- id: H9
+  klass: artifact_blend
+  statement: A neighbour causes the variability.
+  supports: []
+  conflicts:
+  - C5
+  would_falsify: No neighbour bright enough (max 0.46% flux within 5").
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:24:13+00:00'
+- id: H10
+  klass: pulsation
+  statement: Intrinsic pulsation.
+  supports: []
+  conflicts:
+  - C4
+  - C10
+  would_falsify: No coherent period; dips are isolated.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:24:14+00:00'
+- id: H11
+  klass: eruptive
+  statement: Outbursts/flares.
+  supports: []
+  conflicts:
+  - C3
+  - C4
+  would_falsify: The events are dimmings, not brightenings.
+  status: live
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-27T06:24:15+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'

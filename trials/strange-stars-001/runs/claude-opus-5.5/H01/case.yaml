@@ -1,0 +1,220 @@
+id: H01
+title: Trial star H01
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 19798.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: Out of eclipse the star is very constant (V robust std 0.053 mag over decades, V~10.80-10.83);
+    recent data days 19300-19798 hold V=10.78-10.83 with no dimming in progress at the cutoff.
+  tag: observed
+  calls:
+  - K1
+  - K7
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:30+00:00'
+- id: C2
+  text: 'Discrete fading events with minima near days 5840, 7890, 9940, ~11990, 14038, 16092 and ~18130
+    (visual + V data): consecutive spacings 2050, 2050, 2050, 2048, 2054, 2038 d, i.e. strictly periodic
+    recurrence with P ~2048-2050 d (~5.6 yr).'
+  tag: computed
+  calls:
+  - K3
+  - K4
+  - K5
+  - K6
+  - K12
+  - K13
+  - K14
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:32+00:00'
+- id: C3
+  text: 'Each event lasts ~45-60 d with ~smooth, roughly symmetric ingress/egress and structure near minimum
+    (e.g. day 18100-18158, plateau/two minima near 18128-18138); depths vary strongly from event to event:
+    ~1.6 mag (day 9940), ~0.6 (day ~11990, visual), ~0.4 (14038), ~0.68 (16092), ~0.53 (18130).'
+  tag: observed
+  calls:
+  - K5
+  - K6
+  - K12
+  - K13
+  - K14
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:33+00:00'
+- id: C4
+  text: 'The fading is nearly grey: dB/dV = 1.01-1.04 and dI/dV = 0.82-0.84 (r>0.98), much flatter than
+    ISM dust (1.32, 0.59) - occulting material is large-grained or optically thick, not a normal-dust
+    cloud and not pulsation/spots.'
+  tag: computed
+  calls:
+  - K2
+  - K10
+  - K11
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:34+00:00'
+- id: C5
+  text: 'Gaia: d~2.3 kpc, abs G -1.15, BP-RP 0.66: a luminous, reddened early-type (likely B) star; all
+    44 NEOWISE visits saturated (W1<8) implying V-W1>2.8, an IR excess for a hot star (circumstellar disk/dust).'
+  tag: inferred
+  calls:
+  - K1
+  - K2
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:36+00:00'
+- id: C6
+  text: Events are confirmed by 91 independent observers and multiple bands with observed ingresses; no
+    Gaia neighbour contributes >1.5% of flux in any beam, so neither blend nor instrumental artifact explains
+    them. TESS shows only ~0.3% variability with a 1.98 d period (tiny compared to the eclipses).
+  tag: computed
+  calls:
+  - K2
+  - K9
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:37+00:00'
+- id: C7
+  text: Periodic, long (~50 d out of 2050 d), grey, variable-depth eclipses of a luminous B star are the
+    signature of an opaque dark disk around an unseen companion eclipsing the star, with disk precession/
+    orientation changing the depth. This matches EE Cephei (P=2050 d) and I believe H01 is EE Cep, but
+    the conclusion rests on the data above.
+  tag: inferred
+  calls:
+  - K2
+  - K5
+  - K11
+  - K14
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:39+00:00'
+hypotheses:
+- id: H1
+  klass: eclipse_companion
+  statement: A long-period (P~2049 d) binary in which a companion surrounded by an opaque, precessing
+    dusty disk eclipses a luminous B star, producing grey ~50-day eclipses of variable depth (EE Cep-like).
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  - C7
+  conflicts: []
+  would_falsify: No fading near day ~20180 (+/-25 d) when continuous AAVSO coverage exists; or a future
+    eclipse with strongly reddening (ISM-like) colours.
+  status: live
+  confidence: 0.87
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:50+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: Circumstellar dust structure (e.g. a clump in a circumstellar/circumbinary disk) that periodically
+    occults the star, without a discrete eclipsing companion body.
+  supports:
+  - C2
+  - C4
+  - C5
+  conflicts:
+  - C3
+  would_falsify: Detection of a companion orbit with the same period would fold this into eclipse_companion;
+    loss of strict periodicity would favour it.
+  status: live
+  confidence: 0.08
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:51+00:00'
+- id: H3
+  klass: pulsation
+  statement: Intrinsic long-period variability of a luminous star.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  - C4
+  would_falsify: 'Already strained: brief, strictly periodic, grey dips with flat out-of-eclipse light
+    are not pulsation.'
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:52+00:00'
+- id: H4
+  klass: eruptive
+  statement: Episodic mass loss / Be-disk activity causing temporary fadings.
+  supports:
+  - C5
+  conflicts:
+  - C2
+  would_falsify: Strict 2049 d periodicity is not expected for episodic activity.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:53+00:00'
+- id: H5
+  klass: artifact_blend
+  statement: A neighbour causes the dips.
+  supports: []
+  conflicts:
+  - C6
+  would_falsify: 'Already: no neighbour >1.5% of the flux in any beam; dips of 0.4-1.6 mag cannot come
+    from such faint neighbours.'
+  status: live
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:54+00:00'
+predictions:
+- id: P1
+  statement: 'Out-of-eclipse plateau continues: the median of AAVSO:V between days 19800 and 20120 is
+    brighter than 10.86 (no new fading before the next predicted eclipse).'
+  check:
+    series: AAVSO:V
+    start: 19800.0
+    end: 20120.0
+    statistic: median
+    op: <
+    value: 10.86
+  probability: 0.9
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T06:22:00+00:00'
+- id: P2
+  statement: 'The next eclipse (ephemeris: minima 5840 + n*2048.3 d -> mid ~20178 +/- 10) is under way:
+    median AAVSO:V between days 20165 and 20195 is fainter than 10.95.'
+  check:
+    series: AAVSO:V
+    start: 20165.0
+    end: 20195.0
+    statistic: median
+    op: '>'
+    value: 10.95
+  probability: 0.75
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T06:22:16+00:00'
+- id: P3
+  statement: 'Depth near 50/50: the core of the next eclipse is as deep as the 2014/2020-like events:
+    median AAVSO:V between days 20170 and 20190 is fainter than 11.15 (previous comparable-window medians
+    ranged ~11.05-11.4).'
+  check:
+    series: AAVSO:V
+    start: 20170.0
+    end: 20190.0
+    statistic: median
+    op: '>'
+    value: 11.15
+  probability: 0.45
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T06:22:19+00:00'
+- id: P4
+  statement: 'The eclipse has not yet begun by day 20140: median AAVSO:V between days 20115 and 20140
+    is brighter than 10.88.'
+  check:
+    series: AAVSO:V
+    start: 20115.0
+    end: 20140.0
+    statistic: median
+    op: <
+    value: 10.88
+  probability: 0.75
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T06:22:20+00:00'
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'

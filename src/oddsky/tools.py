@@ -57,8 +57,13 @@ class Toolbox:
         if band:
             df = df[df.band.str.lower() == band.strip().lower()]
             if df.empty:
-                have = sorted(store.series(key).band.unique())
-                raise ValueError(f"no good points for {series}; bands available: {have}")
+                raw = store.series(key)
+                have = sorted(raw.band.unique())
+                flags = raw[raw.band.str.lower() == band.strip().lower()].flag.value_counts().to_dict()
+                if flags:
+                    raise ValueError(f"{series} exists but every point is flagged {flags} (e.g. saturated); "
+                                     "there is no usable data in it")
+                raise ValueError(f"no series {series}; bands available: {have}")
         elif df.band.nunique() > 1:
             raise ValueError(f"{survey} has several bands {sorted(df.band.unique())}; ask for e.g. '{survey}:{df.band.iloc[0]}'")
         return df
@@ -104,7 +109,7 @@ class Toolbox:
                             "claims": len(c.claims), "hypotheses": len(c.hypotheses)})
         return {"mode": self.mode, "cases": out}
 
-    def list_classes(self) -> dict:
+    def list_classes(self, case: str | None = None) -> dict:
         """The Strange Stars explanation classes. Hypotheses must use one of these names."""
         return {"classes": CLASSES}
 
@@ -137,8 +142,10 @@ class Toolbox:
             "gaia_variability": ctx.get("gaia_variability"),
             "n_neighbors_within_30_arcsec": len(ctx.get("neighbors", [])),
             "provenance": prov,
-            "claims": [cl.model_dump(include={"id", "tag", "text"}) for cl in c.claims],
-            "hypotheses": [h.model_dump(include={"id", "klass", "status", "statement"}) for h in c.hypotheses],
+            "claims": [cl.model_dump(include={"id", "tag", "text", "calls", "retracted"}, exclude_none=True)
+                       for cl in c.claims],
+            "hypotheses": [h.model_dump(include={"id", "klass", "status", "confidence", "statement", "supports",
+                                                 "conflicts", "would_falsify"}) for h in c.hypotheses],
             "predictions": [p.model_dump(include={"id", "statement", "probability"}) for p in c.predictions],
             "advice": "Run skeptic_report early. Tag claims honestly: observed (straight from data), computed "
                       "(a tool's output), inferred (reasoning from evidence), speculated (a guess).",
@@ -278,6 +285,18 @@ class Toolbox:
         return self._log(s, "add_claim", dict(case=case, id=claim.id, tag=tag),
                          {"claim": claim.id, **({"warning": warn} if warn else {})})
 
+    def retract_claim(self, case: str, claim: str, reason: str) -> dict:
+        """Retract a claim you no longer stand behind (a mistake, a probe, a superseded number). It stays in
+        the record, struck through, with your reason. Nothing in Oddsky is silently deleted."""
+        s = self.store(case)
+        c = s.load()
+        cl = next((x for x in c.claims if x.id == claim), None)
+        if cl is None:
+            raise ValueError(f"no claim {claim}")
+        cl.retracted = reason or "retracted"
+        s.save(c)
+        return self._log(s, "retract_claim", dict(case=case, claim=claim, reason=reason), {"ok": True})
+
     def add_hypothesis(self, case: str, klass: str, statement: str, supports: list[str] | None = None,
                        conflicts: list[str] | None = None, would_falsify: str = "",
                        confidence: float | None = None) -> dict:
@@ -401,12 +420,17 @@ def evaluate(check: Check, frame: Callable[[str], pd.DataFrame]):
     from .case.model import Resolution
 
     df = frame(check.series)
-    w = df[(df.t_mjd >= check.start) & (df.t_mjd <= check.end)].mag.to_numpy(float)
+    win = df[(df.t_mjd >= check.start) & (df.t_mjd <= check.end)]
+    w = win.mag.to_numpy(float)
     if len(w) < 3:
         return Resolution(outcome="unresolvable", n_points=int(len(w)), note="fewer than 3 points in the window")
-    val = {"median": np.median(w), "faintest": np.percentile(w, 98), "brightest": np.percentile(w, 2),
-           "amplitude": np.percentile(w, 98) - np.percentile(w, 2)}[check.statistic]
-    note = f"{check.statistic} over window = {val:.3f}"
+    # Extremes use nightly medians: robust to a single bad point, but a one-night outburst still counts.
+    # (Grader v1 used the 2nd/98th percentile of all points, which let dense quiescent sampling hide short
+    # outbursts. Changed after Trial 001; both gradings are published.)
+    nightly = stats.daily_bins(win, 1.0).mag.to_numpy(float)
+    val = {"median": np.median(w), "faintest": nightly.max(), "brightest": nightly.min(),
+           "amplitude": nightly.max() - nightly.min()}[check.statistic]
+    note = f"{check.statistic} over window = {val:.3f} ({len(w)} points, {len(nightly)} nights)"
     if check.baseline:
         bw = df[(df.t_mjd >= check.baseline[0]) & (df.t_mjd <= check.baseline[1])].mag.to_numpy(float)
         if len(bw) < 3:
@@ -420,7 +444,7 @@ def evaluate(check: Check, frame: Callable[[str], pd.DataFrame]):
 
 OPEN_TOOLS = ["list_cases", "list_classes", "case_overview", "get_lightcurve", "describe_series", "compare_windows",
               "periodogram", "find_excursions", "cross_band", "wise_color", "ir_excess", "neighbors",
-              "skeptic_report", "add_claim", "add_hypothesis", "update_hypothesis", "register_prediction", "check_prediction",
+              "skeptic_report", "add_claim", "retract_claim", "add_hypothesis", "update_hypothesis", "register_prediction", "check_prediction",
               "open_case", "literature"]
 BLIND_TOOLS = [t for t in OPEN_TOOLS if t not in ("check_prediction", "open_case", "literature")]
 

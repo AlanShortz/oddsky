@@ -1,0 +1,195 @@
+id: T01
+title: Trial star T01
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: Lomb-Scargle on 56,560 visual points over ~63,600 d gives a dominant period of 427.7 d (power
+    0.65, FAP~0); AAVSO:V independently gives 434 d with a 218 d harmonic. The skeptic flags 427.7 d as
+    a spectral-window peak, but for a star observed preferentially near maximum the window inherits the
+    star period, so this flag does not make the period spurious.
+  tag: computed
+  calls:
+  - K4
+  - K5
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:55+00:00'
+- id: C2
+  text: 'A fully sampled cycle (days ~58400-59000, 20-d bins, up to 111 estimates per bin) runs from 8.8
+    down to a minimum of ~14.3 near day 58670, then rises to 7.5 by day ~58811 (~140 d rise) and declines
+    again: a smooth, asymmetric Mira-type cycle of ~6.8 mag, faster rise than decline.'
+  tag: observed
+  calls:
+  - K15
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:56+00:00'
+- id: C3
+  text: 'Multiband changes are coherent: B vs V r=0.98 with slope 1.07 over ~8 mag; skeptic chromatic
+    check: dR/dV=0.76, dI/dV=0.58, all bands move together. The I-band median (4.6) vs V (9.4) shows an
+    extremely red, cool photosphere; Gaia BP-RP = 6.0.'
+  tag: computed
+  calls:
+  - K3
+  - K8
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:57+00:00'
+- id: C4
+  text: 'Gaia DR3: G=9.24, BP-RP=6.02, parallax/err=29, d~597 pc, abs G~0.4, flagged as long-period variable;
+    no neighbour contributes more than 0.2% of G flux within the TESS or AAVSO beams, and TESS CROWDSAP
+    >= 0.99, so blending is excluded.'
+  tag: computed
+  calls:
+  - K1
+  - K3
+  - K11
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:57+00:00'
+- id: C5
+  text: Mean visual brightness in ~2139-d bins stays within ~9.2-10.1 from day ~20000 to the end (170
+    yr total); the 1.8 mag changepoint at day 20929 coincides with sample size jumping from tens-hundreds
+    to thousands per bin, consistent with early observers recording mainly near maximum (selection bias),
+    not a physical secular fading.
+  tag: computed
+  calls:
+  - K16
+  - K6
+  - K10
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:58+00:00'
+- id: C6
+  text: find_excursions on AAVSO:V finds only one fainter event (6.3 mag at day ~58680, single observer
+    per bin), which is just a normal Mira minimum compared against a 300-d running baseline, not an extra
+    occultation.
+  tag: computed
+  calls:
+  - K9
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:59+00:00'
+- id: C7
+  text: TESS (1656 d span, relative per sector) shows only ~0.6% robust scatter and a weak 7.5 d peak
+    (power 0.07); most TESS dips flagged by the skeptic lie at momentum dumps or sector edges, so they
+    are instrumental and irrelevant to the Mira cycle, which TESS normalisation cannot capture anyway.
+  tag: computed
+  calls:
+  - K7
+  - K17
+  - K3
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:00+00:00'
+- id: C8
+  text: A ~430 d period, ~7 mag visual amplitude, BP-RP~6, abs G~0.4 and stable cycle over 170 yr identify
+    T01 as an ordinary oxygen- or S-type Mira (pulsating AGB star). Speculatively the parameters (P~426-430
+    d, V~6-14.5) match R Cygni, though the identification is not needed for the classification.
+  tag: inferred
+  calls:
+  - K4
+  - K15
+  - K1
+  - K3
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:00+00:00'
+hypotheses:
+- id: H1
+  klass: pulsation
+  statement: 'T01 is a Mira variable (pulsating AGB star): coherent ~428-434 d period stable over ~170
+    yr, ~7 mag visual amplitude with fast rise and slower decline, extremely red colours (BP-RP 6, V-I
+    ~5) and luminous (abs G~0.4 at 597 pc).'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C8
+  conflicts: []
+  would_falsify: Loss of the ~430 d coherence (cycles not phasing over decades), or colour behaviour inconsistent
+    with temperature-driven pulsation (e.g. grey dimming with dB/dV ~1.0 and constant V-I across cycles).
+  status: favored
+  confidence: 0.88
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:53+00:00'
+- id: H2
+  klass: dust_formation
+  statement: Some of the variability, e.g. occasional deep minima, could be episodic circumstellar dust
+    formation on top of pulsation.
+  supports:
+  - C4
+  conflicts:
+  - C1
+  - C5
+  would_falsify: All minima consistent in depth and phase with the regular cycle; no long non-periodic
+    declines in the 170-yr record.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:54+00:00'
+- id: H3
+  klass: normal
+  statement: The star behaves as is typical for its class with no anomaly beyond its known variability;
+    nothing strange requires explanation.
+  supports:
+  - C5
+  conflicts:
+  - C1
+  - C2
+  would_falsify: Any anomaly beyond regular Mira pulsation.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:54+00:00'
+- id: H4
+  klass: eclipse_companion
+  statement: A long-period companion eclipse produces the periodic dimming.
+  supports: []
+  conflicts:
+  - C2
+  - C3
+  would_falsify: Smooth asymmetric light curve with colour-temperature changes, as observed, rather than
+    flat-bottomed grey eclipses.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:55+00:00'
+- id: H5
+  klass: dust_occultation
+  statement: Circumstellar dust passing in front of the star causes the dimmings.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  would_falsify: Strict 430 d periodicity over 170 yr and redder-when-fainter colour slopes typical of
+    pulsation.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:56+00:00'
+- id: H6
+  klass: artifact_instrumental
+  statement: Instrumental effects drive the signal.
+  supports:
+  - C7
+  conflicts:
+  - C3
+  - C4
+  would_falsify: Confirmation by 500 independent observers and multiple bands (already observed).
+  status: live
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:56+00:00'
+- id: H7
+  klass: artifact_blend
+  statement: A neighbour causes the variability.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: No neighbour contributes >0.2% of G flux (already observed).
+  status: live
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:57+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

@@ -414,7 +414,7 @@ export function createFigure(payload, { annotations = [], caseId = '' } = {}) {
     const top = rows ? 10 + rows * 14 : 4;
     let y = top;
     const pg = panels.map((p, i) => {
-      const ph = p.fixedH ?? Math.round(unit * p.weight);
+      const ph = p.empty ? (compact ? 50 : 34) : Math.round(unit * p.weight);
       const g = { p, y0: y + titleH, h: ph, index: i };
       y = g.y0 + ph + gap;
       g.dom = yDomain(p);
@@ -442,7 +442,9 @@ export function createFigure(payload, { annotations = [], caseId = '' } = {}) {
       const letter = 'abcdefg'[g.index];
       if (g.p.empty) {
         grp.append(s('rect', { class: 'frame is-empty', x: ml + 0.5, y: g.y0 + 0.5, width: plotW - 1, height: g.h - 1 }));
-        grp.append(s('text', { class: 'empty-note', x: ml + 12, y: g.y0 + g.h / 2, 'dominant-baseline': 'central' }, g.p.empty));
+        const [l1, l2] = compact && g.p.empty.includes(' — ') ? g.p.empty.split(' — ') : [g.p.empty, null];
+        grp.append(s('text', { class: 'empty-note', x: ml + 10, y: g.y0 + g.h / 2 + (l2 ? -8 : 0), 'dominant-baseline': 'central' }, l1,
+          l2 ? s('tspan', { x: ml + 10, dy: 16 }, l2.charAt(0).toUpperCase() + l2.slice(1)) : null));
         grp.append(s('text', { class: 'panel-letter', x: ml, y: g.y0 - 8 }, letter));
         grp.append(s('text', { class: 'panel-title', x: ml + 14, y: g.y0 - 8 }, g.p.title, compact ? null : s('tspan', { class: 'panel-sub', dx: 9 }, g.p.sub)));
         svg.append(grp);
@@ -665,7 +667,8 @@ export function createFigure(payload, { annotations = [], caseId = '' } = {}) {
       }
       g.append(s('rect', { class: 'frame', x: x0 + 0.5, y: y0 + 0.5, width: w - 1, height: ph - 1 }));
       const d0 = mjdToDate(c.t0), d1 = mjdToDate(c.t1);
-      const dates = `${d0.getUTCDate()} ${monthName(d0.getUTCMonth())}–${d1.getUTCDate()} ${monthName(d1.getUTCMonth())} ${d1.getUTCFullYear()}`;
+      const dates = compact || w < 200 ? `${monthName(d0.getUTCMonth())} ${d0.getUTCFullYear()}`
+        : `${d0.getUTCDate()} ${monthName(d0.getUTCMonth())}–${d1.getUTCDate()} ${monthName(d1.getUTCMonth())} ${d1.getUTCFullYear()}`;
       g.append(s('text', { class: 'tess-title', x: x0, y: y0 - 6 }, c.name ? s('tspan', { class: 'tess-sector' }, `TESS ${c.name}`) : s('tspan', { class: 'tess-sector' }, 'TESS'), s('tspan', { dx: 6 }, dates)));
       const xs = c.idx.map((i) => X(ser.mjd[i])), ys = c.idx.map((i) => Y(ser.v[i]));
       if (xs.length > 1) g.append(s('path', { class: 'connect', d: xs.map((x, i) => `${i && ser.mjd[c.idx[i]] - ser.mjd[c.idx[i - 1]] < 1.6 ? 'L' : 'M'}${x.toFixed(1)} ${ys[i].toFixed(1)}`).join(''), style: `stroke:${ser.color}` }));

@@ -1,0 +1,217 @@
+id: T02
+title: Trial star T02
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: Gaia DR3 gives G=11.46, BP-RP=0.85, Teff about 5760 K, parallax/error 356 (distance 215 pc, abs
+    G 4.8), RUWE 0.91 (single-star-like astrometry), and no non-single-star flag. Gaia variability summary
+    is empty for this star.
+  tag: observed
+  calls:
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:20+00:00'
+- id: C2
+  text: NEOWISE W1 (22 epochs, 3804 d) has robust std 0.003 mag and median 9.969; W2 std 0.008. The IR
+    excess over the full baseline is zero in both bands, and W1-W2 is about -0.055 across 17 visits, the
+    colour of a photosphere (no warm dust emission, W1-W2 well below 0.3).
+  tag: computed
+  calls:
+  - K6
+  - K7
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:20+00:00'
+- id: C3
+  text: TESS (352-d span, 12,979 points) has robust std 0.0007 and 2-98 amplitude 0.005 mag; find_excursions
+    finds no dips or brightenings above max(4 sigma, 0.05 mag) with 0.02-d bins.
+  tag: computed
+  calls:
+  - K3
+  - K4
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:21+00:00'
+- id: C4
+  text: 'The TESS periodogram (0.2-30 d) has no coherent peak: top power 0.025 at 6.03 d, with a dozen
+    peaks of similar power, so there is no detected rotation or pulsation period at this precision. A
+    shallow transit or spot signal below 0.05 mag would not be found by find_excursions, so this excludes
+    only large signals.'
+  tag: computed
+  calls:
+  - K5
+  - K4
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:22+00:00'
+- id: C5
+  text: 'The Skeptic finds no blend: no Gaia source inside the 6.1 arcsec W1 beam, 2 sources inside the
+    42 arcsec TESS beam with the brightest at 0.4% of G flux, CROWDSAP at least 0.98, and no WISE saturation.
+    The optical confirmation is warned as TESS only (one instrument). Four TESS dips sit near momentum
+    dumps or sector edges, but they lie inside the TESS noise.'
+  tag: computed
+  calls:
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:22+00:00'
+- id: C6
+  text: 'The star is a quiet, Sun-like main-sequence star: Teff about 5760 K and abs G 4.8 are a G-type
+    dwarf colour and luminosity, and nothing in the data (no optical excursion, no IR excess, no coherent
+    period above noise) asks for an explanation beyond ordinary photospheric behaviour at the 0.1% precision.'
+  tag: inferred
+  calls:
+  - K1
+  - K3
+  - K6
+  - K7
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:23+00:00'
+hypotheses:
+- id: H1
+  klass: normal
+  statement: 'Nothing to explain at the precision of the data: a quiet G-type star with photospheric colours
+    and no IR excess, no optical excursion, and no coherent TESS period above a noise level of about 0.07%.'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C6
+  conflicts: []
+  would_falsify: Falsified by a coherent TESS period or an excursion above 0.05 mag, or by a W1 or W2
+    excess above the photosphere, or by a second instrument seeing a change the TESS data missed.
+  status: live
+  confidence: 0.82
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:24+00:00'
+- id: H2
+  klass: rotation_spots
+  statement: Starspots on a G-type star modulate the TESS flux at the 0.05-0.1% level below the detection
+    threshold of these tools.
+  supports:
+  - C4
+  - C6
+  conflicts: []
+  would_falsify: Falsified by a significant periodogram peak in TESS at a rotational period in the 0.5-30
+    d range with a consistent phase across sectors.
+  status: live
+  confidence: 0.04
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:25+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: TESS momentum dumps or sector-edge systematics produce the flagged dips or any small excess
+    in the TESS light curve.
+  supports:
+  - C5
+  conflicts: []
+  would_falsify: Falsified if the dips are reproduced by a second instrument at the same epoch, or if
+    they do not coincide with momentum dumps or sector edges.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:26+00:00'
+- id: H4
+  klass: pulsation
+  statement: A low-amplitude pulsator (solar-like oscillation or a delta-Scuti/gamma-Dor-type signal)
+    below the 0.05-mag threshold, not visible in the 0.2-30 d periodogram at this precision.
+  supports:
+  - C3
+  - C4
+  conflicts: []
+  would_falsify: Falsified by a resolved oscillation power excess in TESS at periods below 0.2 d, or a
+    different spectral type than G-type.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:27+00:00'
+- id: H5
+  klass: artifact_blend
+  statement: A neighbour (the 0.4% flux star at 24 arcsec) carries a small variability that is attributed
+    to the target.
+  supports:
+  - C5
+  conflicts: []
+  would_falsify: Falsified if the variability is confirmed at the target position in a second instrument
+    with a resolved beam, or if no neighbour shows the same signal.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:28+00:00'
+- id: H6
+  klass: dust_formation
+  statement: The star makes its own dust with an IR excess that the NEOWISE baseline has not yet caught.
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: Falsified by a W1 or W2 excess above zero in the NEOWISE baseline (the current excess
+    is exactly zero).
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:29+00:00'
+- id: H7
+  klass: eclipse_companion
+  statement: A companion or disk eclipses the star with a shallow, long-period dip that the 352-d TESS
+    span does not contain.
+  supports:
+  - C3
+  - C4
+  conflicts: []
+  would_falsify: Falsified by a second observed eclipse at the predicted epoch in any band, or by the
+    absence of dips over a longer optical record.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:30+00:00'
+- id: H8
+  klass: dust_occultation
+  statement: Circumstellar dust clumps periodically dim the star at a level below the TESS threshold.
+  supports:
+  - C2
+  - C3
+  conflicts: []
+  would_falsify: Falsified by the absence of any optical dimming above 0.005 mag and by zero IR excess.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:30+00:00'
+- id: H9
+  klass: eruptive
+  statement: A flare or outburst that occurred outside the TESS sector windows.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: Falsified by continuous monitoring showing no outburst in the TESS windows and the NEOWISE
+    baseline.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:32+00:00'
+- id: H10
+  klass: yso_dipper
+  statement: Variable extinction from an inner disk in a young star.
+  supports:
+  - C1
+  - C2
+  conflicts: []
+  would_falsify: Falsified by the Gaia G-type colour and absolute magnitude (main-sequence) and by zero
+    IR excess.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:33+00:00'
+- id: H11
+  klass: collision_debris
+  statement: Debris from a collision causing an IR excess in the coming years.
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: Falsified by zero IR excess in NEOWISE over 3804 d.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:34+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

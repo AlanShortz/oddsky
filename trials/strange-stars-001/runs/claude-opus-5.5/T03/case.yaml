@@ -1,0 +1,238 @@
+id: T03
+title: Trial star T03
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: NEOWISE W1/W2 were flat for days 0-1284 (W1 11.64-11.68, W1-W2 about -0.07, photospheric), then
+    between day 1284 and 1439 brightened abruptly by 0.34 mag in W1 and ~0.8 mag in W2, with W1-W2 jumping
+    to +0.35.
+  tag: observed
+  calls:
+  - K3
+  - K4
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:53+00:00'
+- id: C2
+  text: 'The IR excess in days 1400-2200 over the day 0-1300 photosphere is 45% of the photosphere in
+    W1 and 110% in W2, with a two-band colour temperature of ~1000 K (+/- a few hundred K): hot dust,
+    not a photospheric change.'
+  tag: computed
+  calls:
+  - K7
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:53+00:00'
+- id: C3
+  text: The IR excess decays gradually (W1-W2 0.32 -> 0.22 -> 0.16 -> ~0 between days 2170 and 3108) and
+    W1 is back to its pre-event level by days 3200-3700 (difference 0.007 mag, 0.9 sigma).
+  tag: observed
+  calls:
+  - K4
+  - K14
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:54+00:00'
+- id: C4
+  text: AAVSO optical coverage starts at day 2666, ~1300 days after the IR onset, with the star already
+    ~0.7-1.2 mag below its Gaia-implied V=13.52, and shows many deep (up to 1.8 mag in V), irregular dips
+    lasting 2-28 days until ~day 2950, then a smooth recovery to V~13.50 by ~day 3250 that stays flat
+    through day 4550.
+  tag: observed
+  calls:
+  - K2
+  - K6
+  - K8
+  - K15
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:55+00:00'
+- id: C5
+  text: 'The optical dimming is chromatic and dust-like: dB/dV = 1.38 (r=0.93) and dI/dV = 0.38 (r=0.89),
+    i.e. redder when fainter, steeper than ISM in B (ISM 1.32/0.59) - small grains, not grey extinction,
+    not a pulsation colour signature.'
+  tag: computed
+  calls:
+  - K9
+  - K10
+  - K2
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:55+00:00'
+- id: C6
+  text: 'The host is a single-looking solar analogue: Teff 5760 K, abs G 4.6, d=567 pc, RUWE 1.10, no
+    Gaia non-single-star flag. TESS shows only ~1% level variability with a weak 4.1 d peak (possible
+    rotation) and no deep events in sectors at days 1729-1751, 2443-2490, 3175-3225 and 3903-3957.'
+  tag: computed
+  calls:
+  - K1
+  - K11
+  - K12
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:56+00:00'
+- id: C7
+  text: 'A blend cannot explain the optical dips: the only neighbour inside the AAVSO/WISE beams (3.8
+    arcsec, G=16.9) carries 3.8% of the G flux, far too little to cause 1.8 mag dips. A red neighbour
+    could in principle contribute to W2, but it would need to brighten ~8x, and the IR excess decaying
+    as the optical recovers argues the same object hosts both.'
+  tag: inferred
+  calls:
+  - K13
+  - K2
+  - K7
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:57+00:00'
+- id: C8
+  text: The sequence - sudden appearance of ~1000 K dust emission on a main-sequence G star, followed
+    years later by deep chromatic, irregular optical occultations, then both IR excess and extinction
+    fading together - fits an expanding/shearing dust cloud from a planetary-scale collision that later
+    transits the star.
+  tag: inferred
+  calls:
+  - K3
+  - K7
+  - K8
+  - K9
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:57+00:00'
+- id: C9
+  text: The data match the published behaviour of ASASSN-21qj (Sun-like star ~570 pc away, IR brightening
+    ~2.5-3 years before deep irregular optical dimming, interpreted as debris from a planetary collision);
+    I think this is that star.
+  tag: speculated
+  calls:
+  - K1
+  - K3
+  - K6
+  author: claude-opus-5.5
+  at: '2026-10-27T06:17:58+00:00'
+hypotheses:
+- id: H1
+  klass: collision_debris
+  statement: A giant-impact / planetary collision around this main-sequence solar analogue produced hot
+    (~1000 K) dust seen first as a sudden IR excess; the expanding, shearing debris cloud later crossed
+    the line of sight, causing deep irregular chromatic optical dips, and both signatures faded as the
+    cloud dispersed/cooled.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  - C8
+  conflicts: []
+  would_falsify: Evidence that the W1/W2 brightening came from the 3.8 arcsec red neighbour (e.g. resolved
+    imaging), a pre-existing IR excess before day 1284, or grey/achromatic dimming confirmed by an independent
+    optical source; a repeat of the IR+optical cycle with strict periodicity would favour an eclipsing
+    companion instead.
+  status: live
+  confidence: 0.72
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:45+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: Generic circumstellar dust clumps (e.g. tidally disrupted planetesimal or exocomet swarm,
+    not a single collision) transit the star; the IR excess is the same dust re-radiating.
+  supports:
+  - C4
+  - C5
+  - C2
+  conflicts:
+  - C1
+  would_falsify: The abrupt (<155 d) IR onset from a flat photospheric baseline argues for a single injection
+    event; recurring IR/optical episodes with no single onset would favour this over collision_debris.
+  status: live
+  confidence: 0.12
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:45+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: A long-period companion with a dusty disk/envelope eclipsed the star, the disk contributing
+    the IR excess.
+  supports:
+  - C4
+  - C5
+  conflicts:
+  - C1
+  - C3
+  - C6
+  would_falsify: RUWE 1.10 and no NSS flag already disfavour it; no repeat of the event in a predicted
+    period, or an IR excess that appears and vanishes unrelated to the eclipse geometry, rules it out.
+  status: live
+  confidence: 0.04
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:46+00:00'
+- id: H4
+  klass: yso_dipper
+  statement: A young star with an inner disk producing variable extinction.
+  supports:
+  - C4
+  - C5
+  conflicts:
+  - C1
+  - C6
+  would_falsify: No IR excess at all before day 1284 and a main-sequence absolute magnitude (abs G 4.6,
+    Teff 5760) argue against a YSO; lithium/accretion spectroscopy or star-forming-region membership would
+    revive it.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:47+00:00'
+- id: H5
+  klass: dust_formation
+  statement: The star itself ejected and condensed dust (R CrB-like episode).
+  supports:
+  - C2
+  - C4
+  - C5
+  conflicts:
+  - C6
+  would_falsify: A solar-type dwarf does not form dust; a spectrum showing an evolved/hydrogen-deficient
+    atmosphere would be required to keep this alive.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:48+00:00'
+- id: H6
+  klass: artifact_instrumental
+  statement: The optical dips are an artefact of the single AAVSO observer pipeline and the WISE jump
+    is unrelated systematics.
+  supports: []
+  conflicts:
+  - C1
+  - C5
+  would_falsify: An independent optical survey (ASAS-SN, ZTF, Gaia alerts) showing the same dips at the
+    same epochs falsifies it; the coherent chromatic dB/dV and smooth recovery already argue against it.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:50+00:00'
+- id: H7
+  klass: eruptive
+  statement: An accretion/outburst event produced the IR brightening.
+  supports:
+  - C1
+  conflicts:
+  - C4
+  - C6
+  would_falsify: No optical brightening accompanies the IR rise; the optical change is dimming, not brightening.
+  status: live
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:51+00:00'
+- id: H8
+  klass: artifact_blend
+  statement: The 3.8 arcsec red neighbour (G=16.9) is the variable source in the IR and/or optical.
+  supports: []
+  conflicts:
+  - C7
+  - C4
+  would_falsify: 'Already strongly disfavoured: 3.8% of G flux cannot produce 1.8 mag dips. Resolved photometry
+    of the neighbour showing it constant would remove it.'
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:56+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

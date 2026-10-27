@@ -1,0 +1,214 @@
+id: T07
+title: Trial star T07
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: 'The V series is essentially flat: median 11.865 mag over 4044 days, slope 0.0014 mag/yr, a changepoint
+    step of only 0.02 mag, and first versus second half medians differ by 0.001 mag. No dips or brightenings
+    are found by find_excursions.'
+  tag: observed
+  calls:
+  - K7
+  - K8
+  - K9
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:34+00:00'
+- id: C2
+  text: Long-period power in V (peaks at 1838 d, power 0.19, and 1123 d, power 0.17) is present but the
+    baseline is only about two cycles of 1838 d, and the tool flags red-noise caution. TESS peaks (15.9
+    d, power 0.027) are not significant. No stable period is established.
+  tag: computed
+  calls:
+  - K3
+  - K4
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:35+00:00'
+- id: C3
+  text: 'NEOWISE W1 and W2 are flat (W1 robust scatter 4 mmag) with W1-W2 median -0.03 mag over 21 visits,
+    consistent with a photosphere: no IR excess and no dust signature.'
+  tag: observed
+  calls:
+  - K5
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:36+00:00'
+- id: C4
+  text: 'Blue and visual bands are not coupled: B versus V has Pearson r = 0.09 and slope 0.11 over 80544
+    pairs, so there is no colour-coupled variability at the level measurable here.'
+  tag: computed
+  calls:
+  - K6
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:36+00:00'
+- id: C5
+  text: Gaia DR3 gives G = 11.76, BP-RP 0.78, RUWE 0.82 (single-star-like astrometry), and absolute G
+    about 3.5 at 444 pc, slightly brighter than a main-sequence star of this colour (a subgiant or unresolved
+    light is possible).
+  tag: observed
+  calls:
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:37+00:00'
+- id: C6
+  text: 'Crowding is moderate: TESS aperture contains 20 Gaia sources within 42 arcsec, the brightest
+    contributing 2.9 percent of G flux, and CROWDSAP is 0.84 (16 percent contamination). The nearest neighbour
+    is 1.8 arcsec away (G 17.6, 0.46 percent of target G flux). The skeptic blend checks pass.'
+  tag: computed
+  calls:
+  - K2
+  - K10
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:38+00:00'
+- id: C7
+  text: Taken together, the star shows no event, no IR excess and no significant period at the precision
+    of the data. Any astrophysical variability is below about 0.03 mag in V and a few mmag in W1. This
+    is the signature of a quiet star, possibly with low-amplitude modulation that cannot be separated
+    from noise and sector systematics.
+  tag: inferred
+  calls:
+  - K1
+  - K7
+  - K5
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:39+00:00'
+hypotheses:
+- id: H1
+  klass: normal
+  statement: 'A quiet star: no astrophysical variability at the precision of the data; the scatter is
+    observer and sector noise.'
+  supports:
+  - C1
+  - C3
+  - C7
+  conflicts: []
+  would_falsify: A significant, repeatable dip or modulation above about 0.05 mag in V, or a real IR excess
+    in W1-W2 above about 0.1 mag, would falsify it.
+  status: live
+  confidence: 0.62
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:49+00:00'
+- id: H2
+  klass: rotation_spots
+  statement: Low-amplitude starspot modulation (a few mmag to about 1 percent in TESS) on a slightly evolved
+    G-type star, with a W1 amplitude that is much smaller than V (spot-like colour ratio).
+  supports:
+  - C2
+  - C3
+  conflicts: []
+  would_falsify: A TESS periodogram with a significant peak at a stable period that matches a plausible
+    rotation period and a consistent V amplitude would support it; no such peak is found, and the V periodogram
+    is dominated by long-period red noise, so it is weakly supported at best.
+  status: live
+  confidence: 0.1
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:49+00:00'
+- id: H3
+  klass: pulsation
+  statement: Semi-regular or low-amplitude long-period pulsation (the 1838-d and 1123-d V peaks) of a
+    subgiant or giant.
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: A stable period over more than several cycles with a larger amplitude in V than in W1
+    would be needed; the current baseline (about 2 cycles of the strongest peak) cannot confirm it.
+  status: live
+  confidence: 0.1
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:50+00:00'
+- id: H4
+  klass: artifact_blend
+  statement: A close neighbour (1.8 arcsec, or any of the 20 sources in the TESS aperture) is the variable
+    and contaminates the target.
+  supports:
+  - C6
+  conflicts: []
+  would_falsify: The nearest neighbour at 1.8 arcsec carries 0.46 percent of target G flux, so a neighbour
+    would need about 10 percent amplitude to match the V scatter; a neighbour light curve with matching
+    variability would support it.
+  status: live
+  confidence: 0.06
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:51+00:00'
+- id: H5
+  klass: artifact_instrumental
+  statement: Observer-to-observer and sector-level systematics (AAVSO scatter across 89 observers, TESS
+    per-sector normalisation) generate the apparent scatter.
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: Per-observer light curves that agree with each other on the same scatter would argue
+    against it; the scatter is what the skeptic reports across 89 observers, so this class is only weakly
+    tested.
+  status: live
+  confidence: 0.04
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:51+00:00'
+- id: H6
+  klass: eclipse_companion
+  statement: An unseen companion eclipses the star; the absolute magnitude is slightly brighter than a
+    dwarf of this colour, consistent with binarity.
+  supports:
+  - C5
+  conflicts: []
+  would_falsify: Eclipses would appear as dips in V or TESS; none are found (C1) across about 4000 days
+    of V and 1900 days of TESS.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:52+00:00'
+- id: H7
+  klass: yso_dipper
+  statement: Young star with variable extinction from an inner disk.
+  supports: []
+  conflicts: []
+  would_falsify: No dips and no IR excess (C1, C3) argue strongly against it.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:53+00:00'
+- id: H8
+  klass: dust_formation
+  statement: The star makes dust, with declines or colour changes.
+  supports: []
+  conflicts: []
+  would_falsify: A flat W1 light curve and W1-W2 near -0.03 with no excess (C3) argue against it.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:53+00:00'
+- id: H9
+  klass: dust_occultation
+  statement: Circumstellar dust passes in front of the star.
+  supports: []
+  conflicts: []
+  would_falsify: No dips in V or TESS (C1) and no IR excess (C3) make it unlikely.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:54+00:00'
+- id: H10
+  klass: collision_debris
+  statement: 'Collision debris: IR excess first, optical extinction later.'
+  supports: []
+  conflicts: []
+  would_falsify: No IR excess in NEOWISE (C3) argues against it.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:55+00:00'
+- id: H11
+  klass: eruptive
+  statement: Outbursts or flares.
+  supports: []
+  conflicts: []
+  would_falsify: No brightenings in V over about 4000 days (C1) argue against it.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:23:55+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'

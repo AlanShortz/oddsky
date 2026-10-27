@@ -65,12 +65,23 @@ def score(trial: Path, agent: str, answers_path: Path | None = None) -> dict:
                     preds.append({"case": pid, "id": p.id, "statement": p.statement, "probability": p.probability,
                                   "outcome": "invalid", "note": res_note})
                     continue
+                frame = tb._frame(full, chk.series)
+                if frame.t_mjd.max() < chk.end:
+                    preds.append({"case": pid, "id": p.id, "statement": p.statement, "probability": p.probability,
+                                  "outcome": "pending", "note": f"window closes at MJD {chk.end:.0f}; data end "
+                                  f"{frame.t_mjd.max():.0f}. Will be graded when the sky gets there."})
+                    continue
                 r = evaluate(chk, lambda ser, _s=full, _tb=tb: _tb._frame(_s, ser))
                 o = {"true": 1.0, "false": 0.0}.get(r.outcome)
                 preds.append({"case": pid, "id": p.id, "statement": p.statement, "probability": p.probability,
                               "outcome": r.outcome, "observed": r.observed, "n_points": r.n_points,
                               "brier": round((p.probability - o) ** 2, 3) if o is not None else None,
                               "note": r.note})
+    meta = yaml.safe_load((runs / "agent.yaml").read_text()) if (runs / "agent.yaml").exists() else {}
+    rec = meta.get("recognised", {}) or {}
+    for c in cases:
+        c["recognised"] = str(rec.get(c["case"], "unknown"))
+    blind = [c for c in cases if c["recognised"] in ("no", "False")]
     resolved = [p for p in preds if p.get("brier") is not None]
     summary = {
         "n": len(cases),
@@ -82,12 +93,15 @@ def score(trial: Path, agent: str, answers_path: Path | None = None) -> dict:
         "predictions_resolved": len(resolved),
         "predictions_true": sum(p["outcome"] == "true" for p in resolved),
         "prediction_brier": round(float(np.mean([p["brier"] for p in resolved])), 3) if resolved else None,
+        "n_unrecognised": len(blind),
+        "top1_unrecognised": round(float(np.mean([c["top1"] for c in blind])), 3) if blind else None,
+        "contamination_note": "self-reported: did the investigator think it recognised the star? Famous stars leak "
+                              "through blinding; scores on unrecognised packets are the cleaner measure.",
         "baseline_note": f"uniform guessing over {len(CLASSES)} classes: top1 {1 / len(CLASSES):.3f}, "
                          f"brier {1 - 1 / len(CLASSES):.3f}",
     }
     manifest = json.loads((trial / "manifest.json").read_text())
-    meta = yaml.safe_load((runs / "agent.yaml").read_text()) if (runs / "agent.yaml").exists() else {}
-    card = {"trial": answers["trial"], "agent": meta.get("agent", agent), "agent_meta": meta, "run_at": meta.get("run_at"),
+    card = {"grader": "v2 (extremes = nightly medians)", "trial": answers["trial"], "agent": meta.get("agent", agent), "agent_meta": meta, "run_at": meta.get("run_at"),
             "scored_at": now(), "answers_sha256": manifest["answers_sha256"], "summary": summary,
             "cases": cases, "predictions": preds}
     (trial / "results").mkdir(exist_ok=True)

@@ -42,12 +42,13 @@ aavso:
     delimiter: '|'
   retrieved_at: '2026-10-27T06:05:41+00:00'
   rows_raw: 932644
-  rows_kept: 564704
+  rows_kept: 895999
   cuts: []
   notes:
   - 'observers (good points): SHPI:76939, JM:46811, ATE:40918, GFB:31550, PVA:30229, LMN:28682, LMA:26924,
     MXL:17524, CCHD:16685, JSJA:15231, BJAK:14525, HBB:12678'
-  - upper limits, discrepant (val=T) and visual estimates are kept but flagged
+  - upper limits, discrepant (val=T) and non-standard bands are kept but flagged; visual estimates form
+    their own series 'Vis.'
   - matched AAVSO name 'SS Cyg'
   status: ok
 ztf:

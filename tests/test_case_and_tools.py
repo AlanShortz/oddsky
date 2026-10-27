@@ -59,3 +59,11 @@ def test_replay_reproduces_the_ledger(dusty_case):
     tb.wise_color("OS-0001")
     res = replay("OS-0001")
     assert len(res) == 3 and all(r["match"] for r in res)
+
+
+def test_retracted_claims_stay_in_the_record(dusty_case):
+    tb = Toolbox(author="test")
+    tb.add_claim("OS-0001", "x", "speculated")
+    tb.retract_claim("OS-0001", "C1", "probe, not a claim")
+    c = dusty_case.load()
+    assert c.claims[0].retracted == "probe, not a claim" and len(c.claims) == 1

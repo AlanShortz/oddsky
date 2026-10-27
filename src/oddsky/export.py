@@ -13,6 +13,30 @@ from .case.store import CaseStore, _jsonable
 from .paths import cases_dir, repo_root
 
 MAX_POINTS = 1500
+RECENT_MJD = 55197.0  # 2010-01-01: the default view gets finer sampling than the deep archive
+RECENT_POINTS = 2500
+
+
+def _downsample(good: pd.DataFrame, limit: int) -> tuple[pd.DataFrame, float | None]:
+    if len(good) <= limit:
+        return good, None
+    width = 1.0
+    b = daily_bins(good, width)
+    while len(b) > limit:
+        width *= 2
+        b = daily_bins(good, width)
+    return b, width
+
+
+def _clean(o):
+    """Strict JSON: NaN/inf become null."""
+    if isinstance(o, float):
+        return o if np.isfinite(o) else None
+    if isinstance(o, dict):
+        return {k: _clean(v) for k, v in o.items()}
+    if isinstance(o, (list, tuple)):
+        return [_clean(v) for v in o]
+    return o
 
 
 def series_payload(df: pd.DataFrame) -> dict[str, dict]:
@@ -21,15 +45,11 @@ def series_payload(df: pd.DataFrame) -> dict[str, dict]:
     for (survey, band), g in df.groupby(["survey", "band"]):
         good = g[g.flag == ""]
         flagged = g[g.flag != ""]
-        if len(good) > MAX_POINTS:
-            width = 1.0
-            b = daily_bins(good, width)
-            while len(b) > MAX_POINTS:
-                width *= 2
-                b = daily_bins(good, width)
-            pts, binned = b, width
-        else:
-            pts, binned = good, None
+        old, new = good[good.t_mjd < RECENT_MJD], good[good.t_mjd >= RECENT_MJD]
+        po, wo = _downsample(old, MAX_POINTS // 2)
+        pn, wn = _downsample(new, RECENT_POINTS)
+        pts = pd.concat([po[["t_mjd", "mag", "err"]], pn[["t_mjd", "mag", "err"]]], ignore_index=True)
+        binned = max(w for w in (wo, wn) if w) if (wo or wn) else None
         key = f"{survey}:{band}"
         out[key] = {
             "survey": survey,
@@ -86,7 +106,8 @@ def export_web(out: Path | None = None) -> list[str]:
             continue
         store = CaseStore(d)
         payload = case_payload(store)
-        (out / "cases" / f"{d.name}.json").write_text(json.dumps(payload, default=_jsonable, separators=(",", ":")))
+        payload = _clean(json.loads(json.dumps(payload, default=_jsonable)))
+        (out / "cases" / f"{d.name}.json").write_text(json.dumps(payload, allow_nan=False, separators=(",", ":")))
         c = payload["case"]
         index.append({
             "id": c["id"], "title": c["title"], "hook": c.get("hook", ""), "status": c["status"],

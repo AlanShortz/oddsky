@@ -1,0 +1,238 @@
+id: T03
+title: Trial star T03
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: 'Gaia DR3: G=13.37, BP-RP=0.81, Teff about 5761 K, abs G 4.6, distance 567 pc, RUWE 1.10 (single-star-like),
+    not classed as a long-period variable. The optical V median (13.53) matches the Gaia mean, so the
+    baseline is set by the Gaia epoch.'
+  tag: observed
+  calls:
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:19+00:00'
+- id: C2
+  text: The optical record (2666-4550 d) contains 18 V fainter/brighter excursions of 0.15-1.8 mag and
+    2-28 d duration, with ingress and egress visible; B shows deeper dips (about 1.8 mag) at the same
+    epochs as V (e.g. 2749 V vs 2751 B, 2838.8 in both). The V-B-R-I colour slope dB/dV=1.55 is close
+    to ISM extinction (1.32), so the dips are chromatic and extinction-like.
+  tag: computed
+  calls:
+  - K3
+  - K9
+  - K10
+  - K8
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:20+00:00'
+- id: C3
+  text: All optical data come from one observer (O1, 7,115 points in total). Every excursion has max_independent_observers_per_bin=1,
+    and the skeptic warns on single-observer dependence. The optical dips are therefore not yet independently
+    confirmed.
+  tag: computed
+  calls:
+  - K2
+  - K3
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:21+00:00'
+- id: C4
+  text: NEOWISE W1 is flat near 11.65 mag for about 1300 d, brightens to about 11.22 between roughly day
+    1440 and 2530, then returns to 11.66 by day 3632. Over 1000-3700 d, the IR excess is 24% of photosphere
+    in W1 and 55% in W2, a two-band colour temperature of about 1071 K (uncertain by a few hundred K),
+    and W1-W2 reddens when W1 brightens (r = -0.98).
+  tag: computed
+  calls:
+  - K7
+  - K5
+  - K4
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:22+00:00'
+- id: C5
+  text: 'Timing: the IR excess rises about 1440 d and peaks near 1650-2530 d, while the optical dips occur
+    at 2666-2970 d (later), with the optical record starting in a dimmed state (first 60 d median 14.67
+    vs Gaia 13.52). This IR-first, optical-later ordering is what a dust cloud heated before it passes
+    through the line of sight would produce.'
+  tag: inferred
+  calls:
+  - K7
+  - K3
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:22+00:00'
+- id: C6
+  text: 'Blend check: a 3.8-arcsec neighbour (G 16.9, BP-RP 1.84, 3.8% of target G flux) lies inside the
+    6.1-arcsec W1 beam and is flagged as redder; but a constant 3.8% contaminant cannot produce 0.4 mag
+    of IR brightening or 1-2 mag optical dips, so it does not explain the variability (it could dilute
+    the excess only slightly).'
+  tag: inferred
+  calls:
+  - K6
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:23+00:00'
+- id: C7
+  text: 'No reliable period: the V periodogram (2-942 d) gives its top power at 880 d (0.45) across about
+    two cycles on a long-term trend, and the NEOWISE periodogram (100-1816 d) is dominated by aliases
+    of a 21-point series. The data show episodic dimming, not a periodic cycle.'
+  tag: computed
+  calls:
+  - K12
+  - K13
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:24+00:00'
+hypotheses:
+- id: H1
+  klass: dust_occultation
+  statement: 'Circumstellar dust clumps pass in front of a Sun-like star: episodic chromatic extinction
+    in the optical (1-2 mag dips, 2-28 d, extinction-like colour) together with warm dust IR emission
+    (W2 excess about twice W1, ~1000 K) from the same dust.'
+  supports:
+  - C2
+  - C4
+  - C5
+  - C6
+  conflicts: []
+  would_falsify: Falsified if an independent second optical observer does not see the dips at the same
+    epochs, if the IR excess disappears before the optical dips with no optical counterpart, or if the
+    dips are shown to be an observer systematic with no colour dependence.
+  status: live
+  confidence: 0.37
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:25+00:00'
+- id: H2
+  klass: yso_dipper
+  statement: 'A young star with variable extinction from an inner disk: the dips are inner-disk clumps,
+    and the warm IR excess comes from the inner disk.'
+  supports:
+  - C1
+  - C4
+  conflicts: []
+  would_falsify: Falsified by a main-sequence position (abs G 4.6 with no pre-main-sequence excess) if
+    the star is confirmed as an older field star, or by an absence of disk accretion/variability signatures
+    across bands.
+  status: live
+  confidence: 0.12
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:26+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: Single-observer (O1) visual or photometric systematics produce the 1-2 mag dips, and the
+    IR brightening is a WISE pipeline or calibration effect.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: Falsified by a second independent observer or instrument recording the same dips at the
+    same epochs, or by NEOWISE W1 and W2 showing the IR excess in separate detector paths with consistent
+    timing.
+  status: live
+  confidence: 0.08
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:26+00:00'
+- id: H4
+  klass: artifact_blend
+  statement: The 3.8-arcsec redder neighbour, or another nearby source, is the variable IR and optical
+    source rather than the target.
+  supports:
+  - C5
+  conflicts: []
+  would_falsify: Falsified because a constant 3.8% contaminant cannot produce the observed 1-2 mag optical
+    dips or the 0.4 mag W1 brightening; falsified too if the neighbour is shown to be non-variable.
+  status: live
+  confidence: 0.05
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:27+00:00'
+- id: H5
+  klass: eclipse_companion
+  statement: A dusty companion or its disk passes in front of the star on an irregular, multi-epoch schedule,
+    producing the episodic optical dips.
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: Falsified if the dips recur with a strict orbital period, or if the IR excess is absent
+    (no dust emission).
+  status: live
+  confidence: 0.04
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:28+00:00'
+- id: H6
+  klass: dust_formation
+  statement: The star itself makes dust in an episode (dust formation), producing an IR excess and optical
+    extinction.
+  supports:
+  - C1
+  conflicts: []
+  would_falsify: Falsified by the Sun-like main-sequence colour and luminosity (Teff about 5760 K, abs
+    G 4.6), which do not match the cool, mass-losing stars that form dust.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:30+00:00'
+- id: H7
+  klass: eruptive
+  statement: An accretion or outburst event produces the brightening and IR excess.
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: Falsified by the chromatic extinction-like dips (dimming, not brightening) that dominate
+    the record.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:31+00:00'
+- id: H8
+  klass: normal
+  statement: The variability is observer or calibration noise and the star is at its normal state.
+  supports:
+  - C4
+  conflicts: []
+  would_falsify: Falsified by the 0.4 mag NEOWISE W1 brightening (a multi-year IR change) and by the B-V
+    colour behaviour.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:31+00:00'
+- id: H9
+  klass: rotation_spots
+  statement: Starspots on a Sun-like star modulate the light curve.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: Falsified by 1-2 mag dips and the IR excess, both far beyond starspot amplitudes.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:32+00:00'
+- id: H10
+  klass: pulsation
+  statement: Intrinsic pulsation.
+  supports:
+  - C7
+  conflicts: []
+  would_falsify: Falsified by the non-periodic, episodic dips and the IR excess, neither of which pulsation
+    produces.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:33+00:00'
+- id: H11
+  klass: collision_debris
+  statement: A debris collision made a warm dust cloud first (IR excess rising from about day 1440) and
+    the cloud later extinguishes the star optically (dips from about day 2666), as in a collision-debris
+    episode.
+  supports:
+  - C4
+  - C5
+  - C6
+  conflicts: []
+  would_falsify: Falsified if the optical dips precede the IR excess, if the IR excess has no optical
+    extinction counterpart in a second observer record, or if the IR is shown to be a neighbour variability.
+  status: live
+  confidence: 0.25
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:40+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

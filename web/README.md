@@ -80,9 +80,27 @@ dev/                fixtures and the script that builds them
 
 ## Figure notes
 
+- **Default view.** If the shown series span more than 25 years (R CrB, R Cyg, SS Cyg, EE Cep go back
+  to the 1960s, and visual estimates to 1784), the figure opens on 2010 to now. "Full record" spans
+  whatever series are currently switched on.
+- **Which bands show by default.** Johnson-Cousins B V R I (and non-AAVSO surveys) are shown. Other AAVSO
+  bands (CV/CR unfiltered, TB/TG/TR DSLR, SG/SR/SI Sloan, U) sit behind "+ N more bands". The AAVSO
+  visual series (`Vis.`) is drawn as faint grey dots, hidden when a CCD V series exists. Series with no
+  usable points (only flagged rows) aren't plotted.
+- **Gaia reference.** When a V-like series is visible, the optical panel shows Gaia DR3's 2014–17 mean
+  converted to V (Riello et al. 2021): `V = G − (−0.02704 + 0.01424c − 0.2156c² + 0.01426c³)`, `c = BP−RP`,
+  for −0.5 < c < 5. It's solid over the Gaia epoch (MJD 56863–57901) and dashed elsewhere.
+- **NEOWISE missing.** If NEOWISE was queried but gave no usable visits, the infrared panel is a one-line
+  note saying why (saturation is detected from flagged rows or the Skeptic's `wise_saturation` check).
+- **TESS** gets one small panel per sector below the main figure, using `context.tess.sectors`
+  (t_start/t_end) when present, otherwise split at gaps longer than 5 days. All sectors share one y-range.
+- **Bad JSON.** The loader reads bare `NaN`/`Infinity` (Python's `json.dumps` default) as `null`, and
+  keeps 16+-digit `source_id`s as strings.
+
+
 - x is the calendar year, `2000 + (MJD − 51544.5) / 365.25`. The hover readout gives the date and MJD.
 - Panels: (a) optical (AAVSO, ASAS-SN, ZTF…), (b) NEOWISE W1/W2, (c) W1 − W2 for visits whose
-  W1 and W2 times agree within 1 day, (d) TESS (relative mag), only if present. Each panel has its
+  W1 and W2 times agree within 1 day, then the TESS sector panels. Each panel has its
   own y-range, refit to the visible points when you zoom. Magnitude axes are inverted.
 - Colour follows the band (B blue, V green, R vermilion, I plum, W1 ochre, W2 crimson); shape
   follows the survey (squares for R/I/W2, triangles for ASAS-SN, diamonds for ZTF) as a second

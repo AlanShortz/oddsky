@@ -41,6 +41,7 @@ class Claim(BaseModel):
     text: str
     tag: Tag
     calls: list[str] = Field(default_factory=list, description="ledger ids of the tool calls this rests on")
+    retracted: str | None = Field(default=None, description="reason, if the author withdrew the claim")
     author: str = "unknown"
     at: str = Field(default_factory=now)
 
@@ -63,7 +64,8 @@ class Check(BaseModel):
 
     statistic over [start, end] of series `series` (e.g. "AAVSO:V", "NEOWISE:W1"), optionally
     relative to the median over `baseline` (then positive = fainter than baseline), compared
-    with `op` against `value`. Times are MJD.
+    with `op` against `value`. Times are MJD. "brightest"/"faintest" are the extreme nightly medians;
+    "amplitude" is faintest minus brightest.
     """
 
     series: str

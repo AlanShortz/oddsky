@@ -1,0 +1,270 @@
+id: T04
+title: Trial star T04
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: x
+  tag: observed
+  calls:
+  - K5
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:01+00:00'
+- id: C2
+  text: 'V brightness is bimodal: median about 12.9 before the changepoint at MJD-scale 84838 and about
+    6.1 after, a step of -6.8 mag. I shows the same step (-6.8 mag) at 84809.'
+  tag: computed
+  calls:
+  - K5
+  - K17
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:15+00:00'
+- id: C3
+  text: The visual series shows many irregular fadings from a bright level near 6 to 7 mag; 10 of the
+    first 10 listed events have depths 5.4-6.9 mag and durations of 37-230 days, with a fast-ish decline
+    and slower recovery in most (8 of 10 have egress longer than ingress).
+  tag: observed
+  calls:
+  - K4
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:17+00:00'
+- id: C4
+  text: 'Colour during fading is grey-ish relative to interstellar dust: dB/dV = 1.05 and dR/dV = 0.97,
+    against 1.32 and 0.81 expected for ISM dust. So the fading is achromatic-to-mild, not simple interstellar
+    reddening.'
+  tag: computed
+  calls:
+  - K9
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:20+00:00'
+- id: C5
+  text: 'No stable period: the strongest periodogram peak in Vis. is at 17878 d with power 0.06, and the
+    TESS peak at 611 d has power 0.30 over a 1496-day baseline (about 2.5 cycles) with an explicit red-noise
+    caution. The variability is episodic, not periodic.'
+  tag: computed
+  calls:
+  - K14
+  - K8
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:22+00:00'
+- id: C6
+  text: 'NEOWISE gives no usable IR photometry: W1 and W2 are saturated at all 11 visits (W1<8, W2<7)
+    and 99% of exposures are removed by quality cuts, so no IR excess or W1-W2 colour can be measured.'
+  tag: observed
+  calls:
+  - K2
+  - K6
+  - K3
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:25+00:00'
+- id: C7
+  text: Gaia DR3 gives G=8.84, BP-RP=1.68 and RUWE=12.8 (far above 1.4). The RUWE indicates either an
+    unresolved companion or a photocentre shifted by strong variability. Neighbours are negligible for
+    blending (under 0.1% of G flux in any beam).
+  tag: observed
+  calls:
+  - K1
+  - K2
+  - K7
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:28+00:00'
+- id: C8
+  text: 'In the last ~1100 days the star sits on a fairly steady bright plateau: V median 5.99 (range
+    5.65-6.84), with a fainter episode from about 84900 to 87400 (median 6.47, dips to 10.1 mag).'
+  tag: computed
+  calls:
+  - K15
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:31+00:00'
+- id: C9
+  text: The TESS record (about 1500 days, sector-normalised) shows no large fading episodes; its only
+    excursions (about 0.5-0.8 relative mag) fall in the first 25 days of the record, where a sector-start
+    ramp cannot be excluded, so I do not rely on them.
+  tag: inferred
+  calls:
+  - K10
+  - K11
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:34+00:00'
+- id: C10
+  text: 'Long-term, the visual series was fainter and more variable in its early part: median 7.45 before
+    about 40000 versus 6.10 after, so the baseline has drifted brighter; no sign of a secular dimming
+    trend in the recent 40000-88500 window.'
+  tag: computed
+  calls:
+  - K16
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:36+00:00'
+hypotheses:
+- id: H1
+  klass: normal
+  statement: x
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: ''
+  status: rejected
+  confidence: 0.0
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:49+00:00'
+- id: H2
+  klass: normal
+  statement: x
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: y
+  status: rejected
+  confidence: 0.0
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:01+00:00'
+- id: H3
+  klass: dust_formation
+  statement: 'The star makes its own dust in episodic declines (R CrB-like): fading to 6-7 mag below a
+    bright state of about 6 mag, with grey-ish colour and no periodicity.'
+  supports:
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  conflicts: []
+  would_falsify: A periodic or strictly regular ~ cycle in V, a fast symmetric dip shape with no slow
+    recovery, or a companion-linked ephemeris would argue against it. Likewise, a strong IR excess from
+    warm dust in NEOWISE would be needed (currently unmeasurable).
+  status: live
+  confidence: 0.55
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:11+00:00'
+- id: H4
+  klass: dust_occultation
+  statement: Circumstellar dust clumps or a warped disk pass in front of the star, causing the fadings,
+    with the star itself not necessarily forming the dust.
+  supports:
+  - C2
+  - C4
+  - C3
+  conflicts: []
+  would_falsify: Evidence that the dimming is intrinsic (dust condensing in the star outflow, e.g. the
+    bright-star state being the reset point of a dust-formation cycle) rather than external clumps would
+    weaken it; an IR excess that cannot be measured here would also be the decisive test.
+  status: live
+  confidence: 0.25
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:22+00:00'
+- id: H5
+  klass: eclipse_companion
+  statement: A companion or its dusty disk periodically eclipses the star; the irregular 6-mag fadings
+    would be eclipses by a long-period dusty companion.
+  supports:
+  - C7
+  conflicts: []
+  would_falsify: Eclipses would be strictly periodic with a stable ephemeris and symmetric shape; the
+    observed episodes are irregular (no period in the periodogram, C7) and asymmetric (C3), which argues
+    against it.
+  status: live
+  confidence: 0.05
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:23+00:00'
+- id: H6
+  klass: pulsation
+  statement: Long-period pulsation (Mira-like) produces the large amplitude variation.
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: A Mira-type cycle would show a stable period with smooth, symmetric light curves; no
+    stable period is found (C7), and the fades are episodic with irregular timing.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:24+00:00'
+- id: H7
+  klass: collision_debris
+  statement: Debris from a collision produces dust extinction episodes.
+  supports:
+  - C6
+  conflicts: []
+  would_falsify: Collision debris would typically show an IR excess first; NEOWISE cannot test this (C6),
+    so the class survives only on the absence of an IR test.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:24+00:00'
+- id: H8
+  klass: artifact_blend
+  statement: A neighbour star produces the large dips, not the target.
+  supports:
+  - C6
+  conflicts: []
+  would_falsify: Neighbours within the AAVSO beam contribute under 0.1% of G flux (C8), so a blend cannot
+    produce 6-mag fades on the target; falsified by the neighbour flux numbers.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:25+00:00'
+- id: H9
+  klass: artifact_instrumental
+  statement: Pipeline or observer systematics produce the dips.
+  supports:
+  - C1
+  conflicts: []
+  would_falsify: Many independent observers (up to 60 per bin) record the same episodes in the same sense
+    (K4), and the colour behaviour is coherent across bands (K9); so this is unlikely.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:26+00:00'
+- id: H10
+  klass: yso_dipper
+  statement: Young stellar object with variable extinction from an inner disk.
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: Dipper episodes are typically days-to-weeks and very frequent; the fades here are 40-230
+    days, and the star is at a bright stable state (C8).
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:27+00:00'
+- id: H11
+  klass: eruptive
+  statement: Outburst or eruption (nova-like, accretion) producing the fades; eruptive classes produce
+    brightenings, not repeated long fades.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: Eruptive events are brightenings or single outbursts with fast rise; the record is dominated
+    by repeated long fadings, so it is disfavoured.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:28+00:00'
+- id: H12
+  klass: rotation_spots
+  statement: Starspots produce the variability.
+  supports:
+  - C7
+  conflicts: []
+  would_falsify: Spot modulation is quasi-periodic with amplitudes of tenths of magnitude; the 6-mag fadings
+    are far outside that regime and no period is found (C7).
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:29+00:00'
+- id: H13
+  klass: normal
+  statement: Nothing to explain at the precision of the data.
+  supports: []
+  conflicts: []
+  would_falsify: Any 6-mag fading in the visual or V series falsifies it; such fadings are present (C2).
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:20:30+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

@@ -1,0 +1,189 @@
+id: T05
+title: Trial star T05
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: TESS (13,290 points over ~953 d, per-sector normalised) has robust scatter of 0.4 mmag; in 1-day
+    bins every point lies within -0.5 to +0.3 mmag of the sector median. No dimming or brightening events
+    above ~1 mmag are present in the TESS coverage.
+  tag: observed
+  calls:
+  - K1
+  - K13
+  author: claude-opus-5.5
+  at: '2026-10-27T06:20:45+00:00'
+- id: C2
+  text: The strongest TESS periodogram peak (5.60 d) has power only 0.007 and neighbouring peaks are window
+    aliases; find_excursions finds 0 events. Formal FAP is small only because of the white-noise assumption;
+    there is no meaningful periodic signal (any rotational modulation is below ~0.1 mmag).
+  tag: computed
+  calls:
+  - K3
+  - K4
+  author: claude-opus-5.5
+  at: '2026-10-27T06:20:48+00:00'
+- id: C3
+  text: NEOWISE W1 is constant to 1.5 mmag robust scatter over 3789 d (22 visits); early vs late medians
+    differ by 3.5 mmag at 1.0 sigma.
+  tag: computed
+  calls:
+  - K10
+  - K1
+  author: claude-opus-5.5
+  at: '2026-10-27T06:20:49+00:00'
+- id: C4
+  text: NEOWISE W2 fades monotonically by ~0.015-0.02 mag over 10 yr (9.354 to ~9.372; 3.7 sigma early
+    vs late), with a final visit at 9.419 having a larger error (0.0084). W1 shows no matching change.
+  tag: computed
+  calls:
+  - K7
+  - K8
+  - K11
+  author: claude-opus-5.5
+  at: '2026-10-27T06:20:50+00:00'
+- id: C5
+  text: A slow W2-only drift of ~0.02 mag at W2~9.4 with W1 flat matches the known NEOWISE flux-dependent
+    W2 photometric bias for bright sources rather than a stellar change; the last visit is a low-quality
+    outlier. The resulting W1-W2 trend toward bluer values (-0.03 to -0.09) is therefore not a dust signal.
+  tag: inferred
+  calls:
+  - K7
+  - K10
+  - K11
+  - K6
+  author: claude-opus-5.5
+  at: '2026-10-27T06:20:51+00:00'
+- id: C6
+  text: W1-W2 median is -0.04 (photospheric, no warm dust); ir_excess between days 0-1000 and 2800-3800
+    shows no positive excess in either band (W1 -0.3%, W2 -1.2% of photosphere).
+  tag: computed
+  calls:
+  - K6
+  - K9
+  author: claude-opus-5.5
+  at: '2026-10-27T06:20:52+00:00'
+- id: C7
+  text: 'Gaia DR3: G=10.54, BP-RP=0.71, Teff 6040 K, d=301 pc (parallax/err 300), abs G=3.15, RUWE 1.07,
+    non_single_star=2 (Gaia spectroscopic-binary flag). Neighbours within 30 arcsec contribute <=0.4%
+    of G flux; no source within 6 arcsec for WISE; TESS CROWDSAP 0.99.'
+  tag: computed
+  calls:
+  - K1
+  - K2
+  - K12
+  author: claude-opus-5.5
+  at: '2026-10-27T06:20:54+00:00'
+- id: C8
+  text: Abs G 3.15 at Teff ~6040 K is ~1 mag above the main sequence, consistent with a slightly evolved
+    F/G dwarf and/or an unresolved near-equal binary (consistent with the Gaia non-single-star flag).
+    This is ordinary and requires no exotic explanation.
+  tag: inferred
+  calls:
+  - K1
+  author: claude-opus-5.5
+  at: '2026-10-27T06:20:55+00:00'
+hypotheses:
+- id: H1
+  klass: normal
+  statement: T05 is an ordinary, quiet F/G-type (Teff ~6040 K) dwarf or slightly evolved star, possibly
+    a spectroscopic binary, with no variability above ~1 mmag in TESS or ~2 mmag in W1 and no infrared
+    excess. Nothing needs explaining.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C6
+  - C7
+  - C8
+  conflicts:
+  - C4
+  would_falsify: An independently confirmed (multi-instrument) dimming or brightening of >1% or a coherent
+    periodic signal well above the TESS window/noise; or a W1+W2 IR excess appearing in both bands.
+  status: favored
+  confidence: 0.85
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:11+00:00'
+- id: H2
+  klass: artifact_instrumental
+  statement: The only feature in the packet, a ~0.02 mag W2-only fading over 10 yr plus a deviant final
+    visit, is a NEOWISE photometric systematic; if anything in this packet looks strange it is instrumental.
+  supports:
+  - C4
+  - C5
+  conflicts:
+  - C3
+  would_falsify: The W2 fading being matched by W1 and by an independent optical/IR instrument, or other
+    bright stars at W2~9.4 showing no such drift.
+  status: live
+  confidence: 0.05
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:11+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: The Gaia non-single-star flag allows a companion that could eclipse in the gaps between TESS
+    sectors.
+  supports:
+  - C7
+  conflicts:
+  - C1
+  would_falsify: Continued flat photometry over a full orbital phase coverage; no eclipses in further
+    sectors.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:12+00:00'
+- id: H4
+  klass: rotation_spots
+  statement: A sub-mmag rotational modulation (e.g. the weak 5.6 d peak) from starspots could be present.
+  supports:
+  - C2
+  conflicts:
+  - C1
+  would_falsify: The 5.6 d peak failing to persist between sectors or remaining at power indistinguishable
+    from noise.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:13+00:00'
+- id: H5
+  klass: pulsation
+  statement: Low-amplitude pulsation (e.g. gamma Dor type at this Teff) below the detection limit.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  would_falsify: No coherent signals in short-cadence TESS at the 0.1 mmag level.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:14+00:00'
+- id: H6
+  klass: dust_occultation
+  statement: Occasional circumstellar dust occultations outside the observed windows.
+  supports: []
+  conflicts:
+  - C1
+  - C6
+  would_falsify: Continued absence of dips and of IR excess.
+  status: live
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:14+00:00'
+- id: H7
+  klass: artifact_blend
+  statement: A neighbour contributes the small signals.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: Neighbours contribute <=0.4% of flux (observed).
+  status: live
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-27T06:21:15+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

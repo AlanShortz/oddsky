@@ -119,7 +119,9 @@ def independent_confirmation(store: CaseStore) -> list[Check]:
     if "TESS" in sources:
         finding += (" TESS is not counted: it is normalised per sector, so it confirms an event only if a sector "
                     "overlaps it, and never its absolute depth.")
-    out.append(_check("confirmation", "Independent optical confirmation", status, finding, sources=sources))
+    top20 = dict(sorted(sources.items(), key=lambda kv: -kv[1])[:20])
+    out.append(_check("confirmation", "Independent optical confirmation", status, finding,
+                      n_sources=len(sources), top_sources=top20))
     return out
 
 

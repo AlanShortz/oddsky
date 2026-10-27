@@ -1,0 +1,192 @@
+id: T08
+title: Trial star T08
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: AAVSO V varies irregularly by ~2.6 mag (2-98%) over ~14 yr, with multi-hundred-day faint states
+    (V~16.2-16.6, e.g. days 2050-2320 and 4250-4460) and bright states (V~14.0-14.7); no clean periodicity
+    (top LS peaks 1116 d and 778 d in red-noise data).
+  tag: observed
+  calls:
+  - K3
+  - K5
+  - K10
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:29+00:00'
+- id: C2
+  text: 'The variability is close to grey/achromatic and slightly bluer when fainter: dB/dV 0.83-0.95
+    and dI/dV 0.85-0.93 versus ISM-dust expectations 1.32 and 0.59; bright-to-faint V drop 2.10 mag vs
+    B drop 1.35 mag (few B points).'
+  tag: computed
+  calls:
+  - K2
+  - K7
+  - K8
+  - K21
+  - K22
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:41+00:00'
+- id: C3
+  text: 'Gaia: d=135 pc, abs G 8.8 with BP-RP 2.54 although GSP-Phot Teff ~5900 K, implying several magnitudes
+    of circumstellar/interstellar reddening and an underluminous (edge-on / scattered-light) appearance;
+    RUWE 3.3 consistent with a photocentre disturbed by variability or companion.'
+  tag: inferred
+  calls:
+  - K1
+  - K2
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:42+00:00'
+- id: C4
+  text: 'All 42 NEOWISE visits are at or brighter than saturation (W1<8) while V~15.4, i.e. V-W1 > 7 mag,
+    far beyond a reddened photosphere: a strong near/mid-IR excess (warm inner disk). WISE colours could
+    not be measured because of saturation.'
+  tag: inferred
+  calls:
+  - K2
+  - K11
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:42+00:00'
+- id: C5
+  text: TESS shows large stochastic variability within sectors (robust std 0.10 mag, 0.67 mag 2-98 range),
+    with a 0.8 mag, 1.3 d symmetric dip at day 5056 and short 0.5 mag brightenings/dips, plus a 4.2 d
+    quasi-period (likely rotation/inner-disk corotation); not tied to momentum dumps or edges.
+  tag: computed
+  calls:
+  - K9
+  - K13
+  - K15
+  - K2
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:43+00:00'
+- id: C6
+  text: 'No blend explanation: no Gaia neighbour within the AAVSO or WISE beams; TESS neighbours contribute
+    2.4% of the flux; 11+ independent AAVSO observers confirm the variability.'
+  tag: computed
+  calls:
+  - K2
+  - K20
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:44+00:00'
+- id: C7
+  text: The combination (young, reddened, IR-excess star at ~135 pc, grey extinction events on days-to-years
+    timescales with blueing in deep minima, accretion-like short flares) is characteristic of a classical
+    T Tauri dipper with an inclined inner disk, AA Tau-like; the star may be AA Tau itself in its post-2011
+    dim state, though this identification is speculative.
+  tag: speculated
+  calls:
+  - K1
+  - K5
+  - K7
+  - K15
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:44+00:00'
+hypotheses:
+- id: H1
+  klass: yso_dipper
+  statement: A young classical T Tauri star seen at high inclination; variable extinction by its inner
+    disk (warp/accretion-column dust) causes grey dips of days (TESS) and long dim states of months-years
+    (AAVSO), with scattered light producing blueing at minimum.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  - C7
+  conflicts: []
+  would_falsify: Spectra lacking youth/accretion indicators (no Li, no H-alpha emission), or simultaneous
+    multi-band data showing colour changes inconsistent with extinction (e.g. strongly redder-when-brighter
+    pulsation behaviour).
+  status: live
+  confidence: 0.72
+  author: claude-opus-5.5
+  at: '2026-10-27T06:18:51+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: Generic circumstellar dust (clumps / disk structure) occulting the star, not specifically
+    a young-star inner-disk dipper.
+  supports:
+  - C2
+  - C4
+  - C6
+  conflicts:
+  - C7
+  would_falsify: Colour changes inconsistent with extinction; absence of circumstellar material.
+  status: live
+  confidence: 0.08
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:26+00:00'
+- id: H3
+  klass: eruptive
+  statement: Variability dominated by variable accretion (EXor-like bursts and accretion-rate changes)
+    rather than extinction; the short TESS brightenings are accretion bursts.
+  supports:
+  - C5
+  - C3
+  conflicts:
+  - C2
+  would_falsify: Bright states not bluer than faint states (accretion makes the star bluer when brighter);
+    the observed slight blueing when fainter argues against.
+  status: live
+  confidence: 0.08
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:43+00:00'
+- id: H4
+  klass: eclipse_companion
+  statement: A companion (RUWE 3.3) or circumbinary/circumsecondary disk produces long-period eclipses
+    (the 1116 d LS peak).
+  supports:
+  - C3
+  conflicts:
+  - C1
+  would_falsify: No repeating minima at the 1116 d (or any) period in a longer baseline.
+  status: live
+  confidence: 0.05
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:44+00:00'
+- id: H5
+  klass: rotation_spots
+  statement: Spot modulation drives the variability (4.2 d TESS period).
+  supports:
+  - C5
+  conflicts:
+  - C1
+  - C2
+  would_falsify: 'Already strained: 2.6 mag multi-year amplitude far exceeds spot amplitudes.'
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:46+00:00'
+- id: H6
+  klass: dust_formation
+  statement: The star forms its own dust (R CrB-like) causing deep declines.
+  supports:
+  - C4
+  conflicts:
+  - C3
+  would_falsify: 'Already strained: a nearby (135 pc) underluminous reddened G/K star is not an R CrB
+    or AGB star.'
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:47+00:00'
+- id: H7
+  klass: pulsation
+  statement: Long-period pulsation produces the slow variations.
+  supports: []
+  conflicts:
+  - C1
+  - C3
+  would_falsify: A stable period would be required; star is not a giant at 135 pc with abs G 8.8.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:48+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'

@@ -45,12 +45,13 @@ aavso:
     delimiter: '|'
   retrieved_at: '2026-10-27T06:06:52+00:00'
   rows_raw: 2027
-  rows_kept: 1977
+  rows_kept: 1985
   cuts: []
   notes:
   - 'observers (good points): MJB:720, HMB:354, DUBF:245, MZK:141, HMH:101, ROE:86, VMT:83, MGW:58, CIVA:45,
     WRCA:41, DKS:36, KTHC:16'
-  - upper limits, discrepant (val=T) and visual estimates are kept but flagged
+  - upper limits, discrepant (val=T) and non-standard bands are kept but flagged; visual estimates form
+    their own series 'Vis.'
   - matched AAVSO name 'AA Tau'
   status: ok
 ztf:

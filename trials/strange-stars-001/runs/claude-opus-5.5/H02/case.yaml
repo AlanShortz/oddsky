@@ -1,0 +1,224 @@
+id: H02
+title: Trial star H02
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 49788.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: V spends most time near 11.2-12.0 and repeatedly brightens by 2.5-3.3 mag to V~8.4-9.1; 20 brightenings
+    found in the last ~1,400 d alone, with fast rises (0.6-7 d) and somewhat slower declines (2-9 d),
+    and two outburst widths (~4-6 d short, ~11-14 d long).
+  tag: computed
+  calls:
+  - K6
+  - K9
+  author: claude-opus-5.5
+  at: '2026-10-27T06:22:50+00:00'
+- id: C2
+  text: 'The brightenings recur quasi-periodically: strongest Lomb-Scargle peak 48.3 d in V (50.4 d in
+    TESS), not a survey alias; recent outburst onsets near days 49456, 49498, 49539, 49582, 49605, 49639,
+    49680, 49716, 49744 give intervals of 23-43 d.'
+  tag: computed
+  calls:
+  - K4
+  - K6
+  - K8
+  author: claude-opus-5.5
+  at: '2026-10-27T06:22:52+00:00'
+- id: C3
+  text: 'Gaia: parallax/error 291, d=113 pc, abs G=6.4, bp_rp 1.18, Teff_gspphot 5580 K: a nearby sub-luminous
+    system whose quiescent light is K-dwarf-like, ~6 mag fainter than the star in T04. Outbursts to abs
+    ~3.5 are typical of a dwarf-nova accretion disk.'
+  tag: inferred
+  calls:
+  - K1
+  author: claude-opus-5.5
+  at: '2026-10-27T06:22:53+00:00'
+- id: C4
+  text: All optical bands brighten together (r=0.98) with dB/dV=1.18, i.e. bluer when brighter as expected
+    for a hot disk outburst; 208 independent observers confirm; brightest neighbour inside 5.3 arcsec
+    is 5 mag fainter (1% flux), so no blend.
+  tag: computed
+  calls:
+  - K4
+  - K14
+  author: claude-opus-5.5
+  at: '2026-10-27T06:22:54+00:00'
+- id: C5
+  text: 'Between ~days 47,900 and 48,300 the system was in an anomalous state: median V 10.47 (0.9 mag
+    brighter than the later 11.37) with standstill-like intermediate brightness instead of clean quiescence/outburst
+    cycles; normal outbursts resumed afterwards.'
+  tag: computed
+  calls:
+  - K7
+  - K11
+  author: claude-opus-5.5
+  at: '2026-10-27T06:22:55+00:00'
+- id: C6
+  text: 'NEOWISE W1-W2 ~0.09 and stable (range 0.06), with W1 only ~0.7 mag peak-to-peak: no warm-dust
+    signature, so dust explanations are not supported.'
+  tag: computed
+  calls:
+  - K13
+  author: claude-opus-5.5
+  at: '2026-10-27T06:22:56+00:00'
+- id: C7
+  text: Recent 150-d window medians of V are 11.17-11.44 (median dominated by quiescence); last outburst
+    began ~day 49744, and at the cutoff (day 49787) the star is in quiescence at V~11.1-11.3 with sparse
+    coverage (1-3 observers per bin, likely seasonal).
+  tag: computed
+  calls:
+  - K6
+  - K10
+  - K12
+  author: claude-opus-5.5
+  at: '2026-10-27T06:22:57+00:00'
+- id: C8
+  text: 'Likely identity: SS Cygni (U Gem-type dwarf nova at ~114 pc, V 12->8.5, ~50 d recurrence, heavily
+    observed for over a century, with a well-known anomalous standstill-like episode in recent years).'
+  tag: speculated
+  calls:
+  - K1
+  - K8
+  - K11
+  author: claude-opus-5.5
+  at: '2026-10-27T06:22:57+00:00'
+hypotheses:
+- id: H1
+  klass: eruptive
+  statement: 'Dwarf nova (U Gem / SS Cyg type): disk-instability outbursts of 2.5-3.5 mag recurring every
+    ~25-60 d in an accreting white-dwarf binary; very likely SS Cygni itself.'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C7
+  - C8
+  conflicts: []
+  would_falsify: A strict coherent period in the brightenings (pulsation); redder-when-brighter colours;
+    outbursts not confirmed by independent observers; a dust IR signature tracking the fades.
+  status: live
+  confidence: 0.9
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:09+00:00'
+- id: H2
+  klass: pulsation
+  statement: The ~48 d quasi-period is intrinsic pulsation (semiregular/RV Tau-like).
+  supports:
+  - C2
+  conflicts:
+  - C1
+  - C3
+  - C4
+  would_falsify: Brightenings are short, skewed outbursts with long flat quiescence and a bluer-when-brighter
+    colour; star is a sub-luminous dwarf at 113 pc, not a giant.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:10+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: Variability dominated by a companion (binary), RUWE 2.3.
+  supports:
+  - C3
+  conflicts:
+  - C1
+  would_falsify: Brightenings rather than dips; no periodic eclipse found at the tested periods.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:10+00:00'
+- id: H4
+  klass: artifact_instrumental
+  statement: Instrumental/pipeline effect; TESS dips near momentum dumps.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: Outbursts seen by 208 observers in all bands.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:11+00:00'
+- id: H5
+  klass: artifact_blend
+  statement: A neighbour is the variable.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: Nearest neighbour holds 1% of flux; cannot produce 3-mag outbursts.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:12+00:00'
+- id: H6
+  klass: normal
+  statement: Nothing to explain.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: 3-mag outbursts are far above noise.
+  status: live
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-27T06:23:13+00:00'
+predictions:
+- id: P1
+  statement: 'At least one dwarf-nova outburst is recorded between days 49790 and 49900: brightest AAVSO:V
+    point brighter than 9.3.'
+  check:
+    series: AAVSO:V
+    start: 49790.0
+    end: 49900.0
+    statistic: brightest
+    op: <
+    value: 9.3
+  probability: 0.94
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T06:23:21+00:00'
+- id: P2
+  statement: 'The next outburst (last began ~day 49744; recent intervals 23-43 d) is observed by day 49825:
+    brightest AAVSO:V in 49788-49825 brighter than 9.5.'
+  check:
+    series: AAVSO:V
+    start: 49788.0
+    end: 49825.0
+    statistic: brightest
+    op: <
+    value: 9.5
+  probability: 0.78
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T06:23:22+00:00'
+- id: P3
+  statement: Median AAVSO:V in days 49800-49950 is fainter than 11.3 (recent 150-d medians 11.17-11.44;
+    near coin-flip).
+  check:
+    series: AAVSO:V
+    start: 49800.0
+    end: 49950.0
+    statistic: median
+    op: '>'
+    value: 11.3
+  probability: 0.5
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T06:23:23+00:00'
+- id: P4
+  statement: 'A repeat of the anomalous bright standstill-like state: median AAVSO:V in days 49800-49950
+    brighter than 10.8.'
+  check:
+    series: AAVSO:V
+    start: 49800.0
+    end: 49950.0
+    statistic: median
+    op: <
+    value: 10.8
+  probability: 0.08
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T06:23:23+00:00'
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'

@@ -58,14 +58,21 @@ def skeptic_cmd(case: str):
 
 
 @app.command("tools")
-def tools_cmd(blind: bool = False):
-    """List the investigation tools (the same ones the MCP server exposes)."""
+def tools_cmd(blind: bool = False, verbose: Annotated[bool, typer.Option("--verbose", "-v")] = False):
+    """List the investigation tools with their arguments (the same ones the MCP server exposes)."""
+    import inspect
+
     from .tools import Toolbox, available
 
     tb = Toolbox()
     for name in available("blind" if blind else "open"):
-        doc = (getattr(tb, name).__doc__ or "").strip().split("\n")[0]
-        typer.echo(f"{name:22s} {doc}")
+        fn = getattr(tb, name)
+        params = []
+        for p in inspect.signature(fn).parameters.values():
+            params.append(p.name if p.default is inspect.Parameter.empty else f"{p.name}={p.default!r}")
+        doc = inspect.getdoc(fn) or ""
+        typer.echo(f"{name}({', '.join(params)})")
+        typer.echo("    " + (doc.replace("\n", "\n    ") if verbose else doc.split("\n")[0]))
 
 
 @app.command("call")

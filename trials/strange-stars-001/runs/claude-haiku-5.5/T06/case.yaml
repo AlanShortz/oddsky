@@ -1,0 +1,218 @@
+id: T06
+title: Trial star T06
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: 'Gaia DR3: G=11.67, BP-RP=1.18, Teff about 5583 K, abs G 6.4, distance 113 pc, RUWE 2.33 (above
+    1.4, possible unresolved companion), and no Gaia long-period or eclipsing variability classification.'
+  tag: observed
+  calls:
+  - K1
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:37+00:00'
+- id: C2
+  text: The V series (409,667 points, 215 observers) contains 165 brightening events by the find_excursions
+    rule (the tool returned only the top 20). The top 20 are all brightenings of 3.5-3.8 mag above a ~12.0
+    running baseline, lasting 4-17 d, with slow rise (1-6 d) and slow decline (5-13 d), and up to 5 independent
+    observers per bin. Dimming events are not listed.
+  tag: computed
+  calls:
+  - K5
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:38+00:00'
+- id: C3
+  text: 'No stable period: the V periodogram (0.2-2000 d) peaks weakly at 55.7 d (power 0.21), with aliases
+    at 48.4 and 49.7 d; none is a known survey or Earth rhythm, and the peaks are of similar low power,
+    so the variability is irregular rather than periodic.'
+  tag: computed
+  calls:
+  - K3
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:38+00:00'
+- id: C4
+  text: 'The colours move together with V: chromatic check dB/dV=1.18 (ISM 1.32), dR/dV=0.82 (ISM 0.81),
+    dI/dV=0.67 (ISM 0.59), each band correlated with V at r=0.98. The brightening is seen in every band
+    at once, so it is not a single-band calibration effect.'
+  tag: computed
+  calls:
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:39+00:00'
+- id: C5
+  text: NEOWISE W1 varies only 0.17 mag (robust std), with W1-W2 about 0.09 across 20 visits, close to
+    a photosphere. W1 is uncorrelated with V (cross-band r=-0.10 over 16,437 pairs), so the optical events
+    do not come with a warm dust excess. The IR excess over 2000-day baselines is about 21% of the photosphere
+    in W1 and 22% in W2, a slow drift rather than an event-linked excess.
+  tag: computed
+  calls:
+  - K6
+  - K8
+  - K9
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:40+00:00'
+- id: C6
+  text: TESS shows no excursions by find_excursions (0 events, noise 0.6 relative), and the skeptic warns
+    on crowding (CROWDSAP 0.84, 16% of aperture flux not the target) and WISE saturation (1 of 42 visits
+    at W1<8). TESS is therefore not a usable independent check of these outbursts on this bright star.
+  tag: computed
+  calls:
+  - K7
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:40+00:00'
+- id: C7
+  text: 'Blend checks pass for the optical beam: no Gaia source within 5 arcsec of the target, and the
+    nearest source at 5.3 arcsec contributes 1.0% of G flux inside the W1 beam. A neighbour cannot supply
+    3.7-mag optical brightenings seen by several observers, so the events are not from a blend.'
+  tag: computed
+  calls:
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:41+00:00'
+hypotheses:
+- id: H1
+  klass: eruptive
+  statement: Recurrent eruptive brightenings (about 3.7 mag, 2-3 weeks, irregular spacing) from the K-type
+    star itself, such as accretion or outburst activity, with no dust in the IR.
+  supports:
+  - C2
+  - C4
+  - C5
+  - C7
+  conflicts: []
+  would_falsify: Falsified if the brightenings are strictly periodic (a fixed orbit or pulsation), if
+    a warm dust IR excess follows each event (pointing to dust rather than eruption), or if a second independent
+    source shows the events are not on the target.
+  status: live
+  confidence: 0.77
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:42+00:00'
+- id: H2
+  klass: yso_dipper
+  statement: A young star with variable extinction (dipper) producing the optical variability; the events
+    here are brightenings, so this class fits only weakly.
+  supports:
+  - C1
+  conflicts: []
+  would_falsify: Falsified by the brightenings (not dips), since a dipper produces dimming from extinction.
+  status: live
+  confidence: 0.04
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:42+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: A companion (suggested by RUWE 2.33) drives the variability through periodic or episodic
+    eclipses or accretion.
+  supports:
+  - C1
+  - C3
+  conflicts: []
+  would_falsify: Falsified by the absence of a periodic signal in 22,000 days of optical data and by the
+    brightening sense of the events.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:43+00:00'
+- id: H4
+  klass: artifact_instrumental
+  statement: Observer or pipeline systematics (multi-observer but common calibration) produce the brightenings,
+    and TESS saturation affects the space data.
+  supports:
+  - C4
+  - C6
+  conflicts: []
+  would_falsify: Falsified because the brightenings are seen across 5 observers in one bin and in 4 bands
+    with consistent colour.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:44+00:00'
+- id: H5
+  klass: dust_occultation
+  statement: Circumstellar dust passes in front of the star, dimming it (here the events are brightenings,
+    so this fits poorly).
+  supports:
+  - C5
+  conflicts: []
+  would_falsify: Falsified by the brightening direction and by the absence of any IR excess tied to the
+    events.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:44+00:00'
+- id: H6
+  klass: dust_formation
+  statement: The star forms dust episodically with an IR excess.
+  supports:
+  - C5
+  conflicts: []
+  would_falsify: Falsified by the flat NEOWISE W1-W2 colour (about 0.09) and the absence of an event-linked
+    IR excess.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:45+00:00'
+- id: H7
+  klass: artifact_blend
+  statement: A neighbour (5.3 arcsec, 1% flux) produces the brightenings.
+  supports:
+  - C7
+  conflicts: []
+  would_falsify: Falsified because no neighbour is within 5 arcsec of the target and the neighbour cannot
+    supply 3.7-mag events.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:45+00:00'
+- id: H8
+  klass: rotation_spots
+  statement: Starspots or magnetic activity modulate the light curve.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: Falsified by the 3.7-mag amplitude and 2-3-week rises, far beyond spot amplitudes.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:46+00:00'
+- id: H9
+  klass: pulsation
+  statement: Intrinsic pulsation.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: Falsified by the irregular outburst timing and the absence of a stable period.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:47+00:00'
+- id: H10
+  klass: normal
+  statement: Nothing to explain at the precision of the data.
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: Falsified by the 165 brightenings of 3.7 mag in the V record.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:47+00:00'
+- id: H11
+  klass: collision_debris
+  statement: Debris from a collision (IR first, optical later).
+  supports:
+  - C5
+  conflicts: []
+  would_falsify: Falsified by the brightening direction and the flat IR colour.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:24:48+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'
