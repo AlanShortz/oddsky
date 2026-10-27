@@ -293,6 +293,59 @@
    "n_hypotheses": 6,
    "n_predictions": 0,
    "featured": false
+  },
+  {
+   "id": "OS-0013",
+   "title": "An infrared excess that appeared in 2018",
+   "hook": "A K dwarf 250 parsecs away was a bare photosphere for four years. Then, between two NEOWISE visits in 2018, 1000 K dust appeared around it, and it is still there.",
+   "status": "anomaly",
+   "target": "Gaia DR3 5792808347020475136",
+   "series": [
+    "ASAS-SN:V",
+    "GAIA:BP",
+    "GAIA:G",
+    "GAIA:RP",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "NEOWISE_EXP:W1",
+    "NEOWISE_EXP:W2",
+    "SKYMAPPER:g",
+    "SKYMAPPER:i",
+    "SKYMAPPER:r",
+    "SKYMAPPER:u",
+    "SKYMAPPER:v",
+    "SKYMAPPER:z",
+    "TESS:TESS"
+   ],
+   "n_claims": 9,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  },
+  {
+   "id": "OS-0014",
+   "title": "The star that vanished for three months",
+   "hook": "In spring 2017 a G dwarf 420 parsecs away disappeared, more than 99.5% of its light gone for about 95 days. Afterwards it began to glow in the infrared. Nobody noticed.",
+   "status": "anomaly",
+   "target": "AllWISE 2779036401351050434",
+   "series": [
+    "ASAS-SN:V",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "NEOWISE_EXP:W1",
+    "NEOWISE_EXP:W2",
+    "SKYMAPPER:g",
+    "SKYMAPPER:i",
+    "SKYMAPPER:r",
+    "SKYMAPPER:u",
+    "SKYMAPPER:v",
+    "SKYMAPPER:z",
+    "TESS:TESS"
+   ],
+   "n_claims": 15,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
   }
  ],
  "scorecards": [

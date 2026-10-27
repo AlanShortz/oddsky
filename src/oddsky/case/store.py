@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import re
 from pathlib import Path
 from typing import Any
@@ -101,14 +102,12 @@ class CaseStore:
 
     # -- the ledger -----------------------------------------------------------------------------
     def log_call(self, tool: str, args: dict[str, Any], result: Any, author: str) -> str:
-        body = json.dumps(result, sort_keys=True, default=_jsonable)
-        digest = hashlib.sha256(body.encode()).hexdigest()[:16]
-        entries = self.ledger()
-        cid = f"K{len(entries) + 1}"
         from .. import __version__
 
-        rec = {"id": cid, "tool": tool, "args": args, "digest": digest, "author": author, "at": now(),
-               "oddsky": __version__}
+        entries = self.ledger()
+        cid = f"K{len(entries) + 1}"
+        rec = {"id": cid, "tool": tool, "args": args, "digest": digest(result), "digest10": digest10(result),
+               "author": author, "at": now(), "oddsky": __version__, "platform": platform_tag()}
         with (self.path / "ledger.jsonl").open("a") as f:
             f.write(json.dumps(rec, default=_jsonable) + "\n")
         return cid
@@ -121,7 +120,32 @@ class CaseStore:
 
 
 def digest(result: Any) -> str:
+    """Exact digest (full float precision): reproducible on the same platform and library versions."""
     return hashlib.sha256(json.dumps(result, sort_keys=True, default=_jsonable).encode()).hexdigest()[:16]
+
+
+def _round(o, sig: int = 10):
+    if isinstance(o, float):
+        return float(f"{o:.{sig}g}") if math.isfinite(o) else str(o)
+    if isinstance(o, dict):
+        return {k: _round(v, sig) for k, v in o.items()}
+    if isinstance(o, (list, tuple)):
+        return [_round(v, sig) for v in o]
+    return o
+
+
+def digest10(result: Any) -> str:
+    """Digest of the result with floats rounded to 10 significant figures: stable across CPU
+    architectures, where SIMD summation order and fused multiply-adds change the last bits."""
+    canon = _round(json.loads(json.dumps(result, default=_jsonable)))
+    return hashlib.sha256(json.dumps(canon, sort_keys=True).encode()).hexdigest()[:16]
+
+
+def platform_tag() -> str:
+    import platform
+    import sys
+
+    return f"{sys.platform}-{platform.machine()}"
 
 
 def _jsonable(o):

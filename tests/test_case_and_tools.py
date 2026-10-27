@@ -67,3 +67,13 @@ def test_retracted_claims_stay_in_the_record(dusty_case):
     tb.retract_claim("OS-0001", "C1", "probe, not a claim")
     c = dusty_case.load()
     assert c.claims[0].retracted == "probe, not a claim" and len(c.claims) == 1
+
+
+def test_digest10_ignores_last_bit_platform_noise():
+    from oddsky.case.store import digest, digest10
+
+    a = {"x": 0.1 + 0.2, "y": [1.0, 2.0000000000000004], "n": 3}
+    b = {"x": 0.30000000000000004 * (1 + 2e-16), "y": [1.0, 2.0], "n": 3}
+    assert digest(a) != digest(b)
+    assert digest10(a) == digest10(b)
+    assert digest10({"x": 0.3}) != digest10({"x": 0.3001})
