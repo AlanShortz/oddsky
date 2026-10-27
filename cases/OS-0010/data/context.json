@@ -1,0 +1,141 @@
+{
+  "gaia": {
+    "G": 12.559925,
+    "bp_rp": 1.1884165,
+    "parallax_mas": 2.57195997096273,
+    "parallax_over_error": 156.72293,
+    "ruwe": 0.9906906,
+    "teff_gspphot": 5265.815,
+    "non_single_star": 0,
+    "phot_variable_flag": "VARIABLE",
+    "distance_pc": 388.80853951458755,
+    "abs_G": 4.611246025527478,
+    "sep_from_target_coords_arcsec": 0.087750279851479
+  },
+  "gaia_variability": {
+    "summary": {
+      "num_selected_g_fov": 49,
+      "mean_mag_g_fov": 12.58415,
+      "std_dev_mag_g_fov": 0.26122692,
+      "range_mag_g_fov": 1.286036,
+      "skewness_mag_g_fov": 3.0496166,
+      "in_vari_long_period_variable": false,
+      "in_vari_eclipsing_binary": false,
+      "in_vari_rrlyrae": false,
+      "in_vari_cepheid": false,
+      "in_vari_short_timescale": false,
+      "in_vari_agn": false,
+      "in_vari_classification_result": true
+    },
+    "classifier": {
+      "best_class_name": "YSO",
+      "best_class_score": 0.24918124
+    }
+  },
+  "neighbors": [
+    {
+      "source_id": 219832339066395520,
+      "sep_arcsec": 13.4382,
+      "phot_g_mean_mag": 17.7978,
+      "bp_rp": 2.5739,
+      "dG": 5.2379,
+      "flux_ratio_G": 0.008,
+      "parallax": 2.5611,
+      "ruwe": 0.956
+    },
+    {
+      "source_id": 219832334768493568,
+      "sep_arcsec": 15.5364,
+      "phot_g_mean_mag": 20.0809,
+      "bp_rp": 1.7583,
+      "dG": 7.521,
+      "flux_ratio_G": 0.001,
+      "parallax": 0.4232,
+      "ruwe": 1.0214
+    },
+    {
+      "source_id": 219832334773368320,
+      "sep_arcsec": 19.0138,
+      "phot_g_mean_mag": 20.2949,
+      "bp_rp": 1.4773,
+      "dG": 7.735,
+      "flux_ratio_G": 0.0008,
+      "parallax": 1.9052,
+      "ruwe": 1.0442
+    },
+    {
+      "source_id": 219832300409798528,
+      "sep_arcsec": 24.8896,
+      "phot_g_mean_mag": 20.2757,
+      "bp_rp": 2.0658,
+      "dG": 7.7157,
+      "flux_ratio_G": 0.0008,
+      "parallax": 0.3003,
+      "ruwe": 0.9642
+    },
+    {
+      "source_id": 219833094979290240,
+      "sep_arcsec": 27.0394,
+      "phot_g_mean_mag": 20.9517,
+      "bp_rp": 1.4386,
+      "dG": 8.3918,
+      "flux_ratio_G": 0.0004,
+      "parallax": NaN,
+      "ruwe": NaN
+    },
+    {
+      "source_id": 219832339064771200,
+      "sep_arcsec": 27.1048,
+      "phot_g_mean_mag": 20.7206,
+      "bp_rp": 2.0882,
+      "dG": 8.1607,
+      "flux_ratio_G": 0.0005,
+      "parallax": 2.132,
+      "ruwe": 1.0408
+    }
+  ],
+  "tess": {
+    "sectors": {
+      "18": {
+        "author": "QLP",
+        "exptime": 1800.0,
+        "crowdsap": null,
+        "flfrcsap": null,
+        "t_start": 58790.18265039055,
+        "t_end": 58814.51634636335,
+        "desat_mjd": [
+          58794.45362513885,
+          58798.703723710496,
+          58807.49552122597,
+          58811.9955268763
+        ],
+        "flux_column": "flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "86": {
+        "author": "QLP",
+        "exptime": 200.0,
+        "crowdsap": null,
+        "flfrcsap": null,
+        "t_start": 60635.76176340878,
+        "t_end": 60662.330703205895,
+        "desat_mjd": [
+          60635.76176340878,
+          60635.76407821663,
+          60635.766393024474,
+          60642.47008136939,
+          60642.47239617165,
+          60642.474710973445,
+          60649.324151392095,
+          60649.32646614732,
+          60649.32878090255,
+          60655.54159089504,
+          60655.54390564654,
+          60655.54622039851
+        ],
+        "flux_column": "flux",
+        "relative": "delta-mag vs sector median"
+      }
+    }
+  }
+}

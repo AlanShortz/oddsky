@@ -8,12 +8,12 @@ import pandas as pd
 
 from .case.model import Case, Target
 from .case.store import CaseStore
-from .data import aavso, asassn, gaia, neowise, simbad, tess, ztf
+from .data import aavso, asassn, gaia, gaia_epoch, neowise, simbad, tess, ztf
 from .paths import cases_dir
 
 log = logging.getLogger("oddsky")
 
-SURVEYS = ("gaia", "neowise", "aavso", "ztf", "asassn", "tess")
+SURVEYS = ("gaia", "gaia_epoch", "neowise", "aavso", "ztf", "asassn", "tess")
 
 
 def open_case(name: str, title: str | None = None, hook: str = "", ra: float | None = None,
@@ -72,6 +72,9 @@ def fetch(store: CaseStore, surveys: tuple[str, ...] | list[str] = SURVEYS) -> d
             nb = gaia.neighbors(cone, int(tgt.source_id))
             ctx["neighbors"] = nb.round(4).to_dict(orient="records")
         report["gaia"] = {"status": p.status, "rows": p.rows_kept}
+
+    if "gaia_epoch" in surveys and case.target.gaia_source_id:
+        record("gaia_epoch", *gaia_epoch.lightcurve(case.target.gaia_source_id))
 
     if "neowise" in surveys:
         record("neowise", *neowise.lightcurve(t.ra, t.dec))

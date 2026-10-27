@@ -27,7 +27,7 @@ from .case.store import CaseStore
 from .paths import cases_dir
 
 MJD_EPOCH = dt.date(1858, 11, 17)
-SURVEY_FILES = {"asas-sn": "asassn", "asassn": "asassn", "aavso": "aavso", "neowise": "neowise",
+SURVEY_FILES = {"gaia": "gaia_epoch", "asas-sn": "asassn", "asassn": "asassn", "aavso": "aavso", "neowise": "neowise",
                 "tess": "tess", "ztf": "ztf"}
 
 
@@ -200,6 +200,36 @@ class Toolbox:
             out["reading"] = "positive = fainter in B"
         return self._log(s, "compare_windows", dict(case=case, series=series, a_start=a_start, a_end=a_end,
                                                      b_start=b_start, b_end=b_end), out)
+
+    def observer_agreement(self, case: str, series: str, baseline_start: float | str, baseline_end: float | str,
+                           start: float | str, end: float | str, min_points: int = 3) -> dict:
+        """Does every independent observer see the same thing? For each AAVSO observer (or camera) with
+        data in both windows: their own baseline median, their faintest and median point in the event
+        window, and the depth relative to their own baseline. Observer zero points cancel."""
+        s = self.store(case)
+        df = self._frame(s, series)
+        who = "observer" if "observer" in df else "camera" if "camera" in df else None
+        if who is None:
+            raise ValueError(f"{series} has no observer or camera column")
+        base = self._window(df, baseline_start, baseline_end)
+        ev = self._window(df, start, end)
+        rows = []
+        for obs, g in ev.groupby(who):
+            b = base[base[who] == obs]
+            if len(g) >= min_points and len(b) >= 5:
+                bm = float(np.median(b.mag))
+                rows.append({who: str(obs), "n_event": int(len(g)), "n_baseline": int(len(b)), "baseline": round(bm, 3),
+                             "depth_faintest": round(float(g.mag.max()) - bm, 3),
+                             "depth_median": round(float(np.median(g.mag)) - bm, 3)})
+        rows.sort(key=lambda r: -r["n_event"])
+        d = np.array([r["depth_faintest"] for r in rows])
+        out = {"series": series, "group_by": who, "n_independent": len(rows), "per_source": rows[:25]}
+        if len(d):
+            out.update(depth_median_over_sources=float(np.median(d)), depth_spread_robust=float(stats.robust_std(d))
+                       if len(d) > 2 else None)
+        return self._log(s, "observer_agreement", dict(case=case, series=series, baseline_start=baseline_start,
+                                                        baseline_end=baseline_end, start=start, end=end,
+                                                        min_points=min_points), out)
 
     def periodogram(self, case: str, series: str, min_period: float = 0.5, max_period: float | None = None,
                     start: float | str | None = None, end: float | str | None = None) -> dict:
@@ -443,7 +473,7 @@ def evaluate(check: Check, frame: Callable[[str], pd.DataFrame]):
 
 
 OPEN_TOOLS = ["list_cases", "list_classes", "case_overview", "get_lightcurve", "describe_series", "compare_windows",
-              "periodogram", "find_excursions", "cross_band", "wise_color", "ir_excess", "neighbors",
+              "observer_agreement", "periodogram", "find_excursions", "cross_band", "wise_color", "ir_excess", "neighbors",
               "skeptic_report", "add_claim", "retract_claim", "add_hypothesis", "update_hypothesis", "register_prediction", "check_prediction",
               "open_case", "literature"]
 BLIND_TOOLS = [t for t in OPEN_TOOLS if t not in ("check_prediction", "open_case", "literature")]

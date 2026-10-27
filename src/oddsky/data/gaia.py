@@ -27,6 +27,29 @@ def adql(query: str, timeout: float = 120) -> pd.DataFrame:
     return pd.read_csv(io.StringIO(text))
 
 
+def adql_async(query: str, poll_s: float = 5.0, max_wait_s: float = 1800) -> pd.DataFrame:
+    """Long queries go through the async TAP endpoint: submit, poll, fetch. Sync times out on big joins."""
+    import time
+    import xml.etree.ElementTree as ET
+
+    base = TAP.replace("/sync", "/async")
+    r = request("POST", base, timeout=60, data=dict(REQUEST="doQuery", LANG="ADQL", FORMAT="csv", QUERY=query,
+                                                     PHASE="RUN"))
+    job = str(r.url)
+    t0 = time.time()
+    while time.time() - t0 < max_wait_s:
+        phase = request("GET", job + "/phase", timeout=30).text.strip()
+        if phase == "COMPLETED":
+            res = request("GET", job + "/results/result", timeout=300)
+            return pd.read_csv(io.StringIO(res.text))
+        if phase in ("ERROR", "ABORTED"):
+            err = request("GET", job, timeout=30).text
+            msg = "".join(e.text or "" for e in ET.fromstring(err).iter() if e.tag.endswith("message"))
+            raise RuntimeError(f"Gaia async job {phase}: {msg or err[:300]}")
+        time.sleep(poll_s)
+    raise TimeoutError(f"Gaia async job still running after {max_wait_s}s: {job}")
+
+
 def cone(ra: float, dec: float, radius_arcsec: float = 30.0) -> tuple[pd.DataFrame, Provenance]:
     """All Gaia DR3 sources within radius, nearest first, with separation in arcsec."""
     q = (
