@@ -1,0 +1,93 @@
+{
+  "generated_at": "2026-10-27T06:14:47+00:00",
+  "oddsky_version": "0.2.0",
+  "summary": "0 fail, 1 warn, 7 pass, 0 skipped",
+  "counts": {
+    "fail": 0,
+    "warn": 1,
+    "pass": 7,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "pass",
+      "finding": "no Gaia source within 6.1\"",
+      "numbers": {
+        "radius_arcsec": 6.1
+      }
+    },
+    {
+      "id": "blend_tess",
+      "title": "Neighbours inside the TESS beam (42.0\")",
+      "status": "pass",
+      "finding": "3 Gaia source(s) within 42.0\"; brightest contributes 0.4% of the target's G flux at 25.5\"",
+      "numbers": {
+        "radius_arcsec": 42.0,
+        "n_inside": 3,
+        "total_flux_ratio_G": 0.0086,
+        "brightest_flux_ratio": 0.004,
+        "brightest_sep": 25.4635
+      }
+    },
+    {
+      "id": "tess_crowdsap",
+      "title": "TESS aperture contamination (CROWDSAP)",
+      "status": "pass",
+      "finding": "worst sector: 0.99 of aperture flux is from the target",
+      "numbers": {
+        "min_crowdsap": 0.98829979
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "12727 exposures; cuts removed up to 1578 (12%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 12727,
+        "removed_per_band": {
+          "W1": 1578,
+          "W2": 1369
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "warn",
+      "finding": "the only optical data are TESS: one spacecraft, normalised per sector. Nothing here has been seen by a second instrument.",
+      "numbers": {}
+    },
+    {
+      "id": "alias_tess_TESS",
+      "title": "Periodicity vs survey rhythms (TESS TESS)",
+      "status": "pass",
+      "finding": "strongest period 5.60 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 5.595782061509408,
+        "power": 0.006905617089363716
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 1.07 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 1.0658363
+      }
+    }
+  ]
+}

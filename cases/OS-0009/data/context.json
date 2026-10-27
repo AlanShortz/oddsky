@@ -1,0 +1,190 @@
+{
+  "gaia": {
+    "G": 10.544534,
+    "bp_rp": 0.70615673,
+    "parallax_mas": 3.316794462210342,
+    "parallax_over_error": 300.2427,
+    "ruwe": 1.0658363,
+    "teff_gspphot": 6043.75,
+    "non_single_star": 2,
+    "phot_variable_flag": "NOT_AVAILABLE",
+    "distance_pc": 301.495920652735,
+    "abs_G": 3.1481267982160386,
+    "sep_from_target_coords_arcsec": 0.0133615805452545
+  },
+  "gaia_variability": {},
+  "neighbors": [
+    {
+      "source_id": 1441063855405214976,
+      "sep_arcsec": 24.4996,
+      "phot_g_mean_mag": 16.558,
+      "bp_rp": 1.0919,
+      "dG": 6.0135,
+      "flux_ratio_G": 0.0039,
+      "parallax": 0.6893,
+      "ruwe": 1.2234
+    },
+    {
+      "source_id": 1441063752325998592,
+      "sep_arcsec": 25.4635,
+      "phot_g_mean_mag": 16.5281,
+      "bp_rp": 0.939,
+      "dG": 5.9835,
+      "flux_ratio_G": 0.004,
+      "parallax": 0.6881,
+      "ruwe": 0.9772
+    },
+    {
+      "source_id": 1441075602139711616,
+      "sep_arcsec": 26.4247,
+      "phot_g_mean_mag": 18.4381,
+      "bp_rp": 1.4334,
+      "dG": 7.8936,
+      "flux_ratio_G": 0.0007,
+      "parallax": 0.5852,
+      "ruwe": 1.0564
+    }
+  ],
+  "tess": {
+    "sectors": {
+      "14": {
+        "author": "TESS-SPOC",
+        "exptime": 1800.0,
+        "crowdsap": 0.98875147,
+        "flfrcsap": 0.91353786,
+        "t_start": 58682.8650834444,
+        "t_end": 58709.67754963739,
+        "desat_mjd": [
+          58687.40673906496,
+          58691.906733021606,
+          58701.13588962611,
+          58705.38588250382
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "15": {
+        "author": "TESS-SPOC",
+        "exptime": 1800.0,
+        "crowdsap": 0.98852324,
+        "flfrcsap": 0.9154194,
+        "t_start": 58710.88588220626,
+        "t_end": 58736.88584089512,
+        "desat_mjd": [
+          58715.15670309216,
+          58719.406695656944,
+          58724.44836191321,
+          58728.74001548905,
+          58732.99000755977
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "16": {
+        "author": "TESS-SPOC",
+        "exptime": 1800.0,
+        "crowdsap": 0.98834813,
+        "flfrcsap": 0.92924565,
+        "t_start": 58738.15667260904,
+        "t_end": 58762.80246296339,
+        "desat_mjd": [
+          58738.15667260904,
+          58744.03165569762,
+          58757.03163414961
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "18": {
+        "author": "TESS-SPOC",
+        "exptime": 1800.0,
+        "crowdsap": 0.99034846,
+        "flfrcsap": 0.91208464,
+        "t_start": 58790.177430876065,
+        "t_end": 58814.510735902004,
+        "desat_mjd": [
+          58794.448252685834,
+          58798.698247085325,
+          58807.489904283546,
+          58811.98989989841
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "21": {
+        "author": "TESS-SPOC",
+        "exptime": 1800.0,
+        "crowdsap": 0.98965913,
+        "flfrcsap": 0.90587687,
+        "t_start": 58869.948218808044,
+        "t_end": 58897.260731762275,
+        "desat_mjd": [
+          58876.219047742896,
+          58882.46905581048,
+          58884.42739108065,
+          58890.96905478416
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "24": {
+        "author": "TESS-SPOC",
+        "exptime": 1800.0,
+        "crowdsap": 0.98829979,
+        "flfrcsap": 0.92250657,
+        "t_start": 58955.302436735015,
+        "t_end": 58981.76078127371,
+        "desat_mjd": [
+          58955.302436735015,
+          58976.573273414746
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "41": {
+        "author": "TESS-SPOC",
+        "exptime": 600.0,
+        "crowdsap": 0.98908794,
+        "flfrcsap": 0.91025728,
+        "t_start": 59419.48975320486,
+        "t_end": 59446.07305385871,
+        "desat_mjd": [
+          59419.48975320486,
+          59425.76057488052,
+          59425.76751932129,
+          59425.7744637616,
+          59425.78140820237,
+          59433.218903407454,
+          59439.614722395316,
+          59439.621666834224,
+          59439.62861127313,
+          59439.63555571204
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "48": {
+        "author": "TESS-SPOC",
+        "exptime": 600.0,
+        "crowdsap": 0.99024868,
+        "flfrcsap": 0.9086321,
+        "t_start": 59607.43400856806,
+        "t_end": 59635.482637221925,
+        "desat_mjd": [
+          59607.43400856806,
+          59614.322893931065,
+          59614.329838384874,
+          59614.33678283868,
+          59614.34372729249,
+          59622.54512521019,
+          59628.94790200051,
+          59628.95484645525,
+          59628.961790910456,
+          59628.9687353652
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      }
+    }
+  }
+}

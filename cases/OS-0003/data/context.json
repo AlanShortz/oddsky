@@ -1,0 +1,471 @@
+{
+  "gaia": {
+    "G": 10.638212,
+    "bp_rp": 0.66381836,
+    "parallax_mas": 0.4382078813927715,
+    "parallax_over_error": 25.077587,
+    "ruwe": 1.2846576,
+    "teff_gspphot": null,
+    "non_single_star": 0,
+    "phot_variable_flag": "NOT_AVAILABLE",
+    "distance_pc": 2282.021940868943,
+    "abs_G": -1.153387078483945,
+    "sep_from_target_coords_arcsec": 0.0572680589053562
+  },
+  "gaia_variability": {},
+  "neighbors": [
+    {
+      "source_id": 2197941958899189504,
+      "sep_arcsec": 4.5639,
+      "phot_g_mean_mag": 20.7422,
+      "bp_rp": NaN,
+      "dG": 10.1039,
+      "flux_ratio_G": 0.0001,
+      "parallax": NaN,
+      "ruwe": NaN
+    },
+    {
+      "source_id": 2197941958898809728,
+      "sep_arcsec": 5.1393,
+      "phot_g_mean_mag": 18.5328,
+      "bp_rp": 0.8352,
+      "dG": 7.8946,
+      "flux_ratio_G": 0.0007,
+      "parallax": 0.3755,
+      "ruwe": 1.028
+    },
+    {
+      "source_id": 2197941958886907520,
+      "sep_arcsec": 7.3186,
+      "phot_g_mean_mag": 19.0106,
+      "bp_rp": 1.4179,
+      "dG": 8.3723,
+      "flux_ratio_G": 0.0004,
+      "parallax": 0.1247,
+      "ruwe": 0.9973
+    },
+    {
+      "source_id": 2197942165045329152,
+      "sep_arcsec": 7.3263,
+      "phot_g_mean_mag": 19.4283,
+      "bp_rp": NaN,
+      "dG": 8.7901,
+      "flux_ratio_G": 0.0003,
+      "parallax": 0.3229,
+      "ruwe": 0.9355
+    },
+    {
+      "source_id": 2197942165045328256,
+      "sep_arcsec": 8.5184,
+      "phot_g_mean_mag": 18.9305,
+      "bp_rp": 1.5074,
+      "dG": 8.2922,
+      "flux_ratio_G": 0.0005,
+      "parallax": 0.5159,
+      "ruwe": 1.0097
+    },
+    {
+      "source_id": 2197941958888059264,
+      "sep_arcsec": 9.0832,
+      "phot_g_mean_mag": 20.3868,
+      "bp_rp": 1.5484,
+      "dG": 9.7486,
+      "flux_ratio_G": 0.0001,
+      "parallax": 0.7839,
+      "ruwe": 0.9959
+    },
+    {
+      "source_id": 2197941958902402816,
+      "sep_arcsec": 11.4615,
+      "phot_g_mean_mag": 19.8992,
+      "bp_rp": 1.9029,
+      "dG": 9.261,
+      "flux_ratio_G": 0.0002,
+      "parallax": 0.2325,
+      "ruwe": 1.0108
+    },
+    {
+      "source_id": 2197942165045327744,
+      "sep_arcsec": 11.9211,
+      "phot_g_mean_mag": 19.0251,
+      "bp_rp": 1.6519,
+      "dG": 8.3869,
+      "flux_ratio_G": 0.0004,
+      "parallax": 0.4424,
+      "ruwe": 0.9964
+    },
+    {
+      "source_id": 2197942165045324416,
+      "sep_arcsec": 14.2996,
+      "phot_g_mean_mag": 19.6975,
+      "bp_rp": 1.6402,
+      "dG": 9.0592,
+      "flux_ratio_G": 0.0002,
+      "parallax": 0.5806,
+      "ruwe": 1.0716
+    },
+    {
+      "source_id": 2197942165046047488,
+      "sep_arcsec": 16.18,
+      "phot_g_mean_mag": 20.4454,
+      "bp_rp": 1.9365,
+      "dG": 9.8072,
+      "flux_ratio_G": 0.0001,
+      "parallax": 0.3554,
+      "ruwe": 1.0267
+    },
+    {
+      "source_id": 2197942165057238272,
+      "sep_arcsec": 19.0033,
+      "phot_g_mean_mag": 19.8163,
+      "bp_rp": NaN,
+      "dG": 9.178,
+      "flux_ratio_G": 0.0002,
+      "parallax": 0.5226,
+      "ruwe": 0.9821
+    },
+    {
+      "source_id": 2197942165045322496,
+      "sep_arcsec": 19.0527,
+      "phot_g_mean_mag": 18.4114,
+      "bp_rp": 1.7876,
+      "dG": 7.7731,
+      "flux_ratio_G": 0.0008,
+      "parallax": 0.4201,
+      "ruwe": 1.0169
+    },
+    {
+      "source_id": 2197941958887006720,
+      "sep_arcsec": 21.8343,
+      "phot_g_mean_mag": 20.6043,
+      "bp_rp": 1.8938,
+      "dG": 9.9661,
+      "flux_ratio_G": 0.0001,
+      "parallax": -0.4645,
+      "ruwe": 0.9657
+    },
+    {
+      "source_id": 2197941958886916992,
+      "sep_arcsec": 23.4628,
+      "phot_g_mean_mag": 15.2752,
+      "bp_rp": 1.1501,
+      "dG": 4.637,
+      "flux_ratio_G": 0.014,
+      "parallax": 1.7006,
+      "ruwe": 13.733
+    },
+    {
+      "source_id": 2197941958898814848,
+      "sep_arcsec": 24.0444,
+      "phot_g_mean_mag": 15.2441,
+      "bp_rp": 1.1284,
+      "dG": 4.6059,
+      "flux_ratio_G": 0.0144,
+      "parallax": 0.2346,
+      "ruwe": 10.6797
+    },
+    {
+      "source_id": 2197941576630570880,
+      "sep_arcsec": 24.197,
+      "phot_g_mean_mag": 18.2492,
+      "bp_rp": 1.4908,
+      "dG": 7.611,
+      "flux_ratio_G": 0.0009,
+      "parallax": 0.5353,
+      "ruwe": 0.9959
+    },
+    {
+      "source_id": 2197941954587692800,
+      "sep_arcsec": 24.3577,
+      "phot_g_mean_mag": 19.4045,
+      "bp_rp": 1.6302,
+      "dG": 8.7663,
+      "flux_ratio_G": 0.0003,
+      "parallax": 0.3622,
+      "ruwe": 1.0831
+    },
+    {
+      "source_id": 2197941958888182656,
+      "sep_arcsec": 24.4781,
+      "phot_g_mean_mag": 20.4438,
+      "bp_rp": 2.477,
+      "dG": 9.8056,
+      "flux_ratio_G": 0.0001,
+      "parallax": 2.1036,
+      "ruwe": 1.0842
+    },
+    {
+      "source_id": 2197942165047096960,
+      "sep_arcsec": 25.3363,
+      "phot_g_mean_mag": 21.2535,
+      "bp_rp": 0.8581,
+      "dG": 10.6153,
+      "flux_ratio_G": 0.0001,
+      "parallax": NaN,
+      "ruwe": NaN
+    },
+    {
+      "source_id": 2197941958898810112,
+      "sep_arcsec": 25.341,
+      "phot_g_mean_mag": 15.198,
+      "bp_rp": 0.7589,
+      "dG": 4.5598,
+      "flux_ratio_G": 0.015,
+      "parallax": 0.2705,
+      "ruwe": 1.325
+    },
+    {
+      "source_id": 2197942160746130048,
+      "sep_arcsec": 25.4373,
+      "phot_g_mean_mag": 18.2631,
+      "bp_rp": 2.0575,
+      "dG": 7.6249,
+      "flux_ratio_G": 0.0009,
+      "parallax": 0.1695,
+      "ruwe": 1.0087
+    },
+    {
+      "source_id": 2197941782789001216,
+      "sep_arcsec": 26.0814,
+      "phot_g_mean_mag": 18.5128,
+      "bp_rp": 1.581,
+      "dG": 7.8745,
+      "flux_ratio_G": 0.0007,
+      "parallax": 0.4129,
+      "ruwe": 1.0637
+    },
+    {
+      "source_id": 2197941787089970432,
+      "sep_arcsec": 27.7174,
+      "phot_g_mean_mag": 20.8592,
+      "bp_rp": 1.6366,
+      "dG": 10.221,
+      "flux_ratio_G": 0.0001,
+      "parallax": NaN,
+      "ruwe": NaN
+    },
+    {
+      "source_id": 2197941958899156224,
+      "sep_arcsec": 28.3293,
+      "phot_g_mean_mag": 20.5427,
+      "bp_rp": 1.5812,
+      "dG": 9.9044,
+      "flux_ratio_G": 0.0001,
+      "parallax": -0.8009,
+      "ruwe": 0.9822
+    },
+    {
+      "source_id": 2197941958886919808,
+      "sep_arcsec": 28.7677,
+      "phot_g_mean_mag": 19.7681,
+      "bp_rp": 1.5835,
+      "dG": 9.1299,
+      "flux_ratio_G": 0.0002,
+      "parallax": -0.6748,
+      "ruwe": 1.0403
+    },
+    {
+      "source_id": 2197941576630565888,
+      "sep_arcsec": 29.1684,
+      "phot_g_mean_mag": 19.9419,
+      "bp_rp": 2.0602,
+      "dG": 9.3037,
+      "flux_ratio_G": 0.0002,
+      "parallax": 0.8054,
+      "ruwe": 1.068
+    },
+    {
+      "source_id": 2197941958886903424,
+      "sep_arcsec": 29.4977,
+      "phot_g_mean_mag": 18.7058,
+      "bp_rp": 1.6615,
+      "dG": 8.0676,
+      "flux_ratio_G": 0.0006,
+      "parallax": 0.1473,
+      "ruwe": 1.0337
+    }
+  ],
+  "tess": {
+    "sectors": {
+      "16": {
+        "author": "QLP",
+        "exptime": 1800.0,
+        "crowdsap": null,
+        "flfrcsap": null,
+        "t_start": 58738.15942015685,
+        "t_end": 58762.805412014946,
+        "desat_mjd": [
+          58738.15942015685,
+          58744.0344968806,
+          58757.03458510293
+        ],
+        "flux_column": "flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "17": {
+        "author": "QLP",
+        "exptime": 1800.0,
+        "crowdsap": null,
+        "flfrcsap": null,
+        "t_start": 58764.20125222998,
+        "t_end": 58789.18002703134,
+        "desat_mjd": [
+          58768.09705440095,
+          58771.97201058082,
+          58781.28437043214,
+          58785.28428132692
+        ],
+        "flux_column": "flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "56": {
+        "author": "TESS-SPOC",
+        "exptime": 200.0,
+        "crowdsap": 0.84679574,
+        "flfrcsap": 0.80652565,
+        "t_start": 59824.755925863516,
+        "t_end": 59852.64054643782,
+        "desat_mjd": [
+          59824.755925863516,
+          59824.758240732364,
+          59831.43893624097,
+          59831.44125109911,
+          59831.44356595725,
+          59838.22840177035,
+          59838.23071661731,
+          59845.58958660485,
+          59845.59190143645
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "57": {
+        "author": "TESS-SPOC",
+        "exptime": 200.0,
+        "crowdsap": 0.84080368,
+        "flfrcsap": 0.80120325,
+        "t_start": 59852.853509721346,
+        "t_end": 59881.61476286827,
+        "desat_mjd": [
+          59852.853509721346,
+          59852.85582453944,
+          59860.290991007816,
+          59860.293305810075,
+          59866.959921349306,
+          59866.96223613992,
+          59866.96455093101
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "76": {
+        "author": "SPOC",
+        "exptime": 120.0,
+        "crowdsap": 0.84229547,
+        "flfrcsap": 0.87973833,
+        "t_start": 60367.18957833899,
+        "t_end": 60394.273829586804,
+        "desat_mjd": [
+          60367.18957833899,
+          60367.190967187285,
+          60367.19235603558,
+          60367.19374488341,
+          60367.1951337317,
+          60373.79079456162,
+          60373.792183419224,
+          60373.7935722759,
+          60373.794961133506,
+          60381.09203828126,
+          60381.09342714492,
+          60381.09481600858,
+          60381.09620487224,
+          60381.09759373544,
+          60388.07526893029,
+          60388.07665780373,
+          60388.07804667717,
+          60388.07943555107
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "77": {
+        "author": "SPOC",
+        "exptime": 120.0,
+        "crowdsap": 0.89114547,
+        "flfrcsap": 0.83416688,
+        "t_start": 60394.977991892025,
+        "t_end": 60423.04578030808,
+        "desat_mjd": [
+          60394.977991892025,
+          60394.97938077198,
+          60394.98076965194,
+          60394.9821585319,
+          60402.036305694375,
+          60402.03769458458,
+          60402.03908347525,
+          60402.040472365916,
+          60402.04186125612,
+          60416.641509823035,
+          60416.642898730934,
+          60416.64428763883,
+          60416.645676546264,
+          60416.64706545463
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "83": {
+        "author": "SPOC",
+        "exptime": 120.0,
+        "crowdsap": 0.84733695,
+        "flfrcsap": 0.83424234,
+        "t_start": 60558.92466502357,
+        "t_end": 60583.87772386521,
+        "desat_mjd": [
+          60558.92466502357,
+          60558.92605393939,
+          60558.9274428552,
+          60558.928831771016,
+          60564.52893524943,
+          60564.53032416245,
+          60564.53171307547,
+          60564.53310198849,
+          60571.4207034735,
+          60571.42209237581,
+          60571.42348127859,
+          60571.4248701809,
+          60577.529085957445,
+          60577.53047485603,
+          60577.531863753684,
+          60577.5332526518
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      },
+      "84": {
+        "author": "TESS-SPOC",
+        "exptime": 200.0,
+        "crowdsap": 0.85945565,
+        "flfrcsap": 0.77797592,
+        "t_start": 60584.08790879464,
+        "t_end": 60609.842268128414,
+        "desat_mjd": [
+          60584.08790879464,
+          60584.09022360854,
+          60584.09253842197,
+          60590.49761219043,
+          60590.499926994555,
+          60590.50224179868,
+          60597.011454836465,
+          60597.01376962382,
+          60597.01608441118,
+          60603.6896012309,
+          60603.69191600941,
+          60603.69423078792
+        ],
+        "flux_column": "pdcsap_flux",
+        "relative": "delta-mag vs sector median"
+      }
+    }
+  }
+}

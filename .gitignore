@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+.context/
+node_modules/
+# Sealed trial answers: the plaintext stays with whoever sealed it until the reveal.
+trials/*/sealed/answers.yaml
+trials/*/sealed/salt
+hunts/*/epoch/
+hunts/*/parts/

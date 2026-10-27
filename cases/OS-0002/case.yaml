@@ -1,0 +1,31 @@
+id: OS-0002
+title: The most mysterious star in the galaxy (allegedly)
+hook: 'Boyajian''s Star: irregular dips of up to 22% that no planet could make. Aliens were proposed.
+  Dust was found.'
+status: observation
+target:
+  name: KIC 8462852
+  ra: 301.5643860504275
+  dec: 44.4568863525439
+  aliases:
+  - NSVS   5711291
+  - TIC 185336364
+  - GSC 03162-00665
+  - WISEA J200615.45+442724.6
+  - Gaia DR3 2081900940499099136
+  - TYC 3162-665-1
+  - 2MASS J20061546+4427248
+  - UCAC4 673-083862
+  - WISE J200615.45+442724.7
+  - NAME Boyajian's Star
+  - Gaia DR1 2081900940499099136
+  - Gaia DR2 2081900940499099136
+  gaia_source_id: 2081900940499099136
+  otype: '*'
+summary: ''
+claims: []
+hypotheses: []
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T05:55:29+00:00'

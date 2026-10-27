@@ -1,0 +1,60 @@
+{
+  "trial": "strange-stars-001",
+  "description": "Ten packets of real archive data with identity, coordinates and dates scrubbed. Eight blind (name the explanation) including one ordinary star and one with planted spacecraft artifacts; two hindsight (data cut at a date; forecast what happens next, graded against what the sky did).\n",
+  "answers_sha256": "4608af909963336a090c0a1fa13ac53fca2a98344c2092939decc5a4522c02a3",
+  "classes": {
+    "dust_occultation": "Circumstellar dust passes in front of the star (debris, disk warp, clump).",
+    "dust_formation": "The star makes its own dust (R CrB-like declines, AGB/post-AGB episodes).",
+    "collision_debris": "Debris from a collision: IR excess first, optical extinction later.",
+    "eclipse_companion": "A companion or its disk eclipses the star (long-period, often dusty).",
+    "yso_dipper": "Young star with variable extinction from an inner disk.",
+    "pulsation": "Intrinsic pulsation (Miras, semiregulars, long-period variables).",
+    "eruptive": "Outbursts, flares, accretion events, novae.",
+    "rotation_spots": "Starspots carried around by rotation.",
+    "artifact_instrumental": "The spacecraft, detector or pipeline did it.",
+    "artifact_blend": "A neighbour did it: the signal is real but belongs to another star.",
+    "normal": "Nothing to explain at the precision of the data."
+  },
+  "packets": [
+    {
+      "packet": "T01",
+      "mode": "blind"
+    },
+    {
+      "packet": "T02",
+      "mode": "blind"
+    },
+    {
+      "packet": "T03",
+      "mode": "blind"
+    },
+    {
+      "packet": "T04",
+      "mode": "blind"
+    },
+    {
+      "packet": "T05",
+      "mode": "blind"
+    },
+    {
+      "packet": "T06",
+      "mode": "blind"
+    },
+    {
+      "packet": "T07",
+      "mode": "blind"
+    },
+    {
+      "packet": "T08",
+      "mode": "blind"
+    },
+    {
+      "packet": "H01",
+      "mode": "hindsight"
+    },
+    {
+      "packet": "H02",
+      "mode": "hindsight"
+    }
+  ]
+}

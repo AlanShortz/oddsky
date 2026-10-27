@@ -1,0 +1,17 @@
+id: OS-0009
+title: Control B
+hook: A quiet G star in TESS's continuous viewing zone. Nothing to see here, and that is the test.
+status: observation
+target:
+  name: Gaia DR3 1441063855405214080
+  ra: 269.92753
+  dec: 65.85794
+  aliases: []
+  gaia_source_id: 1441063855405214080
+summary: ''
+claims: []
+hypotheses: []
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:09:31+00:00'

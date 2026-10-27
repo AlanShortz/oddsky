@@ -1,0 +1,42 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  rows_raw: 19
+  rows_kept: 19
+  cuts: []
+  status: ok
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  rows_raw: 396
+  rows_kept: 42
+  cuts:
+  - 'W1: qual_frame > 0 removed 75'
+  - 'W1: w1rchi2 < 5x source median removed 10'
+  - 'W2: qual_frame > 0 removed 75'
+  - 'W2: cc_flags[1] == ''0'' removed 1'
+  - 'W2: w2rchi2 < 5x source median removed 6'
+  status: ok
+aavso:
+  archive: AAVSO International Database (VSX api.delim)
+  rows_raw: 932644
+  rows_kept: 564704
+  cuts: []
+  status: ok
+ztf:
+  archive: IRSA ZTF light curve service
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  status: empty
+asassn:
+  archive: ASAS-SN Sky Patrol (pyasassn)
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  status: unavailable
+tess:
+  archive: MAST TESS light curves via lightkurve
+  rows_raw: 343604
+  rows_kept: 15993
+  cuts:
+  - binned to 10-min medians per sector (good and flagged cadences kept apart)
+  status: ok

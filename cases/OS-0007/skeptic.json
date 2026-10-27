@@ -1,0 +1,158 @@
+{
+  "generated_at": "2026-10-27T06:07:33+00:00",
+  "oddsky_version": "0.1.0",
+  "summary": "1 fail, 2 warn, 8 pass, 1 skipped",
+  "counts": {
+    "fail": 1,
+    "warn": 2,
+    "pass": 8,
+    "skip": 1
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "pass",
+      "finding": "no Gaia source within 6.1\"",
+      "numbers": {
+        "radius_arcsec": 6.1
+      }
+    },
+    {
+      "id": "blend_tess",
+      "title": "Neighbours inside the TESS beam (42.0\")",
+      "status": "pass",
+      "finding": "3 Gaia source(s) within 42.0\"; brightest contributes 1.7% of the target's G flux at 24.8\"",
+      "numbers": {
+        "radius_arcsec": 42.0,
+        "n_inside": 3,
+        "total_flux_ratio_G": 0.0243,
+        "brightest_flux_ratio": 0.0166,
+        "brightest_sep": 24.791
+      }
+    },
+    {
+      "id": "blend_aavso",
+      "title": "Neighbours inside the AAVSO beam (5.0\")",
+      "status": "pass",
+      "finding": "no Gaia source within 5.0\"",
+      "numbers": {
+        "radius_arcsec": 5.0
+      }
+    },
+    {
+      "id": "tess_crowdsap",
+      "title": "TESS aperture contamination (CROWDSAP)",
+      "status": "pass",
+      "finding": "worst sector: 0.98 of aperture flux is from the target",
+      "numbers": {
+        "min_crowdsap": 0.97881615
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "fail",
+      "finding": "42 of 42 visits are at or brighter than saturation (W1<8, W2<7)",
+      "numbers": {
+        "saturated_visits": 42
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "270 exposures; cuts removed up to 77 (29%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 270,
+        "removed_per_band": {
+          "W1": 77,
+          "W2": 60
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "pass",
+      "finding": "optical data from 12 independent source(s): AAVSO observer MJB (720), AAVSO observer HMB (354), AAVSO observer DUBF (245), AAVSO observer MZK (141), AAVSO observer HMH (101), AAVSO observer ROE (86), AAVSO observer VMT (83), AAVSO observer MGW (58), AAVSO observer CIVA (45), AAVSO observer WRCA (41), AAVSO observer DKS (36), TESS (214093)",
+      "numbers": {
+        "sources": {
+          "AAVSO observer MJB": 720,
+          "AAVSO observer HMB": 354,
+          "AAVSO observer DUBF": 245,
+          "AAVSO observer MZK": 141,
+          "AAVSO observer HMH": 101,
+          "AAVSO observer ROE": 86,
+          "AAVSO observer VMT": 83,
+          "AAVSO observer MGW": 58,
+          "AAVSO observer CIVA": 45,
+          "AAVSO observer WRCA": 41,
+          "AAVSO observer DKS": 36,
+          "AAVSO observer KTHC": 16,
+          "AAVSO observer DMIA": 8,
+          "AAVSO observer PJEE": 8,
+          "AAVSO observer HBB": 7,
+          "AAVSO observer PKT": 7,
+          "AAVSO observer BPO": 5,
+          "AAVSO observer NMT": 4,
+          "AAVSO observer TIA": 4,
+          "AAVSO observer SBAH": 3,
+          "AAVSO observer WTHB": 2,
+          "AAVSO observer DDJ": 1,
+          "AAVSO observer HDF": 1,
+          "AAVSO observer LSTA": 1,
+          "TESS": 214093
+        }
+      }
+    },
+    {
+      "id": "baseline_aavso",
+      "title": "Does AAVSO start at the star's normal brightness?",
+      "status": "warn",
+      "finding": "first 60 days of V: median 15.03; Gaia DR3 (2014-17 mean) implies V = 15.57; difference -0.55 mag. The series begins mid-event: its own median is not the star's normal state.",
+      "numbers": {
+        "v_first": 15.028,
+        "v_gaia": 15.574,
+        "delta": -0.546
+      }
+    },
+    {
+      "id": "chromatic",
+      "title": "Multi-band consistency of the main event",
+      "status": "skip",
+      "finding": "no significant V-band event",
+      "numbers": {}
+    },
+    {
+      "id": "alias_aavso_V",
+      "title": "Periodicity vs survey rhythms (AAVSO V)",
+      "status": "pass",
+      "finding": "strongest period 1115.67 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 1115.665429611542,
+        "power": 0.2561454595244418
+      }
+    },
+    {
+      "id": "alias_tess_TESS",
+      "title": "Periodicity vs survey rhythms (TESS TESS)",
+      "status": "pass",
+      "finding": "strongest period 4.20 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 4.199737456708423,
+        "power": 0.14226675571086092
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "warn",
+      "finding": "RUWE = 3.33 > 1.4: likely an unresolved companion, or a photocentre shifted by variability",
+      "numbers": {
+        "ruwe": 3.3341234
+      }
+    }
+  ]
+}

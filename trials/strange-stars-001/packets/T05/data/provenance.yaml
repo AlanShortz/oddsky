@@ -1,0 +1,35 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  rows_raw: 4
+  rows_kept: 4
+  cuts: []
+  status: ok
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  rows_raw: 12727
+  rows_kept: 44
+  cuts:
+  - 'W1: qual_frame > 0 removed 1056'
+  - 'W1: cc_flags[0] == ''0'' removed 8'
+  - 'W1: ph_qual[0] in (A,B) removed 3'
+  - 'W1: nb == 1 (no blending) removed 2'
+  - 'W1: w1rchi2 < 5x source median removed 509'
+  - 'W2: qual_frame > 0 removed 1056'
+  - 'W2: cc_flags[1] == ''0'' removed 17'
+  - 'W2: ph_qual[1] in (A,B) removed 13'
+  - 'W2: nb == 1 (no blending) removed 2'
+  - 'W2: w2rchi2 < 5x source median removed 281'
+  status: ok
+ztf:
+  archive: IRSA ZTF light curve service
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  status: empty
+tess:
+  archive: MAST TESS light curves via lightkurve
+  rows_raw: 14662
+  rows_kept: 13290
+  cuts:
+  - binned to 10-min medians per sector (good and flagged cadences kept apart)
+  status: ok

@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-10-27T09:24:31+00:00",
+  "oddsky_version": "0.2.0",
+  "summary": "0 fail, 2 warn, 7 pass, 0 skipped",
+  "counts": {
+    "fail": 0,
+    "warn": 2,
+    "pass": 7,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "warn",
+      "finding": "2 Gaia source(s) within 6.1\"; brightest contributes 13.5% of the target's G flux at 5.8\"",
+      "numbers": {
+        "radius_arcsec": 6.1,
+        "n_inside": 2,
+        "total_flux_ratio_G": 0.1416,
+        "brightest_flux_ratio": 0.1352,
+        "brightest_sep": 5.7644
+      }
+    },
+    {
+      "id": "blend_ztf",
+      "title": "Neighbours inside the ZTF beam (2.0\")",
+      "status": "pass",
+      "finding": "no Gaia source within 2.0\"",
+      "numbers": {
+        "radius_arcsec": 2.0
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "413 exposures; cuts removed up to 37 (9%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 413,
+        "removed_per_band": {
+          "W1": 37,
+          "W2": 29
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "warn",
+      "finding": "optical data from 1 independent source(s): ZTF (1721). One instrument or observer is a single point of failure; seek a second.",
+      "numbers": {
+        "n_sources": 1,
+        "top_sources": {
+          "ZTF": 1721
+        }
+      }
+    },
+    {
+      "id": "onset_ztf_ZTF_r",
+      "title": "Was the start seen? (ZTF ZTF_r)",
+      "status": "pass",
+      "finding": "the 2 deepest dip(s) (> 0.1 mag vs a 600-day baseline) all have an observed ingress",
+      "numbers": {
+        "n_events": 2
+      }
+    },
+    {
+      "id": "alias_gaia_epoch_G",
+      "title": "Periodicity vs survey rhythms (GAIA_EPOCH G)",
+      "status": "pass",
+      "finding": "strongest period 0.93 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 0.9292359013170663,
+        "power": 0.19426235810518755
+      }
+    },
+    {
+      "id": "alias_ztf_ZTF_r",
+      "title": "Periodicity vs survey rhythms (ZTF ZTF_r)",
+      "status": "pass",
+      "finding": "strongest period 2.53 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 2.5298714622289844,
+        "power": 0.20086162046055825
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 1.01 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 1.0108309
+      }
+    }
+  ]
+}

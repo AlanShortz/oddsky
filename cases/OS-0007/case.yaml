@@ -1,0 +1,52 @@
+id: OS-0007
+title: The young star that went dark in 2011
+hook: A famous, well-behaved young star that suddenly dimmed by two magnitudes and stayed dim for a decade.
+status: observation
+target:
+  name: AA Tau
+  ra: 68.73091745933
+  dec: 24.481398229049997
+  aliases:
+  - AP J04345542+2428531
+  - Gaia DR3 147818450613367424
+  - 2MASS J04345542+2428531
+  - Kim 2-79
+  - '[GBA2007] 1766'
+  - '[ABG2007] 1651'
+  - XEST 25-OM-003
+  - XEST 25-026
+  - 2E  1098
+  - AN  196.1930
+  - CSI+24-04319
+  - GCRV 55202
+  - GSC 01833-00851
+  - HBC  63
+  - IRAS 04318+2422
+  - IRAS F04318+2422
+  - MHA 259-17
+  - UBV    4396
+  - V* AA Tau
+  - '[FK83] LDN 1529 44'
+  - 2E 0431.8+2422
+  - PSCz P04318+2422
+  - AKARI-IRC-V1 J0434554+242852
+  - UCAC2  40304106
+  - GALEX J043455.4+242853
+  - WISE J043455.42+242852.9
+  - SSTtau 043455.4+242853
+  - 2XMM J043455.3+242851
+  - '** ITO   32A'
+  - WDS J04349+2429A
+  - WISE J043455.42+242852.8
+  - TIC 268510757
+  - EPIC 247810494
+  - Gaia DR2 147818450613367424
+  gaia_source_id: 147818450613367424
+  otype: Or*
+summary: ''
+claims: []
+hypotheses: []
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:06:41+00:00'

@@ -1,0 +1,177 @@
+id: T04
+title: Trial star T04
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: Visual record spans ~88,500 d (~240 yr) with median 6.1 mag; the star spends most time near maximum
+    (robust std 0.15 mag) but shows 173 fainter excursions, many 5-7 mag deep, with no brightenings above
+    the maximum level.
+  tag: computed
+  calls:
+  - K3
+  - K5
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:04+00:00'
+- id: C2
+  text: 'Deep fades are typically faster in ingress than egress (e.g. 24 d in / 207 d out; 35 d in / 118
+    d out): sudden onset, slow recovery, at irregular intervals with no stable period.'
+  tag: computed
+  calls:
+  - K5
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:05+00:00'
+- id: C3
+  text: 'Prolonged deep minimum: V fell from 5.84 to 12-15 at ~day 81,450 and stayed 10-15 mag for ~3,400
+    d (with partial recoveries and re-fades) before returning to ~6.1 after day ~84,840 (6.8 mag step,
+    74 sigma). Since then V median 5.89, with one shorter decline near day 87,290.'
+  tag: computed
+  calls:
+  - K6
+  - K11
+  - K16
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:07+00:00'
+- id: C4
+  text: 'B, V, R, I move together (r=0.99): dB/dV=1.05, dR/dV=0.97, dI/dV=0.88 - real extinction, flatter
+    than ISM-dust slopes, consistent with fresh dust near the star plus scattered light.'
+  tag: computed
+  calls:
+  - K2
+  - K8
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:11+00:00'
+- id: C5
+  text: 'No neighbour can produce this: the only Gaia sources within 30 arcsec are 8.5-11 mag fainter
+    (flux ratio <0.05%), and 1352 independent AAVSO observers confirm the fades, excluding blend, single-observer
+    and instrumental explanations for the optical events.'
+  tag: computed
+  calls:
+  - K2
+  - K14
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:15+00:00'
+- id: C6
+  text: Gaia G=8.84 (2014-17 mean, during the deep minimum), bp_rp=1.68, RUWE 12.8 (parallax unreliable).
+    Max-light V~5.8-6 at any plausible distance of 0.7-1.5 kpc makes this a luminous supergiant, not a
+    young dwarf - arguing against a YSO dipper.
+  tag: inferred
+  calls:
+  - K1
+  - K2
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:17+00:00'
+- id: C7
+  text: In the bright state a weak ~38 d periodogram peak appears among red-noise peaks, consistent with
+    low-amplitude pulsation of an R CrB-type supergiant; not secure.
+  tag: speculated
+  calls:
+  - K12
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:19+00:00'
+- id: C8
+  text: NEOWISE is saturated in all 11 visits and fails quality cuts, so no IR-excess or W1-W2 test is
+    possible; TESS 0.5-0.8 mag excursions in the first sector sit at sector edges and are not trusted.
+  tag: computed
+  calls:
+  - K2
+  - K13
+  - K15
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:22+00:00'
+hypotheses:
+- id: H1
+  klass: dust_formation
+  statement: 'R Coronae Borealis-type star: a hydrogen-deficient supergiant that sporadically condenses
+    carbon dust near its photosphere, producing sudden, irregular 5-8 mag declines with slow recoveries,
+    including a decade-long deep minimum. Likely R CrB itself (240-yr visual record, max V~5.8-6, 2007-2017-like
+    deep minimum).'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  - C7
+  conflicts: []
+  would_falsify: Strictly periodic recurrence of the declines; a decline with strongly ISM-like reddening
+    and no IR brightening; spectra showing strong hydrogen lines; fades not seen by independent observers.
+  status: live
+  confidence: 0.88
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:36+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: Circumstellar dust clumps not formed by the star (e.g. orbiting debris) pass in front of
+    it.
+  supports:
+  - C1
+  - C4
+  conflicts:
+  - C2
+  - C3
+  would_falsify: Ingress faster than egress and 173 aperiodic events over 240 yr with no orbital period
+    argue for in-situ formation; a periodic recurrence would favour this.
+  status: live
+  confidence: 0.04
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:38+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: A companion or its disk eclipses the star; RUWE 12.8 hints at a companion.
+  supports:
+  - C6
+  conflicts:
+  - C1
+  - C2
+  would_falsify: Any period linking the deep fades; currently none found.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:40+00:00'
+- id: H4
+  klass: yso_dipper
+  statement: Young star with variable inner-disk extinction.
+  supports:
+  - C1
+  conflicts:
+  - C6
+  - C3
+  would_falsify: Supergiant luminosity and decade-long 8-mag minimum are not YSO-dipper behaviour.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:42+00:00'
+- id: H5
+  klass: pulsation
+  statement: The fades are large-amplitude pulsation (Mira-like).
+  supports:
+  - C7
+  conflicts:
+  - C1
+  - C2
+  would_falsify: No stable period; star sits at constant maximum between fades, unlike a Mira.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:43+00:00'
+- id: H6
+  klass: artifact_instrumental
+  statement: Pipeline/observer artifact.
+  supports:
+  - C8
+  conflicts:
+  - C5
+  - C4
+  would_falsify: Confirmed by 1352 independent observers in 4+ bands moving together.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-10-27T06:19:45+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

@@ -1,0 +1,21 @@
+# Strange Stars Trial 001. This file names the real stars, so it is NOT given to investigators;
+# they only see packets/<id>/. Answers are sealed (sealed/answers.sha256) when packets are built.
+name: strange-stars-001
+description: >
+  Ten packets of real archive data with identity, coordinates and dates scrubbed. Eight blind
+  (name the explanation) including one ordinary star and one with planted spacecraft artifacts;
+  two hindsight (data cut at a date; forecast what happens next, graded against what the sky did).
+packets:
+  - {id: T01, case: OS-0005, truth: pulsation, why: "R Cyg, a Mira"}
+  - {id: T02, case: OS-0008, truth: artifact_instrumental, why: "quiet star with dips planted on TESS momentum dumps",
+     salt: {kind: tess_dump_dips, depth: 0.012, width_days: 0.2, seed: 7}}
+  - {id: T03, case: OS-0001, truth: collision_debris, why: "ASASSN-21qj"}
+  - {id: T04, case: OS-0004, truth: dust_formation, why: "R CrB, the prototype"}
+  - {id: T05, case: OS-0009, truth: normal, why: "an unremarkable G star in the TESS CVZ"}
+  - {id: T06, case: OS-0006, truth: eruptive, why: "SS Cyg, the prototype dwarf nova"}
+  - {id: T07, case: OS-0002, truth: dust_occultation, why: "Boyajian's Star"}
+  - {id: T08, case: OS-0007, truth: yso_dipper, why: "AA Tau, dimmed since 2011"}
+  - {id: H01, case: OS-0003, truth: eclipse_companion, cutoff_mjd: 60600,
+     why: "EE Cep cut at 2024-10-20, a year before its 2025 eclipse"}
+  - {id: H02, case: OS-0006, truth: eruptive, cutoff_mjd: 61100,
+     why: "SS Cyg cut at 2026-03-01; forecast the outbursts of the following months"}

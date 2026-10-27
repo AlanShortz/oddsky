@@ -1,0 +1,272 @@
+id: H01
+title: Trial star H01
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 19798.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: 'Gaia DR3 (2014-17 mean): G=10.64, BP-RP=0.66, parallax/error 25, distance about 2.3 kpc, abs
+    G -1.15 without extinction correction (luminous), RUWE 1.28 (single-star-like), and no Gaia variability
+    classification.'
+  tag: observed
+  calls:
+  - K1
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:29+00:00'
+- id: C2
+  text: The AAVSO V series (16,729 points, 1005-19798 d, 91 observers) has median 10.835, robust std 0.053,
+    2-98 range 10.78-11.51, and an overall slope of -0.014 mag/yr. Seven excursions (find_excursions)
+    are 0.2-0.8 mag deep and last 3-47 d; the deepest four have 6-27 observers per bin, so they are multi-observer
+    and not single-observer artifacts.
+  tag: computed
+  calls:
+  - K4
+  - K5
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:32+00:00'
+- id: C3
+  text: 'The V periodogram (5-3000 d) has a broad hump, not one line: peaks at 112.9 d (power 0.41), 119.5
+    d (0.40), 107.2 d (0.39) and 126.2 d (0.37), with a 185.7 d half-year alias flagged. B gives the same
+    113 d peak (0.46), so the periodicity appears in two bands, but the peak width (107-126 d) means it
+    is a quasi-period, not a clean sinusoid.'
+  tag: computed
+  calls:
+  - K3
+  - K6
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:34+00:00'
+- id: C4
+  text: 'The recent window is quiet: V from day 19230 to 19798 stays between 10.78 and 10.82 (scatter
+    about 0.02 mag, 43 bins), with no 113-d cycle visible at the 0.7-mag amplitude of the full record.
+    At the cutoff the star is at its quiet level, and the 113-d hump is not persistent in the last 600
+    days.'
+  tag: computed
+  calls:
+  - K10
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:36+00:00'
+- id: C5
+  text: 'Colour: dB/dV=1.04, dR/dV=0.91, dI/dV=0.84 against ISM dust values of 1.32, 0.81, 0.59, all with
+    r of 0.98 or more. The B-slope is shallower than the ISM dust law, so the dips are not a simple reddening
+    by interstellar-type dust. The cross-band I vs V correlation is 0.99 (slope 0.82).'
+  tag: computed
+  calls:
+  - K2
+  - K7
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:38+00:00'
+- id: C6
+  text: 'NEOWISE is unusable here: all 44 visits are at or above the W1/W2 saturation limit (skeptic FAIL),
+    so the IR cannot test for warm dust, and the dust classes are only testable through the optical colours.
+    TESS has robust std 0.0034 and 2-98 amplitude 0.0125 mag, consistent with a quiet star in the sectors.'
+  tag: computed
+  calls:
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:39+00:00'
+- id: C7
+  text: 'No blend: the skeptic passes the blend checks (1 Gaia source within 5 arcsec contributing 0.0%,
+    27 sources inside the 42 arcsec TESS beam at 1.5%), but TESS CROWDSAP is 0.84 (warn). The optical
+    confirmation is strong (91 independent observers).'
+  tag: computed
+  calls:
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:41+00:00'
+- id: C8
+  text: 'Taken together: a luminous, mostly quiet star (2-98 range 0.74 mag) with irregular dips of 0.2-0.8
+    mag and a quasi-period near 110 d that is absent in the recent 600 days. The pattern looks like irregular
+    or semi-regular variability of a luminous star, not a clean eclipse or a single outburst.'
+  tag: inferred
+  calls:
+  - K3
+  - K4
+  - K5
+  - K10
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:41+00:00'
+hypotheses:
+- id: H1
+  klass: pulsation
+  statement: 'Semi-regular pulsation of a luminous (abs G about -1) star: a quasi-period near 110 d (107-126
+    d hump) with irregular amplitude, quiet in the most recent 600 days.'
+  supports:
+  - C3
+  - C4
+  - C8
+  conflicts: []
+  would_falsify: Falsified if the optical record stays flat at the cutoff level for 600 more days with
+    no 110-d cycle reappearing, or if the dips are shown to be a dust-driven pattern (non-periodic, multi-band,
+    IR-linked).
+  status: live
+  confidence: 0.55
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:42+00:00'
+- id: H2
+  klass: dust_formation
+  statement: The star makes dust episodically (R CrB-like or AGB-like declines), producing the 0.2-0.8
+    mag dips; the dips are small compared with classic R CrB declines.
+  supports:
+  - C2
+  - C5
+  conflicts: []
+  would_falsify: Falsified if the dips are not seen to deepen towards the blue (or if there is no dust-related
+    colour), or if the IR (NEOWISE, currently saturated) shows no warm dust.
+  status: live
+  confidence: 0.12
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:43+00:00'
+- id: H3
+  klass: normal
+  statement: 'Nothing beyond ordinary variability at this precision: the 0.05-mag scatter and the quiet
+    recent window are the normal state of a luminous star.'
+  supports:
+  - C4
+  conflicts: []
+  would_falsify: Falsified by further dips of more than 0.3 mag, or by a confirmed cycle that repeats.
+  status: live
+  confidence: 0.07
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:44+00:00'
+- id: H4
+  klass: eclipse_companion
+  statement: A companion or disk eclipses the luminous star, producing the irregular dips.
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: Falsified by the absence of sharp, repeated eclipse shapes at a fixed period, or by the
+    irregular spacing of the dips.
+  status: live
+  confidence: 0.05
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:45+00:00'
+- id: H5
+  klass: dust_occultation
+  statement: Circumstellar dust clumps pass in front of the star and dim it at irregular intervals.
+  supports:
+  - C5
+  conflicts: []
+  would_falsify: Falsified by the shallow colour slope (1.04, shallower than ISM dust 1.32), which argues
+    against pure dust reddening, and by the absence of IR excess.
+  status: live
+  confidence: 0.05
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:45+00:00'
+- id: H6
+  klass: eruptive
+  statement: Eruptive episodes or outbursts in the luminous star produce the dips and brightenings.
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: Falsified if the dips recur at a steady period, or if no brightenings or fast events
+    appear in the next data.
+  status: live
+  confidence: 0.06
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:46+00:00'
+- id: H7
+  klass: rotation_spots
+  statement: Starspots modulate the light curve at about 110 d.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: Falsified by 0.2-0.8 mag amplitude, too large for spots on a luminous star.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:47+00:00'
+- id: H8
+  klass: artifact_instrumental
+  statement: Observer or pipeline systematics produce the dips in the optical record.
+  supports:
+  - C2
+  - C7
+  conflicts: []
+  would_falsify: Falsified because the four deepest dips have 6-27 independent observers and show the
+    same timing in all bands.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:47+00:00'
+- id: H9
+  klass: artifact_blend
+  statement: A neighbour (27 Gaia sources within 42 arcsec) carries the variability.
+  supports:
+  - C7
+  conflicts: []
+  would_falsify: Falsified by no source within 5 arcsec of the AAVSO beam and the neighbour contributing
+    0.0% of flux there.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:48+00:00'
+- id: H10
+  klass: yso_dipper
+  statement: Young star with variable extinction.
+  supports:
+  - C1
+  conflicts: []
+  would_falsify: Falsified by the luminosity class (abs G -1, far above a young main-sequence star) and
+    the lack of IR excess data.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:49+00:00'
+- id: H11
+  klass: collision_debris
+  statement: Debris from a collision.
+  supports:
+  - C6
+  conflicts: []
+  would_falsify: Falsified by the quasi-periodic V pattern and the absence of an IR excess trend.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:26:49+00:00'
+predictions:
+- id: P1
+  statement: The median of AAVSO:V over days 19800-20000 stays brighter than 10.95 (the quiet recent level
+    is about 10.80).
+  check:
+    series: AAVSO:V
+    start: 19800.0
+    end: 20000.0
+    statistic: median
+    op: <
+    value: 10.95
+  probability: 0.85
+  author: claude-haiku-5.5
+  registered_at: '2026-10-27T06:26:54+00:00'
+- id: P2
+  statement: 'The median of AAVSO:V over days 19800-20400 is fainter than 10.80 (the recent quiet level):
+    a slight drift fainter, close to a coin flip.'
+  check:
+    series: AAVSO:V
+    start: 19800.0
+    end: 20400.0
+    statistic: median
+    op: '>'
+    value: 10.8
+  probability: 0.5
+  author: claude-haiku-5.5
+  registered_at: '2026-10-27T06:26:55+00:00'
+- id: P3
+  statement: The median of AAVSO:V over days 19800-20200 is brighter than 10.60, i.e. a clear 0.2-mag
+    brightening, which the record has not shown.
+  check:
+    series: AAVSO:V
+    start: 19800.0
+    end: 20200.0
+    statistic: median
+    op: <
+    value: 10.6
+  probability: 0.04
+  author: claude-haiku-5.5
+  registered_at: '2026-10-27T06:26:56+00:00'
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'

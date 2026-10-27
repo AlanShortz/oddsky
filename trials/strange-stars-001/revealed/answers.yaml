@@ -1,0 +1,85 @@
+trial: strange-stars-001
+salt: 5d8da92574db4db72e45d99c46dc8321
+classes:
+- dust_occultation
+- dust_formation
+- collision_debris
+- eclipse_companion
+- yso_dipper
+- pulsation
+- eruptive
+- rotation_spots
+- artifact_instrumental
+- artifact_blend
+- normal
+packets:
+  T01:
+    case: OS-0005
+    truth: pulsation
+    t0_mjd: -2272.5
+    cutoff_mjd: null
+    why: R Cyg, a Mira
+  T02:
+    case: OS-0008
+    truth: artifact_instrumental
+    t0_mjd: 56687.510356465
+    cutoff_mjd: null
+    why: quiet star with dips planted on TESS momentum dumps
+    salt:
+      kind: tess_dump_dips
+      depth: 0.012
+      width_days: 0.2
+      seed: 7
+      planted_mjd:
+      - 58949.38581676083
+      - 58833.752395565156
+      - 59002.71911178483
+      - 58905.460794426035
+  T03:
+    case: OS-0001
+    truth: collision_debris
+    t0_mjd: 56788.32108663
+    cutoff_mjd: null
+    why: ASASSN-21qj
+  T04:
+    case: OS-0004
+    truth: dust_formation
+    t0_mjd: -27155.100000000093
+    cutoff_mjd: null
+    why: R CrB, the prototype
+  T05:
+    case: OS-0009
+    truth: normal
+    t0_mjd: 56729.597305415
+    cutoff_mjd: null
+    why: an unremarkable G star in the TESS CVZ
+  T06:
+    case: OS-0006
+    truth: eruptive
+    t0_mjd: 11312.5
+    cutoff_mjd: null
+    why: SS Cyg, the prototype dwarf nova
+  T07:
+    case: OS-0002
+    truth: dust_occultation
+    t0_mjd: 56792.992278055
+    cutoff_mjd: null
+    why: Boyajian's Star
+  T08:
+    case: OS-0007
+    truth: yso_dipper
+    t0_mjd: 55171.83330000006
+    cutoff_mjd: null
+    why: AA Tau, dimmed since 2011
+  H01:
+    case: OS-0003
+    truth: eclipse_companion
+    t0_mjd: 40802.200000000186
+    cutoff_mjd: 60600
+    why: EE Cep cut at 2024-10-20, a year before its 2025 eclipse
+  H02:
+    case: OS-0006
+    truth: eruptive
+    t0_mjd: 11312.5
+    cutoff_mjd: 61100
+    why: SS Cyg cut at 2026-03-01; forecast the outbursts of the following months

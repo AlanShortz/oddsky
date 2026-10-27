@@ -1,0 +1,276 @@
+id: H02
+title: Trial star H02
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 49788.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: V shows repeated brightenings of about 3.5-3.8 mag, each lasting roughly 7-16 days, with a fast
+    rise (1-2 d) and a slower decline (about 10-13 d). The tool reports 158 excursions in total; the 20
+    it lists in full are all brightenings, and none is a dip.
+  tag: observed
+  calls:
+  - K5
+  - K9
+  - K10
+  - K11
+  - K12
+  - K13
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:02+00:00'
+- id: C2
+  text: 'The brightenings are chromatic in the sense expected of a hot, accretion-like component: B changes
+    1.18 times as much as V, and I changes 0.67 times as much. The skeptic chromatic check passes, so
+    the events are real changes in the star and not a single-band artefact.'
+  tag: computed
+  calls:
+  - K8
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:03+00:00'
+- id: C3
+  text: 'Periodograms find a broad cluster of power between about 28 and 70 days: V peaks at 48.3 d (power
+    0.24) and 55.7 d, and TESS peaks at 50.4 d (power 0.59) with 39.6, 69.1 and 64.3 d nearby. The strongest
+    V peak is not a known survey or Earth rhythm, but the cluster is broad, so this is most likely a recurrence
+    timescale rather than a strict period.'
+  tag: computed
+  calls:
+  - K3
+  - K4
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:03+00:00'
+- id: C4
+  text: 'The V level changes between windows: the median is 11.68 over 45000-47500 and 10.88 over 47500-49788,
+    a significant brightening of 0.80 mag. The last few binned points sit between 9.6 and 11.7 mag, so
+    the star is cycling between outburst and a quiescent level near 11.6 in V.'
+  tag: computed
+  calls:
+  - K15
+  - K14
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:04+00:00'
+- id: C5
+  text: 'Gaia DR3 gives G = 11.67, BP-RP 1.18, RUWE 2.33 (above 1.4: an unresolved companion, or variability
+    shifting the photocentre, is likely), and gspphot Teff 5583 K. The NEOWISE W1-W2 colour is 0.09 mag,
+    close to a photospheric value for a cool star with no dust excess.'
+  tag: observed
+  calls:
+  - K1
+  - K6
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:05+00:00'
+- id: C6
+  text: 'Blending cannot supply the outbursts: no Gaia source lies within 5 arcsec, the one within 6.1
+    arcsec (NEOWISE beam) carries 1.0 percent of the target G flux, and the brightest of 18 sources within
+    42 arcsec carries 1.5 percent. A 3.7-mag outburst would need a neighbour about 30 times the target
+    flux in outburst.'
+  tag: computed
+  calls:
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:06+00:00'
+- id: C7
+  text: TESS shows the same large excursions (relative range about 3.5 mag), but the skeptic flags that
+    one dip sits within 0.3 d of a momentum dump and another two dips are close to a sector edge, so a
+    few of the TESS events need care. The class decision does not rest on the TESS dips alone.
+  tag: inferred
+  calls:
+  - K2
+  - K4
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:06+00:00'
+- id: C8
+  text: NEOWISE W1 varies by a robust scatter of 0.17 mag (error about 0.01) and W1-W2 correlates with
+    W1 at r = 0.45, which is more than the photometric error. No IR excess above photosphere can be separated
+    from the outburst-related variation with these visits.
+  tag: computed
+  calls:
+  - K6
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:07+00:00'
+hypotheses:
+- id: H1
+  klass: eruptive
+  statement: 'Recurrent outbursts of an interacting binary with a hot accretion component (dwarf-nova-like
+    or symbiotic-type outbursts): repeated 3.5-3.8 mag brightenings lasting 7-16 days, bluer at maximum,
+    with a recurrence of order tens to hundreds of days.'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  conflicts: []
+  would_falsify: Outbursts would be rejected if the brightenings were shown to be instrumental (per-observer
+    or per-sector artefacts that do not appear in both V and TESS), or if the events were dips rather
+    than brightenings. A colour that did not turn bluer at maximum, or an outburst with no hot component,
+    would also weaken it.
+  status: live
+  confidence: 0.79
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:18+00:00'
+- id: H2
+  klass: pulsation
+  statement: A long-period pulsator (Mira or semi-regular type) producing the large-amplitude cycle, with
+    the 48-50 d peaks as its period.
+  supports:
+  - C3
+  - C5
+  conflicts: []
+  would_falsify: A pulsator would show smooth, roughly symmetric cycles with a stable period; the observed
+    events are sharp brightenings with a fast rise and a 10-13 d decline (C1), and the period is not stable
+    (C3). A stable-period, symmetric light curve would be needed to support it.
+  status: live
+  confidence: 0.05
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:19+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: A close companion or its disk produces the variability; the RUWE of 2.3 is consistent with
+    binarity.
+  supports:
+  - C5
+  conflicts: []
+  would_falsify: Eclipses would be periodic dips with a stable ephemeris; the variability is brightenings
+    with irregular recurrence (C1, C3), so this class is weak.
+  status: live
+  confidence: 0.04
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:19+00:00'
+- id: H4
+  klass: rotation_spots
+  statement: Starspots produce the 48-50 d modulation.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: Spots produce amplitudes of a few tenths of a magnitude, not 3.7-mag brightenings (C1);
+    the spot class cannot account for the events.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:20+00:00'
+- id: H5
+  klass: yso_dipper
+  statement: Young star with variable extinction from an inner disk.
+  supports: []
+  conflicts: []
+  would_falsify: The events are brightenings, not dips (C1), and the star has no sign of a young-star
+    IR excess (C5).
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:21+00:00'
+- id: H6
+  klass: dust_occultation
+  statement: Circumstellar dust passes in front of the star.
+  supports: []
+  conflicts: []
+  would_falsify: The events are brightenings that are bluer at maximum (C2), which dust occultation cannot
+    produce.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:22+00:00'
+- id: H7
+  klass: dust_formation
+  statement: The star makes dust, with declines like R CrB or AGB-type events.
+  supports:
+  - C5
+  conflicts: []
+  would_falsify: No dust excess in W1-W2 (C5) and brightenings rather than declines (C1) argue against
+    it.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:23+00:00'
+- id: H8
+  klass: collision_debris
+  statement: Debris from a collision produces optical extinction and IR excess.
+  supports: []
+  conflicts: []
+  would_falsify: Brightenings rather than extinction events (C1) argue against it.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:23+00:00'
+- id: H9
+  klass: artifact_blend
+  statement: A neighbour star produces the outbursts.
+  supports:
+  - C6
+  conflicts: []
+  would_falsify: A neighbour would need about 30 times the target flux to produce 3.7-mag events; the
+    neighbours carry 1.0 to 1.5 percent of target flux (C6).
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:24+00:00'
+- id: H10
+  klass: artifact_instrumental
+  statement: Pipeline or calibration effects produce the outbursts, which appear in the TESS normalised
+    flux.
+  supports:
+  - C7
+  conflicts: []
+  would_falsify: Brightenings seen by 208 independent sources in V and in TESS, with colour coherence
+    (C2), argue against it; a momentum-dump coincidence in a few TESS events (C7) is the only partial
+    support.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:25+00:00'
+- id: H11
+  klass: normal
+  statement: Nothing to explain at the precision of the data.
+  supports: []
+  conflicts: []
+  would_falsify: Any 3.5-mag brightening (C1) falsifies it.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:29:26+00:00'
+predictions:
+- id: P1
+  statement: Median of AAVSO:V over days 49788-50288 is fainter than 11.0 mag (magnitude above 11.0).
+  check:
+    series: AAVSO:V
+    start: 49788.0
+    end: 50288.0
+    statistic: median
+    op: '>'
+    value: 11.0
+  probability: 0.5
+  author: claude-haiku-5.5
+  registered_at: '2026-10-27T06:28:29+00:00'
+- id: P2
+  statement: Median of AAVSO:V over days 49788-52000 is fainter than 10.5 mag.
+  check:
+    series: AAVSO:V
+    start: 49788.0
+    end: 52000.0
+    statistic: median
+    op: '>'
+    value: 10.5
+  probability: 0.7
+  author: claude-haiku-5.5
+  registered_at: '2026-10-27T06:28:38+00:00'
+- id: P3
+  statement: Median of AAVSO:V over days 49788-50288 is brighter than 10.0 mag (sustained brightening,
+    not just outbursts).
+  check:
+    series: AAVSO:V
+    start: 49788.0
+    end: 50288.0
+    statistic: median
+    op: <
+    value: 10.0
+  probability: 0.15
+  author: claude-haiku-5.5
+  registered_at: '2026-10-27T06:28:39+00:00'
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'

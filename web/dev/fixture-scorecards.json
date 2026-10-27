@@ -1,0 +1,246 @@
+{
+ "_note": "SAMPLE scorecards for developing #/trials. Not real results.",
+ "scorecards": [
+  {
+   "trial": "strange-stars-001",
+   "mode": "blind",
+   "agent": "claude-opus-5.5 (Claude Code subagent)",
+   "run_at": "2026-10-27T11:20:00+00:00",
+   "answers_sha256": "25305005ac7f24d47c55a3e9a3444ece7df34d39a2a7ed73de060265a389e272",
+   "summary": {
+    "n": 8,
+    "top1": 0.625,
+    "top2": 1.0,
+    "brier": 0.326
+   },
+   "cases": [
+    {
+     "case": "T01",
+     "truth": "dust_occultation",
+     "ranked": [
+      {
+       "klass": "dust_occultation",
+       "p": 0.55
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.25
+      },
+      {
+       "klass": "yso_dipper",
+       "p": 0.12
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.28,
+     "notes": "Long, asymmetric dimming with B/I ratio near ISM dust; no periodicity."
+    },
+    {
+     "case": "T02",
+     "truth": "pulsation",
+     "ranked": [
+      {
+       "klass": "pulsation",
+       "p": 0.8
+      },
+      {
+       "klass": "dust_formation",
+       "p": 0.1
+      },
+      {
+       "klass": "normal",
+       "p": 0.05
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.053,
+     "notes": "Clean 312-day period in ASAS-SN; NEOWISE in phase."
+    },
+    {
+     "case": "T03",
+     "truth": "artifact_blend",
+     "ranked": [
+      {
+       "klass": "eruptive",
+       "p": 0.4
+      },
+      {
+       "klass": "artifact_blend",
+       "p": 0.35
+      },
+      {
+       "klass": "rotation_spots",
+       "p": 0.1
+      }
+     ],
+     "top1": false,
+     "top2": true,
+     "brier": 0.595,
+     "notes": "Flagged the 4.1\" neighbour but still led with an outburst. The Skeptic warned; the agent under-weighted it."
+    },
+    {
+     "case": "T04",
+     "truth": "dust_formation",
+     "ranked": [
+      {
+       "klass": "dust_formation",
+       "p": 0.6
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.25
+      },
+      {
+       "klass": "collision_debris",
+       "p": 0.08
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.23,
+     "notes": "Sudden 4-mag drop, slow recovery, IR brightening during the decline: R CrB-like."
+    },
+    {
+     "case": "T05",
+     "truth": "normal",
+     "ranked": [
+      {
+       "klass": "rotation_spots",
+       "p": 0.45
+      },
+      {
+       "klass": "normal",
+       "p": 0.4
+      },
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.1
+      }
+     ],
+     "top1": false,
+     "top2": true,
+     "brier": 0.573,
+     "notes": "Over-read a 0.02-mag TESS wiggle; the honest answer was 'nothing to explain'."
+    },
+    {
+     "case": "T06",
+     "truth": "eclipse_companion",
+     "ranked": [
+      {
+       "klass": "eclipse_companion",
+       "p": 0.7
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.2
+      },
+      {
+       "klass": "yso_dipper",
+       "p": 0.05
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.133,
+     "notes": "Two dips 1,180 days apart with identical shape."
+    },
+    {
+     "case": "T07",
+     "truth": "artifact_instrumental",
+     "ranked": [
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.65
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.2
+      },
+      {
+       "klass": "normal",
+       "p": 0.1
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.173,
+     "notes": "Period equals the TESS orbit (13.7 d); recovered from the alias check."
+    },
+    {
+     "case": "T08",
+     "truth": "collision_debris",
+     "ranked": [
+      {
+       "klass": "dust_occultation",
+       "p": 0.45
+      },
+      {
+       "klass": "collision_debris",
+       "p": 0.4
+      },
+      {
+       "klass": "dust_formation",
+       "p": 0.1
+      }
+     ],
+     "top1": false,
+     "top2": true,
+     "brier": 0.573,
+     "notes": "Saw the IR-before-optical ordering but preferred a pre-existing disk."
+    }
+   ],
+   "predictions": []
+  },
+  {
+   "trial": "hindsight-001",
+   "mode": "hindsight",
+   "agent": "claude-opus-5.5 (Claude Code subagent)",
+   "run_at": "2026-10-27T12:05:00+00:00",
+   "answers_sha256": "b668c77ddba1facf679dfe866efa9fedfdb89595af77f36647c54749f110f5a4",
+   "summary": {
+    "n": 5,
+    "brier": 0.144
+   },
+   "cases": [],
+   "predictions": [
+    {
+     "case": "H01",
+     "statement": "V will be fainter than its pre-cut median by more than 0.5 mag within 200 days.",
+     "probability": 0.7,
+     "outcome": "true",
+     "observed": 1.21
+    },
+    {
+     "case": "H01",
+     "statement": "The dimming will last longer than 400 days.",
+     "probability": 0.55,
+     "outcome": "false",
+     "observed": 0.0
+    },
+    {
+     "case": "H02",
+     "statement": "The next minimum of the 312-day cycle will fall within \u00b120 days of the predicted date.",
+     "probability": 0.85,
+     "outcome": "true",
+     "observed": 6.0
+    },
+    {
+     "case": "H03",
+     "statement": "W2 will brighten by more than 0.2 mag at the next NEOWISE visit.",
+     "probability": 0.4,
+     "outcome": "false",
+     "observed": 0.04
+    },
+    {
+     "case": "H04",
+     "statement": "The star will return to within 0.1 mag of its baseline by the end of the window.",
+     "probability": 0.6,
+     "outcome": "unresolvable",
+     "observed": null
+    }
+   ]
+  }
+ ]
+}

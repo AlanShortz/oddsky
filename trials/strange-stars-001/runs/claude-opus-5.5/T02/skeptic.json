@@ -1,0 +1,133 @@
+{
+  "generated_at": "2026-10-27T06:15:40+00:00",
+  "oddsky_version": "0.2.0",
+  "summary": "4 fail, 1 warn, 7 pass, 0 skipped",
+  "counts": {
+    "fail": 4,
+    "warn": 1,
+    "pass": 7,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "pass",
+      "finding": "no Gaia source within 6.1\"",
+      "numbers": {
+        "radius_arcsec": 6.1
+      }
+    },
+    {
+      "id": "blend_tess",
+      "title": "Neighbours inside the TESS beam (42.0\")",
+      "status": "pass",
+      "finding": "2 Gaia source(s) within 42.0\"; brightest contributes 0.4% of the target's G flux at 24.2\"",
+      "numbers": {
+        "radius_arcsec": 42.0,
+        "n_inside": 2,
+        "total_flux_ratio_G": 0.0036,
+        "brightest_flux_ratio": 0.0035,
+        "brightest_sep": 24.2229
+      }
+    },
+    {
+      "id": "tess_crowdsap",
+      "title": "TESS aperture contamination (CROWDSAP)",
+      "status": "pass",
+      "finding": "worst sector: 0.98 of aperture flux is from the target",
+      "numbers": {
+        "min_crowdsap": 0.98340213
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "11100 exposures; cuts removed up to 1434 (13%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 11100,
+        "removed_per_band": {
+          "W1": 1434,
+          "W2": 1220
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "warn",
+      "finding": "the only optical data are TESS: one spacecraft, normalised per sector. Nothing here has been seen by a second instrument.",
+      "numbers": {}
+    },
+    {
+      "id": "alias_tess_TESS",
+      "title": "Periodicity vs survey rhythms (TESS TESS)",
+      "status": "pass",
+      "finding": "strongest period 6.03 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 6.033186646592517,
+        "power": 0.025219838096669937
+      }
+    },
+    {
+      "id": "tess_sys_Sd",
+      "title": "TESS dips vs spacecraft events (Sd)",
+      "status": "fail",
+      "finding": "1 dip(s); 1 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 1,
+        "n_suspect": 1
+      }
+    },
+    {
+      "id": "tess_sys_Se",
+      "title": "TESS dips vs spacecraft events (Se)",
+      "status": "fail",
+      "finding": "1 dip(s); 1 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 1,
+        "n_suspect": 1
+      }
+    },
+    {
+      "id": "tess_sys_Sf",
+      "title": "TESS dips vs spacecraft events (Sf)",
+      "status": "fail",
+      "finding": "1 dip(s); 1 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 1,
+        "n_suspect": 1
+      }
+    },
+    {
+      "id": "tess_sys_Sg",
+      "title": "TESS dips vs spacecraft events (Sg)",
+      "status": "fail",
+      "finding": "1 dip(s); 1 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 1,
+        "n_suspect": 1
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 0.91 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 0.9129716
+      }
+    }
+  ]
+}

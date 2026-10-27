@@ -1,0 +1,254 @@
+id: T01
+title: Trial star T01
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: The AAVSO visual series (56,560 points) shows a dominant Lomb-Scargle period of about 427-434
+    d (power 0.68-0.75; V-only series 433.8 d), with a strong harmonic near 218 d.
+  tag: computed
+  calls: []
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:18:06+00:00'
+- id: C2
+  text: probe5
+  tag: computed
+  calls:
+  - K3
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:18:18+00:00'
+- id: C3
+  text: The visual series (AAVSO:Vis., 56,560 points, MJD-span 63,610 d) has a dominant periodogram peak
+    at 427.3 d (power 0.68). V-only (2,080 points) gives 433.8 d (power 0.75) with a second peak at 217.9
+    d (power 0.61), i.e. a harmonic, consistent with a non-sinusoidal long-period pulsator. Spectral-window
+    peaks at 427.3 and 365.2 d flag some of these as partly window-driven.
+  tag: computed
+  calls:
+  - K3
+  - K11
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:18:31+00:00'
+- id: C4
+  text: 'Multi-band optical data move together: B vs V r=0.98 (slope 1.07), R vs V r=0.99 (slope 0.76);
+    the chromatic check gives dB/dV=1.07, dR/dV=0.76, dI/dV=0.58, all in the range of a common brightness
+    change. No sign of a dust-only chromatic signature from these data alone.'
+  tag: computed
+  calls:
+  - K5
+  - K6
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:18:31+00:00'
+- id: C5
+  text: Gaia DR3 gives G=9.24, BP-RP=6.02 (very red), parallax/error 29 (distance 597 pc, abs G 0.36),
+    and classifies the star as a long-period variable (in_vari_long_period_variable true), not an eclipsing
+    binary, RR Lyrae or Cepheid.
+  tag: observed
+  calls:
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:18:32+00:00'
+- id: C6
+  text: TESS (1,656 d span, per-sector normalised) shows only about 0.1 mag total variation (robust std
+    0.006) and no 427-d signal; its strongest peaks are at 7.5 d and 7.3 d with low power (0.07), which
+    the tool does not flag as a known rhythm. Whatever TESS measures, it does not reproduce the multi-magnitude
+    visual variability over its sectors.
+  tag: computed
+  calls:
+  - K8
+  - K9
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:18:33+00:00'
+- id: C7
+  text: The visual series has a 2.2-mag step (fainter) at MJD 51905 (significance 11 sigma), but that
+    step rests on 71 early points before it; the Vis windows 0-30000 d vs 30000-63611 d differ by 0.2
+    mag (9.6 vs 9.8 median, 6 sigma), so the long-term trend is weak and dominated by the early sparse
+    data.
+  tag: computed
+  calls:
+  - K4
+  - K12
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:18:33+00:00'
+- id: C8
+  text: 'The skeptic checks find no blend: 9 Gaia neighbours sit inside the 42 arcsec TESS beam but the
+    brightest contributes 0.2% of G flux, the 2 neighbours inside the 5 arcsec AAVSO beam contribute 0.0%,
+    and TESS CROWDSAP is at least 0.99. RUWE is 1.42 (warn), but this is a photocentre-shift warning,
+    not an unresolved companion conclusion.'
+  tag: computed
+  calls:
+  - K2
+  - K10
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:18:34+00:00'
+- id: C9
+  text: A single fainter excursion of depth 6.3 mag (about 30 d, from the V baseline 8.4) is seen in the
+    V series, with at most 1 independent observer per 1-day bin, which argues for an observer or transcription
+    artifact rather than a real event; it is not a recurring feature in the other series.
+  tag: computed
+  calls:
+  - K7
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:18:35+00:00'
+- id: C10
+  text: 'The Gaia-to-visual step is large: Gaia mean G 9.24 vs visual median 9.4 V, with the 2-98 percentile
+    range of 7.3 to 14.4 mag in V; this range means the star is a high-amplitude long-period variable
+    near its mean brightness at the Gaia epoch.'
+  tag: inferred
+  calls:
+  - K1
+  - K4
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:18:35+00:00'
+hypotheses:
+- id: H1
+  klass: pulsation
+  statement: Intrinsic long-period pulsation, Mira-like, period about 430 d (harmonic at 218 d), 7 mag
+    V amplitude.
+  supports:
+  - C1
+  - C3
+  - C4
+  - C6
+  conflicts: []
+  would_falsify: Falsified if the 430-d period does not recur across independent cycles or the periodic
+    peak is a window artifact.
+  status: live
+  confidence: 0.83
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:18:52+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: Circumstellar dust clumps or a disk warp periodically obscure the star, adding a quasi-periodic
+    dimming that mimics a long-period cycle.
+  supports:
+  - C4
+  - C5
+  conflicts: []
+  would_falsify: Falsified if the dimming is the same shape and phase at all wavelengths with B-V colour
+    not reddening as dust would (dB/dV near ISM value after correction), or if the 430-d period is strictly
+    periodic over decades.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:03+00:00'
+- id: H3
+  klass: dust_formation
+  statement: The star forms its own dust in episodes (AGB-type mass-loss); the declines add to the pulsation
+    and produce colour changes beyond a pure pulsation.
+  supports:
+  - C4
+  - C3
+  conflicts: []
+  would_falsify: Falsified if the colour (B-V, V-R) does not redden at minima in a dust-like way, or if
+    the cycle is strictly periodic with no irregular deep declines.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:04+00:00'
+- id: H4
+  klass: eclipse_companion
+  statement: A companion or its disk eclipses the star on a long period; the 430-d signal is an eclipse
+    rather than pulsation.
+  supports:
+  - C1
+  conflicts: []
+  would_falsify: Falsified if the minima are sharp and the maxima broad in a way an eclipse shape requires,
+    or if the 218-d harmonic is shown to be a pulsation overtone rather than an eclipse second harmonic.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:05+00:00'
+- id: H5
+  klass: artifact_instrumental
+  statement: Spacecraft, detector or pipeline effects produce the variability (for example TESS momentum
+    dumps or sector-edge systematics).
+  supports:
+  - C3
+  - C5
+  conflicts: []
+  would_falsify: Falsified by the 427-d visual periodicity appearing in independent observers and in multiple
+    bands, which instrument artifacts cannot produce.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:08+00:00'
+- id: H6
+  klass: artifact_blend
+  statement: A neighbour star carries the variability; the target only appears to vary because of blending.
+  supports:
+  - C8
+  conflicts: []
+  would_falsify: Falsified because the 9 neighbours inside the TESS beam total 0.2% of target flux and
+    the visual variability is 7 mag, which no neighbour could supply.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:13+00:00'
+- id: H7
+  klass: normal
+  statement: Nothing to explain at the precision of the data; the visual scatter and period are noise
+    or window effects.
+  supports:
+  - C1
+  - C4
+  conflicts: []
+  would_falsify: Falsified by the 7-mag visual amplitude with a 430-d period coherent across 501 observers
+    and four colours.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:15+00:00'
+- id: H8
+  klass: collision_debris
+  statement: Debris from a collision causes IR excess first, optical extinction later.
+  supports:
+  - C1
+  conflicts: []
+  would_falsify: Falsified by the strictly periodic optical cycle, which a single collision event does
+    not produce.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:18+00:00'
+- id: H9
+  klass: eruptive
+  statement: Outbursts or flares produce the brightening episodes.
+  supports:
+  - C1
+  conflicts: []
+  would_falsify: Falsified by the 430-d periodic structure and the 218-d harmonic, which outbursts do
+    not produce.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:20+00:00'
+- id: H10
+  klass: rotation_spots
+  statement: Starspots carried around by rotation produce the variation.
+  supports:
+  - C1
+  conflicts: []
+  would_falsify: Falsified by 7 mag amplitude, far beyond starspot amplitudes.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:23+00:00'
+- id: H11
+  klass: yso_dipper
+  statement: Variable extinction from an inner disk in a young star.
+  supports:
+  - C6
+  conflicts: []
+  would_falsify: Falsified by the Gaia LPV classification and the periodic 430-d structure.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:19:26+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

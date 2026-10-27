@@ -1,0 +1,248 @@
+{
+  "generated_at": "2026-10-27T06:04:23+00:00",
+  "oddsky_version": "0.1.0",
+  "summary": "4 fail, 5 warn, 5 pass, 1 skipped",
+  "counts": {
+    "fail": 4,
+    "warn": 5,
+    "pass": 5,
+    "skip": 1
+  },
+  "checks": [
+    {
+      "id": "blend_tess",
+      "title": "Neighbours inside the TESS beam (42.0\")",
+      "status": "pass",
+      "finding": "9 Gaia source(s) within 42.0\"; brightest contributes 0.2% of the target's G flux at 14.6\"",
+      "numbers": {
+        "radius_arcsec": 42.0,
+        "n_inside": 9,
+        "total_flux_ratio_G": 0.0019,
+        "brightest_flux_ratio": 0.0017,
+        "brightest_sep": 14.5515
+      }
+    },
+    {
+      "id": "blend_aavso",
+      "title": "Neighbours inside the AAVSO beam (5.0\")",
+      "status": "pass",
+      "finding": "2 Gaia source(s) within 5.0\"; brightest contributes 0.0% of the target's G flux at 4.6\"",
+      "numbers": {
+        "radius_arcsec": 5.0,
+        "n_inside": 2,
+        "total_flux_ratio_G": 0.0,
+        "brightest_flux_ratio": 0.0,
+        "brightest_sep": 4.6026
+      }
+    },
+    {
+      "id": "tess_crowdsap",
+      "title": "TESS aperture contamination (CROWDSAP)",
+      "status": "pass",
+      "finding": "worst sector: 0.99 of aperture flux is from the target",
+      "numbers": {
+        "min_crowdsap": 0.99430293
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "pass",
+      "finding": "optical data from 27 independent source(s): AAVSO observer MVD (740), AAVSO observer SGEA (496), AAVSO observer TRE (436), AAVSO observer MEV (385), AAVSO observer JENJ (132), AAVSO observer LCLA (118), AAVSO observer AAM (107), AAVSO observer KNAA (69), AAVSO observer SRIC (64), AAVSO observer AMIF (53), AAVSO observer MJOE (50), AAVSO observer DFEA (50), AAVSO observer TYGA (47), AAVSO observer GTZ (43), AAVSO observer LOT (42), AAVSO observer GSEB (42), AAVSO observer FGP (39), AAVSO observer WN (37), AAVSO observer TUB (37), AAVSO observer PJEE (35), AAVSO observer BCP (35), AAVSO observer AAUA (34), AAVSO observer LMJ (27), AAVSO observer FGIA (26), AAVSO observer FRL (20), AAVSO observer MZK (20), TESS (146120)",
+      "numbers": {
+        "sources": {
+          "AAVSO observer MVD": 740,
+          "AAVSO observer SGEA": 496,
+          "AAVSO observer TRE": 436,
+          "AAVSO observer MEV": 385,
+          "AAVSO observer JENJ": 132,
+          "AAVSO observer LCLA": 118,
+          "AAVSO observer AAM": 107,
+          "AAVSO observer KNAA": 69,
+          "AAVSO observer SRIC": 64,
+          "AAVSO observer AMIF": 53,
+          "AAVSO observer MJOE": 50,
+          "AAVSO observer DFEA": 50,
+          "AAVSO observer TYGA": 47,
+          "AAVSO observer GTZ": 43,
+          "AAVSO observer LOT": 42,
+          "AAVSO observer GSEB": 42,
+          "AAVSO observer FGP": 39,
+          "AAVSO observer WN": 37,
+          "AAVSO observer TUB": 37,
+          "AAVSO observer PJEE": 35,
+          "AAVSO observer BCP": 35,
+          "AAVSO observer AAUA": 34,
+          "AAVSO observer LMJ": 27,
+          "AAVSO observer FGIA": 26,
+          "AAVSO observer FRL": 20,
+          "AAVSO observer MZK": 20,
+          "AAVSO observer AJOC": 17,
+          "AAVSO observer BVE": 15,
+          "AAVSO observer FPAA": 14,
+          "AAVSO observer CUU": 13,
+          "AAVSO observer RJUC": 12,
+          "AAVSO observer BOA": 11,
+          "AAVSO observer GRL": 11,
+          "AAVSO observer TNIA": 10,
+          "AAVSO observer CPE": 10,
+          "AAVSO observer MIQ": 9,
+          "AAVSO observer HMIA": 9,
+          "AAVSO observer LND": 8,
+          "AAVSO observer DJX": 8,
+          "AAVSO observer CK": 7,
+          "AAVSO observer KBA": 7,
+          "AAVSO observer DDMB": 6,
+          "AAVSO observer UIS01": 6,
+          "AAVSO observer RTH": 5,
+          "AAVSO observer PWD": 5,
+          "AAVSO observer MBE": 5,
+          "AAVSO observer HUZ": 5,
+          "AAVSO observer WIV": 4,
+          "AAVSO observer SKRC": 4,
+          "AAVSO observer EERB": 4,
+          "AAVSO observer YPFA": 3,
+          "AAVSO observer RROA": 3,
+          "AAVSO observer ARJ": 3,
+          "AAVSO observer NCH": 3,
+          "AAVSO observer BQC": 3,
+          "AAVSO observer SIVB": 2,
+          "AAVSO observer KUC": 2,
+          "AAVSO observer CBLA": 2,
+          "AAVSO observer MQE": 2,
+          "AAVSO observer HMH": 2,
+          "AAVSO observer HDR": 2,
+          "AAVSO observer RJEA": 2,
+          "AAVSO observer KIR": 2,
+          "AAVSO observer VJOF": 1,
+          "AAVSO observer ZIN": 1,
+          "AAVSO observer MTIC": 1,
+          "AAVSO observer CSZ": 1,
+          "AAVSO observer HMFA": 1,
+          "AAVSO observer DPBA": 1,
+          "AAVSO observer GBEE": 1,
+          "AAVSO observer RSE": 1,
+          "AAVSO observer GFRB": 1,
+          "AAVSO observer CXR": 1,
+          "AAVSO observer HBB": 1,
+          "AAVSO observer FEO": 1,
+          "AAVSO observer OZLA": 1,
+          "AAVSO observer JAZ": 1,
+          "AAVSO observer PHEA": 1,
+          "AAVSO observer SYRA": 1,
+          "AAVSO observer HPIA": 1,
+          "AAVSO observer CMJA": 1,
+          "AAVSO observer SHS": 1,
+          "TESS": 146120
+        }
+      }
+    },
+    {
+      "id": "baseline_aavso",
+      "title": "Does AAVSO start at the star's normal brightness?",
+      "status": "warn",
+      "finding": "first 60 days of V: median 7.25; Gaia DR3 (2014-17 mean) implies V = 13.88; difference -6.64 mag. The series begins mid-event: its own median is not the star's normal state.",
+      "numbers": {
+        "v_first": 7.245,
+        "v_gaia": 13.882,
+        "delta": -6.637
+      }
+    },
+    {
+      "id": "chromatic",
+      "title": "Multi-band consistency of the main event",
+      "status": "skip",
+      "finding": "no significant V-band event",
+      "numbers": {}
+    },
+    {
+      "id": "alias_aavso_V",
+      "title": "Periodicity vs survey rhythms (AAVSO V)",
+      "status": "warn",
+      "finding": "strongest period 433.98 d coincides with: matches spectral-window peak at 429.07 d",
+      "numbers": {
+        "top_period_days": 433.9829168241859,
+        "power": 0.7491495220187364
+      }
+    },
+    {
+      "id": "alias_tess_TESS",
+      "title": "Periodicity vs survey rhythms (TESS TESS)",
+      "status": "pass",
+      "finding": "strongest period 7.50 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 7.500457139116744,
+        "power": 0.06385607439984392
+      }
+    },
+    {
+      "id": "tess_sys_S40",
+      "title": "TESS dips vs spacecraft events (S40)",
+      "status": "fail",
+      "finding": "2 dip(s); 2 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 2,
+        "n_suspect": 2
+      }
+    },
+    {
+      "id": "tess_sys_S41",
+      "title": "TESS dips vs spacecraft events (S41)",
+      "status": "fail",
+      "finding": "1 dip(s); 1 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 1,
+        "n_suspect": 1
+      }
+    },
+    {
+      "id": "tess_sys_S54",
+      "title": "TESS dips vs spacecraft events (S54)",
+      "status": "warn",
+      "finding": "3 dip(s); 1 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 3,
+        "n_suspect": 1
+      }
+    },
+    {
+      "id": "tess_sys_S55",
+      "title": "TESS dips vs spacecraft events (S55)",
+      "status": "fail",
+      "finding": "1 dip(s); 1 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 1,
+        "n_suspect": 1
+      }
+    },
+    {
+      "id": "tess_sys_S56",
+      "title": "TESS dips vs spacecraft events (S56)",
+      "status": "warn",
+      "finding": "6 dip(s); 4 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 6,
+        "n_suspect": 4
+      }
+    },
+    {
+      "id": "tess_sys_S74",
+      "title": "TESS dips vs spacecraft events (S74)",
+      "status": "fail",
+      "finding": "1 dip(s); 1 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 1,
+        "n_suspect": 1
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "warn",
+      "finding": "RUWE = 1.42 > 1.4: likely an unresolved companion, or a photocentre shifted by variability",
+      "numbers": {
+        "ruwe": 1.4195435
+      }
+    }
+  ]
+}

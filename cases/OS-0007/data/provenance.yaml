@@ -1,0 +1,100 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  query:
+    adql: SELECT source_id, ra, dec, parallax, parallax_over_error, pmra, pmdec, ruwe, phot_g_mean_mag,
+      phot_bp_mean_mag, phot_rp_mean_mag, bp_rp, phot_variable_flag, teff_gspphot, distance_gspphot, non_single_star,
+      DISTANCE(POINT(68.73091745933,24.481398229049997), POINT(ra,dec))*3600 AS sep_arcsec FROM gaiadr3.gaia_source
+      WHERE 1=CONTAINS(POINT(ra,dec), CIRCLE(68.73091745933,24.481398229049997,0.008333333333333333))
+      ORDER BY sep_arcsec
+  retrieved_at: '2026-10-27T06:06:41+00:00'
+  rows_raw: 4
+  rows_kept: 4
+  cuts: []
+  notes: []
+  status: ok
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  query:
+    catalog: neowiser_p1bs_psd
+    spatial: cone
+    radius: 3.0
+    radunits: arcsec
+    objstr: 68.73091745933 24.481398229049997
+    outfmt: 1
+    selcols: mjd,w1mpro,w1sigmpro,w2mpro,w2sigmpro,qual_frame,qi_fact,saa_sep,moon_masked,cc_flags,ph_qual,w1sat,w2sat,nb,na,w1snr,w2snr,w1rchi2,w2rchi2
+  retrieved_at: '2026-10-27T06:06:51+00:00'
+  rows_raw: 270
+  rows_kept: 42
+  cuts:
+  - 'W1: qual_frame > 0 removed 11'
+  - 'W1: moon_masked == ''00'' removed 35'
+  - 'W1: cc_flags[0] == ''0'' removed 1'
+  - 'W1: w1rchi2 < 5x source median removed 30'
+  - 'W2: qual_frame > 0 removed 11'
+  - 'W2: moon_masked == ''00'' removed 35'
+  - 'W2: cc_flags[1] == ''0'' removed 1'
+  - 'W2: w2rchi2 < 5x source median removed 13'
+  notes:
+  - rows_kept counts 6-month visits (W1 and W2), not exposures
+  status: ok
+aavso:
+  archive: AAVSO International Database (VSX api.delim)
+  query:
+    view: api.delim
+    ident: AA Tau
+    delimiter: '|'
+  retrieved_at: '2026-10-27T06:06:52+00:00'
+  rows_raw: 2027
+  rows_kept: 1985
+  cuts: []
+  notes:
+  - 'observers (good points): MJB:720, HMB:354, DUBF:245, MZK:141, HMH:101, ROE:86, VMT:83, MGW:58, CIVA:45,
+    WRCA:41, DKS:36, KTHC:16'
+  - upper limits, discrepant (val=T) and non-standard bands are kept but flagged; visual estimates form
+    their own series 'Vis.'
+  - matched AAVSO name 'AA Tau'
+  status: ok
+ztf:
+  archive: IRSA ZTF light curve service
+  query:
+    POS: CIRCLE 68.73091745933 24.481398229049997 0.000556
+    BANDNAME: g,r,i
+    FORMAT: csv
+    BAD_CATFLAGS_MASK: '32768'
+  retrieved_at: '2026-10-27T06:06:52+00:00'
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  notes:
+  - no ZTF source (target may be brighter than ZTF saturation, ~12.5 mag)
+  status: empty
+asassn:
+  archive: ASAS-SN Sky Patrol (pyasassn)
+  query:
+    ra: 68.73091745933
+    dec: 24.481398229049997
+    radius_arcsec: 5.0
+  retrieved_at: '2026-10-27T06:07:10+00:00'
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  notes:
+  - 'Sky Patrol light-curve service failed: ZeroDivisionError: integer modulo by zero'
+  status: unavailable
+tess:
+  archive: MAST TESS light curves via lightkurve
+  query:
+    ra: 68.73091745933
+    dec: 24.481398229049997
+    authors:
+    - SPOC
+    - TESS-SPOC
+    - QLP
+  retrieved_at: '2026-10-27T06:07:13+00:00'
+  rows_raw: 214116
+  rows_kept: 12748
+  cuts:
+  - binned to 10-min medians per sector (good and flagged cadences kept apart)
+  notes:
+  - 'TESS magnitudes are relative (delta-mag vs each sector''s median); sectors: 43, 44, 70, 71, 1751'
+  status: ok

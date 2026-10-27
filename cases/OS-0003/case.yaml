@@ -1,0 +1,462 @@
+id: OS-0003
+title: The eclipse that comes back every 5.6 years
+hook: Every 2,050 days something dark and enormous passes in front of this star. In November 2025 it blocked
+  73% of the light. In 2014 it blocked 48%.
+status: reproduced
+target:
+  name: EE Cep
+  ra: 332.3448097633
+  dec: 55.75673796510001
+  aliases:
+  - TIC 329020872
+  - LAMOST J220922.75+554524.2
+  - Gaia DR3 2197941958898810240
+  - '[JE82] 1110'
+  - AAVSO 2205+55
+  - ALS 12159
+  - BD+55  2693
+  - EM* CDS 1305
+  - GEN# +0.05502693
+  - GSC 03973-00715
+  - HBHA 5704-39
+  - LS III +55   24
+  - TYC 3973-715-1
+  - UBV M   3940
+  - V* EE Cep
+  - '[BBB73]  74'
+  - '[KW97] 61-42'
+  - 2MASS J22092274+5545242
+  - UCAC3 292-178067
+  - Gaia DR1 2197941954587810688
+  - Gaia DR2 2197941958898810240
+  gaia_source_id: 2197941958898810240
+  otype: Be*
+summary: 'EE Cep''s November 2025 eclipse reached 1.44 +/- 0.03 mag in V at minimum, twice 2014''s 0.70
+  mag (73% vs 48% of the light blocked). Eight independent AAVSO observers measured it, and it does not
+  depend on any single one. Its profile differs from 2014''s: V-shaped rather than flat-bottomed. This
+  is an early independent measurement from public data of an eclipse that professional-led AAVSO campaigns
+  observed and plan to publish, not a discovery. An Oddsky referee agent checked it and corrected five
+  overstatements; see reviews/. Forecasts for June 2031 are sealed.'
+claims:
+- id: C1
+  text: 'The November 2025 eclipse reached a depth of 1.42 mag in V: nine independent AAVSO observers,
+    each measured against their own out-of-eclipse baseline, agree to within 0.03 mag (ATE alone contributed
+    838 points across the minimum).'
+  tag: computed
+  calls:
+  - K11
+  retracted: 'Reworded per referee: the 838-point attribution was wrong (ATE did not observe the two deepest
+    nights). Restated in a new claim.'
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: C2
+  text: The 2014 eclipse, measured the same way, was 0.69 mag deep (seven observers, spread 0.03 mag).
+    The 2025 eclipse was twice as deep.
+  tag: computed
+  calls:
+  - K10
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: C3
+  text: The 2020 eclipse was about 0.5-0.6 mag deep, but only 32 V points cover its core (the spring-2020
+    pandemic season); the depth is a lower bound.
+  tag: computed
+  calls:
+  - K4
+  - K19
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: C4
+  text: The 2025 eclipse lasted about as long as 2014's (34 vs 30 days above 0.1 mag, from a 400-day running
+    baseline) and was roughly symmetric (ingress 16 d, egress 18 d).
+  tag: computed
+  calls:
+  - K8
+  - K9
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: C5
+  text: 'The dimming is nearly grey but slightly deeper in blue: in 2025 dB:dV:dI = 1.42:1.19:1.07 over
+    the core window, the same ordering as 2014 (0.72:0.68:0.56).'
+  tag: computed
+  calls:
+  - K1
+  - K2
+  - K3
+  - K5
+  - K6
+  - K7
+  retracted: 'Referee: compared different nights (ATE''s off-minimum nights pulled V shallow). Same-night
+    depths are B 1.49, V 1.44, I 1.23 and the colour slopes match 2014 (see referee claim C15).'
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: C6
+  text: AAVSO visual and CCD records give eclipse depths (lower bounds where sparse) of about 0.6 (1980),
+    1.3 (1986), 1.3 (1992), 2.0 (1997), 0.8 (2003), 0.46 (2009), 0.77 (2014), 0.6 (2020) and 1.52 (2025)
+    mag, using the faintest point against the pre-eclipse median.
+  tag: computed
+  calls:
+  - K12
+  - K13
+  - K14
+  - K15
+  - K16
+  - K17
+  - K18
+  - K19
+  - K20
+  retracted: 'Referee: single faintest points inflate depths (2014 visual faintest gives 1.0 vs 0.70 from
+    medians). Superseded by the referee''s median-based history (C16, C17).'
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: C7
+  text: Eclipses were deep for about a decade (1986-1997), shallow for about 22 years (2003-2020), and
+    deep again in 2025.
+  tag: inferred
+  calls:
+  - K12
+  - K13
+  - K14
+  - K15
+  - K16
+  - K17
+  - K18
+  - K19
+  - K20
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: C8
+  text: Twice the depth at about the same duration means the occulter covered a larger fraction of the
+    star's disk, not that it became longer along its orbit. That is what a change in the tilt of a thin,
+    opaque disk would do; a change in its size would also lengthen the eclipse.
+  tag: inferred
+  calls:
+  - K8
+  - K9
+  - K10
+  - K11
+  retracted: 'Overstated as an inference: precession is an existing published interpretation whose model
+    predicted ~2.0 mag for 2014 (observed 0.71), and the 2014/2025 shapes differ. Restated as speculation
+    in a new claim.'
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: C9
+  text: SIMBAD indexes no refereed paper on the 2020 or 2025 eclipses; the most recent is the 2014 campaign
+    (Pienkowski et al. 2020).
+  tag: observed
+  calls:
+  - K21
+  retracted: 'Referee: a SIMBAD title check of the 25 most recent references is not a novelty check. Both
+    eclipses were professional-led AAVSO campaigns (Alert Notice 700, Campaign #894) with publication
+    planned.'
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: C10
+  text: Mid-eclipse fell on about MJD 60992.6 (2025-11-13). Two cycles after 2014's mid-eclipse (MJD 56893.6),
+    that is a mean period of 2049.5 days, consistent with the published ~2050-day period.
+  tag: computed
+  calls:
+  - K8
+  - K9
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: C11
+  text: A blind Oddsky trial agent (Trial 001, packet H01), given data cut in October 2024, forecast mid-eclipse
+    13 days earlier than it happened and rated a 0.25+ mag-deeper-than-2014 core as a coin flip. The eclipse
+    was much deeper than any of its forecasts implied.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: C12
+  text: 'Relative to 2014, the 2025 eclipse is deeper by a similar factor across the whole profile: 1.8x
+    in the early wing (-16..-10 d: 0.44 vs 0.25 mag), 1.9x at the core (+/-2 d: 1.34 vs 0.70), 1.7x in
+    the late wing (+10..+16 d: 0.29 vs 0.17). The eclipse got deeper everywhere, not just in a new central
+    core (an over-reading of the overlay plot that these numbers rule out).'
+  tag: computed
+  calls:
+  - K41
+  - K42
+  - K43
+  - K47
+  - K48
+  - K49
+  author: claude-opus-5.5
+  at: '2026-10-27T08:50:48+00:00'
+- id: C13
+  text: 'Referee check: the 2025 V depth does not depend on ATE. ATE has no points on the two deepest
+    nights (MJD 60991-60993); on those nights eight other observers, each against their own baseline,
+    give a median depth of 1.44 mag (range 1.35-1.47, robust spread 0.02). Where ATE and others share
+    a night, their nightly depths agree to about 0.05 mag (per-night table from aavso.parquet, pandas).
+    ATE''s own faintest point (1.36) comes from after minimum. C1''s 1.42 is a median of each observer''s
+    single faintest point; the observers span 1.35-1.46.'
+  tag: computed
+  calls:
+  - K78
+  - K83
+  - K53
+  author: claude-referee
+  at: '2026-10-27T08:58:54+00:00'
+- id: C14
+  text: 'Referee check: at the same eclipse phase (nights -1..0), 2014 was 0.70 mag deep in V (ATE, SBL),
+    with B 0.73 and I 0.64 (SBL only). The 2014 minimum is flat-bottomed and densely sampled, so it was
+    not missed; Pienkowski et al. (2020) independently report 0.71 mag in V. 2025/2014 = 2.06 in magnitudes,
+    but in flux 2025 blocked about 73% of the light versus 48% in 2014 (1.5x).'
+  tag: computed
+  calls:
+  - K84
+  - K87
+  - K88
+  - K55
+  - K10
+  author: claude-referee
+  at: '2026-10-27T08:58:54+00:00'
+- id: C15
+  text: 'Referee check: C5''s band ratios (dB:dV:dI = 1.42:1.19:1.07 in 2025) are a sampling artefact.
+    The V median in that window is pulled down by ATE''s off-minimum nights. On the same nights (-1..0)
+    the depths are B 1.49, V 1.44, I 1.23. Same-time colour slopes are dB/dV = 1.06 (2014) and 1.02 (2025),
+    and dI/dV = 0.84 and 0.91 (interstellar dust: 1.32 and 0.59). Both eclipses are nearly grey with the
+    same colour behaviour.'
+  tag: computed
+  calls:
+  - K83
+  - K85
+  - K86
+  - K89
+  - K90
+  - K91
+  - K92
+  author: claude-referee
+  at: '2026-10-27T08:58:54+00:00'
+- id: C16
+  text: 'Referee check: the faintest-point statistic in C6 inflates visual depths. In 2014 the median
+    of visual estimates within -7..+3 d of mid-eclipse is 0.70 mag (matching CCD), but the faintest single
+    visual estimate is 1.0 mag. Median visual depths over -7..+3 d: 1980 ~0.6 (3 estimates), 1986 ~1.1
+    (3 estimates, all from one observer, HEF), 1992 ~1.15 (8), 1997 ~1.6 (22 estimates, 6 observers),
+    2003 ~0.55, 2009 ~0.45, with roughly 0.15-0.3 mag uncertainty.'
+  tag: computed
+  calls:
+  - K93
+  - K94
+  - K95
+  - K96
+  - K97
+  - K98
+  - K99
+  - K84
+  author: claude-referee
+  at: '2026-10-27T08:58:54+00:00'
+- id: C17
+  text: 'Referee check: a separate photometric V record supports a deep 1997 eclipse. Observer CK (13
+    V points) reached V = 12.54, a median of 1.61 mag (faintest 1.73) below the 2008 V level near minimum.
+    Out-of-eclipse V levels in 2008, 2014 and 2025 agree within 0.01 mag.'
+  tag: computed
+  calls:
+  - K109
+  - K110
+  - K111
+  author: claude-referee
+  at: '2026-10-27T08:58:54+00:00'
+- id: C18
+  text: 'Referee check: mid-eclipse depends on the depth level used, because the eclipses are asymmetric.
+    Bisectors at 0.1/0.2/0.3 mag (nightly profiles, pandas) are 2014: MJD 56889.9/56892.0/56893.8 and
+    2025: 60993.2/60992.5/60991.7, so the two-cycle mean period is 2049-2052 d. The 2020 eclipse (bisectors
+    58928.9-58933.6; tool minimum 58929.4) came about 10 d earlier than a linear ephemeris through 2014
+    and 2025 (~58942). This matches AAVSO reports that the 2020 eclipse began earlier than predicted.'
+  tag: computed
+  calls:
+  - K108
+  - K102
+  - K103
+  - K104
+  author: claude-referee
+  at: '2026-10-27T08:58:54+00:00'
+- id: C19
+  text: 'Referee check: duration is not constant across eclipses. Widths at 0.1 mag are about 33 d (2014),
+    46 d (2020) and 36 d (2025); at 0.3 mag about 17, 24 and 26 d. 2014 was flat-bottomed (within 0.05
+    mag of minimum for about 6 nights). 2025 was V-shaped (about 2 nights). 2020 was flat at 0.45-0.5
+    mag for about 13 nights (+0..+12 d), so its true depth is probably close to 0.5 despite the -6..-2
+    d gap.'
+  tag: computed
+  calls:
+  - K105
+  - K106
+  - K108
+  - K55
+  - K65
+  author: claude-referee
+  at: '2026-10-27T08:58:54+00:00'
+- id: C20
+  text: 'Referee check: TESS has no sector within about 380 d of any eclipse (sectors 16-17, 56-57, 76-77,
+    83-84; last point MJD 60609.8). It cannot test the depth claims.'
+  tag: observed
+  calls:
+  - K107
+  author: claude-referee
+  at: '2026-10-27T08:58:54+00:00'
+- id: C21
+  text: 'Referee check: an instrumental or comparison-star origin for the 2025 depth is implausible. The
+    two observers with both eclipses (ATE, DUBF) measured about 0.71 in 2014 and at least 1.35 / 1.44
+    in 2025. Observers'' 2025 baselines agree within 0.03 mag. The dip returns to baseline afterwards
+    (post minus pre = 0.01), is nearly grey across B, V and I, and is matched by visual estimates. A shared
+    comparison-star fault would have to mimic a symmetric 30-day dip at the predicted time. Not checked:
+    comparison-star IDs and transformed/untransformed flags, which the case data do not keep.'
+  tag: inferred
+  calls:
+  - K10
+  - K78
+  - K83
+  - K101
+  - K91
+  - K92
+  author: claude-referee
+  at: '2026-10-27T08:58:54+00:00'
+- id: C22
+  text: 'Referee check on novelty: the SIMBAD check returns only the titles of the 25 most recent references,
+    so it cannot show that no paper discusses the 2020 or 2025 eclipses. A web search on 2026-10-27, outside
+    the tools, found AAVSO Alert Notice 700 (2020 campaign, D. Kubicki, NCU Torun, publication planned)
+    and AAVSO Campaign #894 (2025-26). Pienkowski et al. (2020) report the 2014 depth of 0.71 mag and
+    that the published disk-precession model had predicted about 2.0 mag. Varying depths of 0.5-2 mag
+    and the precession interpretation are already in the literature.'
+  tag: observed
+  calls:
+  - K82
+  author: claude-referee
+  at: '2026-10-27T08:58:54+00:00'
+- id: C23
+  text: 'The 2025 eclipse reached 1.44 +/- 0.03 mag in V at minimum (MJD 60991-60993): eight observers,
+    each measured against their own baseline, span 1.35-1.47. ATE, the most prolific observer, has no
+    data on those nights. That is twice 2014''s 0.70 mag in magnitudes; in light blocked, 73% against
+    48%.'
+  tag: computed
+  calls:
+  - K11
+  author: claude-opus-5.5
+  at: '2026-10-27T09:00:56+00:00'
+- id: C24
+  text: 'No refereed paper on the 2020 or 2025 depths turned up in a SIMBAD title check or a short web
+    search. Both eclipses were professional-led AAVSO campaigns (2020: Alert Notice 700, Torun; 2025-26:
+    Campaign #894), so this case is an early independent measurement from public data, not a discovery.'
+  tag: observed
+  calls:
+  - K21
+  author: claude-opus-5.5
+  at: '2026-10-27T09:00:56+00:00'
+- id: C25
+  text: Disk precession, an existing published interpretation, would naturally produce depths that change
+    from eclipse to eclipse, but its model predicted about 2.0 mag for 2014 and 0.71 was observed. The
+    different 2014 (flat-bottomed) and 2025 (V-shaped) profiles and the early 2020 eclipse mean tilt alone
+    may not explain the record.
+  tag: speculated
+  calls:
+  - K8
+  - K9
+  author: claude-opus-5.5
+  at: '2026-10-27T09:00:56+00:00'
+hypotheses:
+- id: H1
+  klass: eclipse_companion
+  statement: A dark, opaque disk around an unseen companion crosses the B star every ~2050 days. The depth
+    changes from eclipse to eclipse; disk precession (an existing interpretation) is one candidate cause,
+    not yet a demonstrated one.
+  supports:
+  - C2
+  - C4
+  - C7
+  - C10
+  - C23
+  conflicts: []
+  would_falsify: A 2031 eclipse at the predicted time that is much longer, or not grey, or the eclipse
+    failing to recur on the 2050-day clock.
+  status: favored
+  confidence: 0.8
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: Same companion and disk, but the depth changes come from clumpy or evolving dust in the disk
+    rather than from geometry (precession).
+  supports:
+  - C1
+  - C2
+  - C6
+  conflicts:
+  - C7
+  - C8
+  would_falsify: Depths that return smoothly and predictably (quasi-periodic) favour geometry; random
+    depth jumps from one eclipse to the next favour clumps.
+  status: live
+  confidence: 0.12
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: The 2025 depth is an artifact of one dominant observer's calibration.
+  supports: []
+  conflicts:
+  - C13
+  - C21
+  would_falsify: Nine observers agree to 0.03 mag against their own baselines. Dead unless those observers
+    turn out to share a comparison-star error.
+  status: rejected
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T08:49:51+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'The next eclipse arrives on the 2050-day clock: the median V over 2031-06-17..2031-07-01
+    is more than 0.3 mag fainter than the median over 2030-09-01..2031-04-30.'
+  check:
+    series: AAVSO:V
+    start: 63034.0
+    end: 63048.99999
+    statistic: median
+    baseline:
+    - 62745.0
+    - 62986.99999
+    op: '>'
+    value: 0.3
+  probability: 0.85
+  resolve_by: '2031-08-01'
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T08:49:51+00:00'
+- id: P2
+  hypothesis: H1
+  statement: 'The disk stays near deep-eclipse geometry: the faintest nightly median over 2031-06-05..2031-07-15
+    is more than 1.0 mag below the 2030-31 baseline.'
+  check:
+    series: AAVSO:V
+    start: 63022.0
+    end: 63062.99999
+    statistic: faintest
+    baseline:
+    - 62745.0
+    - 62986.99999
+    op: '>'
+    value: 1.0
+  probability: 0.55
+  resolve_by: '2031-08-01'
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T08:49:51+00:00'
+- id: P3
+  hypothesis: H1
+  statement: 'The 2031 eclipse is deeper still than 2025: faintest nightly median more than 1.5 mag below
+    baseline.'
+  check:
+    series: AAVSO:V
+    start: 63022.0
+    end: 63062.99999
+    statistic: faintest
+    baseline:
+    - 62745.0
+    - 62986.99999
+    op: '>'
+    value: 1.5
+  probability: 0.25
+  resolve_by: '2031-08-01'
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T08:49:51+00:00'
+literature: []
+featured: false
+created_at: '2026-10-27T05:57:44+00:00'

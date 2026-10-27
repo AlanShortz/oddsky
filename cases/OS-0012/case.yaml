@@ -1,0 +1,339 @@
+id: OS-0012
+title: The invisible companion that wasn't
+hook: We thought something the size of the Sun was blocking this star every 2.38 days without giving off
+  any light. Our own referee agent found the mistake in 30 minutes.
+status: closed
+target:
+  name: Gaia DR3 4482344869315388928
+  ra: 271.37757
+  dec: 9.46541
+  aliases: []
+  gaia_source_id: 4482344869315388928
+summary: 'An uncatalogued eclipsing binary of two K dwarfs, P = 11.900804 d, e about 0.15: primary eclipse
+  0.9 mag, secondary 0.4 mag at phase 0.404. We first folded it at P/5 = 2.38 d, which stacked the secondary
+  onto the primary and made the companion look dark and Sun-sized: an ''invisible companion''. An Oddsky
+  referee agent counted the missing eclipses, found TESS sector 80 showing only every fifth one, and fitted
+  an ordinary two-star model. The candidate was never announced. The tool that fooled us now runs a missing-eclipse
+  test (see C19). New, small, and true: worth a routine VSX submission.'
+claims:
+- id: C1
+  text: 'Found in Oddsky hunt H-0001: Gaia (2014-2017) caught this K dwarf 0.87-0.89 mag faint on two
+    transits. VSX lists it only as a Gaia ''VAR'' with a 0.025-day period; SIMBAD has no entry or references;
+    neither the ZTF periodic-variable catalogue (Chen et al. 2020, 781k stars) nor the 2026 ZTF variable-candidate
+    list contains it.'
+  tag: observed
+  calls:
+  - K1
+  - K8
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: C2
+  text: 'Every point more than 0.3 mag faint, from Gaia (2014-17) and ZTF (2018-25), falls at one phase
+    of a 2.3802-day period: an eclipse recurring for 11 years. Refined ephemeris P = 2.380206 d, T0 =
+    MJD 57099.3195.'
+  tag: computed
+  calls:
+  - K2
+  retracted: Wrong period. The deep points line up at 2.38 d only because the true period is five times
+    longer (11.9008 d) and the secondary eclipse sits at phase 0.404, about 2/5. Folding at P/5 stacks
+    the two eclipses (referee, C11-C18).
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: C3
+  text: 'The primary eclipse is about 0.92 mag deep in ZTF r and 1.03 in g (deepest points), and V-shaped,
+    lasting about 5 hours. On the two Gaia transits in eclipse, BP drops 0.95, G 0.88 and RP 0.83 mag:
+    slightly deeper in blue.'
+  tag: computed
+  calls:
+  - K9
+  - K10
+  - K11
+  - K12
+  - K13
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: C4
+  text: 'There is no secondary eclipse: at phase 0.5 the ZTF r change is +0.004 +/- 0.003 mag (g: 0.000
+    +/- 0.005), and no 0.02-phase bin away from the primary is fainter than +0.008 mag, so an eccentric
+    orbit isn''t hiding one either.'
+  tag: computed
+  calls:
+  - K9
+  - K10
+  retracted: 'The ''missing'' secondary is the 2.38-day fold''s artefact: at P = 11.9008 d the secondary
+    is 0.35-0.42 mag in r (referee).'
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: C5
+  text: 'NEOWISE single exposures show the primary eclipse (W1 down by up to 0.50 mag, W2 by up to 0.52)
+    and no secondary eclipse: W1 -0.004 +/- 0.008, W2 -0.017 +/- 0.018 mag at phase 0.5.'
+  tag: computed
+  calls:
+  - K14
+  - K15
+  retracted: 'As C4: at the true period NEOWISE shows a 0.36-0.43 mag secondary in W1 and W2 (referee).'
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: C6
+  text: 'Control: the same tools on OS-0011, an ordinary Algol-type binary, detect its cool companion
+    at secondary eclipse: 0.054 mag in r and 0.175 mag in W1. The method can see a companion; OS-0012
+    shows none.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: C7
+  text: 'Gaia DR3 describes the host as a single-looking K dwarf: Teff 4980 K, log g 4.35, R about 1.07
+    Rsun, L 0.65 Lsun, 506-521 pc (parallax/error 105), RUWE 1.05, no image doubling, no Gaia neighbour
+    within 7 arcsec brighter than 6.6 mag fainter.'
+  tag: observed
+  calls:
+  - K16
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: C8
+  text: A 5-hour eclipse on a 2.38-day orbit around a ~0.85 Msun star implies (for a central transit)
+    an occulter of radius ~0.9 Rsun. Blocking ~58% of the light also requires a radius at least ~0.8 of
+    the star's. Yet the occulter contributes less than ~0.5% of the optical light and less than ~2% at
+    3.4 microns (3 sigma). A star of that size would be nearly as bright as the host.
+  tag: inferred
+  calls:
+  - K9
+  - K14
+  retracted: Rests on the wrong period. Two K dwarfs (R2/R1 = 0.87) fit all the data with reduced chi2
+    1.16 (referee C14).
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: C9
+  text: The infrared eclipse may be shallower than the optical one (W1 up to 0.50 against r up to 0.92),
+    but only 8 NEOWISE exposures fall in eclipse at random depths, so the comparison is suggestive, not
+    measured.
+  tag: inferred
+  calls:
+  - K9
+  - K14
+  retracted: Rests on the wrong period.
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: C10
+  text: 'Candidate: an opaque disk or ring system around a low-mass, faint companion (brown dwarf or late-M
+    dwarf). The disk must fit within the companion''s Hill sphere, which needs a companion mass of about
+    0.07 Msun or more.'
+  tag: speculated
+  calls: []
+  retracted: 'Refuted: no dark occulter is needed.'
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: C11
+  text: 'Referee: the claimed 2.38-d ephemeris fails cycle by cycle. Of 40 cycles where P=2.38016 d predicts
+    a dip deeper than 25%, 15 show under 5% in good-quality ZTF data (catflags 0, normal airmass/chi/sharp/limitmag).
+    Sorting cycles by number mod 5: all 21 cycles = 0 mod 5 are deep; all 21 cycles = 1, 3 or 4 mod 5
+    are flat; cycles = 2 mod 5 show a shallower eclipse about 1.1 h late. Per-cycle table from cases/OS-0012/data/*.parquet
+    with pandas (not an Oddsky tool); the folds that show it are logged.'
+  tag: observed
+  calls:
+  - K37
+  - K62
+  - K63
+  author: claude-referee
+  at: '2026-10-27T10:03:34+00:00'
+- id: C12
+  text: 'Referee: TESS Sector 80 (TESScut FFI, TIC 399415572, June 2024; not in the case data, own aperture
+    photometry) covers about 11 consecutive 2.38-d cycles. Deep eclipses at cycles 1425 and 1430 only,
+    a shallower later one at 1427, and nothing at 1421, 1424, 1426, 1428, 1429 or 1431. ZTF independently
+    finds cycle 1431 flat.'
+  tag: observed
+  calls: []
+  author: claude-referee
+  at: '2026-10-27T10:03:34+00:00'
+- id: C13
+  text: 'Referee: the true period is 5 x 2.38016 = 11.900804 d. Folded at 11.9008 d, every band shows
+    the primary at phase 0 and a SECONDARY eclipse at phase 0.404: ZTF r +0.35 mag (bin), g +0.33, W1
+    +0.36 to +0.40, W2 +0.38 to +0.43. Phase 0.404 is about 2/5, so the P/5 fold stacks the secondary
+    onto the primary. An independent eclipse_period search on points deeper than 0.6 mag (3 to 30 d) returns
+    11.9016 d. P/2, 2P and 3P were checked; 5P was not.'
+  tag: computed
+  calls:
+  - K57
+  - K58
+  - K59
+  - K60
+  - K61
+  - K64
+  - K65
+  - K66
+  - K67
+  - K68
+  author: claude-referee
+  at: '2026-10-27T10:03:34+00:00'
+- id: C14
+  text: 'Referee: an eccentric two-star limb-darkened eclipse model fitted jointly to ZTF g/r, Gaia G,
+    NEOWISE W1/W2 and TESS (own code outside the tools; free TESS third light 0.68 for the 25.7-arcsec
+    G=13.97 neighbour) gives reduced chi2 1.16 over 11,651 points. P=11.900804 d, T0=MJD 57099.3619, e
+    cos w=-0.1508 (e about 0.15), near-central, R2/R1=0.874, R1/a=0.0304. Primary 0.91 mag in r, secondary
+    0.42 mag in r. Surface-brightness ratios: g 0.46, r 0.61, W1 0.88.'
+  tag: computed
+  calls: []
+  author: claude-referee
+  at: '2026-10-27T10:03:34+00:00'
+- id: C15
+  text: 'Referee: with total mass 1.4-1.7 Msun, a=24.5-26.2 Rsun, R1=0.75-0.80 and R2=0.65-0.70 Rsun.
+    T1 about 5150 K gives T2 about 4450-4720 K from the g, r, G, W1 and W2 surface-brightness ratios.
+    That is an ordinary K1V+K4V detached eclipsing binary. The two stars give L about 0.56 Lsun, a single-star-equivalent
+    radius of about 1.0 Rsun at 4980 K, and 0.4 mag of overluminosity. This explains why Gaia GSP-Phot/FLAME
+    (single-star fits) report R=1.07 and logg 4.35. StarHorse gives M_G0=4.89 at (BP-RP)0=0.86, about
+    0.7 mag above a single K0V.'
+  tag: inferred
+  calls:
+  - K32
+  author: claude-referee
+  at: '2026-10-27T10:03:34+00:00'
+- id: C16
+  text: 'Referee: C4, C5, C8, C9 and the ''invisible occulter'' conclusion rest on folding at P/5. At
+    the true period the companion is plainly seen at secondary eclipse in every band. The occulter-size
+    argument (C8) used a=7.1 Rsun for P=2.38 d; at P=11.9 d, a 5-hour central eclipse needs R1+R2 of about
+    1.45 Rsun, matching two K dwarfs. H1 (opaque disk) and H4 (dust) are not needed. Nothing anomalous
+    remains.'
+  tag: inferred
+  calls:
+  - K57
+  - K60
+  - K64
+  author: claude-referee
+  at: '2026-10-27T10:03:34+00:00'
+- id: C17
+  text: 'Referee: the data are not artifacts. Both ZTF fields (537 and 1532) show the eclipse. The in-eclipse
+    ZTF centroid differs from out of eclipse by under 0.02 arcsec (IRSA per-epoch RA/Dec). Gaia G caught
+    it on two cycles, including both FOV transits of one cycle (0.87 then 0.19 mag 106 min later). Gaia''s
+    resolution rules out a blend beyond about 0.5 arcsec, and no catalogued variable lies within 30 arcsec.'
+  tag: observed
+  calls:
+  - K32
+  - K59
+  author: claude-referee
+  at: '2026-10-27T10:03:34+00:00'
+- id: C18
+  text: 'Referee novelty search (2026-10-27): not catalogued as an eclipsing binary in VSX (only Type
+    VAR, P=0.025 d from the Gaia short-timescale pipeline), SIMBAD (bare Gaia entry), ASAS-SN, ATLAS (J/AJ/156/241),
+    ZTF Chen+2020, Gaia DR3 EB/classification/NSS, Prsa+2022 TESS EBs, or the Kostov+2025 TESS EB list
+    (only in its unvetted input table). No literature found. Most likely an uncatalogued detached eccentric
+    K+K eclipsing binary with P=11.9008 d: a modest catalogue addition, not an anomaly.'
+  tag: observed
+  calls:
+  - K32
+  author: claude-referee
+  at: '2026-10-27T10:03:34+00:00'
+- id: C19
+  text: 'The phase-clustering search alone found 2.38 days. The missing-eclipse test added after the referee''s
+    review (counting which cycles are deep versus flat, by cycle number mod k) flags at once that only
+    every fifth cycle is deep: the true period is 5 x 2.38 = 11.90 days.'
+  tag: computed
+  calls:
+  - K78
+  author: claude-opus-5.5
+  at: '2026-10-27T10:05:38+00:00'
+- id: C20
+  text: 'Explained: an uncatalogued, detached, mildly eccentric eclipsing binary of two K dwarfs, P =
+    11.900804 d (T0 = MJD 57099.3619, e about 0.15), with a primary eclipse of 0.9 mag and a secondary
+    of about 0.4 mag at phase 0.404. Gaia''s single-star parameters (R 1.07 Rsun, L 0.65 Lsun) describe
+    the blended pair.'
+  tag: inferred
+  calls:
+  - K78
+  author: claude-opus-5.5
+  at: '2026-10-27T10:05:38+00:00'
+hypotheses:
+- id: H1
+  klass: eclipse_companion
+  statement: An opaque circumsecondary disk (or ring system) around a faint low-mass companion transits
+    the K dwarf every 2.38 days.
+  supports:
+  - C2
+  - C3
+  - C4
+  - C5
+  - C8
+  - C10
+  conflicts: []
+  would_falsify: 'Radial velocities: a single-lined orbit whose amplitude fixes the companion mass. A
+    detectable secondary eclipse in the near-IR (K band or redder), or a flat-bottomed high-cadence eclipse,
+    would point instead to a stellar companion.'
+  status: rejected
+  confidence: 0.0
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: H2
+  klass: eclipse_companion
+  statement: 'Ordinary binary in disguise: a hot, compact component (supplying most of the optical light)
+    is eclipsed by a larger, much cooler star.'
+  supports:
+  - C3
+  conflicts:
+  - C5
+  - C6
+  - C7
+  - C8
+  would_falsify: A cool companion large enough to block 58% would glow at 3.4 microns. OS-0011 shows such
+    a companion at 0.18 mag in W1; here it's under 0.02. A composite spectrum would revive this.
+  status: rejected
+  confidence: 0.0
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: H3
+  klass: artifact_blend
+  statement: An unresolved, unrelated eclipsing system blended with the K dwarf.
+  supports: []
+  conflicts:
+  - C3
+  - C7
+  - C8
+  would_falsify: A 58%-deep eclipse needs the eclipsed source to supply most of the light, which a faint
+    blend can't. Gaia shows no close companion (RUWE 1.05, no multi-peak images). Adaptive-optics imaging
+    would close this.
+  status: rejected
+  confidence: 0.0
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: H4
+  klass: dust_occultation
+  statement: A dust cloud on a 2.38-day orbit (debris from a disintegrating body).
+  supports:
+  - C3
+  - C9
+  conflicts:
+  - C2
+  would_falsify: Dust tails vary in depth and shape from orbit to orbit; this eclipse is similar from
+    2015 to 2025. High-cadence eclipses with changing depths would revive it.
+  status: rejected
+  confidence: 0.0
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: H5
+  klass: eclipse_companion
+  statement: 'Something not on this list: mis-estimated stellar parameters, an unusual star, or physics
+    we haven''t considered.'
+  supports: []
+  conflicts: []
+  would_falsify: A spectrum.
+  status: rejected
+  confidence: 0.0
+  author: claude-opus-5.5
+  at: '2026-10-27T09:32:47+00:00'
+- id: H6
+  klass: eclipse_companion
+  statement: A detached, mildly eccentric binary of two K dwarfs on an 11.9008-day orbit, whose eclipses
+    happen to fall about 2/5 of an orbit apart.
+  supports:
+  - C19
+  - C20
+  conflicts: []
+  would_falsify: Radial velocities showing two sets of K-star lines at about +/-55 km/s would confirm
+    it; a single-lined orbit would not fit.
+  status: favored
+  confidence: 0.97
+  author: claude-opus-5.5
+  at: '2026-10-27T10:05:38+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T09:23:38+00:00'

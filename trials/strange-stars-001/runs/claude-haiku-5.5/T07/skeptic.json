@@ -1,0 +1,318 @@
+{
+  "generated_at": "2026-10-27T06:22:43+00:00",
+  "oddsky_version": "0.2.0",
+  "summary": "0 fail, 1 warn, 14 pass, 1 skipped",
+  "counts": {
+    "fail": 0,
+    "warn": 1,
+    "pass": 14,
+    "skip": 1
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "pass",
+      "finding": "3 Gaia source(s) within 6.1\"; brightest contributes 0.5% of the target's G flux at 1.8\"",
+      "numbers": {
+        "radius_arcsec": 6.1,
+        "n_inside": 3,
+        "total_flux_ratio_G": 0.0075,
+        "brightest_flux_ratio": 0.0046,
+        "brightest_sep": 1.8105
+      }
+    },
+    {
+      "id": "blend_tess",
+      "title": "Neighbours inside the TESS beam (42.0\")",
+      "status": "pass",
+      "finding": "20 Gaia source(s) within 42.0\"; brightest contributes 2.9% of the target's G flux at 25.1\"",
+      "numbers": {
+        "radius_arcsec": 42.0,
+        "n_inside": 20,
+        "total_flux_ratio_G": 0.0632,
+        "brightest_flux_ratio": 0.0291,
+        "brightest_sep": 25.1081
+      }
+    },
+    {
+      "id": "blend_aavso",
+      "title": "Neighbours inside the AAVSO beam (5.0\")",
+      "status": "pass",
+      "finding": "2 Gaia source(s) within 5.0\"; brightest contributes 0.5% of the target's G flux at 1.8\"",
+      "numbers": {
+        "radius_arcsec": 5.0,
+        "n_inside": 2,
+        "total_flux_ratio_G": 0.0049,
+        "brightest_flux_ratio": 0.0046,
+        "brightest_sep": 1.8105
+      }
+    },
+    {
+      "id": "tess_crowdsap",
+      "title": "TESS aperture contamination (CROWDSAP)",
+      "status": "warn",
+      "finding": "worst sector: 0.84 of aperture flux is from the target",
+      "numbers": {
+        "min_crowdsap": 0.83733571
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "572 exposures; cuts removed up to 141 (25%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 572,
+        "removed_per_band": {
+          "W1": 141,
+          "W2": 91
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "pass",
+      "finding": "optical data from 89 independent source(s): AAVSO observer O2 (29969), AAVSO observer O32 (16152), AAVSO observer O13 (10295), AAVSO observer O86 (9135), AAVSO observer O118 (8273), and 84 more TESS is not counted: it is normalised per sector, so it confirms an event only if a sector overlaps it, and never its absolute depth.",
+      "numbers": {
+        "sources": {
+          "AAVSO observer O2": 29969,
+          "AAVSO observer O32": 16152,
+          "AAVSO observer O13": 10295,
+          "AAVSO observer O86": 9135,
+          "AAVSO observer O118": 8273,
+          "AAVSO observer O46": 7392,
+          "AAVSO observer O1": 6942,
+          "AAVSO observer O18": 4743,
+          "AAVSO observer O10": 3971,
+          "AAVSO observer O3": 3679,
+          "AAVSO observer O27": 3576,
+          "AAVSO observer O41": 3116,
+          "AAVSO observer O57": 3023,
+          "AAVSO observer O58": 2797,
+          "AAVSO observer O109": 2791,
+          "AAVSO observer O66": 2112,
+          "AAVSO observer O69": 1572,
+          "AAVSO observer O12": 1481,
+          "AAVSO observer O123": 1252,
+          "AAVSO observer O19": 1083,
+          "AAVSO observer O64": 1048,
+          "AAVSO observer O135": 1041,
+          "AAVSO observer O71": 990,
+          "AAVSO observer O89": 928,
+          "AAVSO observer O55": 822,
+          "AAVSO observer O14": 815,
+          "AAVSO observer O60": 808,
+          "AAVSO observer O112": 728,
+          "AAVSO observer O74": 712,
+          "AAVSO observer O37": 711,
+          "AAVSO observer O75": 679,
+          "AAVSO observer O78": 629,
+          "AAVSO observer O110": 601,
+          "AAVSO observer O73": 413,
+          "AAVSO observer O45": 413,
+          "AAVSO observer O40": 380,
+          "AAVSO observer O36": 372,
+          "AAVSO observer O106": 341,
+          "AAVSO observer O29": 335,
+          "AAVSO observer O35": 307,
+          "AAVSO observer O22": 301,
+          "AAVSO observer O23": 285,
+          "AAVSO observer O92": 250,
+          "AAVSO observer O127": 250,
+          "AAVSO observer O95": 237,
+          "AAVSO observer O132": 236,
+          "AAVSO observer O83": 228,
+          "AAVSO observer O94": 228,
+          "AAVSO observer O39": 190,
+          "AAVSO observer O120": 188,
+          "AAVSO observer O99": 187,
+          "AAVSO observer O140": 177,
+          "AAVSO observer O30": 176,
+          "AAVSO observer O48": 164,
+          "AAVSO observer O133": 160,
+          "AAVSO observer O100": 159,
+          "AAVSO observer O51": 158,
+          "AAVSO observer O85": 143,
+          "AAVSO observer O101": 136,
+          "AAVSO observer O34": 133,
+          "AAVSO observer O47": 122,
+          "AAVSO observer O59": 120,
+          "AAVSO observer O117": 120,
+          "AAVSO observer O139": 120,
+          "AAVSO observer O17": 107,
+          "AAVSO observer O91": 104,
+          "AAVSO observer O116": 90,
+          "AAVSO observer O24": 84,
+          "AAVSO observer O128": 77,
+          "AAVSO observer O111": 73,
+          "AAVSO observer O105": 71,
+          "AAVSO observer O79": 71,
+          "AAVSO observer O80": 66,
+          "AAVSO observer O124": 65,
+          "AAVSO observer O96": 62,
+          "AAVSO observer O76": 59,
+          "AAVSO observer O21": 55,
+          "AAVSO observer O28": 53,
+          "AAVSO observer O61": 50,
+          "AAVSO observer O31": 42,
+          "AAVSO observer O131": 41,
+          "AAVSO observer O136": 40,
+          "AAVSO observer O125": 37,
+          "AAVSO observer O77": 29,
+          "AAVSO observer O50": 24,
+          "AAVSO observer O114": 23,
+          "AAVSO observer O67": 23,
+          "AAVSO observer O88": 20,
+          "AAVSO observer O130": 20,
+          "AAVSO observer O138": 19,
+          "AAVSO observer O68": 19,
+          "AAVSO observer O20": 18,
+          "AAVSO observer O8": 18,
+          "AAVSO observer O93": 17,
+          "AAVSO observer O42": 15,
+          "AAVSO observer O97": 13,
+          "AAVSO observer O102": 12,
+          "AAVSO observer O63": 11,
+          "AAVSO observer O65": 10,
+          "AAVSO observer O134": 10,
+          "AAVSO observer O52": 10,
+          "AAVSO observer O33": 9,
+          "AAVSO observer O43": 9,
+          "AAVSO observer O9": 9,
+          "AAVSO observer O49": 9,
+          "AAVSO observer O62": 8,
+          "AAVSO observer O11": 8,
+          "AAVSO observer O119": 7,
+          "AAVSO observer O26": 7,
+          "AAVSO observer O98": 7,
+          "AAVSO observer O6": 7,
+          "AAVSO observer O126": 6,
+          "AAVSO observer O53": 6,
+          "AAVSO observer O121": 6,
+          "AAVSO observer O15": 6,
+          "AAVSO observer O90": 6,
+          "AAVSO observer O5": 4,
+          "AAVSO observer O82": 4,
+          "AAVSO observer O108": 4,
+          "AAVSO observer O107": 4,
+          "AAVSO observer O103": 4,
+          "AAVSO observer O84": 3,
+          "AAVSO observer O54": 3,
+          "AAVSO observer O16": 3,
+          "AAVSO observer O56": 2,
+          "AAVSO observer O38": 2,
+          "AAVSO observer O87": 2,
+          "AAVSO observer O70": 2,
+          "AAVSO observer O113": 1,
+          "AAVSO observer O44": 1,
+          "AAVSO observer O137": 1,
+          "AAVSO observer O4": 1,
+          "AAVSO observer O81": 1,
+          "AAVSO observer O72": 1,
+          "AAVSO observer O7": 1,
+          "AAVSO observer O129": 1,
+          "AAVSO observer O104": 1,
+          "AAVSO observer O122": 1,
+          "AAVSO observer O25": 1,
+          "TESS": 24930
+        }
+      }
+    },
+    {
+      "id": "baseline_aavso",
+      "title": "Does AAVSO start at the star's normal brightness?",
+      "status": "pass",
+      "finding": "first 60 days of V: median 11.84; Gaia DR3 (2014-17 mean) implies V = 11.90; difference -0.05 mag",
+      "numbers": {
+        "v_first": 11.843,
+        "v_gaia": 11.898,
+        "delta": -0.055
+      }
+    },
+    {
+      "id": "chromatic",
+      "title": "Colour of the variability",
+      "status": "skip",
+      "finding": "needs CCD V plus another band, and > 0.2 mag of V variability",
+      "numbers": {}
+    },
+    {
+      "id": "onset_aavso_B",
+      "title": "Was the start seen? (AAVSO B)",
+      "status": "pass",
+      "finding": "the 1 deepest dip(s) (> 0.1 mag vs a 600-day baseline) all have an observed ingress",
+      "numbers": {
+        "n_events": 1
+      }
+    },
+    {
+      "id": "onset_aavso_CV",
+      "title": "Was the start seen? (AAVSO CV)",
+      "status": "pass",
+      "finding": "the 1 deepest dip(s) (> 0.1 mag vs a 600-day baseline) all have an observed ingress",
+      "numbers": {
+        "n_events": 1
+      }
+    },
+    {
+      "id": "onset_aavso_I",
+      "title": "Was the start seen? (AAVSO I)",
+      "status": "pass",
+      "finding": "the 3 deepest dip(s) (> 0.1 mag vs a 600-day baseline) all have an observed ingress",
+      "numbers": {
+        "n_events": 3
+      }
+    },
+    {
+      "id": "alias_aavso_V",
+      "title": "Periodicity vs survey rhythms (AAVSO V)",
+      "status": "pass",
+      "finding": "strongest period 1838.29 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 1838.288923474793,
+        "power": 0.19161039364715451
+      }
+    },
+    {
+      "id": "alias_tess_TESS",
+      "title": "Periodicity vs survey rhythms (TESS TESS)",
+      "status": "pass",
+      "finding": "strongest period 15.92 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 15.92276710671517,
+        "power": 0.027156407933103956
+      }
+    },
+    {
+      "id": "tess_sys_Sb",
+      "title": "TESS dips vs spacecraft events (Sb)",
+      "status": "pass",
+      "finding": "1 dip(s); 0 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 1,
+        "n_suspect": 0
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 0.82 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 0.8154449
+      }
+    }
+  ]
+}

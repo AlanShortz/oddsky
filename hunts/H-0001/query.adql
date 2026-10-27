@@ -1,0 +1,21 @@
+-- Oddsky hunt H-0001: Sun-like main-sequence stars that Gaia caught fading.
+-- Fading events make the G-band magnitude distribution skewed toward faint values (positive skew).
+-- Cuts: FGK colour, near the main sequence, precise parallax, clean astrometry and images,
+-- not already classified by Gaia as an eclipsing binary.
+SELECT g.source_id, g.ra, g.dec, g.phot_g_mean_mag AS g_mag, g.bp_rp, g.parallax, g.parallax_over_error AS poe,
+       g.ruwe, g.ipd_frac_multi_peak, g.ipd_gof_harmonic_amplitude, g.phot_bp_rp_excess_factor,
+       g.teff_gspphot, g.has_epoch_photometry,
+       v.num_selected_g_fov AS n_epochs, v.range_mag_g_fov AS g_range, v.std_dev_mag_g_fov AS g_std,
+       v.skewness_mag_g_fov AS g_skew, v.in_vari_classification_result AS classified,
+       v.in_vari_eclipsing_binary AS gaia_eb, v.in_vari_short_timescale AS gaia_short
+FROM gaiadr3.vari_summary AS v
+JOIN gaiadr3.gaia_source AS g ON g.source_id = v.source_id
+WHERE g.phot_g_mean_mag BETWEEN 10.5 AND 15.5
+  AND g.parallax_over_error > 10
+  AND g.ruwe < 1.4
+  AND g.ipd_frac_multi_peak <= 2
+  AND g.bp_rp BETWEEN 0.55 AND 1.5
+  AND g.phot_g_mean_mag + 5 * LOG10(g.parallax / 100) BETWEEN 2.5 AND 7.5
+  AND v.num_selected_g_fov >= 20
+  AND v.range_mag_g_fov > 0.2
+  AND v.skewness_mag_g_fov > 2.5

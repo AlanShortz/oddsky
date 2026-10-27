@@ -1,0 +1,14 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv venv --python 3.13 && uv pip install -e ".[dev]"
+      - run: uv run ruff check src tests scripts
+      - run: uv run pytest -q
+      # Every case's ledger must still replay against the committed data.
+      - run: for c in cases/OS-*; do uv run oddsky replay "$c" || exit 1; done
+      - run: uv run oddsky trial verify trials/strange-stars-001

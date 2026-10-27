@@ -1,0 +1,79 @@
+id: OS-0011
+title: A binary hiding behind the wrong period
+hook: Gaia's catalogue gave it a 53-minute period. The real one is 2.53 days, and nobody had written it
+  down.
+status: interpreted
+target:
+  name: Gaia DR3 2037357495383317504
+  ra: 287.10668
+  dec: 27.83755
+  aliases: []
+  gaia_source_id: 2037357495383317504
+summary: 'A previously uncatalogued Algol-type eclipsing binary (P = 2.52961 d, primary eclipse 0.86 mag
+  in r), recognised by Oddsky hunt H-0001 and confirmed on two instruments over 11 years. Small, but new:
+  the period VSX inherited from Gaia''s pipeline was wrong by a factor of 68. It also serves as the control
+  that makes OS-0012 strange: same tools, and here the companion shows up plainly at secondary eclipse.'
+claims:
+- id: C1
+  text: Found in Oddsky hunt H-0001. VSX lists it only as a Gaia 'VAR' with a 0.037-day period; it is
+    absent from the ZTF periodic-variable catalogue (Chen et al. 2020) and the 2026 ZTF candidate list;
+    SIMBAD has no entry.
+  tag: observed
+  calls:
+  - K8
+  author: claude-opus-5.5
+  at: '2026-10-27T09:33:27+00:00'
+- id: C2
+  text: Gaia (2014-17) and ZTF (2018-25) eclipses phase up on P = 2.52961 d (T0 = MJD 57377.958) over
+    11 years; 90% of points more than 0.3 mag faint fall within 0.04 phase.
+  tag: computed
+  calls:
+  - K2
+  author: claude-opus-5.5
+  at: '2026-10-27T09:33:27+00:00'
+- id: C3
+  text: 'The primary eclipse is 0.86 mag in r and 1.17 in g (BP 1.07, G 0.90, RP 0.74 on Gaia transits),
+    lasting about 6 hours. The secondary is 0.054 mag in r, 0.037 in g, 0.175 in W1 and 0.19 in W2: a
+    cool companion that glows in the infrared.'
+  tag: computed
+  calls:
+  - K9
+  - K10
+  - K11
+  - K12
+  - K13
+  - K14
+  - K15
+  author: claude-opus-5.5
+  at: '2026-10-27T09:33:27+00:00'
+- id: C4
+  text: 'Gaia gives Teff about 6860 K and M_G 2.75 at 2.7 kpc: a hot primary eclipsed by a cooler, larger
+    companion. A deep primary eclipse plus a shallow secondary that is strong in the IR is the textbook
+    Algol pattern.'
+  tag: inferred
+  calls:
+  - K1
+  - K9
+  - K14
+  author: claude-opus-5.5
+  at: '2026-10-27T09:33:27+00:00'
+hypotheses:
+- id: H1
+  klass: eclipse_companion
+  statement: 'An Algol-type (semi-detached) eclipsing binary: a hot F-type primary and a cool subgiant
+    companion, P = 2.5296 d.'
+  supports:
+  - C2
+  - C3
+  - C4
+  conflicts: []
+  would_falsify: Radial velocities inconsistent with a 2.53-day binary, or the eclipses drifting off the
+    ephemeris.
+  status: favored
+  confidence: 0.9
+  author: claude-opus-5.5
+  at: '2026-10-27T09:33:27+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T09:22:57+00:00'

@@ -1,0 +1,440 @@
+id: OS-0001
+title: The star that glowed before it dimmed
+hook: In 2018 this Sun-like star started glowing in the infrared. Three years later it began to fade.
+  Something hot came first.
+status: reproduced
+target:
+  name: ASASSN-21qj
+  ra: 123.84708180613582
+  dec: -38.98980679315472
+  aliases:
+  - 2MASS J08152329-3859234
+  - Gaia DR3 5539970601632026752
+  - ASASSN -21qj
+  gaia_source_id: 5539970601632026752
+  otype: '*'
+summary: A Sun-like star whose infrared suddenly brightened in 2017-18 with ~1,000 K dust, followed about
+  3 years later by ragged optical dips of up to 2 mag. The dips are more strongly coloured than interstellar
+  dust, so small grains are blocking the light. The infrared excess faded as the optical recovered, and
+  by 2025-26 the star is back to its pre-event brightness and flat to 0.005 mag; the best explanation
+  is a one-off cloud of debris, plausibly from a planetary collision.
+claims:
+- id: C1
+  text: 'Before late 2017 the infrared was boringly photospheric: 8 NEOWISE visits from 2014-05 to 2017-11
+    have W1 = 11.654 (median, scatter ~0.01 mag) and W1-W2 between -0.05 and -0.09, i.e. no detectable
+    warm dust.'
+  tag: observed
+  calls:
+  - K3
+  - K4
+  - K14
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:22+00:00'
+- id: C2
+  text: 'The infrared brightened abruptly between consecutive NEOWISE visits on 2017-11-15 (MJD 58072)
+    and 2018-04-19 (MJD 58227): W1 by 0.34 mag and W2 by 0.78 mag, and W1-W2 jumped from -0.09 to +0.35.
+    Over 2018-04 to 2020-04 the median excess vs. 2014-17 was -0.41 mag in W1 (20 sigma) and -0.80 mag
+    in W2 (39 sigma).'
+  tag: computed
+  calls:
+  - K3
+  - K4
+  - K5
+  - K6
+  - K14
+  - K15
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:23+00:00'
+- id: C3
+  text: The excess alone (total minus the 2014-17 photosphere) is +45% of the stellar flux in W1 and +110%
+    in W2, giving an excess W1-W2 of about 0.9 mag (Vega); a single blackbody with that 3.4/4.6 micron
+    ratio has T ~ 1000 K (range ~850-1050 K across visits). Hot dust, far hotter than a cold debris belt.
+    (Hand arithmetic on tool outputs; no tool computes excess temperature.)
+  tag: inferred
+  calls:
+  - K14
+  - K15
+  - K4
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:24+00:00'
+- id: C4
+  text: 'The infrared excess faded over 2020-2023: W1-W2 = +0.32 (2020-04), +0.22 (2020-11), +0.17 (2021-11),
+    +0.16 (2022-04), -0.01 (2022-11), -0.09 (2023-11); W1 tracks the colour (r = -0.98). The last three
+    visits (2023-04 to 2024-04) match the 2014-17 level to within 0.01 mag in W1 and W2. NEOWISE ends
+    in 2024, so there is no infrared after 2024-04.'
+  tag: computed
+  calls:
+  - K4
+  - K16
+  - K17
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:25+00:00'
+- id: C5
+  text: 'When AAVSO coverage begins (2021-08-26) the star is already deep in an event: the first 60 days
+    have median V = 14.67 vs. V = 13.52 implied by the Gaia DR3 2014-17 mean (+1.15 mag). Within the event,
+    dips reach up to 1.8 mag below a 300-day running baseline on timescales of days to weeks (faintest
+    V 15.05, faintest B 16.51), with 18 excursions, all between 2021-08 and 2022-06.'
+  tag: computed
+  calls:
+  - K60
+  - K18
+  - K8
+  - K59
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:25+00:00'
+- id: C6
+  text: 'TESS sectors 8 (2019-02) and 34-35 (2021-01 to 2021-03) contain no excursion deeper than 0.05
+    mag and only ~1-2% day-to-day wiggles, so the deep, fast dips were not happening then, even though
+    the infrared excess had been present since 2018-04. The infrared therefore led the dipping by at least
+    ~2.9 years. Caveat: TESS is normalised per sector, so a smooth constant dimming during a sector would
+    be invisible.'
+  tag: inferred
+  calls:
+  - K29
+  - K31
+  - K32
+  - K3
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:26+00:00'
+- id: C7
+  text: 'The dimming is strongly chromatic and steeper than interstellar reddening: from 2000+ near-simultaneous
+    pairs, dB/dV = 1.55 (ISM 1.32), dI/dV = 0.45 (ISM 0.59), dB/dI = 2.86 (ISM 2.24), with r = 0.90-0.98.'
+  tag: computed
+  calls:
+  - K36
+  - K37
+  - K38
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:27+00:00'
+- id: C8
+  text: 'A colour slope steeper than ISM dust means the occulter is not grey: it is dominated by small
+    (sub-micron) grains, not large grains or an opaque solid body. Caveat: these are a single observer''s
+    magnitudes and the cross_band slopes could absorb uncorrected colour terms at the ~10% level.'
+  tag: inferred
+  calls:
+  - K36
+  - K37
+  - K38
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:27+00:00'
+- id: C9
+  text: 'Recovery: the V seasonal median went from 13.587 (2022-09 to 2023-07) to 13.506 (2024-06 to 2025-07)
+    to 13.489 (2025-08 to 2026-06), reaching ~13.47-13.48 by mid-2023. The optical recovery (2022-23)
+    coincides with the disappearance of the infrared excess (2022-11 to 2023-11).'
+  tag: computed
+  calls:
+  - K7
+  - K44
+  - K19
+  - K20
+  - K4
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:28+00:00'
+- id: C10
+  text: 'Since early 2025 the star has been flat: same-season medians Feb-Jun 2025 vs Feb-Jun 2026 differ
+    by -0.0045 mag in V (1.5 sigma), 0.000 in B and -0.0035 in I. No excursion beyond the 4 sigma (0.14
+    mag) threshold after 2022-06. The current season (Oct 2026, V = 13.489, n = 16) matches the first
+    half of 2026 (13.486). V is now equal to the Gaia-implied 13.52 within the ~0.03-0.05 mag uncertainty
+    of a G-to-V transformation.'
+  tag: computed
+  calls:
+  - K55
+  - K56
+  - K57
+  - K58
+  - K8
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:29+00:00'
+- id: C11
+  text: 'A step occurs at MJD ~60721.7 (2025-02-16), across a 10-day gap: I brightens by 0.120 mag (15.7
+    sigma), R by 0.047, B by 0.021 and V by 0.013. The brightening grows toward the red, the opposite
+    of dust clearing.'
+  tag: computed
+  calls:
+  - K46
+  - K47
+  - K48
+  - K49
+  - K50
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:30+00:00'
+- id: C12
+  text: The 2025-02 step is almost certainly a calibration change by the single observer (comparison stars,
+    aperture or filter) rather than the star. It also makes the apparent 2024/25 to 2025/26 brightening
+    in I (-0.08) and R (-0.05) unreliable; only B and V, which barely moved, should be used to judge late
+    recovery.
+  tag: inferred
+  calls:
+  - K46
+  - K47
+  - K48
+  - K49
+  - K50
+  - K26
+  - K27
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:31+00:00'
+- id: C13
+  text: 'Apparent 2026-06 brightening is not astrophysical: on MJD 61196.98, V is 0.37 mag and I 0.45
+    mag bright while B and R, taken within ~5 minutes, are normal. On 61197.98, V, B and R are 0.3-0.5
+    mag bright and I is only 0.12 mag bright. Real brightness changes would show up in all four filters
+    together. These are end-of-season, low-altitude frames.'
+  tag: observed
+  calls:
+  - K10
+  - K11
+  - K12
+  - K13
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:31+00:00'
+- id: C14
+  text: 'The 3.85 arcsec neighbour (G = 16.91, BP-RP = 1.84, 3.8% of the target G flux) cannot produce
+    the optical dips (losing it entirely would dim the blend by 0.04 mag). It sits inside the WISE beam:
+    assuming G-W1 ~ 2.6 for its colour, it is ~9% of the W1 flux, so to fake the IR excess it would have
+    to brighten ~5x in W1 and ~12x in W2 for four years, then fade exactly as the target recovers. Possible
+    in principle (e.g. an eruptive red star), but contrived.'
+  tag: inferred
+  calls:
+  - K60
+  - K40
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:32+00:00'
+- id: C15
+  text: 'All optical evidence for the event in this case comes from one AAVSO observer (HMB). No TESS
+    sector overlaps the deep dips (sectors 34-35 end 2021-03, sector 61 starts 2023-01), and ASAS-SN is
+    unavailable. So the Skeptic''s ''independent confirmation: pass'' refers to the dataset, not to the
+    event itself.'
+  tag: observed
+  calls:
+  - K59
+  - K60
+  - K29
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:33+00:00'
+- id: C16
+  text: TESS shows a 4.13 d periodicity (LS power 0.17, side peaks at 4.03 and 4.22 d that look like sector-gap
+    aliases) not matching any spacecraft or Earth rhythm. AAVSO V shows no periodicity in 2-400 d beyond
+    the trend (top peak 323 d, power 0.08, close to the yearly observing window).
+  tag: computed
+  calls:
+  - K35
+  - K61
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:33+00:00'
+- id: C17
+  text: 'Timing tension for any single-cloud picture: blackbody grains at 1000 K around a roughly solar-luminosity
+    star (Teff 5760 K, abs G 4.6) sit at r ~ (278/1000)^2 ~ 0.08 au, where the orbital period is ~8 days.
+    Dust that close should cross the line of sight within weeks of appearing, not ~3 years later. So either
+    the emitters are superheated small grains much farther out, or the hot emitter and the later occulter
+    are not the same material (e.g. a hot body or cloud on an eccentric orbit, or dust spreading along
+    an orbit).'
+  tag: inferred
+  calls:
+  - K14
+  - K15
+  - K59
+  author: claude-opus-5.5
+  at: '2026-10-27T06:04:46+00:00'
+- id: C18
+  text: 'The new ir_excess tool reproduces C3, which was hand arithmetic: over the 2014-17 photosphere,
+    the 2018-20 excess is +44% in W1 and +108% in W2, with a W1/W2 colour temperature of 998 K.'
+  tag: computed
+  calls:
+  - K96
+  author: claude-opus-5.5-maintainer
+  at: '2026-10-27T06:11:46+00:00'
+hypotheses:
+- id: H1
+  klass: collision_debris
+  statement: A violent dust-production event (e.g. a collision between planetary bodies) around 2018 made
+    a hot (~1000 K) dust cloud, seen first as a sudden infrared excess. Small-grain debris from it later
+    (2021-22) crossed our line of sight, producing ragged, strongly chromatic dips. The material then
+    dispersed or was removed, so the infrared and optical both returned to normal by 2023-24 and have
+    stayed there.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  - C7
+  - C8
+  - C9
+  - C10
+  conflicts:
+  - C17
+  - C14
+  would_falsify: (a) Resolved infrared photometry showing the 2018-23 excess belonged to the 3.85 arcsec
+    neighbour; (b) a repeat of the same dip pattern on a fixed period (a permanent orbiting structure,
+    not a one-off cloud); (c) a renewed optical dimming without any new infrared excess, of similar depth
+    and colour; (d) spectra showing the star is a young accretor with gas-rich inner disk.
+  status: favored
+  confidence: 0.6
+  author: claude-opus-5.5
+  at: '2026-10-27T06:05:06+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: Generic circumstellar dust (a clump, a warp or a pre-existing structure, not necessarily
+    collision-made) passed in front of the star in 2021-22. The infrared event is related only loosely
+    or by coincidence.
+  supports:
+  - C5
+  - C7
+  - C8
+  - C9
+  - C10
+  conflicts:
+  - C1
+  - C2
+  would_falsify: The tight coupling seen here, an abrupt infrared turn-on from a photospheric baseline
+    followed by optical dips while the IR excess decays and both recover together, already argues against
+    a pre-existing structure. A second, independent infrared excess event with no dips (or dips with no
+    IR) would separate them; recurrence on a period would turn this into a companion/disk model.
+  status: live
+  confidence: 0.25
+  author: claude-opus-5.5
+  at: '2026-10-27T06:05:06+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: A long-period companion carrying a dusty disk or ring system eclipsed the star (epsilon Aur
+    / J1407-like), producing the 2021-22 dimming.
+  supports:
+  - C5
+  - C9
+  conflicts:
+  - C2
+  - C3
+  - C4
+  - C8
+  - C17
+  would_falsify: 'Already strongly disfavoured: a cold companion disk does not produce a sudden 1000 K
+    excess 3 years earlier that fades in step with the eclipse, and the dips are steeper-than-ISM chromatic
+    rather than grey. Would be revived by a strictly periodic recurrence, an astrometric or RV companion,
+    or a symmetric repeat of the dip sequence.'
+  status: disfavored
+  confidence: 0.05
+  author: claude-opus-5.5
+  at: '2026-10-27T06:05:07+00:00'
+- id: H4
+  klass: artifact_blend
+  statement: The infrared brightening belongs to the red 3.85 arcsec neighbour inside the WISE beam, not
+    to the target.
+  supports:
+  - C14
+  conflicts:
+  - C2
+  - C4
+  - C9
+  - C14
+  would_falsify: Already disfavoured for the optical (the neighbour is 3.8% of the G flux and cannot make
+    1-2 mag dips). For the IR, ruled out if resolved imaging (e.g. NEOWISE single-exposure centroids or
+    ground-based L-band) puts the 2018-23 excess on the target, or if the neighbour is shown to be non-variable.
+  status: disfavored
+  confidence: 0.04
+  author: claude-opus-5.5
+  at: '2026-10-27T06:05:08+00:00'
+- id: H5
+  klass: artifact_instrumental
+  statement: The optical event is a calibration artifact of the single AAVSO observer.
+  supports:
+  - C11
+  - C12
+  - C15
+  conflicts:
+  - C2
+  - C4
+  - C7
+  - C9
+  would_falsify: The observer does produce real instrumental artifacts at the 0.1-0.5 mag level (C11,
+    C12), so the worry is legitimate. But an artifact would have to fake 1-2 mag, colour-consistent, physically
+    chromatic dips lasting ten months, recover smoothly, and coincide with an independent infrared event.
+    Falsified by any second-observer or survey light curve (ASAS-SN, which named the star, or Gaia DR4
+    epoch photometry) showing the 2021-22 dips.
+  status: disfavored
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T06:05:09+00:00'
+- id: H6
+  klass: yso_dipper
+  statement: A young star (the 4.1 d TESS period could be rotation of a young G star) with variable extinction
+    from an inner disk.
+  supports:
+  - C5
+  - C16
+  conflicts:
+  - C1
+  - C10
+  would_falsify: 'Already disfavoured: classic dippers have a permanent inner-disk infrared excess, whereas
+    this star was photospheric in W1-W2 for 3.5 years before 2018 and again after 2023, and has been optically
+    flat to 0.005 mag for a year. Revived by spectroscopic accretion signatures or a permanent excess
+    at longer wavelengths.'
+  status: disfavored
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-27T06:05:09+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'No renewed fading: the median AAVSO V between 2027-01-01 and 2027-06-15 will be less than
+    0.05 mag fainter than the median over 2026-01-01 to 2026-06-15.'
+  check:
+    series: AAVSO:V
+    start: 61406.0
+    end: 61571.0
+    statistic: median
+    baseline:
+    - 61041.0
+    - 61206.0
+    op: <
+    value: 0.05
+  probability: 0.88
+  resolve_by: '2027-07-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T06:06:28+00:00'
+- id: P2
+  hypothesis: H1
+  statement: 'Residual clearing continues (the coin-flip one): the median AAVSO V between 2027-01-01 and
+    2027-06-15 will be more than 0.005 mag BRIGHTER than the median over 2026-01-01 to 2026-06-15 (2025-to-2026
+    same-season change was -0.0045).'
+  check:
+    series: AAVSO:V
+    start: 61406.0
+    end: 61571.0
+    statistic: median
+    baseline:
+    - 61041.0
+    - 61206.0
+    op: <
+    value: -0.005
+  probability: 0.4
+  resolve_by: '2027-07-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T06:06:29+00:00'
+- id: P3
+  hypothesis: H1
+  statement: 'A new dip episode: the faintest-2% level (98th percentile) of AAVSO V between 2027-01-01
+    and 2028-06-15 will be more than 0.2 mag fainter than the 2026-01-01 to 2026-06-15 median.'
+  check:
+    series: AAVSO:V
+    start: 61406.0
+    end: 61937.0
+    statistic: faintest
+    baseline:
+    - 61041.0
+    - 61206.0
+    op: '>'
+    value: 0.2
+  probability: 0.08
+  resolve_by: '2028-07-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-27T06:06:30+00:00'
+literature:
+- bibcode: 2023Natur.622..251K
+  note: Kenworthy et al. 2023, 'A planetary collision afterglow and transit of the resultant debris cloud'
+- bibcode: 2023ApJ...954..140M
+  note: 'Marshall et al. 2023: evolution of the circumstellar dust'
+- bibcode: 2021ATel14879....1R
+  note: 'Rizzo Smith et al. 2021: discovery ATel'
+featured: true
+created_at: '2026-10-27T05:35:05+00:00'

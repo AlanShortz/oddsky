@@ -1,0 +1,234 @@
+id: T05
+title: Trial star T05
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: TESS shows a significant periodic signal at 5.595 d (Lomb-Scargle power 0.007; FAP 2e-16 under
+    a white-noise assumption), with alias peaks at 5.27 and 5.47 d that are window-related. The top peak
+    is not flagged as a survey or Earth rhythm.
+  tag: computed
+  calls:
+  - K3
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:21:54+00:00'
+- id: C2
+  text: 'The TESS light curve is tiny: 2-98 percentile range about 2.0 ppt, robust scatter 0.44 ppt, median
+    error 0.52 ppt. No dips or brightenings are found, and the two halves of the record have identical
+    medians (0.0 difference within 1e-5), so the signal is a low-amplitude modulation near the noise.'
+  tag: observed
+  calls:
+  - K5
+  - K4
+  - K8
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:21:55+00:00'
+- id: C3
+  text: 'NEOWISE shows no variability and no IR excess: W1 robust scatter 1.5 mmag, slope 0.0003 mag/yr
+    over 3789 days, and W1-W2 median -0.04 mag (range 0.06) across 15 visits, consistent with a photosphere.
+    The W1-W2 anti-correlation with W1 (r = -0.56) is at the level of the noise and not evidence of warm
+    dust.'
+  tag: observed
+  calls:
+  - K1
+  - K7
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:21:56+00:00'
+- id: C4
+  text: Gaia DR3 gives G = 10.54, Teff about 6040 K (GSP-Phot), BP-RP 0.71, parallax/error 300, and RUWE
+    1.07 (single-star-like astrometry). Absolute G is about 3.1, somewhat brighter than a main-sequence
+    star of this colour.
+  tag: observed
+  calls:
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:21:56+00:00'
+- id: C5
+  text: Gaia carries a non-single-star flag of 2 in the overview, but RUWE is good. Taken together with
+    absolute G slightly above the main sequence, the star may be a slightly evolved G subgiant; whether
+    it has a companion is not established by these data.
+  tag: inferred
+  calls:
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:21:57+00:00'
+- id: C6
+  text: 'Neighbourhood is benign for TESS: three Gaia sources lie 24-26 arcsec away (G 16.5-18.4) with
+    combined flux ratio about 0.5% of the target in G; TESS CROWDSAP is 0.99. A neighbour would need about
+    25 percent amplitude to produce a 1 ppt signal, which is implausible.'
+  tag: computed
+  calls:
+  - K6
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:21:58+00:00'
+- id: C7
+  text: 'Only one optical instrument (TESS) covers the 5.6-d signal. The skeptic flags this as the only
+    uncorroborated point: nothing here has been seen by a second instrument, so the period is not independently
+    confirmed.'
+  tag: observed
+  calls:
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:21:59+00:00'
+hypotheses:
+- id: H1
+  klass: rotation_spots
+  statement: Starspots on a Sun-like G subgiant rotating with a 5.6-d period modulate the TESS flux at
+    the parts-per-thousand level, with no IR excess and no dust.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  conflicts: []
+  would_falsify: A period that drifts or changes between the two TESS halves (C2 shows none), a period
+    that is not the rotation period given the star radius (a 5.6 d period needs v sin i consistent with
+    a slightly evolved star), or a spot amplitude that is inconsistent with a 6000 K photosphere would
+    weaken it. A spectroscopic vsini check would decide it; none is in the case.
+  status: live
+  confidence: 0.71
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:18+00:00'
+- id: H2
+  klass: eclipse_companion
+  statement: A close companion produces the 5.6-d modulation through ellipsoidal or reflection effects
+    (a binary with a dark companion), consistent with the Gaia non-single-star flag.
+  supports:
+  - C1
+  - C5
+  conflicts: []
+  would_falsify: No ellipsoidal (two-per-orbit) harmonic or reflection shape at 2.8 or 5.6 d in the TESS
+    data, and RUWE that stays at 1.07 with no orbital astrometric signature, would argue against it. Current
+    evidence is consistent with either this or rotation.
+  status: live
+  confidence: 0.06
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:19+00:00'
+- id: H3
+  klass: pulsation
+  statement: Intrinsic pulsation (non-radial g-mode or similar) at a 5.6-d period.
+  supports:
+  - C1
+  conflicts: []
+  would_falsify: Pulsation at a period this long for a 6000 K star is atypical; a clean sinusoid with
+    a stable phase and no harmonics would be consistent with rotation rather than pulsation. A multi-frequency
+    pattern would support pulsation.
+  status: live
+  confidence: 0.05
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:20+00:00'
+- id: H4
+  klass: artifact_instrumental
+  statement: A TESS systematic (momentum-dump cadence, pointing jitter or sector-level detrending) produces
+    the 5.6-d peak.
+  supports:
+  - C1
+  - C7
+  conflicts: []
+  would_falsify: A 5.6-d period that is not a multiple of the momentum-dump cadence and that is present
+    in two independent sector sets would argue against it; the skeptic found it is not a known Earth or
+    survey rhythm.
+  status: live
+  confidence: 0.05
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:21+00:00'
+- id: H5
+  klass: artifact_blend
+  statement: A neighbour star at 24-26 arcsec, with large-amplitude variability, produces the 5.6-d signal
+    in the TESS pixel.
+  supports:
+  - C6
+  conflicts: []
+  would_falsify: The neighbours contribute about 0.5% of the target G flux; a 1 ppt signal would require
+    about 25 percent amplitude in a neighbour, which is implausible. A neighbour light curve with a 5.6-d
+    period at that amplitude would support it.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:22+00:00'
+- id: H6
+  klass: normal
+  statement: The 5.6-d signal is a noise or systematic residual, and nothing astrophysical needs explaining
+    at the precision of the data.
+  supports:
+  - C2
+  conflicts: []
+  would_falsify: A significant peak with FAP 2e-16 and a stable period across two halves (C1, C2) argues
+    against it, though the amplitude is at the noise level.
+  status: live
+  confidence: 0.05
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:22+00:00'
+- id: H7
+  klass: dust_formation
+  statement: The star makes dust. Ruled out by the flat W1 light curve and W1-W2 colour near the photosphere.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: Warm dust emission would appear as W1-W2 above about 0.3 mag and W1 brightness anti-correlated
+    with colour at a much larger amplitude than seen here.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:23+00:00'
+- id: H8
+  klass: dust_occultation
+  statement: Circumstellar dust passes in front of the star.
+  supports: []
+  conflicts: []
+  would_falsify: No dips or brightenings in TESS (C2) and no IR excess (C3) make this unlikely; a dust-occultation
+    event would show dips of at least a percent or more.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:24+00:00'
+- id: H9
+  klass: yso_dipper
+  statement: Young star with variable extinction from an inner disk.
+  supports: []
+  conflicts: []
+  would_falsify: A Teff 6000 K slightly evolved star with no IR excess and no dips is not a YSO dipper
+    candidate (C2, C3, C4).
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:25+00:00'
+- id: H10
+  klass: collision_debris
+  statement: Debris from a collision produces optical extinction and IR excess.
+  supports: []
+  conflicts: []
+  would_falsify: No IR excess in W1-W2 (C3) and no dips (C2) argue against it.
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:25+00:00'
+- id: H11
+  klass: eruptive
+  statement: Outbursts or flares.
+  supports: []
+  conflicts: []
+  would_falsify: No brightenings or outbursts in the TESS record (C2).
+  status: live
+  confidence: 0.01
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:26+00:00'
+- id: H12
+  klass: artifact_instrumental
+  statement: Placeholder for the artefact class
+  supports: []
+  conflicts: []
+  would_falsify: x
+  status: rejected
+  confidence: 0.0
+  author: claude-haiku-5.5
+  at: '2026-10-27T06:22:27+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

@@ -1,0 +1,59 @@
+id: OS-0006
+title: The star that won't stay quiet
+hook: Every few weeks, for a century of amateur records, it leaps fiftyfold in brightness in a day. Something
+  is feeding on its neighbour.
+status: observation
+target:
+  name: SS Cyg
+  ra: 325.67834770733
+  dec: 43.58607440069
+  aliases:
+  - TIC 190696047
+  - UCAC4 668-104538
+  - WISE J214242.91+433510.2
+  - LAMOST J214242.80+433509.8
+  - WISEA J214242.90+433510.3
+  - Gaia DR3 1972957892448494592
+  - SRGA J214243.4+433509
+  - 3XMM J214242.9+433510
+  - '[KRL2007b] 389'
+  - PLX 5240
+  - SBC9 1326
+  - 1H 2140+433
+  - 2E  4511
+  - 2RE J2142+433
+  - 3A 2140+433
+  - AAVSO 2138+43
+  - ALS 11959
+  - BD+42  4189a
+  - CSI+42  4189  1
+  - EM* CDS 1268
+  - GCRV 13641
+  - GEN# +1.00206697
+  - HD 206697
+  - INTEGRAL1 121
+  - KPD 2140+4321
+  - LS III +43   24
+  - RE J2142+433
+  - RE J214241+433511
+  - SBC7   872
+  - SV* HV    84
+  - TYC 3196-723-1
+  - UBV M  50941
+  - UCAC2  46852538
+  - USNO 568
+  - V* SS Cyg
+  - '[BM83] X2140+433'
+  - '[FS2003] 1134'
+  - '[KW97] 59-12'
+  - PLX 5240.00
+  - 1E 2140.7+4321
+  gaia_source_id: 1972957892448494592
+  otype: CV*
+summary: ''
+claims: []
+hypotheses: []
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:04:24+00:00'

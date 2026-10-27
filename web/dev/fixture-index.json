@@ -1,0 +1,1363 @@
+{
+ "cases": [
+  {
+   "id": "OS-0001",
+   "title": "The star that glowed before it dimmed",
+   "hook": "In 2018 this Sun-like star began to glow in the infrared. Three years later it nearly vanished in visible light. What happened in between?",
+   "status": "reproduced",
+   "target": "ASASSN-21qj",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:I",
+    "AAVSO:R",
+    "AAVSO:V",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 9,
+   "n_hypotheses": 4,
+   "n_predictions": 3,
+   "featured": true
+  },
+  {
+   "id": "OS-0002",
+   "title": "The most mysterious star in the galaxy (allegedly)",
+   "hook": "Boyajian's Star: irregular dips of up to 22% that no planet could make. Aliens were proposed. Dust was found.",
+   "status": "observation",
+   "target": "KIC 8462852",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:Blue-Vis.",
+    "AAVSO:CR",
+    "AAVSO:CV",
+    "AAVSO:I",
+    "AAVSO:R",
+    "AAVSO:SG",
+    "AAVSO:SI",
+    "AAVSO:SR",
+    "AAVSO:TG",
+    "AAVSO:U",
+    "AAVSO:V",
+    "AAVSO:Vis.",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  },
+  {
+   "id": "OS-0003",
+   "title": "The eclipse that comes back every 5.6 years",
+   "hook": "Every 2,050 days something dark and enormous passes in front of this star, and every time the shadow looks different.",
+   "status": "observation",
+   "target": "EE Cep",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:CV",
+    "AAVSO:Green-Vis.",
+    "AAVSO:I",
+    "AAVSO:N/A",
+    "AAVSO:R",
+    "AAVSO:RJ",
+    "AAVSO:SG",
+    "AAVSO:SI",
+    "AAVSO:SR",
+    "AAVSO:TB",
+    "AAVSO:TG",
+    "AAVSO:TR",
+    "AAVSO:U",
+    "AAVSO:V",
+    "AAVSO:Vis.",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  },
+  {
+   "id": "OS-0004",
+   "title": "The star that smokes",
+   "hook": "For months it shines steadily; then it vanishes by eight magnitudes, as if someone blew out a candle. It makes its own soot.",
+   "status": "observation",
+   "target": "R CrB",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:Blue-Vis.",
+    "AAVSO:CR",
+    "AAVSO:CV",
+    "AAVSO:Green-Vis.",
+    "AAVSO:I",
+    "AAVSO:N/A",
+    "AAVSO:R",
+    "AAVSO:TB",
+    "AAVSO:TG",
+    "AAVSO:TR",
+    "AAVSO:U",
+    "AAVSO:V",
+    "AAVSO:Vis.",
+    "AAVSO:Yellow-Vis.",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  },
+  {
+   "id": "OS-0005",
+   "title": "Breathing in, breathing out",
+   "hook": "A giant star swelling and shrinking every 14 months, brightening a thousandfold. Strange to the eye, ordinary to astrophysics.",
+   "status": "observation",
+   "target": "R Cyg",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:CR",
+    "AAVSO:CV",
+    "AAVSO:Green-Vis.",
+    "AAVSO:H",
+    "AAVSO:I",
+    "AAVSO:IJ",
+    "AAVSO:J",
+    "AAVSO:N/A",
+    "AAVSO:R",
+    "AAVSO:RJ",
+    "AAVSO:SG",
+    "AAVSO:TG",
+    "AAVSO:V",
+    "AAVSO:Vis.",
+    "TESS:TESS"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  },
+  {
+   "id": "OS-0006",
+   "title": "The star that won't stay quiet",
+   "hook": "Every few weeks, for a century of amateur records, it leaps fiftyfold in brightness in a day. Something is feeding on its neighbour.",
+   "status": "observation",
+   "target": "SS Cyg",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:Blue-Vis.",
+    "AAVSO:CR",
+    "AAVSO:CV",
+    "AAVSO:Green-Vis.",
+    "AAVSO:I",
+    "AAVSO:N/A",
+    "AAVSO:R",
+    "AAVSO:SG",
+    "AAVSO:SI",
+    "AAVSO:SR",
+    "AAVSO:TB",
+    "AAVSO:TG",
+    "AAVSO:TR",
+    "AAVSO:U",
+    "AAVSO:V",
+    "AAVSO:Vis.",
+    "AAVSO:Yellow-Vis.",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  },
+  {
+   "id": "OS-0007",
+   "title": "The young star that went dark in 2011",
+   "hook": "A famous, well-behaved young star that suddenly dimmed by two magnitudes and stayed dim for a decade.",
+   "status": "observation",
+   "target": "AA Tau",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:CV",
+    "AAVSO:I",
+    "AAVSO:R",
+    "AAVSO:V",
+    "AAVSO:Vis.",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  },
+  {
+   "id": "OS-0008",
+   "title": "Control A",
+   "hook": "A quiet G star in TESS's continuous viewing zone. Used in trials as a canvas for planted artifacts.",
+   "status": "observation",
+   "target": "Gaia DR3 1633269723578294016",
+   "series": [
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  },
+  {
+   "id": "OS-0009",
+   "title": "Control B",
+   "hook": "A quiet G star in TESS's continuous viewing zone. Nothing to see here, and that is the test.",
+   "status": "observation",
+   "target": "Gaia DR3 1441063855405214080",
+   "series": [
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 0,
+   "n_hypotheses": 0,
+   "n_predictions": 0,
+   "featured": false
+  }
+ ],
+ "scorecards": [
+  {
+   "grader": "v2 (extremes = nightly medians)",
+   "trial": "strange-stars-001",
+   "agent": "claude-haiku-5.5",
+   "agent_meta": {
+    "agent": "claude-haiku-5.5",
+    "model_id": "claude-haiku-5-5",
+    "harness": "Claude Code subagents (2 parallel, 5 packets each), Oddsky CLI in blind mode",
+    "run_at": "2026-10-27",
+    "prompt": "trials/strange-stars-001/INVESTIGATOR_PROMPT.md",
+    "notes": "Honour-system blinding (CLI, not MCP). Self-reported deviations: read harness-persisted CLI output files with python/grep/awk (not the answers); probe calls recorded junk claims and mis-referenced claim ids (later marked rejected). Recognised (self-reported): R CrB possibly (T04); no others.\n",
+    "recognised": {
+     "T01": false,
+     "T02": false,
+     "T03": false,
+     "T04": "possible",
+     "T05": false,
+     "T06": false,
+     "T07": false,
+     "T08": false,
+     "H01": false,
+     "H02": false
+    }
+   },
+   "run_at": "2026-10-27",
+   "scored_at": "2026-10-27T06:31:22+00:00",
+   "answers_sha256": "4608af909963336a090c0a1fa13ac53fca2a98344c2092939decc5a4522c02a3",
+   "summary": {
+    "n": 10,
+    "top1": 0.5,
+    "top2": 0.6,
+    "brier": 0.707,
+    "mean_p_truth": 0.383,
+    "predictions": 6,
+    "predictions_resolved": 3,
+    "predictions_true": 2,
+    "prediction_brier": 0.092,
+    "n_unrecognised": 9,
+    "top1_unrecognised": 0.444,
+    "contamination_note": "self-reported: did the investigator think it recognised the star? Famous stars leak through blinding; scores on unrecognised packets are the cleaner measure.",
+    "baseline_note": "uniform guessing over 11 classes: top1 0.091, brier 0.909"
+   },
+   "cases": [
+    {
+     "case": "T01",
+     "truth": "pulsation",
+     "ranked": [
+      {
+       "klass": "pulsation",
+       "p": 0.83
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.03
+      },
+      {
+       "klass": "dust_formation",
+       "p": 0.02
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.02
+      },
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.02
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.032,
+     "p_truth": 0.83,
+     "n_claims": 10,
+     "claims_by_tag": {
+      "computed": 8,
+      "observed": 1,
+      "inferred": 1
+     },
+     "mode": "blind",
+     "real_case": "OS-0005",
+     "recognised": "False"
+    },
+    {
+     "case": "T02",
+     "truth": "artifact_instrumental",
+     "ranked": [
+      {
+       "klass": "normal",
+       "p": 0.812
+      },
+      {
+       "klass": "rotation_spots",
+       "p": 0.04
+      },
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.03
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.02
+      },
+      {
+       "klass": "artifact_blend",
+       "p": 0.02
+      }
+     ],
+     "top1": false,
+     "top2": false,
+     "brier": 1.604,
+     "p_truth": 0.03,
+     "n_claims": 6,
+     "claims_by_tag": {
+      "observed": 1,
+      "computed": 4,
+      "inferred": 1
+     },
+     "mode": "blind",
+     "real_case": "OS-0008",
+     "recognised": "False"
+    },
+    {
+     "case": "T03",
+     "truth": "collision_debris",
+     "ranked": [
+      {
+       "klass": "dust_occultation",
+       "p": 0.37
+      },
+      {
+       "klass": "collision_debris",
+       "p": 0.25
+      },
+      {
+       "klass": "yso_dipper",
+       "p": 0.12
+      },
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.08
+      },
+      {
+       "klass": "artifact_blend",
+       "p": 0.05
+      }
+     ],
+     "top1": false,
+     "top2": true,
+     "brier": 0.726,
+     "p_truth": 0.25,
+     "n_claims": 7,
+     "claims_by_tag": {
+      "observed": 1,
+      "computed": 4,
+      "inferred": 2
+     },
+     "mode": "blind",
+     "real_case": "OS-0001",
+     "recognised": "False"
+    },
+    {
+     "case": "T04",
+     "truth": "dust_formation",
+     "ranked": [
+      {
+       "klass": "dust_formation",
+       "p": 0.55
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.25
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.05
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.03
+      },
+      {
+       "klass": "collision_debris",
+       "p": 0.03
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.271,
+     "p_truth": 0.55,
+     "n_claims": 10,
+     "claims_by_tag": {
+      "observed": 4,
+      "computed": 5,
+      "inferred": 1
+     },
+     "mode": "blind",
+     "real_case": "OS-0004",
+     "recognised": "possible"
+    },
+    {
+     "case": "T05",
+     "truth": "normal",
+     "ranked": [
+      {
+       "klass": "rotation_spots",
+       "p": 0.71
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.06
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.05
+      },
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.05
+      },
+      {
+       "klass": "normal",
+       "p": 0.05
+      }
+     ],
+     "top1": false,
+     "top2": false,
+     "brier": 1.417,
+     "p_truth": 0.05,
+     "n_claims": 7,
+     "claims_by_tag": {
+      "computed": 2,
+      "observed": 4,
+      "inferred": 1
+     },
+     "mode": "blind",
+     "real_case": "OS-0009",
+     "recognised": "False"
+    },
+    {
+     "case": "T06",
+     "truth": "eruptive",
+     "ranked": [
+      {
+       "klass": "eruptive",
+       "p": 0.77
+      },
+      {
+       "klass": "yso_dipper",
+       "p": 0.04
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.03
+      },
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.03
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.02
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.059,
+     "p_truth": 0.77,
+     "n_claims": 7,
+     "claims_by_tag": {
+      "observed": 1,
+      "computed": 6
+     },
+     "mode": "blind",
+     "real_case": "OS-0006",
+     "recognised": "False"
+    },
+    {
+     "case": "T07",
+     "truth": "dust_occultation",
+     "ranked": [
+      {
+       "klass": "normal",
+       "p": 0.62
+      },
+      {
+       "klass": "rotation_spots",
+       "p": 0.1
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.1
+      },
+      {
+       "klass": "artifact_blend",
+       "p": 0.06
+      },
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.04
+      }
+     ],
+     "top1": false,
+     "top2": false,
+     "brier": 1.391,
+     "p_truth": 0.01,
+     "n_claims": 7,
+     "claims_by_tag": {
+      "observed": 3,
+      "computed": 3,
+      "inferred": 1
+     },
+     "mode": "blind",
+     "real_case": "OS-0002",
+     "recognised": "False"
+    },
+    {
+     "case": "T08",
+     "truth": "yso_dipper",
+     "ranked": [
+      {
+       "klass": "yso_dipper",
+       "p": 0.5
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.1
+      },
+      {
+       "klass": "eruptive",
+       "p": 0.09
+      },
+      {
+       "klass": "rotation_spots",
+       "p": 0.06
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.06
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.282,
+     "p_truth": 0.5,
+     "n_claims": 9,
+     "claims_by_tag": {
+      "observed": 4,
+      "computed": 5
+     },
+     "mode": "blind",
+     "real_case": "OS-0007",
+     "recognised": "False"
+    },
+    {
+     "case": "H01",
+     "truth": "eclipse_companion",
+     "ranked": [
+      {
+       "klass": "pulsation",
+       "p": 0.55
+      },
+      {
+       "klass": "dust_formation",
+       "p": 0.12
+      },
+      {
+       "klass": "normal",
+       "p": 0.07
+      },
+      {
+       "klass": "eruptive",
+       "p": 0.06
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.05
+      }
+     ],
+     "top1": false,
+     "top2": false,
+     "brier": 1.233,
+     "p_truth": 0.05,
+     "n_claims": 8,
+     "claims_by_tag": {
+      "observed": 1,
+      "computed": 6,
+      "inferred": 1
+     },
+     "mode": "hindsight",
+     "real_case": "OS-0003",
+     "recognised": "False"
+    },
+    {
+     "case": "H02",
+     "truth": "eruptive",
+     "ranked": [
+      {
+       "klass": "eruptive",
+       "p": 0.79
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.05
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.04
+      },
+      {
+       "klass": "rotation_spots",
+       "p": 0.02
+      },
+      {
+       "klass": "yso_dipper",
+       "p": 0.02
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.05,
+     "p_truth": 0.79,
+     "n_claims": 8,
+     "claims_by_tag": {
+      "observed": 2,
+      "computed": 5,
+      "inferred": 1
+     },
+     "mode": "hindsight",
+     "real_case": "OS-0006",
+     "recognised": "False"
+    }
+   ],
+   "predictions": [
+    {
+     "case": "H01",
+     "id": "P1",
+     "statement": "The median of AAVSO:V over days 19800-20000 stays brighter than 10.95 (the quiet recent level is about 10.80).",
+     "probability": 0.85,
+     "outcome": "true",
+     "observed": 10.801,
+     "n_points": 152,
+     "brier": 0.023,
+     "note": "median over window = 10.801 (152 points, 62 nights)"
+    },
+    {
+     "case": "H01",
+     "id": "P2",
+     "statement": "The median of AAVSO:V over days 19800-20400 is fainter than 10.80 (the recent quiet level): a slight drift fainter, close to a coin flip.",
+     "probability": 0.5,
+     "outcome": "true",
+     "observed": 10.863,
+     "n_points": 18319,
+     "brier": 0.25,
+     "note": "median over window = 10.863 (18319 points, 322 nights)"
+    },
+    {
+     "case": "H01",
+     "id": "P3",
+     "statement": "The median of AAVSO:V over days 19800-20200 is brighter than 10.60, i.e. a clear 0.2-mag brightening, which the record has not shown.",
+     "probability": 0.04,
+     "outcome": "false",
+     "observed": 10.907,
+     "n_points": 13698,
+     "brier": 0.002,
+     "note": "median over window = 10.907 (13698 points, 214 nights)"
+    },
+    {
+     "case": "H02",
+     "id": "P1",
+     "statement": "Median of AAVSO:V over days 49788-50288 is fainter than 11.0 mag (magnitude above 11.0).",
+     "probability": 0.5,
+     "outcome": "pending",
+     "note": "window closes at MJD 61600; data end 61340. Will be graded when the sky gets there."
+    },
+    {
+     "case": "H02",
+     "id": "P2",
+     "statement": "Median of AAVSO:V over days 49788-52000 is fainter than 10.5 mag.",
+     "probability": 0.7,
+     "outcome": "pending",
+     "note": "window closes at MJD 63312; data end 61340. Will be graded when the sky gets there."
+    },
+    {
+     "case": "H02",
+     "id": "P3",
+     "statement": "Median of AAVSO:V over days 49788-50288 is brighter than 10.0 mag (sustained brightening, not just outbursts).",
+     "probability": 0.15,
+     "outcome": "pending",
+     "note": "window closes at MJD 61600; data end 61340. Will be graded when the sky gets there."
+    }
+   ],
+   "grader_v1": {
+    "summary": {
+     "predictions_resolved": 3,
+     "predictions_true": 2,
+     "prediction_brier": 0.092
+    },
+    "predictions": [
+     {
+      "case": "H01",
+      "id": "P1",
+      "outcome": "true",
+      "observed": 10.801
+     },
+     {
+      "case": "H01",
+      "id": "P2",
+      "outcome": "true",
+      "observed": 10.863
+     },
+     {
+      "case": "H01",
+      "id": "P3",
+      "outcome": "false",
+      "observed": 10.907
+     },
+     {
+      "case": "H02",
+      "id": "P1",
+      "outcome": "pending",
+      "observed": null
+     },
+     {
+      "case": "H02",
+      "id": "P2",
+      "outcome": "pending",
+      "observed": null
+     },
+     {
+      "case": "H02",
+      "id": "P3",
+      "outcome": "pending",
+      "observed": null
+     }
+    ],
+    "why_changed": "Grader v1 took 'brightest'/'faintest' as the 2nd/98th percentile of all points in the window. For SS Cyg, ~1,000 quiescent points per outburst night pushed real outbursts (V = 8.85) below that cutoff, so 'at least one outburst brighter than 9.3' was graded false although the outburst happened. v2 uses the extreme nightly median. Changed after the reveal, so both gradings are published; only H02 P1 and P2 differ."
+   },
+   "process_notes": "Honour-system blinding (CLI, not MCP). Self-reported deviations: read harness-persisted CLI output files with python/grep/awk (not the answers); probe calls recorded junk claims and mis-referenced claim ids (later marked rejected). Recognised (self-reported): R CrB possibly (T04); no others.\n"
+  },
+  {
+   "grader": "v2 (extremes = nightly medians)",
+   "trial": "strange-stars-001",
+   "agent": "claude-opus-5.5",
+   "agent_meta": {
+    "agent": "claude-opus-5.5",
+    "model_id": "claude-opus-5-5",
+    "harness": "Claude Code subagents (5 parallel, 2 packets each), Oddsky CLI in blind mode",
+    "run_at": "2026-10-27",
+    "prompt": "trials/strange-stars-001/INVESTIGATOR_PROMPT.md",
+    "notes": "Honour-system blinding (CLI, not MCP). Self-reported deviations: python one-liners to trim JSON output for display (no analysis); some exploratory probe calls recorded junk claims before argument names were found. Recognised (self-reported, tagged speculated): R Cyg (T01, guess), ASASSN-21qj (T03), SS Cyg (T06, H02), Boyajian's Star (T07, probable), AA Tau (T08, tentative), R CrB (T04), EE Cep (H01).\n",
+    "recognised": {
+     "T01": "guess",
+     "T02": false,
+     "T03": true,
+     "T04": true,
+     "T05": false,
+     "T06": true,
+     "T07": "probable",
+     "T08": "tentative",
+     "H01": true,
+     "H02": true
+    }
+   },
+   "run_at": "2026-10-27",
+   "scored_at": "2026-10-27T06:31:20+00:00",
+   "answers_sha256": "4608af909963336a090c0a1fa13ac53fca2a98344c2092939decc5a4522c02a3",
+   "summary": {
+    "n": 10,
+    "top1": 1.0,
+    "top2": 1.0,
+    "brier": 0.103,
+    "mean_p_truth": 0.769,
+    "predictions": 8,
+    "predictions_resolved": 8,
+    "predictions_true": 7,
+    "prediction_brier": 0.093,
+    "n_unrecognised": 2,
+    "top1_unrecognised": 1.0,
+    "contamination_note": "self-reported: did the investigator think it recognised the star? Famous stars leak through blinding; scores on unrecognised packets are the cleaner measure.",
+    "baseline_note": "uniform guessing over 11 classes: top1 0.091, brier 0.909"
+   },
+   "cases": [
+    {
+     "case": "T01",
+     "truth": "pulsation",
+     "ranked": [
+      {
+       "klass": "pulsation",
+       "p": 0.88
+      },
+      {
+       "klass": "dust_formation",
+       "p": 0.03
+      },
+      {
+       "klass": "normal",
+       "p": 0.03
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.02
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.02
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.017,
+     "p_truth": 0.88,
+     "n_claims": 8,
+     "claims_by_tag": {
+      "computed": 6,
+      "observed": 1,
+      "inferred": 1
+     },
+     "mode": "blind",
+     "real_case": "OS-0005",
+     "recognised": "guess"
+    },
+    {
+     "case": "T02",
+     "truth": "artifact_instrumental",
+     "ranked": [
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.33
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.3
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.14
+      },
+      {
+       "klass": "collision_debris",
+       "p": 0.05
+      },
+      {
+       "klass": "artifact_blend",
+       "p": 0.04
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.566,
+     "p_truth": 0.33,
+     "n_claims": 10,
+     "claims_by_tag": {
+      "observed": 3,
+      "computed": 4,
+      "inferred": 2,
+      "speculated": 1
+     },
+     "mode": "blind",
+     "real_case": "OS-0008",
+     "recognised": "False"
+    },
+    {
+     "case": "T03",
+     "truth": "collision_debris",
+     "ranked": [
+      {
+       "klass": "collision_debris",
+       "p": 0.72
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.12
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.04
+      },
+      {
+       "klass": "yso_dipper",
+       "p": 0.03
+      },
+      {
+       "klass": "dust_formation",
+       "p": 0.03
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.098,
+     "p_truth": 0.72,
+     "n_claims": 9,
+     "claims_by_tag": {
+      "observed": 3,
+      "computed": 3,
+      "inferred": 2,
+      "speculated": 1
+     },
+     "mode": "blind",
+     "real_case": "OS-0001",
+     "recognised": "True"
+    },
+    {
+     "case": "T04",
+     "truth": "dust_formation",
+     "ranked": [
+      {
+       "klass": "dust_formation",
+       "p": 0.88
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.04
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.02
+      },
+      {
+       "klass": "yso_dipper",
+       "p": 0.02
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.02
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.018,
+     "p_truth": 0.88,
+     "n_claims": 8,
+     "claims_by_tag": {
+      "computed": 6,
+      "inferred": 1,
+      "speculated": 1
+     },
+     "mode": "blind",
+     "real_case": "OS-0004",
+     "recognised": "True"
+    },
+    {
+     "case": "T05",
+     "truth": "normal",
+     "ranked": [
+      {
+       "klass": "normal",
+       "p": 0.85
+      },
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.05
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.03
+      },
+      {
+       "klass": "rotation_spots",
+       "p": 0.03
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.02
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.027,
+     "p_truth": 0.85,
+     "n_claims": 8,
+     "claims_by_tag": {
+      "observed": 1,
+      "computed": 5,
+      "inferred": 2
+     },
+     "mode": "blind",
+     "real_case": "OS-0009",
+     "recognised": "False"
+    },
+    {
+     "case": "T06",
+     "truth": "eruptive",
+     "ranked": [
+      {
+       "klass": "eruptive",
+       "p": 0.92
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.02
+      },
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.02
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.01
+      },
+      {
+       "klass": "rotation_spots",
+       "p": 0.01
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.008,
+     "p_truth": 0.92,
+     "n_claims": 9,
+     "claims_by_tag": {
+      "observed": 2,
+      "computed": 5,
+      "inferred": 1,
+      "speculated": 1
+     },
+     "mode": "blind",
+     "real_case": "OS-0006",
+     "recognised": "True"
+    },
+    {
+     "case": "T07",
+     "truth": "dust_occultation",
+     "ranked": [
+      {
+       "klass": "dust_occultation",
+       "p": 0.62
+      },
+      {
+       "klass": "collision_debris",
+       "p": 0.08
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.07
+      },
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.05
+      },
+      {
+       "klass": "normal",
+       "p": 0.04
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.164,
+     "p_truth": 0.62,
+     "n_claims": 10,
+     "claims_by_tag": {
+      "observed": 2,
+      "computed": 5,
+      "inferred": 2,
+      "speculated": 1
+     },
+     "mode": "blind",
+     "real_case": "OS-0002",
+     "recognised": "probable"
+    },
+    {
+     "case": "T08",
+     "truth": "yso_dipper",
+     "ranked": [
+      {
+       "klass": "yso_dipper",
+       "p": 0.72
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.08
+      },
+      {
+       "klass": "eruptive",
+       "p": 0.08
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.05
+      },
+      {
+       "klass": "rotation_spots",
+       "p": 0.03
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.095,
+     "p_truth": 0.72,
+     "n_claims": 7,
+     "claims_by_tag": {
+      "observed": 1,
+      "computed": 3,
+      "inferred": 2,
+      "speculated": 1
+     },
+     "mode": "blind",
+     "real_case": "OS-0007",
+     "recognised": "tentative"
+    },
+    {
+     "case": "H01",
+     "truth": "eclipse_companion",
+     "ranked": [
+      {
+       "klass": "eclipse_companion",
+       "p": 0.87
+      },
+      {
+       "klass": "dust_occultation",
+       "p": 0.08
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.02
+      },
+      {
+       "klass": "eruptive",
+       "p": 0.02
+      },
+      {
+       "klass": "artifact_blend",
+       "p": 0.01
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.024,
+     "p_truth": 0.87,
+     "n_claims": 7,
+     "claims_by_tag": {
+      "observed": 2,
+      "computed": 3,
+      "inferred": 2
+     },
+     "mode": "hindsight",
+     "real_case": "OS-0003",
+     "recognised": "True"
+    },
+    {
+     "case": "H02",
+     "truth": "eruptive",
+     "ranked": [
+      {
+       "klass": "eruptive",
+       "p": 0.9
+      },
+      {
+       "klass": "pulsation",
+       "p": 0.03
+      },
+      {
+       "klass": "eclipse_companion",
+       "p": 0.02
+      },
+      {
+       "klass": "artifact_instrumental",
+       "p": 0.02
+      },
+      {
+       "klass": "artifact_blend",
+       "p": 0.02
+      }
+     ],
+     "top1": true,
+     "top2": true,
+     "brier": 0.012,
+     "p_truth": 0.9,
+     "n_claims": 8,
+     "claims_by_tag": {
+      "computed": 6,
+      "inferred": 1,
+      "speculated": 1
+     },
+     "mode": "hindsight",
+     "real_case": "OS-0006",
+     "recognised": "True"
+    }
+   ],
+   "predictions": [
+    {
+     "case": "H01",
+     "id": "P1",
+     "statement": "Out-of-eclipse plateau continues: the median of AAVSO:V between days 19800 and 20120 is brighter than 10.86 (no new fading before the next predicted eclipse).",
+     "probability": 0.9,
+     "outcome": "true",
+     "observed": 10.805,
+     "n_points": 2014,
+     "brier": 0.01,
+     "note": "median over window = 10.805 (2014 points, 134 nights)"
+    },
+    {
+     "case": "H01",
+     "id": "P2",
+     "statement": "The next eclipse (ephemeris: minima 5840 + n*2048.3 d -> mid ~20178 +/- 10) is under way: median AAVSO:V between days 20165 and 20195 is fainter than 10.95.",
+     "probability": 0.75,
+     "outcome": "true",
+     "observed": 11.257,
+     "n_points": 6386,
+     "brier": 0.062,
+     "note": "median over window = 11.257 (6386 points, 31 nights)"
+    },
+    {
+     "case": "H01",
+     "id": "P3",
+     "statement": "Depth near 50/50: the core of the next eclipse is as deep as the 2014/2020-like events: median AAVSO:V between days 20170 and 20190 is fainter than 11.15 (previous comparable-window medians ranged ~11.05-11.4).",
+     "probability": 0.45,
+     "outcome": "true",
+     "observed": 11.255,
+     "n_points": 5803,
+     "brier": 0.303,
+     "note": "median over window = 11.255 (5803 points, 21 nights)"
+    },
+    {
+     "case": "H01",
+     "id": "P4",
+     "statement": "The eclipse has not yet begun by day 20140: median AAVSO:V between days 20115 and 20140 is brighter than 10.88.",
+     "probability": 0.75,
+     "outcome": "true",
+     "observed": 10.81,
+     "n_points": 2153,
+     "brier": 0.062,
+     "note": "median over window = 10.810 (2153 points, 26 nights)"
+    },
+    {
+     "case": "H02",
+     "id": "P1",
+     "statement": "At least one dwarf-nova outburst is recorded between days 49790 and 49900: brightest AAVSO:V point brighter than 9.3.",
+     "probability": 0.94,
+     "outcome": "true",
+     "observed": 8.849,
+     "n_points": 3965,
+     "brier": 0.004,
+     "note": "brightest over window = 8.849 (3965 points, 85 nights)"
+    },
+    {
+     "case": "H02",
+     "id": "P2",
+     "statement": "The next outburst (last began ~day 49744; recent intervals 23-43 d) is observed by day 49825: brightest AAVSO:V in 49788-49825 brighter than 9.5.",
+     "probability": 0.78,
+     "outcome": "true",
+     "observed": 8.943,
+     "n_points": 180,
+     "brier": 0.048,
+     "note": "brightest over window = 8.943 (180 points, 23 nights)"
+    },
+    {
+     "case": "H02",
+     "id": "P3",
+     "statement": "Median AAVSO:V in days 49800-49950 is fainter than 11.3 (recent 150-d medians 11.17-11.44; near coin-flip).",
+     "probability": 0.5,
+     "outcome": "true",
+     "observed": 11.627,
+     "n_points": 5964,
+     "brier": 0.25,
+     "note": "median over window = 11.627 (5964 points, 130 nights)"
+    },
+    {
+     "case": "H02",
+     "id": "P4",
+     "statement": "A repeat of the anomalous bright standstill-like state: median AAVSO:V in days 49800-49950 brighter than 10.8.",
+     "probability": 0.08,
+     "outcome": "false",
+     "observed": 11.627,
+     "n_points": 5964,
+     "brier": 0.006,
+     "note": "median over window = 11.627 (5964 points, 130 nights)"
+    }
+   ],
+   "grader_v1": {
+    "summary": {
+     "predictions_resolved": 8,
+     "predictions_true": 5,
+     "prediction_brier": 0.273
+    },
+    "predictions": [
+     {
+      "case": "H01",
+      "id": "P1",
+      "outcome": "true",
+      "observed": 10.805
+     },
+     {
+      "case": "H01",
+      "id": "P2",
+      "outcome": "true",
+      "observed": 11.257
+     },
+     {
+      "case": "H01",
+      "id": "P3",
+      "outcome": "true",
+      "observed": 11.255
+     },
+     {
+      "case": "H01",
+      "id": "P4",
+      "outcome": "true",
+      "observed": 10.81
+     },
+     {
+      "case": "H02",
+      "id": "P1",
+      "outcome": "false",
+      "observed": 9.40628
+     },
+     {
+      "case": "H02",
+      "id": "P2",
+      "outcome": "false",
+      "observed": 10.46116
+     },
+     {
+      "case": "H02",
+      "id": "P3",
+      "outcome": "true",
+      "observed": 11.627
+     },
+     {
+      "case": "H02",
+      "id": "P4",
+      "outcome": "false",
+      "observed": 11.627
+     }
+    ],
+    "why_changed": "Grader v1 took 'brightest'/'faintest' as the 2nd/98th percentile of all points in the window. For SS Cyg, ~1,000 quiescent points per outburst night pushed real outbursts (V = 8.85) below that cutoff, so 'at least one outburst brighter than 9.3' was graded false although the outburst happened. v2 uses the extreme nightly median. Changed after the reveal, so both gradings are published; only H02 P1 and P2 differ."
+   },
+   "process_notes": "Honour-system blinding (CLI, not MCP). Self-reported deviations: python one-liners to trim JSON output for display (no analysis); some exploratory probe calls recorded junk claims before argument names were found. Recognised (self-reported, tagged speculated): R Cyg (T01, guess), ASASSN-21qj (T03), SS Cyg (T06, H02), Boyajian's Star (T07, probable), AA Tau (T08, tentative), R CrB (T04), EE Cep (H01).\n"
+  }
+ ]
+}

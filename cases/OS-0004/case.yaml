@@ -1,0 +1,55 @@
+id: OS-0004
+title: The star that smokes
+hook: For months it shines steadily; then it vanishes by eight magnitudes, as if someone blew out a candle.
+  It makes its own soot.
+status: observation
+target:
+  name: R CrB
+  ra: 237.14339784473003
+  dec: 28.1567488479
+  aliases:
+  - TIC 284759010
+  - ATO J237.1433+28.1566
+  - ATO J237.1433+28.1567
+  - HIP 77442
+  - Gaia DR3 1224565824009709312
+  - GSC2 N1330022410
+  - PLX 3581
+  - AAVSO 1544+28A
+  - AG+28 1513
+  - BD+28  2477
+  - EM* CDS  886
+  - GC 21257
+  - GCRV  9116
+  - GEN# +1.00141527
+  - GSC 02039-01605
+  - HD 141527
+  - HIC  77442
+  - HR  5880
+  - IRAS 15465+2818
+  - N30 3552
+  - PPM 104338
+  - RAFGL 4219
+  - ROT  2225
+  - SAO  84015
+  - SKY# 28584
+  - TD1 18592
+  - TYC 2039-1605-1
+  - V* R CrB
+  - YZ  28  7350
+  - 2MASS J15483440+2809242
+  - PLX 3581.00
+  - ASAS J154834+2809.4
+  - Gaia DR1 1224565819711854208
+  - uvby98 100141527
+  - WEB 13113
+  - Gaia DR2 1224565824009017600
+  gaia_source_id: 1224565824009709312
+  otype: RC*
+summary: ''
+claims: []
+hypotheses: []
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T05:59:41+00:00'

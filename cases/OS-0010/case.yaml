@@ -1,0 +1,130 @@
+id: OS-0010
+title: The young star nobody classified
+hook: 'Listed as a ''suspected variable'' for decades. Gaia, ZTF and NEOWISE agree: a young star in Perseus
+  whose own disk keeps blotting it out.'
+status: interpreted
+target:
+  name: NSV 1302
+  ra: 56.92895976487
+  dec: 35.01226990153
+  aliases:
+  - TIC 26438706
+  - Gaia DR3 219832339066395776
+  - NSV  1302
+  - 2MASS J03474294+3500441
+  - Gaia DR2 219832339066395776
+  gaia_source_id: 219832339066395776
+  otype: '*'
+summary: 'NSV 1302 surfaced from Oddsky hunt H-0001 as the only unexplained survivor of 22,125 Gaia-selected
+  fading Sun-like stars. It is a known young star in Per OB2; its data show an irregular disk-occultation
+  ''dipper'': 1.2 mag swings in ZTF, chromatic Gaia dips, and a warm infrared excess. A modest result,
+  recorded honestly.'
+claims:
+- id: C1
+  text: Found by Oddsky hunt H-0001 (Gaia-selected fading Sun-like stars) as one of 18 stars with Gaia
+    dips deeper than 0.8 mag on 2+ transits, and the only one of them not already catalogued as an eclipsing
+    binary, a blend, or a variable of known type.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-27T08:52:15+00:00'
+- id: C2
+  text: ZTF g (450 points, 2018-2025) varies irregularly by 1.2 mag (2nd-98th percentile) about a 13.26
+    median, with no long-term trend (0.004 mag/yr) and no significant period between 1 and 60 days (top
+    power 0.05).
+  tag: computed
+  calls:
+  - K2
+  - K4
+  author: claude-opus-5.5
+  at: '2026-10-27T08:52:16+00:00'
+- id: C3
+  text: 'On Gaia transits BP and RP dim together, dBP/dRP = 1.32 with r = 0.98: chromatic, as dust is,
+    but greyer than interstellar dust, which hints at large grains.'
+  tag: computed
+  calls:
+  - K8
+  author: claude-opus-5.5
+  at: '2026-10-27T08:52:16+00:00'
+- id: C4
+  text: 'NEOWISE W1-W2 = 0.43 (median of 21 visits): a strong excess from warm dust, as an inner disk
+    produces.'
+  tag: computed
+  calls:
+  - K7
+  author: claude-opus-5.5
+  at: '2026-10-27T08:52:16+00:00'
+- id: C5
+  text: TESS shows 'dips' of 0.7-2.5 mag lasting only 1-3 hours in two sectors. Disk occultations last
+    longer than that; these are treated as probable systematics until checked against target pixels.
+  tag: inferred
+  calls:
+  - K6
+  - K9
+  author: claude-opus-5.5
+  at: '2026-10-27T08:52:16+00:00'
+- id: C6
+  text: SIMBAD lists the star only as a generic star ('*'). It appears in a 2015 WISE census of young
+    stellar objects in Per OB2 and in membership lists of young Perseus groups, but no SIMBAD-indexed
+    paper describes its dimming.
+  tag: observed
+  calls:
+  - K1
+  author: claude-opus-5.5
+  at: '2026-10-27T08:52:16+00:00'
+hypotheses:
+- id: H1
+  klass: yso_dipper
+  statement: A young star in Per OB2 whose inner disk intermittently blocks it (an irregular 'dipper').
+  supports:
+  - C2
+  - C3
+  - C4
+  - C6
+  conflicts: []
+  would_falsify: A strict period (spots or an eclipsing companion), or no infrared excess.
+  status: live
+  confidence: 0.85
+  author: claude-opus-5.5
+  at: '2026-10-27T08:52:16+00:00'
+- id: H2
+  klass: rotation_spots
+  statement: Spots on a young, active star.
+  supports:
+  - C2
+  conflicts:
+  - C4
+  would_falsify: Spots give periodic, low-amplitude (<0.3 mag) modulation; ZTF shows no period and 1.2
+    mag swings.
+  status: live
+  confidence: 0.05
+  author: claude-opus-5.5
+  at: '2026-10-27T08:52:16+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: Eclipses by a companion.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: Needs periodic dips; none found.
+  status: live
+  confidence: 0.05
+  author: claude-opus-5.5
+  at: '2026-10-27T08:52:16+00:00'
+- id: H4
+  klass: artifact_instrumental
+  statement: The variability is instrumental.
+  supports:
+  - C5
+  conflicts:
+  - C2
+  - C3
+  would_falsify: Gaia and ZTF independently show chromatic dimming; only the TESS hour-long dips are suspect.
+  status: live
+  confidence: 0.05
+  author: claude-opus-5.5
+  at: '2026-10-27T08:52:16+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T08:37:01+00:00'

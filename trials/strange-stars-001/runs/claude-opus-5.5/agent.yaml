@@ -1,0 +1,11 @@
+agent: claude-opus-5.5
+model_id: claude-opus-5-5
+harness: Claude Code subagents (5 parallel, 2 packets each), Oddsky CLI in blind mode
+run_at: '2026-10-27'
+prompt: trials/strange-stars-001/INVESTIGATOR_PROMPT.md
+notes: >
+  Honour-system blinding (CLI, not MCP). Self-reported deviations: python one-liners to trim JSON output for
+  display (no analysis); some exploratory probe calls recorded junk claims before argument names were found.
+  Recognised (self-reported, tagged speculated): R Cyg (T01, guess), ASASSN-21qj (T03), SS Cyg (T06, H02),
+  Boyajian's Star (T07, probable), AA Tau (T08, tentative), R CrB (T04), EE Cep (H01).
+recognised: {T01: guess, T02: no, T03: yes, T04: yes, T05: no, T06: yes, T07: probable, T08: tentative, H01: yes, H02: yes}
