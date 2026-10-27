@@ -1,0 +1,11 @@
+{
+ "plates": 2348,
+ "detections": 1176,
+ "median_mag": 13.3,
+ "deep_plates_missing_star": 31,
+ "of_which_without_normal_detection_within_50d": 1,
+ "coverage_1889_1990": 0.462,
+ "periods_1_130yr_excluded": 0.697,
+ "min_allowed_period_yr": 12.9,
+ "allowed_fraction_above_30yr": 0.982
+}

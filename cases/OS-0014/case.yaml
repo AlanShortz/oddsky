@@ -9,15 +9,16 @@ target:
   dec: -36.12034
   aliases: []
   gaia_source_id: 6733428488637673984
-summary: 'Gaia DR3 6733428488637673984, a G0 dwarf (possibly a spectroscopic binary), was blocked by more
-  than 99.5% for 95-100 days in 2017. NEOWISE watched the fade begin within one day, ASAS-SN lost the
-  star completely (18 epochs), and SkyMapper measured it 5.4-6.0 mag faint, nearly the same in four filters.
-  Comparison stars in the same frames stay steady. A 6-day ingress and a 95-day duration imply an occulter
-  at least 0.15 AU across, orbiting at 1 AU or more. Six to twelve months later a warm (about 650 K, two-band
-  colour temperature) infrared excess appeared and was still present in 2024. Found by Oddsky hunt H-0002
-  (full-sky NEOWISE), refereed: astrophysical and on this system at 97% or better. Leading idea: a dusty
-  disk around an unseen companion (cf. epsilon Aur, EE Cep). No causal link between the occultation and
-  the glow is claimed.'
+summary: 'Gaia DR3 6733428488637673984, a G0 dwarf ~420 pc away (possibly a spectroscopic binary), was
+  fainter than normal for 92-105 days in spring 2017, more than 3 mag fainter for at least 72 days, and
+  at least 99.3% occulted (5.4-6.0 mag, nearly grey in g/r/i/v) at mid-event. NEOWISE watched the infrared
+  ingress (the occulter is more transparent at 4.6 microns), ASAS-SN lost the star on 17 epochs, and SkyMapper
+  measured its depth; comparison stars stayed steady. The occulter moved at 2 km/s or more and is at least
+  ~0.1 AU across, orbiting between ~1.4 and ~250 AU if bound. Three to nine months later its W1-W2 colour
+  reddened by ~0.15 and stayed so to 2024, while the optical star was ~0.05 mag brighter than before.
+  A century of Harvard plates (DASCH) shows no clear repeat and excludes periods under 12.9 yr. Found
+  by Oddsky hunt H-0002; refereed and fact-checked. Not reported elsewhere as far as we can find. Brief
+  for an astronomer: docs/briefs/OS-0014_for_review.md.'
 claims:
 - id: C1
   text: 'Field test (IRSA Gator neowiser_p1bs_psd within 150" of the target; outside the tools): 18 field
@@ -244,6 +245,78 @@ claims:
   - K21
   author: claude-referee
   at: '2026-10-27T18:32:25+00:00'
+- id: C16
+  text: 'DASCH DR7 (scripts/os0014_dasch.py): 2,348 Harvard plates from 1889 to 1990; the star is detected
+    on 1,176 at a median of 13.30 mag. All 31 deep plates that miss it except one have a normal detection
+    within 50 days, so they are plate defects, not occultations. A 95-day vanishing would have been caught
+    46% of the time; none was.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-27T19:05:18+00:00'
+- id: C17
+  text: Phased on the 2017 event, DASCH, ASAS-SN and NEOWISE together exclude every orbital period under
+    12.9 yr and 70% of periods from 1 to 130 yr; 98% of the periods still allowed are longer than 30 yr.
+    This assumes repeats look like 2017 (about 95 days, at least 5 mag deep).
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-27T19:05:18+00:00'
+- id: C18
+  text: 'TESS full-frame cutouts (scripts/os0014_tess_pixels.py): the ~1.8-day signal is centred on the
+    star in Sector 13 (2019; offset 0.3 px). In Sectors 66, 93 and 104 the pixel-level power at that period
+    is weak everywhere. Inconclusive whether it persists (starspots evolve).'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-27T19:05:18+00:00'
+- id: C19
+  text: If the occulter is periodic, a period above ~30 yr around a ~1.1 Msun star means an orbit of ~10
+    AU or more. That fits a dusty disk around a wide companion, though nothing requires periodicity.
+  tag: inferred
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-27T19:05:18+00:00'
+- id: C20
+  text: 'After the occultation the star was about 0.05 mag brighter than before: ASAS-SN median V 12.700
+    before, 12.677 in MJD 57933-58100 and 12.648 in 58100-58384 (comparison stars change by 0.014 mag
+    or less), and SkyMapper 2018+ is brighter than 2014 by 0.04-0.07 mag in all six filters. If the photosphere
+    also brightened in the infrared, the W1 ''excess'' disappears and W2''s drops to about 14-16%, so
+    the ~650 K colour temperature is not robust. The W1-W2 reddening of about 0.15 mag is not affected
+    by a grey brightening and remains the robust infrared change.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-27T19:17:55+00:00'
+- id: C21
+  text: 'Occulter size, corrected (fact-check): between MJD 57831 and 57837 the blocked fraction went
+    from 11% to 92%, about 0.7 stellar diameters for a sharp edge (R = 1.1-1.2 Rsun), so the transverse
+    speed is at least about 2 km/s. With 92-105 d spent fainter than normal, the occulter is at least
+    about 0.1 AU across. Requiring it to be smaller than its orbit puts a above about 1.4 AU; a circular
+    orbit at 2 km/s puts a below about 250 AU.'
+  tag: inferred
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-27T19:17:55+00:00'
+- id: C22
+  text: '1924: three DASCH ax-series plates (1924 Apr 30 to May 14, limits 14.2-14.4) miss the star inside
+    a 296-day stretch with no normal detection. Two brighter comparison stars 4-5 arcmin away (12.90 and
+    13.01 mag) are also missed on the same plates, which points to local plate quality. 1924 neither confirms
+    nor excludes a repeat. A ~93-yr (or ~46.5-yr) period is allowed by the plate record, not indicated
+    by it.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-27T19:17:55+00:00'
+- id: C23
+  text: 'Erratum to referee claims C11 and C12 (fact-check, 2026-10-27): ASAS-SN has 17 non-detections
+    (MJD 57839.3-57911.4), not 15. Each sets only V > 15.7 (delta V > 3.0); stacking the 17 forced fluxes
+    gives delta V > 4.1 mag at 3 sigma. The circular-orbit upper bound for the sharp-edge case is about
+    110-250 AU, not about 100 AU. Original claims kept as written.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-27T19:18:04+00:00'
 hypotheses: []
 predictions: []
 literature: []
