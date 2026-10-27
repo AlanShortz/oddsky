@@ -42,7 +42,7 @@ async function route() {
           else throw e;
         }
         if (payload) {
-          view = renderCase(payload, { home: r.name === 'home' });
+          view = renderCase(payload, { home: r.name === 'home', index });
           const c = payload.case ?? {};
           title = r.name === 'home' ? null : `${c.id} · ${c.title ?? c.target?.name ?? ''}`;
         }

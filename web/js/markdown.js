@@ -21,12 +21,21 @@ function link(url, children) {
   return h('a', { href: url, ...(external ? { rel: 'noopener noreferrer', target: '_blank' } : {}) }, children);
 }
 
+// Optional citation rules, active only while a renderer passes `cite` handlers:
+//   [C3] or [C11, C12]  -> claim links          (K3, K4) or (K36-K38) -> ledger receipts
+let CITE = null;
+const CITE_RULES = [
+  { re: /\[(C\d+(?:\s*,\s*C\d+)*)\]/, make: (m) => CITE.claims(m[1].split(/\s*,\s*/)) },
+  { re: /\((K\d+(?:\s*[-–]\s*K?\d+)?(?:\s*,\s*K\d+(?:\s*[-–]\s*K?\d+)?)*)\)/, make: (m) => CITE.receipts(m[1].split(/\s*,\s*/)) },
+];
+
 export function inline(text) {
   const out = [];
   let rest = String(text ?? '');
+  const rules = CITE ? [...CITE_RULES, ...INLINE] : INLINE;
   while (rest) {
     let best = null;
-    for (const rule of INLINE) {
+    for (const rule of rules) {
       const m = rule.re.exec(rest);
       if (m && (best === null || m.index < best.m.index)) best = { m, rule };
     }
@@ -42,7 +51,13 @@ const isTableSep = (line) => /^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?\s*$/
 const cells = (line) => line.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map((c) => c.trim());
 const LIST_RE = /^(\s*)([-*+]|\d+[.)])\s+(.*)$/;
 
-export function renderMarkdown(src, { headingOffset = 1 } = {}) {
+export function renderMarkdown(src, { headingOffset = 1, cite = null } = {}) {
+  const prev = CITE;
+  CITE = cite;
+  try { return render(src, headingOffset); } finally { CITE = prev; }
+}
+
+function render(src, headingOffset) {
   const root = h('div', { class: 'md' });
   const lines = String(src ?? '').replace(/\r\n?/g, '\n').split('\n');
   let i = 0;
@@ -96,7 +111,7 @@ export function renderMarkdown(src, { headingOffset = 1 } = {}) {
       flush();
       const body = [];
       while (i < lines.length && /^\s*>/.test(lines[i])) body.push(lines[i++].replace(/^\s*>\s?/, ''));
-      const bq = renderMarkdown(body.join('\n'), { headingOffset });
+      const bq = render(body.join('\n'), headingOffset);
       root.append(h('blockquote', null, [...bq.childNodes]));
       continue;
     }

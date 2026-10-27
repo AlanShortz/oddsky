@@ -7,10 +7,11 @@ import {
 import { createFigure, figureTable, seriesCsv, gaiaV } from './figure.js';
 import { stamp, stampLegend, ladder, statusPill, agentBlock, emptyNote, sectionHead, starterPrompt } from './components.js';
 import { renderMarkdown, inline } from './markdown.js';
+import { trialTeaser } from './pages.js';
 
 const SURVEY_NAMES = { gaia: 'Gaia DR3', neowise: 'NEOWISE', aavso: 'AAVSO', ztf: 'ZTF', asassn: 'ASAS-SN', tess: 'TESS' };
 
-export function renderCase(payload, { home = false } = {}) {
+export function renderCase(payload, { home = false, index = null } = {}) {
   const c = payload?.case ?? {};
   const id = c.id ?? 'OS-?';
   const target = c.target ?? {};
@@ -67,13 +68,14 @@ export function renderCase(payload, { home = false } = {}) {
 
   // ---- the argument ----
   const body = h('div', { class: 'case-body' },
+    home ? trialTeaser(index) : null,
     c.summary ? h('section', { class: 'summary', id: 'summary' }, renderMarkdown(c.summary, { headingOffset: 2 })) : null,
     claimsSection(claims, ledger, id),
-    hypothesesSection(arr(c.hypotheses), claimIds),
+    hypothesesSection(arr(c.hypotheses), claimIds, new Set(claims.filter((x) => x.retracted).map((x) => x.id))),
     predictionsSection(arr(c.predictions), arr(c.hypotheses)),
     skepticSection(payload.skeptic, id),
     provenanceSection(payload.provenance, credits),
-    investigationsSection(arr(payload.investigations), id),
+    investigationsSection(arr(payload.investigations), id, ledger),
     literatureSection(arr(c.literature)),
   );
 
@@ -189,7 +191,8 @@ function toc(c, payload) {
 
 // ---- claims ----------------------------------------------------------------------------------
 function claimsSection(claims, ledger, caseId) {
-  const sec = h('section', { class: 'sec', id: 'claims' }, sectionHead('claims', 'Claims', claims.length, 'Every claim says how we know it. Every number has a receipt: the tool calls it rests on.'));
+  const nRetracted = claims.filter((x) => x.retracted).length;
+  const sec = h('section', { class: 'sec', id: 'claims' }, sectionHead('claims', 'Claims', nRetracted ? `${claims.length - nRetracted} + ${nRetracted} retracted` : claims.length, 'Every claim says how we know it. Every number has a receipt: the tool calls it rests on.'));
   sec.append(stampLegend());
   if (!claims.length) {
     sec.append(emptyNote('No claims yet.', 'The data is in; the argument hasn’t started. Point your agent at this case and it can add the first one, tagged honestly.'));
@@ -211,10 +214,11 @@ function claimsSection(claims, ledger, caseId) {
       });
       return b;
     });
-    list.append(h('li', { class: `claim claim-${cl.tag}`, id: `claim-${cl.id}` },
+    list.append(h('li', { class: `claim claim-${cl.tag} ${cl.retracted ? 'is-retracted' : ''}`, id: `claim-${cl.id}` },
       h('div', { class: 'claim-gutter' }, h('span', { class: 'claim-id mono' }, cl.id), stamp(cl.tag, cl.id)),
       h('div', { class: 'claim-main' },
         h('p', { class: 'claim-text' }, inline(cl.text)),
+        cl.retracted ? h('p', { class: 'claim-retracted' }, h('span', { class: 'retracted-k' }, 'Retracted'), ' ', typeof cl.retracted === 'string' ? inline(cl.retracted) : '') : null,
         h('div', { class: 'claim-meta' },
           h('span', { class: 'by' }, cl.author || 'unknown'), cl.at ? h('span', null, fmtDate(cl.at)) : null,
           h('span', { class: 'receipts' }, calls.length ? ['receipts ', ...btns] : h('span', { class: 'no-receipt' }, 'no receipt'))),
@@ -237,14 +241,14 @@ function ledgerEntry(id, k) {
 // ---- hypotheses ------------------------------------------------------------------------------
 const STATUS_ORDER = { favored: 0, live: 1, disfavored: 2, rejected: 3 };
 
-function hypothesesSection(hyps, claimIds) {
+function hypothesesSection(hyps, claimIds, retracted = new Set()) {
   const sec = h('section', { class: 'sec', id: 'hypotheses' }, sectionHead('hypotheses', 'Hypotheses', hyps.length, 'Competing explanations. Each must say what evidence would sink it.'));
   if (!hyps.length) {
     sec.append(emptyNote('No hypotheses yet.', 'What could make a star do this? Dust, a companion, the instrument, a neighbour? Each idea goes here with the observation that would kill it.'));
     return sec;
   }
   const sorted = [...hyps].sort((a, b) => (STATUS_ORDER[a.status] ?? 1) - (STATUS_ORDER[b.status] ?? 1) || (b.confidence ?? 0) - (a.confidence ?? 0));
-  const ref = (ids, cls) => arr(ids).map((cid) => h('button', { type: 'button', class: `claim-ref mono ${cls} ${claimIds.has(cid) ? '' : 'is-missing'}`, onclick: () => jumpTo(`claim-${cid}`) }, cid));
+  const ref = (ids, cls) => arr(ids).map((cid) => h('button', { type: 'button', class: `claim-ref mono ${cls} ${claimIds.has(cid) ? '' : 'is-missing'} ${retracted.has(cid) ? 'is-retracted' : ''}`, title: retracted.has(cid) ? `${cid} was retracted` : null, onclick: () => jumpTo(`claim-${cid}`) }, cid));
   sec.append(h('div', { class: 'hyps' }, sorted.map((x) => h('article', { class: `hyp hyp-${x.status ?? 'live'}`, id: `hyp-${x.id}` },
     h('header', { class: 'hyp-head' }, h('span', { class: 'hyp-id mono' }, x.id), h('span', { class: 'hyp-klass' }, klassLabel(x.klass)), statusPill(x.status)),
     h('p', { class: 'hyp-statement' }, inline(x.statement)),
@@ -262,15 +266,15 @@ function hypothesesSection(hyps, claimIds) {
 }
 
 // ---- predictions -----------------------------------------------------------------------------
-const STAT = { median: 'the median', faintest: 'the faintest point', brightest: 'the brightest point', amplitude: 'the amplitude (faintest minus brightest)' };
+const STAT = { median: 'the median', faintest: 'the faintest nightly median', brightest: 'the brightest nightly median', amplitude: 'the amplitude (faintest minus brightest nightly median)' };
+const fmtMag = (v) => String(+Math.abs(v).toPrecision(v !== 0 && Math.abs(v) < 0.1 ? 2 : 3));
 
 export function checkInEnglish(ch) {
   if (!ch) return '';
   const ser = String(ch.series ?? '').replace(':', ' ');
   const stat = STAT[ch.statistic] ?? ch.statistic ?? 'the median';
   const win = `between ${mjdToIso(ch.start)} and ${mjdToIso(ch.end)}`;
-  const v = Math.abs(Number(ch.value));
-  const vv = fmtNum(v, v < 1 ? 2 : 1);
+  const vv = fmtMag(Number(ch.value));
   let rel;
   if (Array.isArray(ch.baseline) && ch.baseline.length === 2) {
     const base = `its median over ${mjdToIso(ch.baseline[0])} to ${mjdToIso(ch.baseline[1])}`;
@@ -314,6 +318,7 @@ function predictionsSection(preds, hyps) {
         p.check ? h('details', { class: 'env-raw' }, h('summary', null, 'machine-readable'), h('pre', null, h('code', null, pretty(p.check)))) : null,
         h('dl', { class: 'env-meta' },
           h('div', null, h('dt', null, 'sealed'), h('dd', null, fmtDate(p.registered_at) || '–')),
+          !open && p.check ? h('div', null, h('dt', null, 'window closes'), h('dd', null, fmtDate(mjdToIso(p.check.end)))) : null,
           h('div', null, h('dt', null, open ? 'opened' : 'opens by'), h('dd', null, open ? fmtDate(r.resolved_at) : (fmtDate(p.resolve_by) || '–'),
             !open && due != null ? h('span', { class: 'muted' }, due > 0 ? ` · in ${fmtInt(due)} days` : checkStarted ? ' · due now' : ' · overdue') : null)),
           p.author ? h('div', null, h('dt', null, 'by'), h('dd', null, p.author)) : null),
@@ -430,16 +435,37 @@ function provenanceSection(prov, credits) {
 }
 
 // ---- investigations & literature -------------------------------------------------------------
-function investigationsSection(invs, caseId) {
-  const sec = h('section', { class: 'sec', id: 'investigations' }, sectionHead('investigations', 'Investigations', invs.length, 'Write-ups, one per investigator, kept next to the data they argue about.'));
+function investigationsSection(invs, caseId, ledger = new Map()) {
+  const sec = h('section', { class: 'sec', id: 'investigations' }, sectionHead('investigations', 'Investigations', invs.length, 'Write-ups, one per investigator, kept next to the data they argue about. [C3] links to a claim; (K12) opens the tool call behind a number.'));
   if (!invs.length) {
     sec.append(emptyNote('No write-ups yet.', h('p', null, 'Start one: ', h('code', { class: 'inline-prompt' }, starterPrompt(caseId)))));
     return sec;
   }
+  const expand = (g) => {
+    const m = /K(\d+)\s*[-–]\s*K?(\d+)/.exec(g);
+    if (!m) return [g.trim()];
+    const a = +m[1], b = +m[2];
+    return b >= a && b - a < 25 ? Array.from({ length: b - a + 1 }, (_, i) => `K${a + i}`) : [`K${a}`, `K${b}`];
+  };
+  const cite = {
+    claims: (ids) => h('span', { class: 'cite' }, '[', ids.map((cid, i) => [i ? ', ' : '', h('button', { type: 'button', class: 'cite-claim mono', title: `jump to claim ${cid}`, onclick: () => jumpTo(`claim-${cid}`) }, cid)]), ']'),
+    receipts: (groups) => h('span', { class: 'cite' }, '(', groups.map((g, i) => {
+      const ids = expand(g);
+      const b = h('button', { type: 'button', class: `cite-receipt mono ${ids.every((k) => ledger.has(k)) ? '' : 'is-missing'}`, 'aria-expanded': 'false', title: 'show the tool call' }, g.replace(/\s*-\s*/, '–'));
+      b.addEventListener('click', () => {
+        if (b._panel) { b._panel.remove(); b._panel = null; b.setAttribute('aria-expanded', 'false'); return; }
+        const panel = h('div', { class: 'cite-panel' }, ids.map((k) => ledgerEntry(k, ledger.get(k))));
+        const block = b.closest('li, p, td, blockquote') ?? b.parentElement;
+        if (block.tagName === 'LI' || block.tagName === 'TD') block.append(panel); else block.after(panel);
+        b._panel = panel; b.setAttribute('aria-expanded', 'true');
+      });
+      return [i ? ', ' : '', b];
+    }), ')'),
+  };
   for (const inv of invs) {
     sec.append(h('article', { class: 'notebook' },
       h('header', { class: 'notebook-head mono' }, `investigations/${inv.file}`),
-      renderMarkdown(inv.markdown, { headingOffset: 2 })));
+      renderMarkdown(inv.markdown, { headingOffset: 2, cite })));
   }
   return sec;
 }

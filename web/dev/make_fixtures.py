@@ -103,6 +103,9 @@ def build_case(real: dict) -> dict:
         {"id": "C7", "tag": "inferred", "calls": ["K6", "K2"], "author": who, "at": at,
          "text": (f"A neighbour is an unlikely culprit: the only Gaia source inside the 6.1″ WISE beam sits {worst['sep_arcsec']:.1f}″ away with {worst['flux_ratio_G']:.1%} of the target's G flux; "
                   "even allowing for its red colour it would have to brighten roughly tenfold in W2.") if worst else "No Gaia neighbour falls inside the WISE beam."},
+        {"id": "C9", "tag": "computed", "calls": ["K3"], "author": who, "at": at,
+         "text": "AAVSO V shows a 1.00-day period with power 0.50.",
+         "retracted": "The 1.00-day peak is the nightly sampling alias (the Skeptic flags it); it says nothing about the star."},
         {"id": "C8", "tag": "speculated", "calls": [], "author": who, "at": at,
          "text": "Warm dust first, then a long shadow, is what a giant impact between two planets would look like: a hot, expanding debris cloud that later drifts across the face of the star."},
     ]
@@ -230,7 +233,8 @@ def build_index(real_index: dict, case: dict) -> dict:
     for e in idx["cases"]:
         if e["id"] == c["id"]:
             e.update(hook=c["hook"], featured=True, n_claims=len(c["claims"]), n_hypotheses=len(c["hypotheses"]), n_predictions=len(c["predictions"]))
-    idx["scorecards"] = json.loads((WEB / "dev" / "fixture-scorecards.json").read_text())["scorecards"]
+    if not idx.get("scorecards"):  # real scorecards win; the sample ones are only for an empty index
+        idx["scorecards"] = json.loads((WEB / "dev" / "fixture-scorecards.json").read_text())["scorecards"]
     return idx
 
 

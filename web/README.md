@@ -78,6 +78,19 @@ js/util.js          DOM helpers, MJD ↔ calendar, formatting
 dev/                fixtures and the script that builds them
 ```
 
+## Trials page
+
+`#/trials` reads `index.json` → `scorecards`. Scorecards for the same `trial` are shown side by side. The page includes:
+
+- the sealed hash with the `oddsky trial verify` command
+- a metric comparison with the uniform-guess baseline (parsed from `summary.baseline_note`)
+- a contamination callout built from per-case `recognised` flags
+- a packet-by-packet table linking each packet to `real_case`
+- hindsight forecasts as envelopes: `pending` ones stay sealed, with "opens <date>" taken from the MJD in the forecast's `note`
+- an erratum box when `grader_v1.why_changed` is present, showing v1 against v2 outcomes
+
+A one-line teaser for the trial appears on the home page. In investigations, `[C3]` links to the claim and `(K12)` / `(K36-K38)` open the ledger entries.
+
 ## Figure notes
 
 - **Default view.** If the shown series span more than 25 years (R CrB, R Cyg, SS Cyg, EE Cep go back
