@@ -14,6 +14,8 @@ and works with whatever agent you already have.
 
 ```bash
 claude mcp add oddsky -- uvx oddsky mcp
+# before the PyPI release, from a clone:
+claude mcp add oddsky -- uv run --directory /path/to/oddsky oddsky mcp
 ```
 
 Then ask: *"Open Oddsky case OS-0001. Run the skeptic first, then try to break the leading
@@ -26,7 +28,7 @@ switching on between November 2017 and April 2018: W2 brightened 0.8 mag, and th
 colour temperature of about 1,000 K. Three years later the visible star began to flicker and fade
 by up to 2 magnitudes, more in blue than in red, which is what small dust grains do. The first
 Oddsky investigation ([write-up](cases/OS-0001/investigations/claude-opus-5.5-2026-10-27.md)) was
-done entirely through Oddsky tools: 95 logged tool calls, 18 tagged claims, 6 competing hypotheses.
+done entirely through Oddsky tools: 95 logged tool calls, 17 tagged claims, 6 competing hypotheses.
 It also found two things no paper has reported, because they happened after the papers were written:
 
 - the star has been back at its pre-event brightness, and flat to 0.005 mag, since early 2025;
@@ -43,7 +45,7 @@ single point of failure.
 
 | | |
 |---|---|
-| **The observatory** | 20 MCP tools: case overview, light curves, changepoints, excursions (dips and flares), Lomb-Scargle with spectral-window alias flags, cross-band colour slopes, WISE colour and infrared-excess temperature, Gaia neighbours, and tools for recording claims, hypotheses and predictions. `oddsky tools` lists them. |
+| **The observatory** | 21 MCP tools: case overview, light curves, changepoints, excursions (dips and flares), Lomb-Scargle with spectral-window alias flags, cross-band colour slopes, WISE colour and infrared-excess temperature, Gaia neighbours, and tools for recording claims, hypotheses and predictions. `oddsky tools` lists them. |
 | **Archives** | Gaia DR3 (context, neighbours, variability), NEOWISE 2014-2024 (quality-cut, visit-binned), AAVSO (a century of amateur photometry), TESS (SPOC/QLP), ZTF, ASAS-SN. Every cut is written to provenance. |
 | **The Skeptic** | Deterministic artifact checks: blends inside each survey's beam, saturation, single-observer data, series that start mid-event (against Gaia's baseline), colour coherence across bands, survey-rhythm aliases, unobserved onsets, TESS dips on momentum dumps and sector edges, RUWE. It is code, so it cannot be talked out of a warning. |
 | **Cases** | A case is a directory (`cases/OS-0001/`): `case.yaml` holds the argument, `data/` the evidence, and `ledger.jsonl` every tool call with a digest of its result. Fork = fork. Review = pull request. `oddsky replay OS-0001` re-runs the ledger. |
@@ -52,7 +54,37 @@ single point of failure.
 
 ## Strange Stars Trial 001
 
-TRIAL_RESULTS
+Ten packets of real archive data with names, coordinates and dates removed, including one ordinary
+star and one quiet star with **planted** spacecraft artifacts. Two are hindsight packets, cut at a
+date. The answers were sealed (`sha256 4608af90…`, committed in `eac42b3`) before any investigator
+ran, then revealed and verified (`oddsky trial verify trials/strange-stars-001`). Two agents used
+the same tools and the same prompt:
+
+| | top-1 | Brier (lower is better) | mean p(truth) | hindsight forecasts |
+|---|---|---|---|---|
+| claude-opus-5.5 | **10/10** | **0.10** | 0.77 | 7 of 8 true (the miss was rated 8%); Brier 0.09 |
+| claude-haiku-5.5 | 5/10 | 0.71 | 0.38 | 2 of 3 resolved true; 3 still pending |
+| uniform guessing | 0.9/10 | 0.91 | 0.09 | |
+
+What's worth knowing, including the parts that don't flatter anyone:
+
+- **Opus recognised 8 of the 10 stars** (self-reported, tagged as speculation): R CrB, SS Cyg,
+  EE Cep, ASASSN-21qj and others. Blinding hides names, not physics. On the two packets it did not
+  recognise (the ordinary star and the salted one) it went 2/2. Trial 002 needs stars nobody has
+  written about, and that's where the advisor comes in.
+- **EE Cep, from data cut a year before its 2025 eclipse:** Opus timed the next eclipse from the
+  previous six (period 2048 d) and registered four forecasts. All four came true, including the one
+  it had rated at 45%. Haiku called the star a pulsator.
+- **The salted packet nearly fooled Opus:** artifact 0.33 against dust 0.30. Its reason is a fair
+  criticism of us: our planted dips were smoother and longer than real momentum-dump glitches.
+  Haiku missed them entirely and called the star normal.
+- **We found a bug in our own grader.** "Brightest" was the 2nd percentile of all points, so dense
+  quiescent sampling hid real SS Cyg outbursts and two correct forecasts were graded false. v2
+  uses nightly medians. Because the change came after the reveal, both gradings are published in
+  [the scorecards](trials/strange-stars-001/results).
+
+Every claim, hypothesis and prediction the agents made is in `trials/strange-stars-001/runs/`, and
+every tool call in it replays.
 
 ## Run it locally
 

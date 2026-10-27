@@ -25,6 +25,20 @@ down so you can overrule it quickly. In rough priority order:
 7. **STScI.** Whether and how your name and affiliation appear, and any clearance needed before
    this is public. Nothing goes public until you say so.
 
+## What Trial 001 taught us (decisions for you)
+
+- **Famous stars leak through blinding.** Opus recognised 8 of 10. Trial 002 needs your ~20 stars,
+  ideally including obscure ones with a known answer in a paper few people read, plus ordinary and
+  misleading ones.
+- **Our fake artifact was too fake.** Opus called out that the planted dips were smoother and
+  longer than real momentum-dump glitches. If we keep "salted" packets, we should plant real
+  artifacts cut from other stars' light curves, not synthetic Gaussians.
+- **Is the taxonomy fair?** collision_debris vs dust_occultation was the hardest boundary for both
+  models on ASASSN-21qj.
+- **Hindsight trials are the strongest format.** The sky grades them, they can't be gamed by
+  recognition alone (Opus still had to time the eclipse), and they reward calibration. Which of
+  your stars have predictable futures?
+
 ## Data-source notes for you
 
 - ASAS-SN Sky Patrol's light-curve service has been down for maintenance since 13 Oct 2026; the
