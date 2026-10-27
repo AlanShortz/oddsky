@@ -119,3 +119,22 @@ def lightcurve(ra: float, dec: float) -> tuple[pd.DataFrame, Provenance]:
     prov.rows_kept = len(df)
     prov.notes.append("rows_kept counts 6-month visits (W1 and W2), not exposures")
     return series.normalize(df), prov
+
+
+def exposures(ra: float, dec: float) -> tuple[pd.DataFrame, Provenance]:
+    """Single exposures after quality cuts (no visit binning): for periodic signals shorter than a
+    NEOWISE visit (~1 day), such as eclipses."""
+    raw, prov = fetch_exposures(ra, dec)
+    prov.archive += " (single exposures)"
+    if raw.empty:
+        return series.empty(), prov
+    parts = []
+    for band in ("W1", "W2"):
+        b = band.lower()
+        cut = quality_cuts(raw, band, prov)
+        parts.append(pd.DataFrame(dict(t_mjd=cut["mjd"].astype(float), mag=cut[f"{b}mpro"].astype(float),
+                                       err=cut[f"{b}sigmpro"].astype(float).fillna(0.05), band=band,
+                                       survey="NEOWISE_EXP", flag="")))
+    df = series.normalize(pd.concat(parts, ignore_index=True))
+    prov.rows_kept = len(df)
+    return df, prov

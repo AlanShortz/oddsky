@@ -1,6 +1,6 @@
 [project]
 name = "oddsky"
-version = "0.2.0"
+version = "0.3.0"
 description = "An open observatory your AI agent can use. The universe is an open question."
 readme = "README.md"
 license = "MIT"

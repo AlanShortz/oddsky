@@ -47,3 +47,18 @@ def test_cross_band_slope_for_dust(dusty_case):
     out = color.cross_band(a[a.band == "B"], a[a.band == "V"], "B", "V", tol_days=0.5)
     assert out["pearson_r"] > 0.9
     assert abs(out["slope_dA_dB"] - 1.3) < 0.1
+
+
+def test_eclipse_period_finds_rare_deep_eclipses(dusty_case, rng):
+    import pandas as pd
+
+    from oddsky.tools import Toolbox
+
+    t = np.sort(rng.uniform(58000, 60500, 1500))
+    P, T0 = 2.5296, 58001.3
+    ph = ((t - T0) / P + 0.5) % 1 - 0.5
+    m = 15.0 + rng.normal(0, 0.02, t.size) + np.where(np.abs(ph) < 0.02, 0.9, 0.0)
+    dusty_case.write_series("ztf", pd.DataFrame(dict(t_mjd=t, mag=m, err=0.02, band="ZTF_r", survey="ZTF", flag="")))
+    out = Toolbox().eclipse_period("OS-0001", ["ZTF:ZTF_r"], p_min=1.0, p_max=10.0)
+    assert abs(out["period_days"] - P) < 1e-3
+    assert out["frac_dim_within_0.04_phase"] > 0.9

@@ -1,0 +1,13 @@
+-- Oddsky hunt H-0003: candidate R Coronae Borealis stars (dust-forming, hydrogen-poor supergiants).
+-- Signature in Gaia (2014-2017): a large, one-sided fade (skewed toward faint), from a star that is
+-- otherwise near its maximum. AllWISE colours are fetched afterwards for survivors (joins time out).
+SELECT g.source_id, g.ra, g.dec, g.l, g.b, g.phot_g_mean_mag AS g_mag, g.bp_rp, g.parallax, g.parallax_over_error AS poe,
+       g.ruwe, v.num_selected_g_fov AS n_epochs, v.range_mag_g_fov AS g_range, v.std_dev_mag_g_fov AS g_std,
+       v.skewness_mag_g_fov AS g_skew, v.in_vari_long_period_variable AS gaia_lpv, v.in_vari_eclipsing_binary AS gaia_eb
+FROM gaiadr3.vari_summary AS v
+JOIN gaiadr3.gaia_source AS g ON g.source_id = v.source_id
+WHERE v.range_mag_g_fov > 1.5
+  AND v.skewness_mag_g_fov > 1.0
+  AND v.num_selected_g_fov >= 15
+  AND g.phot_g_mean_mag < 17
+  AND g.bp_rp BETWEEN 0.5 AND 4.0

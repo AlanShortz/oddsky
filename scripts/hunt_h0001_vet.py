@@ -6,7 +6,6 @@ how many papers mention it, close Gaia neighbours, and fresh NEOWISE (2014-2024)
 """
 
 import json
-import sys
 from pathlib import Path
 
 import numpy as np

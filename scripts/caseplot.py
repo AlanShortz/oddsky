@@ -19,7 +19,7 @@ for surv in s.surveys():
         ax = axes[1] if surv == "neowise" else axes[2] if surv == "tess" else axes[0]
         ax.plot(g.t_mjd, g.mag, ".", ms=2 if surv == "tess" else 4, color=colors.get(band, "#999"),
                 label=f"{surv}:{band} ({len(g)})", alpha=0.6 if surv == "tess" else 0.9)
-for ax, t in zip(axes, ("optical (Gaia, ZTF, AAVSO)", "infrared (NEOWISE)", "TESS (relative)")):
+for ax, t in zip(axes, ("optical (Gaia, ZTF, AAVSO)", "infrared (NEOWISE)", "TESS (relative)"), strict=False):
     ax.invert_yaxis()
     ax.legend(fontsize=7, ncol=4)
     ax.set_title(t, fontsize=9, loc="left")

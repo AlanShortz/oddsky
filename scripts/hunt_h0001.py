@@ -27,7 +27,7 @@ def run(i):
     if f.exists():
         return i, "cached"
     q = base + f"\n  AND v.source_id BETWEEN {edges[i]} AND {edges[i + 1] - 1}"
-    for attempt in range(3):
+    for _attempt in range(3):
         try:
             df = adql(q, timeout=120)
             df.to_csv(f, index=False)

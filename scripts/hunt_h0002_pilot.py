@@ -1,7 +1,10 @@
-import time, pyvo, sys
-import numpy as np
+import time
+
+import pyvo
 from astropy.table import Table
+
 from oddsky.data.gaia import adql
+
 stars = adql("""SELECT TOP 300 source_id, ra, dec, phot_g_mean_mag FROM gaiadr3.gaia_source
 WHERE random_index < 2000000 AND phot_g_mean_mag BETWEEN 11 AND 13.5 AND bp_rp BETWEEN 0.6 AND 1.3
 AND parallax_over_error > 20 AND ruwe < 1.3 AND ABS(b) > 15

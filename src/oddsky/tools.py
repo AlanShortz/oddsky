@@ -27,7 +27,7 @@ from .case.store import CaseStore
 from .paths import cases_dir
 
 MJD_EPOCH = dt.date(1858, 11, 17)
-SURVEY_FILES = {"gaia": "gaia_epoch", "asas-sn": "asassn", "asassn": "asassn", "aavso": "aavso", "neowise": "neowise",
+SURVEY_FILES = {"neowise_exp": "neowise_exp", "gaia": "gaia_epoch", "asas-sn": "asassn", "asassn": "asassn", "aavso": "aavso", "neowise": "neowise",
                 "tess": "tess", "ztf": "ztf"}
 
 
@@ -230,6 +230,112 @@ class Toolbox:
         return self._log(s, "observer_agreement", dict(case=case, series=series, baseline_start=baseline_start,
                                                         baseline_end=baseline_end, start=start, end=end,
                                                         min_points=min_points), out)
+
+    def eclipse_period(self, case: str, series: list[str], depth: float = 0.3, p_min: float = 0.2,
+                       p_max: float = 300.0) -> dict:
+        """Period of short, deep, rare events (eclipses) that Lomb-Scargle misses: find the period at which
+        every point more than `depth` mag below its series median falls at one phase, and no quiet point
+        does. Combine instruments (e.g. ["ZTF:ZTF_r", "GAIA:G"]) for a long-baseline ephemeris."""
+        s = self.store(case)
+        dims, quiets, t_all = [], [], []
+        for ser in series:
+            df = self._frame(s, ser)
+            if df.empty:
+                continue
+            med = float(np.median(df.mag))
+            dims.append(df.t_mjd[df.mag > med + depth].to_numpy())
+            quiets.append(df.t_mjd[df.mag < med + 0.05].to_numpy())
+            t_all.append(df.t_mjd.to_numpy())
+        td, tq = np.concatenate(dims), np.concatenate(quiets)
+        if len(td) < 4:
+            return {"error": f"only {len(td)} points deeper than {depth} mag"}
+        span = float(np.ptp(np.concatenate(t_all)))
+        n = int(min(2_000_000, max(20_000, 20 * span * (1 / p_min - 1 / p_max))))
+        freqs = np.linspace(1 / p_max, 1 / p_min, n)
+        best = (-1.0, None)
+        for chunk in np.array_split(freqs, max(1, n // 2000)):
+            ph = (td[None, :] * chunk[:, None]) % 1.0
+            ang = 2 * np.pi * ph
+            mu = (np.arctan2(np.sin(ang).mean(1), np.cos(ang).mean(1)) / (2 * np.pi)) % 1.0
+            dd = np.abs((ph - mu[:, None] + 0.5) % 1.0 - 0.5)
+            phq = (tq[None, :] * chunk[:, None]) % 1.0
+            dq = np.abs((phq - mu[:, None] + 0.5) % 1.0 - 0.5)
+            score = (dd < 0.04).mean(1) - 3 * (dq < 0.02).mean(1)
+            k = int(np.argmax(score))
+            if score[k] > best[0]:
+                best = (float(score[k]), float(chunk[k]), float(mu[k]), float((dd[k] < 0.04).mean()), float((dq[k] < 0.02).mean()))
+        sc, f, mu, frac, contam = best
+        P = 1 / f
+        T0 = (np.floor(td.min() / P) + mu) * P
+        # Missing-eclipse test: if the true period is k*P, some cycles (by cycle number mod k) are
+        # observed flat at the predicted eclipse time. Folding at P/k hides this; counting cycles does not.
+        t_q = np.concatenate([tq, td])
+        cyc = np.round((t_q - T0) / P).astype(int)
+        near = np.abs(t_q - (T0 + cyc * P)) < 0.01 * P
+        deep_c = set(np.round((td - T0) / P).astype(int))
+        seen = sorted(set(cyc[near]))
+        multiples = {}
+        for k in range(2, 7):
+            res = {}
+            for c in seen:
+                r = c % k
+                res.setdefault(r, [0, 0])
+                res[r][0] += 1
+                res[r][1] += int(c in deep_c)
+            fr = {int(r): round(d / n, 2) for r, (n, d) in res.items() if n >= 3}
+            if len(fr) >= 2 and max(fr.values()) > 0.8 and min(fr.values()) < 0.2:
+                multiples[k] = fr
+        warn = (f"eclipses missing on some cycles: the true period is probably {min(multiples)} x {P:.5f} d "
+                f"(deep fraction by cycle mod k: {multiples[min(multiples)]})") if multiples else None
+        phases = np.round(np.sort(np.abs(((td - T0) / P + 0.5) % 1 - 0.5)), 4)
+        out = {"series": series, "n_dim": int(len(td)), "n_quiet": int(len(tq)), "baseline_days": span,
+               "period_days": P, "t0_mjd": float(T0), "frac_dim_within_0.04_phase": frac,
+               "frac_quiet_in_core": contam, "score": sc, "resolution_days": P * P / span,
+               "dim_phases": phases.tolist()[:60],
+               "cycles_sampled_at_eclipse": len(seen), "period_multiple_warning": warn,
+               "reading": "score near 1 = every deep point at one phase and none of the quiet ones. Folding can stack a "
+                          "primary and a secondary eclipse at P/k: read period_multiple_warning, and fold at the "
+                          "multiples before believing P."}
+        return self._log(s, "eclipse_period", dict(case=case, series=series, depth=depth, p_min=p_min, p_max=p_max), out)
+
+    def fold(self, case: str, series: str, period: float, t0: float, window_phase: float = 0.012,
+             n_bins: int = 50) -> dict:
+        """Fold a series on a period: phase-binned medians, primary depth (phase 0) and secondary depth
+        (phase 0.5) within +/- window_phase, the faintest bin away from the primary (a secondary at any
+        phase, for eccentric orbits), and primary depth on even vs odd cycles (catches period halving)."""
+        s = self.store(case)
+        df = self._frame(s, series)
+        t, m = df.t_mjd.to_numpy(float), df.mag.to_numpy(float)
+        cyc = np.round((t - t0) / period).astype(int)
+        ph = (t - t0) / period - cyc
+        phu = ph % 1.0
+        out_mask = (np.abs(ph) > 0.1)
+        base = float(np.median(m[out_mask])) if out_mask.any() else float(np.median(m))
+        scatter = float(stats.robust_std(m[out_mask]))
+
+        def depth(sel):
+            n = int(sel.sum())
+            return {"n": n, "median_delta": round(float(np.median(m[sel]) - base), 4) if n else None,
+                    "max_delta": round(float(np.max(m[sel]) - base), 4) if n else None,
+                    "err_of_median": round(scatter * 1.2533 / np.sqrt(n), 4) if n else None}
+
+        prim = np.abs(ph) < window_phase
+        sec = np.abs(phu - 0.5) < window_phase
+        edges = np.linspace(0, 1, n_bins + 1)
+        bins = []
+        for lo, hi in zip(edges[:-1], edges[1:], strict=True):
+            sel = (phu >= lo) & (phu < hi)
+            bins.append([round(float((lo + hi) / 2), 4), int(sel.sum()),
+                         round(float(np.median(m[sel]) - base), 4) if sel.any() else None])
+        away = [b for b in bins if b[2] is not None and b[1] >= 5 and 0.08 < b[0] < 0.92]
+        worst = max(away, key=lambda b: b[2]) if away else None
+        out = {"series": series, "period_days": period, "t0_mjd": t0, "baseline_mag": base, "out_of_eclipse_scatter": scatter,
+               "primary": depth(prim), "secondary_at_phase_0.5": depth(sec),
+               "faintest_bin_away_from_primary": {"phase": worst[0], "n": worst[1], "delta": worst[2]} if worst else None,
+               "primary_even_cycles": depth(prim & (cyc % 2 == 0)), "primary_odd_cycles": depth(prim & (cyc % 2 == 1)),
+               "bins": bins}
+        return self._log(s, "fold", dict(case=case, series=series, period=period, t0=t0, window_phase=window_phase,
+                                         n_bins=n_bins), out)
 
     def periodogram(self, case: str, series: str, min_period: float = 0.5, max_period: float | None = None,
                     start: float | str | None = None, end: float | str | None = None) -> dict:
@@ -473,7 +579,7 @@ def evaluate(check: Check, frame: Callable[[str], pd.DataFrame]):
 
 
 OPEN_TOOLS = ["list_cases", "list_classes", "case_overview", "get_lightcurve", "describe_series", "compare_windows",
-              "observer_agreement", "periodogram", "find_excursions", "cross_band", "wise_color", "ir_excess", "neighbors",
+              "observer_agreement", "eclipse_period", "fold", "periodogram", "find_excursions", "cross_band", "wise_color", "ir_excess", "neighbors",
               "skeptic_report", "add_claim", "retract_claim", "add_hypothesis", "update_hypothesis", "register_prediction", "check_prediction",
               "open_case", "literature"]
 BLIND_TOOLS = [t for t in OPEN_TOOLS if t not in ("check_prediction", "open_case", "literature")]

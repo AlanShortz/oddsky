@@ -33,6 +33,12 @@ the run. Opus 5.5 got 10/10, but it recognised 8 of the stars, and we say so. Ha
 From data cut a year before EE Cep's 2025 eclipse, Opus forecast the eclipse's timing and depth.
 We also found and published a bug in our own grader.
 
+We then pointed it at all of Gaia DR3 to look for new things. It found two eclipsing binaries nobody had
+catalogued (Gaia's pipeline had given them periods of 36 and 53 minutes). It also found, we thought, a star eclipsed every
+2.38 days by a Sun-sized object that gives off no light. Before we told anyone, an Oddsky referee agent took that
+apart in 30 minutes: we had folded at a fifth of the true period and stacked two eclipses on top of each other. It's an
+ordinary pair of K dwarfs. The whole thing, the mistake included, is in the repo.
+
 No account and no API key. A case is a directory, so forking an investigation is a git fork and a
 review is a PR. We would love: astronomers telling us what's wrong, and people pointing their agents
 at the cases.

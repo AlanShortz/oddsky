@@ -79,6 +79,9 @@ def fetch(store: CaseStore, surveys: tuple[str, ...] | list[str] = SURVEYS) -> d
     if "neowise" in surveys:
         record("neowise", *neowise.lightcurve(t.ra, t.dec))
 
+    if "neowise_exp" in surveys:
+        record("neowise_exp", *neowise.exposures(t.ra, t.dec))
+
     if "aavso" in surveys:
         df, p = pd.DataFrame(), None
         for name in [t.name, *t.aliases[:6]]:

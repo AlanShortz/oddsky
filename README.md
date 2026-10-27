@@ -45,12 +45,41 @@ single point of failure.
 
 | | |
 |---|---|
-| **The observatory** | 21 MCP tools: case overview, light curves, changepoints, excursions (dips and flares), Lomb-Scargle with spectral-window alias flags, cross-band colour slopes, WISE colour and infrared-excess temperature, Gaia neighbours, and tools for recording claims, hypotheses and predictions. `oddsky tools` lists them. |
+| **The observatory** | 24 MCP tools: case overview, light curves, changepoints, excursions (dips and flares), Lomb-Scargle with spectral-window alias flags, cross-band colour slopes, WISE colour and infrared-excess temperature, Gaia neighbours, and tools for recording claims, hypotheses and predictions. `oddsky tools` lists them. |
 | **Archives** | Gaia DR3 (context, neighbours, variability), NEOWISE 2014-2024 (quality-cut, visit-binned), AAVSO (a century of amateur photometry), TESS (SPOC/QLP), ZTF, ASAS-SN. Every cut is written to provenance. |
 | **The Skeptic** | Deterministic artifact checks: blends inside each survey's beam, saturation, single-observer data, series that start mid-event (against Gaia's baseline), colour coherence across bands, survey-rhythm aliases, unobserved onsets, TESS dips on momentum dumps and sector edges, RUWE. It is code, so it cannot be talked out of a warning. |
 | **Cases** | A case is a directory (`cases/OS-0001/`): `case.yaml` holds the argument, `data/` the evidence, and `ledger.jsonl` every tool call with a digest of its result. Fork = fork. Review = pull request. `oddsky replay OS-0001` re-runs the ledger. |
 | **Trials** | Blind (identity, coordinates and dates scrubbed; name the explanation), hindsight (data cut at a date; forecast what happens next, graded against what actually happened), and salted (real data with planted spacecraft artifacts). Answers are sha256-sealed before anyone runs. |
 | **The viewer** | `web/`: zero-build static site. The shared time axis, tagged claims with receipts, hypotheses, sealed predictions, the Skeptic report, provenance. Red-light mode for the observatory at night. |
+
+## First hunts: what Oddsky found, and what it got wrong
+
+We pointed Oddsky at the whole Gaia DR3 sky and asked for Sun-like stars that faded
+([hunt H-0001](hunts/H-0001)). **22,125 stars → 2,020 not already eclipsing binaries → 18 with deep, confirmed dips → 3 not
+explained by any catalogue.**
+
+- **Two new eclipsing binaries.** [OS-0011](cases/OS-0011) (P = 2.52961 d, an Algol-type pair) and
+  [OS-0012](cases/OS-0012) (P = 11.9008 d, two K dwarfs). Gaia and ZTF agree on both over an 11-year baseline.
+  Gaia's pipeline had given them periods of 53 and 36 minutes, VSX inherited those, and nobody checked again. Small and
+  new: a VSX submission, not a press release.
+- **The invisible companion that wasn't.** We first folded OS-0012 at 2.38 days, a fifth of its true period. That stacked
+  the secondary eclipse onto the primary, so it looked as if a Sun-sized, perfectly dark object blocked 58% of the star
+  every 2.38 days. We had written it up as a candidate opaque disk. An Oddsky referee agent was told to break it. It
+  counted which cycles actually showed eclipses, found that only every fifth one did, pulled TESS sector 80 to confirm,
+  and fitted an ordinary two-star model (reduced chi² 1.16). It took 30 minutes, and nothing was announced. The tool that
+  fooled us now runs a missing-eclipse test automatically.
+- **EE Cep's 2025 eclipse** ([OS-0003](cases/OS-0003)) was 1.44 ± 0.03 mag deep in V, twice 2014's depth (73% of the
+  light blocked against 48%), measured by eight independent AAVSO observers. The referee corrected five overstatements,
+  including the novelty claim: professional-led AAVSO campaigns observed it and plan to publish. Ours is an early
+  independent measurement, labelled as such.
+- **NSV 1302** ([OS-0010](cases/OS-0010)): a "suspected variable" since the photographic era, characterised as an
+  irregular young-star dipper in Per OB2.
+- **Two hunts parked**, with reasons written down: infrared afterglows of planetary collisions
+  ([H-0002](hunts/H-0002), which needs bulk NEOWISE access) and new R CrB stars (H-0003; Gaia DR3 already mined by
+  the experts, and our candidates were a VY Scl binary, a Mira, an S star and a T Tauri star).
+
+No headline discovery yet. What we have is a pipeline that finds real, small, new things, and that caught our own
+false positive before the internet did. Feynman would have liked that part best.
 
 ## Strange Stars Trial 001
 
@@ -105,12 +134,15 @@ Blind trial over MCP: `claude mcp add oddsky-trial -- uv run oddsky mcp --blind 
 |---|---|---|
 | [OS-0001](cases/OS-0001) | ASASSN-21qj: the star that glowed before it dimmed | reproduced |
 | [OS-0002](cases/OS-0002) | KIC 8462852 (Boyajian's Star) | observation |
-| [OS-0003](cases/OS-0003) | EE Cep: the eclipse that comes back every 5.6 years | observation |
+| [OS-0003](cases/OS-0003) | EE Cep: the 2025 eclipse, twice as deep | reproduced |
 | [OS-0004](cases/OS-0004) | R CrB: the star that smokes | observation |
 | [OS-0005](cases/OS-0005) | R Cyg: a Mira, strange to the eye and ordinary to astrophysics | observation |
 | [OS-0006](cases/OS-0006) | SS Cyg: the prototype dwarf nova | observation |
 | [OS-0007](cases/OS-0007) | AA Tau: the young star that went dark in 2011 | observation |
 | OS-0008/9 | two quiet control stars in the TESS continuous viewing zone | trial controls |
+| [OS-0010](cases/OS-0010) | NSV 1302: the young star nobody classified | interpreted |
+| [OS-0011](cases/OS-0011) | a new Algol-type binary, P = 2.52961 d | interpreted |
+| [OS-0012](cases/OS-0012) | the invisible companion that wasn't: a new K+K binary, P = 11.9008 d | closed |
 
 Each one is an open invitation to investigate.
 
