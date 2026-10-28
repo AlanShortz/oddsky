@@ -98,7 +98,7 @@ explained by any catalogue.**
   re-examined in 2018-2026 ZTF and ATLAS data for their first recorded decline. The classifier was calibrated on real R CrB stars
   first (14 of 14 that declined, 0 of 12 that never do). In the north every star that fades like an R CrB star and is bright enough
   for ZTF was already in a catalogue, which is a result. What nobody had reported: **[OS-0015](cases/OS-0015)**, a dust-shrouded star
-  near a star-forming region that goes dark for a week every 385.7 days, four times in four years, deeper in blue, with no
+  near a star-forming region that goes dark for two to three weeks every 385.7 days, four times in four years, deeper in blue, with no
   secondary eclipse: a translucent dust structure on a one-year orbit. Periodogram-based classifiers never saw it because each
   eclipse lasts 4% of the orbit. The referee found a fourth eclipse we had missed and removed our "red giant" framing before it
   went anywhere. ATLAS then showed the same eclipses on the same ephemeris, including a 2023 one ZTF had missed, so the case stands at
@@ -174,7 +174,7 @@ Blind trial over MCP: `claude mcp add oddsky-trial -- uv run oddsky mcp --blind 
 | [OS-0012](cases/OS-0012) | the invisible companion that wasn't: a new K+K binary, P = 11.9008 d | closed |
 | [OS-0013](cases/OS-0013) | an infrared excess that appeared in 2018 (K dwarf) | anomaly |
 | [OS-0014](cases/OS-0014) | **the star that vanished for three months** (G dwarf, 2017) | anomaly |
-| [OS-0015](cases/OS-0015) | a dust-shrouded star that goes dark for a week every 385.7 days | reproduced |
+| [OS-0015](cases/OS-0015) | a dust-shrouded star that goes dark for two to three weeks every 385.7 days | reproduced |
 
 Each one is an open invitation to investigate.
 

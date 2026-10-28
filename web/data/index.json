@@ -369,7 +369,7 @@
   },
   {
    "id": "OS-0015",
-   "title": "A dust-shrouded star in a star-forming region goes dark for a week every 385.7 days",
+   "title": "A dust-shrouded star in a star-forming region goes dark for two to three weeks every 385.7 days",
    "hook": "Found in Oddsky hunt H-0004 while looking for R CrB declines. Tisserand+2020 WISE candidate 2682 (2MASS J18205507-1340452), 4 arcsec from IRAS 18180-1342: steady to 0.1-0.2 mag, then four sharp 1.5-2.2 mag eclipses in four consecutive years, deeper in blue, on a strict 385.7-day period. Listed as a 'dubious' ATLAS variable and a Gaia DR2 long-period-variable candidate; the eclipses themselves were never reported.",
    "status": "reproduced",
    "target": "Gaia DR3 4152421080966024704",
