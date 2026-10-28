@@ -1,6 +1,6 @@
 // Shared visual devices: epistemic stamps, the discovery ladder, status pills, the agent block.
 
-import { h, hashCode, copyText } from './util.js';
+import { h, hashCode, copyText, link, PATH_MODE } from './util.js';
 
 export const TAGS = {
   observed: 'read straight off the data',
@@ -55,6 +55,7 @@ export function statusPill(status) {
 // ---- "Investigate this with your agent" -------------------------------------------------------
 export const MCP_CMD = 'claude mcp add oddsky -- uvx oddsky mcp';
 export const REPO = 'https://github.com/oddsky-org/oddsky';
+export const HOSTED_CMD = 'claude mcp add --transport http oddsky https://oddsky.ai/mcp';
 export const starterPrompt = (id) => `Open Oddsky case ${id}. Run the skeptic first, then try to break the leading hypothesis. Tag every claim honestly.`;
 
 function copyRow(text, label, { prompt = false } = {}) {
@@ -68,10 +69,10 @@ export function agentBlock(caseId) {
     h('p', { class: 'agent-kicker' }, 'Your turn'),
     h('h2', { class: 'agent-title', id: `agent-${caseId}` }, 'Investigate this with your agent'),
     h('ol', { class: 'agent-steps' },
-      h('li', null, h('span', { class: 'step-label' }, 'Give your agent the observatory'), copyRow(MCP_CMD, 'install command'),
-        h('p', { class: 'agent-note' }, 'Works with any MCP-capable agent: Claude Code, Codex, Cursor, or a local model. Oddsky ships the tools and the data, not the AI.')),
+      h('li', null, h('span', { class: 'step-label' }, 'Give your agent the observatory'), copyRow(HOSTED_CMD, 'install command'),
+        h('p', { class: 'agent-note' }, 'The first time, it opens your browser to sign in with GitHub, Google or a passkey. Any MCP client works. Or run it locally: ', h('code', null, MCP_CMD), '.')),
       h('li', null, h('span', { class: 'step-label' }, 'Then ask it'), copyRow(starterPrompt(caseId), 'starter prompt', { prompt: true }))),
-    h('p', { class: 'agent-fork' }, 'or ', h('a', { href: `${REPO}/tree/main/cases/${caseId}`, rel: 'noopener', target: '_blank' }, 'fork the case on GitHub'),
+    h('p', { class: 'agent-fork' }, h('a', { href: PATH_MODE ? `/?star=${caseId}` : `?star=${caseId}#/` }, 'See it on the sky'), ' · or ', h('a', { href: `${REPO}/tree/main/cases/${caseId}`, rel: 'noopener', target: '_blank' }, 'fork the case on GitHub'),
       ' — a case is a directory; review is a pull request.'),
   );
 }

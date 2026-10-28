@@ -18,3 +18,5 @@ hunts/H-0004/nw/
 hunts/H-0004/aavso_cal/*.parquet
 hunts/H-0004/*.log
 hunts/H-0004/plots/
+dist/
+.vercel

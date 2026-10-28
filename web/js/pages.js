@@ -1,6 +1,6 @@
 // #/cases, #/trials, #/about and the error states.
 
-import { h, s, arr, fmtDate, fmtInt, fmtNum, pct, klassLabel, mjdToYear, mjdToIso, copyText } from './util.js';
+import { h, s, arr, fmtDate, fmtInt, fmtNum, pct, klassLabel, mjdToYear, mjdToIso, copyText, link } from './util.js';
 import { loadCase } from './data.js';
 import { ladder, emptyNote, MCP_CMD, REPO, stamp } from './components.js';
 
@@ -18,11 +18,11 @@ export function renderCases(index) {
   );
 }
 
-function caseCard(c) {
+export function caseCard(c) {
   const surveys = [...new Set(arr(c.series).map((k) => k.split(':')[0]))];
   const thumb = h('div', { class: 'card-thumb', 'aria-hidden': 'true' });
   lazyThumb(thumb, c.id, c.featured);
-  return h('a', { class: 'case-card', href: `#/case/${encodeURIComponent(c.id)}` },
+  return h('a', { class: 'case-card', href: link(`case/${encodeURIComponent(c.id)}`) },
     h('div', { class: 'card-top' }, h('span', { class: 'mono card-id' }, c.id), c.target ? h('span', { class: 'mono card-target' }, c.target) : null,
       c.hunt ? h('span', { class: 'mono card-target', title: 'opened by a systematic hunt' }, c.hunt) : null,
       c.featured ? h('span', { class: 'card-featured' }, 'featured') : null),
@@ -246,7 +246,7 @@ function matrix(scs, caseMap) {
       h('th', { scope: 'row', class: 'mx-packet' }, h('span', { class: 'mono' }, id), any?.mode ? h('span', { class: `mode-chip mode-${any.mode}` }, any.mode) : null),
       h('td', { class: 'mx-truth' },
         h('span', { class: 'klass' }, klassLabel(any?.truth)),
-        real ? h('a', { class: 'mx-real', href: `#/case/${real.id}`, title: real.hook ?? '' }, h('span', { class: 'mono' }, `→ ${real.id}`), ` ${real.target}`) : any?.real_case ? h('span', { class: 'mono muted' }, `→ ${any.real_case}`) : null,
+        real ? h('a', { class: 'mx-real', href: link(`case/${real.id}`), title: real.hook ?? '' }, h('span', { class: 'mono' }, `→ ${real.id}`), ` ${real.target}`) : any?.real_case ? h('span', { class: 'mono muted' }, `→ ${any.real_case}`) : null,
         real?.title ? h('span', { class: 'mx-title' }, real.title) : null),
       per.map((c, i) => h('td', { class: `mx-cell ${c ? (c.top1 ? 'is-right' : 'is-wrong') : ''}`, 'data-agent': agentShort(scs[i].agent) }, c ? [
         h('div', { class: 'mx-top' }, h('span', { class: `mark ${c.top1 ? 'ok' : 'no'}`, title: c.top1 ? 'first choice was right' : 'first choice was wrong' }, c.top1 ? '✓' : '✗'),
@@ -274,7 +274,7 @@ function hindsight(scs, caseMap) {
   for (const id of packets) {
     const c0 = scs.map((sc) => arr(sc.cases).find((c) => c.case === id)).find(Boolean);
     const real = caseMap.get(c0?.real_case);
-    sec.append(h('h3', { class: 'hs-packet' }, h('span', { class: 'mono' }, id), real ? [' → ', h('a', { href: `#/case/${real.id}` }, real.target)] : null,
+    sec.append(h('h3', { class: 'hs-packet' }, h('span', { class: 'mono' }, id), real ? [' → ', h('a', { href: link(`case/${real.id}`) }, real.target)] : null,
       c0?.truth ? h('span', { class: 'klass' }, klassLabel(c0.truth)) : null));
     sec.append(h('div', { class: 'hs-cols' }, scs.map((sc) => {
       const ps = arr(sc.predictions).filter((p) => p.case === id);
@@ -384,7 +384,7 @@ export function trialTeaser(index) {
     }
   }
   const modes = [...new Set(scs.flatMap((sc) => arr(sc.cases).map((c) => c.mode)).filter(Boolean))];
-  return h('a', { class: 'teaser', href: '#/trials' },
+  return h('a', { class: 'teaser', href: link('trials') },
     h('span', { class: 'teaser-k' }, `Strange Stars ${String(scs[0].trial ?? '').replace(/^strange-stars-/, 'Trial ')}`),
     h('span', { class: 'teaser-mode mono' }, modes.join(' + ') || 'blind'),
     ...parts,
@@ -397,8 +397,8 @@ export function renderAbout() {
   return h('article', { class: 'page about' },
     h('header', { class: 'page-head' },
       h('p', { class: 'kicker' }, 'About'),
-      h('h1', null, 'The universe is an open question.'),
-      h('p', { class: 'page-lede' }, 'Oddsky is an open-source observatory for the pleasure of finding things out. Curious people point their own AI agents at real telescope data, investigate strange stars, and leave behind findings anyone can check.')),
+      h('h1', null, 'The sky has been recorded. Almost none of it has been looked at.'),
+      h('p', { class: 'page-lede' }, 'Gaia, NEOWISE, ZTF, ATLAS and TESS have measured billions of stars, and nearly all of it is public. What is scarce now is attention. Oddsky is an open-source observatory where curious people and their AI agents supply that attention carefully, and leave behind findings anyone can check. The aim: that a curious person anywhere can add something true to what we know about the universe.')),
     h('div', { class: 'manifesto' },
       h('section', null, h('h2', null, 'We ship the observatory, not the AI.'),
         h('p', null, 'Oddsky gives your agent the instruments: archive queries for Gaia, NEOWISE, AAVSO, ASAS-SN, ZTF and TESS, periodograms, dip finders, a skeptic. Bring whichever agent you like. Claude Code, Codex, Cursor, a model running on your own laptop: if it speaks MCP, it can observe.'),
@@ -413,14 +413,43 @@ export function renderAbout() {
       h('section', null, h('h2', null, 'Predictions are sealed and graded by the sky.'),
         h('p', null, 'A good explanation risks something. Predictions are registered in advance as checks the archive can run by itself, with probabilities attached, and they resolve when new data arrives. Not a committee; the sky.')),
       h('section', null, h('h2', null, 'Who'),
-        h('p', null, 'Started by Alan Shortz and the advisor (Space Telescope Science Institute). Open source under the MIT licence. ', h('a', { href: REPO, rel: 'noopener', target: '_blank' }, 'github.com/oddsky-org/oddsky'), '.'))),
+        h('p', null, 'Started by Alan Shortz and the advisor. Open source under the MIT licence. ', h('a', { href: REPO, rel: 'noopener', target: '_blank' }, 'github.com/oddsky-org/oddsky'), '.'))),
   );
+}
+
+// ---- /privacy and /terms ----------------------------------------------------------------------
+const legal = (kicker, title, updated, sections) => h('article', { class: 'page about legal' },
+  h('header', { class: 'page-head' }, h('p', { class: 'kicker' }, kicker), h('h1', null, title), h('p', { class: 'muted' }, `Last updated ${updated}`)),
+  h('div', { class: 'legal-body' }, sections.map(([hd, ...ps]) => h('section', null, h('h2', null, hd), ps.map((x) => h('p', null, x))))));
+
+export function renderPrivacy() {
+  return legal('Privacy', 'What Oddsky keeps, and why.', '28 October 2026', [
+    ['The short version', 'Oddsky is a public science project. What you publish here (notebooks, claims, sealed predictions) is meant to be public and permanent. Everything else we keep to the minimum needed to know that you are you.'],
+    ['What we store about you', 'Your observer code and the name you choose. If you sign in with GitHub or Google, the account ID that provider gives us and your GitHub username or Google email address, used only to recognise you when you sign in again. If you use a passkey, its public key (never anything that could unlock it). Hashes of your session tokens and instrument keys, never the tokens themselves.',
+      'We do not run ads, sell data, or use third-party analytics or tracking cookies. The site stores your sign-in session and your daylight/red-light preference in your own browser.'],
+    ['What is public on purpose', 'Your observer code and name; notebooks you publish; every prediction sealed through the hosted observatory (sealing is publishing, and the Sky Ledger is append-only, so sealed predictions and their grades cannot be removed); and the tool calls your agent makes, which are recorded with your notebook so that findings can be checked.'],
+    ['Where it lives', 'The site is served by Vercel. The hosted observatory, its database (Google Firestore) and your notebooks (Google Cloud Storage) run on Google Cloud in the United States. Your agent talks to us directly; we never see your AI provider account or your prompts, only the tool calls it sends to Oddsky.'],
+    ['Your choices', 'You can revoke any instrument key or connected agent from your profile at any time. To delete your account, write to alan@tangohq.com from the email linked to it (or tell us your observer code and prove it by signing in): we remove your name, sign-in methods, keys and unpublished notebooks. Sealed predictions and published notebooks stay on the public record under your observer code, because removing them would falsify the record; we will remove your name from them on request.'],
+    ['Contact', 'alan@tangohq.com'],
+  ]);
+}
+
+export function renderTerms() {
+  return legal('Terms', 'The terms of using Oddsky.', '28 October 2026', [
+    ['The service', 'Oddsky is an open-source observatory for investigating stars with public telescope data. The code is MIT licensed. The hosted service at oddsky.ai is free, offered as is, without warranty, and may change or stop.'],
+    ['Your observer code', 'One person (or one lab) per observer code. You are responsible for what agents using your instrument keys do, including predictions they seal under your code. Keep keys private and revoke any you lose.'],
+    ['What you publish', 'Notebooks and predictions you publish are public. You keep any rights you have in your own writing and license it under CC BY 4.0, so others can check, quote and build on it with credit. Data from the archives remains under its providers’ terms, which Oddsky credits case by case.'],
+    ['The Sky Ledger', 'Sealed predictions cannot be edited or withdrawn. That is the point of them.'],
+    ['Fair use', 'Don’t abuse the service: no attempts to break or overload it or the archives behind it, no automated account creation, nothing illegal. We rate-limit and may suspend keys that do these things.'],
+    ['Science, not advice', 'Findings on Oddsky are investigations in progress, tagged by how much is known. They are not peer-reviewed results unless stated.'],
+    ['Contact', 'alan@tangohq.com'],
+  ]);
 }
 
 export function renderNotFound(what) {
   return h('article', { class: 'page' }, h('header', { class: 'page-head' },
     h('p', { class: 'kicker' }, 'Not found'), h('h1', null, 'Nothing at these coordinates.'),
-    h('p', { class: 'page-lede' }, what ? `${what} isn’t in this archive. ` : '', h('a', { href: '#/cases' }, 'Browse the cases'), '.')));
+    h('p', { class: 'page-lede' }, what ? `${what} isn’t in this archive. ` : '', h('a', { href: link('cases') }, 'Browse the cases'), '.')));
 }
 
 export function renderError(err) {

@@ -21,7 +21,7 @@ from typing import Any
 import pandas as pd
 import yaml
 
-from ..paths import cases_dir
+from ..paths import case_prefix, cases_dir
 from .model import Case, now
 
 ID_RE = re.compile(r"^(OS|T|H)-?\d+", re.I)
@@ -53,9 +53,9 @@ class CaseStore:
 
     @staticmethod
     def next_case_id() -> str:
-        root = cases_dir()
-        nums = [int(m.group(0)[3:]) for d in root.glob("OS-*") if (m := re.match(r"OS-\d+", d.name))]
-        return f"OS-{(max(nums) + 1 if nums else 1):04d}"
+        root, pre = cases_dir(), case_prefix()
+        nums = [int(m.group(1)) for d in root.glob(f"{pre}-*") if (m := re.match(rf"{re.escape(pre)}-(\d+)$", d.name))]
+        return f"{pre}-{(max(nums) + 1 if nums else 1):04d}"
 
     # -- the argument ---------------------------------------------------------------------------
     def load(self) -> Case:
