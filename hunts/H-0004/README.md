@@ -41,7 +41,7 @@ through the same pipeline as the calibration set: the classifier's recall on the
   recoveries across ATLAS and ZTF 2016-2026, but the field is crowded and most ATLAS exposures are flagged. Needs a careful case;
   not claimed.
 - **Tisserand candidate 5021** ([KDM2001] 2730, a carbon star in the LMC outskirts, ATLAS only): two 5-mag drops with 0.4 mag/day
-  declines and 500-day minima on a ~950-day cycle. A dusty long-period variable or a DY Per-type star; for the advisor.
+  declines and 500-day minima on a ~950-day cycle. A dusty long-period variable or a DY Per-type star; worth an expert's look.
 
 **No new R CrB star has been confirmed yet.** In the north, every star that fades like one and is bright enough for ZTF turned out
 to be in a catalogue already. The southern 1,067, where most R CrB stars live, are still queued.

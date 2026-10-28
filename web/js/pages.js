@@ -413,7 +413,7 @@ export function renderAbout() {
       h('section', null, h('h2', null, 'Predictions are sealed and graded by the sky.'),
         h('p', null, 'A good explanation risks something. Predictions are registered in advance as checks the archive can run by itself, with probabilities attached, and they resolve when new data arrives. Not a committee; the sky.')),
       h('section', null, h('h2', null, 'Who'),
-        h('p', null, 'Started by Alan Shortz and the advisor. Open source under the MIT licence', ...(REPO_PUBLIC ? [': ', h('a', { href: REPO, rel: 'noopener', target: '_blank' }, REPO.replace('https://', '')), '.'] : ['; the code opens with the first public release.'])))),
+        h('p', null, 'Started by Alan Shortz. Open source under the MIT licence', ...(REPO_PUBLIC ? [': ', h('a', { href: REPO, rel: 'noopener', target: '_blank' }, REPO.replace('https://', '')), '.'] : ['; the code opens with the first public release.'])))),
   );
 }
 
