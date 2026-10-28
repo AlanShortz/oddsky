@@ -28,7 +28,8 @@ def test_chain_verifies_and_detects_tampering():
     rows = dbmod.db().log_range()
     assert a["prev"] == GENESIS and b["prev"] == a["hash"]
     assert verify(rows)["ok"]
-    body = json.loads(rows[0]["body"]); body["probability"] = 0.99
+    body = json.loads(rows[0]["body"])
+    body["probability"] = 0.99
     rows[0] = {**rows[0], "body": json.dumps(body)}
     assert not verify(rows)["ok"]
 
