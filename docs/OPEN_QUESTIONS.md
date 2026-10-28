@@ -60,8 +60,8 @@ down so you can overrule it quickly. In rough priority order:
   b = +0.4 degrees.
 - What follow-up settles it: a spectrum at maximum (giant vs. young star), and photometry of the next eclipses
   (2026 December falls at conjunction; 2028 January 17 +/- 18 d is the one to plan for).
-- Whether this is the launch discovery. It is new, periodic, and predicted; it is not an R CrB star, which is what the
-  hunt was built for. Both facts go in the write-up.
+- Whether this is the launch discovery. It is new, periodic, predicted, and now reproduced by a second instrument (ATLAS);
+  it is not an R CrB star, which is what the hunt was built for. Both facts go in the write-up.
 
 ## Data-source notes for you
 

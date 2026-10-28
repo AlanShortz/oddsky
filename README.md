@@ -89,7 +89,8 @@ explained by any catalogue.**
   near a star-forming region that goes dark for a week every 385.7 days, four times in four years, deeper in blue, with no
   secondary eclipse: a translucent dust structure on a one-year orbit. Periodogram-based classifiers never saw it because each
   eclipse lasts 4% of the orbit. The referee found a fourth eclipse we had missed and removed our "red giant" framing before it
-  went anywhere. Two predictions are sealed; the ATLAS record is the independent check. The southern half of the
+  went anywhere. ATLAS then showed the same eclipses on the same ephemeris, including a 2023 one ZTF had missed, so the case stands at
+  "reproduced". Two predictions are sealed for 2027-2028. The southern half of the
   candidate list is still queued on the ATLAS server.
 - **One hunt parked**: new R CrB stars (H-0003). Gaia DR3 has already been mined by the experts, and our candidates were a VY
   Scl binary, a Mira, an S star and a T Tauri star.
@@ -161,7 +162,7 @@ Blind trial over MCP: `claude mcp add oddsky-trial -- uv run oddsky mcp --blind 
 | [OS-0012](cases/OS-0012) | the invisible companion that wasn't: a new K+K binary, P = 11.9008 d | closed |
 | [OS-0013](cases/OS-0013) | an infrared excess that appeared in 2018 (K dwarf) | anomaly |
 | [OS-0014](cases/OS-0014) | **the star that vanished for three months** (G dwarf, 2017) | anomaly |
-| [OS-0015](cases/OS-0015) | a dust-shrouded star that goes dark for a week every 385.7 days | anomaly |
+| [OS-0015](cases/OS-0015) | a dust-shrouded star that goes dark for a week every 385.7 days | reproduced |
 
 Each one is an open invitation to investigate.
 

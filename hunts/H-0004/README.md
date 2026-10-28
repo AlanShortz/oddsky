@@ -35,8 +35,8 @@ through the same pipeline as the calibration set: the classifier's recall on the
   one-year orbit, around a companion of an evolved star or in the disk of a young binary. The referee found the fourth eclipse we had
   missed, killed the "red giant" and "80 solar radii" framing (the star is 20-100 Lsun, so the 18-day chord is star plus occulter),
   and showed the star was already a "dubious" ATLAS variable and a Gaia DR2 LPV candidate; the eclipses themselves were never
-  reported. Mundane explanations about 5%. Two predictions sealed (2027 quiet season, 2028 January eclipse); ATLAS 2015-2026 is the
-  pending independent check.
+  reported. Mundane explanations about 5%. **ATLAS then confirmed it independently**: the same eclipses on the same ephemeris, including the 2023
+  one ZTF missed, caught in ingress on time. Ladder: reproduced. Two predictions sealed (2027 quiet season, 2028 January eclipse).
 - **Tisserand candidate 41** (2MASS J07235669-1240141), one of Karambelkar+2024's eight "RCB-cand" stars: 4.5-mag aperiodic fades and
   recoveries across ATLAS and ZTF 2016-2026, but the field is crowded and most ATLAS exposures are flagged. Needs a careful case;
   not claimed.

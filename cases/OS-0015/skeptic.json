@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-27T19:35:22+00:00",
-  "oddsky_version": "0.3.0",
-  "summary": "0 fail, 6 warn, 3 pass, 0 skipped",
+  "generated_at": "2026-10-28T02:13:41+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "0 fail, 6 warn, 6 pass, 0 skipped",
   "counts": {
     "fail": 0,
     "warn": 6,
-    "pass": 3,
+    "pass": 6,
     "skip": 0
   },
   "checks": [
@@ -29,6 +29,19 @@
       "finding": "no Gaia source within 2.0\"",
       "numbers": {
         "radius_arcsec": 2.0
+      }
+    },
+    {
+      "id": "blend_atlas",
+      "title": "Neighbours inside the ATLAS beam (8.0\")",
+      "status": "pass",
+      "finding": "1 Gaia source(s) within 8.0\"; brightest contributes 3.3% of the target's G flux at 3.0\"",
+      "numbers": {
+        "radius_arcsec": 8.0,
+        "n_inside": 1,
+        "total_flux_ratio_G": 0.0331,
+        "brightest_flux_ratio": 0.0331,
+        "brightest_sep": 2.9843
       }
     },
     {
@@ -57,12 +70,13 @@
     {
       "id": "confirmation",
       "title": "Independent optical confirmation",
-      "status": "warn",
-      "finding": "optical data from 1 independent source(s): ZTF (932). One instrument or observer is a single point of failure; seek a second.",
+      "status": "pass",
+      "finding": "optical data from 2 independent source(s): ZTF (932), ATLAS (613)",
       "numbers": {
-        "n_sources": 1,
+        "n_sources": 2,
         "top_sources": {
-          "ZTF": 932
+          "ZTF": 932,
+          "ATLAS": 613
         }
       }
     },
@@ -97,6 +111,40 @@
       "finding": "the 3 deepest dip(s) (> 0.1 mag vs a 600-day baseline) all have an observed ingress",
       "numbers": {
         "n_events": 3
+      }
+    },
+    {
+      "id": "onset_atlas_ATLAS_o",
+      "title": "Was the start seen? (ATLAS ATLAS_o)",
+      "status": "warn",
+      "finding": "the 1.52-mag dip peaking at MJD 59474 begins at the edge of the data or right after a gap; its true start and shape are unobserved",
+      "numbers": {
+        "event": {
+          "direction": "fainter",
+          "start_mjd": 59474.331328,
+          "end_mjd": 59478.284164,
+          "duration_days": 3.9528359999967506,
+          "peak_mjd": 59474.331328,
+          "depth_mag": 1.520717080070515,
+          "n_bins": 3,
+          "ingress_days": 0.0,
+          "egress_days": 3.9528359999967506,
+          "baseline_mag": 14.567207546394837,
+          "asymmetry": 1.0,
+          "cameras_involved": 3,
+          "starts_after_gap": true,
+          "ends_before_gap": false
+        }
+      }
+    },
+    {
+      "id": "alias_atlas_ATLAS_o",
+      "title": "Periodicity vs survey rhythms (ATLAS ATLAS_o)",
+      "status": "pass",
+      "finding": "strongest period 381.74 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 381.7385311694889,
+        "power": 0.1739297195044916
       }
     },
     {

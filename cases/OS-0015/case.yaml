@@ -4,7 +4,7 @@ hook: 'Found in Oddsky hunt H-0004 while looking for R CrB declines. Tisserand+2
   (2MASS J18205507-1340452), 4 arcsec from IRAS 18180-1342: steady to 0.1-0.2 mag, then four sharp 1.5-2.2
   mag eclipses in four consecutive years, deeper in blue, on a strict 385.7-day period. Listed as a ''dubious''
   ATLAS variable and a Gaia DR2 long-period-variable candidate; the eclipses themselves were never reported.'
-status: anomaly
+status: reproduced
 target:
   name: Gaia DR3 4152421080966024704
   ra: 275.2294829
@@ -17,8 +17,9 @@ summary: 'Four full-depth eclipses (2019-2022) on P = 385.7 +/- 0.5 d, T0 = MJD 
   II mid-infrared SED and RUWE 1.8, in or behind an intermediate-mass star-forming region. The occulter
   is a translucent, reddening, evolving dust structure on a one-year orbit, whether around a companion
   of an evolved star or in the disk of a young binary. Referee (2026-10-27): the eclipses survive; mundane
-  explanations about 5%. Predictions sealed for the 2027 quiet season and the 2028 January eclipse; the
-  ATLAS record is the pending independent check.'
+  explanations about 5%. Predictions sealed for the 2027 quiet season and the 2028 January eclipse; ATLAS
+  (independent telescopes and pipeline) shows the same eclipses on the same ephemeris, including the 2023
+  one ZTF missed: reproduced.'
 claims:
 - id: C1
   text: ZTF r is flat at 14.77 mag (robust scatter ~0.02 mag) for 7.5 years apart from brief deep fades.
@@ -315,6 +316,32 @@ claims:
   - K12
   author: claude-fable-5.1
   at: '2026-10-27T19:56:07+00:00'
+- id: C22
+  text: 'ATLAS forced photometry (2015-2026, 613 good exposures in a crowded field, independent telescopes
+    and pipeline) shows the same eclipses on the same ephemeris: cycle 0 in cyan (17.24 at mid-eclipse,
+    1.9 mag deep), cycle 2 in orange (16.09 one day after mid-eclipse, 1.6 mag, recovered by +8 d), cycle
+    3 in orange sampled on eight nights from -4 to +7 d (deepest 16.09 at -2 d), and the 2023 eclipse
+    (cycle 4) that fell in a ZTF gap, caught in ingress at -2 and -1 d (15.32, 15.85: at least 1.4 mag
+    deep, on time). Cycles -1 and 1 have ATLAS points only at +4 to +6 d, 0.2-0.45 mag faint, consistent
+    with the egress wing. ATLAS has no data within 25 d of the 2024 and 2025 eclipses (conjunction season).
+    Phase-clustering of ZTF and ATLAS together keeps P = 386-387 d with all deep points at one phase.'
+  tag: computed
+  calls:
+  - K98
+  - K99
+  - K100
+  - K102
+  - K103
+  - K104
+  - K105
+  - K106
+  - K107
+  - K108
+  - K109
+  - K110
+  - K111
+  author: claude-fable-5.1
+  at: '2026-10-28T02:13:40+00:00'
 hypotheses:
 - id: H1
   klass: eclipse_companion
@@ -334,7 +361,7 @@ hypotheses:
   conflicts: []
   would_falsify: ''
   status: live
-  confidence: 0.4
+  confidence: 0.45
   author: claude-fable-5.1
   at: '2026-10-27T19:34:18+00:00'
 - id: H2
@@ -351,7 +378,7 @@ hypotheses:
   conflicts: []
   would_falsify: ''
   status: live
-  confidence: 0.4
+  confidence: 0.45
   author: claude-fable-5.1
   at: '2026-10-27T19:34:18+00:00'
 - id: H3

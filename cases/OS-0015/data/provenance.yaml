@@ -115,3 +115,22 @@ tess:
   cuts: []
   notes: []
   status: empty
+atlas:
+  archive: ATLAS forced photometry (fallingstar-data.com), reduced images
+  query:
+    ra: 275.229479
+    dec: -13.679198
+    mjd_min: 57200.0
+    use_reduced: true
+    nightly: false
+  retrieved_at: '2026-10-28T02:12:37+00:00'
+  rows_raw: 4918
+  rows_kept: 613
+  cuts:
+  - 'ATLAS: err flag / chi2 per dof > 10 / unknown filter / brighter than saturation flagged 4272'
+  - 'ATLAS: SNR < 3 kept as 5-sigma upper limits 32'
+  notes:
+  - reused cached server response hunts/H-0004/lc/atlas_raw/T20-2682.txt
+  - 'telescopes (good points): 02a:226, 01a:145, 03a:141, 04a:101'
+  - 'reduced-image PSF photometry: blends within ~8" are included in the flux'
+  status: ok
