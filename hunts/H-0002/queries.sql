@@ -14,10 +14,12 @@ WHERE n_visits >= 8 AND ABS(color_base) < 0.15 AND base_scatter_w2 < 0.05 AND w1
 GROUP BY rise ORDER BY rise;
 
 -- 3. Vanishing dust: an infrared excess at the start that faded back toward a bare photosphere
---    (cf. TYC 8241 2652 1, Melis et al. 2012).
+--    (cf. TYC 8241 2652 1, Melis et al. 2012). color_end and w2_end are *changes* from the baseline
+--    (neowise_pixel.py), so "lost 60% of the excess" is color_end < -0.6 * color_base. Both are medians of
+--    the last two visits: one bad final W2 point fakes a fade, so check the light curve.
 SELECT pixel, allwise_cntr, n_visits, w1_base, w2_base, color_base, color_end, w2_end, w1mpro_allwise, w3mpro_allwise, w4mpro_allwise
 FROM `oddsky-sky-br3c3.sky.sky1_features`
 WHERE n_visits >= 12 AND base_scatter_w2 < 0.05 AND w1_base < 13 AND color_base > 0.25
-  AND color_end - color_base < -0.2 AND w2_end > 0.2
-ORDER BY (color_end - color_base) ASC
+  AND color_end < -0.6 * color_base AND w2_end > 0.2
+ORDER BY color_end / color_base ASC
 LIMIT 200;
