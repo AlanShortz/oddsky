@@ -5,11 +5,11 @@
 
 ## Introduction
 
-For most of history astronomy was limited by light: how much a telescope could gather, and how often it could look. That limit has quietly fallen. Gaia has charted 1.8 billion stars, NEOWISE photographed the whole sky every six months for a decade, ZTF, ATLAS and TESS watch it night after night, and nearly all of it is public. What is scarce now is attention. In 2017 a star like the Sun went dark for 95 days; three public surveys recorded it, and nobody noticed for nine years. It is the first object below.
+For most of history astronomy was limited by light: how much a telescope could gather, and how often it could look. That limit has quietly fallen. Gaia has charted 1.8 billion stars, NEOWISE photographed the whole sky every six months for a decade, ZTF, ATLAS and TESS watch it night after night, and nearly all of it is public. What is scarce now is attention: most of that record has never been looked at closely by anyone, and whatever is in it stays unknown until someone does.
 
 Oddsky is the open-source observatory I have been building to supply that attention, carefully. A curious person, using an AI agent as the instrument, can look closely at stars no one has examined and leave behind work that others can check: every claim says how it is known, every number has a receipt that replays from the archives, every prediction is sealed before the sky answers, and nothing is called a finding until a deterministic set of checks (the Skeptic) and an independent adversarial pass (the referee) have tried to break it. The tools make attention cheap. The discipline is what makes it worth anything.
 
-Two systematic searches this week left three objects standing: one from a re-screen of the published R CrB candidate list, two from a full-sky pass over the NEOWISE archive. None of the three phenomena is reported anywhere I can find.
+Two systematic searches this week left three objects standing: one from a re-screen of the published R CrB candidate list, two from a full-sky pass over the NEOWISE archive. I have not found any of the three phenomena reported, but whether they are real, and what they are, is what this brief asks you.
 
 I am not an astronomer. Each object below is given in the same order: the claim, the figure, the observations, the interpretation. Section 5 contains four questions, which is all I am asking of you. Everything cited here is in the public repository, case directories `cases/OS-0014`, `cases/OS-0015` and `cases/OS-0013`, including the three referee reports, which are blunter than this brief.
 
