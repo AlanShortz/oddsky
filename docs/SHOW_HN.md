@@ -39,9 +39,9 @@ catalogued (Gaia's pipeline had given them periods of 36 and 53 minutes). It als
 apart in 30 minutes: we had folded at a fifth of the true period and stacked two eclipses on top of each other. It's an
 ordinary pair of K dwarfs. The whole thing, the mistake included, is in the repo.
 
-Then we read every NEOWISE infrared measurement of the sky (146.6 billion detections, 177 million stars) on Google
+Then we read every NEOWISE infrared measurement of the sky (146.6 billion detections, 165 million stars) on Google
 Cloud in two hours, for a few dollars, looking for stars that suddenly grew hot dust. Out of the vetting came a G dwarf
-that vanished for about 95 days in 2017: more than 99.5% of its light was blocked, three surveys saw it independently, and
+that vanished for about 95 days in 2017: at the deepest, more than 99% of its light was blocked, three surveys saw it independently, and
 afterwards it began to glow in the infrared. We can't find anyone who has reported it. Whatever crossed it was at
 least 0.15 AU across.
 

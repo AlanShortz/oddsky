@@ -87,10 +87,10 @@ explained by any catalogue.**
 - **NSV 1302** ([OS-0010](cases/OS-0010)): a "suspected variable" since the photographic era, characterised as an
   irregular young-star dipper in Per OB2.
 - **The whole infrared sky, then a star that vanished** ([hunt H-0002](hunts/H-0002)). We read all 146.6 billion NEOWISE
-  detections (2014-2024) for 176.9 million stars on Google Cloud in under two hours, for a few dollars. The question was
-  which Sun-like stars suddenly grew hot dust, as ASASSN-21qj did. The pipeline recovered ASASSN-21qj blind at 79σ. After
-  Skeptic and referee vetting, two of the 224 flags survive. In **[OS-0014](cases/OS-0014)**, a G dwarf 420 pc away
-  **vanished for ~95 days in 2017**, with more than 99.5% of its light blocked, nearly grey across four optical filters.
+  detections (2014-2024) for 164.7 million stars (Galactic latitude ≥ 10°) on Google Cloud in under two hours, for a few dollars. The question was
+  which Sun-like stars suddenly grew hot dust, as ASASSN-21qj did. The pipeline recovered ASASSN-21qj blind at 46σ. After
+  Skeptic and referee vetting, two of the 314 flags survive. In **[OS-0014](cases/OS-0014)**, a G dwarf 420 pc away
+  **vanished for ~95 days in 2017**, more than 99% of its light blocked at the deepest, nearly grey across four optical filters.
   ASAS-SN, SkyMapper and NEOWISE saw it independently, and comparison stars stayed steady. Afterwards a warm infrared glow
   appeared, and it was still there in 2024. As far as SIMBAD, VSX, the alert streams and the literature show, nobody has
   reported it. In [OS-0013](cases/OS-0013), a K dwarf grew ~1000 K dust between two visits in 2018.

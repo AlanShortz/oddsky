@@ -37,9 +37,9 @@
       "question": "Which Sun-like stars suddenly grew hot dust, the infrared glow of a planetary collision, seen from any angle?",
       "date": "2026-10-27",
       "state": "done",
-      "scale": "146.6 billion NEOWISE detections · 176.9 million stars · 1 h 53 min on 24 spot VMs · a few dollars",
+      "scale": "146.6 billion NEOWISE detections · 164.7 million stars · 1 h 53 min on 24 spot VMs · a few dollars",
       "funnel": [
-        [176900000, "stars read, every NEOWISE visit 2014-2024"],
+        [164700000, "stars read, every NEOWISE visit 2014-2024"],
         [18100000, "steady, testable photospheres"],
         [224, "infrared afterglow flags"],
         [80, "real stars with a Gaia parallax"],
@@ -48,7 +48,7 @@
         [6, "main sequence, no dust before"],
         [2, "not in any catalogue"]
       ],
-      "verdict": "ASASSN-21qj recovered blind at 79σ. One survivor vanished for 95 days in 2017. A re-run with a bug fixed tested 24.5 million photospheres instead of 18.1 million and found no new survivor.",
+      "verdict": "ASASSN-21qj recovered blind at 46σ. One survivor vanished for 95 days in 2017. A re-run with a bug fixed tested 24.5 million photospheres instead of 18.1 million and found no new survivor.",
       "cases": ["OS-0014", "OS-0013"]
     },
     {

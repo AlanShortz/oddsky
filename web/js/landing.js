@@ -214,7 +214,7 @@ function stressTest(index) {
       h('h2', null, 'Does the premise hold? ', h('span', null, 'We’re finding out in public.'))),
     h('p', { class: 'stress-lede' }, 'The first stars an Oddsky agent turned up are now with a professional astronomer for scrutiny. If one survives, the premise holds. If none does, back to the drawing board. Either way, the record stays here.'),
     h('div', { class: 'st-grid' },
-      card('OS-0014', 'unreported', 'A Sun-like star lost more than 99.5% of its light for about 95 days in 2017, seen by four surveys.'),
+      card('OS-0014', 'unreported', 'A Sun-like star dimmed for about 95 days in 2017, more than 99% of its light gone at the deepest, seen by four surveys.'),
       card('OS-0015', 'unreported eclipses', 'A dust-shrouded star eclipsed once a year, every year, on a 385.7-day clock.'),
       card('OS-0012', 'caught by our own referee', 'An “invisible companion” that turned out to be a folding alias, caught before anything was announced.')),
     h('p', { class: 'stress-more' }, h('a', { href: link('cases') }, 'The whole casebook →'), '  ', h('a', { href: link('docket') }, 'The Docket →'), '  ', h('a', { href: link('trials') }, 'Blind trials →')));

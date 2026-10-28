@@ -1,0 +1,87 @@
+\                                                                               
+\fixlen = T
+\RowsRetrieved =                11
+\ORIGIN  = 'IPAC Infrared Science Archive (IRSA), Caltech/JPL'
+\SIMULATED_TABLE  = 'n'
+\DATETIME= '2026-10-27 10:58:19'
+\DATABASE= 'AllWISE Source Catalog (allwise_p3as_psd)'
+\EQUINOX = 'J2000'
+\SKYAREA = 'within 40 arcsec of  ra=220.96627 dec=-76.19612 Eq J2000 '
+\StatusFile = '/workspace/TMP_r0iYRm_3323165/Gator/irsa/3323165/log.3323165.html'
+\SQL     = 'WHERE (no constraints) 
+\SQL     = 'SELECT (27 column names follow in next row.)'
+\ 
+\ designation 
+\ ___ WISE source designation
+\ ra (deg) 
+\ ___ right ascension (J2000)
+\ dec (deg) 
+\ ___ declination (J2000)
+\ clon 
+\ ___ Right ascention in Sexagesimal format.
+\ clat 
+\ ___ Declination in Sexagesimal format.
+\ w1mpro (mag) 
+\ ___ instrumental profile-fit photometry magnitude, band 1
+\ w1sigmpro (mag) 
+\ ___ instrumental profile-fit photometry flux uncertainty in mag units, band 1
+\ w2mpro (mag) 
+\ ___ instrumental profile-fit photometry magnitude, band 2
+\ w2sigmpro (mag) 
+\ ___ instrumental profile-fit photometry flux uncertainty in mag units, band 2
+\ w3mpro (mag) 
+\ ___ instrumental profile-fit photometry magnitude, band 3
+\ w3sigmpro (mag) 
+\ ___ instrumental profile-fit photometry flux uncertainty in mag units, band 3
+\ w3snr 
+\ ___ instrumental profile-fit photometry S/N ratio, band 3
+\ w4mpro (mag) 
+\ ___ instrumental profile-fit photometry magnitude, band 4
+\ w4snr 
+\ ___ instrumental profile-fit photometry S/N ratio, band 4
+\ cc_flags 
+\ ___ prioritized artifacts affecting the source in each band
+\ ext_flg 
+\ ___ probability that source morphology is not consistent with single PSF
+\ var_flg 
+\ ___ probability that flux varied in any band greater than amount expected from unc.s
+\ ph_qual 
+\ ___ photometric quality of each band (A=highest, U=upper limit)
+\ nb 
+\ ___ number of blend components used in each fit
+\ na 
+\ ___ active deblend flag (=1 if actively deblended)
+\ w1rchi2 
+\ ___ instrumental profile-fit photometry reduced chi^2, band 1
+\ w2rchi2 
+\ ___ instrumental profile-fit photometry reduced chi^2, band 2
+\ w3rchi2 
+\ ___ instrumental profile-fit photometry reduced chi^2, band 3
+\ j_m_2mass (mag) 
+\ ___ J magnitude entry of the associated 2MASS All-Sky PSC source
+\ h_m_2mass (mag) 
+\ ___ H magnitude entry of the associated 2MASS All-Sky PSC source
+\ k_m_2mass (mag) 
+\ ___ Ks magnitude entry of the associated 2MASS All-Sky PSC source
+\ cntr 
+\ ___ unique entry counter (key) number
+\ dist (arcsec) 
+\ ___ Distance between the target position and each source in arcsec.
+\ angle (deg) 
+\ ___ Position Angle in degree.
+\ 
+|          designation|          ra|         dec|          clon|          clat|  w1mpro| w1sigmpro|  w2mpro| w2sigmpro|  w3mpro| w3sigmpro|    w3snr|  w4mpro|    w4snr| cc_flags| ext_flg| var_flg| ph_qual|   nb|   na|   w1rchi2|   w2rchi2|   w3rchi2| j_m_2mass| h_m_2mass| k_m_2mass|                cntr|           dist|       angle|
+|                 char|      double|      double|          char|          char|  double|    double|  double|    double|  double|    double|   double|  double|   double|     char|     int|    char|    char|  int|  int|    double|    double|    double|    double|    double|    double|                long|         double|      double|
+|                     |         deg|         deg|              |              |     mag|       mag|     mag|       mag|     mag|       mag|         |     mag|         |         |        |        |        |     |     |          |          |          |       mag|       mag|       mag|                    |         arcsec|         deg|
+|                 null|        null|        null|          null|          null|    null|      null|    null|      null|    null|      null|     null|    null|     null|     null|    null|    null|    null| null| null|      null|      null|      null|      null|      null|      null|                null|           null|        null|
+   J144351.92-761145.9  220.9663551  -76.1961106   14h43m51.93s  -76d11m46.00s   11.193      0.024   11.239      0.021   11.024      0.101      10.7    9.155       0.5      hh00        0     000n     AAAU     1     0  2.209e+00  1.095e+00  8.946e-01     11.899     11.411     11.253  2206075801351005501        0.080561    65.158513 
+   J144348.59-761140.2  220.9524799  -76.1945203   14h43m48.60s  -76d11m40.27s   13.216      0.025   13.239      0.027   12.665      0.411       2.6    9.348      -0.4      hh00        1     11nn     AACU     1     0  6.055e+00  2.136e+00  1.044e+00     14.152     13.586     13.410  2206075801351005610       13.171470   295.920378 
+   J144349.60-761159.9  220.9566991  -76.1999907   14h43m49.61s  -76d11m59.97s   12.350      0.024   12.353      0.023   11.239      0.127       8.6    8.627       1.6      dd00        1     76nn     AABU     1     0  9.926e+00  3.890e+00  9.543e-01     13.164     12.794     12.704  2206075801351005546       16.178288   210.531371 
+   J144356.29-761158.5  220.9845788  -76.1996077   14h43m56.30s  -76d11m58.59s   14.225      0.029   14.189      0.037   12.806       null       0.0    9.293      -0.8      dd00        0     10nn     AAUU     1     0  2.736e+00  9.910e-01  8.823e-01     14.902     14.481     14.577  2206075801351005769       20.122298   128.615554 
+   J144357.98-761148.1  220.9915864  -76.1966988   14h43m57.98s  -76d11m48.12s   14.993      0.031   14.883      0.052   12.890       null      -0.4    9.245      -0.9      0h00        0     00nn     AAUU     1     0  2.905e+00  1.108e+00  9.518e-01     15.879     15.276     15.202  2206075801351005962       21.844860    95.485793 
+   J144349.44-761124.0  220.9560098  -76.1900014   14h43m49.44s  -76d11m24.01s   14.545      0.028   14.810      0.053   13.002       null      -0.1    8.895       0.6      hh00        0     00nn     AAUU     1     0  9.891e-01  9.196e-01  9.630e-01     15.323     14.714     14.565  2206075801351019686       23.725324   338.184182 
+   J144350.41-761215.0  220.9600731  -76.2041702   14h43m50.42s  -76d12m15.01s   15.043      0.034   14.138      0.038   11.405      0.136       8.0    8.778       3.4      hh00        1     21nn     AABB     1     0  4.852e+00  1.531e+00  1.053e+00       null       null       null  2206075801351006208       29.465215   190.401567 
+   J144344.80-761206.0  220.9367065  -76.2016896   14h43m44.81s  -76d12m06.08s    8.748      0.024    8.755      0.020    8.732      0.024      45.4    8.689       4.0      0000        0     000n     AAAB     1     0  1.193e+00  1.025e+00  9.542e-01      8.955      8.857      8.832  2206075801351005473       32.351413   231.686024 
+   J144342.71-761129.3  220.9279827  -76.1914729   14h43m42.72s  -76d11m29.30s   15.732      0.042   16.002      0.133   12.979       null      -1.6    9.092       0.3      dD00        0     1nnn     ABUU     1     0  1.765e+00  7.903e-01  1.128e+00       null       null       null  2206075801351006312       36.902573   296.939842 
+   J144401.25-761203.0  221.0052257  -76.2008407   14h44m01.25s  -76d12m03.03s   14.924      0.030   15.216      0.063   12.852       null       0.0    9.291      -1.7      0h00        0     00nn     AAUU     1     0  1.384e+00  8.506e-01  8.118e-01     15.290     14.802     14.868  2206075801351005958       37.524597   116.948178 
+   J144353.84-761223.3  220.9743684  -76.2064896   14h43m53.85s  -76d12m23.36s   15.015      0.047   15.085      0.078   12.462       null       0.7    8.668       0.8      hh00        1     nnnn     AAUU     2     1  3.298e+00  1.281e+00  9.961e-01     15.388     14.951     14.684  2206075801351005727       37.972668   169.452293 

@@ -7,7 +7,7 @@ excess in under two years (Melis et al. 2012), and nobody knows how many others 
 for a signal that goes *away*. H-0002 already measured every star at Galactic latitude ≥ 10° on every NEOWISE visit, so
 asking costs one query.
 
-**Data.** The H-0002 sky pass (`oddsky-sky-br3c3.sky.sky1_features`, 176.9 M AllWISE sources, NEOWISE 2014-2024), AllWISE
+**Data.** The H-0002 sky pass as first run (`oddsky-sky-br3c3.sky.sky1_features`, |b| ≥ 10°, NEOWISE 2014-2024; see the re-run note below), AllWISE
 2010 and CatWISE2020 (IRSA), Gaia DR3, NEOWISE single exposures, Gaia DR3 epoch photometry.
 
 **Funnel** (`scripts/hunt_h0006_pull.py`, `hunt_h0006_vet.py`, `hunt_h0006_sheet.py`; every number is reproducible):
@@ -67,6 +67,14 @@ Both are already VarWISE mid-IR variables (Paz et al. 2026), and each is going t
 excess had only *risen* from W1-W2 ≈ 0.1 in 2008-10 to 0.34 in 2014 before falling, and Gaia shows it brightening in the
 optical as the dust cleared (Spearman 0.81). Among 188 similar quiet red Magellanic sources, fades and rises pass the cut
 about equally often: variability, not one-way loss.
+
+**Re-run on the fixed sky pass (sky2, 2026-10-28).** The same query on `sky2_features` gives 24 flags instead of 108; most
+of the 108 were made by the merge bug described below. The survivor still fades there (excess down 87%, W2 +0.80 mag), but
+it no longer passes the quiet-baseline cut: with its real first visit restored, its baseline scatter is 0.137 mag (a young
+star's variability) against a cut of 0.05. So its *selection* depended on the bug; its *vetting* (IRSA single exposures,
+SPHEREx, the referee) did not. ATLAS forced photometry (task 5266397, 2016-2026): half-year medians stay within 0.1 mag
+in c and o over the decade and within 0.04 mag across the August 2021 - February 2022 drop. No dimming, brightening or
+accretion flare marks it in the optical.
 
 **Lessons for the sky pass.**
 

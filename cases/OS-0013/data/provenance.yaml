@@ -101,4 +101,4 @@ skymapper:
   rows_kept: 33
   cuts: []
   notes:
-  - flags>0 kept but flagged (the 2017-05-25 occultation detections carry flag 3)
+  - flags>0 kept but flagged (e.g. g, r, i, z and v on MJD 58232, inside the 2018 onset window)

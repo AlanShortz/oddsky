@@ -329,7 +329,7 @@
     "SKYMAPPER:z",
     "TESS:TESS"
    ],
-   "n_claims": 9,
+   "n_claims": 13,
    "n_hypotheses": 0,
    "n_predictions": 0,
    "featured": false,
@@ -338,7 +338,7 @@
   {
    "id": "OS-0014",
    "title": "The star that vanished for three months",
-   "hook": "In spring 2017 a G dwarf 420 parsecs away disappeared, more than 99.5% of its light gone for about 95 days. Afterwards it began to glow in the infrared. Nobody noticed.",
+   "hook": "In spring 2017 a G dwarf 420 parsecs away disappeared, more than 99% of its light gone for nearly two months and dimmed for about 95 days. Afterwards it began to glow in the infrared. Nobody noticed.",
    "status": "anomaly",
    "target": "Gaia DR3 6733428488637673984",
    "series": [
@@ -361,7 +361,7 @@
     "SKYMAPPER:z",
     "TESS:TESS"
    ],
-   "n_claims": 25,
+   "n_claims": 29,
    "n_hypotheses": 0,
    "n_predictions": 0,
    "featured": false,
@@ -388,7 +388,7 @@
     "ZTF:ZTF_i",
     "ZTF:ZTF_r"
    ],
-   "n_claims": 22,
+   "n_claims": 26,
    "n_hypotheses": 4,
    "n_predictions": 2,
    "featured": false,

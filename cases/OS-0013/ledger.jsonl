@@ -28,3 +28,7 @@
 {"id": "K28", "tool": "add_claim", "args": {"id": "C7", "tag": "computed"}, "digest": "c901bc04074a18f8", "author": "claude-referee", "at": "2026-10-27T18:05:48+00:00", "oddsky": "0.3.0"}
 {"id": "K29", "tool": "add_claim", "args": {"id": "C8", "tag": "observed"}, "digest": "32c6b664feab20bf", "author": "claude-referee", "at": "2026-10-27T18:32:25+00:00", "oddsky": "0.3.0"}
 {"id": "K30", "tool": "add_claim", "args": {"id": "C9", "tag": "observed"}, "digest": "4761bcca48bbd40f", "author": "claude-referee", "at": "2026-10-27T18:32:25+00:00", "oddsky": "0.3.0"}
+{"id": "K31", "tool": "add_claim", "args": {"id": "C10", "tag": "computed"}, "digest": "9af34b8911010e93", "digest10": "9af34b8911010e93", "author": "claude-audit", "at": "2026-10-28T19:25:21+00:00", "oddsky": "0.3.1", "platform": "darwin-arm64"}
+{"id": "K32", "tool": "add_claim", "args": {"id": "C11", "tag": "computed"}, "digest": "468fb80430b3ccdb", "digest10": "468fb80430b3ccdb", "author": "claude-audit", "at": "2026-10-28T19:25:22+00:00", "oddsky": "0.3.1", "platform": "darwin-arm64"}
+{"id": "K33", "tool": "add_claim", "args": {"id": "C12", "tag": "computed"}, "digest": "a6cc654450efc452", "digest10": "a6cc654450efc452", "author": "claude-audit", "at": "2026-10-28T19:25:22+00:00", "oddsky": "0.3.1", "platform": "darwin-arm64"}
+{"id": "K34", "tool": "add_claim", "args": {"id": "C13", "tag": "inferred"}, "digest": "856e2fa12440efc9", "digest10": "856e2fa12440efc9", "author": "claude-audit", "at": "2026-10-28T19:25:23+00:00", "oddsky": "0.3.1", "platform": "darwin-arm64"}

@@ -17,9 +17,9 @@ The bulk route worked: IRSA's NEOWISE Parquet on AWS, read from Google Cloud Bat
 |---|---|
 | sky | 10,145 HEALPix pixels (Galactic latitude ≥ 10°, plus ASASSN-21qj's pixel) |
 | data | 146.6 billion NEOWISE detections, 2.99 TB of Parquet columns read |
-| stars | 176.9 M AllWISE sources; 114.7 M with ≥ 8 visits; **18.1 M testable photospheres** |
+| stars | 176.9 M AllWISE source rows (~12 M of them phantoms of the bug below; 164.7 M real); 114.7 M with ≥ 8 visits; **18.1 M testable photospheres** (24.5 M in the fixed re-run) |
 | compute | 508 tasks, 24 spot VMs, 1 h 53 min (~$2-8) |
-| calibration | ASASSN-21qj recovered blind: W2 +0.79 mag at 79σ |
+| calibration | ASASSN-21qj recovered blind: W2 +0.79 mag at 79σ (46σ in the fixed re-run, whose baseline scatter is no longer understated) |
 | systematics | 18 M quiet photospheres drift 0.02-0.03 mag *fainter* in W2 by 2024; onset dates of flags are spread evenly over 2017-2023 |
 
 **Funnel**

@@ -342,6 +342,48 @@ claims:
   - K111
   author: claude-fable-5.1
   at: '2026-10-28T02:13:40+00:00'
+- id: C23
+  text: Testability of P1, stated before its window (audit 2026-10-28). P1's window, MJD 61770-61806 (2027
+    Dec 31 - 2028 Feb 5), has the star 10-41 deg from the Sun (24 deg at the predicted mid-eclipse; solar conjunction is about
+    2027 Dec 27). ZTF has never observed this star closer than 39 deg to the Sun, and its earliest point
+    in any year is day-of-year 35. P1 is therefore very likely unresolvable as sealed, not a test of the
+    ephemeris. Both P1 and P2 also need ZTF r data for 2027-28 to become public. The sealed predictions
+    are unchanged; this claim records the problem before the window, not after.
+  tag: inferred
+  calls: []
+  author: claude-audit
+  at: '2026-10-28T19:31:37+00:00'
+- id: C24
+  text: 'Phase coverage away from eclipse, correcting the brief''s statement that phases 0.25-0.45 are covered
+    in one cycle only (audit 2026-10-28): ZTF covers them in 2024 as well (19 points). The ~0.1 mag dimming
+    near phase 0.4 recurs: median 0.11 (r) / 0.14 (g) mag below out-of-eclipse at phases 0.36-0.44 in
+    2024 (MJD 60392-60405) and 0.14 / 0.20 in 2025 (MJD 60771-60797), deeper in g both times. A secondary
+    on an eccentric orbit, away from phase 0.5, is suggested, not excluded.'
+  tag: computed
+  calls: []
+  author: claude-audit
+  at: '2026-10-28T19:31:38+00:00'
+- id: C25
+  text: 'Eclipse shape and depths, correcting the 2026-10-27 brief (audit 2026-10-28): the width at 0.05
+    mag is about 19-25 d (r is still 0.17 mag faint 7.3 d before mid-eclipse in 2019 and 0.12-0.29 mag
+    faint 6.3-6.6 d after in 2020-21), so ''about 18 d first to last contact'' is a lower limit. 18 d
+    of contact at v_rel = 29/37/42 km/s is a chord of 65/82/94 Rsun. The 2020 i point (0.59 mag) is in
+    ingress, 3.7 d before mid-eclipse, not a depth. 2022 r depth is 1.50-1.51. ATLAS depths: 2019 cyan
+    1.77, 2021 orange 1.53, 2023 orange 0.77 and 1.29 at -2 and -1 d (on time to about +-1-2 d). Out of
+    eclipse, g vs r over all seasons has slope 1.31 (199 pairs), the same as the in-eclipse 1.30.'
+  tag: computed
+  calls: []
+  author: claude-audit
+  at: '2026-10-28T19:31:39+00:00'
+- id: C26
+  text: H1's statement still reads 'opaque ... 60-100 Rsun ... crosses the red giant'. Per the referee
+    (C9 retracted) the star is 20-100 Lsun, not a red giant, and the eclipse is translucent; H1 should
+    be read as 'a companion wrapped in a translucent, reddening dust structure crosses the primary once
+    per 386-d orbit'. Recorded here because hypothesis statements cannot be edited.
+  tag: inferred
+  calls: []
+  author: claude-audit
+  at: '2026-10-28T19:31:39+00:00'
 hypotheses:
 - id: H1
   klass: eclipse_companion

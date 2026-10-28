@@ -24,10 +24,10 @@ ingress: over one day (MJD 57839.9–57840.9), W1 fell from 1.13 to 3.65 mag and
 below normal, so the occulter is more transparent at 4.6 µm. SkyMapper DR4 (Onken et al. 2024) measured the
 star at its catalogued position on 2017-05-25 (MJD 57898.6) at g = 18.58, r = 18.30, i = 18.31 and
 v = 19.1–19.7, which is 5.4–6.0 mag below normal and nearly grey; field-star zero points agree to
-0.006 mag. ATLAS forced photometry (Tonry et al. 2018; Shingles et al. 2021) independently gives 0.2–0.4% of normal flux in c and o
-from MJD 57856 to 57911 and resolves an 8-day egress (22% → 95% over MJD 57922–57930). In total the star was
-fainter than normal for 92–105 days, more than 3 mag fainter for at least 72 days, and at least 99.6% occulted
-at mid-event. ATLAS shows no repeat between 2018 and 2026. We found no Gaia Science Alert for this position.
+0.006 mag. ATLAS forced photometry (Tonry et al. 2018; Shingles et al. 2021) independently gives at most 0.3–0.7% of normal flux in c and o
+from MJD 57856 to 57911 (an upper limit: Gaia neighbours within 6″ carry 0.5% of the flux) and resolves an 8-day egress (22% → 95% over MJD 57922–57930). In total the star was
+fainter than normal for about 95–105 days, more than 3 mag fainter for at least 72 days, and at least 99.3% occulted
+through the deep phase. ATLAS shows no repeat between 2018 and 2026. We found no Gaia Science Alert for this position.
 
 **Geometry.** The occulted fraction rose from 11% to 92% in about 6 days. For a sharp edge crossing a
 1.1–1.2 R☉ star, that implies a transverse speed of at least about 2 km s⁻¹ and an occulter at least about
@@ -46,8 +46,10 @@ show a ~1.8-day signal centred on the star in Sector 13.
 **A century of plates.** DASCH DR7 (Grindlay et al. 2009, 2012) has 2,348 plates from 1889 to 1989, with the
 star detected on 1,176. A 95-day event would have been caught 46% of the time. Phased on 2017, and combined
 with ASAS-SN and NEOWISE, the plates exclude all periods shorter than 12.9 yr and 97.6% of periods between 1
-and 30 yr; periods near 93 and 46.5 yr remain allowed. Three plates from April–May 1924 miss the star, but
-two brighter neighbours are also missing from them, so we do not claim an earlier event.
+and 30 yr; periods near 93 and 46.5 yr remain allowed. Three plates from April–May 1924 miss the star. On the deepest, ax 488 (1924 April 30, limit 14.4), every
+comparison star from 12.9 to 13.9 mag is detected and only the target is missing; it is the only such plate in the
+century, and it falls 93.0 yr before the 2017 event, inside the allowed ~93-yr window. We do not claim an earlier
+event until the plate has been inspected, but we cannot attribute the miss to plate quality.
 
 **Interpretation.** The simplest explanation is a dusty, mostly opaque structure, such as a disk or dust
 cloud around an unseen companion, crossing the star. Comparable systems include ε Aurigae (Kloppenborg et al.
