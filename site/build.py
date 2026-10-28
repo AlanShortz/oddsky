@@ -479,7 +479,7 @@ def build(out: Path = DIST) -> None:
         write(out / "case" / f"{cid}.md", case_markdown(cid, payload, meta.get(cid, {})))
         routes.append((f"/case/{cid}", f"{c.get('title') or cid} — {cid} — Oddsky", clip(c.get("hook") or c.get("summary") or DEFAULT_DESC, 220),
                        og(cid), prerender_case(cid, payload), md))
-    routes.append(("/hunts", "Hunts — Oddsky", "Sky-wide searches: 176.9 million stars in, a handful out, and every step of the funnel published, including what we got wrong.",
+    routes.append(("/hunts", "Hunts — Oddsky", "Sky-wide searches: 164.7 million stars in, a handful out, and every step of the funnel published, including what we got wrong.",
                    og("home"), prerender_list("Hunts", "Sky-wide searches.", [(f"/hunt/{x['id']}", f"{x['id']}: {x['title']}", x["verdict"]) for x in hunts]), None))
     for hu in hunts:
         md = None

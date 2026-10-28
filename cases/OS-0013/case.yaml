@@ -11,10 +11,10 @@ target:
   gaia_source_id: 5792808347020475136
 summary: 'Gaia DR3 5792808347020475136, a K3 main-sequence star, was photospheric from 2010 to 2017. Between
   two NEOWISE visits in 2018 its W1 and W2 rose by 0.17 and 0.36 mag (33-38 sigma); the excess (16% and
-  38% of the star) has a ~1000 K colour temperature and persisted into 2024. Twenty-seven field stars
-  stay flat, the WISE position does not move, and the star is not young. Its variability is catalogued
+  38% of the star) has a ~1000 K colour temperature and persisted into early 2024. Twenty-seven field stars
+  stay flat, the WISE position does not move, and the star shows no pre-main-sequence overluminosity (lithium untested). Its variability is catalogued
   in VarWISE (Paz et al. 2026) as a long-period variable; Oddsky''s contribution is the interpretation.
-  No optical dimming was seen in 2018. Refereed: about 93% astrophysical.'
+  No optical dimming was seen in 2018 (a 0.1 mag ASAS-SN brightening inside the onset window is unexplained, C11). Refereed: about 93% astrophysical.'
 claims:
 - id: C1
   text: 'Field test (IRSA Gator neowiser_p1bs_psd, all exposures within 300" of the target; outside the
@@ -133,6 +133,44 @@ claims:
   - K19
   author: claude-referee
   at: '2026-10-27T18:32:25+00:00'
+- id: C10
+  text: Corrections to the 2026-10-27 summaries (audit 2026-10-28). Gaia G is 13.52 (context.json), not
+    13.1. The onset window MJD 58178.5-58341.7 is 2018 Mar 1 - Aug 11. Post-step NEOWISE visit medians
+    are W1 11.020 and W2 10.899 (pre 11.188 / 11.259). The excess colour is W1-W2 = 0.85-0.86 (T ~ 1045
+    K). The last NEOWISE visit is 2024 Feb 29, so the excess is known to persist into early 2024. W2 rchi2
+    rises slightly across the step (median 1.22 -> 1.47); W1 rchi2 does not.
+  tag: computed
+  calls: []
+  author: claude-audit
+  at: '2026-10-28T19:25:21+00:00'
+- id: C11
+  text: 'Optical across the onset, refining C4 (audit 2026-10-28): ASAS-SN has four points on MJD 58300-58306,
+    inside the onset window, about 0.10 mag brighter than the baseline (~2.8 robust sigma each) that its
+    comparison star does not share (-0.02). There is no dip, but ''no flash'' is not established. The
+    58243-58300 gap covers 35% of the 163-day window. ASAS-SN V 13.41 is blended (the star alone is V
+    ~ 13.9).'
+  tag: computed
+  calls: []
+  author: claude-audit
+  at: '2026-10-28T19:25:22+00:00'
+- id: C12
+  text: 'TESS limit, correcting the summary (audit 2026-10-28): dips are excluded down to ~8% of the aperture
+    flux (5 x 1.6% scatter), not ~5%. The star supplies ~21% of the aperture (TIC contamination ratio
+    3.78), so the limit on the star itself is ~35-40%. The two scattered-light sectors are S100-S101 in
+    Feb-Mar 2026, not 2025.'
+  tag: computed
+  calls: []
+  author: claude-audit
+  at: '2026-10-28T19:25:22+00:00'
+- id: C13
+  text: 'Scope of the 93% (audit 2026-10-28): the referee''s ~93% is for a real, astrophysical source
+    within 0.2" of the K dwarf. The same report gives ~10% to an unresolved companion, so ''on the K dwarf''
+    is less certain than 93%. Youth is not excluded without lithium: only pre-main-sequence overluminosity
+    is ruled out.'
+  tag: inferred
+  calls: []
+  author: claude-audit
+  at: '2026-10-28T19:25:23+00:00'
 hypotheses: []
 predictions: []
 literature: []

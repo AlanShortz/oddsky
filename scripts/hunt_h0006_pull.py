@@ -1,6 +1,6 @@
 """Hunt H-0006, step 1: stars whose warm-dust excess faded during NEOWISE (2014-2024).
 
-Reads the H-0002 sky pass (`oddsky-sky-br3c3.sky.sky1_features`, 176.9 M AllWISE sources at |b| >= 10 deg) through
+Reads the H-0002 sky pass (`oddsky-sky-br3c3.sky.sky1_features`, AllWISE sources at |b| >= 10 deg; sky2_* is the fixed re-run) through
 the `bq` CLI, then adds AllWISE positions (IRSA) and the Gaia DR3 sources within 6" of each flag.
 color_end and w2_end are *changes* from the 2014-15 baseline (src/oddsky/sky/neowise_pixel.py), so "lost 60% of its
 excess" is color_end < -0.6 * color_base.
