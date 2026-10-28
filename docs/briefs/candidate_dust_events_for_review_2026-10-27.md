@@ -19,7 +19,7 @@ Gaia DR3 6733428488637673984 (2MASS J18330620−3607130, TIC 313603515; 18:33:06
 
 ### Observations
 
-| | |
+| Measurement | Result |
 |---|---|
 | Onset | ASAS-SN V: normal (12.70, rms 0.015) through MJD 57828.4; −11% on 57831.4; V = 15.46 (−2.76 mag) on 57837.4 |
 | Infrared ingress | NEOWISE single exposures, MJD 57839.9–57840.9, 14 exposures over one day: W1 from 1.15 to 3.65 mag below baseline, W2 from 0.41 to 2.03. The occulter is more transparent at 4.6 µm. Field stars in the same frames steady; the star lands on different detector positions in successive scans |
@@ -51,7 +51,7 @@ Gaia DR3 4152421080966024704 (2MASS J18205507−1340452; 18:20:55.07 −13:40:45
 
 ### Observations
 
-| | |
+| Measurement | Result |
 |---|---|
 | Ephemeris | Four full-depth ZTF eclipses, mid-times MJD 58701.6, 59088.6, 59473.9, 59858.8 (Aug 2019, Aug 2020, Sep 2021, Oct 2022): P = 385.7 ± 0.5 d, T0 = MJD 58702.2, O−C under 0.7 d. The events advance 20 days a year through the observing season, which no seasonal systematic can do |
 | Shape | FWHM 7.9 d, 14 d wide at 0.05 mag, about 18 d first to last contact. Ingress 9 d, egress complete within 14 d. In-eclipse nights carry 5–7 ZTF exposures agreeing to 0.01–0.02 mag |
@@ -82,7 +82,7 @@ Gaia DR3 5792808347020475136 (14:43:51.9 −76:11:46; G = 13.1, 247 pc, a K3 mai
 
 ### Observations
 
-| | |
+| Measurement | Result |
 |---|---|
 | The step | NEOWISE visit medians: W1 11.19 → 11.00, W2 11.26 → 10.88 (first post-step visit brightest, then a plateau at W2 10.86–10.94 through 2024). Onset between MJD 58178.5 and 58341.7 |
 | Controls | 27 field stars within 300″ (W2 9.5–12.5) change by +0.006 (W1) and +0.014 (W2) mag with robust scatter 0.005; per-visit zero points within ±0.02 mag; the WISE centroid moves 0.013 ± 0.008″ across the step (any contaminant within 0.2″); rchi2 unchanged; no saturation; nb = 1 throughout |
