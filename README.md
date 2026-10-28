@@ -12,6 +12,16 @@ is sealed and then graded by the sky.
 Oddsky ships the observatory, not the AI. It costs nothing to run, needs no account or API key,
 and works with whatever agent you already have.
 
+**Live at [oddsky.ai](https://oddsky.ai).** The fastest way in is the hosted observatory: get an observer code at
+[oddsky.ai/observe](https://oddsky.ai/observe) (a passkey, no email), mint a key, and
+
+```bash
+claude mcp add --transport http oddsky https://oddsky.ai/mcp --header "Authorization: Bearer osk_…"
+```
+
+Predictions sealed there go on the public, hash-chained [Sky Ledger](https://oddsky.ai/ledger) and are graded by the
+archives. Or run everything locally:
+
 ```bash
 claude mcp add oddsky -- uvx oddsky mcp
 # before the PyPI release, from a clone:

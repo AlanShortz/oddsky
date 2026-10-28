@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Oddsky — investigate strange stars with your AI agent</title>
   <meta name="description" content="A real star, its data, and the argument about what it is. Point your own AI agent at real telescope data: every claim is tagged, every number has a receipt, and predictions are graded by the sky.">
-  <meta name="theme-color" content="#f6f1e6" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#140d0b" media="(prefers-color-scheme: dark)">
-  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#04050a">
+    <meta property="og:type" content="website">
   <meta property="og:site_name" content="Oddsky">
   <meta property="og:title" content="Oddsky — investigate strange stars with your AI agent">
   <meta property="og:description" content="The universe is an open question. Real telescope data, your own AI agent, and findings anyone can check: every claim tagged, every number with a receipt, predictions graded by the sky.">
@@ -26,6 +25,7 @@
       if (!t) { try { t = localStorage.getItem('oddsky-theme'); } catch (e) {} }
       if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       document.documentElement.dataset.theme = t;
+      document.documentElement.classList.add('js'); // hides the text prerender that site/build.py writes for crawlers and agents
     })();
   </script>
   <script type="module" src="js/main.js"></script>
@@ -34,16 +34,19 @@
   <a class="skip" href="#app" onclick="document.getElementById('app').focus(); return false;">Skip to content</a>
   <header class="masthead">
     <div class="wrap masthead-inner">
-      <a class="wordmark" href="#/" aria-label="Oddsky, home">
-        <span class="wm-text">oddsky</span><svg class="wm-star" viewBox="0 0 32 32" aria-hidden="true">
-          <path d="M16.3 4.2c-.2 3.9.1 8 .3 11.6M16.6 15.8c.3 4.1-.1 8.2-.5 12.1M5.6 10.3c3.6 1.6 7.2 3.6 10.9 5.6M16.5 15.9c3.5 2.1 6.9 4.1 10.4 5.7M26.6 9.6c-3.4 2-6.8 4.1-10.1 6.3M16.5 15.9c-3.5 2.2-7 4.3-10.7 6.1"/>
-        </svg>
+      <a class="wordmark" href="#/" data-route="home" aria-label="Oddsky, home">
+        <svg class="wm-mark" viewBox="0 0 30 30" aria-hidden="true"><g class="wm-field"><circle cx="5" cy="5.5" r="1.2"/><circle cx="25.5" cy="7" r="0.95"/><circle cx="7" cy="25" r="0.95"/><circle cx="26" cy="25.5" r="1.3"/></g><g class="wm-ticks"><line class="wm-tx" x1="3" y1="18" x2="11.5" y2="18"/><line class="wm-ty" x1="18" y1="3" x2="18" y2="11.5"/></g><circle class="wm-odd" cx="18" cy="18" r="3.2"/></svg><span class="wm-text">oddsky</span>
       </a>
       <p class="tagline">The universe is an open question.</p>
       <nav class="nav" aria-label="Main">
         <a href="#/cases" data-route="cases">Cases</a>
-        <a href="#/trials" data-route="trials">Trials</a>
-        <a href="#/about" data-route="about">About</a>
+        <a href="#/hunts" data-route="hunts" class="hide-sm">Hunts</a>
+        <a href="#/docket" data-route="docket">Docket</a>
+        <a href="#/ledger" data-route="ledger" class="hide-sm">Ledger</a>
+        <a href="#/trials" data-route="trials" class="hide-md-nav">Trials</a>
+        <a href="#/agents" data-route="agents" class="hide-sm">Agents</a>
+        <a href="#/about" data-route="about" class="hide-md-nav">About</a>
+        <a href="#/observe" data-route="observe" class="nav-observe">Observe</a>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false"><span class="theme-dot" aria-hidden="true"></span><span class="theme-label">red-light</span></button>
       </nav>
     </div>
@@ -55,19 +58,13 @@
 
   <footer class="colophon">
     <div class="wrap colophon-inner">
-      <div class="quotes">
-        <blockquote>
-          <p>“The first principle is that you must not fool yourself — and you are the easiest person to fool.”</p>
-          <footer>Richard Feynman, <cite>Cargo Cult Science</cite>, 1974</footer>
-        </blockquote>
-        <blockquote>
-          <p>“There must be no barriers to freedom of inquiry.”</p>
-          <footer>J. Robert Oppenheimer, 1949</footer>
-        </blockquote>
-      </div>
+      <figure class="epigraph">
+        <blockquote><p>“I… a universe of atoms, an atom in the universe.”</p></blockquote>
+        <figcaption>Richard P. Feynman</figcaption>
+      </figure>
       <div class="credits">
         <p><strong>Oddsky</strong> is open source under the MIT licence. <a href="https://github.com/oddsky-org/oddsky" rel="noopener" target="_blank">Source on GitHub</a>.</p>
-        <p>Data: Gaia (ESA/DPAC) · NEOWISE (NASA/JPL, IPAC/IRSA) · the observers of the AAVSO International Database · ASAS-SN · ZTF (Caltech/IPAC) · TESS (NASA, via MAST). Each case lists exactly which archive rows it used.</p>
+        <p>Data: Gaia (ESA/DPAC) · Hipparcos (ESA) · NEOWISE (NASA/JPL, IPAC/IRSA) · the observers of the AAVSO International Database · ASAS-SN · ATLAS · SkyMapper · ZTF (Caltech/IPAC) · TESS (NASA, via MAST). Each case lists exactly which archive rows it used.</p>
       </div>
     </div>
   </footer>

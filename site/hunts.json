@@ -1,0 +1,89 @@
+{
+  "_comment": "Editorial summaries of each hunt for the website. The README in hunts/<ID>/ is the source of truth; these numbers are copied from its funnel table. A hunt whose directory is missing is skipped, so an entry can land before its hunt merges.",
+  "hunts": [
+    {
+      "id": "H-0004",
+      "title": "Stars that go dark",
+      "question": "Which of the 2,356 stars the experts short-listed as R Coronae Borealis candidates have gone dark since anyone last looked?",
+      "date": "2026-10-27",
+      "state": "north done, south queued",
+      "scale": "2,401 candidates · ZTF and ATLAS 2015-2026 · calibrated on 48 known R CrB and dLHdC stars",
+      "funnel": [
+        [2401, "R CrB candidates from WISE colours and Gaia"],
+        [1954, "not already classified"],
+        [887, "north of −30°, where ZTF looks"],
+        [473, "a usable ZTF light curve"],
+        [63, "a fast, unscheduled fade of ≥ 1 mag"],
+        [16, "not a catalogued variable"],
+        [2, "worth a case after a human looked"]
+      ],
+      "verdict": "No new R CrB star yet: every northern fader was already in a catalogue. The survivor is stranger: a dust-shrouded star eclipsed four years running on a 385.7-day clock.",
+      "cases": ["OS-0015"]
+    },
+    {
+      "id": "H-0002",
+      "title": "Infrared afterglows on Sun-like stars",
+      "question": "Which Sun-like stars suddenly grew hot dust, the infrared glow of a planetary collision, seen from any angle?",
+      "date": "2026-10-27",
+      "state": "done",
+      "scale": "146.6 billion NEOWISE detections · 176.9 million stars · 1 h 53 min on 24 spot VMs · a few dollars",
+      "funnel": [
+        [176900000, "stars read, every NEOWISE visit 2014-2024"],
+        [18100000, "steady, testable photospheres"],
+        [224, "infrared afterglow flags"],
+        [80, "real stars with a Gaia parallax"],
+        [43, "no blend, no paired neighbour"],
+        [26, "the glow sits on the star"],
+        [6, "main sequence, no dust before"],
+        [2, "not in any catalogue"]
+      ],
+      "verdict": "ASASSN-21qj recovered blind at 79σ. One survivor vanished for 95 days in 2017: the first result here a professional might call a discovery.",
+      "cases": ["OS-0014", "OS-0013"]
+    },
+    {
+      "id": "H-0001",
+      "title": "Sun-like stars that Gaia caught fading",
+      "question": "Which main-sequence stars did Gaia see dim between 2014 and 2017, and which has nobody explained?",
+      "date": "2026-10-27",
+      "state": "done",
+      "scale": "Gaia DR3 variability catalogue · ZTF · TESS",
+      "funnel": [
+        [22125, "Sun-like stars Gaia saw fade"],
+        [2020, "not already eclipsing binaries"],
+        [18, "a deep dip, confirmed twice"],
+        [3, "not explained by any catalogue"]
+      ],
+      "verdict": "Two new eclipsing binaries, which Gaia's pipeline had given periods of 53 and 36 minutes instead of 2.5 and 11.9 days. And one 'invisible companion' that our own referee proved was a folding alias before anyone announced it.",
+      "cases": ["OS-0011", "OS-0012", "OS-0010"]
+    },
+    {
+      "id": "H-0003",
+      "title": "New R CrB stars in Gaia DR3",
+      "question": "Can Gaia's 2014-17 light curves turn up R Coronae Borealis stars the experts missed?",
+      "date": "2026-10-27",
+      "state": "parked",
+      "scale": "5,114 Gaia candidates · 100 scored",
+      "funnel": [],
+      "verdict": "Parked. The experts had already mined Gaia DR3; our best candidates were a VY Scl binary, a Mira, an S star and a T Tauri star.",
+      "cases": []
+    }
+  ],
+  "wrong": [
+    {
+      "case": "OS-0012",
+      "title": "The invisible companion that wasn't",
+      "text": "We folded a binary at a fifth of its period, and a Sun-sized dark object appeared. A referee agent told to break it found the alias in 30 minutes. Nothing was announced; the tool now checks for it."
+    },
+    {
+      "case": null,
+      "href": "/trials",
+      "title": "A bug in our own grader",
+      "text": "Trial 001's grader hid real outbursts and marked two correct forecasts false. We fixed it after the reveal, so both gradings are published."
+    },
+    {
+      "case": "OS-0003",
+      "title": "Five overstatements about EE Cep",
+      "text": "Our measurement of the 2025 eclipse held up. Our claim that nobody else was watching did not: professional campaigns were. The referee struck it."
+    }
+  ]
+}

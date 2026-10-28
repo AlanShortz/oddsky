@@ -2,6 +2,13 @@
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
+// ---- routes ----------------------------------------------------------------------------------
+// The built site (site/build.py) has a real page per URL and marks <html data-router="path">;
+// web/ served as-is keeps hash routes, so it still works from any static host and sub-path.
+export const PATH_MODE = document.documentElement.dataset.router === 'path';
+/** href for an in-site route: link('case/OS-0001') → /case/OS-0001 or #/case/OS-0001. */
+export const link = (route = '') => (PATH_MODE ? '/' : '#/') + String(route).replace(/^[#/]+/, '');
+
 /** Hyperscript for HTML. Children may be strings (inserted as text, never HTML), nodes, arrays, null. */
 export function h(tag, attrs, ...children) {
   const el = document.createElement(tag);
