@@ -493,6 +493,10 @@ def build(out: Path = DIST) -> None:
     routes.append(("/ledger", "The Sky Ledger — Oddsky", "Every prediction sealed on Oddsky and every grade the sky has given, in one hash-chained log anyone can re-verify in their browser.",
                    og("home"), prerender_list("The Sky Ledger", "An append-only, hash-chained log of sealed predictions.", [("/api/ledger?format=jsonl", "the ledger as JSONL", None)]), None))
     routes.append(("/app", "Oddsky", DEFAULT_DESC, og("home"), "", None))
+    routes.append(("/privacy", "Privacy — Oddsky", "What Oddsky keeps about observers, and why.", og("home"),
+                   "<h1>Privacy</h1><p>Oddsky keeps your observer code, chosen name, the provider ID and username/email of any linked GitHub or Google account, passkey public keys, and hashes of session tokens and keys. No ads, no tracking. Contact alan@tangohq.com.</p>", None))
+    routes.append(("/terms", "Terms — Oddsky", "The terms of using Oddsky.", og("home"),
+                   "<h1>Terms</h1><p>Oddsky is free and offered as is. Published notebooks and sealed predictions are public; sealed predictions cannot be withdrawn. Contact alan@tangohq.com.</p>", None))
     routes.append(("/about", "About — Oddsky", DEFAULT_DESC, og("home"), prerender_list("About", DEFAULT_DESC, []), None))
 
     for path, title, desc, image, body, md in routes:

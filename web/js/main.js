@@ -7,7 +7,7 @@
 import { h, PATH_MODE, link } from './util.js';
 import { loadIndex, loadCase, loadHunts, loadDocket, FIXTURE } from './data.js';
 import { renderCase } from './case.js';
-import { renderCases, renderTrials, renderAbout, renderNotFound, renderError } from './pages.js';
+import { renderCases, renderTrials, renderAbout, renderNotFound, renderError, renderPrivacy, renderTerms } from './pages.js';
 import { renderHome, renderHunts, renderHunt, renderDocket, renderAgents } from './front.js';
 import { renderObserve, renderLedger, renderNotebook, renderObserver, liveDocket, syncChip } from './live.js';
 
@@ -23,7 +23,7 @@ function parse() {
   if (parts[0] === 'hunt' && parts[1]) return { name: 'hunt', id: parts[1] };
   if (parts[0] === 'n' && parts[1]) return { name: 'notebook', id: parts[1] };
   if (parts[0] === 'o' && parts[1]) return { name: 'observer', id: parts[1].toUpperCase() };
-  if (['cases', 'trials', 'about', 'hunts', 'docket', 'agents', 'observe', 'ledger'].includes(parts[0])) return { name: parts[0] };
+  if (['cases', 'trials', 'about', 'hunts', 'docket', 'agents', 'observe', 'ledger', 'privacy', 'terms'].includes(parts[0])) return { name: parts[0] };
   return { name: 'notfound', what: raw };
 }
 
@@ -70,6 +70,8 @@ async function route() {
     else if (r.name === 'agents') { view = renderAgents(await loadIndex()); title = 'For agents'; }
     else if (r.name === 'cases') { view = renderCases(await loadIndex()); title = 'Cases'; }
     else if (r.name === 'trials') { view = renderTrials(await loadIndex()); title = 'Trials'; }
+    else if (r.name === 'privacy') { view = renderPrivacy(); title = 'Privacy'; }
+    else if (r.name === 'terms') { view = renderTerms(); title = 'Terms'; }
     else if (r.name === 'about') { view = renderAbout(); title = 'About'; }
     else { view = renderNotFound(r.what); title = 'Not found'; }
     if (mine !== token) return;
