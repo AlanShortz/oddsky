@@ -32,3 +32,16 @@ def test_afterglow_found_and_impostors_rejected(rng):
     assert flags == {1: False, 2: True, 3: False, 4: False}
     star = f.set_index("allwise_cntr").loc[2]
     assert 0.5 < star.w2_rise < 0.7 and 0.2 < star.dcolor_at_rise < 0.4
+
+
+def test_neighbouring_19_digit_cntrs_stay_separate(rng):
+    # Real AllWISE cntrs are 19 digits; consecutive ones are equal as float64. A float comparison merged
+    # star A's last visit with star B's first (found on Gaia DR3 6715595..., sky1 pixel 11929).
+    a, b = 2851042501351049620, 2851042501351049621
+    rows = fake(rng, a, 10.4, 9.8) + fake(rng, b, 12.5, 12.4)
+    df = pd.DataFrame(rows, columns=["allwise_cntr", "mjd", "w1", "w1e", "w2", "w2e"])
+    df[["w1", "w1e", "w2", "w2e"]] = df[["w1", "w1e", "w2", "w2e"]].astype("float32")
+    v = visits(df)
+    assert v.groupby("allwise_cntr").size().to_dict() == {a: 21, b: 21}
+    assert v.loc[v.allwise_cntr == a, "w2"].max() < 10.0
+    assert v.w1_n.max() == 12

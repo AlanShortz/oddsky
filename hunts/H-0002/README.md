@@ -46,4 +46,21 @@ Gaia DR4 epoch photometry (Dec 2026), which covers both events.
 
 **Also in the same table, for later:** 144 nuclear infrared flares in galaxies (candidate tidal-disruption dust echoes and AGN
 flares) and ~2,000 fading AGN-coloured sources (candidate mid-infrared "changing-look" quasars). `queries.sql` has the SQL.
-The full per-star table (176.9 M rows) is queryable in BigQuery: `oddsky-sky-br3c3.sky.sky1_features`.
+The full per-star table is queryable in BigQuery: `oddsky-sky-br3c3.sky.sky2_features` (use sky2, not sky1; see below).
+
+## Re-run with a bug fixed (2026-10-28)
+
+The pass above had a bug ([`BUG-2026-10-28.md`](BUG-2026-10-28.md)): neighbouring 19-digit AllWISE ids compared equal
+after a float conversion, so each star's first NEOWISE visit was merged into its neighbour's last. It inflated baseline
+scatter (fewer stars counted as testable) and manufactured ~12 M phantom light curves. The survivors above were vetted on
+IRSA data and stand. The fixed re-run, sky2 (`runs/sky2/`, BigQuery `sky.sky2_*`):
+
+| | sky1 (above) | sky2 (fixed) |
+|---|---|---|
+| star rows | 176.9 M | 164.7 M |
+| steady, testable photospheres | 18.1 M | **24.5 M** |
+| afterglow flags | 224 | 314 (152 new) |
+| new flags that are Sun-like, clean, no prior dust | | 1, an impostor: a faint neighbour 4" away flared (centroid test) |
+
+**No new survivor.** The negative result now covers 35% more stars. Single-visit features in `sky1_*` (end-of-mission
+colour, peak-to-peak) are unreliable; query `sky2_*`.
