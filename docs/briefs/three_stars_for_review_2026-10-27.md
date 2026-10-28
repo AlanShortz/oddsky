@@ -1,13 +1,13 @@
 
-# Two stars for the advisor
+# Three stars for the advisor
 
-*Oddsky cases OS-0014 and OS-0015: what we measured, what we think, and what only you can judge. Alan Shortz, 27 October 2026. Private, for scientific review.*
+*Oddsky cases OS-0014, OS-0015 and OS-0013: what we measured, what we think, and what only you can judge. Alan Shortz, 27 October 2026. Private, for scientific review.*
 
 ## Why you are getting this
 
-Oddsky is the open-source observatory I have been building: an AI agent is pointed at public archives (Gaia, NEOWISE, ASAS-SN, SkyMapper, ZTF, ATLAS, TESS, a century of Harvard plates), every number it produces is logged and replayable, a deterministic "Skeptic" checks the usual impostors (blends, saturation, momentum dumps, aliases), and a second, adversarial agent is told to break every result before anyone is allowed to call it a finding. Two systematic searches this week each left one object standing. Both are, as far as SIMBAD, VSX, the alert streams and the literature show, unreported.
+Oddsky is the open-source observatory I have been building: an AI agent is pointed at public archives (Gaia, NEOWISE, ASAS-SN, SkyMapper, ZTF, ATLAS, TESS, a century of Harvard plates), every number it produces is logged and replayable, a deterministic "Skeptic" checks the usual impostors (blends, saturation, momentum dumps, aliases), and a second, adversarial agent is told to break every result before anyone is allowed to call it a finding. Two systematic searches this week left three objects standing: one from a re-screen of the published R CrB candidate list, two from a full-sky pass over the NEOWISE archive. None of the three phenomena is reported anywhere we can find.
 
-I am not an astronomer. What follows is organised so you can stop at any level: the one-line claim, the figure, the measurements, our interpretation, and then the questions where your judgement matters more than any more data pulling. Everything cited here is in the public repository, case directories `cases/OS-0014` and `cases/OS-0015`, including the two referee reports, which are blunter than this brief.
+I am not an astronomer. What follows is organised so you can stop at any level: the one-line claim, the figure, the measurements, our interpretation, and then the questions where your judgement matters more than any more data pulling. Everything cited here is in the public repository, case directories `cases/OS-0014`, `cases/OS-0015` and `cases/OS-0013`, including the three referee reports, which are blunter than this brief.
 
 ## OS-0014: a G dwarf that vanished for three months
 
@@ -81,8 +81,40 @@ I am not an astronomer. What follows is organised so you can stop at any level: 
 4. The 2028 January eclipse is the next observable one. Who should be told, and when?
 5. Tisserand and Karambelkar built the candidate list this came from. We intend to tell them before anything is submitted; co-authorship is your call.
 
+## OS-0013: a K dwarf that grew hot dust in 2018 and still has it
+
+**One line.** Gaia DR3 5792808347020475136 (14:43:51.9 −76:11:46; G = 13.1, 247 pc, a K3 main-sequence dwarf, not young) was photospheric in the infrared from 2010 to early 2018. Between two NEOWISE visits (2018 Feb 26 to Aug 8) its W1 and W2 rose by 0.17 and 0.36 mag, a step of more than 30σ against 27 field stars, and the excess, with a colour temperature near 1000 K and a fractional luminosity of about 2%, has stayed through 2024. The optical light curve is flat across the onset: no dip, no flash. This is the ASASSN-21qj signature (infrared first) without, so far, the optical event.
+
+![NEOWISE W1, W2 and colour 2014-2024; ASAS-SN and SkyMapper across the onset](figures/excess-2018.png)
+
+### What is measured
+
+| | |
+|---|---|
+| The step | NEOWISE visit medians: W1 11.19 → 11.00, W2 11.26 → 10.88 (first post-step visit brightest, then a plateau at W2 10.86–10.94 through 2024). Onset between MJD 58178.5 and 58341.7 |
+| Controls | 27 field stars within 300″ (W2 9.5–12.5) change by +0.006 (W1) and +0.014 (W2) mag with robust scatter 0.005; per-visit zero points within ±0.02 mag; the WISE centroid moves 0.013 ± 0.008″ across the step (any contaminant within 0.2″); rchi2 unchanged; no saturation; nb = 1 throughout |
+| Neighbours | unWISE W1-only source 7.4″ away at 5% of the flux; AllWISE sources at 13″, 16″ and 32″ are each flat across 2018 (dW2 ≤ 0.03); any of them supplying 39% of the W2 flux would drag the centroid by > 2″ |
+| Before | AllWISE 2010 epochs equal the 2014–2017 baseline; W1−W3 = 0.17 ± 0.10 and Ks−W1 = 0.06, photospheric for K3V |
+| The star | GSP-Phot A_G = 0.24: M_G0 = 6.31, (BP−RP)0 = 1.17, log g 4.58, on the K3V main sequence with no pre-main-sequence overluminosity. UVW = (−24, −18, −3) km/s, more than 12 km/s from Chamaeleon, ε Cha and LCC. RV −0.5 ± 1.9 km/s from 17 transits |
+| Energetics | Excess colour W1−W2 ≈ 0.87 → T ≈ 1040 K for a blackbody; L_IR/L* ≈ 0.02; emitting area ≈ 8 stellar disks; equilibrium distance ≈ 0.04 AU for L ≈ 0.3 L☉. Sustained for six years, that fractional luminosity is extreme-debris-disk territory (ID8, BD+20 307, ASASSN-21qj) |
+| Optical | ASAS-SN V 13.41, robust scatter 0.036, flat from MJD 58160 to 58378 except a gap at 58243–58300; SkyMapper on MJD 58232 (inside the onset window) matches 2014 in u, v, g, r to 0.03 mag. TESS (2019–2025): no dips beyond ~5%; the two 2025 sectors carry scattered-light ramps and are uninterpretable |
+| Catalogues | VarWISE (Paz et al. 2026) lists the WISE variability with amplitudes 0.18/0.375 and classifies it "lpv", which a K3V dwarf cannot be. SIMBAD and VSX: a rotational variable, nothing more. The step-plus-reddening interpretation is new |
+
+### What we think, and do not
+
+- **What survives.** The referee could not attribute the step to the instrument, the field, a neighbour, or a moving or new source: real, astrophysical, on the K dwarf, about 93%. Oddsky's contribution is the interpretation; the variability itself was in a catalogue under the wrong label.
+- **What it is remains open.** Two-band photometry cannot separate freshly made circumstellar dust (a collision or a large impact) from other dusty phenomena, for example ejecta after a planet engulfment. The flat optical record favours optically thin dust that we see from outside the plane, so the ASASSN-21qj-style dimming may never come.
+- **Weakest point.** Only one instrument can see 3–5 µm at these epochs, so there is no second-instrument confirmation of the excess itself, only of the photosphere's constancy. That is why it sits below the other two despite the cleaner physics.
+
+### Questions for you
+
+1. Is a 2% fractional luminosity at ~1000 K around a field K dwarf, appearing in under six months and holding for six years, more naturally a giant impact (ID8-like) or something else? What would the ID8 and P1121 people want to see first?
+2. SPHEREx 0.75–5 µm spectra are public and cover this position: is the excess shape plus CO/H₂O worth pulling now, and is a MIRI 10-µm silicate feature a realistic proposal?
+3. Spectrum for lithium, Hα and Ca II (age) and two or three RV epochs; is there a cheaper discriminant?
+4. The referee's prediction: dust at 0.04 AU would make any transiting structure recur on 3–10 d. Is that worth a sealed prediction and a monitoring request, or is the geometry unlikely enough to skip?
+
 ## How these were produced and checked
 
-- **Searches.** OS-0014 came from a full-sky pass over 146.6 billion NEOWISE detections of 176.9 million stars, asking which Sun-like stars suddenly grew warm dust (the ASASSN-21qj signature; it recovered ASASSN-21qj blind at 79σ). OS-0015 came from re-screening the 2,356 WISE-selected R CrB candidates of Tisserand et al. (2020) in 2018–2026 ZTF and ATLAS data for their first recorded declines; it is not an R CrB star, and no new R CrB star has been confirmed yet (the southern half is still queued on ATLAS).
-- **Checks.** Every claim carries a tag (observed / computed / inferred) and the ids of the logged tool calls that produced it; `oddsky replay` re-runs the whole ledger and fails if any number changed. The Skeptic runs first. Then a separate referee agent, with the mandate in `docs/REFEREE.md`, attacks aliases, artifacts, blends, "no X" claims, physical self-consistency, novelty and untapped data, and writes a report that the investigators must answer claim by claim. Both reports are in the case directories; both changed the cases materially (OS-0015 lost its "red giant" and gained a fourth eclipse; OS-0014's referee found it was stronger than the first draft said).
-- **What has not been done.** No images have been inspected by a human; no spectrum exists for either star; the OS-0014 DASCH detection-efficiency numbers assume repeats look like 2017; and the OS-0015 luminosity rests on Gaia DR2's bolometric estimate and an assumed extinction. Everything is public; the hosted observatory at oddsky.ai (or a local install from the repository) reproduces any number here from the archives in minutes. Gaia DR4 lands on 2 December 2026 and covers both stars' 2014–2020 epochs.
+- **Searches.** OS-0014 and OS-0013 came from a full-sky pass over 146.6 billion NEOWISE detections of 176.9 million stars, asking which Sun-like stars suddenly grew warm dust (the ASASSN-21qj signature; it recovered ASASSN-21qj blind at 79σ). OS-0015 came from re-screening the 2,356 WISE-selected R CrB candidates of Tisserand et al. (2020) in 2018–2026 ZTF and ATLAS data for their first recorded declines; it is not an R CrB star, and no new R CrB star has been confirmed yet (the southern half is still queued on ATLAS).
+- **Checks.** Every claim carries a tag (observed / computed / inferred) and the ids of the logged tool calls that produced it; `oddsky replay` re-runs the whole ledger and fails if any number changed. The Skeptic runs first. Then a separate referee agent, with the mandate in `docs/REFEREE.md`, attacks aliases, artifacts, blends, "no X" claims, physical self-consistency, novelty and untapped data, and writes a report that the investigators must answer claim by claim. All three reports are in the case directories; each changed its case materially (OS-0015 lost its "red giant" and gained a fourth eclipse; OS-0014's referee found it was stronger than the first draft said; OS-0013's referee found the variability already catalogued, under the wrong class).
+- **What has not been done.** No images have been inspected by a human; no spectrum exists for any of the three stars; the OS-0014 DASCH detection-efficiency numbers assume repeats look like 2017; and the OS-0015 luminosity rests on Gaia DR2's bolometric estimate and an assumed extinction. Everything is public; the hosted observatory at oddsky.ai (or a local install from the repository) reproduces any number here from the archives in minutes. Gaia DR4 lands on 2 December 2026 and covers all three stars' 2014–2020 epochs.
