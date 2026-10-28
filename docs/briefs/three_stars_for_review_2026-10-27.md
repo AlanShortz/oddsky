@@ -105,6 +105,8 @@ The weakness is that only one instrument can see 3–5 µm at these epochs, so t
 
 Four questions, one per star and one overall. Everything else (spectra, plates, proposals, who to tell) follows from your answers, and I would rather not spend your time on logistics before you have said whether the physics holds.
 
+One thing to know before you answer: this is the test of the whole idea, not just of three stars. The question Oddsky exists to ask is whether an interested amateur with these tools can add something true to what is known, in a form a professional can check. If at least one of these survives you, the premise holds and the implications are worth taking seriously. If none does, that is also an answer, and the right response is to go back to the drawing board rather than to polish the write-up. A polite verdict is the only one that tells me nothing.
+
 1. **OS-0014.** A one-off, near-total, 95-day occultation of a field G dwarf by something dusty at AU scale, followed months later by a persistent warm excess: is that a physically coherent system to you, or does the combination point somewhere else (an engulfment, a transient disk, a line-of-sight cloud)?
 2. **OS-0015.** A 20–100 L☉ star with a Class II SED in a star-forming region, eclipsed for two weeks once per 385.7-day orbit by translucent, reddening dust whose depth changes from orbit to orbit: evolved binary with a circumsecondary disk, young binary with a warped circumbinary disk, or a third thing not considered here?
 3. **OS-0013.** A 2% fractional luminosity at ~1000 K appearing around a mature K dwarf within six months and holding for six years, with no optical event: is this the giant-impact afterglow class (ID8, P1121, BD+20 307), and if not, what is it?
