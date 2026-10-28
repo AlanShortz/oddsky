@@ -98,6 +98,30 @@
   ],
   "rewrites": [
     {
+      "source": "/.well-known/oauth-authorization-server",
+      "destination": "https://oddsky-api-n3fpys227q-uc.a.run.app/.well-known/oauth-authorization-server"
+    },
+    {
+      "source": "/.well-known/oauth-protected-resource/:path*",
+      "destination": "https://oddsky-api-n3fpys227q-uc.a.run.app/.well-known/oauth-protected-resource/:path*"
+    },
+    {
+      "source": "/authorize",
+      "destination": "https://oddsky-api-n3fpys227q-uc.a.run.app/authorize"
+    },
+    {
+      "source": "/token",
+      "destination": "https://oddsky-api-n3fpys227q-uc.a.run.app/token"
+    },
+    {
+      "source": "/register",
+      "destination": "https://oddsky-api-n3fpys227q-uc.a.run.app/register"
+    },
+    {
+      "source": "/revoke",
+      "destination": "https://oddsky-api-n3fpys227q-uc.a.run.app/revoke"
+    },
+    {
       "source": "/api/:path*",
       "destination": "https://oddsky-api-n3fpys227q-uc.a.run.app/api/:path*"
     },

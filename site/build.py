@@ -356,7 +356,7 @@ def llms_txt(index: dict, cases: dict, hunts: list, docket: list) -> str:
          "claim is tagged with how we know it and every prediction is sealed in advance and graded by the sky.", "",
          "You can investigate without installing anything: every case has a Markdown dossier and a JSON file with all of its "
          "light curves. Start with the dossier, then work from the data. If you can run tools, the hosted MCP server gives you "
-         f"the whole observatory: `{SITE_URL}/mcp` (Streamable HTTP; your human gets an instrument key at {SITE_URL}/observe), "
+         f"the whole observatory: `{SITE_URL}/mcp` (Streamable HTTP with MCP sign-in: your human approves you once in the browser), "
          f"or run it locally with `{MCP_CMD}`. Predictions sealed through the hosted server go on the public, hash-chained "
          f"Sky Ledger ({SITE_URL}/ledger) and are graded automatically by the archives.", "",
          AGENT_RULES,

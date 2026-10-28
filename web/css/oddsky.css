@@ -1277,3 +1277,30 @@ html, body { overflow-x: clip; }
 .nav a.nav-observe { border-bottom: 1.5px solid currentColor !important; }
 .theme-toggle { padding: 0 12px 0 9px; }
 @media (max-width: 640px) { .nav a, .theme-toggle { height: 30px; } .theme-toggle { padding: 0 9px; } }
+
+/* ==== sign-in: providers, claiming a code, approving an agent ==================================== */
+.pv-list { display: grid; gap: 10px; margin: 12px 0 6px; }
+.pv-btn { display: flex; align-items: center; justify-content: center; gap: 10px; height: 48px; padding: 0 18px; border: 1.5px solid var(--ink); border-radius: 999px; background: var(--paper-2); color: var(--ink); font: 600 15px/1 var(--sans); font-stretch: 104%; text-decoration: none; cursor: pointer; transition: box-shadow .15s, background .15s; }
+.pv-btn:hover { color: var(--ink); background: var(--paper); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent); }
+.pv-icon { width: 20px; height: 20px; flex: none; }
+.signin .door-note.small { margin-top: 12px; }
+.obs-alert { margin: 0 0 18px; padding: 10px 14px; border-radius: 8px; border: 1px solid color-mix(in srgb, var(--fail) 40%, transparent); background: color-mix(in srgb, var(--fail) 8%, transparent); color: var(--ink); }
+.obs-alert.is-ok { border-color: color-mix(in srgb, var(--ok) 45%, transparent); background: color-mix(in srgb, var(--ok) 8%, transparent); }
+.pk-join summary { cursor: pointer; list-style: none; }
+.pk-join summary::-webkit-details-marker { display: none; }
+.pk-join summary .door-k::after { content: " +"; }
+.pk-join[open] summary .door-k::after { content: " −"; }
+.claim { max-width: 560px; }
+.claim-sugg { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0 4px; color: var(--muted); font-size: 14px; }
+.chip-day { background: var(--paper-2); color: var(--ink); border-color: var(--rule); }
+.chip-day:hover { background: var(--paper-3); color: var(--ink); border-color: var(--accent); }
+.consent { max-width: 640px; }
+.consent-who { display: flex; gap: 20px; align-items: center; margin-bottom: 14px; }
+.consent-who .obs-badge { width: 84px; height: 84px; font-size: 24px; }
+.consent-who h2 { margin: 2px 0; }
+.consent-list { margin: 0 0 12px; padding-left: 1.2em; display: grid; gap: 6px; }
+.methods { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 10px; }
+.methods li { display: flex; align-items: center; gap: 10px; }
+.more-keys { margin-top: 14px; }
+.more-keys summary { cursor: pointer; color: var(--ink-2); font-size: 14px; }
+.obs-grid { align-items: start; }

@@ -25,7 +25,7 @@ from .. import __version__
 from ..case.store import CaseStore
 from ..paths import workspace
 from ..tools import OPEN_TOOLS, Toolbox
-from . import auth, notebooks, sky
+from . import auth, identity, notebooks, oauth_server, sky
 from .db import db
 from .ledger import verify
 
@@ -86,7 +86,15 @@ def _target_name(cid: str, observer: str) -> str | None:
 
 
 def build() -> MCPServer:
-    mcp = MCPServer("oddsky", title="Oddsky", instructions=INSTRUCTIONS, version=__version__, website_url=SITE)
+    from mcp.server.auth.settings import AuthSettings, ClientRegistrationOptions, RevocationOptions
+
+    # Oddsky is its own OAuth authorization server, so `claude mcp add --transport http oddsky
+    # https://oddsky.ai/mcp` needs no key: the client opens the browser and the person signs in.
+    mcp = MCPServer("oddsky", title="Oddsky", instructions=INSTRUCTIONS, version=__version__, website_url=SITE,
+                    auth_server_provider=oauth_server.OddskyOAuth(),
+                    auth=AuthSettings(issuer_url=SITE, resource_server_url=f"{SITE}/mcp", service_documentation_url=f"{SITE}/agents",
+                                      client_registration_options=ClientRegistrationOptions(enabled=True, valid_scopes=["oddsky"], default_scopes=["oddsky"]), validate_token_resource=False,
+                                      revocation_options=RevocationOptions(enabled=True)))
 
     def run_tool(name: str, ctx: Context, kwargs: dict, model: str | None = None) -> Any:
         who = _who(ctx)
@@ -230,6 +238,69 @@ def _routes(mcp: MCPServer) -> None:
     async def health(request):
         return _json({"ok": True, "version": __version__, "head": db().head()})
 
+    @r("/api/auth/providers", methods=["GET"])
+    @_api
+    async def providers(request):
+        return _json({"providers": identity.enabled(), "passkeys": True})
+
+    @r("/api/oauth/{provider}/start", methods=["GET"])
+    async def oauth_start(request):
+        from starlette.responses import RedirectResponse
+
+        try:
+            url = identity.start(request.path_params["provider"], request.query_params.get("next"))
+        except ValueError as e:
+            return RedirectResponse(f"/observe?signin_error={str(e)}", status_code=302)
+        return RedirectResponse(url, status_code=302)
+
+    @r("/api/oauth/{provider}/link", methods=["POST"])
+    @_api
+    async def oauth_link(request):
+        c = _me(request)
+        return _json({"url": identity.link_intent(request.path_params["provider"], c["observer"], (await _body(request)).get("next"))})
+
+    @r("/api/oauth/{provider}/callback", methods=["GET"])
+    async def oauth_callback(request):
+        import anyio
+        from starlette.responses import RedirectResponse
+
+        q = request.query_params
+        url = await anyio.to_thread.run_sync(lambda: identity.callback(request.path_params["provider"], q.get("code"), q.get("state"), q.get("error")))
+        return RedirectResponse(url, status_code=302)
+
+    @r("/api/claim/{token}", methods=["GET"])
+    @_api
+    async def claim_info(request):
+        return _json(identity.claim_info(request.path_params["token"]))
+
+    @r("/api/claim", methods=["POST"])
+    @_api
+    async def claim(request):
+        b = await _body(request)
+        return _json(identity.claim(b.get("token"), b.get("code"), b.get("name")))
+
+    @r("/api/passkeys/begin", methods=["POST"])
+    @_api
+    async def passkey_begin(request):
+        return _json(auth.add_passkey_begin(_me(request)["observer"]))
+
+    @r("/api/passkeys/finish", methods=["POST"])
+    @_api
+    async def passkey_finish(request):
+        b = await _body(request)
+        return _json(auth.add_passkey_finish(_me(request)["observer"], b.get("challenge_id"), b.get("credential") or {}))
+
+    @r("/api/authorize/{rid}", methods=["GET"])
+    @_api
+    async def authorize_info(request):
+        return _json(oauth_server.request_info(request.path_params["rid"]))
+
+    @r("/api/authorize/{rid}", methods=["POST"])
+    @_api
+    async def authorize_decide(request):
+        c = _me(request)
+        return _json(oauth_server.decide(request.path_params["rid"], c["observer"], bool((await _body(request)).get("allow"))))
+
     @r("/api/observers/check", methods=["POST"])
     @_api
     async def check(request):
@@ -272,11 +343,12 @@ def _routes(mcp: MCPServer) -> None:
     async def me(request):
         c = _me(request)
         code = c["observer"]
-        keys = [{k: x.get(k) for k in ("label", "prefix", "created_at")} for x in db().where("keys", "observer", code)]
+        keys = [{k: x.get(k) for k in ("label", "prefix", "created_at", "via")} for x in db().where("keys", "observer", code)]
         nbs = [{k: x.get(k) for k in ("id", "title", "case", "published_at")} for x in db().where("notebooks", "observer", code)]
         seals = [s for s in sky.docket()["items"] if s["observer"] == code]
         return _json({"observer": auth.public_observer(db().get("observers", code)), "keys": keys, "notebooks": nbs,
-                      "seals": seals, "notebook_cases": notebooks.own_cases(code)})
+                      "seals": seals, "notebook_cases": notebooks.own_cases(code), "identities": identity.linked(code),
+                      "passkeys": len(db().where("credentials", "observer", code)), "providers": identity.enabled()})
 
     @r("/api/keys", methods=["POST"])
     @_api

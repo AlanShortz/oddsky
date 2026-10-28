@@ -55,7 +55,7 @@ export function statusPill(status) {
 // ---- "Investigate this with your agent" -------------------------------------------------------
 export const MCP_CMD = 'claude mcp add oddsky -- uvx oddsky mcp';
 export const REPO = 'https://github.com/oddsky-org/oddsky';
-export const HOSTED_CMD = 'claude mcp add --transport http oddsky https://oddsky.ai/mcp --header "Authorization: Bearer osk_…"';
+export const HOSTED_CMD = 'claude mcp add --transport http oddsky https://oddsky.ai/mcp';
 export const starterPrompt = (id) => `Open Oddsky case ${id}. Run the skeptic first, then try to break the leading hypothesis. Tag every claim honestly.`;
 
 function copyRow(text, label, { prompt = false } = {}) {
@@ -70,7 +70,7 @@ export function agentBlock(caseId) {
     h('h2', { class: 'agent-title', id: `agent-${caseId}` }, 'Investigate this with your agent'),
     h('ol', { class: 'agent-steps' },
       h('li', null, h('span', { class: 'step-label' }, 'Give your agent the observatory'), copyRow(HOSTED_CMD, 'install command'),
-        h('p', { class: 'agent-note' }, h('a', { href: link('observe') }, 'Get your observer code and key'), ' (a passkey, a minute). Any MCP-capable agent works: Claude Code, Codex, Cursor. Or run it locally: ', h('code', null, MCP_CMD), '.')),
+        h('p', { class: 'agent-note' }, 'The first time, it opens your browser to sign in with GitHub, Google or a passkey. Any MCP client works. Or run it locally: ', h('code', null, MCP_CMD), '.')),
       h('li', null, h('span', { class: 'step-label' }, 'Then ask it'), copyRow(starterPrompt(caseId), 'starter prompt', { prompt: true }))),
     h('p', { class: 'agent-fork' }, h('a', { href: PATH_MODE ? `/?star=${caseId}` : `?star=${caseId}#/` }, 'See it on the sky'), ' · or ', h('a', { href: `${REPO}/tree/main/cases/${caseId}`, rel: 'noopener', target: '_blank' }, 'fork the case on GitHub'),
       ' — a case is a directory; review is a pull request.'),
