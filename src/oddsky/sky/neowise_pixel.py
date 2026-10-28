@@ -113,7 +113,10 @@ def read_pixel(pixel: int, fs=None, threads: int = 4) -> tuple[pd.DataFrame, pd.
 def visits(df: pd.DataFrame) -> pd.DataFrame:
     """Per-source, per-visit medians of W1 and W2 (NaN where a band failed its cuts)."""
     df = df.sort_values(["allwise_cntr", "mjd"], kind="mergesort", ignore_index=True)
-    new_src = df["allwise_cntr"].ne(df["allwise_cntr"].shift())
+    # Compare as int64: Series.shift() upcasts to float64, where neighbouring 19-digit AllWISE cntrs are
+    # equal, which silently merged one star's first visit into the previous star's last visit.
+    cn = df["allwise_cntr"].to_numpy(dtype="int64")
+    new_src = pd.Series(np.r_[True, cn[1:] != cn[:-1]], index=df.index)
     gap = df["mjd"].diff().gt(VISIT_GAP)
     vid = (new_src | gap).cumsum().to_numpy()
     g = df.groupby(vid, sort=False)

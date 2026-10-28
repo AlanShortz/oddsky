@@ -3,9 +3,10 @@ import json
 import sys
 
 name, pixel_list, n_pix, per_task, parallelism, run = sys.argv[1], sys.argv[2], int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), sys.argv[6]
+code = sys.argv[7] if len(sys.argv) > 7 else "neowise_pixel.py"   # sky2+ use a versioned copy so earlier runs stay reproducible
 tasks = -(-n_pix // per_task)
 cmd = ("set -euo pipefail; PIP_DISABLE_PIP_VERSION_CHECK=1 pip install -q --root-user-action=ignore --no-cache-dir numpy==2.* pandas==2.* pyarrow==21.* && "
-       f"python -u /mnt/disks/oddsky/code/neowise_pixel.py --out /mnt/disks/oddsky/runs/{run} "
+       f"python -u /mnt/disks/oddsky/code/{code} --out /mnt/disks/oddsky/runs/{run} "
        f"--pixel-list /mnt/disks/oddsky/code/{pixel_list} --pixels-per-task {per_task}")
 job = {
   "taskGroups": [{

@@ -37,7 +37,7 @@
         [6, "main sequence, no dust before"],
         [2, "not in any catalogue"]
       ],
-      "verdict": "ASASSN-21qj recovered blind at 79σ. One survivor vanished for 95 days in 2017. It is now with a professional astronomer for review.",
+      "verdict": "ASASSN-21qj recovered blind at 79σ. One survivor vanished for 95 days in 2017. A re-run with a bug fixed tested 24.5 million photospheres instead of 18.1 million and found no new survivor.",
       "cases": ["OS-0014", "OS-0013"]
     },
     {
@@ -84,6 +84,12 @@
       "case": "OS-0003",
       "title": "Five overstatements about EE Cep",
       "text": "Our measurement of the 2025 eclipse held up. Our claim that nobody else was watching did not: professional campaigns were. The referee struck it."
+    },
+    {
+      "case": null,
+      "href": "/hunt/H-0002",
+      "title": "A quarter of the testable stars, quietly skipped",
+      "text": "A float conversion made neighbouring star ids equal, so each star's first NEOWISE visit was blended with its neighbour's and many steady stars looked noisy. The survivors stood; the fixed re-run searched 24.5 million stars instead of 18.1 million and found nothing new."
     }
   ]
 }

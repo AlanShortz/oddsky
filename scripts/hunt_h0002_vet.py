@@ -52,8 +52,10 @@ with ThreadPoolExecutor(4) as ex:
             close = g[g.sep < 2.0]
             m = (close.sort_values("g").iloc[0] if len(close) else None)
             if m is not None:
-                r.update(gaia_id=str(int(m.source_id)), G=m.g, bp_rp=m.bp_rp, parallax=m.parallax, poe=m.poe, ruwe=m.ruwe, teff=m.teff, sep=m.sep)
-                others = g[g.source_id != m.source_id]
+                # source_id from the int64 column: a mixed-dtype row is float64 and rounds onto a neighbour's id
+                sid = int(close.sort_values("g")["source_id"].iloc[0])
+                r.update(gaia_id=str(sid), G=m.g, bp_rp=m.bp_rp, parallax=m.parallax, poe=m.poe, ruwe=m.ruwe, teff=m.teff, sep=m.sep)
+                others = g[g.source_id != sid]
                 bright = others[others.g < m.g + 2.5]
                 r["blend_n"] = int(len(bright))
                 r["blend_min_sep"] = float(bright.sep.min()) if len(bright) else np.nan
