@@ -216,9 +216,9 @@ function doors(caseId) {
     h('div', { class: 'door' },
       h('p', { class: 'door-k mono' }, 'The whole observatory, hosted'),
       h('h2', null, 'Give your agent the instruments'),
-      copyRow(`claude mcp add --transport http oddsky ${SITE}/mcp --header "Authorization: Bearer osk_…"`, 'hosted install command'),
+      copyRow(`claude mcp add --transport http oddsky ${SITE}/mcp`, 'hosted install command'),
       h('p', { class: 'door-note' }, '24 tools over MCP, nothing to install: live archive queries (Gaia, NEOWISE, AAVSO, TESS, ZTF), periodograms, dip finders, the Skeptic, a notebook that keeps, and predictions sealed on the public ',
-        h('a', { href: link('ledger') }, 'Sky Ledger'), '. ', h('a', { href: link('observe') }, 'Get your observer code and key'), ' (a passkey, a minute). Prefer local? ', h('code', null, MCP_CMD))));
+        h('a', { href: link('ledger') }, 'Sky Ledger'), '. The first time, your browser opens to sign in with GitHub, Google or a passkey; no key to copy. Prefer local? ', h('code', null, MCP_CMD))));
 }
 
 // ---- hunts -------------------------------------------------------------------------------------

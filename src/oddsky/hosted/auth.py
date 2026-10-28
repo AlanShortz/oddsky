@@ -101,6 +101,45 @@ def register_finish(cid: str, credential: dict | str) -> dict:
     return {"token": new_session(ch["code"]), "observer": public_observer(obs)}
 
 
+def add_passkey_begin(code: str) -> dict:
+    """A signed-in observer (say, one who joined with GitHub) adds a passkey to their code."""
+    from webauthn import generate_registration_options, options_to_json
+    from webauthn.helpers.structs import (
+        AuthenticatorSelectionCriteria,
+        PublicKeyCredentialDescriptor,
+        ResidentKeyRequirement,
+        UserVerificationRequirement,
+    )
+
+    obs = db().get("observers", code)
+    handle = unb64u(obs["handle"]) if obs.get("handle") else secrets.token_bytes(16)
+    if not obs.get("handle"):
+        db().update("observers", code, {"handle": b64u(handle)})
+    have = [PublicKeyCredentialDescriptor(id=unb64u(c["_id"])) for c in db().where("credentials", "observer", code)]
+    opts = generate_registration_options(
+        rp_id=RP_ID, rp_name="Oddsky", user_id=handle, user_name=code, user_display_name=obs.get("name") or code,
+        exclude_credentials=have,
+        authenticator_selection=AuthenticatorSelectionCriteria(resident_key=ResidentKeyRequirement.REQUIRED,
+                                                               user_verification=UserVerificationRequirement.PREFERRED),
+        timeout=180000)
+    cid = secrets.token_urlsafe(16)
+    db().set("challenges", cid, {"kind": "add-passkey", "challenge": b64u(opts.challenge), "code": code, "expires": time.time() + 300})
+    return {"challenge_id": cid, "options": options_to_json(opts)}
+
+
+def add_passkey_finish(code: str, cid: str, credential: dict) -> dict:
+    from webauthn import verify_registration_response
+
+    ch = _take_challenge(cid, "add-passkey")
+    if ch["code"] != code:
+        raise AuthError("this passkey request belongs to another observer")
+    v = verify_registration_response(credential=credential, expected_challenge=unb64u(ch["challenge"]),
+                                     expected_rp_id=RP_ID, expected_origin=ORIGINS, require_user_verification=False)
+    db().set("credentials", b64u(v.credential_id), {"observer": code, "public_key": b64u(v.credential_public_key),
+                                                     "sign_count": v.sign_count, "created_at": now()})
+    return {"ok": True}
+
+
 def login_begin() -> dict:
     from webauthn import generate_authentication_options, options_to_json
     from webauthn.helpers.structs import UserVerificationRequirement
