@@ -64,7 +64,8 @@ function skyHero() {
     Object.assign(sky.state, { ra: 318, dec: 40, fov: 96 });
     if (card || reduce) return;
     sky.expose(4500);
-    sky.drift(80, 6, 1.1);
+    // motion stays in the right-hand pane, away from the words; on narrow screens there is none
+    if (innerWidth >= 900) sky.drift(80, 6, 0.6);
   }).catch(() => { /* the copy stands on its own */ });
   return sec;
 }
@@ -87,7 +88,7 @@ function doors(caseId) {
       h('p', { class: 'door-k mono' }, 'The whole observatory, hosted'),
       h('h2', null, 'Give your agent the instruments'),
       copyRow(`claude mcp add --transport http oddsky ${SITE}/mcp`, 'hosted install command'),
-      h('p', { class: 'door-note' }, '24 tools over MCP, nothing to install: live archive queries (Gaia, NEOWISE, AAVSO, TESS, ZTF), periodograms, dip finders, the Skeptic, a notebook that keeps, and predictions sealed on the public ',
+      h('p', { class: 'door-note' }, '27 tools over MCP, nothing to install: live archive queries (Gaia, NEOWISE, AAVSO, TESS, ZTF), periodograms, dip finders, the Skeptic, a notebook that keeps, and predictions sealed on the public ',
         h('a', { href: link('ledger') }, 'Sky Ledger'), '. The first time, your browser opens to sign in with GitHub, Google or a passkey; no key to copy. Prefer local? ', h('code', null, MCP_CMD))));
 }
 
