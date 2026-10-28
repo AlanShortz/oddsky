@@ -79,6 +79,10 @@ def case_payload(store: CaseStore) -> dict:
     investigations = [
         {"file": p.name, "markdown": p.read_text()} for p in sorted(inv_dir.glob("*.md"))
     ] if inv_dir.exists() else []
+    rev_dir = store.path / "reviews"
+    reviews = [
+        {"file": p.name, "markdown": p.read_text()} for p in sorted(rev_dir.glob("*.md"))
+    ] if rev_dir.exists() else []
     skeptic = store.path / "skeptic.json"
     ctx = store.context()
     if "neighbors" in ctx:
@@ -94,6 +98,7 @@ def case_payload(store: CaseStore) -> dict:
         "skeptic": json.loads(skeptic.read_text()) if skeptic.exists() else None,
         "ledger": store.ledger(),
         "investigations": investigations,
+        "reviews": reviews,
     }
 
 

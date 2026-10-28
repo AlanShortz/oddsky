@@ -77,6 +77,7 @@ export function renderCase(payload, { home = false, index = null } = {}) {
     skepticSection(payload.skeptic, id),
     provenanceSection(payload.provenance, credits),
     investigationsSection(arr(payload.investigations), id, ledger),
+    reviewsSection(arr(payload.reviews), ledger),
     literatureSection(arr(c.literature)),
   );
 
@@ -183,6 +184,7 @@ function toc(c, payload) {
     ['skeptic', 'Skeptic', payload.skeptic ? arr(payload.skeptic.checks).length : 0],
     ['provenance', 'Provenance', Object.keys(payload.provenance ?? {}).length],
     ['investigations', 'Investigations', arr(payload.investigations).length],
+    ['reviews', 'Referee', arr(payload.reviews).length],
   ];
   return h('nav', { class: 'toc', 'aria-label': 'On this page' },
     h('h3', { class: 'rail-h' }, 'In this file'),
@@ -442,6 +444,23 @@ function investigationsSection(invs, caseId, ledger = new Map()) {
     sec.append(emptyNote('No write-ups yet.', h('p', null, 'Start one: ', h('code', { class: 'inline-prompt' }, starterPrompt(caseId)))));
     return sec;
   }
+  renderNotebooks(sec, invs, 'investigations', ledger);
+  return sec;
+}
+
+// The referee's reports: an independent, adversarial pass whose job is to break the case. Nothing is called a
+// finding until it has been through one. Same citation machinery as the investigations.
+function reviewsSection(revs, ledger = new Map()) {
+  const sec = h('section', { class: 'sec', id: 'reviews' }, sectionHead('reviews', 'Referee', revs.length, 'Independent adversarial reviews, with the verdict, every attack tried and what it found, and the wording changes required. The investigators must answer them claim by claim.'));
+  if (!revs.length) {
+    sec.append(emptyNote('No referee report yet. Nothing here is a finding until one exists.'));
+    return sec;
+  }
+  renderNotebooks(sec, revs, 'reviews', ledger);
+  return sec;
+}
+
+function renderNotebooks(sec, docs, dir, ledger) {
   const expand = (g) => {
     const m = /K(\d+)\s*[-–]\s*K?(\d+)/.exec(g);
     if (!m) return [g.trim()];
@@ -463,12 +482,11 @@ function investigationsSection(invs, caseId, ledger = new Map()) {
       return [i ? ', ' : '', b];
     }), ')'),
   };
-  for (const inv of invs) {
+  for (const doc of docs) {
     sec.append(h('article', { class: 'notebook' },
-      h('header', { class: 'notebook-head mono' }, `investigations/${inv.file}`),
-      renderMarkdown(inv.markdown, { headingOffset: 2, cite })));
+      h('header', { class: 'notebook-head mono' }, `${dir}/${doc.file}`),
+      renderMarkdown(doc.markdown, { headingOffset: 2, cite })));
   }
-  return sec;
 }
 
 function literatureSection(lit) {
