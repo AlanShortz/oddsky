@@ -1,17 +1,19 @@
 
-# Three candidate circumstellar dust events in public survey archives
+# Oddsky: Three candidate circumstellar dust events in public survey archives
 
-*A 95-day near-total occultation of a G dwarf in 2017, two-week dust eclipses on a 385.7-day orbit, and a 1000 K excess that appeared around a K dwarf in 2018. Oddsky cases OS-0014, OS-0015 and OS-0013. Alan Shortz, 27 October 2026. Prepared for the advisor; private, for scientific review.*
+*A 95-day near-total occultation of a G dwarf in 2017, two-week dust eclipses on a 385.7-day orbit, and a 1000 K excess that appeared around a K dwarf in 2018. Oddsky cases OS-0014, OS-0015 and OS-0013.*
+
+Alan Shortz, 27 October 2026.
 
 ## Introduction
 
-For most of history astronomy was limited by light: how much a telescope could gather, and how often it could look. That limit has quietly fallen. Gaia has charted 1.8 billion stars, NEOWISE photographed the whole sky every six months for a decade, ZTF, ATLAS and TESS watch it night after night, and nearly all of it is public. What is scarce now is attention: most of that record has never been looked at closely by anyone, and whatever is in it stays unknown until someone does.
+For most of history astronomy was limited by light, how much a telescope could gather, and how often it could look. That limit has quietly fallen. Gaia has charted 1.8 billion stars, NEOWISE photographed the whole sky every six months for a decade, ZTF, ATLAS and TESS watch it night after night, and nearly all of it is public. What is scarce now is attention: most of that record has never been looked at closely by anyone, and whatever is in it stays unknown until someone does.
 
-Oddsky is the open-source observatory I have been building to supply that attention, carefully. A curious person, using an AI agent as the instrument, can look closely at stars no one has examined and leave behind work that others can check: every claim says how it is known, every number has a receipt that replays from the archives, every prediction is sealed before the sky answers, and nothing is called a finding until a deterministic set of checks (the Skeptic) and an independent adversarial pass (the referee) have tried to break it. The tools make attention cheap. The discipline is what makes it worth anything.
+Oddsky is the open-source observatory I have been building to supply that attention. A curious person, using an AI agent as the instrument, can look closely at stars no one has examined and leave behind work that others can check. The tools make attention cheap, so what matters now is where and how that attention is directed.
 
-Two systematic searches this week left three objects standing: one from a re-screen of the published R CrB candidate list, two from a full-sky pass over the NEOWISE archive. I have not found any of the three phenomena reported, but whether they are real, and what they are, is what this brief asks you.
+Fundamentally, the three stars in this brief are the first stress test of the central idea. The question Oddsky exists to ask is whether an interested amateur (such as myself) armed with these increasingly capable AI tools can add something true to what is known. If at least one of these survives your scrutiny, then the premise holds, and that is very exciting. If none does, great. Back to the drawing board we go! Thanks in advance for taking the time. As Feynman said, "The prize is the pleasure of finding the thing out, the kick in the discovery, the observation that other people use it [my work], those are the real things."
 
-I am not an astronomer. Each object below is given in the same order: the claim, the figure, the observations, the interpretation. Section 5 contains four questions, which is all I am asking of you. Everything cited here is on the case pages at oddsky.ai (OS-0014, OS-0015, OS-0013) and in the accompanying review kit: the full light curves as CSV, the archive provenance, the Gaia context, and the three referee reports, which are blunter than this brief. The repository itself is private until you have looked; you will have access to it as well.
+The full light curves, provenance and referee reports are on the case pages at oddsky.ai and in the attached review kit; you will have repository access as well.
 
 ## OS-0014: a G dwarf that vanished for three months
 
