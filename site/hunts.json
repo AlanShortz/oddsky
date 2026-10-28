@@ -2,6 +2,17 @@
   "_comment": "Editorial summaries of each hunt for the website. The README in hunts/<ID>/ is the source of truth; these numbers are copied from its funnel table. A hunt whose directory is missing is skipped, so an entry can land before its hunt merges.",
   "hunts": [
     {
+      "id": "H-0005",
+      "title": "The Gaia alerts nobody finished",
+      "question": "Gaia flagged thousands of stars that faded, then moved on. What did the unexplained ones do before and after it looked?",
+      "date": "2026-10-28",
+      "state": "candidates refereed",
+      "scale": "27,076 Gaia alerts · Pan-STARRS, WISE, ZTF, ATLAS, TESS, CRTS, 2MASS and Palomar plates 1954-2026",
+      "funnel": [[27076, "Gaia Science Alerts, 2016-2025"], [173, "fading, bright, never classified"], [79, "not a known class or a young star"], [12, "dwarfs with a good parallax"], [4, "worth a dossier"]],
+      "verdict": "Every survivor was already a catalogued variable; what is new is what they are. One star has spent most of the last 35 years 3-5 magnitudes fainter. Another, catalogued as a nova-like, is an old dusty dwarf that keeps going dark.",
+      "cases": []
+    },
+    {
       "id": "H-0004",
       "title": "Stars that go dark",
       "question": "Which of the 2,356 stars the experts short-listed as R Coronae Borealis candidates have gone dark since anyone last looked?",
@@ -90,6 +101,12 @@
       "href": "/hunt/H-0002",
       "title": "A quarter of the testable stars, quietly skipped",
       "text": "A float conversion made neighbouring star ids equal, so each star's first NEOWISE visit was blended with its neighbour's and many steady stars looked noisy. The survivors stood; the fixed re-run searched 24.5 million stars instead of 18.1 million and found nothing new."
+    },
+    {
+      "case": null,
+      "href": "/hunt/H-0005",
+      "title": "A clock that wasn't, and a Sun-like star that isn't",
+      "text": "We fitted a 392-day period to four dips of an old K dwarf and predicted the next one. The referee fetched older surveys and found deep dips at the wrong phases; the sky agreed, with no dip on the predicted date. We also called a star Sun-like from a Gaia fit that had failed; it shows strong H-alpha emission."
     }
   ]
 }
