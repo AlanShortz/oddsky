@@ -22,7 +22,7 @@ summary: 'Gaia DR3 6733428488637673984, a G0 dwarf ~420 pc away (possibly a spec
   months later its W1-W2 colour reddened by ~0.15 and stayed so to 2024, while the optical star was ~0.05
   mag brighter than before. A century of Harvard plates (DASCH) shows no clear repeat and excludes periods
   under 12.9 yr; ATLAS shows no repeat from 2018 to 2026. Found by Oddsky hunt H-0002; refereed and fact-checked.
-  Not reported elsewhere as far as we can find. Brief for an astronomer: docs/briefs/OS-0014_for_review.md.'
+  Not reported elsewhere as far as we can find.'
 claims:
 - id: C1
   text: 'Field test (IRSA Gator neowiser_p1bs_psd within 150" of the target; outside the tools): 18 field
