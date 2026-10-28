@@ -258,7 +258,7 @@ async function profile(page, rerender, providers = [], linkedNow = null) {
 
   const connect = `claude mcp add --transport http oddsky ${MCP_URL}`;
   const copy = h('button', { type: 'button', class: 'copy' }, 'Copy'); copy.addEventListener('click', () => copyText(connect, copy));
-  page.replaceChildren(
+  page.replaceChildren(...[
     linkedNow ? h('p', { class: 'obs-alert is-ok' }, `Linked ${linkedNow}. You can sign in with it from now on.`) : null,
     h('header', { class: 'page-head obs-head' },
       h('div', { class: 'obs-badge mono', 'aria-hidden': 'true' }, o.code),
@@ -288,7 +288,7 @@ async function profile(page, rerender, providers = [], linkedNow = null) {
     h('section', { class: 'front-sec' }, h('h2', { class: 'dk-h' }, 'Your notebooks'),
       arr(me.notebook_cases).length ? h('p', null, 'Cases in your notebook: ', me.notebook_cases.map((c, i) => [i ? ', ' : '', h('span', { class: 'mono' }, c)])) : null,
       arr(me.notebooks).length ? h('ul', { class: 'nb-list' }, me.notebooks.map((n) => h('li', null, h('a', { href: link(`n/${n.id}`) }, n.title), h('span', { class: 'muted mono small' }, ` ${n.case} · ${fmtDate(n.published_at)}`))))
-        : h('p', { class: 'muted' }, 'Nothing published yet. Ask your agent to publish_notebook when it has something worth checking.')));
+        : h('p', { class: 'muted' }, 'Nothing published yet. Ask your agent to publish_notebook when it has something worth checking.'))].filter(Boolean));
 }
 
 function keyBlock(key) {

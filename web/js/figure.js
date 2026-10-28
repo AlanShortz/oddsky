@@ -349,7 +349,7 @@ export function createFigure(payload, { annotations = [], caseId = '' } = {}) {
   const tip = h('div', { class: 'fig-tip', role: 'status', 'aria-live': 'polite', hidden: true });
   plot.append(tip);
   const tessBox = tess ? h('div', { class: 'tess-strip' }) : null;
-  root.append(controls, panels.length ? plot : null, panels.length ? tools : null, tessBox);
+  root.append(...[controls, panels.length ? plot : null, panels.length ? tools : null, tessBox].filter(Boolean));
 
   let svgEl = null, geom = null;
 
@@ -758,7 +758,7 @@ export function createFigure(payload, { annotations = [], caseId = '' } = {}) {
       }
     }
     const mjd = yearToMjd(t);
-    tip.replaceChildren(
+    tip.replaceChildren(...[
       h('div', { class: 'tip-head' }, h('strong', null, mjdToIso(mjd)), h('span', { class: 'mono muted' }, `MJD ${mjd.toFixed(2)}`)),
       rows.length ? h('div', { class: 'tip-rows' }, rows.map((r) => h('div', { class: `tip-row ${r.why ? 'is-flagged' : ''}` },
         r.why ? h('span', { class: 'key-flag', 'aria-hidden': 'true' }) : keyIcon(r.ser, { w: 14, hgt: 10 }),
@@ -766,7 +766,7 @@ export function createFigure(payload, { annotations = [], caseId = '' } = {}) {
         h('span', { class: 'tip-label' }, r.ser.label, r.why ? ` · flagged: ${r.why}` : '',
           Math.abs(r.mjd - mjd) > 0.6 ? h('span', { class: 'muted' }, ` · ${mjdToIso(r.mjd)}`) : null),
       ))) : h('div', { class: 'tip-empty muted' }, 'no observation within a few days'),
-    );
+    ].filter(Boolean));
     tip.hidden = false;
     // position: beside the crosshair, flipping near the right edge
     const px = X(t);

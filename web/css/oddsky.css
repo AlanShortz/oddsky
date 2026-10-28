@@ -1435,3 +1435,20 @@ html, body { overflow-x: clip; }
 .vz-quote figcaption::before { content: "— "; }
 .fin-h { margin-top: 0; }
 .is-card .sky-tourlink { display: none; }
+/* the moving sky lives to the right of the words; behind them the night is still */
+@media (min-width: 900px) {
+  .sky-hero.is-plain .sky-stage { left: 30%; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 34%); mask-image: linear-gradient(to right, transparent 0, #000 34%); }
+  .sky-hero.is-plain::before { content: ""; position: absolute; inset: 0 55% 0 0; z-index: 0; pointer-events: none; opacity: .55;
+    background-image: radial-gradient(1px 1px at 12% 18%, #fff, transparent), radial-gradient(1px 1px at 31% 9%, #dfe6ff, transparent), radial-gradient(1.2px 1.2px at 44% 33%, #fff, transparent),
+      radial-gradient(1px 1px at 8% 47%, #ffeedd, transparent), radial-gradient(1px 1px at 27% 62%, #fff, transparent), radial-gradient(1.4px 1.4px at 52% 78%, #dfe6ff, transparent),
+      radial-gradient(1px 1px at 17% 86%, #fff, transparent), radial-gradient(1px 1px at 63% 14%, #fff, transparent), radial-gradient(1px 1px at 71% 52%, #ffeedd, transparent),
+      radial-gradient(1px 1px at 38% 93%, #fff, transparent), radial-gradient(1.2px 1.2px at 4% 71%, #fff, transparent), radial-gradient(1px 1px at 58% 41%, #fff, transparent); }
+}
+/* the plain sky hero: no markers, no clock */
+.sky-hero.is-plain .sky-copy { bottom: clamp(70px, 11vh, 120px); }
+.sky-hero.is-plain::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 22%; background: linear-gradient(transparent, var(--night)); pointer-events: none; z-index: 2; }
+.sky-credit { position: absolute; z-index: 3; right: clamp(20px, 5vw, 72px); bottom: 22px; margin: 0; font-size: 11px; letter-spacing: .06em; color: rgba(233, 236, 255, .38); }
+@media (max-width: 720px) { .sky-credit { display: none; } }
+/* keep the narrow-screen nav trims working after .nav a became inline-flex */
+@media (max-width: 1180px) { .nav a.hide-md-nav { display: none; } }
+@media (max-width: 640px) { .nav a.hide-sm { display: none; } .nav { gap: 14px; } }
