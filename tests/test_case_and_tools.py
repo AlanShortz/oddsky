@@ -93,3 +93,17 @@ def test_hunt_field_round_trips_and_exports(dusty_case):
 
     index = json.loads((out / "index.json").read_text())
     assert next(i for i in index["cases"] if i["id"] == "OS-0001")["hunt"] == "H-0004"
+
+
+def test_referee_reports_are_exported(dusty_case):
+    import json
+
+    from oddsky.export import export_web
+
+    (dusty_case.path / "reviews").mkdir()
+    (dusty_case.path / "reviews" / "claude-referee-2026-10-27.md").write_text("# Referee\n\n## Verdict\n\nSurvives.\n")
+    out = dusty_case.path.parent.parent / "web" / "data"
+    export_web(out)
+    payload = json.loads((out / "cases" / "OS-0001.json").read_text())
+    assert payload["reviews"][0]["file"] == "claude-referee-2026-10-27.md"
+    assert "Survives." in payload["reviews"][0]["markdown"]
