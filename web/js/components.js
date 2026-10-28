@@ -55,6 +55,9 @@ export function statusPill(status) {
 // ---- "Investigate this with your agent" -------------------------------------------------------
 export const MCP_CMD = 'claude mcp add oddsky -- uvx oddsky mcp';
 export const REPO = 'https://github.com/oddsky-org/oddsky';
+// The repository is private until the first public release. Flip this (and REPO_PUBLIC in site/build.py,
+// and the footer line in index.html) when it opens, and every "on GitHub" link comes back.
+export const REPO_PUBLIC = false;
 export const HOSTED_CMD = 'claude mcp add --transport http oddsky https://oddsky.ai/mcp';
 export const starterPrompt = (id) => `Open Oddsky case ${id}. Run the skeptic first, then try to break the leading hypothesis. Tag every claim honestly.`;
 
@@ -72,8 +75,8 @@ export function agentBlock(caseId) {
       h('li', null, h('span', { class: 'step-label' }, 'Give your agent the observatory'), copyRow(HOSTED_CMD, 'install command'),
         h('p', { class: 'agent-note' }, 'The first time, it opens your browser to sign in with GitHub, Google or a passkey. Any MCP client works. Or run it locally: ', h('code', null, MCP_CMD), '.')),
       h('li', null, h('span', { class: 'step-label' }, 'Then ask it'), copyRow(starterPrompt(caseId), 'starter prompt', { prompt: true }))),
-    h('p', { class: 'agent-fork' }, 'or ', h('a', { href: `${REPO}/tree/main/cases/${caseId}`, rel: 'noopener', target: '_blank' }, 'fork the case on GitHub'),
-      ' — a case is a directory; review is a pull request.'),
+    h('p', { class: 'agent-fork' }, 'or ', REPO_PUBLIC ? h('a', { href: `${REPO}/tree/main/cases/${caseId}`, rel: 'noopener', target: '_blank' }, 'fork the case on GitHub') : h('a', { href: `/case/${caseId}.md` }, 'hand your agent this case as Markdown'),
+      REPO_PUBLIC ? ' — a case is a directory; review is a pull request.' : ': everything it needs, in one file.'),
   );
 }
 

@@ -36,6 +36,7 @@ WEB = ROOT / "web"
 DIST = ROOT / "dist"
 SITE_URL = os.environ.get("ODDSKY_SITE_URL", "https://oddsky.ai").rstrip("/")
 REPO = "https://github.com/oddsky-org/oddsky"
+REPO_PUBLIC = False  # the repository is private until the first public release; GitHub links are left out until then
 MCP_CMD = "claude mcp add oddsky -- uvx oddsky mcp"
 TAGLINE = "The universe is an open question."
 DEFAULT_DESC = ("An open observatory your AI agent can use. Real telescope data on strange stars, "
@@ -107,7 +108,7 @@ def rewrite_readme_links(md: str, hunt_id: str) -> str:
         if hunt:
             return f"[{text}](/hunt/{hunt.group(1)})"
         path = os.path.normpath(f"hunts/{hunt_id}/{url}")
-        return f"[{text}]({REPO}/tree/main/{path})"
+        return f"[{text}]({REPO}/tree/main/{path})" if REPO_PUBLIC else (f"`{text}`" if text.startswith(("scripts/", "hunts/")) or "." in text else text)
     return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", fix, md)
 
 
@@ -290,7 +291,7 @@ def case_markdown(cid: str, payload: dict, meta: dict) -> str:
           "(observation → anomaly → reproduced → interpreted → validated; exits: artifact, closed)",
           f"- **Web page:** {SITE_URL}/case/{cid}",
           f"- **All data (JSON, ~0.1-0.5 MB):** {SITE_URL}/data/cases/{cid}.json",
-          f"- **Case directory in git:** {REPO}/tree/main/cases/{cid}", ""]
+          *([f"- **Case directory in git:** {REPO}/tree/main/cases/{cid}"] if REPO_PUBLIC else []), ""]
     if g:
         keys = [("G", "Gaia G mag"), ("bp_rp", "BP−RP"), ("teff_gspphot", "Teff (K)"), ("distance_pc", "distance (pc)"),
                 ("abs_G", "absolute G"), ("ruwe", "RUWE"), ("non_single_star", "non_single_star")]
@@ -346,7 +347,7 @@ def case_markdown(cid: str, payload: dict, meta: dict) -> str:
         L += [f"## Referee report ({rv.get('file', '')})", "",
               "An independent, adversarial pass whose job was to break the case. Verdict:", "",
               (m.group(1).strip() if m else plain(md[:1200])), "",
-              f"Full report: {SITE_URL}/data/cases/{cid}.json (key `reviews`) or {REPO}/tree/main/cases/{cid}/reviews", ""]
+              f"Full report: {SITE_URL}/data/cases/{cid}.json (key `reviews`)" + (f" or {REPO}/tree/main/cases/{cid}/reviews" if REPO_PUBLIC else ""), ""]
     if c.get("literature"):
         L += ["## Literature", ""] + [f"- {x.get('note', '')} ({x.get('bibcode', '')})" for x in c["literature"]] + [""]
     L += ["## Investigate", "",
@@ -383,10 +384,10 @@ def llms_txt(index: dict, cases: dict, hunts: list, docket: list) -> str:
           f"{len(pending)} sealed predictions are waiting for the sky: {SITE_URL}/data/docket.json "
           f"(calendar: {SITE_URL}/docket.ics).", "",
           "## Optional", "",
-          f"- [How Oddsky keeps itself honest]({REPO}/blob/main/docs/EPISTEMICS.md)",
-          f"- [Manifesto]({REPO}/blob/main/docs/MANIFESTO.md)",
+          *([f"- [How Oddsky keeps itself honest]({REPO}/blob/main/docs/EPISTEMICS.md)",
+             f"- [Manifesto]({REPO}/blob/main/docs/MANIFESTO.md)"] if REPO_PUBLIC else []),
           f"- [Strange Stars Trial 001 scorecards]({SITE_URL}/trials)",
-          f"- [Source code]({REPO})", ""]
+          *([f"- [Source code]({REPO})"] if REPO_PUBLIC else []), ""]
     return "\n".join(L)
 
 

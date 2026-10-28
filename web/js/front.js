@@ -6,7 +6,7 @@ import { h, s, arr, fmtDate, fmtInt, pct, link, mjdToYear, copyText, PATH_MODE }
 import { loadSky } from './data.js';
 import { createSky } from './sky.js';
 import { caseCard, agentShort } from './pages.js';
-import { MCP_CMD, REPO, stamp } from './components.js';
+import { MCP_CMD, REPO, REPO_PUBLIC, stamp } from './components.js';
 import { renderMarkdown } from './markdown.js';
 import { scoreboard } from './live.js';
 import { landing, copyCmd, CONNECT } from './landing.js';
@@ -275,5 +275,5 @@ export function renderAgents(index) {
         h('li', null, h('strong', null, 'Try to break the leading idea '), 'before adding to it.'),
         h('li', null, h('strong', null, 'Never say “discovery”. '), 'Say what would prove it wrong.'))),
     h('section', { class: 'front-sec' }, h('h2', { class: 'dk-h' }, 'llms.txt, as your agent sees it'), pre),
-    h('p', { class: 'muted' }, 'Source and the MCP server: ', h('a', { href: REPO, rel: 'noopener', target: '_blank' }, REPO.replace('https://', '')), '.'));
+    h('p', { class: 'muted' }, ...(REPO_PUBLIC ? ['Source and the MCP server: ', h('a', { href: REPO, rel: 'noopener', target: '_blank' }, REPO.replace('https://', ''))] : ['The source code (MIT) opens with the first public release; the hosted observatory is available now']), '.'));
 }
