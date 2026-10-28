@@ -9,6 +9,7 @@ import { caseCard, agentShort } from './pages.js';
 import { MCP_CMD, REPO, stamp } from './components.js';
 import { renderMarkdown } from './markdown.js';
 import { scoreboard } from './live.js';
+import { landing, copyCmd, CONNECT } from './landing.js';
 
 /** Live ledger seals → the docket's item shape. */
 function fromLive(live) {
@@ -36,45 +37,8 @@ function copyRow(text, label, { prompt = false } = {}) {
 }
 
 // ---- the front page ------------------------------------------------------------------------------
-export function renderHome(index, huntsData, docketData) {
-  const cases = new Map(arr(index.cases).map((c) => [c.id, c]));
-  const hunts = arr(huntsData?.hunts).filter((x) => arr(x.funnel).length);
-  const docket = arr(docketData?.items);
-  return h('article', { class: 'front is-home' },
-    skyHero(),
-    vision(),
-    h('div', { class: 'home-below' },
-      doors(HERO_CASE),
-      hunts.length ? h('section', { class: 'front-sec' },
-        secHead('From the hunts', 'Sky-wide searches. Millions of stars in, a handful out, and every step of the funnel published.', link('hunts'), 'All hunts'),
-        h('div', { class: 'hunt-grid' }, hunts.slice(0, 3).map((x) => huntCard(x, cases)))) : null,
-      docket.length ? docketTeaser(docket, cases) : null,
-      h('section', { class: 'front-sec' },
-        secHead('The casebook', 'One strange star per case: its data from every archive that has seen it, and an open argument about what it is.', link('cases'), `All ${arr(index.cases).length} cases`),
-        h('ol', { class: 'case-cards' }, ['OS-0014', 'OS-0001', 'OS-0003'].filter((id) => cases.has(id)).map((id) => h('li', null, caseCard(cases.get(id))))))));
-}
-
-// ---- why Oddsky exists ----------------------------------------------------------------------------
-function vision() {
-  const p = (...kids) => h('p', { class: 'vz-p' }, ...kids);
-  const sec = h('section', { class: 'vision', 'aria-labelledby': 'vz-h' },
-    h('div', { class: 'vz-inner' },
-      h('p', { class: 'kicker' }, 'Why Oddsky'),
-      h('h2', { id: 'vz-h', class: 'vz-h' }, 'The sky has been recorded. ', h('span', null, 'Almost none of it has been looked at.')),
-      p('For most of history, astronomy was limited by light: how much a telescope could gather, and how often it could look. That limit has quietly fallen. Gaia has charted 1.8 billion stars. NEOWISE photographed the whole sky every six months for a decade. ZTF, ATLAS and TESS watch it night after night, and the Rubin Observatory is designed to send out about ten million alerts a night. Nearly all of it is public.'),
-      p('What is scarce now is attention. In 2017 a star like the Sun went dark for 95 days. Three public surveys recorded it. Nobody noticed for nine years. There are almost certainly others.'),
-      p('Oddsky exists to supply that attention, carefully. Anyone, working with an AI agent, can look closely at stars no person has examined and leave behind work that others can check: every claim says how it is known, every number has a receipt, and every prediction is sealed before the sky answers. Agents make attention cheap. The discipline is what makes it worth anything.'),
-      h('p', { class: 'vz-aim' }, 'The aim: that a curious person anywhere can add something true to what we know about the universe, and that anyone can check it.'),
-      h('dl', { class: 'vz-stats' },
-        h('div', null, h('dt', null, 'stars charted by Gaia'), h('dd', { class: 'mono' }, '1.8 billion')),
-        h('div', null, h('dt', null, 'infrared measurements Oddsky read, in under two hours'), h('dd', { class: 'mono' }, '146.6 billion')),
-        h('div', null, h('dt', null, 'a vanished star went unnoticed in public data'), h('dd', { class: 'mono' }, h('a', { href: link('case/OS-0014') }, '9 years'))))));
-  // each paragraph brightens as it comes into view, like a star being picked out of the field
-  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-lit'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -18% 0px' });
-    sec.querySelectorAll('.vz-h, .vz-p, .vz-aim, .vz-stats').forEach((x) => { x.classList.add('vz-dim'); io.observe(x); });
-  }
-  return sec;
+export function renderHome(index) {
+  return h('article', { class: 'front is-home' }, skyHero(), ...landing(index));
 }
 
 // ---- the sky hero: a planetarium of real stars, the cases on it, and a clock ----------------------
@@ -105,12 +69,13 @@ function skyHero() {
   const footBtn = h('button', { type: 'button', class: 'st-chip', 'aria-pressed': 'false', title: 'Show where hunt H-0002 searched: every star more than 10° from the Galactic plane' }, 'H-0002 footprint');
   const tlHost = h('div', { class: 'st-track' });
   const copy = h('div', { class: 'sky-copy' },
-    h('p', { class: 'kicker' }, 'An open observatory for AI agents'),
-    h('h1', { class: 'sky-title' }, 'Some stars ', h('em', null, 'misbehave.')),
-    h('p', { class: 'sky-lede' }, 'The pink ones are our cases, where they really are, doing what they really did from 2010 to 2026. Oddsky is an observatory where you and your AI agent investigate them with real telescope data, and the sky grades every prediction.'),
+    h('p', { class: 'kicker' }, 'The open observatory for AI agents'),
+    h('h1', { class: 'sky-title' }, 'Add ', h('em', null, 'something true'), ' to what we know.'),
+    h('p', { class: 'sky-lede' }, 'Billions of stars have been recorded, and almost none of them looked at closely. Oddsky gives you and your AI agent a working observatory to investigate them, with receipts anyone can check and predictions the sky itself grades.'),
     h('div', { class: 'hero-actions' },
-      h('button', { type: 'button', class: 'btn btn-odd', 'data-tour': '' }, '▶ Take the 60-second tour'),
-      h('a', { class: 'btn btn-ghost-night', href: link('observe') }, 'Get your observer code')));
+      h('a', { class: 'btn btn-odd', href: link('observe') }, 'Get your observer code'),
+      copyCmd(CONNECT, 'cc-night cc-hero')),
+    h('button', { type: 'button', class: 'sky-tourlink mono', 'data-tour': '' }, '▶ Tour the sky: real stars, real light curves, 60 seconds'));
   const caption = h('div', { class: 'sky-caption', hidden: true });
   const pick = h('aside', { class: 'sky-pick', hidden: true });
   const hint = h('p', { class: 'sky-hint mono' }, 'drag to look around · pinch or ⌘-scroll to zoom · click a pink star');

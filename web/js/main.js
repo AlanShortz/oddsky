@@ -43,8 +43,7 @@ async function route() {
   try {
     let view, title;
     if (r.name === 'home') {
-      const [index, hunts, docket] = await Promise.all([loadIndex(), loadHunts(), loadDocket()]);
-      view = renderHome(index, hunts, docket); title = null;
+      view = renderHome(await loadIndex()); title = null;
     } else if (r.name === 'case') {
       const index = await loadIndex();
       let payload;
