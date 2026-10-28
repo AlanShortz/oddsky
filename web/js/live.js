@@ -24,15 +24,75 @@ export async function api(path, { method = 'GET', body, auth = true } = {}) {
   return data;
 }
 
-/** Keep the masthead chip in sync with who is signed in. */
+/** Who is signed in: the observer, or null. One /api/me per page load, shared by every caller. */
+let pending = null;
+export function whoami() {
+  if (!session.token) return Promise.resolve(null);
+  if (session.observer) return Promise.resolve(session.observer);
+  return pending ??= api('me').then((d) => (session.observer = d.observer))
+    .catch((e) => { if (e.status === 401) session.token = null; return null; })
+    .finally(() => { pending = null; });
+}
+
+/** Tell the page someone signed in or out: main.js re-renders the route (or goes to `go`). */
+function announce(go = null) { syncChip(); window.dispatchEvent(new CustomEvent('oddsky:session', { detail: { go } })); }
+
+/** A session handed back by GitHub/Google sign-in travels in the URL fragment (#session=…), on
+ *  whichever page the person started from. Keep it and tidy the URL. Called before every route. */
+export function takeSession() {
+  const frag = new URLSearchParams(location.hash.slice(1));
+  if (!frag.get('session')) return;
+  session.token = frag.get('session'); session.observer = null;
+  frag.delete('session');
+  history.replaceState(null, '', location.pathname + location.search + (String(frag) ? `#${frag}` : ''));
+}
+
+/** Keep the masthead chip in sync: "Sign in" (opens the sign-in sheet), or your code (your observatory). */
 export async function syncChip() {
   const a = document.querySelector('[data-route="observe"]');
   if (!a) return;
-  if (!session.token) { a.textContent = 'Observe'; a.classList.remove('is-in'); return; }
-  try {
-    const me = session.observer ?? (session.observer = (await api('me')).observer);
-    a.textContent = me.code; a.classList.add('is-in'); a.title = `Signed in as observer ${me.code}`;
-  } catch (e) { if (e.status === 401) { session.token = null; a.textContent = 'Observe'; } }
+  const out = () => { a.textContent = 'Sign in'; a.classList.remove('is-in'); a.title = 'Sign in or join: GitHub, Google or a passkey'; };
+  if (!session.token) return out();
+  const me = await whoami();
+  if (!me) return out();
+  a.textContent = me.code; a.classList.add('is-in'); a.title = `Signed in as observer ${me.code}: your observatory`;
+}
+
+// ---- the sign-in sheet: opens from the masthead on any page, no detour -----------------------------
+let providersOnce = null;
+const loadProviders = () => providersOnce ??= api('auth/providers', { auth: false }).then((d) => arr(d.providers)).catch(() => (providersOnce = null, []));
+
+/** Where to land after signing in from here: the page you were on, except the front page, which
+ *  sends you to your observatory. */
+const landing = () => (/^\/?(index)?$/.test(location.pathname) && !/^#\//.test(location.hash) ? '/observe' : location.pathname + location.search);
+
+export function setupSignInSheet() {
+  const chip = document.querySelector('[data-route="observe"]');
+  if (!chip || !('showPopover' in HTMLElement.prototype)) return; // no popover support: the link goes to /observe
+  const sheet = h('div', { class: 'sheet', id: 'signin-sheet', popover: 'auto', role: 'dialog', 'aria-label': 'Sign in or join Oddsky' });
+  document.body.append(sheet);
+  const fill = async () => {
+    const providers = await loadProviders();
+    const close = h('button', { type: 'button', class: 'sheet-x', 'aria-label': 'Close' }, '×');
+    close.addEventListener('click', () => sheet.hidePopover());
+    sheet.replaceChildren(close, signInPanel(providers, landing(), () => { sheet.hidePopover(); announce(landing() === '/observe' ? '/observe' : null); }, {
+      title: 'Sign in or join',
+      foot: h('p', { class: 'door-note small' }, 'New here? Same buttons. You choose your observer code next; it takes a minute. ',
+        h('a', { href: link('observe') }, 'What you get →')),
+    }));
+    sheet.querySelector('.pv-btn')?.focus();
+  };
+  chip.addEventListener('click', (e) => {
+    if (session.token || e.metaKey || e.ctrlKey || e.shiftKey || /^\/?observe/.test(location.pathname)) return;
+    e.preventDefault(); e.stopPropagation();
+    // hang the sheet from the button, its pointer at the button's middle
+    const r = chip.getBoundingClientRect(), right = Math.max(12, innerWidth - r.right - 8);
+    sheet.style.setProperty('--sheet-top', `${r.bottom + 12}px`);
+    sheet.style.setProperty('--sheet-right', `${right}px`);
+    sheet.style.setProperty('--sheet-arrow', `${innerWidth - right - (r.left + r.width / 2) - 6}px`);
+    sheet.replaceChildren(h('p', { class: 'loading' }, 'One moment…'));
+    sheet.showPopover(); fill();
+  }, true);
 }
 
 // ---- passkeys (WebAuthn JSON <-> ArrayBuffer) ------------------------------------------------------
@@ -85,12 +145,12 @@ const providerIcon = (id) => s('svg', { viewBox: '0 0 24 24', class: 'pv-icon', 
   id === 'github' ? s('path', { d: GH_ICON, fill: 'currentColor' }) : G_ICON.map(([f, d]) => s('path', { d, fill: f })));
 
 /** The sign-in panel: GitHub, Google, passkey. `next` is where to land afterwards. */
-function signInPanel(providers, next, rerender, { title = 'Sign in or join', lede } = {}) {
+function signInPanel(providers, next, rerender, { title = 'Sign in or join', lede, foot } = {}) {
   const status = h('p', { class: 'obs-status', role: 'status' });
   const pk = h('button', { type: 'button', class: 'pv-btn' }, s('svg', { viewBox: '0 0 24 24', class: 'pv-icon', 'aria-hidden': 'true' },
     s('path', { d: 'M8 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0 2c3 0 7 1.5 7 4.5V20H1v-2.5C1 14.5 5 13 8 13Zm10-4.2a3 3 0 1 1 1.8.1V12l1.2 1.2-1.2 1.2 1.2 1.2-1.8 1.8L17.6 16V8.8h.4Z', fill: 'currentColor' })), 'Sign in with a passkey');
   pk.addEventListener('click', async () => {
-    try { await login(); await syncChip(); rerender(); } catch (e) { status.textContent = e.name === 'NotAllowedError' ? 'No passkey chosen. New here? Use GitHub or Google, or make a passkey below.' : e.message; status.className = 'obs-status is-bad'; }
+    try { await login(); await syncChip(); rerender(); } catch (e) { status.textContent = e.name === 'NotAllowedError' ? 'No passkey chosen. New here? Continue with GitHub or Google.' : e.message; status.className = 'obs-status is-bad'; }
   });
   return h('section', { class: 'door signin' },
     h('p', { class: 'door-k mono' }, title),
@@ -99,7 +159,7 @@ function signInPanel(providers, next, rerender, { title = 'Sign in or join', led
       providers.map((p) => h('a', { class: 'pv-btn', href: `/api/oauth/${p.id}/start?next=${encodeURIComponent(next)}` }, providerIcon(p.id), `Continue with ${p.label}`)),
       pk),
     status,
-    providers.length ? h('p', { class: 'door-note small' }, `New with ${providers.map((p) => p.label).join(' or ')}? You choose your observer code next. Your email is never shown or shared.`) : null);
+    foot ?? (providers.length ? h('p', { class: 'door-note small' }, `New with ${providers.map((p) => p.label).join(' or ')}? You choose your observer code next. Your email is never shown or shared.`) : null));
 }
 
 function passkeyJoin(rerender) {
@@ -109,7 +169,7 @@ function passkeyJoin(rerender) {
   const go = h('button', { type: 'button', class: 'btn' }, 'Create my passkey');
   go.addEventListener('click', async () => {
     go.disabled = true; status.textContent = 'Waiting for your passkey…'; status.className = 'obs-status';
-    try { await register(code.value, name.value); await syncChip(); rerender(); }
+    try { await register(code.value, name.value); welcome.set(); await syncChip(); rerender(); }
     catch (e) { status.textContent = e.name === 'NotAllowedError' ? 'Passkey cancelled.' : e.message; status.className = 'obs-status is-bad'; go.disabled = false; }
   });
   return h('details', { class: 'door pk-join' }, h('summary', null, h('span', { class: 'door-k mono' }, 'Or join with only a passkey')),
@@ -132,6 +192,15 @@ function codeInput(status, value = '') {
   return code;
 }
 
+const NEXT_STEPS = () => h('section', { class: 'next-steps', 'aria-label': 'What happens next' },
+  h('p', { class: 'door-k mono' }, 'What happens next'),
+  h('ol', null,
+    h('li', null, h('strong', null, 'Sign in.'), ' GitHub, Google or a passkey. No password, no mailing list.'),
+    h('li', null, h('strong', null, 'Choose your code.'), ' Two to five letters, yours for good. It is how your work is credited.'),
+    h('li', null, h('strong', null, 'Connect your agent.'), ' One line in Claude Code; any agent that speaks MCP works.'),
+    h('li', null, h('strong', null, 'First light.'), ' Your agent opens a real case, and its first prediction goes on the Sky Ledger for the sky to grade.')),
+  h('p', { class: 'door-note small' }, 'About a minute to the first tool call. Free, and open source.'));
+
 const WHAT_YOU_GET = () => h('section', { class: 'front-sec' }, h('h2', { class: 'dk-h' }, 'What you get'),
   h('div', { class: 'agent-grid' },
     h('div', null, h('h3', null, 'The observatory, hosted'), h('p', null, 'Every Oddsky tool from any agent, nothing to install. In Claude Code it is one line, and you sign in with the same button.')),
@@ -142,8 +211,6 @@ const WHAT_YOU_GET = () => h('section', { class: 'front-sec' }, h('h2', { class:
 export function renderObserve(rerender) {
   const page = h('article', { class: 'page front observe' });
   const q = new URLSearchParams(location.search), frag = new URLSearchParams(location.hash.slice(1));
-  // a session handed back by GitHub/Google sign-in travels in the fragment; keep it and tidy the URL
-  if (frag.get('session')) { session.token = frag.get('session'); session.observer = null; history.replaceState(null, '', location.pathname + location.search); syncChip(); }
   const linkedNow = frag.get('linked'); if (linkedNow) history.replaceState(null, '', location.pathname + location.search);
   const err = q.get('signin_error');
   page.append(h('p', { class: 'loading' }, 'One moment…'));
@@ -157,10 +224,10 @@ export function renderObserve(rerender) {
     else {
       parts.push(
         h('header', { class: 'page-head' },
-          h('p', { class: 'kicker' }, 'Become an observer'),
+          h('p', { class: 'kicker' }, 'Sign in or join'),
           h('h1', null, 'Get your observer code.'),
-          h('p', { class: 'page-lede' }, 'AAVSO has given its observers codes for a century; the light curve in our first case is 7,115 measurements by HMB. Oddsky does the same for you and your agents. Sign in with GitHub, Google or a passkey, choose your code, and everything your agent finds is credited to it.')),
-        h('div', { class: 'obs-grid' }, signInPanel(providers, '/observe', rerender), passkeyJoin(rerender)),
+          h('p', { class: 'page-lede' }, 'AAVSO has given its observers codes for a century; the light curve in our first case is 7,115 measurements by HMB. Oddsky does the same for you and your agents: everything your agent finds is credited to your code.')),
+        h('div', { class: 'obs-grid' }, h('div', { class: 'door-col' }, signInPanel(providers, '/observe', rerender), passkeyJoin(rerender)), NEXT_STEPS()),
         WHAT_YOU_GET());
     }
     page.replaceChildren(...parts);
@@ -179,8 +246,11 @@ async function claimView(token, then, rerender) {
     go.disabled = true;
     try {
       const r = await api('claim', { method: 'POST', body: { token, code: code.value, name: name.value }, auth: false });
-      session.token = r.token; session.observer = r.observer; await syncChip();
-      history.replaceState(null, '', then || '/observe'); rerender();
+      session.token = r.token; session.observer = r.observer; welcome.set(); await syncChip();
+      // approving an agent? finish that. Otherwise first light, starting from the case you came from.
+      const fromCase = /^\/case\/(OS-\d+)/.exec(then ?? '');
+      if (fromCase) firstCase.set(fromCase[1]);
+      history.replaceState(null, '', then?.startsWith('/observe?authorize=') ? then : '/observe'); rerender();
     } catch (e) { status.textContent = e.message; status.className = 'obs-status is-bad'; go.disabled = false; }
   });
   return [
@@ -256,20 +326,23 @@ async function profile(page, rerender, providers = [], linkedNow = null) {
     h('li', null, s('svg', { viewBox: '0 0 24 24', class: 'pv-icon', 'aria-hidden': 'true' }, s('circle', { cx: 12, cy: 12, r: 5, fill: 'currentColor' })),
       h('strong', null, 'Passkeys'), h('span', { class: 'mono small' }, ` ${me.passkeys} `), addPk, pkStatus));
 
-  const connect = `claude mcp add --transport http oddsky ${MCP_URL}`;
-  const copy = h('button', { type: 'button', class: 'copy' }, 'Copy'); copy.addEventListener('click', () => copyText(connect, copy));
+  const fl = firstLight(me);
+  const fresh = welcome.take();
   page.replaceChildren(...[
     linkedNow ? h('p', { class: 'obs-alert is-ok' }, `Linked ${linkedNow}. You can sign in with it from now on.`) : null,
     h('header', { class: 'page-head obs-head' },
-      h('div', { class: 'obs-badge mono', 'aria-hidden': 'true' }, o.code),
-      h('div', null, h('p', { class: 'kicker' }, 'Observer'), h('h1', null, o.name || o.code),
+      h('div', { class: `obs-badge mono ${fresh ? 'is-new' : ''}`, 'aria-hidden': 'true' }, o.code),
+      h('div', null, h('p', { class: 'kicker' }, fresh ? `Welcome, observer ${o.code}` : 'Your observatory'), h('h1', null, o.name || o.code),
         h('p', { class: 'muted' }, `Observer since ${fmtDate(o.since)} · `, h('a', { href: link(`o/${o.code}`) }, 'your public page'), ' · ', out))),
+    fl?.el,
     h('div', { class: 'obs-grid' },
-      h('section', { class: 'door' },
+      h('section', { class: 'door', id: 'agents' },
         h('p', { class: 'door-k mono' }, 'Connect your agent'),
-        h('h2', null, 'One line, then sign in'),
-        h('div', { class: 'copy-row' }, h('code', { class: 'cmd' }, h('span', { class: 'cmd-dollar', 'aria-hidden': 'true' }, '$ '), connect), copy),
-        h('p', { class: 'door-note' }, 'Claude Code opens this page to sign you in the first time you use it (or type /mcp). Any client that speaks MCP sign-in works the same way: point it at ', h('code', null, MCP_URL), '.'),
+        // until an agent is connected, First light above carries the one-liner
+        arr(me.keys).length ? [h('h2', null, 'One line, then sign in'), copyLine(CONNECT_CMD),
+          h('p', { class: 'door-note' }, 'Claude Code opens this page to sign you in the first time you use it (or type /mcp). Any client that speaks MCP sign-in works the same way: point it at ', h('code', null, MCP_URL), '.')]
+          : [h('h2', null, 'Another agent?'),
+            h('p', { class: 'door-note' }, 'Any client that speaks MCP sign-in works the same way: point it at ', h('code', null, MCP_URL), ' and approve it here.')],
         h('details', { class: 'more-keys' }, h('summary', null, 'A client that can’t sign in? Use a key'),
           h('div', { class: 'mint-row' }, label, mint), keyOut)),
       h('section', { class: 'door' },
@@ -289,6 +362,113 @@ async function profile(page, rerender, providers = [], linkedNow = null) {
       arr(me.notebook_cases).length ? h('p', null, 'Cases in your notebook: ', me.notebook_cases.map((c, i) => [i ? ', ' : '', h('span', { class: 'mono' }, c)])) : null,
       arr(me.notebooks).length ? h('ul', { class: 'nb-list' }, me.notebooks.map((n) => h('li', null, h('a', { href: link(`n/${n.id}`) }, n.title), h('span', { class: 'muted mono small' }, ` ${n.case} · ${fmtDate(n.published_at)}`))))
         : h('p', { class: 'muted' }, 'Nothing published yet. Ask your agent to publish_notebook when it has something worth checking.'))].filter(Boolean));
+  if (fl && !fl.done) watch(page, fl);
+}
+
+// ---- first light: a new telescope's first image. A new observer's path to theirs ----------------------
+// Each step is read off /api/me, so it lights up when your agent actually does the thing. While a step
+// is open the page checks every few seconds (only while visible), so running the one-liner in a
+// terminal lights up the tab you left open.
+const CONNECT_CMD = `claude mcp add --transport http oddsky ${MCP_URL}`;
+const FIRST_CASE_DEFAULT = 'OS-0014';
+const stash = (key, store) => ({
+  set(v = '1') { try { window[store].setItem(key, v); } catch { /* private mode */ } },
+  get() { try { return window[store].getItem(key); } catch { return null; } },
+  take() { const v = this.get(); try { window[store].removeItem(key); } catch { /* private mode */ } return v; },
+});
+const welcome = stash('oddsky-welcome', 'sessionStorage');
+const firstCase = stash('oddsky-first-case', 'localStorage');
+
+function copyLine(text, { prompt = false } = {}) {
+  const b = h('button', { type: 'button', class: 'copy' }, 'Copy'); b.addEventListener('click', () => copyText(text, b));
+  return h('div', { class: `copy-row ${prompt ? 'is-prompt' : ''}` },
+    prompt ? h('p', { class: 'prompt-text' }, text) : h('code', { class: 'cmd' }, h('span', { class: 'cmd-dollar', 'aria-hidden': 'true' }, '$ '), text), b);
+}
+
+function progress(me) {
+  const keys = arr(me.keys), seals = arr(me.seals), nbs = arr(me.notebooks), cases = arr(me.notebook_cases);
+  return [
+    { k: 'code', t: 'Claim your code', did: `${me.observer.code} is yours` },
+    { k: 'agent', t: 'Connect your agent', did: keys.length ? `${keys.at(-1).label || 'An agent'} connected` : null },
+    { k: 'case', t: 'Open a case', did: cases.length ? `${cases[0]} in your notebook` : null },
+    { k: 'seal', t: 'Seal a prediction', did: seals.length ? `#${seals.at(-1).seq} on the Sky Ledger` : null },
+    { k: 'publish', t: 'Publish a notebook', did: nbs.length ? 'Published' : null },
+  ];
+}
+
+function stepBody(k, me) {
+  const id = arr(me.notebook_cases)[0] ?? firstCase.get() ?? FIRST_CASE_DEFAULT;
+  const watching = (what) => h('p', { class: 'fl-watch mono', role: 'status' }, h('i', { 'aria-hidden': 'true' }), what);
+  if (k === 'agent') return [
+    h('h3', null, 'Give your agent the instruments.'),
+    copyLine(CONNECT_CMD),
+    h('p', { class: 'door-note' }, 'Run it in a terminal, then start Claude Code. The first time it uses Oddsky it opens this site so you can approve it (or type ', h('code', null, '/mcp'), '). ',
+      h('a', { href: '#agents', onclick: (e) => { e.preventDefault(); document.getElementById('agents')?.scrollIntoView({ behavior: 'smooth' }); } }, 'Another agent?')),
+    watching('Watching for your agent…')];
+  if (k === 'case') return [
+    h('h3', null, 'Give it a real star.'),
+    copyLine(`Open Oddsky case ${id}. Run the Skeptic first, then try to break the leading explanation. Tag every claim honestly: observed, computed, inferred or speculated.`, { prompt: true }),
+    h('p', { class: 'door-note' }, 'Paste this into your agent. ', h('a', { href: link(`case/${id}`) }, `Read ${id} yourself`), ' or ', h('a', { href: link('cases') }, 'pick another case'), '.'),
+    watching('Watching for your first case…')];
+  if (k === 'seal') return [
+    h('h3', null, 'Let the sky grade it.'),
+    copyLine(`What would you bet on about ${id}? Seal one machine-checkable prediction on the Sky Ledger, with a probability you actually believe.`, { prompt: true }),
+    h('p', { class: 'door-note' }, 'Sealing is publishing: it goes on the public ', h('a', { href: link('ledger') }, 'Sky Ledger'), ' for good, and the archives grade it when its window closes. A 60% you believe beats a 95% you don’t.'),
+    watching('Watching the Sky Ledger…')];
+  if (k === 'publish') return [
+    h('h3', null, 'Show your work.'),
+    copyLine(`Publish your Oddsky notebook on ${id}, with a short summary that cites your claims and receipts.`, { prompt: true }),
+    h('p', { class: 'door-note' }, 'Publish when it is worth someone checking. “This turned out to be nothing” is a result too.'),
+    watching('Watching for your notebook…')];
+  return [];
+}
+
+function firstLight(me) {
+  const el = h('section', { class: 'first-light', 'aria-labelledby': 'fl-h' });
+  let sig = null;
+  const api_ = {
+    el, done: false,
+    /** Re-read progress; redraw only if something changed. */
+    update(next) {
+      const steps = progress(next);
+      const s2 = steps.map((x) => (x.did ? 1 : 0)).join('');
+      if (s2 === sig) return;
+      const lit = sig ? steps.findIndex((x, i) => x.did && sig[i] === '0') : -1;
+      sig = s2;
+      const now = steps.findIndex((x) => !x.did);
+      api_.done = now < 0;
+      const n = steps.filter((x) => x.did).length;
+      el.classList.toggle('is-done', api_.done);
+      el.replaceChildren(
+        h('header', { class: 'fl-head' },
+          h('div', null, h('p', { class: 'kicker' }, 'First light'),
+            h('h2', { id: 'fl-h' }, api_.done ? 'First light. The rest is observing.' : 'From sign-in to your first prediction.')),
+          h('p', { class: 'fl-count mono' }, `${n} of ${steps.length}`)),
+        h('ol', { class: 'fl-steps' }, steps.map((x, i) => h('li', { class: `${x.did ? 'is-did' : ''} ${i === now ? 'is-now' : ''} ${i === lit ? 'is-lit' : ''}`, 'aria-current': i === now ? 'step' : null },
+          h('span', { class: 'fl-star', 'aria-hidden': 'true' }),
+          h('span', { class: 'fl-t' }, x.t),
+          h('span', { class: 'fl-did mono' }, x.did ?? (i === now ? 'now' : ''))))),
+        api_.done ? h('p', { class: 'fl-end' }, 'Your agent is connected, your first prediction is with the sky, and your notebook is public. From here, every finding is credited to ', h('strong', { class: 'mono' }, me.observer.code), '.')
+          : h('div', { class: 'fl-body' }, stepBody(steps[now].k, next)));
+    },
+  };
+  api_.update(me);
+  return api_.done ? null : api_;
+}
+
+/** While First light is open, re-read /api/me every few seconds the page is visible, for 30 minutes. */
+function watch(page, fl) {
+  const until = Date.now() + 30 * 60e3;
+  let busy = false;
+  const tick = async () => {
+    if (!page.isConnected || fl.done || Date.now() > until) { stop(); return; }
+    if (document.visibilityState !== 'visible' || busy) return;
+    busy = true;
+    try { fl.update(await api('me')); } catch { /* next tick */ } finally { busy = false; }
+  };
+  const timer = setInterval(tick, 5000);
+  document.addEventListener('visibilitychange', tick);
+  function stop() { clearInterval(timer); document.removeEventListener('visibilitychange', tick); }
 }
 
 function keyBlock(key) {

@@ -498,7 +498,7 @@ def build(out: Path = DIST) -> None:
     routes.append(("/agents", "For agents — Oddsky", "Point any AI agent at Oddsky: a zero-install path through llms.txt and per-case dossiers, and an MCP server for the full observatory.",
                    og("home"), prerender_list("For agents", "Start at /llms.txt.", [("/llms.txt", "llms.txt", None)]), "/llms.txt"))
     routes.append(("/observe", "Get your observer code — Oddsky", "An observer code like AAVSO's, secured by a passkey. Then your agent gets the whole observatory in one line, and everything it finds is credited to you.",
-                   og("home"), prerender_list("Observe", "Get your observer code.", []), None))
+                   og("home"), prerender_list("Sign in or join", "Get your observer code.", []), None))
     routes.append(("/ledger", "The Sky Ledger — Oddsky", "Every prediction sealed on Oddsky and every grade the sky has given, in one hash-chained log anyone can re-verify in their browser.",
                    og("home"), prerender_list("The Sky Ledger", "An append-only, hash-chained log of sealed predictions.", [("/api/ledger?format=jsonl", "the ledger as JSONL", None)]), None))
     routes.append(("/app", "Oddsky", DEFAULT_DESC, og("home"), "", None))

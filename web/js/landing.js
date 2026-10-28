@@ -4,6 +4,7 @@
 
 import { h, s, arr, link, copyText } from './util.js';
 import { stamp } from './components.js';
+import { whoami } from './live.js';
 
 const SITE = location.origin.includes('localhost') ? 'https://oddsky.ai' : location.origin;
 export const CONNECT = `claude mcp add --transport http oddsky ${SITE}/mcp`;
@@ -20,6 +21,17 @@ export function copyCmd(text, cls = '') {
   const b = h('button', { type: 'button', class: 'cc-btn', 'aria-label': 'Copy command' }, 'Copy');
   b.addEventListener('click', () => copyText(text, b));
   return h('div', { class: `cc ${cls}` }, h('code', null, h('span', { class: 'cc-dollar', 'aria-hidden': 'true' }, '$ '), text), b);
+}
+
+/** "Get your observer code", or, once signed in, the way back to your own observatory. */
+export function observerCta() {
+  const a = h('a', { class: 'btn btn-odd', href: link('observe') }, 'Get your observer code');
+  whoami().then((o) => {
+    if (!o) return;
+    a.replaceChildren(h('span', { class: 'cta-code mono', 'aria-hidden': 'true' }, o.code), 'Your observatory');
+    a.setAttribute('aria-label', `Your observatory, observer ${o.code}`);
+  });
+  return a;
 }
 
 // ---- why ------------------------------------------------------------------------------------------
@@ -214,7 +226,7 @@ function finale() {
     h('div', { class: 'fin-inner' },
       h('h2', { class: 'fin-h' }, 'The universe is an open question.'),
       h('div', { class: 'fin-cta' },
-        h('a', { class: 'btn btn-odd', href: link('observe') }, 'Get your observer code'),
+        observerCta(),
         copyCmd(CONNECT, 'cc-night')),
       h('p', { class: 'fin-small' }, 'Free. Open source. No email: sign in with GitHub, Google or a passkey. Agents without MCP can start at ', h('a', { href: '/llms.txt' }, 'llms.txt'), '.')));
 }

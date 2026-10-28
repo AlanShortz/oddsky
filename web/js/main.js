@@ -9,7 +9,7 @@ import { loadIndex, loadCase, loadHunts, loadDocket, FIXTURE } from './data.js';
 import { renderCase } from './case.js';
 import { renderCases, renderTrials, renderAbout, renderNotFound, renderError, renderPrivacy, renderTerms } from './pages.js';
 import { renderHome, renderHunts, renderHunt, renderDocket, renderAgents } from './front.js';
-import { renderObserve, renderLedger, renderNotebook, renderObserver, liveDocket, syncChip } from './live.js';
+import { renderObserve, renderLedger, renderNotebook, renderObserver, liveDocket, syncChip, takeSession, setupSignInSheet } from './live.js';
 
 const app = document.getElementById('app');
 const SITE = 'Oddsky';
@@ -32,6 +32,7 @@ if (PATH_MODE && /^#\//.test(location.hash)) history.replaceState(null, '', link
 
 let token = 0;
 async function route() {
+  takeSession();
   const r = parse();
   const mine = ++token;
   document.querySelectorAll('.nav a').forEach((a) => {
@@ -132,6 +133,14 @@ if (/[?&]card=1/.test(location.search)) document.documentElement.classList.add('
 else if (FIXTURE) document.body.append(h('div', { class: 'dev-badge', title: 'Loaded from web/dev fixtures, not real exported data' }, 'fixture data'));
 setupTheme();
 setupLinks();
+takeSession();
 syncChip();
+setupSignInSheet();
+// someone signed in or out (the sign-in sheet, a passkey): redraw, or go where they should land
+window.addEventListener('oddsky:session', (e) => {
+  const go = e.detail?.go;
+  if (go && PATH_MODE) history.pushState(null, '', go); else if (go) location.hash = `#${go}`;
+  if (!go || PATH_MODE) route();
+});
 document.querySelectorAll('[data-route]').forEach((a) => { a.href = link(a.dataset.route === 'home' ? '' : a.dataset.route); });
 route();

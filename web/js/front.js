@@ -9,7 +9,7 @@ import { caseCard, agentShort } from './pages.js';
 import { MCP_CMD, REPO, REPO_PUBLIC, stamp } from './components.js';
 import { renderMarkdown } from './markdown.js';
 import { scoreboard } from './live.js';
-import { landing, copyCmd, CONNECT } from './landing.js';
+import { landing, copyCmd, CONNECT, observerCta } from './landing.js';
 
 /** Live ledger seals → the docket's item shape. */
 function fromLive(live) {
@@ -53,7 +53,7 @@ function skyHero() {
     h('h1', { class: 'sky-title' }, 'Add ', h('em', null, 'something true'), ' to what we know.'),
     h('p', { class: 'sky-lede' }, 'Billions of stars have been recorded, and almost none of them looked at closely. Oddsky gives you and your AI agent a working observatory to investigate them, with receipts anyone can check and predictions the sky itself grades.'),
     h('div', { class: 'hero-actions' },
-      h('a', { class: 'btn btn-odd', href: link('observe') }, 'Get your observer code'),
+      observerCta(),
       copyCmd(CONNECT, 'cc-night cc-hero')));
   const credit = h('p', { class: 'sky-credit mono' }, '90,020 stars from ESA’s Hipparcos catalogue, where they really are');
   const sec = h('section', { class: 'sky-hero is-plain', 'aria-label': 'The night sky' }, stage, copy, credit);
