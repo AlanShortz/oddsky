@@ -1,0 +1,16 @@
+# Cloud Build context for infra/hosted/Dockerfile: the package and the casebook only.
+.git
+.venv
+.context
+.vercel
+dist
+node_modules
+trials
+hunts
+scripts
+tests
+docs
+web
+site
+**/__pycache__
+**/*.pyc

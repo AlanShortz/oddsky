@@ -4,6 +4,36 @@ A static case viewer. No build step, no dependencies: `index.html`, ES modules i
 stylesheet in `css/`, and JSON in `data/`. It works from any static host at any sub-path
 (GitHub Pages included) because every URL is relative and routing uses the hash.
 
+## Design
+
+Two registers. **The night** is the home page: `js/sky.js`, a WebGL planetarium of 90,020 Hipparcos stars
+(`data/sky/stars.bin`, packed by `site/sky_stars.py`) under a procedural Milky Way laid out in real galactic
+coordinates, with every case at its true position, its brightness played back from its own light curve
+(`data/sky/cases.json`, built by `site/build.py`), a guided tour, and a time scrubber. `/?star=OS-0014` flies to a
+case. A plain scroll always scrolls the page; pinch, ⌘/Ctrl+scroll or the +/− buttons zoom the sky, and on phones
+vertical swipes scroll while horizontal ones turn the sky. **The journal** is everything else: case files, hunts, the docket, the ledger. Calm, dense, precise.
+
+- The mark is a finding chart: two tick marks pointing at one star in a field, the way variable-star papers mark
+  their target. On the home page the ticks slide in, acquiring it.
+- Cobalt (`--accent`) is the instrument. Pink (`--odd`, `--night-odd`) is only ever the anomaly.
+- Type: Archivo (display, expanded widths), Source Serif 4 (reading), IBM Plex Mono (data). Self-hosted in `fonts/`.
+- Red-light mode (the masthead toggle) keeps night vision, sky included.
+
+## The public site (oddsky.ai)
+
+`site/build.py` turns this folder into the public site in `dist/` (standard library only; Vercel runs it, see
+`vercel.json`). It adds what a hash-routed viewer can't do: a real URL per page (`/case/OS-0014`) with its own
+title, description and link preview (`og/<ID>.png`), a text prerender for crawlers and agents that don't run
+JavaScript, `/hunts` and `/hunt/<ID>` (from `site/hunts.json` and each hunt's README), `/docket` plus
+`docket.ics` (every sealed prediction, subscribable as a calendar), and the agent door: `/llms.txt`, and a
+Markdown dossier per case (`/case/<ID>.md`).
+
+```sh
+python3 site/build.py --serve        # build and preview with clean URLs on :8765
+heavy bash site/cards.sh             # (with the preview running) regenerate og/*.png, then rebuild
+vercel deploy --scope tango-98e9ccfa # protected preview; see site/DEPLOY.md before --prod
+```
+
 ## Regenerate the data
 
 ```sh

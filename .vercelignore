@@ -1,0 +1,19 @@
+# The site build reads only web/, site/ and hunts/*/README.md.
+/cases
+/trials
+/scripts
+/tests
+/src
+/infra
+/docs
+/dist
+/.context
+/hunts/**/*.csv
+/hunts/**/*.json
+/hunts/**/*.adql
+/hunts/**/*.sql
+/hunts/*/vet
+/hunts/*/runs
+/hunts/*/epoch
+/hunts/*/parts
+/web/dev
