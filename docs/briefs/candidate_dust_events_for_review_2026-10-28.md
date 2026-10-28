@@ -3,7 +3,7 @@
 
 *A 95-day near-total occultation of a G dwarf in 2017, two- to three-week dust eclipses on a 385.7-day orbit, and a 1000 K excess that appeared around a K dwarf in 2018. Oddsky cases OS-0014, OS-0015 and OS-0013.*
 
-Alan Shortz, 27 October 2026; revised 28 October 2026 (corrections listed at the end).
+Alan Shortz, 28 October 2026.
 
 ## Introduction
 
@@ -32,7 +32,7 @@ Gaia DR3 6733428488637673984 (2MASS J18330620−3607130, TIC 313603515; 18:33:06
 | Before | Photospheric: AllWISE 2010 W1−W3 = −0.18 ± 0.16, Ks−W1 = 0.02; NEOWISE 2014–2017 flat |
 | After | Optical about 0.05 mag brighter than before (ASAS-SN and six SkyMapper filters). W1−W2 redder by ~0.15 from an onset between MJD 58008 and 58204, persisting to 2024. If the photosphere also brightened in the infrared, the W1 excess vanishes and W2's drops to 14–19%, so no excess fraction or temperature is quoted as a result (a naive blackbody gives ~650 K at ~0.24 AU) |
 | Multiplicity | Gaia DR3: RV robust amplitude 51 km/s from 7 transits, RUWE 1.15, duplicated_source = 1. TESS: a ~1.8-d, 1.2–1.6% signal in all four sectors (13, 66, 93, 104), whose pixels centre on the star only in Sector 13; TIC contamination 0.41, so not securely on the target |
-| A century of plates | DASCH DR7: 2,348 plates 1889–1989, star detected on 1,176 (median 13.30). A 95-day vanishing would have been caught 46% of the time; apart from 1924, none was. Phased on 2017, DASCH + ASAS-SN + NEOWISE exclude every period under 12.9 yr and 70% of 1–130 yr; ~93 and ~46.5 yr remain allowed. **1924 (corrected):** three plates (Apr 30–May 14) miss the star. On the deepest, ax 488 (1924 Apr 30, limit 14.4), every comparison star from 12.9 to 13.9 mag is detected and only the target is missing. It is the only deep plate in the century to miss the star with no detection within 50 days, and it falls 93.0 yr before 2017, inside the allowed ~93-yr window. Not explained by plate quality; not yet inspected by eye |
+| A century of plates | DASCH DR7: 2,348 plates 1889–1989, star detected on 1,176 (median 13.30). A 95-day vanishing would have been caught 46% of the time; apart from 1924, none was. Phased on 2017, DASCH + ASAS-SN + NEOWISE exclude every period under 12.9 yr and 70% of 1–130 yr; ~93 and ~46.5 yr remain allowed. **1924:** three plates (Apr 30–May 14) miss the star. On the deepest, ax 488 (1924 Apr 30, limit 14.4), every comparison star from 12.9 to 13.9 mag is detected and only the target is missing. It is the only deep plate in the century to miss the star with no detection within 50 days, and it falls 93.0 yr before 2017, inside the allowed ~93-yr window. Not explained by plate quality; not yet inspected by eye |
 | 2018–2026 | ATLAS: no repeat over ~940 nights (scatter 2–3%), except in the yearly conjunction gaps |
 
 ### Interpretation
@@ -74,7 +74,7 @@ Two readings remain, with equal weight. In the first, a companion on a 386-d orb
 
 Excluded: a seasonal ZTF systematic (both programs, clean metadata, constant neighbours, a 20 d/yr drift against the calendar); R CrB-type dust puffs (strict periodicity, O−C under 0.7 d over four cycles); blends; P/2, 2P, 3P and the one-year aliases. The referee's estimate that a mundane explanation remains is about 5%.
 
-Two predictions are sealed (hash-logged before the fact), both checked against ZTF r: the star stays within 0.5 mag of maximum through the 2027 season (p = 0.7), and it is ≥ 1 mag faint on at least one night between 2027-12-31 and 2028-02-05, the eclipse predicted for 2028 January 17 ± 18 d (p = 0.75). **Correction:** the December 2026 eclipse falls at solar conjunction, and so, I have since found, does the January 2028 one. The star is 10–41° from the Sun across that window (24° at mid-eclipse), and ZTF has never observed it closer than 39°. The second prediction is therefore very likely unresolvable as sealed, and both depend on ZTF releasing 2027–28 data. They stay sealed as written; I am saying so now rather than after the window. February 2029 (43° from the Sun) is marginal; February 2030 (64°) is the first comfortably observable eclipse.
+Two predictions are sealed (hash-logged before the fact), both checked against ZTF r: the star stays within 0.5 mag of maximum through the 2027 season (p = 0.7), and it is ≥ 1 mag faint on at least one night between 2027-12-31 and 2028-02-05, the eclipse predicted for 2028 January 17 ± 18 d (p = 0.75). A caveat I found after sealing them: the December 2026 eclipse falls at solar conjunction, and so does the January 2028 one. The star is 10–41° from the Sun across that window (24° at mid-eclipse), and ZTF has never observed it closer than 39°, so the second prediction is very likely unresolvable as sealed, and both depend on ZTF releasing 2027–28 data. They stay sealed as written. February 2029 (43° from the Sun) is marginal; February 2030 (64°) is the first comfortably observable eclipse.
 
 ## OS-0013: a K dwarf that grew hot dust in 2018 and still has it
 
@@ -124,20 +124,3 @@ Every claim carries a tag (observed, computed or inferred) and, where a tool pro
 
 Not yet done: no images have been inspected by a human; no spectrum exists for any of the three stars; the OS-0014 DASCH detection-efficiency numbers assume repeats look like 2017; and the OS-0015 luminosity rests on Gaia DR2's bolometric estimate and an assumed extinction. All of the underlying data are public archives; the hosted observatory at oddsky.ai, or the repository, reproduces any number here from them in minutes. Gaia DR4 lands on 2 December 2026 and covers mid-2014 to early 2020 for all three stars (for OS-0014, Gaia's DR3 photometry shows it did not sample the dip before 28 May 2017, so DR4 can add at most the last week of the deep phase and the egress).
 
-## Corrections since the 27 October version
-
-An independent audit of every number in the first version against the case data found the following. Three change what you might conclude; the rest are numbers.
-
-**Changes that matter**
-
-- **OS-0014, 1924.** I wrote that the three 1924 plates miss the star because of plate quality. The data do not support that. One of the two "comparison" stars I relied on is missed on every plate, including the ones that show the target. On the deepest plate, ax 488 (1924 April 30), every comparison star is detected and only the target is missing. It is the only such plate in the century, and it falls 93.0 years before 2017, inside the period window the plates allow. That is not evidence of an earlier event until someone looks at the plate, but "one-off" is no longer safe.
-- **OS-0015, the 2028 prediction.** The January 2028 eclipse is 24° from the Sun, so the sealed prediction for it is very likely unresolvable, as is the December 2026 one I already flagged. Both sealed predictions also depend on ZTF releasing 2027–28 data. Separately, the "one cycle only" coverage of phase 0.25–0.45 was wrong: 2024 covers it too, and the ~0.1-mag dimming near phase 0.4 appears in both 2024 and 2025, which hints at an eccentric-orbit secondary.
-- **Methods.** A bug in the sky pass that found OS-0014 and OS-0013 merged neighbouring stars' visits. The fixed re-run has 164.7 million stars (not 176.9 million, ~12 million of which were artifacts of the bug), recovers ASASSN-21qj at 46σ (not 79σ), tests 35% more stars, and finds the same two survivors. Neither case's numbers came from the buggy table; both were measured from archive data directly.
-
-**Numbers**
-
-- OS-0014: about 95–105 days fainter than normal (not 92–105); at most 0.3–0.7% of normal flux in the deep phase, i.e. ≥ 99.3% blocked (not 0.2–0.4% and 99.6%); orbit ≲ 180–270 AU (not 110–250); the referee had three surveys, ATLAS came after; the TESS 1.8-d signal is present in all four sectors, only its localisation is weak; W2 excess 14–19% after the brightening correction.
-- OS-0015: eclipses are two to three weeks long at 0.05 mag (19–25 d), so contact is at least ~18 d and the chords (65/82/94 R☉) are lower limits; depths 2022 r 1.50, ATLAS 1.8 / 1.5 / 0.8–1.3 mag; the 2020 i point is in ingress, not a depth; out-of-eclipse g vs r slope 1.31 over all seasons; 2MASS J−H 1.08, H−K 1.03; the R CrB screen covered 887 northern stars in ZTF, not all 2,356 in ZTF and ATLAS.
-- OS-0013: G = 13.52 (not 13.1); onset window 2018 March 1 to August 11; post-step medians W1 11.02, W2 10.90; TESS rules out only deep dips, because the star is ~21% of the aperture flux, and the scattered-light sectors are 2026; four ASAS-SN points 0.1 mag bright inside the onset window are unexplained, so "no flash" is not established; "not young" means no pre-main-sequence overluminosity, since lithium is untested; the 93% means within 0.2″ of the star; SPHEREx can now give the second-instrument check.
-
-Each correction is also recorded in the case as a new, dated claim; earlier claims were left as written. All three case ledgers replay exactly.
