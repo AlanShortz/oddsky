@@ -1,0 +1,88 @@
+
+# Two stars for the advisor
+
+*Oddsky cases OS-0014 and OS-0015: what we measured, what we think, and what only you can judge. Alan Shortz, 27 October 2026. Private, for scientific review.*
+
+## Why you are getting this
+
+Oddsky is the open-source observatory I have been building: an AI agent is pointed at public archives (Gaia, NEOWISE, ASAS-SN, SkyMapper, ZTF, ATLAS, TESS, a century of Harvard plates), every number it produces is logged and replayable, a deterministic "Skeptic" checks the usual impostors (blends, saturation, momentum dumps, aliases), and a second, adversarial agent is told to break every result before anyone is allowed to call it a finding. Two systematic searches this week each left one object standing. Both are, as far as SIMBAD, VSX, the alert streams and the literature show, unreported.
+
+I am not an astronomer. What follows is organised so you can stop at any level: the one-line claim, the figure, the measurements, our interpretation, and then the questions where your judgement matters more than any more data pulling. Everything cited here is in the public repository, case directories `cases/OS-0014` and `cases/OS-0015`, including the two referee reports, which are blunter than this brief.
+
+## OS-0014: a G dwarf that vanished for three months
+
+**One line.** Gaia DR3 6733428488637673984 (2MASS J18330620−3607130, TIC 313603515; 18:33:06.21 −36:07:13.05; G = 12.46, BP−RP = 0.80, 420 pc, M_G ≈ 4.3, T_eff ≈ 6000 K, an F9–G0 dwarf) was occulted in spring 2017. It was fainter than normal for 92–105 days, more than 3 mag fainter for at least 72 days, and at least 99.6% blocked at mid-event, nearly grey across four optical filters. Four instruments saw it independently. Three to nine months later its W1−W2 colour reddened by about 0.15 mag and has stayed so through 2024.
+
+### What is measured
+
+| | |
+|---|---|
+| Onset | ASAS-SN V: normal (12.70, rms 0.015) through MJD 57828.4; −11% on 57831.4; V = 15.46 (−2.76 mag) on 57837.4 |
+| Infrared ingress | NEOWISE single exposures, MJD 57839.9–57840.9, 14 exposures over one day: W1 from 1.15 to 3.65 mag below baseline, W2 from 0.41 to 2.03. The occulter is more transparent at 4.6 µm. Field stars in the same frames steady; star lands on different detector positions in successive scans |
+| Deep phase | ASAS-SN: 17 non-detections, MJD 57839.3–57911.4 (each V > 15.7; stacked forced flux ΔV > 4.1 mag at 3σ). ATLAS forced photometry: 0.2–0.4% of normal flux in c and o from MJD 57856 to 57911 |
+| Depth | SkyMapper DR4, 2017-05-25 (MJD 57898.6), at the star's own Gaia position (0.17″): g 18.58, r 18.30, i 18.31, v 19.1–19.7, i.e. 5.4–6.0 mag down, nearly grey |
+| Egress | ATLAS: 22% of normal flux on MJD 57922, 80% on 57926, ~95% by 57930. ASAS-SN: 14.64 on 57923.3, normal (12.68) by 57933.3 |
+| Controls | 8 ASAS-SN comparison stars within 0.14 mag on the same nights; 18 NEOWISE field stars within 150″ steady to 0.01–0.02 mag; SkyMapper field zero points within 0.006 mag; WISE centroid shift 0.011 ± 0.011″ (any contaminant must be within 0.3″); no Gaia alert |
+| Before | Photospheric: AllWISE 2010 W1−W3 = −0.18 ± 0.16, Ks−W1 = 0.02; NEOWISE 2014–2017 flat |
+| After | Optical about 0.05 mag brighter than before (ASAS-SN and six SkyMapper filters). W1−W2 redder by ~0.15 from an onset between MJD 58008 and 58204, persisting to 2024. If the photosphere also brightened in the IR, the W1 excess vanishes and W2's drops to 14–16%, so we do not quote an excess fraction or a temperature as a result (a naive blackbody gives ~650 K at ~0.24 AU) |
+| Multiplicity | Gaia DR3: RV robust amplitude 51 km/s from 7 transits, RUWE 1.15, duplicated_source = 1. TESS: a ~1.8-d, 1.2–1.6% signal centred on the star in Sector 13 (2019), weak in Sectors 66/93/104; TIC contamination 0.41, so not securely on the target |
+| A century of plates | DASCH DR7: 2,348 plates 1889–1989, star detected on 1,176 (median 13.30). A 95-day vanishing would have been caught 46% of the time; none was. Phased on 2017, DASCH + ASAS-SN + NEOWISE exclude every period under 12.9 yr and 70% of 1–130 yr; ~93 and ~46.5 yr remain allowed. Three 1924 plates miss the star, but two brighter comparison stars 4–5′ away are missing on the same plates: plate quality, not an event |
+| 2018–2026 | ATLAS: no repeat over ~940 nights (scatter 2–3%), except in the yearly conjunction gaps |
+
+### What we think, and do not
+
+- **Geometry.** Blockage rose from 11% to 92% in six days, about 0.7 stellar diameters for a sharp edge, so the occulter moves at ≳ 2 km/s and is ≳ 0.1 AU across. Smaller than its orbit puts a ≳ 1.4 AU; a circular orbit at that speed puts a ≲ 110–250 AU. A soft, dusty edge (which the chromatic infrared ingress suggests) means a higher speed and a closer orbit. None of this is a measurement of the orbit; it is what the sharp-edge model allows.
+- **Leading idea.** An extended, mostly opaque dusty structure, such as a disk around an unseen companion, crossing the star: the ε Aur / EE Cep / Gaia17bpp configuration on a field G dwarf. A debris cloud from a collision is not excluded. The later W1−W2 reddening may be the same material seen afterwards; we claim no causal link.
+- **Ruled out by the referee.** Instrument artifacts (four surveys, steady comparison stars, smooth fade across detector positions); blends (centroid on the star, nothing bright enough within 15″); an eclipse in a 1.8-day binary (cannot last 95 days); a Be star; a background AGN. Referee's confidence that both phenomena are astrophysical and belong to this system: ≥ 97%.
+
+![Spring 2017 in four instruments, and the NEOWISE decade](figures/vanishing-2017.png)
+
+### Questions for you
+
+1. Is the interpretation sound, and is it worth a spectrum: lithium for age, Hα for activity or accretion, Na D for gas, and two or three radial-velocity epochs for the binary question?
+2. Is the Gaia seven-transit RV amplitude meaningful given duplicated_source, or is a processing cause plausible?
+3. Mid-infrared or SPHEREx spectroscopy of the post-event colour change: worth proposing? Gaia DR4 (2 December) will cover 2017 directly in epoch photometry and RVs.
+4. The 1924 DASCH plates (ax 488, 528, 535): would you, or someone you know who reads plate defects, look at them?
+5. Is this an RNAAS note now, or does it wait for the spectrum? A draft is in `docs/papers/RNAAS_OS-0014_draft.md`.
+
+## OS-0015: a dust-shrouded star that goes dark for a week every 385.7 days
+
+**One line.** Gaia DR3 4152421080966024704 (2MASS J18205507−1340452; 18:20:55.07 −13:40:45.1; G = 14.76, BP−RP = 2.01, 2.4 kpc, RUWE 1.81; l = 17.3°, b = +0.4°, 4″ from IRAS 18180−1342) is steady to 0.1–0.2 mag and then goes dark by 1.5–2.2 mag for about two weeks, four years running, on a clock good to a day. The eclipse is deeper in blue, has no secondary, and changes depth by a few tenths of a magnitude from orbit to orbit. ZTF found it; ATLAS, with different telescopes and a different pipeline, shows the same eclipses on the same ephemeris, including the 2023 one that fell in a ZTF gap.
+
+![ZTF and ATLAS, 2015-2026, with the ephemeris; folds at 385.7 d](figures/eclipses.png)
+
+### What is measured
+
+| | |
+|---|---|
+| Ephemeris | Four full-depth ZTF eclipses, mid-times MJD 58701.6, 59088.6, 59473.9, 59858.8 (Aug 2019, Aug 2020, Sep 2021, Oct 2022): P = 385.7 ± 0.5 d, T0 = MJD 58702.2, O−C under 0.7 d. The events advance 20 days a year through the observing season, which no seasonal systematic can do |
+| Shape | FWHM 7.9 d, 14 d wide at 0.05 mag, about 18 d first to last contact. Ingress 9 d, egress complete within 14 d. In-eclipse nights carry 5–7 ZTF exposures agreeing to 0.01–0.02 mag |
+| Depth | r: 1.64, 1.57, 1.5–1.8, 1.54 mag; g: 2.19, ≥ 2.08, 1.84 mag; i: 0.59 (2020). The 2022 eclipse is flat-bottomed and 0.35 mag shallower in g. d(g)/d(r) = 1.30 on 253 same-day pairs (ISM dust ≈ 1.4, grey = 1.0) |
+| Independent check | ATLAS 2015–2026 (613 good exposures in a crowded field): cycle 0 at 1.9 mag in cyan at mid-eclipse; cycle 2 at 1.6 mag in orange one day after mid-eclipse, recovered by +8 d; cycle 3 sampled on eight nights from −4 to +7 d; cycle 4 (2023, unseen by ZTF) caught in ingress at −2 and −1 d, ≥ 1.4 mag deep, on time. No ATLAS data within 25 d of the 2024 and 2025 eclipses (conjunction season) |
+| Aliases | P/2, 365.25 d and 182.6 d leave the odd cycles flat; 2P and 3P put full-depth events at phases 0.51 and 0.67. Nothing but 385.7 d works |
+| Secondary | None deeper than 0.09 (r) / 0.14 (g) mag within ±8 d of phase 0.5. Phases 0.25–0.45 are covered in one cycle only, where a slow 0.13 (r) / 0.20 (g) mag, dust-coloured dimming occurs over MJD 60750–60790: an eccentric-orbit secondary away from phase 0.5 is untested |
+| Baseline | Not flat: out-of-eclipse nightly medians span 0.17 (r) and 0.22 (g) mag, season medians drift 0.04–0.09 mag, g and r move together with slope 1.23. Gaia DR2 saw a 0.22 mag range in 2014–2016 and flagged it as an LPV candidate (Mowlavi+2018); ATLAS Heinze+2018 lists it as a "dubious" variable with a 407-d, 0.15-mag long-period fit. Neither reports eclipses |
+| Artifacts and blends | 50 in-eclipse epochs with clean flags; airmass, limiting magnitude, chi, sharp and zero-point rms match the quiet nights; both ZTF programs record eclipses; centroid moves 0.06″; neighbours at 8.2″, 17″ and 17.9″ constant to 0.01–0.02 mag on every eclipse night. The only Gaia source inside the ZTF PSF is a G = 18.5 star 3.0″ away with 3.3% of the flux (K = 16.1 against 9.9 for the target). UKIDSS shows two K = 13.3–13.6 sources at 4.0–4.4″ with no Gaia counterpart (embedded) |
+| The star | 2MASS J−H 1.09, H−K 1.02; WISE W1–W4 = 7.95, 7.17, 4.21, 2.90 (K−W1 1.6, W2−W3 3.0): a Class II SED (SPICY candidate YSO, Kuhn+2021; Robitaille+2008 red source; Tisserand+2020 WISE R CrB candidate). Dereddened at A_V = 3–4, M_G = +0.4 to −0.5; Gaia DR2 M_bol = 1.5 ± 0.7; so L ~ 20–100 L☉ and R ≲ 10 R☉. RUWE 1.81 (astrometric excess noise 0.29 mas, 19.6σ) is what a 0.4 mas photocentre wobble on a 1 AU orbit at 2.4 kpc would do |
+| NEOWISE | W1 and W2 are 0.09–0.12 mag brighter within ±60 d of eclipse phase than at phases 0.55–0.75, in both even and odd cycles; W1 also fades secularly (0.024 mag/yr). Two visits a year, no visit inside an eclipse: a lead, not a result |
+
+### What we think, and do not
+
+- **Geometry.** For M_tot = 1, 2, 3 M☉: a = 1.04, 1.31, 1.50 AU and v_rel = 29, 37, 42 km/s, so 18 d of contact is a chord of 67, 85, 97 R☉, and that chord is R_star + R_occulter. The eclipse is translucent and chromatic (τ_r ~ 1.5), so the dust covers the whole stellar disk: R_occulter ≳ R_star. That requires a small primary, and the luminosity says it is one. The depth changing by 0.2–0.4 mag between orbits means a clumpy, evolving dust structure, not a rigid opaque disk.
+- **Two live readings, equal weight.** (a) A companion on a 386-d orbit wrapped in a translucent dust structure: EE Cep / ε Aur at a one-year period, on a star that may be a low-luminosity giant. (b) A young binary (Class II SED, star-forming region) whose warped or clumpy inner disk occults the primary once per orbit: a long-period relative of KH 15D. Our first draft said "red giant eclipsed by something 80 solar radii wide"; the referee retracted both halves, and so have we.
+- **Ruled out.** A seasonal ZTF systematic (both programs, clean metadata, constant neighbours, 20 d/yr drift); R CrB-type dust puffs (strict periodicity, O−C under 0.7 d over four cycles); blends; P/2, 2P, 3P and the one-year aliases. Referee's estimate that a mundane explanation remains: about 5%.
+- **Predictions sealed** (hash-logged before the fact): the star stays within 0.5 mag of maximum through the 2027 season (p = 0.7); it is ≥ 1 mag faint on at least one night between 2027-12-30 and 2028-02-04, the eclipse predicted for 2028 January 17 ± 18 d (p = 0.75). The December 2026 eclipse falls at solar conjunction.
+
+### Questions for you
+
+1. Which frame is right, or is there a third: evolved binary with a circumsecondary disk, or pre-main-sequence binary with a warped circumbinary disk? The Class II SED, the location (IRAS 18180−1342, intermediate-mass star-forming region, Lundquist+2014/2015), and the W2−W3 = 3.0 are the inputs; W3/W4 may be partly nebular.
+2. Is a 20–100 L☉ star with K−W1 = 1.6 and this much mid-IR excess consistent with a disk around the primary, or does the dust have to belong to the companion to produce a two-week eclipse once a year?
+3. What follow-up settles it: an out-of-eclipse spectrum (giant vs pre-main-sequence; lithium, Hα), near-IR photometry through an eclipse (grain size from the colour of the extinction), or the NEOWISE phase lead?
+4. The 2028 January eclipse is the next observable one. Who should be told, and when?
+5. Tisserand and Karambelkar built the candidate list this came from. We intend to tell them before anything is submitted; co-authorship is your call.
+
+## How these were produced and checked
+
+- **Searches.** OS-0014 came from a full-sky pass over 146.6 billion NEOWISE detections of 176.9 million stars, asking which Sun-like stars suddenly grew warm dust (the ASASSN-21qj signature; it recovered ASASSN-21qj blind at 79σ). OS-0015 came from re-screening the 2,356 WISE-selected R CrB candidates of Tisserand et al. (2020) in 2018–2026 ZTF and ATLAS data for their first recorded declines; it is not an R CrB star, and no new R CrB star has been confirmed yet (the southern half is still queued on ATLAS).
+- **Checks.** Every claim carries a tag (observed / computed / inferred) and the ids of the logged tool calls that produced it; `oddsky replay` re-runs the whole ledger and fails if any number changed. The Skeptic runs first. Then a separate referee agent, with the mandate in `docs/REFEREE.md`, attacks aliases, artifacts, blends, "no X" claims, physical self-consistency, novelty and untapped data, and writes a report that the investigators must answer claim by claim. Both reports are in the case directories; both changed the cases materially (OS-0015 lost its "red giant" and gained a fourth eclipse; OS-0014's referee found it was stronger than the first draft said).
+- **What has not been done.** No images have been inspected by a human; no spectrum exists for either star; the OS-0014 DASCH detection-efficiency numbers assume repeats look like 2017; and the OS-0015 luminosity rests on Gaia DR2's bolometric estimate and an assumed extinction. Everything is public; the hosted observatory at oddsky.ai (or a local install from the repository) reproduces any number here from the archives in minutes. Gaia DR4 lands on 2 December 2026 and covers both stars' 2014–2020 epochs.
