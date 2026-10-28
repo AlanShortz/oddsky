@@ -1,6 +1,6 @@
 // Shared visual devices: epistemic stamps, the discovery ladder, status pills, the agent block.
 
-import { h, hashCode, copyText, link, PATH_MODE } from './util.js';
+import { h, hashCode, copyText, link } from './util.js';
 
 export const TAGS = {
   observed: 'read straight off the data',
@@ -72,7 +72,7 @@ export function agentBlock(caseId) {
       h('li', null, h('span', { class: 'step-label' }, 'Give your agent the observatory'), copyRow(HOSTED_CMD, 'install command'),
         h('p', { class: 'agent-note' }, 'The first time, it opens your browser to sign in with GitHub, Google or a passkey. Any MCP client works. Or run it locally: ', h('code', null, MCP_CMD), '.')),
       h('li', null, h('span', { class: 'step-label' }, 'Then ask it'), copyRow(starterPrompt(caseId), 'starter prompt', { prompt: true }))),
-    h('p', { class: 'agent-fork' }, h('a', { href: PATH_MODE ? `/?star=${caseId}` : `?star=${caseId}#/` }, 'See it on the sky'), ' · or ', h('a', { href: `${REPO}/tree/main/cases/${caseId}`, rel: 'noopener', target: '_blank' }, 'fork the case on GitHub'),
+    h('p', { class: 'agent-fork' }, 'or ', h('a', { href: `${REPO}/tree/main/cases/${caseId}`, rel: 'noopener', target: '_blank' }, 'fork the case on GitHub'),
       ' — a case is a directory; review is a pull request.'),
   );
 }
