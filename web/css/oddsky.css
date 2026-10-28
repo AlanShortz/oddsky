@@ -1264,3 +1264,16 @@ html, body { overflow-x: clip; }
 .vz-dim { opacity: .14; transform: translateY(14px); transition: opacity 1.1s ease, transform 1.1s ease; }
 .vz-dim.is-lit { opacity: 1; transform: none; }
 .home-below { padding-top: 10px; }
+
+/* masthead alignment: every item shares one centre line and one height (logo, tagline, links, pills) */
+.masthead-inner { align-items: center; padding-top: 14px; padding-bottom: 14px; }
+.tagline { line-height: 1.2; }
+.nav a, .theme-toggle { display: inline-flex; align-items: center; height: 32px; line-height: 1; }
+.nav a { padding: 0 !important; border-bottom: 0 !important; text-decoration: underline 1.5px transparent; text-underline-offset: 8px; transition: text-decoration-color .15s; }
+.nav a:hover { text-decoration-color: var(--rule); }
+.nav a[aria-current="page"] { text-decoration-color: var(--accent); }
+:root.at-home .nav a:hover, :root.at-home .nav a[aria-current="page"] { text-decoration-color: var(--night-odd); }
+.nav .nav-observe { padding: 0 14px !important; text-decoration: none; }
+.nav a.nav-observe { border-bottom: 1.5px solid currentColor !important; }
+.theme-toggle { padding: 0 12px 0 9px; }
+@media (max-width: 640px) { .nav a, .theme-toggle { height: 30px; } .theme-toggle { padding: 0 9px; } }
