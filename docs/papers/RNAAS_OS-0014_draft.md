@@ -2,9 +2,9 @@
 
 **A three-month, near-total occultation of the G dwarf Gaia DR3 6733428488637673984 in 2017**
 
-Alan Shortz¹, [the advisor², to be confirmed], and the Oddsky contributors
+Alan Shortz¹
 
-¹ Oddsky (open-source project) · ² [affiliation to be confirmed]
+¹ Oddsky (open-source project)
 
 ---
 
@@ -24,8 +24,10 @@ ingress: over one day (MJD 57839.9–57840.9), W1 fell from 1.13 to 3.65 mag and
 below normal, so the occulter is more transparent at 4.6 µm. SkyMapper DR4 (Onken et al. 2024) measured the
 star at its catalogued position on 2017-05-25 (MJD 57898.6) at g = 18.58, r = 18.30, i = 18.31 and
 v = 19.1–19.7, which is 5.4–6.0 mag below normal and nearly grey; field-star zero points agree to
-0.006 mag. In total, the star was fainter than normal for 92–105 days, more than 3 mag fainter for at least
-72 days, and at least 99.3% occulted at mid-event. We found no Gaia Science Alert for this position.
+0.006 mag. ATLAS forced photometry (Tonry et al. 2018; Shingles et al. 2021) independently gives 0.2–0.4% of normal flux in c and o
+from MJD 57856 to 57911 and resolves an 8-day egress (22% → 95% over MJD 57922–57930). In total the star was
+fainter than normal for 92–105 days, more than 3 mag fainter for at least 72 days, and at least 99.6% occulted
+at mid-event. ATLAS shows no repeat between 2018 and 2026. We found no Gaia Science Alert for this position.
 
 **Geometry.** The occulted fraction rose from 11% to 92% in about 6 days. For a sharp edge crossing a
 1.1–1.2 R☉ star, that implies a transverse speed of at least about 2 km s⁻¹ and an occulter at least about
@@ -64,9 +66,9 @@ spectroscopy; Gaia DR4 epoch photometry and radial velocities (which cover 2017)
 2014–2024.
 
 *Acknowledgements.* This work uses data from NEOWISE (NASA/JPL/IPAC), ASAS-SN, SkyMapper, Gaia
-(ESA/DPAC), TESS (MAST) and DASCH. DASCH was supported by NSF grants AST-0407380, AST-0909073 and
+(ESA/DPAC), TESS (MAST), ATLAS and DASCH. DASCH was supported by NSF grants AST-0407380, AST-0909073 and
 AST-1313370. Work on DASCH Data Release 7 received support from the Smithsonian American Women's History
-Initiative Pool. [ATLAS if used.] The search and vetting used the open-source Oddsky toolkit, with AI agents
+Initiative Pool. The search and vetting used the open-source Oddsky toolkit, with AI agents
 (Claude) working under deterministic artifact checks and independent referee and fact-check steps.
 
 *References.* Gaia Collaboration, Vallenari, A., et al. 2023, A&A, 674, A1 · Gałan, C., et al. 2012, A&A,
@@ -74,4 +76,4 @@ Initiative Pool. [ATLAS if used.] The search and vetting used the open-source Od
 Kenworthy, M., et al. 2023, Nature, 622, 251 · Kloppenborg, B., et al. 2010, Nature, 464, 870 [verify] ·
 Kochanek, C. S., et al. 2017, PASP, 129, 104502 · Mainzer, A., et al. 2014, ApJ, 792, 30 · Onken, C. A., et
 al. 2024, PASA, 41, e061 · Ricker, G. R., et al. 2015, JATIS, 1, 014003 · Shappee, B. J., et al. 2014, ApJ,
-788, 48 · Tzanidakis, A., et al. 2023, ApJ, 955, 69
+788, 48 · Shingles, L., et al. 2021, TNS AstroNote 2021-7 [verify] · Tonry, J. L., et al. 2018, PASP, 130, 064505 · Tzanidakis, A., et al. 2023, ApJ, 955, 69

@@ -108,3 +108,13 @@ skymapper:
   cuts: []
   notes:
   - flags>0 kept but flagged (the 2017-05-25 occultation detections carry flag 3)
+atlas:
+  archive: ATLAS forced photometry (fallingstar-data.com), reduced images
+  status: ok
+  rows_raw: 4184
+  rows_kept: 227
+  cuts: []
+  query:
+    task: https://fallingstar-data.com/forcedphot/queue/5262171/
+  notes:
+  - cite Tonry+2018, Heinze+2018, Smith+2020, Shingles+2021

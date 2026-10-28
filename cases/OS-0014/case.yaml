@@ -4,21 +4,25 @@ hook: In spring 2017 a G dwarf 420 parsecs away disappeared, more than 99.5% of 
   95 days. Afterwards it began to glow in the infrared. Nobody noticed.
 status: anomaly
 target:
-  name: AllWISE 2779036401351050434
+  name: Gaia DR3 6733428488637673984
   ra: 278.27585
   dec: -36.12034
-  aliases: []
+  aliases:
+  - AllWISE 2779036401351050434
+  - 2MASS J18330620-3607130
+  - TIC 313603515
   gaia_source_id: 6733428488637673984
 summary: 'Gaia DR3 6733428488637673984, a G0 dwarf ~420 pc away (possibly a spectroscopic binary), was
   fainter than normal for 92-105 days in spring 2017, more than 3 mag fainter for at least 72 days, and
-  at least 99.3% occulted (5.4-6.0 mag, nearly grey in g/r/i/v) at mid-event. NEOWISE watched the infrared
-  ingress (the occulter is more transparent at 4.6 microns), ASAS-SN lost the star on 17 epochs, and SkyMapper
-  measured its depth; comparison stars stayed steady. The occulter moved at 2 km/s or more and is at least
-  ~0.1 AU across, orbiting between ~1.4 and ~250 AU if bound. Three to nine months later its W1-W2 colour
-  reddened by ~0.15 and stayed so to 2024, while the optical star was ~0.05 mag brighter than before.
-  A century of Harvard plates (DASCH) shows no clear repeat and excludes periods under 12.9 yr. Found
-  by Oddsky hunt H-0002; refereed and fact-checked. Not reported elsewhere as far as we can find. Brief
-  for an astronomer: docs/briefs/OS-0014_for_review.md.'
+  at least 99.3% occulted (5.4-6.0 mag, nearly grey in g/r/i/v) at mid-event. Four instruments saw it
+  independently. NEOWISE caught the infrared ingress (the occulter is more transparent at 4.6 microns),
+  ASAS-SN lost the star on 17 epochs, SkyMapper measured 5.4-6.0 mag of depth, and ATLAS measured 0.2-0.4%
+  residual flux and resolved the 8-day egress. Comparison stars stayed steady. The occulter moved at 2
+  km/s or more and is at least ~0.1 AU across, orbiting between ~1.4 and ~250 AU if bound. Three to nine
+  months later its W1-W2 colour reddened by ~0.15 and stayed so to 2024, while the optical star was ~0.05
+  mag brighter than before. A century of Harvard plates (DASCH) shows no clear repeat and excludes periods
+  under 12.9 yr; ATLAS shows no repeat from 2018 to 2026. Found by Oddsky hunt H-0002; refereed and fact-checked.
+  Not reported elsewhere as far as we can find. Brief for an astronomer: docs/briefs/OS-0014_for_review.md.'
 claims:
 - id: C1
   text: 'Field test (IRSA Gator neowiser_p1bs_psd within 150" of the target; outside the tools): 18 field
@@ -317,6 +321,26 @@ claims:
   calls: []
   author: claude-opus-5.5
   at: '2026-10-27T19:18:04+00:00'
+- id: C24
+  text: 'ATLAS forced photometry (reduced images, 4,184 measurements from 2016 to 2026) independently
+    confirms the 2017 event, a fourth instrument after ASAS-SN, SkyMapper and NEOWISE. From MJD 57856
+    to 57911 the flux is 0.2-0.4% of normal in both c and o, i.e. at least 99.6% occulted, which settles
+    the deep-phase depth. ATLAS also resolves the egress: 22% of normal on MJD 57922, 80% on 57926, about
+    95% by 57930, an 8-day egress matching the ~6-day ingress.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-28T02:13:27+00:00'
+- id: C25
+  text: 'ATLAS 2018-2026 shows no repeat: nightly medians are steady (robust scatter 2-3%) over about
+    940 nights in c and o. The only low groups, in orange-filter data around MJD 60897-60915 (Aug 2025),
+    have chi2/N of 10,000-18,000 against a typical 100-1,000 and no cyan data in that window: failed PSF
+    fits, not a dimming. A 2017-like event between 2018 and 2026 is excluded except during the yearly
+    conjunction gaps.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-28T02:13:27+00:00'
 hypotheses: []
 predictions: []
 literature: []
