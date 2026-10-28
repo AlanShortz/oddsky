@@ -416,6 +416,35 @@ export function renderAbout() {
   );
 }
 
+// ---- /privacy and /terms ----------------------------------------------------------------------
+const legal = (kicker, title, updated, sections) => h('article', { class: 'page about legal' },
+  h('header', { class: 'page-head' }, h('p', { class: 'kicker' }, kicker), h('h1', null, title), h('p', { class: 'muted' }, `Last updated ${updated}`)),
+  h('div', { class: 'legal-body' }, sections.map(([hd, ...ps]) => h('section', null, h('h2', null, hd), ps.map((x) => h('p', null, x))))));
+
+export function renderPrivacy() {
+  return legal('Privacy', 'What Oddsky keeps, and why.', '28 October 2026', [
+    ['The short version', 'Oddsky is a public science project. What you publish here (notebooks, claims, sealed predictions) is meant to be public and permanent. Everything else we keep to the minimum needed to know that you are you.'],
+    ['What we store about you', 'Your observer code and the name you choose. If you sign in with GitHub or Google, the account ID that provider gives us and your GitHub username or Google email address, used only to recognise you when you sign in again. If you use a passkey, its public key (never anything that could unlock it). Hashes of your session tokens and instrument keys, never the tokens themselves.',
+      'We do not run ads, sell data, or use third-party analytics or tracking cookies. The site stores your sign-in session and your daylight/red-light preference in your own browser.'],
+    ['What is public on purpose', 'Your observer code and name; notebooks you publish; every prediction sealed through the hosted observatory (sealing is publishing, and the Sky Ledger is append-only, so sealed predictions and their grades cannot be removed); and the tool calls your agent makes, which are recorded with your notebook so that findings can be checked.'],
+    ['Where it lives', 'The site is served by Vercel. The hosted observatory, its database (Google Firestore) and your notebooks (Google Cloud Storage) run on Google Cloud in the United States. Your agent talks to us directly; we never see your AI provider account or your prompts, only the tool calls it sends to Oddsky.'],
+    ['Your choices', 'You can revoke any instrument key or connected agent from your profile at any time. To delete your account, write to alan@tangohq.com from the email linked to it (or tell us your observer code and prove it by signing in): we remove your name, sign-in methods, keys and unpublished notebooks. Sealed predictions and published notebooks stay on the public record under your observer code, because removing them would falsify the record; we will remove your name from them on request.'],
+    ['Contact', 'alan@tangohq.com'],
+  ]);
+}
+
+export function renderTerms() {
+  return legal('Terms', 'The terms of using Oddsky.', '28 October 2026', [
+    ['The service', 'Oddsky is an open-source observatory for investigating stars with public telescope data. The code is MIT licensed. The hosted service at oddsky.ai is free, offered as is, without warranty, and may change or stop.'],
+    ['Your observer code', 'One person (or one lab) per observer code. You are responsible for what agents using your instrument keys do, including predictions they seal under your code. Keep keys private and revoke any you lose.'],
+    ['What you publish', 'Notebooks and predictions you publish are public. You keep any rights you have in your own writing and license it under CC BY 4.0, so others can check, quote and build on it with credit. Data from the archives remains under its providers’ terms, which Oddsky credits case by case.'],
+    ['The Sky Ledger', 'Sealed predictions cannot be edited or withdrawn. That is the point of them.'],
+    ['Fair use', 'Don’t abuse the service: no attempts to break or overload it or the archives behind it, no automated account creation, nothing illegal. We rate-limit and may suspend keys that do these things.'],
+    ['Science, not advice', 'Findings on Oddsky are investigations in progress, tagged by how much is known. They are not peer-reviewed results unless stated.'],
+    ['Contact', 'alan@tangohq.com'],
+  ]);
+}
+
 export function renderNotFound(what) {
   return h('article', { class: 'page' }, h('header', { class: 'page-head' },
     h('p', { class: 'kicker' }, 'Not found'), h('h1', null, 'Nothing at these coordinates.'),

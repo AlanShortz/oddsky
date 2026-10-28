@@ -1304,3 +1304,4 @@ html, body { overflow-x: clip; }
 .more-keys { margin-top: 14px; }
 .more-keys summary { cursor: pointer; color: var(--ink-2); font-size: 14px; }
 .obs-grid { align-items: start; }
+.legal-body { max-width: 720px; } .legal-body h2 { font-size: 22px; margin: 30px 0 8px; } .legal-body p { margin: 0 0 12px; }
