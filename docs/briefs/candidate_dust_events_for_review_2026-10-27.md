@@ -1,7 +1,7 @@
 
-# Three stars for the advisor
+# Three candidate circumstellar dust events in public survey archives
 
-*Oddsky cases OS-0014, OS-0015 and OS-0013. Alan Shortz, 27 October 2026. Private, for scientific review.*
+*A 95-day near-total occultation of a G dwarf in 2017, two-week dust eclipses on a 385.7-day orbit, and a 1000 K excess that appeared around a K dwarf in 2018. Oddsky cases OS-0014, OS-0015 and OS-0013. Alan Shortz, 27 October 2026. Prepared for the advisor; private, for scientific review.*
 
 ## Introduction
 
