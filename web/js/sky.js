@@ -69,7 +69,7 @@ void main() {
   float rift = exp(-pow((b - 0.015 - 0.03 * n2) / 0.03, 2.0)) * smoothstep(1.4, 0.2, abs(l - 0.35)) * 0.7;
   float glow = max(0.0, band * (0.55 + 0.75 * n) * (1.0 - rift)) * (0.75 + 0.5 * n2);
   vec3 core = mix(vec3(0.42, 0.48, 0.75), vec3(0.95, 0.82, 0.68), clamp(cos(l) * exp(-abs(b) * 6.0), 0.0, 1.0));
-  vec3 col = uBg + core * uTint * glow * 0.22;
+  vec3 col = uBg + core * uTint * glow * 0.3;
   if (uFoot > 0.0) {
     float w = uPxAng * 1.3, edge = abs(abs(b) - 0.17453);
     float line = smoothstep(w, 0.0, edge) * step(0.5, fract(l * 30.0));
@@ -85,6 +85,16 @@ function program(gl, vs, fs) {
   if (!gl.getProgramParameter(p, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p));
   const u = new Proxy({}, { get: (_, k) => gl.getUniformLocation(p, k) });
   return { p, u, a: (k) => gl.getAttribLocation(p, k) };
+}
+
+// galactic ↔ equatorial (GAL rotates equatorial vectors into galactic ones)
+function toGal(ra, dec) {
+  const v = vec(ra, dec), g = [0, 1, 2].map((r) => GAL[3 * r] * v[0] + GAL[3 * r + 1] * v[1] + GAL[3 * r + 2] * v[2]);
+  return [((Math.atan2(g[1], g[0]) / D2R) + 360) % 360, Math.asin(Math.max(-1, Math.min(1, g[2]))) / D2R];
+}
+function fromGal(l, b) {
+  const g = vec(l, b), v = [0, 1, 2].map((c) => GAL[c] * g[0] + GAL[3 + c] * g[1] + GAL[6 + c] * g[2]);
+  return [((Math.atan2(v[1], v[0]) / D2R) + 360) % 360, Math.asin(Math.max(-1, Math.min(1, v[2]))) / D2R];
 }
 
 const ease = (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
@@ -127,7 +137,8 @@ export function createSky({ stars, sky, onPick, interactive = true }) {
 
   // ---- state ----
   const st = { ra: 290, dec: 25, fov: 110, T: 2014, playing: false, rate: 0.9, foot: 0, footTarget: 0, red: false };
-  let anim = null, W = 1, H = 1, dpr = 1, last = 0, visible = true;
+  let anim = null, W = 1, H = 1, dpr = 1, last = 0, visible = true, lastUser = -1e9;
+  const ptrs = new Map();
   const listeners = {};
   const emit = (k, v) => (listeners[k] ?? []).forEach((f) => f(v));
 
@@ -180,7 +191,9 @@ export function createSky({ stars, sky, onPick, interactive = true }) {
     gl.useProgram(starP.p);
     gl.uniform3fv(starP.u.uR, b.right); gl.uniform3fv(starP.u.uU, b.up); gl.uniform3fv(starP.u.uF, b.fwd);
     gl.uniform1f(starP.u.uEdge, edge); gl.uniform1f(starP.u.uAspect, aspect); gl.uniform1f(starP.u.uPx, dpr);
-    gl.uniform1f(starP.u.uMagLim, 7.2 + 2.4 * Math.max(0, Math.min(1, (110 - st.fov) / 90)));
+    const lim = 7.2 + 2.4 * Math.max(0, Math.min(1, (110 - st.fov) / 90));
+    const k = st.exp0 == null ? 1 : Math.min(1, (performance.now() - st.exp0) / st.expDur);
+    gl.uniform1f(starP.u.uMagLim, -1.5 + (lim + 1.5) * (1 - Math.pow(1 - k, 2.2)));
     gl.uniform1f(starP.u.uZoom, Math.pow(70 / st.fov, 0.3)); gl.uniform3fv(starP.u.uTint, tint);
     for (const [name, bb, size] of [['aPos', bPos, 2], ['aMag', bMag, 1], ['aBv', bBv, 1]]) {
       const loc = starP.a(name); gl.bindBuffer(gl.ARRAY_BUFFER, bb); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, size, gl.FLOAT, false, 0, 0);
@@ -216,6 +229,12 @@ export function createSky({ stars, sky, onPick, interactive = true }) {
       st.fov = a.fov + (b.fov - a.fov) * e + Math.sin(e * Math.PI) * hop;
       if (k >= 1) { const done = anim.done; anim = null; done?.(); }
     }
+    if (st.drift && !anim && !ptrs.size && performance.now() - lastUser > 5000) {
+      if (st.drift.resync) { const g = toGal(st.ra, st.dec); st.drift.l = g[0]; st.drift.b = g[1]; st.drift.resync = false; }
+      st.drift.l = (st.drift.l + dt * st.drift.rate + 360) % 360;
+      st.drift.b += (st.drift.b0 - st.drift.b) * Math.min(1, dt * 0.15);
+      const e = fromGal(st.drift.l, st.drift.b); st.ra = e[0]; st.dec = e[1];
+    }
     if (st.playing) {
       st.T += dt * st.rate;
       if (st.T > (st.T1 ?? 2026.9)) { if (st.loop) st.T = st.T0 ?? 2014; else { st.T = st.T1 ?? 2026.9; st.playing = false; emit('end'); } }
@@ -230,7 +249,7 @@ export function createSky({ stars, sky, onPick, interactive = true }) {
 
   // ---- interaction ----
   if (interactive) {
-    const ptrs = new Map(); let pinch0 = null, vx = 0, vy = 0;
+    let pinch0 = null, vx = 0, vy = 0;
     canvas.addEventListener('pointerdown', (e) => { if (e.pointerType === 'mouse') canvas.setPointerCapture(e.pointerId); ptrs.set(e.pointerId, [e.clientX, e.clientY]); });
     canvas.addEventListener('pointerup', (e) => { ptrs.delete(e.pointerId); pinch0 = null; if (!ptrs.size) ptrs.moved = false; });
     canvas.addEventListener('pointercancel', (e) => { ptrs.delete(e.pointerId); pinch0 = null; if (!ptrs.size) ptrs.moved = false; });
@@ -238,6 +257,7 @@ export function createSky({ stars, sky, onPick, interactive = true }) {
       if (!ptrs.has(e.pointerId)) return;
       const prev = ptrs.get(e.pointerId); ptrs.set(e.pointerId, [e.clientX, e.clientY]);
       if (anim || !ptrs.moved) { anim = null; ptrs.moved = true; emit('user'); } // a real drag, not a tap or a page scroll
+      lastUser = performance.now(); if (st.drift) st.drift.resync = true;
       if (ptrs.size === 2) {
         const [p, q] = [...ptrs.values()], d = Math.hypot(p[0] - q[0], p[1] - q[1]);
         if (pinch0) st.fov = Math.max(6, Math.min(160, st.fov * (pinch0 / d)));
@@ -259,7 +279,7 @@ export function createSky({ stars, sky, onPick, interactive = true }) {
         nudge.classList.add('is-on'); clearTimeout(nudgeT); nudgeT = setTimeout(() => nudge.classList.remove('is-on'), 1400);
         return;
       }
-      e.preventDefault(); anim = null; emit('user'); nudge.classList.remove('is-on');
+      e.preventDefault(); anim = null; emit('user'); nudge.classList.remove('is-on'); lastUser = performance.now(); if (st.drift) st.drift.resync = true;
       st.fov = Math.max(6, Math.min(160, st.fov * Math.exp(Math.max(-60, Math.min(60, e.deltaY)) * 0.012)));
     }, { passive: false });
   }
@@ -274,6 +294,10 @@ export function createSky({ stars, sky, onPick, interactive = true }) {
     play({ from, to, rate, loop = false } = {}) { if (from != null) st.T = from; st.T0 = from ?? st.T0; st.T1 = to ?? 2026.9; if (rate) st.rate = rate; st.loop = loop; st.playing = true; },
     pause() { st.playing = false; },
     footprint(on) { st.footTarget = on ? 1 : 0; },
+    /** Develop the field like a photographic plate: brightest stars first, faintest last. */
+    expose(ms = 4200) { st.exp0 = performance.now(); st.expDur = ms; },
+    /** Pan slowly along the Milky Way (galactic longitude l, latitude b, degrees per second). */
+    drift(l, b, rate) { st.drift = { l, b, b0: b, rate, resync: false }; },
     zoom(f) { anim = null; st.fov = Math.max(6, Math.min(160, st.fov * f)); },
   };
 }

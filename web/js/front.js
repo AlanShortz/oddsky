@@ -4,7 +4,7 @@
 
 import { h, s, arr, fmtDate, fmtInt, pct, link, mjdToYear, copyText, PATH_MODE } from './util.js';
 import { loadSky } from './data.js';
-import { createSky, timeline as skyTimeline, yearLabel, dmAt } from './sky.js';
+import { createSky } from './sky.js';
 import { caseCard, agentShort } from './pages.js';
 import { MCP_CMD, REPO, stamp } from './components.js';
 import { renderMarkdown } from './markdown.js';
@@ -41,128 +41,31 @@ export function renderHome(index) {
   return h('article', { class: 'front is-home' }, skyHero(), ...landing(index));
 }
 
-// ---- the sky hero: a planetarium of real stars, the cases on it, and a clock ----------------------
-const TOUR = [
-  { id: 'OS-0014', fov: 24, from: 2016.85, to: 2017.75, rate: 0.16, kicker: 'Spring 2017 · 1,370 light-years away',
-    text: 'A star like the Sun goes dark: more than 99.5% of its light gone for about 95 days. Afterwards it glows in the infrared. As far as we can find, nobody had reported it.' },
-  { id: 'OS-0015', fov: 28, from: 2019.0, to: 2023.3, rate: 0.95, kicker: 'Every 385.7 days · 7,800 light-years away',
-    text: 'Found by an Oddsky hunt: a dust-shrouded star in a star-forming region that loses up to 85% of its light for about two weeks, once a year, like clockwork. Something dusty orbits it. Nobody had reported the eclipses.' },
-  { id: 'OS-0001', fov: 28, from: 2020.3, to: 2023.7, rate: 0.6, kicker: '2021 · ASASSN-21qj',
-    text: 'The star that glowed before it dimmed. Hot dust lit up its infrared in 2018; three years later the debris crossed our line of sight. Probably the wreckage of a planetary collision.' },
-  { id: 'OS-0003', fov: 28, from: 2024.4, to: 2026.4, rate: 0.45, kicker: 'November 2025 · EE Cep',
-    text: 'Every 5.6 years something dark and enormous passes in front of EE Cep. This time it blocked 73% of the light. In 2014 it blocked 48%.' },
-  { id: 'OS-0004', fov: 30, from: 2010, to: 2020, rate: 1.6, kicker: 'R Coronae Borealis',
-    text: 'The star that smokes. Soot condenses in its atmosphere and it falls seven magnitudes, then crawls back. Oddsky is hunting for ones nobody has found yet.' },
-  { id: 'OS-0006', fov: 30, from: 2018, to: 2020.6, rate: 0.5, kicker: 'Every few weeks · SS Cyg',
-    text: 'A white dwarf feeding on its companion; the disk flares every few weeks. A known oddity, here as a yardstick: an investigator should explain it in minutes.' },
-];
-const HOME_VIEW = { ra: 342, dec: 28, fov: 100 };
-
+// ---- the sky hero: the real sky, developing like a long exposure ------------------------------------
+// 90,020 Hipparcos stars under a Milky Way laid out in galactic coordinates. Nothing is pinned to it:
+// the cases are investigations in progress, not results, so the home page shows only the sky itself.
 function skyHero() {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const card = document.documentElement.classList.contains('is-card');
-  const stage = h('div', { class: 'sky-stage' }, h('p', { class: 'sky-loading mono' }, 'Loading 90,020 stars…'));
-  const year = h('span', { class: 'st-year mono' }, '2014'), month = h('span', { class: 'st-month mono' }, 'Jan');
-  const playBtn = h('button', { type: 'button', class: 'st-play', 'aria-label': 'Pause time' }, '❚❚');
-  const zin = h('button', { type: 'button', class: 'st-zoom', 'aria-label': 'Zoom in' }, '+');
-  const zout = h('button', { type: 'button', class: 'st-zoom', 'aria-label': 'Zoom out' }, '−');
-  const footBtn = h('button', { type: 'button', class: 'st-chip', 'aria-pressed': 'false', title: 'Show where hunt H-0002 searched: every star more than 10° from the Galactic plane' }, 'H-0002 footprint');
-  const tlHost = h('div', { class: 'st-track' });
+  const stage = h('div', { class: 'sky-stage' });
   const copy = h('div', { class: 'sky-copy' },
     h('p', { class: 'kicker' }, 'The open observatory for AI agents'),
     h('h1', { class: 'sky-title' }, 'Add ', h('em', null, 'something true'), ' to what we know.'),
     h('p', { class: 'sky-lede' }, 'Billions of stars have been recorded, and almost none of them looked at closely. Oddsky gives you and your AI agent a working observatory to investigate them, with receipts anyone can check and predictions the sky itself grades.'),
     h('div', { class: 'hero-actions' },
       h('a', { class: 'btn btn-odd', href: link('observe') }, 'Get your observer code'),
-      copyCmd(CONNECT, 'cc-night cc-hero')),
-    h('button', { type: 'button', class: 'sky-tourlink mono', 'data-tour': '' }, '▶ Tour the sky: real stars, real light curves, 60 seconds'));
-  const caption = h('div', { class: 'sky-caption', hidden: true });
-  const pick = h('aside', { class: 'sky-pick', hidden: true });
-  const hint = h('p', { class: 'sky-hint mono' }, 'drag to look around · pinch or ⌘-scroll to zoom · click a pink star');
-  const sec = h('section', { class: 'sky-hero', 'aria-label': 'The sky, with the Oddsky cases on it' },
-    stage, copy, caption, pick,
-    h('div', { class: 'sky-time' }, h('div', { class: 'st-clock' }, playBtn, h('span', { class: 'st-date' }, month, year)), tlHost,
-      h('div', { class: 'st-tools' }, h('span', { class: 'st-zooms' }, zout, zin), footBtn)),
-    hint);
-
-  loadSky().then(({ stars, sky: data }) => {
-    let stop = -1, token = 0; // tour state, declared first: picking a star stops the tour
-    const sky = createSky({ stars, sky: data, onPick: (c) => showPick(c) });
+      copyCmd(CONNECT, 'cc-night cc-hero')));
+  const credit = h('p', { class: 'sky-credit mono' }, '90,020 stars from ESA’s Hipparcos catalogue, where they really are');
+  const sec = h('section', { class: 'sky-hero is-plain', 'aria-label': 'The night sky' }, stage, copy, credit);
+  loadSky().then(({ stars }) => {
+    const sky = createSky({ stars, sky: { t0: 2010, step: 0.05, cases: [] } });
     stage.replaceChildren(sky.el);
-    Object.assign(sky.state, HOME_VIEW);
-    const tl = skyTimeline(sky, data, { onScrub: (T) => { stopTour(); sky.pause(); syncPlay(); sky.setTime(T); } });
-    tlHost.append(tl.el);
-    sky.on('time', (T) => { const [y, m] = yearLabel(T); year.textContent = y; month.textContent = m; tl.set(T); if (!pick.hidden && pick._c) updatePick(); });
-    const syncPlay = () => { playBtn.textContent = sky.state.playing ? '❚❚' : '▶'; playBtn.setAttribute('aria-label', sky.state.playing ? 'Pause time' : 'Play time'); };
-    const ambient = () => { sky.play({ from: sky.state.T < 2014 || sky.state.T > 2026.8 ? 2014 : sky.state.T, to: 2026.9, rate: 0.85, loop: true }); syncPlay(); };
-    playBtn.addEventListener('click', () => { if (sky.state.playing) sky.pause(); else ambient(); syncPlay(); });
-    zin.addEventListener('click', () => sky.zoom(0.7));
-    zout.addEventListener('click', () => sky.zoom(1 / 0.7));
-    footBtn.addEventListener('click', () => { const on = footBtn.getAttribute('aria-pressed') !== 'true'; footBtn.setAttribute('aria-pressed', String(on)); sky.footprint(on); });
-    sky.on('user', () => { hint.classList.add('is-gone'); });
-    if (card) { sky.setTime(2017.3); return; }
-    const want = new URLSearchParams(location.search).get('star');
-    const deep = want && sky.cases.find((x) => x.id === want.toUpperCase());
-    if (deep) {
-      // ?star=OS-0014: fly there and play its most dramatic stretch
-      const i = deep.dm.reduce((b, v, k) => (v != null && Math.abs(v) > Math.abs(deep.dm[b] ?? 0) ? k : b), 0);
-      const tPeak = data.t0 + i * data.step;
-      sky.state.T = tPeak - 0.6; showPick(deep);
-      sky.play({ from: tPeak - 0.6, to: tPeak + 0.8, rate: 0.25 }); syncPlay();
-      return;
-    }
-    if (reduce) { sky.setTime(2017.3); syncPlay(); } else ambient();
-
-    // ---- the tour ----
-    function stopTour() { if (stop < 0) return; token++; stop = -1; caption.hidden = true; copy.hidden = false; sec.classList.remove('is-touring'); sky.cases.forEach((x) => x.m.classList.remove('is-focus')); }
-    async function go(i) {
-      const mine = ++token;
-      if (i >= TOUR.length) { stopTour(); await sky.flyTo(HOME_VIEW.ra, HOME_VIEW.dec, HOME_VIEW.fov, 2600); ambient(); return; }
-      stop = i;
-      const t = TOUR[i], c = sky.cases.find((x) => x.id === t.id);
-      sec.classList.add('is-touring'); copy.hidden = true; pick.hidden = true; caption.hidden = false;
-      caption.replaceChildren(
-        h('p', { class: 'sc-k mono' }, `${i + 1} / ${TOUR.length} · ${t.kicker}`),
-        h('p', { class: 'sc-text' }, t.text),
-        h('div', { class: 'sc-actions' },
-          h('a', { class: 'btn btn-odd small', href: link(`case/${t.id}`) }, `Open ${t.id} →`),
-          h('button', { type: 'button', class: 'st-chip', onclick: () => go(i + 1) }, i + 1 < TOUR.length ? 'Next' : 'Finish'),
-          h('button', { type: 'button', class: 'st-chip', onclick: () => { stopTour(); ambient(); } }, 'Explore on my own')));
-      sky.pause(); sky.setTime(t.from); syncPlay();
-      sky.cases.forEach((x) => x.m.classList.toggle('is-focus', x.id === t.id));
-      await sky.flyTo(c.ra, c.dec, t.fov, i === 0 ? 3200 : 2800);
-      if (mine !== token) return;
-      sky.play({ from: t.from, to: t.to, rate: t.rate }); syncPlay();
-      await new Promise((res) => sky.on('end', res));
-      if (mine !== token) return;
-      await new Promise((r) => setTimeout(r, 2200));
-      if (mine === token) go(i + 1);
-    }
-    sec.querySelector('[data-tour]').addEventListener('click', () => go(0));
-    sky.on('user', () => stopTour());
-
-    // ---- picking a star ----
-    function updatePick() {
-      const c = pick._c, dm = dmAt(c, data, sky.state.T);
-      pick.querySelector('.sp-dm').textContent = dm == null ? 'no measurements near this date'
-        : `${month.textContent} ${year.textContent}: ${Math.abs(dm) < 0.05 ? 'as usual' : `${Math.abs(dm).toFixed(2)} mag ${dm > 0 ? 'fainter' : 'brighter'} than usual`}`;
-    }
-    function showPick(c) {
-      stopTour(); pick._c = c; pick.hidden = false; copy.hidden = true;
-      sky.cases.forEach((x) => x.m.classList.toggle('is-focus', x.id === c.id));
-      const close = () => { pick.hidden = true; copy.hidden = false; sky.cases.forEach((x) => x.m.classList.remove('is-focus')); };
-      pick.replaceChildren(
-        h('button', { type: 'button', class: 'sp-close', 'aria-label': 'Close', onclick: close }, '×'),
-        h('p', { class: 'sc-k mono' }, `${c.id} · ${c.status}${c.control ? ' · control star' : ''}`),
-        h('h2', { class: 'sp-title' }, c.title),
-        h('p', { class: 'sp-target mono' }, c.target),
-        h('p', { class: 'sp-hook' }, c.hook),
-        h('p', { class: 'sp-dm mono' }),
-        h('a', { class: 'btn btn-odd small', href: link(`case/${c.id}`) }, 'Open the case file →'));
-      updatePick();
-      sky.flyTo(c.ra, c.dec, Math.min(sky.state.fov, 40), 1800);
-    }
-  }).catch((e) => { console.error(e); stage.replaceChildren(h('p', { class: 'sky-loading mono' }, 'The sky didn’t load. The casebook is below.')); });
+    // start in Cygnus, looking along the Milky Way
+    Object.assign(sky.state, { ra: 318, dec: 40, fov: 96 });
+    if (card || reduce) return;
+    sky.expose(4500);
+    sky.drift(80, 6, 1.1);
+  }).catch(() => { /* the copy stands on its own */ });
   return sec;
 }
 
