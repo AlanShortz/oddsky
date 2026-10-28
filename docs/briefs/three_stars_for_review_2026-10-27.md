@@ -1,13 +1,13 @@
 
 # Three stars for the advisor
 
-*Oddsky cases OS-0014, OS-0015 and OS-0013: what we measured, what we think, and what only you can judge. Alan Shortz, 27 October 2026. Private, for scientific review.*
+*Oddsky cases OS-0014, OS-0015 and OS-0013: what we measured, what we think, and four questions. Alan Shortz, 27 October 2026. Private, for scientific review.*
 
 ## Why you are getting this
 
 Oddsky is the open-source observatory I have been building: an AI agent is pointed at public archives (Gaia, NEOWISE, ASAS-SN, SkyMapper, ZTF, ATLAS, TESS, a century of Harvard plates), every number it produces is logged and replayable, a deterministic "Skeptic" checks the usual impostors (blends, saturation, momentum dumps, aliases), and a second, adversarial agent is told to break every result before anyone is allowed to call it a finding. Two systematic searches this week left three objects standing: one from a re-screen of the published R CrB candidate list, two from a full-sky pass over the NEOWISE archive. None of the three phenomena is reported anywhere we can find.
 
-I am not an astronomer. What follows is organised so you can stop at any level: the one-line claim, the figure, the measurements, our interpretation, and then the questions where your judgement matters more than any more data pulling. Everything cited here is in the public repository, case directories `cases/OS-0014`, `cases/OS-0015` and `cases/OS-0013`, including the three referee reports, which are blunter than this brief.
+I am not an astronomer. What follows is organised so you can stop at any level: the one-line claim, the figure, the measurements, our interpretation, and then four questions at the end, which is all I am asking of you. Everything cited here is in the public repository, case directories `cases/OS-0014`, `cases/OS-0015` and `cases/OS-0013`, including the three referee reports, which are blunter than this brief.
 
 ## OS-0014: a G dwarf that vanished for three months
 
@@ -37,14 +37,6 @@ I am not an astronomer. What follows is organised so you can stop at any level: 
 
 ![Spring 2017 in four instruments, and the NEOWISE decade](figures/vanishing-2017.png)
 
-### Questions for you
-
-1. Is the interpretation sound, and is it worth a spectrum: lithium for age, Hα for activity or accretion, Na D for gas, and two or three radial-velocity epochs for the binary question?
-2. Is the Gaia seven-transit RV amplitude meaningful given duplicated_source, or is a processing cause plausible?
-3. Mid-infrared or SPHEREx spectroscopy of the post-event colour change: worth proposing? Gaia DR4 (2 December) will cover 2017 directly in epoch photometry and RVs.
-4. The 1924 DASCH plates (ax 488, 528, 535): would you, or someone you know who reads plate defects, look at them?
-5. Is this an RNAAS note now, or does it wait for the spectrum? A draft is in `docs/papers/RNAAS_OS-0014_draft.md`.
-
 ## OS-0015: a dust-shrouded star that goes dark for a week every 385.7 days
 
 **One line.** Gaia DR3 4152421080966024704 (2MASS J18205507−1340452; 18:20:55.07 −13:40:45.1; G = 14.76, BP−RP = 2.01, 2.4 kpc, RUWE 1.81; l = 17.3°, b = +0.4°, 4″ from IRAS 18180−1342) is steady to 0.1–0.2 mag and then goes dark by 1.5–2.2 mag for about two weeks, four years running, on a clock good to a day. The eclipse is deeper in blue, has no secondary, and changes depth by a few tenths of a magnitude from orbit to orbit. ZTF found it; ATLAS, with different telescopes and a different pipeline, shows the same eclipses on the same ephemeris, including the 2023 one that fell in a ZTF gap.
@@ -73,14 +65,6 @@ I am not an astronomer. What follows is organised so you can stop at any level: 
 - **Ruled out.** A seasonal ZTF systematic (both programs, clean metadata, constant neighbours, 20 d/yr drift); R CrB-type dust puffs (strict periodicity, O−C under 0.7 d over four cycles); blends; P/2, 2P, 3P and the one-year aliases. Referee's estimate that a mundane explanation remains: about 5%.
 - **Predictions sealed** (hash-logged before the fact): the star stays within 0.5 mag of maximum through the 2027 season (p = 0.7); it is ≥ 1 mag faint on at least one night between 2027-12-30 and 2028-02-04, the eclipse predicted for 2028 January 17 ± 18 d (p = 0.75). The December 2026 eclipse falls at solar conjunction.
 
-### Questions for you
-
-1. Which frame is right, or is there a third: evolved binary with a circumsecondary disk, or pre-main-sequence binary with a warped circumbinary disk? The Class II SED, the location (IRAS 18180−1342, intermediate-mass star-forming region, Lundquist+2014/2015), and the W2−W3 = 3.0 are the inputs; W3/W4 may be partly nebular.
-2. Is a 20–100 L☉ star with K−W1 = 1.6 and this much mid-IR excess consistent with a disk around the primary, or does the dust have to belong to the companion to produce a two-week eclipse once a year?
-3. What follow-up settles it: an out-of-eclipse spectrum (giant vs pre-main-sequence; lithium, Hα), near-IR photometry through an eclipse (grain size from the colour of the extinction), or the NEOWISE phase lead?
-4. The 2028 January eclipse is the next observable one. Who should be told, and when?
-5. Tisserand and Karambelkar built the candidate list this came from. We intend to tell them before anything is submitted; co-authorship is your call.
-
 ## OS-0013: a K dwarf that grew hot dust in 2018 and still has it
 
 **One line.** Gaia DR3 5792808347020475136 (14:43:51.9 −76:11:46; G = 13.1, 247 pc, a K3 main-sequence dwarf, not young) was photospheric in the infrared from 2010 to early 2018. Between two NEOWISE visits (2018 Feb 26 to Aug 8) its W1 and W2 rose by 0.17 and 0.36 mag, a step of more than 30σ against 27 field stars, and the excess, with a colour temperature near 1000 K and a fractional luminosity of about 2%, has stayed through 2024. The optical light curve is flat across the onset: no dip, no flash. This is the ASASSN-21qj signature (infrared first) without, so far, the optical event.
@@ -106,12 +90,16 @@ I am not an astronomer. What follows is organised so you can stop at any level: 
 - **What it is remains open.** Two-band photometry cannot separate freshly made circumstellar dust (a collision or a large impact) from other dusty phenomena, for example ejecta after a planet engulfment. The flat optical record favours optically thin dust that we see from outside the plane, so the ASASSN-21qj-style dimming may never come.
 - **Weakest point.** Only one instrument can see 3–5 µm at these epochs, so there is no second-instrument confirmation of the excess itself, only of the photosphere's constancy. That is why it sits below the other two despite the cleaner physics.
 
-### Questions for you
+## What I am asking you
 
-1. Is a 2% fractional luminosity at ~1000 K around a field K dwarf, appearing in under six months and holding for six years, more naturally a giant impact (ID8-like) or something else? What would the ID8 and P1121 people want to see first?
-2. SPHEREx 0.75–5 µm spectra are public and cover this position: is the excess shape plus CO/H₂O worth pulling now, and is a MIRI 10-µm silicate feature a realistic proposal?
-3. Spectrum for lithium, Hα and Ca II (age) and two or three RV epochs; is there a cheaper discriminant?
-4. The referee's prediction: dust at 0.04 AU would make any transiting structure recur on 3–10 d. Is that worth a sealed prediction and a monitoring request, or is the geometry unlikely enough to skip?
+Four questions, one per star and one overall. Everything else (spectra, plates, proposals, who to tell) follows from your answers, and I would rather not spend your time on logistics before you have said whether the physics holds.
+
+1. **OS-0014.** A one-off, near-total, 95-day occultation of a field G dwarf by something dusty at AU scale, followed months later by a persistent warm excess: is that a physically coherent system to you, or does the combination point somewhere else (an engulfment, a transient disk, a line-of-sight cloud)?
+2. **OS-0015.** A 20–100 L☉ star with a Class II SED in a star-forming region, eclipsed for two weeks once per 385.7-day orbit by translucent, reddening dust whose depth changes from orbit to orbit: evolved binary with a circumsecondary disk, young binary with a warped circumbinary disk, or a third thing we have not considered?
+3. **OS-0013.** A 2% fractional luminosity at ~1000 K appearing around a mature K dwarf within six months and holding for six years, with no optical event: is this the giant-impact afterglow class (ID8, P1121, BD+20 307), and if not, what is it?
+4. **Overall.** Would you put your name on any of these, and in which order? If yes to any, name the single observation you would want first and I will go and get it. If no, say which assumption you would attack, and we will attack it before anyone else sees this.
+
+One statement rather than a question: OS-0015 came out of Tisserand and Karambelkar's published candidate list. We plan to tell them before anything is submitted. If that is the wrong protocol, stop us.
 
 ## How these were produced and checked
 
