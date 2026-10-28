@@ -53,3 +53,21 @@ def test_workspace_case_ids_use_the_observer_code(tmp_path):
     (tmp_path / "cases" / "ASH-0001").mkdir(parents=True)
     with workspace(tmp_path, case_prefix="ASH"):
         assert CaseStore.next_case_id() == "ASH-0002"
+
+
+def test_git_import_is_idempotent():
+    import os
+
+    os.environ.setdefault("ODDSKY_ADMIN_TOKEN", "t")
+    from starlette.testclient import TestClient
+
+    from oddsky.hosted import app as appmod
+
+    appmod.ADMIN = "t"
+    item = {"case": "OS-0015", "target": "x", "model": "m", "at": "2026-10-27T00:00:00+00:00",
+            "prediction": {"id": "P1", "statement": "s", "probability": 0.7, "check": None, "resolve_by": "2028-01-01"}}
+    with TestClient(appmod.create_app(), base_url="https://oddsky.ai") as c:
+        h = {"x-oddsky-admin": "t"}
+        assert c.post("/api/admin/genesis", json={"items": [item]}, headers=h).json()["sealed"] == [1]
+        r = c.post("/api/admin/genesis", json={"items": [item, {**item, "prediction": {**item["prediction"], "id": "P2"}}]}, headers=h).json()
+        assert r["skipped"] == 1 and r["sealed"] == [2]

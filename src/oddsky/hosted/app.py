@@ -412,11 +412,17 @@ def _routes(mcp: MCPServer) -> None:
     @r("/api/admin/genesis", methods=["POST"])
     @_api
     async def genesis(request):
+        """Import predictions sealed in git (site/genesis.py --post). Idempotent: a prediction already on the
+        ledger (same case or trial packet, same id, imported from git) is skipped, so this can run after every
+        merge that adds one."""
         _admin(request)
-        if db().head()["seq"]:
-            raise ValueError("the ledger already has entries; genesis runs once")
-        out = []
+        have = {(s_.get("trial"), s_.get("packet"), s_["case"], s_.get("prediction")) for s_ in sky.docket()["items"]
+                if s_.get("observer") == "ODY"}
+        out, skipped = [], 0
         for it in (await _body(request)).get("items", []):
+            if (it.get("trial"), it.get("packet"), it["case"], it["prediction"].get("id")) in have:
+                skipped += 1
+                continue
             e = sky.seal(observer="ODY", agent=it.get("agent"), model=it.get("model"), case=it["case"], target=it.get("target"),
                          prediction=it["prediction"], source=it.get("source", "git"), at=it.get("at"),
                          extra={k: it[k] for k in ("trial", "packet", "provenance") if k in it})
@@ -424,7 +430,7 @@ def _routes(mcp: MCPServer) -> None:
                 sky.grade_entry(e, it["outcome"], it.get("observed"), it.get("n_points", 0), it.get("note", ""),
                                 source=it.get("graded_by", "trial-scorer"), at=it.get("graded_at"))
             out.append(e["seq"])
-        return _json({"sealed": out, "head": db().head()})
+        return _json({"sealed": out, "skipped": skipped, "head": db().head()})
 
     @r("/api/admin/invite", methods=["POST"])
     @_api
