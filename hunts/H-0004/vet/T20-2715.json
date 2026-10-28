@@ -1,0 +1,40 @@
+{
+ "id": "T20-2715",
+ "ra": 277.3166244,
+ "dec": -13.8632286,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "Gaia DR3 4104383173122839936",
+   "VariabilityType": "CEP",
+   "Period": null,
+   "MaxMag": "16.44 G",
+   "MinMag": "17.34 G",
+   "Discoverer": "Gaia collaboration",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "OGLE BLG-T2CEP-1308",
+   "otype": "WV*",
+   "sep": 0.13999524479898334,
+   "nref": 4
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 21,
+ "w1_median": 9.431,
+ "w1_range": 1.0254999999999992,
+ "w1_first": 9.4775,
+ "w1_last": 9.3865,
+ "w2_median": 8.351,
+ "w2_range": 0.9245000000000001,
+ "w2_first": 8.336,
+ "w2_last": 8.297,
+ "w1_w2_median": 1.0764999999999993,
+ "w1_w2_range": 0.11399999999999899,
+ "w1_w2_corr": 0.7318435701648303
+}

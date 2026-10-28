@@ -28,7 +28,7 @@ from .paths import cases_dir
 
 MJD_EPOCH = dt.date(1858, 11, 17)
 SURVEY_FILES = {"neowise_exp": "neowise_exp", "gaia": "gaia_epoch", "asas-sn": "asassn", "asassn": "asassn", "aavso": "aavso", "neowise": "neowise",
-                "tess": "tess", "ztf": "ztf"}
+                "tess": "tess", "ztf": "ztf", "atlas": "atlas"}
 
 
 class Toolbox:

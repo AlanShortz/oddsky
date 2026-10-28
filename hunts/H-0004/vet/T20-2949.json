@@ -1,0 +1,28 @@
+{
+ "id": "T20-2949",
+ "ra": 309.5296329,
+ "dec": 42.6476215,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "MGAB-V2834",
+   "VariabilityType": "YSO",
+   "Period": null,
+   "MaxMag": "19.4 r",
+   "MinMag": "21.6 r",
+   "Discoverer": "Gabriel Murawski; Mariusz Bajer",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "ZTF J203807.10+423852.0",
+   "otype": "Mi*",
+   "sep": 0.7397908040422568,
+   "nref": 7
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok"
+}

@@ -1,0 +1,40 @@
+{
+ "id": "T20-323",
+ "ra": 336.7689193,
+ "dec": -16.9967779,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "ASASSN-V J222704.54-165948.5",
+   "VariabilityType": "SR",
+   "Period": null,
+   "MaxMag": "14.0 V",
+   "MinMag": "15.4 V",
+   "Discoverer": null,
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "2MASS J22270453-1659485",
+   "otype": "RC?",
+   "sep": 0.12892958308030963,
+   "nref": 1
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 20,
+ "w1_median": 9.871500000000001,
+ "w1_range": 0.8070000000000004,
+ "w1_first": 9.7105,
+ "w1_last": 9.762,
+ "w2_median": 9.1135,
+ "w2_range": 0.6319999999999997,
+ "w2_first": 9.048,
+ "w2_last": 9.109,
+ "w1_w2_median": 0.7330000000000005,
+ "w1_w2_range": 0.19599999999999973,
+ "w1_w2_corr": 0.8517017776703357
+}

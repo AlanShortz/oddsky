@@ -1,0 +1,28 @@
+{
+ "id": "T20-2897",
+ "ra": 295.1896249,
+ "dec": 26.7473883,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "Gaia DR3 2022086545881698432",
+   "VariabilityType": "RS",
+   "Period": null,
+   "MaxMag": "16.10 G",
+   "MinMag": "16.38 G",
+   "Discoverer": "Gaia collaboration",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "UCAC4 584-091563",
+   "otype": "*",
+   "sep": 0.23410879680594462,
+   "nref": 1
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok"
+}

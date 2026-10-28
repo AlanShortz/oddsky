@@ -1,0 +1,60 @@
+{
+ "id": "T20-2961",
+ "ra": 321.8957849,
+ "dec": 50.5706958,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "MGAB-V2991",
+   "VariabilityType": "M",
+   "Period": "378.7239314",
+   "MaxMag": "19.1 r",
+   "MinMag": "<21.5 r",
+   "Discoverer": "Gabriel Murawski",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "IRAS 21258+5021",
+   "otype": "Mi*",
+   "sep": 0.02595236717866399,
+   "nref": 4
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [],
+ "variability": {
+  "summary": {
+   "num_selected_g_fov": 58,
+   "mean_mag_g_fov": 18.411613,
+   "std_dev_mag_g_fov": 0.88617355,
+   "range_mag_g_fov": 2.921237,
+   "skewness_mag_g_fov": 0.15202214,
+   "in_vari_long_period_variable": true,
+   "in_vari_eclipsing_binary": false,
+   "in_vari_rrlyrae": false,
+   "in_vari_cepheid": false,
+   "in_vari_short_timescale": false,
+   "in_vari_agn": false,
+   "in_vari_classification_result": true
+  },
+  "long_period_variable": {
+   "frequency": 0.0025669018002822,
+   "frequency_error": 6.396857e-05,
+   "amplitude": 1.263614,
+   "median_delta_wl_rp": -4.054,
+   "is_cstar": false,
+   "period_days": 389.5747004774636
+  },
+  "classifier": {
+   "best_class_name": "LPV",
+   "best_class_score": 0.9028609
+  }
+ },
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 1.13,
+ "w1_w2_range": 0.7749999999999995,
+ "w1_w2_corr": 0.6097330561886453
+}

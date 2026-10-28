@@ -1,0 +1,52 @@
+{
+ "id": "T20-2682",
+ "ra": 275.2294829,
+ "dec": -13.6792014,
+ "verdict": "rcb_like",
+ "vsx": [],
+ "simbad": [
+  {
+   "main_id": "2MASS J18205507-1340452",
+   "otype": "AB?",
+   "sep": 0.2255253490787666,
+   "nref": 5
+  },
+  {
+   "main_id": "IRAS 18180-1342",
+   "otype": "Cld",
+   "sep": 4.343446593924863,
+   "nref": 6
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [
+  {
+   "source_id": 4152421080957016064,
+   "sep_arcsec": 2.984,
+   "phot_g_mean_mag": 18.464,
+   "flux_ratio_G": 0.033
+  },
+  {
+   "source_id": 4152421080966023808,
+   "sep_arcsec": 8.176,
+   "phot_g_mean_mag": 16.096,
+   "flux_ratio_G": 0.293
+  },
+  {
+   "source_id": 4152421080957019520,
+   "sep_arcsec": 8.442,
+   "phot_g_mean_mag": 19.489,
+   "flux_ratio_G": 0.013
+  }
+ ],
+ "variability": {},
+ "neowise_status": "ok",
+ "n_visits": 1,
+ "w2_median": 7.274000000000001,
+ "w2_range": 0.11399999999999988,
+ "w2_first": 7.2170000000000005,
+ "w2_last": 7.331,
+ "w1_w2_median": 0.7654999999999985,
+ "w1_w2_range": 0.11550000000000171,
+ "w1_w2_corr": 0.4207553260637961
+}

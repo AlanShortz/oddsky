@@ -1,0 +1,32 @@
+{
+ "id": "T20-1381",
+ "ra": 297.0711354,
+ "dec": 29.7993893,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "MGAB-V2584",
+   "VariabilityType": "M",
+   "Period": null,
+   "MaxMag": "19.3 r",
+   "MinMag": "21.4 r",
+   "Discoverer": "Gabriel Murawski",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "IRAS 19462+2940",
+   "otype": "LP*",
+   "sep": 0.20105631598431334,
+   "nref": 3
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 1.7634999999999996,
+ "w1_w2_range": 1.0045000000000002,
+ "w1_w2_corr": 0.30858864265301994
+}

@@ -1,0 +1,30 @@
+{
+ "id": "T20-4023",
+ "ra": 99.7154541,
+ "dec": 10.2699039,
+ "verdict": "rcb_like",
+ "vsx": [],
+ "simbad": [
+  {
+   "main_id": "ESO-HA 324",
+   "otype": "Em*",
+   "sep": 0.06613208520722014,
+   "nref": 5
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 21,
+ "w1_median": 11.58,
+ "w1_range": 0.3069999999999986,
+ "w1_first": 11.513,
+ "w1_last": 11.426,
+ "w2_median": 10.8705,
+ "w2_range": 0.2554999999999996,
+ "w2_first": 10.792,
+ "w2_last": 10.788,
+ "w1_w2_median": 0.7014999999999993,
+ "w1_w2_range": 0.13750000000000107,
+ "w1_w2_corr": 0.39416734470978304
+}

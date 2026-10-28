@@ -1,0 +1,36 @@
+{
+ "id": "T20-1449",
+ "ra": 346.3021103,
+ "dec": 57.5910943,
+ "verdict": "rcb_like",
+ "vsx": [],
+ "simbad": [
+  {
+   "main_id": "IRAS 23030+5719",
+   "otype": "AB*",
+   "sep": 0.21586163501912414,
+   "nref": 7
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [
+  {
+   "source_id": 2009974085269158784,
+   "sep_arcsec": 5.717,
+   "phot_g_mean_mag": 18.907,
+   "flux_ratio_G": 5.868
+  },
+  {
+   "source_id": 2009974188348366592,
+   "sep_arcsec": 9.587,
+   "phot_g_mean_mag": 19.301,
+   "flux_ratio_G": 4.081
+  }
+ ],
+ "variability": {},
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 2.489,
+ "w1_w2_range": 0.7290000000000001,
+ "w1_w2_corr": 0.4713853352071693
+}

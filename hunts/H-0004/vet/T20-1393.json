@@ -1,0 +1,32 @@
+{
+ "id": "T20-1393",
+ "ra": 300.1834117,
+ "dec": 32.2898193,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "MGAB-V2627",
+   "VariabilityType": "SRA",
+   "Period": "421.2678343",
+   "MaxMag": "18.0 r",
+   "MinMag": "19.7 r",
+   "Discoverer": "Gabriel Murawski",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "ZTF J200044.03+321723.2",
+   "otype": "LP*",
+   "sep": 0.277790518105926,
+   "nref": 3
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": NaN,
+ "w1_w2_range": null,
+ "w1_w2_corr": null
+}

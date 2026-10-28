@@ -1,0 +1,36 @@
+{
+ "id": "T20-2453",
+ "ra": 264.0206908,
+ "dec": -19.3640331,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "2MASS J17360496-1921505",
+   "VariabilityType": "RVB",
+   "Period": "38.3",
+   "MaxMag": "12.5 V",
+   "MinMag": "14.5 V",
+   "Discoverer": null,
+   "AUID": "000-BKS-451"
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "IRAS 17332-1920",
+   "otype": "WV*",
+   "sep": 0.1036018104002913,
+   "nref": 4
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w2_median": 8.035,
+ "w2_range": 0.0,
+ "w2_first": 8.035,
+ "w2_last": 8.035,
+ "w1_w2_median": NaN,
+ "w1_w2_range": null,
+ "w1_w2_corr": null
+}

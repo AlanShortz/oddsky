@@ -1,0 +1,318 @@
+{
+  "gaia": {
+    "G": 14.763582,
+    "bp_rp": 2.0130816,
+    "parallax_mas": 0.4168099502861853,
+    "parallax_over_error": 9.207326,
+    "ruwe": 1.8134209,
+    "teff_gspphot": null,
+    "non_single_star": 0,
+    "phot_variable_flag": "NOT_AVAILABLE",
+    "distance_pc": 2399.174970063434,
+    "abs_G": 2.863272390502477,
+    "sep_from_target_coords_arcsec": 0.2522229504849955
+  },
+  "gaia_variability": {},
+  "neighbors": [
+    {
+      "source_id": 4152421080957016064,
+      "sep_arcsec": 2.9843,
+      "phot_g_mean_mag": 18.4644,
+      "bp_rp": 2.3653,
+      "dG": 3.7008,
+      "flux_ratio_G": 0.0331,
+      "parallax": 0.4123,
+      "ruwe": 1.0407
+    },
+    {
+      "source_id": 4152421080966023808,
+      "sep_arcsec": 8.1765,
+      "phot_g_mean_mag": 16.0961,
+      "bp_rp": 2.4497,
+      "dG": 1.3325,
+      "flux_ratio_G": 0.2931,
+      "parallax": 0.4353,
+      "ruwe": 1.1837
+    },
+    {
+      "source_id": 4152421080957019520,
+      "sep_arcsec": 8.4419,
+      "phot_g_mean_mag": 19.4887,
+      "bp_rp": 2.8449,
+      "dG": 4.7251,
+      "flux_ratio_G": 0.0129,
+      "parallax": 1.4306,
+      "ruwe": 1.1387
+    },
+    {
+      "source_id": 4152421076659840128,
+      "sep_arcsec": 10.2928,
+      "phot_g_mean_mag": 20.459,
+      "bp_rp": 4.1445,
+      "dG": 5.6954,
+      "flux_ratio_G": 0.0053,
+      "parallax": NaN,
+      "ruwe": NaN
+    },
+    {
+      "source_id": 4152421080959911424,
+      "sep_arcsec": 12.8822,
+      "phot_g_mean_mag": 20.5274,
+      "bp_rp": 3.3258,
+      "dG": 5.7638,
+      "flux_ratio_G": 0.0049,
+      "parallax": 0.0603,
+      "ruwe": 1.051
+    },
+    {
+      "source_id": 4152421076661552128,
+      "sep_arcsec": 12.9924,
+      "phot_g_mean_mag": 19.0895,
+      "bp_rp": 3.1905,
+      "dG": 4.3259,
+      "flux_ratio_G": 0.0186,
+      "parallax": -3.7618,
+      "ruwe": 2.0471
+    },
+    {
+      "source_id": 4152421080957019776,
+      "sep_arcsec": 14.0246,
+      "phot_g_mean_mag": 18.2803,
+      "bp_rp": 2.8671,
+      "dG": 3.5167,
+      "flux_ratio_G": 0.0392,
+      "parallax": 0.767,
+      "ruwe": 1.0127
+    },
+    {
+      "source_id": 4152421076668725120,
+      "sep_arcsec": 14.7749,
+      "phot_g_mean_mag": 19.722,
+      "bp_rp": 2.7101,
+      "dG": 4.9584,
+      "flux_ratio_G": 0.0104,
+      "parallax": NaN,
+      "ruwe": NaN
+    },
+    {
+      "source_id": 4152421076668732288,
+      "sep_arcsec": 15.0456,
+      "phot_g_mean_mag": 19.0135,
+      "bp_rp": 2.4648,
+      "dG": 4.2499,
+      "flux_ratio_G": 0.02,
+      "parallax": 0.3222,
+      "ruwe": 0.9817
+    },
+    {
+      "source_id": 4152421080957016192,
+      "sep_arcsec": 15.5805,
+      "phot_g_mean_mag": 20.1118,
+      "bp_rp": NaN,
+      "dG": 5.3482,
+      "flux_ratio_G": 0.0073,
+      "parallax": -0.0107,
+      "ruwe": 0.9507
+    },
+    {
+      "source_id": 4152421080966027392,
+      "sep_arcsec": 15.6147,
+      "phot_g_mean_mag": 17.8944,
+      "bp_rp": 3.0883,
+      "dG": 3.1308,
+      "flux_ratio_G": 0.0559,
+      "parallax": 0.488,
+      "ruwe": 0.9657
+    },
+    {
+      "source_id": 4152421080959905152,
+      "sep_arcsec": 16.135,
+      "phot_g_mean_mag": 20.4957,
+      "bp_rp": 1.8386,
+      "dG": 5.7321,
+      "flux_ratio_G": 0.0051,
+      "parallax": NaN,
+      "ruwe": NaN
+    },
+    {
+      "source_id": 4152421080966027776,
+      "sep_arcsec": 17.0398,
+      "phot_g_mean_mag": 15.19,
+      "bp_rp": 1.7828,
+      "dG": 0.4264,
+      "flux_ratio_G": 0.6752,
+      "parallax": 0.5479,
+      "ruwe": 1.0564
+    },
+    {
+      "source_id": 4152421080959913728,
+      "sep_arcsec": 17.5528,
+      "phot_g_mean_mag": 20.5075,
+      "bp_rp": 2.8487,
+      "dG": 5.7439,
+      "flux_ratio_G": 0.005,
+      "parallax": 1.6681,
+      "ruwe": 1.0673
+    },
+    {
+      "source_id": 4152421080966026624,
+      "sep_arcsec": 17.8066,
+      "phot_g_mean_mag": 13.8248,
+      "bp_rp": 1.4205,
+      "dG": -0.9388,
+      "flux_ratio_G": 2.3743,
+      "parallax": 0.5504,
+      "ruwe": 1.1091
+    },
+    {
+      "source_id": 4152421080959913472,
+      "sep_arcsec": 19.2266,
+      "phot_g_mean_mag": 20.6507,
+      "bp_rp": 2.2857,
+      "dG": 5.8872,
+      "flux_ratio_G": 0.0044,
+      "parallax": -0.0671,
+      "ruwe": 1.0085
+    },
+    {
+      "source_id": 4152421076668728192,
+      "sep_arcsec": 19.366,
+      "phot_g_mean_mag": 18.6196,
+      "bp_rp": 2.7257,
+      "dG": 3.856,
+      "flux_ratio_G": 0.0287,
+      "parallax": 0.4011,
+      "ruwe": 1.0744
+    },
+    {
+      "source_id": 4152421080957015936,
+      "sep_arcsec": 20.3454,
+      "phot_g_mean_mag": 19.1225,
+      "bp_rp": 2.9428,
+      "dG": 4.3589,
+      "flux_ratio_G": 0.018,
+      "parallax": 2.5574,
+      "ruwe": 1.2215
+    },
+    {
+      "source_id": 4152421080959906560,
+      "sep_arcsec": 20.6006,
+      "phot_g_mean_mag": 20.2803,
+      "bp_rp": 2.1488,
+      "dG": 5.5167,
+      "flux_ratio_G": 0.0062,
+      "parallax": NaN,
+      "ruwe": NaN
+    },
+    {
+      "source_id": 4152421076668732928,
+      "sep_arcsec": 21.3289,
+      "phot_g_mean_mag": 21.0548,
+      "bp_rp": 2.387,
+      "dG": 6.2912,
+      "flux_ratio_G": 0.003,
+      "parallax": NaN,
+      "ruwe": NaN
+    },
+    {
+      "source_id": 4152421080959905792,
+      "sep_arcsec": 21.3907,
+      "phot_g_mean_mag": 20.951,
+      "bp_rp": NaN,
+      "dG": 6.1874,
+      "flux_ratio_G": 0.0034,
+      "parallax": NaN,
+      "ruwe": NaN
+    },
+    {
+      "source_id": 4152421076660726784,
+      "sep_arcsec": 24.1855,
+      "phot_g_mean_mag": 18.718,
+      "bp_rp": 1.8168,
+      "dG": 3.9545,
+      "flux_ratio_G": 0.0262,
+      "parallax": 0.4875,
+      "ruwe": 1.1486
+    },
+    {
+      "source_id": 4152421080966025344,
+      "sep_arcsec": 24.3781,
+      "phot_g_mean_mag": 17.9998,
+      "bp_rp": 1.6608,
+      "dG": 3.2362,
+      "flux_ratio_G": 0.0508,
+      "parallax": 0.6877,
+      "ruwe": 0.9593
+    },
+    {
+      "source_id": 4152421076668722048,
+      "sep_arcsec": 25.0644,
+      "phot_g_mean_mag": 19.9185,
+      "bp_rp": 2.433,
+      "dG": 5.1549,
+      "flux_ratio_G": 0.0087,
+      "parallax": 0.4425,
+      "ruwe": 1.1626
+    },
+    {
+      "source_id": 4152421076661563136,
+      "sep_arcsec": 27.4162,
+      "phot_g_mean_mag": 19.3274,
+      "bp_rp": 2.9032,
+      "dG": 4.5639,
+      "flux_ratio_G": 0.0149,
+      "parallax": 0.8055,
+      "ruwe": 1.0142
+    },
+    {
+      "source_id": 4152421080959914112,
+      "sep_arcsec": 29.1407,
+      "phot_g_mean_mag": 20.7665,
+      "bp_rp": NaN,
+      "dG": 6.0029,
+      "flux_ratio_G": 0.004,
+      "parallax": NaN,
+      "ruwe": NaN
+    },
+    {
+      "source_id": 4152422558428660608,
+      "sep_arcsec": 29.1563,
+      "phot_g_mean_mag": 20.3372,
+      "bp_rp": -0.8995,
+      "dG": 5.5736,
+      "flux_ratio_G": 0.0059,
+      "parallax": 2.2598,
+      "ruwe": 1.1311
+    },
+    {
+      "source_id": 4152422554128603264,
+      "sep_arcsec": 29.8216,
+      "phot_g_mean_mag": 18.1621,
+      "bp_rp": 2.7114,
+      "dG": 3.3986,
+      "flux_ratio_G": 0.0437,
+      "parallax": 0.7047,
+      "ruwe": 1.0578
+    },
+    {
+      "source_id": 4152422558428663424,
+      "sep_arcsec": 29.8701,
+      "phot_g_mean_mag": 20.1391,
+      "bp_rp": 3.3007,
+      "dG": 5.3755,
+      "flux_ratio_G": 0.0071,
+      "parallax": 1.229,
+      "ruwe": 1.0947
+    },
+    {
+      "source_id": 4152421832582964864,
+      "sep_arcsec": 29.9924,
+      "phot_g_mean_mag": 20.1805,
+      "bp_rp": 3.2371,
+      "dG": 5.417,
+      "flux_ratio_G": 0.0068,
+      "parallax": NaN,
+      "ruwe": NaN
+    }
+  ]
+}

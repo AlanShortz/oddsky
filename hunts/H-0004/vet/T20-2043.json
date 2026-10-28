@@ -1,0 +1,30 @@
+{
+ "id": "T20-2043",
+ "ra": 97.7339477,
+ "dec": -9.5330355,
+ "verdict": "rcb_like",
+ "vsx": [],
+ "simbad": [
+  {
+   "main_id": "2MASS J06305614-0931590",
+   "otype": "Y*O",
+   "sep": 0.07916517536091755,
+   "nref": 2
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 21,
+ "w1_median": 9.296,
+ "w1_range": 0.551499999999999,
+ "w1_first": 9.079,
+ "w1_last": 8.957,
+ "w2_median": 8.449,
+ "w2_range": 0.36100000000000065,
+ "w2_first": 8.429,
+ "w2_last": 8.308,
+ "w1_w2_median": 0.7420000000000009,
+ "w1_w2_range": 0.3644999999999996,
+ "w1_w2_corr": 0.7546208453761566
+}

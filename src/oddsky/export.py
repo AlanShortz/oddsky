@@ -116,6 +116,7 @@ def export_web(out: Path | None = None) -> list[str]:
             "n_claims": len(c.get("claims", [])), "n_hypotheses": len(c.get("hypotheses", [])),
             "n_predictions": len(c.get("predictions", [])),
             "featured": bool(c.get("featured", False)),
+            "hunt": c.get("hunt"),
         })
     trials = repo_root() / "trials"
     scorecards = []

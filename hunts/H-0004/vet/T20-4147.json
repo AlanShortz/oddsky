@@ -1,0 +1,78 @@
+{
+ "id": "T20-4147",
+ "ra": 300.227279,
+ "dec": 23.0960388,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "CF Vul",
+   "VariabilityType": "SR",
+   "Period": "47.58",
+   "MaxMag": "10.90 V",
+   "MinMag": "12.65 V",
+   "Discoverer": null,
+   "AUID": "000-BFP-766"
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "V* CF Vul",
+   "otype": "LP*",
+   "sep": 0.09846515351658004,
+   "nref": 12
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [
+  {
+   "source_id": 1833274633880166784,
+   "sep_arcsec": 3.532,
+   "phot_g_mean_mag": 20.712,
+   "flux_ratio_G": 0.0
+  },
+  {
+   "source_id": 1833274633880170112,
+   "sep_arcsec": 7.196,
+   "phot_g_mean_mag": 19.843,
+   "flux_ratio_G": 0.0
+  },
+  {
+   "source_id": 1833274633881513600,
+   "sep_arcsec": 8.658,
+   "phot_g_mean_mag": 20.205,
+   "flux_ratio_G": 0.0
+  }
+ ],
+ "variability": {
+  "summary": {
+   "num_selected_g_fov": 60,
+   "mean_mag_g_fov": 11.21037,
+   "std_dev_mag_g_fov": 0.1786243,
+   "range_mag_g_fov": 0.9373896,
+   "skewness_mag_g_fov": 0.69852126,
+   "in_vari_long_period_variable": true,
+   "in_vari_eclipsing_binary": false,
+   "in_vari_rrlyrae": false,
+   "in_vari_cepheid": false,
+   "in_vari_short_timescale": false,
+   "in_vari_agn": false,
+   "in_vari_classification_result": true
+  },
+  "long_period_variable": {
+   "frequency": null,
+   "frequency_error": null,
+   "amplitude": null,
+   "median_delta_wl_rp": 7.244,
+   "is_cstar": true
+  },
+  "classifier": {
+   "best_class_name": "LPV",
+   "best_class_score": 0.66379917
+  }
+ },
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 0.8182500000000004,
+ "w1_w2_range": 0.4215,
+ "w1_w2_corr": 0.3404124603758371
+}

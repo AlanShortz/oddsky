@@ -1,0 +1,32 @@
+{
+ "id": "T20-2604",
+ "ra": 271.4555773,
+ "dec": -20.6103185,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "Gaia DR3 4094901264034376832",
+   "VariabilityType": "L",
+   "Period": null,
+   "MaxMag": "16.35 G",
+   "MinMag": "16.77 G",
+   "Discoverer": "Gaia collaboration",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "IRAS 18028-2036",
+   "otype": "LP?",
+   "sep": 0.2976874750855604,
+   "nref": 6
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 1.2934999999999994,
+ "w1_w2_range": 1.1565000000000003,
+ "w1_w2_corr": 0.7763007005432595
+}

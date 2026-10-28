@@ -58,7 +58,7 @@ single point of failure.
 | | |
 |---|---|
 | **The observatory** | 24 MCP tools: case overview, light curves, changepoints, excursions (dips and flares), Lomb-Scargle with spectral-window alias flags, cross-band colour slopes, WISE colour and infrared-excess temperature, Gaia neighbours, and tools for recording claims, hypotheses and predictions. `oddsky tools` lists them. |
-| **Archives** | Gaia DR3 (context, neighbours, variability), NEOWISE 2014-2024 (quality-cut, visit-binned), AAVSO (a century of amateur photometry), TESS (SPOC/QLP), ZTF, ASAS-SN. Every cut is written to provenance. |
+| **Archives** | Gaia DR3 (context, neighbours, variability), NEOWISE 2014-2024 (quality-cut, visit-binned), AAVSO (a century of amateur photometry), TESS (SPOC/QLP), ZTF, ATLAS (whole-sky forced photometry, 2015-), ASAS-SN. Every cut is written to provenance. |
 | **The Skeptic** | Deterministic artifact checks: blends inside each survey's beam, saturation, single-observer data, series that start mid-event (against Gaia's baseline), colour coherence across bands, survey-rhythm aliases, unobserved onsets, TESS dips on momentum dumps and sector edges, RUWE. It is code, so it cannot be talked out of a warning. |
 | **Cases** | A case is a directory (`cases/OS-0001/`): `case.yaml` holds the argument, `data/` the evidence, and `ledger.jsonl` every tool call with a digest of its result. Fork = fork. Review = pull request. `oddsky replay OS-0001` re-runs the ledger. |
 | **Trials** | Blind (identity, coordinates and dates scrubbed; name the explanation), hindsight (data cut at a date; forecast what happens next, graded against what actually happened), and salted (real data with planted spacecraft artifacts). Answers are sha256-sealed before anyone runs. |
@@ -94,6 +94,16 @@ explained by any catalogue.**
   ASAS-SN, SkyMapper and NEOWISE saw it independently, and comparison stars stayed steady. Afterwards a warm infrared glow
   appeared, and it was still there in 2024. As far as SIMBAD, VSX, the alert streams and the literature show, nobody has
   reported it. In [OS-0013](cases/OS-0013), a K dwarf grew ~1000 K dust between two visits in 2018.
+- **Hunt H-0004, stars that go dark** ([hunts/H-0004](hunts/H-0004)): the 2,356 WISE-selected R CrB candidates of Tisserand+2020,
+  re-examined in 2018-2026 ZTF and ATLAS data for their first recorded decline. The classifier was calibrated on real R CrB stars
+  first (14 of 14 that declined, 0 of 12 that never do). In the north every star that fades like an R CrB star and is bright enough
+  for ZTF was already in a catalogue, which is a result. What nobody had reported: **[OS-0015](cases/OS-0015)**, a dust-shrouded star
+  near a star-forming region that goes dark for a week every 385.7 days, four times in four years, deeper in blue, with no
+  secondary eclipse: a translucent dust structure on a one-year orbit. Periodogram-based classifiers never saw it because each
+  eclipse lasts 4% of the orbit. The referee found a fourth eclipse we had missed and removed our "red giant" framing before it
+  went anywhere. ATLAS then showed the same eclipses on the same ephemeris, including a 2023 one ZTF had missed, so the case stands at
+  "reproduced". Two predictions are sealed for 2027-2028. The southern half of the
+  candidate list is still queued on the ATLAS server.
 - **One hunt parked**: new R CrB stars (H-0003). Gaia DR3 has already been mined by the experts, and our candidates were a VY
   Scl binary, a Mira, an S star and a T Tauri star.
 
@@ -164,6 +174,7 @@ Blind trial over MCP: `claude mcp add oddsky-trial -- uv run oddsky mcp --blind 
 | [OS-0012](cases/OS-0012) | the invisible companion that wasn't: a new K+K binary, P = 11.9008 d | closed |
 | [OS-0013](cases/OS-0013) | an infrared excess that appeared in 2018 (K dwarf) | anomaly |
 | [OS-0014](cases/OS-0014) | **the star that vanished for three months** (G dwarf, 2017) | anomaly |
+| [OS-0015](cases/OS-0015) | a dust-shrouded star that goes dark for a week every 385.7 days | reproduced |
 
 Each one is an open invitation to investigate.
 

@@ -1,0 +1,22 @@
+{
+ "id": "T20-1335",
+ "ra": 289.7250396,
+ "dec": 17.6620816,
+ "verdict": "rcb_like",
+ "vsx": [],
+ "simbad": [
+  {
+   "main_id": "2MASS J19185401+1739434",
+   "otype": "*",
+   "sep": 0.09699143850994507,
+   "nref": 2
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [],
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": NaN,
+ "w1_w2_range": null,
+ "w1_w2_corr": null
+}

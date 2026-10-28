@@ -1,0 +1,36 @@
+{
+ "id": "T20-1025",
+ "ra": 67.3670047,
+ "dec": 51.0169609,
+ "verdict": "rcb_like",
+ "vsx": [],
+ "simbad": [
+  {
+   "main_id": "IRAS 04256+5054",
+   "otype": "C*",
+   "sep": 0.3376958868261438,
+   "nref": 7
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [
+  {
+   "source_id": 270912934872247808,
+   "sep_arcsec": 1.67,
+   "phot_g_mean_mag": 20.836,
+   "flux_ratio_G": 0.524
+  },
+  {
+   "source_id": 270912934873518720,
+   "sep_arcsec": 8.995,
+   "phot_g_mean_mag": 20.648,
+   "flux_ratio_G": 0.622
+  }
+ ],
+ "variability": {},
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 2.2969999999999993,
+ "w1_w2_range": 0.6110000000000007,
+ "w1_w2_corr": -0.42313828413170346
+}

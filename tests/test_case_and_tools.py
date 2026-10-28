@@ -77,3 +77,19 @@ def test_digest10_ignores_last_bit_platform_noise():
     assert digest(a) != digest(b)
     assert digest10(a) == digest10(b)
     assert digest10({"x": 0.3}) != digest10({"x": 0.3001})
+
+
+def test_hunt_field_round_trips_and_exports(dusty_case):
+    from oddsky.export import export_web
+
+    c = dusty_case.load()
+    c.hunt = "H-0004"
+    dusty_case.save(c)
+    assert dusty_case.load().hunt == "H-0004"
+    out = dusty_case.path.parent.parent / "web" / "data"
+    ids = export_web(out)
+    assert "OS-0001" in ids
+    import json
+
+    index = json.loads((out / "index.json").read_text())
+    assert next(i for i in index["cases"] if i["id"] == "OS-0001")["hunt"] == "H-0004"

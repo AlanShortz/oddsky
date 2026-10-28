@@ -1,0 +1,28 @@
+{
+ "id": "T20-2700",
+ "ra": 276.3753658,
+ "dec": -14.962779,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "Gaia DR3 4104189933962217600",
+   "VariabilityType": "L",
+   "Period": null,
+   "MaxMag": "19.19 G",
+   "MinMag": "19.69 G",
+   "Discoverer": "Gaia collaboration",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "2MASS J18253008-1457459",
+   "otype": "*",
+   "sep": 0.09096403266823498,
+   "nref": 1
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "empty"
+}

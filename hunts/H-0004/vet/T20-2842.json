@@ -1,0 +1,32 @@
+{
+ "id": "T20-2842",
+ "ra": 287.0453721,
+ "dec": 13.5019873,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "MGAB-V2386",
+   "VariabilityType": "M",
+   "Period": null,
+   "MaxMag": "18.0 r",
+   "MinMag": "<20.1 r",
+   "Discoverer": "Gabriel Murawski",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "IRAS 19058+1325",
+   "otype": "Mi*",
+   "sep": 0.06774829827762502,
+   "nref": 4
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 0.4690000000000003,
+ "w1_w2_range": 0.855999999999999,
+ "w1_w2_corr": 0.010998847315367693
+}

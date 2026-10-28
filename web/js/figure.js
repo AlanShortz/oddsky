@@ -15,20 +15,20 @@ const fmtCompact = (n) => (n == null ? '' : n >= 1e5 ? `${Math.round(n / 1000)}k
 // AAVSO band codes: Johnson-Cousins U B V R I; CV/CR = unfiltered with V/R zero point; TB/TG/TR =
 // DSLR tri-colour; SG/SR/SI = Sloan; "Vis." = visual (eye) estimates, ±0.1–0.3 mag.
 const BAND_INK = {
-  B: 'B', V: 'V', g: 'V', G: 'V', R: 'R', r: 'R', I: 'I', i: 'I', W1: 'W1', W2: 'W2',
+  B: 'B', V: 'V', g: 'V', G: 'V', R: 'R', r: 'R', I: 'I', i: 'I', W1: 'W1', W2: 'W2', c: 'V', o: 'R',
   TB: 'B', TG: 'V', TR: 'R', SG: 'V', SR: 'R', SI: 'I', CV: 'V', CR: 'R', U: 'x1', J: 'x2', H: 'x3',
 };
 const FALLBACK_INK = ['x1', 'x2', 'x3'];
-const SHAPE_BY_SURVEY = { 'ASAS-SN': 'triangle', ASASSN: 'triangle', ZTF: 'diamond' };
+const SHAPE_BY_SURVEY = { 'ASAS-SN': 'triangle', ASASSN: 'triangle', ZTF: 'diamond', ATLAS: 'square' };
 const SHAPE_BY_BAND = { R: 'square', r: 'square', I: 'square', i: 'square', W2: 'square', TB: 'triangle', TG: 'triangle', TR: 'triangle', SG: 'diamond', SR: 'diamond', SI: 'diamond' };
 const WAVELENGTH = {
   U: 0.36, B: 0.44, TB: 0.45, g: 0.48, SG: 0.48, TG: 0.53, V: 0.55, CV: 0.55, 'Vis.': 0.56, G: 0.6, TR: 0.6, r: 0.62, SR: 0.62,
-  R: 0.64, CR: 0.64, i: 0.75, SI: 0.75, I: 0.8, z: 0.9, J: 1.25, H: 1.65, W1: 3.4, W2: 4.6, W3: 12, W4: 22,
+  R: 0.64, CR: 0.64, c: 0.53, o: 0.68, i: 0.75, SI: 0.75, I: 0.8, z: 0.9, J: 1.25, H: 1.65, W1: 3.4, W2: 4.6, W3: 12, W4: 22,
 };
 const BAND_NOTE = { W1: '3.4 µm', W2: '4.6 µm' };
 const BAND_NAME = {
   CV: 'CV (clear, V zero-point)', CR: 'CR (clear, R zero-point)', TB: 'TB (DSLR blue)', TG: 'TG (DSLR green)', TR: 'TR (DSLR red)',
-  SG: "g′ (Sloan)", SR: "r′ (Sloan)", SI: "i′ (Sloan)",
+  SG: "g′ (Sloan)", SR: "r′ (Sloan)", SI: "i′ (Sloan)", c: 'c (cyan)', o: 'o (orange)',
 };
 const JOHNSON = new Set(['U', 'B', 'V', 'R', 'I']);
 const V_LIKE = new Set(['V', 'Vis.', 'CV', 'TG', 'g', 'G']);
@@ -55,8 +55,9 @@ export function prepareSeries(payload) {
   const list = Object.entries(raw).map(([key, ser]) => {
     const t = arr(ser.t), mag = arr(ser.mag), err = arr(ser.err);
     const idx = t.map((_, i) => i).filter((i) => Number.isFinite(t[i]) && Number.isFinite(mag[i])).sort((a, b) => t[a] - t[b]);
-    const band = ser.band ?? key.split(':')[1] ?? key;
     const survey = ser.survey ?? key.split(':')[0] ?? '';
+    // ZTF_g, ATLAS_o: the survey prefix is provenance, the letter is the band.
+    const band = (ser.band ?? key.split(':')[1] ?? key).replace(new RegExp(`^${survey}_`), '');
     const isFallback = !(band in BAND_INK) && !isVisual(band);
     const st = styleFor(band, survey, isFallback ? fb++ : 0);
     const fl = ser.flagged ?? {};

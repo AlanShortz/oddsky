@@ -1,0 +1,30 @@
+{
+ "id": "T20-3219",
+ "ra": 304.6879733,
+ "dec": 41.377759,
+ "verdict": "rcb_like",
+ "vsx": [],
+ "simbad": [
+  {
+   "main_id": "WISE J201845.11+412239.9",
+   "otype": "*",
+   "sep": 0.05094869860665277,
+   "nref": 2
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 21,
+ "w1_median": 12.029,
+ "w1_range": 0.7560000000000002,
+ "w1_first": 12.066,
+ "w1_last": 12.314,
+ "w2_median": 11.283,
+ "w2_range": 0.702,
+ "w2_first": 11.342,
+ "w2_last": 11.598,
+ "w1_w2_median": 0.7070000000000007,
+ "w1_w2_range": 0.17649999999999721,
+ "w1_w2_corr": 0.6022264594307531
+}

@@ -1,0 +1,40 @@
+{
+ "id": "T20-2636",
+ "ra": 272.8005172,
+ "dec": -20.4929163,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "ZTF18abkisfq",
+   "VariabilityType": "YSO",
+   "Period": null,
+   "MaxMag": "16.6 r",
+   "MinMag": "19.2 r",
+   "Discoverer": "P. S\u00e1nchez-S\u00e1ez et al. (ZTF)",
+   "AUID": "000-BQH-610"
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "2MASS J18111214-2029348",
+   "otype": "Y*?",
+   "sep": 0.3548429329351345,
+   "nref": 3
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 20,
+ "w1_median": 10.297,
+ "w1_range": 0.5640000000000001,
+ "w1_first": 10.1765,
+ "w1_last": 10.349,
+ "w2_median": 9.755,
+ "w2_range": 0.416500000000001,
+ "w2_first": 9.608,
+ "w2_last": 9.755,
+ "w1_w2_median": 0.5685000000000002,
+ "w1_w2_range": 0.21899999999999942,
+ "w1_w2_corr": 0.7723145328934345
+}

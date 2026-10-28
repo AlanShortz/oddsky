@@ -8,16 +8,16 @@ import pandas as pd
 
 from .case.model import Case, Target
 from .case.store import CaseStore
-from .data import aavso, asassn, gaia, gaia_epoch, neowise, simbad, tess, ztf
+from .data import aavso, asassn, atlas, gaia, gaia_epoch, neowise, simbad, tess, ztf
 from .paths import cases_dir
 
 log = logging.getLogger("oddsky")
 
-SURVEYS = ("gaia", "gaia_epoch", "neowise", "aavso", "ztf", "asassn", "tess")
+SURVEYS = ("gaia", "gaia_epoch", "neowise", "aavso", "ztf", "atlas", "asassn", "tess")
 
 
 def open_case(name: str, title: str | None = None, hook: str = "", ra: float | None = None,
-              dec: float | None = None) -> CaseStore:
+              dec: float | None = None, hunt: str | None = None) -> CaseStore:
     """Resolve a name (SIMBAD, then AAVSO VSX) and create cases/OS-NNNN/."""
     try:
         return CaseStore.find(name)
@@ -39,7 +39,7 @@ def open_case(name: str, title: str | None = None, hook: str = "", ra: float | N
         target = Target(name=name, ra=ra, dec=dec)
     cid = CaseStore.next_case_id()
     store = CaseStore(cases_dir() / cid)
-    store.save(Case(id=cid, title=title or name, hook=hook, target=target))
+    store.save(Case(id=cid, title=title or name, hook=hook, target=target, hunt=hunt))
     return store
 
 
@@ -93,6 +93,9 @@ def fetch(store: CaseStore, surveys: tuple[str, ...] | list[str] = SURVEYS) -> d
 
     if "ztf" in surveys:
         record("ztf", *ztf.lightcurve(t.ra, t.dec))
+
+    if "atlas" in surveys:
+        record("atlas", *atlas.lightcurve(t.ra, t.dec))
 
     if "asassn" in surveys:
         record("asassn", *asassn.lightcurve(t.ra, t.dec))

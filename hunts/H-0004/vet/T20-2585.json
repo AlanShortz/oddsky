@@ -1,0 +1,68 @@
+{
+ "id": "T20-2585",
+ "ra": 270.5909877,
+ "dec": -16.3845469,
+ "verdict": "rcb_like",
+ "vsx": [],
+ "simbad": [
+  {
+   "main_id": "2MASS J18022183-1623042",
+   "otype": "*",
+   "sep": 0.11255697964175247,
+   "nref": 1
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [
+  {
+   "source_id": 4145046965732176384,
+   "sep_arcsec": 3.577,
+   "phot_g_mean_mag": 20.561,
+   "flux_ratio_G": 0.091
+  },
+  {
+   "source_id": 4145046965732177664,
+   "sep_arcsec": 3.596,
+   "phot_g_mean_mag": 20.777,
+   "flux_ratio_G": 0.075
+  },
+  {
+   "source_id": 4145046965732163456,
+   "sep_arcsec": 4.463,
+   "phot_g_mean_mag": 20.43,
+   "flux_ratio_G": 0.103
+  },
+  {
+   "source_id": 4145046965732165248,
+   "sep_arcsec": 5.691,
+   "phot_g_mean_mag": 20.608,
+   "flux_ratio_G": 0.087
+  },
+  {
+   "source_id": 4145046961419448448,
+   "sep_arcsec": 6.04,
+   "phot_g_mean_mag": 18.529,
+   "flux_ratio_G": 0.593
+  },
+  {
+   "source_id": 4145046961419446912,
+   "sep_arcsec": 6.567,
+   "phot_g_mean_mag": 17.276,
+   "flux_ratio_G": 1.881
+  }
+ ],
+ "variability": {},
+ "neowise_status": "ok",
+ "n_visits": 21,
+ "w1_median": 9.317,
+ "w1_range": 0.5235000000000021,
+ "w1_first": 9.033999999999999,
+ "w1_last": 9.096,
+ "w2_median": 8.821,
+ "w2_range": 0.354000000000001,
+ "w2_first": 8.626,
+ "w2_last": 8.6935,
+ "w1_w2_median": 0.48800000000000043,
+ "w1_w2_range": 0.2220000000000013,
+ "w1_w2_corr": 0.9368536331027886
+}

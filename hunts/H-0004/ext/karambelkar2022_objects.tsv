@@ -1,0 +1,116 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-10-27T14:42:02 [V7.6.2]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-10-27T14:42:02	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/A%2bA/667/A84/objects&-out.max=unlimited&-out.all	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.6.2	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+
+#RESOURCE=yCat_36670084
+#Name: J/A+A/667/A84
+#Title: R CrB and hydrogen-deficient carbon stars (Karambelkar+, 2022)
+#INFO	ivoid=ivo://cds.vizier/j/a+a/667/a84	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/j/a+a/667/a84	    IVOID of underlying data collection
+#INFO	creator=Karambelkar V.	    First author or institution
+#INFO	cites=bibcode:2022A&A...667A..84K	    Article or Data origin sources
+#INFO	journal=A&A	    Journal name
+#INFO	original_date=2022	    Year of the article publication
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A+A/667/A84	    Dataset landing page
+#INFO	citation=doi:10.26093/cds/vizier.36670084	    Dataset identifier that can be used for citation
+#INFO	publication_date=2023-11-07	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Table	J_A_A_667_A84_objects:
+#Name: J/A+A/667/A84/objects
+#Title: Names and coordinates of RCB and dLHdC star
+#Column	recno	(I8)	Record number assigned by the VizieR team. Should Not be used for identification.	[ucd=meta.record]
+#Column	Name	(a23)	Name of star	[ucd=meta.id;meta.main]
+#Column	RAJ2000	(A11)	Right Ascension (J2000)	[ucd=pos.eq.ra;meta.main]
+#Column	DEJ2000	(A12)	Declination (J2000)	[ucd=pos.eq.dec;meta.main]
+#Column	Class	(A5)	Classification (RCB or dLHdC)	[ucd=src.class]
+#Column	Inst	(a20)	Name and instrument with which the spectra were collected	[ucd=meta.id;instr.bandwidth]
+#Column	sp	(A2)	Show the spectrum	[ucd=meta.ref.url]
+#Column	FileName	(a23)	Name of the spectrum file in subdirectory sp	[ucd=meta.id;meta.file]
+#Column	SimbadName	(a25)	Simbad column added by the CDS	[ucd=meta.id]
+recno	Name	RAJ2000	DEJ2000	Class	Inst	sp	FileName	SimbadName
+ 	 	"h:m:s"	"d:m:s"	 	 	 	 	
+--------	-----------------------	-----------	------------	-----	--------------------	--	-----------------------	-------------------------
+       1	HD175893               	18 58 47.29	-29 30 18.07	RCB  	GS-GNIRS            	sp	spechd175893.dat       	HD175893
+       2	Saps                   	15 09 24.51	-72 03 45.22	RCB  	GS-GNIRS            	sp	specsaps.dat           	S Aps
+       3	SVSge                  	19 08 11.77	+17 37 41.15	RCB  	GS-GNIRS            	sp	specsvsge.dat          	SV Sge
+       4	ESAql                  	19 32 21.61	-00 11 31.05	RCB  	GS-GNIRS            	sp	specesaql.dat          	ES Aql
+       5	WXCrA                  	18 08 50.49	-37 19 43.32	RCB  	GS-GNIRS            	sp	specwxcra.dat          	WX CrA
+       6	Uaqr                   	22 03 19.70	-16 37 35.31	RCB  	GS-GNIRS            	sp	specuaqr.dat           	U Aqr
+       7	Zumi                   	15 02 01.30	+83 03 48.70	RCB  	GS-GNIRS            	sp	speczumi.dat           	Z Umi
+       8	ASAS-RCB-11            	18 12 03.69	-28 08 36.35	RCB  	Spex (IRTF)         	sp	specASAS11.dat         	[TCW2013] ASAS-RCB-11
+       9	EROS2-CG-RCB-6         	17 30 23.84	-30 08 28.65	RCB  	Spex (IRTF)         	sp	specEROS2-6.dat        	[TMW2008] EROS2-GC-RCB-6
+      10	V517Oph                	17 15 19.73	-29 05 37.41	RCB  	Spex (IRTF)         	sp	specV517Oph.dat        	V517 Oph
+      11	V1157Sgr               	19 10 11.83	-20 29 41.98	RCB  	Spex (IRTF)         	sp	specV1157Sgr.dat       	V1157 Sgr
+      12	NSV11154               	18 37 51.25	+47 23 23.45	RCB  	Spex (IRTF)         	sp	specNSV11154.dat       	NSV 11154
+      13	ASAS-RCB-17            	17 17 44.48	-29 38 00.30	RCB  	Spex (IRTF)         	sp	specASAS17.dat         	[TCW2013] ASAS-RCB-17
+      14	ASAS-RCB-4             	17 05 41.25	-26 50 03.45	RCB  	Spex (IRTF)         	sp	specASAS4.dat          	[TCW2013] ASAS-RCB-4
+      15	MACHO-401.48170.2237   	17 57 58.93	-28 18 12.98	RCB  	Spex (IRTF)         	sp	specMACHO401.dat       	MACHO 401.48170.2237
+      16	ASAS-RCB-14            	16 47 29.73	-15 25 23.00	RCB  	Spex (IRTF)         	sp	specASAS14.dat         	[TCW2013] ASAS-RCB-14
+      17	ASAS-RCB-18            	19 00 09.44	-02 02 57.90	RCB  	Spex (IRTF)         	sp	specASAS18.dat         	[TCW2013] ASAS-RCB-18
+      18	IRAS1813.5-2419        	18 16 39.20	-24 18 33.51	RCB  	Spex (IRTF)         	sp	specIRAS18135.dat      	IRAS 1813.5-2419
+      19	EROS2-CG-RCB-4         	17 46 16.22	-32 57 40.95	RCB  	Spex (IRTF)         	sp	specEROS2-4.dat        	[TMW2008] EROS2-GC-RCB-4
+      20	MACHO-308.38099.66     	18 19 27.42	-21 24 08.20	RCB  	Spex (IRTF)         	sp	specMACHO308.dat       	MACHO 308.38099.66
+      21	WISEJ194218.4-203247.5 	19 42 18.38	-20 32 47.68	RCB  	Spex (IRTF)         	sp	specWISEJ194218.dat    	WISE J194218.38-203247.5
+      22	OGLE-GC-RCB-1          	17 35 18.10	-26 53 49.35	RCB  	Spex (IRTF)         	sp	specOGLEGC1.dat        	[TWW2011] OGLE-GC-RCB-1
+      23	EROS2-CG-RCB-9         	17 48 30.98	-24 22 55.59	RCB  	Spex (IRTF)         	sp	specEROS2-9.dat        	[TMW2008] EROS2-GC-RCB-9
+      24	EROS2-CG-RCB-11        	17 48 41.57	-23 00 26.71	RCB  	Spex (IRTF)         	sp	specEROS2-11.dat       	[TMW2008] EROS2-GC-RCB-11
+      25	WISEJ183649.54-113420.7	18 36 49.55	-11 34 20.77	RCB  	Spex (IRTF)         	sp	specWISEJ183649.dat    	2MASS J18364955-1134207
+      26	V739Sgr                	18 13 10.55	-30 16 14.85	RCB  	Spex (IRTF)         	sp	specV739Sgr.dat        	V739 Sgr
+      27	V3795Sgr               	18 13 23.56	-25 46 40.98	RCB  	Spex (IRTF)         	sp	specV3795Sgr.dat       	V3795 Sgr
+      28	ASAS-RCB-5             	17 52 25.51	-34 11 28.35	RCB  	Spex (IRTF)         	sp	specASAS5.dat          	[TCW2013] ASAS-RCB-5
+      29	ASAS-RCB-7             	17 49 15.65	-39 13 16.62	RCB  	Spex (IRTF)         	sp	specASAS7.dat          	[TCW2013] ASAS-RCB-7
+      30	ASAS-RCB-16            	17 14 14.45	-21 26 13.84	RCB  	Spex (IRTF)         	sp	specASAS16.dat         	[TCW2013] ASAS-RCB-16
+      31	ASAS-RCB-19            	19 01 33.68	+14 56 09.48	RCB  	Spex (IRTF)         	sp	specASAS19.dat         	[TCW2013] ASAS-RCB-19
+      32	ASAS-RCB-20            	19 53 43.14	+14 41 09.28	RCB  	Spex (IRTF)         	sp	specASAS20.dat         	[TCW2013] ASAS-RCB-20
+      33	EROS2-CG-RCB-3         	17 58 28.29	-30 51 16.72	RCB  	Spex (IRTF)         	sp	specEROS2-3.dat        	[TMW2008] EROS2-GC-RCB-3
+      34	EROS2-CG-RCB-10        	17 45 31.42	-23 32 24.88	RCB  	Spex (IRTF)         	sp	specEROS2-10.dat       	[TMW2008] EROS2-GC-RCB-10
+      35	EROS2-CG-RCB-13        	18 01 58.24	-27 36 48.51	RCB  	Spex (IRTF)         	sp	specEROS2-13.dat       	[TMW2008] EROS2-GC-RCB-13
+      36	FHSct                  	18 45 14.85	-09 25 36.23	RCB  	Spex (IRTF)         	sp	specFHSct.dat          	FH Sct
+      37	GUSgr                  	18 24 15.58	-24 15 26.40	RCB  	Spex (IRTF)         	sp	specGUSgr.dat          	GU Sgr
+      38	RSTel                  	18 18 51.22	-46 32 53.53	RCB  	Spex (IRTF)         	sp	specRSTel.dat          	RS Tel
+      39	V482Cyg                	19 59 42.57	+33 59 27.84	RCB  	Spex (IRTF)         	sp	specV482Cyg.dat        	V482 Cyg
+      40	V854Cen                	14 34 49.41	-39 33 19.28	RCB  	Spex (IRTF)         	sp	specV854Cen.dat        	V854 Cen
+      41	V1783Sgr               	18 04 49.74	-32 43 13.73	RCB  	Spex (IRTF)         	sp	specV1783Sgr.dat       	V1783 Sgr
+      42	V2552Oph               	17 23 14.56	-22 52 06.43	RCB  	Spex (IRTF)         	sp	specV2552Oph.dat       	V2552 Oph
+      43	VZSgr                  	18 15 08.56	-29 42 29.57	RCB  	Spex (IRTF)         	sp	specVZSgr.dat          	VZ Sgr
+      44	WISEJ174328.50-375029.0	17 43 28.50	-37 50 29.17	RCB  	Spex (IRTF)         	sp	specWISEJ174328.dat    	WISE J174328.50-375029.0
+      45	V532Oph                	17 32 42.60	-21 51 40.87	RCB  	Spex (IRTF)         	sp	specV532Oph.dat        	V532 Oph
+      46	HV5637                 	05 11 31.38	-67 55 50.81	RCB  	GS-Flamingo2        	sp	spechv5637.dat         	HV 5637
+      47	EROS2-SMC-RCB-1        	00 37 47.07	-73 39 02.10	RCB  	GS-Flamingo2        	sp	specEROS2-SMC-RCB-1.dat	[TWM2009] EROS2-SMC-RCB-1
+      48	EROS2-SMC-RCB-2        	00 44 07.45	-72 44 16.30	RCB  	GS-Flamingo2        	sp	specEROS2-SMC-RCB-2.dat	[TWM2009] EROS2-SMC-RCB-2
+      49	EROS2-SMC-RCB-3        	00 48 22.87	-73 41 04.70	RCB  	GS-Flamingo2        	sp	specEROS2-SMC-RCB-3.dat	[TWM2009] EROS2-SMC-RCB-3
+      50	B42                    	18 13 40.81	-31 29 54.32	dLHdC	TripleSpec (Palomar)	sp	specB42.dat            	SOPS II e-12
+      51	A223                   	18 56 35.51	-16 09 11.13	dLHdC	TripleSpec (Palomar)	sp	specA223.dat           	C* 2679
+      52	A183                   	15 50 33.03	-39 44 11.28	dLHdC	Spex (IRTF)         	sp	specA183.dat           	SOPS IV e-67
+      53	A226                   	19 02 26.53	-22 28 45.12	dLHdC	TripleSpec (Palomar)	sp	specA226.dat           	2MASS J19022653-2228450
+      54	A166                   	13 03 13.56	-19 09 22.67	dLHdC	Spex (IRTF)         	sp	specA166.dat           	2MASS J13031356-1909225
+      55	C17                    	17 05 40.13	-26 16 56.66	dLHdC	TripleSpec (Palomar)	sp	specC17.dat            	2MASS J17054013-2616565
+      56	C528                   	17 00 47.61	-33 30 55.80	dLHdC	TripleSpec (Palomar)	sp	specC528.dat           	2MASS J17004761-3330556
+      57	B565                   	17 40 48.48	-20 32 20.15	dLHdC	TripleSpec (Palomar)	sp	specB565.dat           	2MASS J17404848-2032199
+      58	B566                   	17 42 23.74	-21 32 00.73	dLHdC	TripleSpec (Palomar)	sp	specB566.dat           	2MASS J17422375-2132006
+      59	B567                   	17 43 05.64	-22 24 57.42	dLHdC	TripleSpec (Palomar)	sp	specB567.dat           	2MASS J17430564-2224574
+      60	A798                   	18 33 57.03	+05 29 16.81	dLHdC	TripleSpec (Palomar)	sp	specA798.dat           	2MASS J18335703+0529170
+      61	F75                    	19 44 40.59	-34 54 42.33	dLHdC	TripleSpec (Palomar)	sp	specF75.dat            	2MASS J19444060-3454422
+      62	C38                    	18 11 43.31	-28 14 21.30	dLHdC	TripleSpec (Palomar)	sp	specC38.dat            	2MASS J18114332-2814211
+      63	C20                    	20 19 42.78	+05 04 04.04	dLHdC	TripleSpec (Palomar)	sp	specC20.dat            	C* 2891
+      64	C105                   	19 39 35.49	+34 34 47.19	dLHdC	TripleSpec (Palomar)	sp	specC105.dat           	TYC 2664-552-1
+      65	C542                   	18 57 19.95	+10 59 21.61	dLHdC	TripleSpec (Palomar)	sp	specC542.dat           	2MASS J18571994+1059217
+      66	B563                   	17 19 29.03	-24 28 33.88	dLHdC	TripleSpec (Palomar)	sp	specB563.dat           	2MASS J17192903-2428337
+      67	A814                   	18 59 28.34	+11 49 33.84	dLHdC	TripleSpec (Palomar)	sp	specA814.dat           	2MASS J18592834+1149340
+      68	C539                   	18 44 41.49	-14 15 02.21	dLHdC	TripleSpec (Palomar)	sp	specC539.dat           	2MASS J18444149-1415021
+      69	A811                   	18 54 17.25	-11 50 23.16	dLHdC	TripleSpec (Palomar)	sp	specA811.dat           	2MASS J18541725-1150230
+      70	HD137613               	15 27 48.32	-25 10 10.13	dLHdC	UKIRT               	sp	spechd137613.dat       	HD 137613
+      71	HD182040               	19 23 10.08	-10 42 11.54	dLHdC	GS-GNIRS            	sp	spechd182040.dat       	HD 182040
+      72	HD148839               	16 35 45.79	-67 07 36.70	dLHdC	GS-GNIRS            	sp	spechd148839.dat       	HD 148839
+      73	HD173409               	18 46 26.63	-31 20 32.08	dLHdC	GS-GNIRS            	sp	spechd173409.dat       	HD 173409
+

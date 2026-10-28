@@ -1,0 +1,40 @@
+{
+ "id": "T20-2880",
+ "ra": 291.7522088,
+ "dec": 13.0880064,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "MGAB-V2486",
+   "VariabilityType": "YSO",
+   "Period": null,
+   "MaxMag": "18.4 r",
+   "MinMag": "20.7 r",
+   "Discoverer": "Gabriel Murawski",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "2MASS J19270052+1305167",
+   "otype": "LP*",
+   "sep": 0.02037757521888058,
+   "nref": 2
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 20,
+ "w1_median": 9.16675,
+ "w1_range": 0.9090000000000007,
+ "w1_first": 9.206,
+ "w1_last": 9.286,
+ "w2_median": 8.08925,
+ "w2_range": 0.7010000000000005,
+ "w2_first": 8.1065,
+ "w2_last": 8.174,
+ "w1_w2_median": 1.0920000000000005,
+ "w1_w2_range": 0.20800000000000018,
+ "w1_w2_corr": 0.9676671118074301
+}

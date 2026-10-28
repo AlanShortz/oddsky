@@ -1,0 +1,40 @@
+{
+ "id": "T20-2036",
+ "ra": 91.3624831,
+ "dec": 25.0110225,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "ZTF J060526.99+250039.6",
+   "VariabilityType": "RVA",
+   "Period": "72.364767",
+   "MaxMag": "16.646 r",
+   "MinMag": "(0.836) r",
+   "Discoverer": "Zwicky Transient Facility (ZTF)",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "ZTF J060526.99+250039.6",
+   "otype": "WV*",
+   "sep": 0.04294678463048063,
+   "nref": 6
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 21,
+ "w1_median": 9.024,
+ "w1_range": 0.9570000000000007,
+ "w1_first": 9.368,
+ "w1_last": 9.458,
+ "w2_median": 7.789,
+ "w2_range": 0.8079999999999998,
+ "w2_first": 8.096499999999999,
+ "w2_last": 8.1435,
+ "w1_w2_median": 1.2389999999999999,
+ "w1_w2_range": 0.17900000000000027,
+ "w1_w2_corr": 0.9130363718529158
+}

@@ -1,0 +1,32 @@
+{
+ "id": "T20-2736",
+ "ra": 278.5293104,
+ "dec": -21.1531635,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "V1909 Sgr",
+   "VariabilityType": "RVB",
+   "Period": "61.9",
+   "MaxMag": "12.0 V",
+   "MinMag": "14.4 V",
+   "Discoverer": null,
+   "AUID": "000-BFG-312"
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "V* V1909 Sgr",
+   "otype": "WV*",
+   "sep": 0.10884929730018052,
+   "nref": 5
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 0.8667500000000001,
+ "w1_w2_range": 0.383,
+ "w1_w2_corr": 0.6902119356660266
+}

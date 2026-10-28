@@ -1,0 +1,41 @@
+{
+ "id": "T20-2980",
+ "ra": 347.9789904,
+ "dec": 59.7270707,
+ "verdict": "eclipse_like",
+ "vsx": [
+  {
+   "Name": "ZTF J231154.98+594336.6",
+   "VariabilityType": "BY",
+   "Period": "5.6643033",
+   "MaxMag": "19.589 r",
+   "MinMag": "(0.462) r",
+   "Discoverer": "Zwicky Transient Facility (ZTF)",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "ZTF J231154.98+594336.6",
+   "otype": "BY*",
+   "sep": 0.8540065098873272,
+   "nref": 3
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [],
+ "variability": {},
+ "neowise_status": "ok",
+ "n_visits": 1,
+ "w1_median": 12.2675,
+ "w1_range": 0.0,
+ "w1_first": 12.2675,
+ "w1_last": 12.2675,
+ "w2_median": 11.931000000000001,
+ "w2_range": 0.2900000000000009,
+ "w2_first": 11.786,
+ "w2_last": 12.076,
+ "w1_w2_median": 0.33649999999999913,
+ "w1_w2_range": null,
+ "w1_w2_corr": null
+}

@@ -24,6 +24,7 @@ export function caseCard(c) {
   lazyThumb(thumb, c.id, c.featured);
   return h('a', { class: 'case-card', href: link(`case/${encodeURIComponent(c.id)}`) },
     h('div', { class: 'card-top' }, h('span', { class: 'mono card-id' }, c.id), c.target ? h('span', { class: 'mono card-target' }, c.target) : null,
+      c.hunt ? h('span', { class: 'mono card-target', title: 'opened by a systematic hunt' }, c.hunt) : null,
       c.featured ? h('span', { class: 'card-featured' }, 'featured') : null),
     h('h2', { class: 'card-title' }, c.title || c.target || c.id),
     c.hook ? h('p', { class: 'card-hook' }, c.hook) : null,

@@ -1,0 +1,91 @@
+{
+ "id": "T20-2912",
+ "ra": 298.918742,
+ "dec": 18.0933839,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "MGAB-V2611",
+   "VariabilityType": "M",
+   "Period": "437:",
+   "MaxMag": "15.2 r",
+   "MinMag": "<18.4 r",
+   "Discoverer": "Gabriel Murawski",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "IRAS 19534+1757",
+   "otype": "LP*",
+   "sep": 0.042975818443064355,
+   "nref": 6
+  }
+ ],
+ "rcb_catalogues": [],
+ "neighbours_10arcsec": [
+  {
+   "source_id": 1821314283863960320,
+   "sep_arcsec": 1.65,
+   "phot_g_mean_mag": 19.193,
+   "flux_ratio_G": 0.027
+  },
+  {
+   "source_id": 1821314279542699648,
+   "sep_arcsec": 1.832,
+   "phot_g_mean_mag": 16.245,
+   "flux_ratio_G": 0.415
+  },
+  {
+   "source_id": 1821314283863960064,
+   "sep_arcsec": 4.983,
+   "phot_g_mean_mag": 17.596,
+   "flux_ratio_G": 0.12
+  },
+  {
+   "source_id": 1821314283872680576,
+   "sep_arcsec": 7.248,
+   "phot_g_mean_mag": 20.067,
+   "flux_ratio_G": 0.012
+  },
+  {
+   "source_id": 1821314279542670464,
+   "sep_arcsec": 9.998,
+   "phot_g_mean_mag": 18.591,
+   "flux_ratio_G": 0.048
+  }
+ ],
+ "variability": {
+  "summary": {
+   "num_selected_g_fov": 53,
+   "mean_mag_g_fov": 15.00925,
+   "std_dev_mag_g_fov": 0.8271758,
+   "range_mag_g_fov": 3.0380945,
+   "skewness_mag_g_fov": 0.37369132,
+   "in_vari_long_period_variable": true,
+   "in_vari_eclipsing_binary": false,
+   "in_vari_rrlyrae": false,
+   "in_vari_cepheid": false,
+   "in_vari_short_timescale": false,
+   "in_vari_agn": false,
+   "in_vari_classification_result": true
+  },
+  "long_period_variable": {
+   "frequency": 0.002467385500883,
+   "frequency_error": 9.344097e-05,
+   "amplitude": 1.0586127,
+   "median_delta_wl_rp": 6.632,
+   "is_cstar": false,
+   "period_days": 405.2872968744168
+  },
+  "classifier": {
+   "best_class_name": "LPV",
+   "best_class_score": 0.86532724
+  }
+ },
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 1.5449999999999997,
+ "w1_w2_range": 1.0509999999999997,
+ "w1_w2_corr": 0.46719548575339614
+}

@@ -1,0 +1,40 @@
+{
+ "id": "T20-2041",
+ "ra": 96.0676259,
+ "dec": 5.611109,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "V0538 Mon",
+   "VariabilityType": "UGZ/IW:|NL:",
+   "Period": null,
+   "MaxMag": "12.0 V",
+   "MinMag": "15.4 V",
+   "Discoverer": "Cuno Hoffmeister",
+   "AUID": "000-BDV-563"
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "UCAC4 479-019568",
+   "otype": "HS?",
+   "sep": 0.046767095605511545,
+   "nref": 4
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 11,
+ "w1_median": 11.058,
+ "w1_range": 1.4030000000000005,
+ "w1_first": 10.246,
+ "w1_last": 11.058,
+ "w2_median": 10.451,
+ "w2_range": 1.9220000000000006,
+ "w2_first": 9.5535,
+ "w2_last": 10.568000000000001,
+ "w1_w2_median": 0.9459999999999997,
+ "w1_w2_range": 0.8010000000000019,
+ "w1_w2_corr": -0.7005896598175668
+}

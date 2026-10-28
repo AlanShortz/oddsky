@@ -1,0 +1,32 @@
+{
+ "id": "T20-1432",
+ "ra": 316.8508399,
+ "dec": 45.0461506,
+ "verdict": "rcb_like",
+ "vsx": [
+  {
+   "Name": "MGAB-V2943",
+   "VariabilityType": "M",
+   "Period": "430.6718345",
+   "MaxMag": "18.9 r",
+   "MinMag": "<21.2 r",
+   "Discoverer": "Gabriel Murawski",
+   "AUID": null
+  }
+ ],
+ "simbad": [
+  {
+   "main_id": "MSX6C G087.0547-01.6535",
+   "otype": "Mi*",
+   "sep": 0.119509636557992,
+   "nref": 4
+  }
+ ],
+ "rcb_catalogues": [],
+ "gaia_error": "single positional indexer is out-of-bounds",
+ "neowise_status": "ok",
+ "n_visits": 0,
+ "w1_w2_median": 2.1762499999999996,
+ "w1_w2_range": 1.6485,
+ "w1_w2_corr": 0.22016158380272724
+}
