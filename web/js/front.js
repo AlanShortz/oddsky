@@ -81,6 +81,8 @@ function vision() {
 const TOUR = [
   { id: 'OS-0014', fov: 24, from: 2016.85, to: 2017.75, rate: 0.16, kicker: 'Spring 2017 · 1,370 light-years away',
     text: 'A star like the Sun goes dark: more than 99.5% of its light gone for about 95 days. Afterwards it glows in the infrared. As far as we can find, nobody had reported it.' },
+  { id: 'OS-0015', fov: 28, from: 2019.0, to: 2023.3, rate: 0.95, kicker: 'Every 385.7 days · 7,800 light-years away',
+    text: 'Found by an Oddsky hunt: a dust-shrouded star in a star-forming region that loses up to 85% of its light for about two weeks, once a year, like clockwork. Something dusty orbits it. Nobody had reported the eclipses.' },
   { id: 'OS-0001', fov: 28, from: 2020.3, to: 2023.7, rate: 0.6, kicker: '2021 · ASASSN-21qj',
     text: 'The star that glowed before it dimmed. Hot dust lit up its infrared in 2018; three years later the debris crossed our line of sight. Probably the wreckage of a planetary collision.' },
   { id: 'OS-0003', fov: 28, from: 2024.4, to: 2026.4, rate: 0.45, kicker: 'November 2025 · EE Cep',
