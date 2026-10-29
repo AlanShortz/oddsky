@@ -420,8 +420,8 @@
   },
   {
    "id": "OS-0017",
-   "title": "A halo giant doubled in brightness in spring 2020 and faded over six months: a microlensing event",
-   "hook": "Found in Oddsky hunt H-0007 among faint stars: a one-visit, colour-neutral 2x brightening in NEOWISE (2020 Apr 9-10). ATLAS shows one smooth event, x2.4 on Mar 11 and gone by October; ZTF catches the tail. Not in VSX, TNS, SIMBAD or the Gaia alerts.",
+   "title": "A halo giant brightened at least 2.4 times in March 2020 and faded over six months: a microlensing event",
+   "hook": "Found in Oddsky hunt H-0007 among faint stars: a one-visit, colour-neutral 2x brightening in NEOWISE (2020 Apr 9-10). ATLAS shows one smooth event, x2.4 on Mar 11 and within 2% of normal by October; ZTF catches the tail. The peak fell in a gap. Not in VSX, TNS, SIMBAD or the Gaia alerts.",
    "status": "reproduced",
    "target": "Gaia DR3 6772245406602788608",
    "series": [
