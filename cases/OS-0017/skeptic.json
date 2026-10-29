@@ -1,0 +1,124 @@
+{
+  "generated_at": "2026-10-29T21:54:54+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "0 fail, 2 warn, 9 pass, 0 skipped",
+  "counts": {
+    "fail": 0,
+    "warn": 2,
+    "pass": 9,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "pass",
+      "finding": "no Gaia source within 6.1\"",
+      "numbers": {
+        "radius_arcsec": 6.1
+      }
+    },
+    {
+      "id": "blend_ztf",
+      "title": "Neighbours inside the ZTF beam (2.0\")",
+      "status": "pass",
+      "finding": "no Gaia source within 2.0\"",
+      "numbers": {
+        "radius_arcsec": 2.0
+      }
+    },
+    {
+      "id": "blend_atlas",
+      "title": "Neighbours inside the ATLAS beam (8.0\")",
+      "status": "pass",
+      "finding": "no Gaia source within 8.0\"",
+      "numbers": {
+        "radius_arcsec": 8.0
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "268 exposures; cuts removed up to 89 (33%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 268,
+        "removed_per_band": {
+          "W1": 89,
+          "W2": 89
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "pass",
+      "finding": "optical data from 2 independent source(s): ATLAS (3271), ZTF (770)",
+      "numbers": {
+        "n_sources": 2,
+        "top_sources": {
+          "ATLAS": 3271,
+          "ZTF": 770
+        }
+      }
+    },
+    {
+      "id": "onset_atlas_ATLAS_o",
+      "title": "Was the start seen? (ATLAS ATLAS_o)",
+      "status": "pass",
+      "finding": "the 1 deepest dip(s) (> 0.1 mag vs a 600-day baseline) all have an observed ingress",
+      "numbers": {
+        "n_events": 1
+      }
+    },
+    {
+      "id": "alias_atlas_ATLAS_o",
+      "title": "Periodicity vs survey rhythms (ATLAS ATLAS_o)",
+      "status": "warn",
+      "finding": "strongest period 354.46 d coincides with: matches spectral-window peak at 360.68 d; year (seasonal gaps)",
+      "numbers": {
+        "top_period_days": 354.4586303045218,
+        "power": 0.13013976106087244
+      }
+    },
+    {
+      "id": "alias_neowise_exp_W2",
+      "title": "Periodicity vs survey rhythms (NEOWISE_EXP W2)",
+      "status": "pass",
+      "finding": "strongest period 10.71 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 10.708027216605574,
+        "power": 0.32366050173273647
+      }
+    },
+    {
+      "id": "alias_ztf_ZTF_r",
+      "title": "Periodicity vs survey rhythms (ZTF ZTF_r)",
+      "status": "warn",
+      "finding": "strongest period 1133.17 d coincides with: matches spectral-window peak at 1133.17 d",
+      "numbers": {
+        "top_period_days": 1133.1736834648273,
+        "power": 0.1323457319093551
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 1.00 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 0.9996273
+      }
+    }
+  ]
+}

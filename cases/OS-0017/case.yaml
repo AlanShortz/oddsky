@@ -1,0 +1,180 @@
+id: OS-0017
+title: 'A halo giant doubled in brightness in spring 2020 and faded over six months: a microlensing event'
+hook: 'Found in Oddsky hunt H-0007 among faint stars: a one-visit, colour-neutral 2x brightening in NEOWISE
+  (2020 Apr 9-10). ATLAS shows one smooth event, x2.4 on Mar 11 and gone by October; ZTF catches the tail.
+  Not in VSX, TNS, SIMBAD or the Gaia alerts.'
+status: reproduced
+target:
+  name: Gaia DR3 6772245406602788608
+  ra: 293.471115
+  dec: -21.3037472
+  aliases: []
+  gaia_source_id: 6772245406602788608
+summary: 'A K giant in the Galactic halo, beyond about 6 kpc (l = 18, b = -19), brightened once in 2020:
+  x2.4 in ATLAS on Mar 11, x2.0 in both ATLAS and NEOWISE W1/W2 on Apr 9-10, fading through ZTF''s June-July
+  tail, within 2% of normal by October. The extra light has the star''s own colour from g to 4.6 microns.
+  Microlensing with annual parallax fits (peak 2020 Mar 17-22 at about x2.7-2.9, tE 40-55 d; the peak
+  itself fell in a gap and is unobserved); a lens without parallax leaves an asymmetry. Two referee passes:
+  P(mundane) = 0.02. Nothing similar in 2014-2026. Not in VSX, TNS, SIMBAD, the Gaia alerts or KMTNet.
+  Gaia DR5 will hold three transits during the event.'
+claims:
+- id: C1
+  text: 'In the NEOWISE visit of 2020 Apr 9-10 the star was 0.744 mag brighter in W1 (12.309 against 13.053)
+    and 0.731 mag brighter in W2 (12.387 against 13.118): a factor of 1.98, equal in both bands. 2,021
+    stars within 20'' in the same frames are unchanged (referee, hunts/H-0007/reviews/claude-referee-J193353-2026-10-29.md).'
+  tag: observed
+  calls:
+  - K1
+  - K2
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+- id: C2
+  text: Apart from that visit NEOWISE W1 is flat over 20 visits (2014-2024), robust scatter 0.025 mag.
+  tag: computed
+  calls:
+  - K3
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+- id: C3
+  text: 'ATLAS o contains exactly one excursion in 2015-2026: brighter by 0.82 mag on 2020 Mar 11, the
+    first night of the season, then declining for 57 days above the 0.2-mag threshold. On 2020 Apr 9-10
+    ATLAS o is 0.70 mag above its 2015-2019 median (22 sigma), and ATLAS c on Apr 22 is brightened by
+    a similar amount, so the change is achromatic.'
+  tag: observed
+  calls:
+  - K4
+  - K5
+  - K10
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+- id: C4
+  text: ZTF r and g in 2020 Jun 15 - Jul 25 are 0.11 and 0.10 mag brighter than in 2018-2019 (9-10 sigma).
+    After correction with 12 colour-matched stars in the same exposures, the star is 0.17 mag bright on
+    Jun 18 and 0.08-0.10 on Jul 14-21; it is the only one of 84 stars in its CCD quadrant to move.
+  tag: observed
+  calls:
+  - K7
+  - K8
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+- id: C5
+  text: No Gaia DR3 source within 9.7"; the brightest within 30" (G = 18.3 at 17.8") supplies under 7%
+    of the target's G flux.
+  tag: observed
+  calls:
+  - K9
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+- id: C6
+  text: A point-source point-lens fit to nightly ATLAS c+o (scripts/hunt_h0007_j193353_fit.py, outside
+    the Oddsky tools), with no blending or parallax, gives t0 = 2020 Mar 17, tE = 63 d, u0 = 0.43, A_max
+    = 2.5 (chi2/dof 352/190, residual rms 2%). Without fitting them, it predicts the NEOWISE visit at
+    x1.94 (observed x1.98) and the ZTF tail at x1.12 and x1.06 (observed x1.17 and x1.09). ATLAS has no
+    2020 data before Mar 11 or between Mar 11 and Apr 8, so the peak date and height are poorly constrained.
+  tag: computed
+  calls: []
+  retracted: 'second referee (claude-referee-J193353-atlas-2026-10-29): a point lens without parallax
+    leaves a systematic rise/decline asymmetry, so its t0, tE and u0 (and their covariance errors) are
+    biased; replaced by C10'
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+- id: C7
+  text: The extra light has the giant's own colour from ZTF g to WISE W2. A flare, accretion outburst
+    or nova would be bluer and would not decline smoothly over six months.
+  tag: inferred
+  calls:
+  - K1
+  - K2
+  - K7
+  - K8
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+- id: C8
+  text: Not found (2026-10-29) in VSX, the ASAS-SN, ZTF, ATLAS or Gaia DR3 variable catalogues, TNS (60"),
+    SIMBAD (CfA mirror), the Gaia Science Alerts, KMTNet 2020 or a web search. Gaia transited the star
+    on 2020 Feb 28, Mar 12 and Apr 17 without an alert; those epochs will be in DR5.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+- id: C9
+  text: 'The source is a K giant (BP-RP 1.26; Teff ~4,900 K with map extinction), beyond ~6 kpc from its
+    parallax, and with a proper motion of 12.5 mas/yr moving at v_t > 350 km/s: probably a halo giant
+    about 2.7 kpc below the Galactic plane.'
+  tag: inferred
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+- id: C10
+  text: 'The peak fell in ATLAS''s 2020 gap (Mar 11 - Apr 8) and is unobserved. A point lens without parallax
+    leaves the same asymmetry in ATLAS, NEOWISE and ZTF: the 2019 rising wing 2-3% below the model and
+    the Jun-Sep 2020 tail 2-5% above. Annual parallax removes it (joint chi2 715 -> 460). Parallax point
+    lens, 95% ranges (second referee): t0 = 2020 Mar 17-22, tE = 40-55 d, |u0| = 0.25-0.40, piE = 0.39-0.80,
+    peak x2.66-2.94 observed, source fraction 0.6-1.04 per survey. Exponential and power-law declines
+    fit the decline far worse (chi2 413 and 728 against 79). ATLAS c/o excess ratio 1.05 +/- 0.03: achromatic
+    to ~5% from g to W2. Outside the Oddsky tools: hunts/H-0007/reviews/claude-referee-J193353-atlas-2026-10-29/.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-29T22:04:50+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A foreground star passed within ~0.4 Einstein radii of the halo giant, magnifying it about
+    2.5 times around 2020 mid-March.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C6
+  - C7
+  conflicts: []
+  would_falsify: A repeat brightening; Gaia DR5 epoch photometry flat on 2020 Feb 28 / Mar 12 / Apr 17,
+    or BP and RP changing by different amounts.
+  status: live
+  confidence: 0.95
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+- id: H2
+  klass: eruptive
+  statement: An outburst of an unseen companion, or a flare.
+  supports: []
+  conflicts:
+  - C7
+  - C6
+  would_falsify: A colour change during the event, or a repeat.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: A NEOWISE, ATLAS or ZTF artifact.
+  supports: []
+  conflicts:
+  - C1
+  - C3
+  - C4
+  would_falsify: 'Already falsified: three instruments see the same event.'
+  status: rejected
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+- id: H4
+  klass: artifact_blend
+  statement: A neighbouring source brightened.
+  supports: []
+  conflicts:
+  - C5
+  - C1
+  would_falsify: 'Already falsified: no source within 9.7"; NEOWISE centroid fixed.'
+  status: rejected
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-29T21:55:38+00:00'
+predictions: []
+literature: []
+hunt: H-0007
+featured: false
+created_at: '2026-10-29T21:54:08+00:00'
