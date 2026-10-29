@@ -29,7 +29,7 @@ TARGETS = {
                "frames brighter than m ~ 12.2 are near ATLAS saturation (the 2017 Sep 11-13 peak nights)"]),
     "J193353": dict(
         name="Gaia DR3 6772245406602788608", ra=293.471115, dec=-21.3037472, task="5271652", chi_max=10.0,
-        title="A halo giant doubled in brightness in spring 2020 and faded over six months: a microlensing event",
+        title="A halo giant brightened at least 2.4 times in March 2020 and faded over six months: a microlensing event",
         hook="Found in Oddsky hunt H-0007 among faint stars: a one-visit, colour-neutral 2x brightening in NEOWISE (2020 Apr 9-10). "
         "ATLAS shows one smooth event, x2.4 on Mar 11 and gone by October; ZTF catches the tail. Not in VSX, TNS, SIMBAD or the Gaia alerts.",
         notes=["default chi_n cut (chi_max=10): 83% of frames pass"]),
