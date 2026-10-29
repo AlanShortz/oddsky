@@ -1,0 +1,13 @@
+data,model,N,k,chi2,BIC,pred_58007,pred_58009
+without peak nights (m > 12.2),static,75,3,453.9,466.9,11.1,16.09
+without peak nights (m > 12.2),parallax,75,5,89.3,110.9,5.95,6.64
+without peak nights (m > 12.2),acceleration,75,5,78.7,100.3,6.05,6.76
+without peak nights (m > 12.2),acc+jerk,75,7,73.6,103.9,6.43,7.28
+without peak nights (m > 12.2),xallarap P=180,75,8,77.5,112.1,6.89,8.24
+without peak nights (m > 12.2),xallarap P=365,75,8,74.1,108.7,6.6,7.69
+with peak nights (all),static,77,3,605.0,618.0,6.38,6.96
+with peak nights (all),parallax,77,5,117.8,139.5,6.19,7.04
+with peak nights (all),acceleration,77,5,109.9,131.7,6.2,7.02
+with peak nights (all),acc+jerk,77,7,106.6,137.0,6.21,7.03
+with peak nights (all),xallarap P=180,77,8,95.2,130.0,6.12,7.14
+with peak nights (all),xallarap P=365,77,8,94.0,128.8,6.14,7.12
