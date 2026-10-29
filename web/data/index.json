@@ -393,6 +393,30 @@
    "n_predictions": 2,
    "featured": false,
    "hunt": "H-0004"
+  },
+  {
+   "id": "OS-0016",
+   "title": "A red giant toward the Galactic anticentre brightened sevenfold for a few weeks in 2017: a microlensing event",
+   "hook": "Found in Oddsky hunt H-0007 as a one-visit, colour-neutral 2.7x brightening in NEOWISE (2017 Aug 27-28); ATLAS shows a single smooth event peaking near 2017 Sep 16. Not in VSX, TNS, the Gaia alerts or Gaia DR3.",
+   "status": "reproduced",
+   "target": "Gaia DR3 170329679884731008",
+   "series": [
+    "ATLAS:ATLAS_H",
+    "ATLAS:ATLAS_c",
+    "ATLAS:ATLAS_o",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "NEOWISE_EXP:W1",
+    "NEOWISE_EXP:W2",
+    "ZTF:ZTF_g",
+    "ZTF:ZTF_i",
+    "ZTF:ZTF_r"
+   ],
+   "n_claims": 9,
+   "n_hypotheses": 4,
+   "n_predictions": 1,
+   "featured": false,
+   "hunt": "H-0007"
   }
  ],
  "scorecards": [

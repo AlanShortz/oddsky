@@ -25,6 +25,7 @@ CLASSES = {
     "pulsation": "Intrinsic pulsation (Miras, semiregulars, long-period variables).",
     "eruptive": "Outbursts, flares, accretion events, novae.",
     "rotation_spots": "Starspots carried around by rotation.",
+    "microlensing": "A foreground star or remnant passes almost exactly in front: achromatic, smooth, never repeats.",
     "artifact_instrumental": "The spacecraft, detector or pipeline did it.",
     "artifact_blend": "A neighbour did it: the signal is real but belongs to another star.",
     "normal": "Nothing to explain at the precision of the data.",

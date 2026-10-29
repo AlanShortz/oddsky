@@ -1,0 +1,48 @@
+{
+  "gaia": {
+    "G": 14.006731,
+    "bp_rp": 1.5629902,
+    "parallax_mas": 0.3295250672376233,
+    "parallax_over_error": 15.345882,
+    "ruwe": 0.99362534,
+    "teff_gspphot": 4818.3125,
+    "non_single_star": 0,
+    "phot_variable_flag": "NOT_AVAILABLE",
+    "distance_pc": 3034.670498311109,
+    "abs_G": 1.596173286590826,
+    "sep_from_target_coords_arcsec": 0.037439424224624
+  },
+  "gaia_variability": {},
+  "neighbors": [
+    {
+      "source_id": 170329679881926272,
+      "sep_arcsec": 6.3497,
+      "phot_g_mean_mag": 19.6019,
+      "bp_rp": 1.3064,
+      "dG": 5.5952,
+      "flux_ratio_G": 0.0058,
+      "parallax": 0.2004,
+      "ruwe": 1.0096
+    },
+    {
+      "source_id": 170329611165256192,
+      "sep_arcsec": 15.3276,
+      "phot_g_mean_mag": 15.9088,
+      "bp_rp": 1.4603,
+      "dG": 1.9021,
+      "flux_ratio_G": 0.1735,
+      "parallax": 0.2521,
+      "ruwe": 0.997
+    },
+    {
+      "source_id": 170329606866456832,
+      "sep_arcsec": 28.9664,
+      "phot_g_mean_mag": 19.875,
+      "bp_rp": 1.456,
+      "dG": 5.8682,
+      "flux_ratio_G": 0.0045,
+      "parallax": 0.4372,
+      "ruwe": 1.006
+    }
+  ]
+}
