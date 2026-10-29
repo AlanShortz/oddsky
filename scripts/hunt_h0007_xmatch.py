@@ -34,6 +34,8 @@ for i in range(0, len(a), 15):
             m = g
         n = len(m)
         best = m.iloc[0].to_dict() if n else {}
+        if n:  # 19-digit Gaia ids lose precision as float64 once a no-match row makes the column float: keep them as text
+            best["source_id"] = str(int(m.source_id.iloc[0]))
         rows.append({"cntr": r.cntr, "n_gaia_3as": n, **{f"g_{k}": v for k, v in best.items()}})
     time.sleep(1)
 x = pd.DataFrame(rows)
