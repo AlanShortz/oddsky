@@ -111,6 +111,8 @@ explained by any catalogue.**
   gravitational microlensing event: a foreground star, probably a faint M dwarf, passed almost exactly in front of it. Two referees
   checked it. The second cut our parallax claim down: the light curve is lopsided as parallax predicts, but the lens mass is not
   measured. Gaia DR4 (December 2026) scanned the star three times during the event, and a sealed prediction says what it will show.
+  A second pass over fainter stars found another: **[OS-0017](cases/OS-0017)**, a halo giant more than 6 kpc away that brightened
+  at least 2.4 times in March 2020, seen by NEOWISE, ATLAS and ZTF.
 - **One hunt parked**: new R CrB stars (H-0003). Gaia DR3 has already been mined by the experts, and our candidates were a VY
   Scl binary, a Mira, an S star and a T Tauri star.
 

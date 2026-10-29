@@ -84,17 +84,19 @@ contaminates those too.
 `infra/gcp/neowise_keep.py`; 3,610 of 3,635 pixels; the job ended FAILED because tasks on 25 dense pixels did not finish) and applying `hunt_h0007_lens.py` unchanged finds 39 isolated
 brightenings. 37 of them are also in the exposure-level list, J193353 among them.
 
-**A second microlensing candidate: [J193353.06-211813.4](J193353.md)** (Gaia DR3 6772245406602788608; l = 18.0°, b = −18.6°). A K giant,
-probably in the halo: BP−RP 1.26, Teff ≈ 4,900 K with map extinction, more than ≈ 6 kpc away, v_t ≳ 350 km/s.
-- *NEOWISE:* on 2020 Apr 9-10, 12 frames from 11 scans were ×1.98 brighter in both bands (ΔW1 = ΔW2 = −0.74). 2,021 stars within 20' in
-  the same frames are unchanged; the target is the only one beyond −0.3 mag.
-- *ZTF:* corrected with 12 colour-matched stars in the same exposures, the star is 0.17 mag bright on Jun 18 and 0.08-0.10 on Jul 14-21,
-  equally in g and r. It is the only one of 84 stars in its CCD quadrant to move. In the same calendar window in every other year
-  (2018-2025) it sits at 0.00 ± 0.01 ([figure](figures/J193353.png)).
-- *Fit:* a point lens fitted to both gives t0 = 2020 Apr 10 (Apr 2-17), tE = 56 d (48-62 d), A_max ≈ 1.95, with no blending.
-- *Referee* ([report](reviews/claude-referee-J193353-2026-10-29.md)): P(mundane) = 0.08. Not in VSX, TNS, SIMBAD, the Gaia alerts or
-  KMTNet 2020. Gaia transited it on 2020 Feb 28, Mar 12 and Apr 17 without an alert; those epochs will be in DR5, not DR4.
-- *Status:* candidate. ATLAS, which should cover the March-May peak, is queued.
+**A second microlensing event: [J193353.06-211813.4](J193353.md)**, now case [OS-0017](../../cases/OS-0017) (Gaia DR3
+6772245406602788608; l = 18.0°, b = −18.6°). A K giant, probably in the halo: Teff ≈ 4,900 K with map extinction, beyond ≈ 6 kpc,
+v_t ≳ 350 km/s.
+- *NEOWISE:* on 2020 Apr 9-10 it was ×1.98 brighter in both bands, and the only one of 2,021 stars in those frames to change.
+- *ATLAS* confirmed it (task 5271652): one event on 88 nights of 2020, in two units and both bands. ×2.42 on Mar 11 (the first night of
+  the season), ×1.99 on Apr 10 (the NEOWISE night), ×1.30 in mid-May, ×1.05 in September, nothing else in 2015-2026.
+- *ZTF* catches the June-July tail; it is the only star of 84 in its quadrant to move ([figure](figures/J193353.png)).
+- *Fit:* the peak fell in an ATLAS gap and is unobserved. A lens with annual parallax fits all three surveys: peak 2020 Mar 17-22 at
+  about ×2.7-2.9, tE 40-55 d. A lens without parallax leaves an asymmetry.
+- *Referees:* [first](reviews/claude-referee-J193353-2026-10-29.md) P(mundane) = 0.08, then
+  [second, with ATLAS](reviews/claude-referee-J193353-atlas-2026-10-29.md) 0.02. Status: **reproduced**.
+- The first referee's prediction for ATLAS, made from NEOWISE and ZTF, placed the peak on Apr 10 at ×1.95. ATLAS showed it about three
+  weeks earlier and higher.
 
 ## The candidate: a microlensing event toward the Galactic anticentre (reproduced by ATLAS; case [OS-0016](../../cases/OS-0016))
 

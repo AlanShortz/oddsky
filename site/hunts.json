@@ -6,11 +6,11 @@
       "title": "One night in the infrared",
       "question": "NEOWISE looked at every star for about a day, twice a year, for ten years. Which ordinary stars were dramatically different on just one of those days?",
       "date": "2026-10-29",
-      "state": "one event reproduced, refereed twice",
+      "state": "two events reproduced, refereed",
       "scale": "79,191 NEOWISE light curves (W1 < 13, |b| ≥ 10°) · IRSA single exposures, Gaia DR3, ZTF, ATLAS, TESS",
       "funnel": [[79191, "stars with 10+ NEOWISE visits"], [194, "one-visit events, equal in W1 and W2"], [99, "stellar colours, not at the first or last visit"], [41, "not already in VSX"], [1, "unexplained after vetting"]],
-      "verdict": "The method works: blind, it found OS-0014, a dozen dwarf novae in outburst and two microlensing events Gaia had already caught. What nobody had reported: a red giant toward the Galactic anticentre that brightened sevenfold for a few weeks in 2017, seen by NEOWISE and ATLAS on the same night. It is a microlensing event. The lens mass is not measured; Gaia DR4 should settle it. A pass over 7,804 fainter stars turned up a second candidate: a halo giant that doubled in brightness in April 2020, seen by NEOWISE and, three months later, still fading in ZTF.",
-      "cases": ["OS-0016"]
+      "verdict": "The method works: blind, it found OS-0014, a dozen dwarf novae in outburst and two microlensing events Gaia had already caught. What nobody had reported: a red giant toward the Galactic anticentre that brightened sevenfold for a few weeks in 2017, seen by NEOWISE and ATLAS on the same night. It is a microlensing event. The lens mass is not measured; Gaia DR4 should settle it. A pass over 7,804 fainter stars turned up a second event: a halo giant that brightened at least 2.4 times in March 2020, seen by NEOWISE, ATLAS and ZTF.",
+      "cases": ["OS-0016", "OS-0017"]
     },
     {
       "id": "H-0005",
@@ -129,6 +129,11 @@
       "href": "/hunt/H-0007",
       "title": "A dwarf nova we briefly thought was new",
       "text": "Our variable-star catalogue lookups started returning a CAPTCHA page after ~150 queries, and our script read it as 'no match'. For an hour DX And, a dwarf nova known for decades, looked like a discovery. Lookups now go through a mirror and report errors as errors."
+    },
+    {
+      "case": "OS-0017",
+      "title": "A peak three weeks off",
+      "text": "From NEOWISE and the tail in ZTF, a referee predicted when ATLAS would show this event peaking, and how bright. ATLAS put the peak three weeks earlier and higher. The model had no parallax, which bends the light curve; with it, all three surveys agree."
     }
   ]
 }
