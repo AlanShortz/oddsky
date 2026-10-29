@@ -9,7 +9,7 @@
       "state": "one event reproduced, refereed twice",
       "scale": "79,191 NEOWISE light curves (W1 < 13, |b| ≥ 10°) · IRSA single exposures, Gaia DR3, ZTF, ATLAS, TESS",
       "funnel": [[79191, "stars with 10+ NEOWISE visits"], [194, "one-visit events, equal in W1 and W2"], [99, "stellar colours, not at the first or last visit"], [41, "not already in VSX"], [1, "unexplained after vetting"]],
-      "verdict": "The method works: blind, it found OS-0014, a dozen dwarf novae in outburst and two microlensing events Gaia had already caught. What nobody had reported: a red giant toward the Galactic anticentre that brightened sevenfold for a few weeks in 2017, seen by NEOWISE and ATLAS on the same night. It is a microlensing event. The lens mass is not measured; Gaia DR4 should settle it.",
+      "verdict": "The method works: blind, it found OS-0014, a dozen dwarf novae in outburst and two microlensing events Gaia had already caught. What nobody had reported: a red giant toward the Galactic anticentre that brightened sevenfold for a few weeks in 2017, seen by NEOWISE and ATLAS on the same night. It is a microlensing event. The lens mass is not measured; Gaia DR4 should settle it. A pass over 7,804 fainter stars turned up a second candidate: a halo giant that doubled in brightness in April 2020, seen by NEOWISE and, three months later, still fading in ZTF.",
       "cases": ["OS-0016"]
     },
     {

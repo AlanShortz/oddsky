@@ -61,6 +61,41 @@ The two deepest uncatalogued fades are **artifacts**: J191517.51-230501.6 and J1
 RUWE 22) that NEOWISE splits into two detections in some exposures. In the event visit the AllWISE association flipped to the faint
 component. Visible in the single exposures as two detections per frame within 2.5" and reduced χ² of 30-200 in every visit.
 
+## Pass 3: the faint stars, W1 13-15 (`scripts/hunt_h0007_faint_fetch.py`, `hunt_h0007_faint.py`; 2026-10-29)
+
+sky2 stored visit light curves only for W1 < 13, but `sky2_features` records each star's W1/W2 peak-to-peak. Of 64,451,651 stars with
+13 ≤ W1 < 15 and ≥ 10 visits, 7,804 have W1 and W2 swings ≥ 0.4 mag, stellar colours (|W1−W2| < 0.4) and a quiet first three visits. For
+each, every NEOWISE single exposure within 3" came from IRSA (Gator). The same one-visit test was then applied with faint-star
+thresholds (≥ max(0.3 mag, 6σ) in both bands, achromatic to 0.1 + 0.15|ΔW|), plus the exposure-level traps this hunt had met.
+
+| | stars |
+|---|---|
+| events | 64 (55 brightenings, 9 fades) |
+| clean: ≤ 20% of event-visit frames with a W1/W2 artifact flag, χ² ratio < 3, no split detections, not extended | 30 (22 brightenings, 8 fades) |
+| clean brightenings already in VSX | 11: ten cataclysmic variables in outburst (IR Gem, SW UMa, OY Car, TU Men, AR UMa, ASASSN-14cd, ASASSN-14hd, ASASSN-17oz, Mis V1448, CSS 090201:090210-113032) and a semiregular |
+| the rest | 6 optically faint, very red sources (G ≈ 20-21: quasars), 2 hot LMC stars (Be disks), 1 Orion M dwarf (a young star), 1 borderline K dwarf, and **J193353.06-211813.4** |
+
+**Most faint brightenings are latents.** 33 of the 55 sit in a visit whose frames carry persistence or halo flags (cc_flags P/H/D) in
+20-80% of exposures, against about 0% in every other visit. Their χ² is 3-13 times the star's normal. Latent images of bright stars
+crossing a faint star's position mimic a one-day, roughly grey brightening. The visit medians keep only unflagged frames, but the latent
+contaminates those too.
+
+**Cross-check.** Re-reading NEOWISE from the AWS Parquet for the same 7,804 stars on Google Cloud (run `sky2keep`,
+`infra/gcp/neowise_keep.py`; 3,610 of 3,635 pixels; the job ended FAILED because tasks on 25 dense pixels did not finish) and applying `hunt_h0007_lens.py` unchanged finds 39 isolated
+brightenings. 37 of them are also in the exposure-level list, J193353 among them.
+
+**A second microlensing candidate: [J193353.06-211813.4](J193353.md)** (Gaia DR3 6772245406602788608; l = 18.0°, b = −18.6°). A K giant,
+probably in the halo: BP−RP 1.26, Teff ≈ 4,900 K with map extinction, more than ≈ 6 kpc away, v_t ≳ 350 km/s.
+- *NEOWISE:* on 2020 Apr 9-10, 12 frames from 11 scans were ×1.98 brighter in both bands (ΔW1 = ΔW2 = −0.74). 2,021 stars within 20' in
+  the same frames are unchanged; the target is the only one beyond −0.3 mag.
+- *ZTF:* corrected with 12 colour-matched stars in the same exposures, the star is 0.17 mag bright on Jun 18 and 0.08-0.10 on Jul 14-21,
+  equally in g and r. It is the only one of 84 stars in its CCD quadrant to move. In the same calendar window in every other year
+  (2018-2025) it sits at 0.00 ± 0.01 ([figure](figures/J193353.png)).
+- *Fit:* a point lens fitted to both gives t0 = 2020 Apr 10 (Apr 2-17), tE = 56 d (48-62 d), A_max ≈ 1.95, with no blending.
+- *Referee* ([report](reviews/claude-referee-J193353-2026-10-29.md)): P(mundane) = 0.08. Not in VSX, TNS, SIMBAD, the Gaia alerts or
+  KMTNet 2020. Gaia transited it on 2020 Feb 28, Mar 12 and Apr 17 without an alert; those epochs will be in DR5, not DR4.
+- *Status:* candidate. ATLAS, which should cover the March-May peak, is queued.
+
 ## The candidate: a microlensing event toward the Galactic anticentre (reproduced by ATLAS; case [OS-0016](../../cases/OS-0016))
 
 **[J040025.77+323527.4](J040025.md)** (Gaia DR3 170329679884731008; l = 162.8°, b = −15.3°). A red-clump K giant (Teff 4,820 K,
@@ -86,13 +121,17 @@ astrophysical (0.95) and most likely annual parallax (0.80). Only π_E,∥ ≈ 0
   J181519.10+093636.5 (a giant; ZTF dips in pairs ~25 d apart, repeating every ~324 d), J173006.47-101342.6 (a giant; ZTF dips 2018-2024,
   P ≈ 222 d or an alias), J160841.91-105450.3 (F star; six deep ZTF points), J233050.98-092126.7. These are probably uncatalogued
   eclipsing binaries. Periods are ambiguous with ZTF's sampling (`work/ztf_*.csv`).
-- The search is complete only for W1 < 13 (stored light curves). Extending it to W1 13-15 (about five times more stars) means
-  re-reading NEOWISE for the stars whose `w1_ptp`/`w2_ptp` in `sky2_features` exceed 0.4 with a quiet baseline.
+- Pass 3 covers W1 13-15 only for stars whose catalogue swing is ≥ 0.4 mag in both bands. Smaller events in faint stars (A < 1.45)
+  still need a full re-read of NEOWISE.
 - **DX And** (a known U Gem dwarf nova): TESS and ATLAS independently put its orbital period at 0.440972 d, not the catalogued
   0.440502 d (a likely one-year alias in the old spectroscopy). It is **in outburst now** (ATLAS, 2026 Oct 25-26). See [`DX_And.md`](DX_And.md).
 
 ## Lessons for the sky pass
 
+- For faint stars, latents (cc_flags P/H) are the main source of one-visit "brightenings". Measure the share of flagged frames in the
+  event visit against the other visits; unflagged frames from that visit are not clean either.
+- 19-digit ids (AllWISE cntr, Gaia source_id) lose precision as float64. It happened twice here: the sky1 bug, and a cross-match
+  table whose Gaia ids became float once a row had no match. Keep ids as int64 or text end to end.
 - Query the mirror. The brightening run found more physics than the dimming run, and its dominant content (dwarf novae) was a
   surprise.
 - A NEOWISE "fade" in a close pair is usually the association flipping between deblended components. Check for two detections

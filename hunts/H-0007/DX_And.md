@@ -6,18 +6,25 @@ blind, as a ×3.4 grey NEOWISE brightening on 2018 Dec 13-14.
 
 ## 1. The photometric period is 0.44097 d, not 0.440502 d
 
-- **Computed (TESS):** sectors 16, 17 (2019), 57 (2022) and 84 (2024), FFI cutouts (TESScut), 3×3-pixel aperture
-  (`scripts/hunt_h0007_tess.py`). The dominant signal is at f = 4.535438 c/d (P = 0.220486 d; 2P = 0.440972 d) in every sector. A
-  sinusoid at that frequency keeps the same phase in all four sectors (250°, 249°, 241°, 246°) across 2019-2024. At the catalogue's
-  2/0.440502 d the phases wander (198°, 151°, 37°, 218°) and the Lomb-Scargle power is 0.006 against 0.71.
+- **Computed (TESS):** sectors 16, 17 (2019), 57 (2022) and 84 (2024). Two independent reductions agree:
+  - FFI cutouts with a 3×3-pixel aperture (`scripts/hunt_h0007_tess.py`): combined f = 4.535438 c/d, 2P = 0.440972 d.
+  - The official SPOC 2-minute PDCSAP light curves (TIC 428055818): combined 2P = 0.4409722 d.
+- **What separates the two periods.** In any one sector the periodogram peak is broad: at the catalogue frequency the power is still
+  about 95% of the peak. What separates them is where the peak falls and whether the phase holds across years:
+  - The four SPOC sector peaks fall at 4.5351-4.5359 c/d (spread ±0.0003). The catalogue period implies 4.5403 c/d, about 0.005 c/d
+    away, or ~15 times that spread.
+  - A sinusoid at 4.535438 c/d keeps one phase across 2019-2024 (250°, 249°, 241°, 246°). At the catalogue frequency the phase wanders
+    (198°, 151°, 37°, 218°). The combined power at the catalogue period is 0.006 against 0.71 (FFI) and 0.11 against 0.47 (SPOC; `scripts/hunt_h0007_dxand_spoc.py`).
 - **Computed (ATLAS, independent):** quiescent ATLAS 2015-2026 (c and o separately, outbursts removed) peaks at 2P = 0.440971 d (o)
   and 0.440973 d (c). Power at the catalogue period: 0.002-0.004. ZTF r recovers 0.22049 d as well.
 - **Inferred:** the 0.2205-d signal is ellipsoidal modulation of the Roche-lobe-filling donor (two humps per orbit), so P_orb = 0.440972 d
   (10.583 h). The catalogue value differs by 0.0024 cycles/day, close to a one-year alias (0.0027 c/d). A cycle-count error in the
   1990s radial-velocity period is the obvious suspect. Published periods disagree with each other as well: Drew et al. (1993) give 0.44167 d (K2 = 107 km/s), while the
   catalogue's 0.440502 d is the Bruch et al. (1997) radial-velocity ephemeris (per a web search; the papers themselves were not read).
-  0.440972 d lies between the two and is inconsistent with both: in TESS and ATLAS phase coherence, and in power. *Not checked:*
-  the Dağ et al. (2026) TESS catalogue of CV orbital periods (arXiv:2603.03539), which may already list DX And.
+  0.440972 d lies between the two and is inconsistent with both: in TESS and ATLAS phase coherence, and in power. Dağ et al. (2026, MNRAS 548, stag514; arXiv:2603.03539) analysed TESS 2-minute data
+  for 2,544 CVs. Their appendix, which lists the ~116 systems whose periods they discuss or correct, does not include DX And
+  (TIC 428055818, checked 2026-10-29). Their full table of 910 periods is not online yet (VizieR pending), so whether they list a
+  period for DX And is unknown.
 
 ## 2. Outburst history (ATLAS 2015-2026, nights > 2× quiescence)
 
