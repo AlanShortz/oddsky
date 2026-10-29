@@ -4,7 +4,9 @@ Input: hunts/H-0007/data/quiet_ptp_lc.csv (bq export, see hunts/H-0007/README.md
 For each star: median and robust (MAD) scatter of all visits; a dip visit is W1 and W2 both >= DMIN mag
 fainter than the median and >= NSIG sigma. The mirror test (both brighter) is computed the same way.
 """
+
 import sys
+
 import numpy as np
 import pandas as pd
 
@@ -20,17 +22,38 @@ for b in ("w1", "w2"):
 lc["k"] = g.cumcount()
 lc["n"] = g["t"].transform("size")
 for sign, name in ((1, "dip"), (-1, "rise")):
-    lc[name] = ((sign * lc.dw1 >= DMIN) & (sign * lc.dw2 >= DMIN)
-                & (sign * lc.dw1 >= NSIG * lc.sw1) & (sign * lc.dw2 >= NSIG * lc.sw2))
+    lc[name] = (
+        (sign * lc.dw1 >= DMIN)
+        & (sign * lc.dw2 >= DMIN)
+        & (sign * lc.dw1 >= NSIG * lc.sw1)
+        & (sign * lc.dw2 >= NSIG * lc.sw2)
+    )
 ev = lc[lc.dip | lc.rise].copy()
 ev["kind"] = np.where(ev.dip, "dip", "rise")
 ev["grey"] = (ev.dw1 - ev.dw2).abs() < 0.35 * ev[["dw1", "dw2"]].abs().max(axis=1)
 ev["edge"] = (ev.k == 0) | (ev.k == ev.n - 1)
 ev["year"] = 1858.87 + ev.t / 365.25  # MJD -> approx decimal year
 nev = ev.groupby(["allwise_cntr", "kind"]).size().unstack(fill_value=0)
-print("stars", lc.allwise_cntr.nunique(), "dip visits", int(lc.dip.sum()), "rise visits", int(lc.rise.sum()))
-print("stars with >=1 dip", int((nev.get("dip", 0) > 0).sum()), "with >=1 rise", int((nev.get("rise", 0) > 0).sum()))
-print("dip visits not at the edge", int((ev.dip & ~ev.edge).sum()), "rise not edge", int((ev.rise & ~ev.edge).sum()))
+print(
+    "stars",
+    lc.allwise_cntr.nunique(),
+    "dip visits",
+    int(lc.dip.sum()),
+    "rise visits",
+    int(lc.rise.sum()),
+)
+print(
+    "stars with >=1 dip",
+    int((nev.get("dip", 0) > 0).sum()),
+    "with >=1 rise",
+    int((nev.get("rise", 0) > 0).sum()),
+)
+print(
+    "dip visits not at the edge",
+    int((ev.dip & ~ev.edge).sum()),
+    "rise not edge",
+    int((ev.rise & ~ev.edge).sum()),
+)
 print("grey non-edge dips", int((ev.dip & ~ev.edge & ev.grey).sum()))
 print("\ndip visits by half-year:")
 print(ev[ev.dip & ~ev.edge].groupby((ev.year * 2).round() / 2).size().to_string())
