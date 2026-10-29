@@ -61,7 +61,7 @@ The two deepest uncatalogued fades are **artifacts**: J191517.51-230501.6 and J1
 RUWE 22) that NEOWISE splits into two detections in some exposures. In the event visit the AllWISE association flipped to the faint
 component. Visible in the single exposures as two detections per frame within 2.5" and reduced χ² of 30-200 in every visit.
 
-## The candidate: a microlensing event toward the Galactic anticentre (reproduced by ATLAS)
+## The candidate: a microlensing event toward the Galactic anticentre (reproduced by ATLAS; case [OS-0016](../../cases/OS-0016))
 
 **[J040025.77+323527.4](J040025.md)** (Gaia DR3 170329679884731008; l = 162.8°, b = −15.3°). A red-clump K giant (Teff 4,820 K,
 log g 2.5, R ≈ 8 R☉, L ≈ 33 L☉, ~3 kpc). It is flat to 0.01-0.02 mag in 21 NEOWISE visits (2014-2024), ZTF (2018-2025, r rms 0.011 with catflags = 0)

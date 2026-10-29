@@ -104,6 +104,13 @@ explained by any catalogue.**
   went anywhere. ATLAS then showed the same eclipses on the same ephemeris, including a 2023 one ZTF had missed, so the case stands at
   "reproduced". Two predictions are sealed for 2027-2028. The southern half of the
   candidate list is still queued on the ATLAS server.
+- **One night in the infrared** ([hunt H-0007](hunts/H-0007)): which of 79,191 bright stars were dramatically brighter or fainter
+  on just one of NEOWISE's day-long visits, equally at 3.4 and 4.6 µm? Blind, the search found OS-0014, a dozen dwarf novae in
+  outburst and two microlensing events Gaia had already caught. New: **[OS-0016](cases/OS-0016)**, a red giant 3 kpc away toward the
+  Galactic anticentre that brightened sevenfold for a few weeks in 2017. NEOWISE and ATLAS saw it on the same night. It is a
+  gravitational microlensing event: a foreground star, probably a faint M dwarf, passed almost exactly in front of it. Two referees
+  checked it. The second cut our parallax claim down: the light curve is lopsided as parallax predicts, but the lens mass is not
+  measured. Gaia DR4 (December 2026) scanned the star three times during the event, and a sealed prediction says what it will show.
 - **One hunt parked**: new R CrB stars (H-0003). Gaia DR3 has already been mined by the experts, and our candidates were a VY
   Scl binary, a Mira, an S star and a T Tauri star.
 

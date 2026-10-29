@@ -343,7 +343,7 @@ def case_markdown(cid: str, payload: dict, meta: dict) -> str:
     for rv in payload.get("reviews") or []:
         md = rv.get("markdown", "")
         # the verdict paragraph(s): from "## Verdict" to the next heading
-        m = re.search(r"##\s*Verdict\s*\n(.*?)(?=\n##\s|\Z)", md, flags=re.S)
+        m = re.search(r"##\s*(?:\d+\.\s*)?Verdict\s*\n(.*?)(?=\n##\s|\Z)", md, flags=re.S)
         L += [f"## Referee report ({rv.get('file', '')})", "",
               "An independent, adversarial pass whose job was to break the case. Verdict:", "",
               (m.group(1).strip() if m else plain(md[:1200])), "",

@@ -1,0 +1,181 @@
+id: OS-0016
+title: 'A red giant toward the Galactic anticentre brightened sevenfold for a few weeks in 2017: a microlensing
+  event'
+hook: Found in Oddsky hunt H-0007 as a one-visit, colour-neutral 2.7x brightening in NEOWISE (2017 Aug
+  27-28); ATLAS shows a single smooth event peaking near 2017 Sep 16. Not in VSX, TNS, the Gaia alerts
+  or Gaia DR3.
+status: reproduced
+target:
+  name: Gaia DR3 170329679884731008
+  ra: 60.1073758
+  dec: 32.5909576
+  aliases: []
+  gaia_source_id: 170329679884731008
+summary: 'A red-clump K giant at about 3 kpc toward the Galactic anticentre (l = 163, b = -15) brightened
+  in a single smooth event in 2017: x2.7 in NEOWISE W1 and W2 on Aug 27-28 (equal in both bands), and
+  in ATLAS from early August to early November, peaking near Sep 13-16 at about x7. Nothing similar in
+  2014-2026. A symmetric point-lens curve is rejected; annual parallax fits (tE 47-56 d, |piE| 0.6-1.6,
+  a candidate measurement). Two referee passes: P(not microlensing) = 0.05. The lens mass is not measured.
+  Not in VSX, TNS, SIMBAD, the Gaia alerts or Gaia DR3. Gaia DR4 (Dec 2026) should show it.'
+claims:
+- id: C1
+  text: 'In the NEOWISE visit of 2017 Aug 27-28 (MJD 57992.6-57993.5) the star was 1.087 mag brighter
+    in W1 (10.036 against a baseline median of 11.123) and 1.072 mag brighter in W2 (10.131 against 11.202):
+    factors of 2.72 and 2.68, equal within 0.02 mag. In the 13 single exposures the factors are 2.731
+    and 2.716 (hunts/H-0007).'
+  tag: observed
+  calls:
+  - K1
+  - K2
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+- id: C2
+  text: Apart from that visit, NEOWISE W1 is flat over 21 visits (2014-2024) with a robust scatter of
+    0.007 mag.
+  tag: computed
+  calls:
+  - K3
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+- id: C3
+  text: 'ATLAS o (2015 Oct - 2026 Oct, 2,911 frames) contains exactly one excursion beyond max(5 sigma,
+    0.2 mag): a brightening from MJD 57970.6 to 58063.5 (2017 Aug 5 - Nov 6) peaking on MJD 58009.6 (2017
+    Sep 13) at 2.13 mag (x7.1) above baseline. On the night of the NEOWISE visit ATLAS o was 1.13 mag
+    (x2.8) above baseline.'
+  tag: observed
+  calls:
+  - K4
+  - K5
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+- id: C4
+  text: ZTF r (2018 Jul - 2025 Aug, 869 points) is flat with a robust scatter of 0.011 mag.
+  tag: computed
+  calls:
+  - K6
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+- id: C5
+  text: No Gaia DR3 source within 6" contributes more than 0.6% of the target's G flux; the nearest comparable
+    star (G = 15.9) is 15.3" away, outside the NEOWISE beam.
+  tag: observed
+  calls:
+  - K7
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+- id: C6
+  text: 'A symmetric point-lens curve is rejected (chi2 462/69 against 98/67 with annual parallax) by
+    a joint ATLAS + NEOWISE fit (scripts/hunt_h0007_lensfit.py, outside the Oddsky tools). The asymmetry
+    appears in both ATLAS units and survives every systematics variant a referee tried. Parallax model:
+    t0 = MJD 58012.2, tE = 47.7 or 51.8 d (u0 sign), A_max about 7; pi_E,par = 0.62 is robust, |piE| =
+    0.6-1.6 (hunts/H-0007/reviews/claude-referee-2-2026-10-29.md).'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+- id: C7
+  text: A hot additive source (flare, accretion disk) supplying 63% of the light during the NEOWISE visit
+    would make W1-W2 redder by about 0.06 mag; the observed change is -0.01 to -0.02 mag. A flare of that
+    size on a 33 Lsun giant is not physical.
+  tag: inferred
+  calls:
+  - K1
+  - K2
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+- id: C8
+  text: Not found (2026-10-29) in VSX (6"), TNS (60"), SIMBAD (CfA mirror, 30"), the Gaia Science Alerts,
+    Gaia DR3 vari_microlensing (which ends 2017 May) or a web search; no ATLAS17 designation. ADS not
+    checked. Gaia observed the star on 2017 Jul 27, Aug 22 and Sep 18 (one field of view) without alerting.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+- id: C9
+  text: 'The lens mass is not measured: theta_E is unknown. Along the mass-distance relation the lens
+    is 0.1-0.65 Msun at 0.5 kpc or 0.04-0.26 Msun at 1 kpc, most likely an M dwarf within about 1 kpc.'
+  tag: inferred
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A foreground star (probably an M dwarf within ~1 kpc) passed within ~0.14 Einstein radii
+    of the red-clump giant, magnifying it about sevenfold; the asymmetry is most likely annual parallax.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C6
+  - C7
+  conflicts: []
+  would_falsify: Gaia DR4 epoch photometry flat on 2017 Sep 18, or different BP and RP amplitudes; any
+    repeat brightening.
+  status: live
+  confidence: 0.95
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+- id: H2
+  klass: eruptive
+  statement: An unseen companion (accreting white dwarf, flare star) had an outburst lasting about three
+    months.
+  supports: []
+  conflicts:
+  - C7
+  - C6
+  would_falsify: A colour change during the event, or a repeat.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: A NEOWISE or ATLAS artifact.
+  supports: []
+  conflicts:
+  - C1
+  - C3
+  would_falsify: 'Already falsified: two independent instruments see the same event on the same night.'
+  status: rejected
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+- id: H4
+  klass: artifact_blend
+  statement: A neighbouring source brightened.
+  supports: []
+  conflicts:
+  - C5
+  - C1
+  would_falsify: 'Already falsified: no neighbour within 6" is brighter than 0.6% of the target, and the
+    NEOWISE centroid stayed on the star.'
+  status: rejected
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-29T15:48:50+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: Gaia DR4 epoch photometry will show the star at least 1.0 mag brighter in G on its brightest
+    night between 2017 Jul 20 and Sep 23 (Gaia transits on Jul 27, Aug 22 and Sep 18) than its 2014-2017
+    median. The microlensing models predict -0.40, -0.88 and -2.07 mag on those dates.
+  check:
+    series: GAIA:G
+    start: 57954.0
+    end: 58019.0
+    statistic: brightest
+    baseline:
+    - 56800.0
+    - 57900.0
+    op: <
+    value: -1.0
+  probability: 0.8
+  resolve_by: '2027-06-30'
+  author: claude-opus-5.5
+  registered_at: '2026-10-29T15:48:50+00:00'
+literature: []
+hunt: H-0007
+featured: false
+created_at: '2026-10-29T15:45:03+00:00'

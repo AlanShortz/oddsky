@@ -2,6 +2,17 @@
   "_comment": "Editorial summaries of each hunt for the website. The README in hunts/<ID>/ is the source of truth; these numbers are copied from its funnel table. A hunt whose directory is missing is skipped, so an entry can land before its hunt merges.",
   "hunts": [
     {
+      "id": "H-0007",
+      "title": "One night in the infrared",
+      "question": "NEOWISE looked at every star for about a day, twice a year, for ten years. Which ordinary stars were dramatically different on just one of those days?",
+      "date": "2026-10-29",
+      "state": "one event reproduced, refereed twice",
+      "scale": "79,191 NEOWISE light curves (W1 < 13, |b| ≥ 10°) · IRSA single exposures, Gaia DR3, ZTF, ATLAS, TESS",
+      "funnel": [[79191, "stars with 10+ NEOWISE visits"], [194, "one-visit events, equal in W1 and W2"], [99, "stellar colours, not at the first or last visit"], [41, "not already in VSX"], [1, "unexplained after vetting"]],
+      "verdict": "The method works: blind, it found OS-0014, a dozen dwarf novae in outburst and two microlensing events Gaia had already caught. What nobody had reported: a red giant toward the Galactic anticentre that brightened sevenfold for a few weeks in 2017, seen by NEOWISE and ATLAS on the same night. It is a microlensing event. The lens mass is not measured; Gaia DR4 should settle it.",
+      "cases": ["OS-0016"]
+    },
+    {
       "id": "H-0005",
       "title": "The Gaia alerts nobody finished",
       "question": "Gaia flagged thousands of stars that faded, then moved on. What did the unexplained ones do before and after it looked?",
@@ -107,6 +118,17 @@
       "href": "/hunt/H-0005",
       "title": "A clock that wasn't, and a Sun-like star that isn't",
       "text": "We fitted a 392-day period to four dips of an old K dwarf and predicted the next one. The referee fetched older surveys and found deep dips at the wrong phases; the sky agreed, with no dip on the predicted date. We also called a star Sun-like from a Gaia fit that had failed; it shows strong H-alpha emission."
+    },
+    {
+      "case": "OS-0016",
+      "title": "A parallax we measured too precisely",
+      "text": "We fitted the 2017 event and quoted the lens's parallax to ±12% and a lens mass. A second referee showed half of that parallax moves with a 1% calibration offset in one ATLAS telescope, and that other motions fit as well. The range is now 0.6-1.6, and the mass is not measured."
+    },
+    {
+      "case": null,
+      "href": "/hunt/H-0007",
+      "title": "A dwarf nova we briefly thought was new",
+      "text": "Our variable-star catalogue lookups started returning a CAPTCHA page after ~150 queries, and our script read it as 'no match'. For an hour DX And, a dwarf nova known for decades, looked like a discovery. Lookups now go through a mirror and report errors as errors."
     }
   ]
 }

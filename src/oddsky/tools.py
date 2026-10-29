@@ -487,7 +487,13 @@ class Toolbox:
             base = (self._t(baseline_start), self._t(baseline_end, end=True))
         chk = Check(series=series, start=self._t(start), end=self._t(end, end=True), statistic=statistic, baseline=base,
                     op=op, value=value)
-        self._frame(s, series)  # validate the series exists
+        try:
+            self._frame(s, series)  # validate the series exists
+        except FileNotFoundError:
+            # A prediction about data the archive has not released yet (e.g. Gaia DR4 epoch photometry) is allowed
+            # for archives the grader can fetch; it stays pending until the data exist.
+            if series.partition(":")[0].strip().lower() not in SURVEY_FILES:
+                raise
         p = Prediction(id=c.next_id("P", c.predictions), hypothesis=hypothesis, statement=statement, check=chk,
                        probability=probability, resolve_by=resolve_by, author=self.author)
         c.predictions.append(p)
