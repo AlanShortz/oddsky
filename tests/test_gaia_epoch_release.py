@@ -51,3 +51,23 @@ def test_prediction_on_unreleased_series_is_allowed(tmp_path, monkeypatch):
     assert out["prediction"] == "P1"
     with pytest.raises(FileNotFoundError):
         tb.register_prediction("OS-9999", "s", 0.8, "NOSUCH:X", 1, 2, "<", 0.0)
+
+
+def test_grading_keeps_gaia_variability_outliers(tmp_path, monkeypatch):
+    """A lens peak can be exactly what Gaia rejects as a variability outlier: grading keeps those transits (but not
+    photometry rejections); the analysis tools still drop them."""
+    from oddsky.case.model import Case, Target
+    from oddsky.case.store import CaseStore
+    from oddsky.tools import Toolbox
+
+    monkeypatch.chdir(tmp_path)
+    (tmp_path / "cases" / "OS-9999").mkdir(parents=True)
+    store = CaseStore(tmp_path / "cases" / "OS-9999")
+    store.save(Case(id="OS-9999", title="t", target=Target(name="x", ra=1.0, dec=2.0)))
+    store.write_series("gaia_epoch", pd.DataFrame({
+        "t_mjd": [57000.0, 57001.0, 57002.0, 57003.0], "mag": [15.0, 13.2, 13.0, 9.0], "err": [0.01] * 4, "band": ["G"] * 4,
+        "survey": ["GAIA"] * 4, "flag": ["", "rejected_by_variability", "rejected_by_variability", "rejected_by_photometry"]}))
+    tb = Toolbox(mode="open", author="test")
+    assert len(tb._frame(store, "GAIA:G")) == 1
+    graded = tb._frame(store, "GAIA:G", grading=True)
+    assert sorted(graded.mag) == [13.0, 13.2, 15.0]

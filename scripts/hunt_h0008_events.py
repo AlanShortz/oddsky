@@ -6,6 +6,8 @@
 2. Positions from AllWISE (IRSA TAP by cntr), Galactic coordinates, then known lenses (KMTNet, OGLE, Gaia DR3, Gaia alerts;
    hunt_h0008_reference.py): within 6" (WISE positions shift in crowded fields) and t0 within max(2 tE, 30 d) of the visit
    (100 d for alerts without tE).
+Also reads the sky4long pass (H-0009, neowise_lens.py --mode long): every event there is a brightening, and a block of visits
+t_first..t_last matches a known lens whose t0 falls within the window of any of them.
 usage: hunt_h0008_events.py EVENTS_DIR REFERENCE_CSV OUT_PREFIX
 """
 
@@ -23,6 +25,10 @@ from astropy.coordinates import SkyCoord
 frames = [pd.read_parquet(f) for f in glob.glob(f"{sys.argv[1]}/*.parquet")]
 ev = pd.concat([d for d in frames if len(d)], ignore_index=True)
 ev["edge"] = ev["edge"].astype(bool)
+if "kind" not in ev:  # sky4long
+    ev["kind"] = "brighten"
+if "t_first" not in ev:
+    ev["t_first"] = ev["t_last"] = ev["t"]
 print("events (all kinds):", len(ev), ev.groupby(["kind", "edge"]).size().to_dict())
 b = ev[(ev.kind == "brighten") & ~ev.edge].copy()
 b["w1w2"] = b.w1_med - b.w2_med
@@ -49,7 +55,9 @@ not0 = k.t0_mjd.isna().to_numpy()  # ZTF DR5 catalogues give positions only: mat
 c["known_lens"] = ""
 for j in range(len(c)):
     sep = kc.separation(SkyCoord(c.ra.iloc[j] * u.deg, c.dec.iloc[j] * u.deg)).arcsec
-    ok = (sep < 6) & ((np.abs(k.t0_mjd.to_numpy() - c.t.iloc[j]) <= win) | (not0 & (58180 <= c.t.iloc[j] <= 59380)))
+    t0k = k.t0_mjd.to_numpy()
+    intime = (t0k >= c.t_first.iloc[j] - win) & (t0k <= c.t_last.iloc[j] + win)
+    ok = (sep < 6) & (intime | (not0 & (58180 <= c.t.iloc[j] <= 59380)))
     if ok.any():
         kk = k[ok].assign(sep=sep[ok]).sort_values("sep")
         c.iloc[j, c.columns.get_loc("known_lens")] = "; ".join(

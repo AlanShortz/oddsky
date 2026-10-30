@@ -1,0 +1,52 @@
+J180624 model 'fit fs~0.8 (main)' fs 0.8 loss 10% 
+   P(true) 0.87 P(unres) 0.00 | A  DR4 brightest - DR4 median > -0.5
+   P(true) 1.00 P(unres) 0.00 | B  DR4 median(2014-07-25..2016-06-30) - median(2018-01-01..2020-01-20) < 0.1
+   P(true) 1.00 P(unres) 0.00 | B' same, > -0.1
+   P(true) 0.99 P(unres) 0.00 | C  DR5 brightest(2022-02-01..2023-05-31) - median(2015-2021) < -1.2
+   P(true) 0.95 P(unres) 0.05 | C2 DR5 median(2022-02-01..2022-04-30) - median(2015-2021) < -0.1 (rising wing)
+   P(true) 0.99 P(unres) 0.01 | C3 DR5 median(2023-03-01..2023-04-30) - median(2015-2021) < -0.1 (falling wing)
+J180624 model 'fit fs~0.8 (main)' fs 0.8 loss 10% event transits flagged+dropped
+   P(true) 1.00 P(unres) 0.00 | A  DR4 brightest - DR4 median > -0.5
+   P(true) 1.00 P(unres) 0.00 | B  DR4 median(2014-07-25..2016-06-30) - median(2018-01-01..2020-01-20) < 0.1
+   P(true) 1.00 P(unres) 0.00 | B' same, > -0.1
+   P(true) 0.00 P(unres) 0.00 | C  DR5 brightest(2022-02-01..2023-05-31) - median(2015-2021) < -1.2
+   P(true) 0.94 P(unres) 0.06 | C2 DR5 median(2022-02-01..2022-04-30) - median(2015-2021) < -0.1 (rising wing)
+   P(true) 0.99 P(unres) 0.01 | C3 DR5 median(2023-03-01..2023-04-30) - median(2015-2021) < -0.1 (falling wing)
+J180624 model 'fit fs~0.8 (main)' fs 0.8 loss 20% 
+   P(true) 0.86 P(unres) 0.00 | A  DR4 brightest - DR4 median > -0.5
+   P(true) 1.00 P(unres) 0.00 | B  DR4 median(2014-07-25..2016-06-30) - median(2018-01-01..2020-01-20) < 0.1
+   P(true) 1.00 P(unres) 0.00 | B' same, > -0.1
+   P(true) 0.96 P(unres) 0.00 | C  DR5 brightest(2022-02-01..2023-05-31) - median(2015-2021) < -1.2
+   P(true) 0.82 P(unres) 0.18 | C2 DR5 median(2022-02-01..2022-04-30) - median(2015-2021) < -0.1 (rising wing)
+   P(true) 0.94 P(unres) 0.06 | C3 DR5 median(2023-03-01..2023-04-30) - median(2015-2021) < -0.1 (falling wing)
+J180624 model 'fit fs~0.8 (main)' fs 0.8 loss 20% event transits flagged+dropped
+   P(true) 1.00 P(unres) 0.00 | A  DR4 brightest - DR4 median > -0.5
+   P(true) 1.00 P(unres) 0.00 | B  DR4 median(2014-07-25..2016-06-30) - median(2018-01-01..2020-01-20) < 0.1
+   P(true) 1.00 P(unres) 0.00 | B' same, > -0.1
+   P(true) 0.00 P(unres) 0.00 | C  DR5 brightest(2022-02-01..2023-05-31) - median(2015-2021) < -1.2
+   P(true) 0.81 P(unres) 0.19 | C2 DR5 median(2022-02-01..2022-04-30) - median(2015-2021) < -0.1 (rising wing)
+   P(true) 0.94 P(unres) 0.06 | C3 DR5 median(2023-03-01..2023-04-30) - median(2015-2021) < -0.1 (falling wing)
+J183040 model 'free fs (ratio as observed)' fs 0.15 loss 10% 
+   P(true) 0.77 P(unres) 0.00 | D1 DR4 brightest - DR4 median > -0.3
+   P(true) 0.99 P(unres) 0.00 | D2 DR5 brightest(2022-02-01..2023-05-31) - median(2015-2021) < -0.3
+J183040 model 'free fs (ratio as observed)' fs 0.15 loss 10% event transits flagged+dropped
+   P(true) 0.96 P(unres) 0.00 | D1 DR4 brightest - DR4 median > -0.3
+   P(true) 0.91 P(unres) 0.00 | D2 DR5 brightest(2022-02-01..2023-05-31) - median(2015-2021) < -0.3
+J183040 model 'free fs (ratio as observed)' fs 0.15 loss 20% 
+   P(true) 0.77 P(unres) 0.00 | D1 DR4 brightest - DR4 median > -0.3
+   P(true) 0.97 P(unres) 0.00 | D2 DR5 brightest(2022-02-01..2023-05-31) - median(2015-2021) < -0.3
+J183040 model 'free fs (ratio as observed)' fs 0.15 loss 20% event transits flagged+dropped
+   P(true) 0.96 P(unres) 0.00 | D1 DR4 brightest - DR4 median > -0.3
+   P(true) 0.82 P(unres) 0.00 | D2 DR5 brightest(2022-02-01..2023-05-31) - median(2015-2021) < -0.3
+J183040 model 'fs>=0.9' fs 0.95 loss 10% 
+   P(true) 0.76 P(unres) 0.00 | D1 DR4 brightest - DR4 median > -0.3
+   P(true) 0.99 P(unres) 0.00 | D2 DR5 brightest(2022-02-01..2023-05-31) - median(2015-2021) < -0.3
+J183040 model 'fs>=0.9' fs 0.95 loss 10% event transits flagged+dropped
+   P(true) 0.96 P(unres) 0.00 | D1 DR4 brightest - DR4 median > -0.3
+   P(true) 0.99 P(unres) 0.00 | D2 DR5 brightest(2022-02-01..2023-05-31) - median(2015-2021) < -0.3
+J183040 model 'fs>=0.9' fs 0.95 loss 20% 
+   P(true) 0.76 P(unres) 0.00 | D1 DR4 brightest - DR4 median > -0.3
+   P(true) 0.95 P(unres) 0.00 | D2 DR5 brightest(2022-02-01..2023-05-31) - median(2015-2021) < -0.3
+J183040 model 'fs>=0.9' fs 0.95 loss 20% event transits flagged+dropped
+   P(true) 0.96 P(unres) 0.00 | D1 DR4 brightest - DR4 median > -0.3
+   P(true) 0.96 P(unres) 0.00 | D2 DR5 brightest(2022-02-01..2023-05-31) - median(2015-2021) < -0.3

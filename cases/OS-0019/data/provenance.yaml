@@ -1,0 +1,107 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  query:
+    adql: SELECT source_id, ra, dec, parallax, parallax_over_error, pmra, pmdec, ruwe, phot_g_mean_mag,
+      phot_bp_mean_mag, phot_rp_mean_mag, bp_rp, phot_variable_flag, teff_gspphot, distance_gspphot, non_single_star,
+      DISTANCE(POINT(277.670788,-22.163984), POINT(ra,dec))*3600 AS sep_arcsec FROM gaiadr3.gaia_source
+      WHERE 1=CONTAINS(POINT(ra,dec), CIRCLE(277.670788,-22.163984,0.008333333333333333)) ORDER BY sep_arcsec
+  retrieved_at: '2026-10-30T15:29:57+00:00'
+  rows_raw: 196
+  rows_kept: 196
+  cuts: []
+  notes: []
+  status: ok
+gaia_epoch:
+  archive: ESA Gaia epoch photometry (datalink; DR4 if published, else DR3)
+  query:
+    source_id: 4090003970570642816
+  retrieved_at: '2026-10-30T15:32:11+00:00'
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  notes:
+  - no Gaia epoch photometry (DR3 published it only for sources Gaia flagged as variable)
+  status: empty
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  query:
+    catalog: neowiser_p1bs_psd
+    spatial: cone
+    radius: 3.0
+    radunits: arcsec
+    objstr: 277.670788 -22.163984
+    outfmt: 1
+    selcols: mjd,w1mpro,w1sigmpro,w2mpro,w2sigmpro,qual_frame,qi_fact,saa_sep,moon_masked,cc_flags,ph_qual,w1sat,w2sat,nb,na,w1snr,w2snr,w1rchi2,w2rchi2
+  retrieved_at: '2026-10-30T15:32:16+00:00'
+  rows_raw: 295
+  rows_kept: 39
+  cuts:
+  - 'W1: qual_frame > 0 removed 31'
+  - 'W1: saa_sep > 0 removed 58'
+  - 'W1: moon_masked == ''00'' removed 48'
+  - 'W1: cc_flags[0] == ''0'' removed 78'
+  - 'W2: qual_frame > 0 removed 31'
+  - 'W2: saa_sep > 0 removed 58'
+  - 'W2: moon_masked == ''00'' removed 48'
+  - 'W2: cc_flags[1] == ''0'' removed 51'
+  - 'W2: ph_qual[1] in (A,B) removed 1'
+  - 'W2: w2rchi2 < 5x source median removed 1'
+  notes:
+  - rows_kept counts 6-month visits (W1 and W2), not exposures
+  status: ok
+neowise_exp:
+  archive: IRSA Gator neowiser_p1bs_psd (single exposures)
+  query:
+    catalog: neowiser_p1bs_psd
+    spatial: cone
+    radius: 3.0
+    radunits: arcsec
+    objstr: 277.670788 -22.163984
+    outfmt: 1
+    selcols: mjd,w1mpro,w1sigmpro,w2mpro,w2sigmpro,qual_frame,qi_fact,saa_sep,moon_masked,cc_flags,ph_qual,w1sat,w2sat,nb,na,w1snr,w2snr,w1rchi2,w2rchi2
+  retrieved_at: '2026-10-30T15:32:18+00:00'
+  rows_raw: 295
+  rows_kept: 185
+  cuts:
+  - 'W1: qual_frame > 0 removed 31'
+  - 'W1: saa_sep > 0 removed 58'
+  - 'W1: moon_masked == ''00'' removed 48'
+  - 'W1: cc_flags[0] == ''0'' removed 78'
+  - 'W2: qual_frame > 0 removed 31'
+  - 'W2: saa_sep > 0 removed 58'
+  - 'W2: moon_masked == ''00'' removed 48'
+  - 'W2: cc_flags[1] == ''0'' removed 51'
+  - 'W2: ph_qual[1] in (A,B) removed 1'
+  - 'W2: w2rchi2 < 5x source median removed 1'
+  notes: []
+  status: ok
+ztf:
+  archive: IRSA ZTF light curve service
+  query:
+    POS: CIRCLE 277.670788 -22.163984 0.000556
+    BANDNAME: g,r,i
+    FORMAT: csv
+    BAD_CATFLAGS_MASK: '32768'
+  retrieved_at: '2026-10-30T15:32:18+00:00'
+  rows_raw: 240
+  rows_kept: 240
+  cuts: []
+  notes:
+  - 2 ZTF object IDs merged (one per field/filter)
+  status: ok
+atlas:
+  archive: ATLAS forced photometry (fallingstar-data.com), reduced images
+  query:
+    ra: 277.670788
+    dec: -22.163984
+    mjd_min: 57000
+    use_reduced: true
+    task: '5272651'
+  retrieved_at: '2026-10-30T15:32:40+00:00'
+  rows_raw: 3866
+  rows_kept: 3633
+  cuts: []
+  notes:
+  - reused the hunt's server response hunts/H-0008/work/atlas/atlas_J183040.txt
+  - 'chi_n cut disabled (chi_max=1e9): chi_n rises with flux, so a cut removes the peak (ATLAS referee)'
+  status: ok

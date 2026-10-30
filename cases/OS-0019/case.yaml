@@ -1,0 +1,156 @@
+id: OS-0019
+title: 'A bulge giant in Sagittarius brightened by half for four months in 2022: a blended microlensing
+  candidate'
+hook: Found blind in Oddsky hunt H-0008 as a colour-neutral 1.5x brightening in NEOWISE (2022 Sep 8).
+  ATLAS and ZTF show one smooth event peaking in late August 2022, equal from g to 4.6 microns. ALeRCE
+  classifies the ZTF object as LPV/YSO.
+status: reproduced
+target:
+  name: Gaia DR3 4090003970570642816
+  ra: 277.670788
+  dec: -22.163984
+  aliases: []
+  gaia_source_id: 4090003970570642816
+summary: An M giant toward the Galactic bulge brightened once, by about 60%, peaking in 2022 mid-August,
+  equally from g to 4.6 microns, and was back to normal by December. NEOWISE, ATLAS and ZTF all see it.
+  It looks like microlensing, but a simple point lens fits only with a blend Gaia does not see, so it
+  stays a candidate. Found blind by the H-0008 all-sky NEOWISE search.
+claims:
+- id: C1
+  text: 'In the NEOWISE visit of 2022 Sep 8 the star was 0.47 mag brighter in W1 and 0.46 in W2 than its
+    median (W1 9.70): x1.54, equal in both bands. W1 is otherwise flat to 0.7% rms over 2014-2024. Found
+    blind by the H-0008 all-sky search.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:32:42+00:00'
+- id: C2
+  text: 'ATLAS (task 5272651) shows one brightening in 2015-2026, peaking in 2022 Aug: 2022 Aug 10-25
+    is 0.53 mag brighter in o and 0.49 mag in c than in 2023 Nov - 2026 (79 and 70 sigma). It rises from
+    April and is back near baseline by December 2022. No other 20-day bin is above x1.05 in o.'
+  tag: observed
+  calls:
+  - K1
+  - K2
+  author: claude-opus-5.5
+  at: '2026-10-30T15:32:42+00:00'
+- id: C3
+  text: ZTF g and r (field 283) show the same brightening at the same flux ratio, 1.55-1.6 at the peak;
+    the ZTF difference-image centroid of ZTF22aalviwh (38 alerts) is 0.09" from the Gaia star.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:32:42+00:00'
+- id: C4
+  text: The flux ratio is the same from ZTF g to WISE W2 (1.53-1.6 near the peak), and the bands peak
+    together (2022 Aug 15-20 within a few days).
+  tag: computed
+  calls:
+  - K1
+  - K2
+  author: claude-opus-5.5
+  at: '2026-10-30T15:32:42+00:00'
+- id: C5
+  text: 'A point lens fits only if 80-90% of the light in every band from g to W2 comes from an unresolved
+    blend; Gaia sees no companion (RUWE 0.97, no multiple peaks) and resolves neighbours that give 3%
+    of the ATLAS flux. With the blend fixed to Gaia''s value the lens fit is worse by delta chi2 27-78,
+    and a free symmetric bump fits better than any lens by 16-48. Robust: peak 2022 Aug 15-20, peak flux
+    ratio 1.55-1.6, effective timescale |u0| tE about 35 d. tE itself is unconstrained.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:32:42+00:00'
+- id: C6
+  text: 'Gaia DR3 4090003970570642816 (G 14.3): an M giant (J-K 1.28, W1-W2 -0.17 from CO absorption),
+    no infrared excess, l = 10.9, b = -5.6, toward the bulge.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:32:42+00:00'
+- id: C7
+  text: 'ALeRCE labels ZTF22aalviwh LPV/YSO, but its classifier has no microlensing class. As a pulsation
+    it fails: the only period in the ATLAS baseline is 1.1% at 323 d, W1 varies by 0.7% rms in ten years,
+    and a pulsation would be 3-10 times larger in g than in W1, not equal.'
+  tag: inferred
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:32:42+00:00'
+- id: C8
+  text: 'Not found (2026-10-30) in TNS, the Gaia Science Alerts (60"), KMTNet or OGLE EWS (outside both
+    footprints), the ZTF microlensing catalogues, SIMBAD, VSX, ADS full text or a web search. Not checked:
+    MOA 2022, ASAS-SN.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:32:42+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A lens magnified the M giant in 2022 August, with a blend or a more complex lens (binary
+    source or lens, extended source) shaping the broad wings.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  conflicts:
+  - C5
+  would_falsify: A repeat; a resolved colour change; Gaia DR5 flat in 2022.
+  status: live
+  confidence: 0.65
+  author: claude-opus-5.5
+  at: '2026-10-30T15:32:42+00:00'
+- id: H2
+  klass: pulsation
+  statement: Long-period or semiregular variability of the M giant.
+  supports: []
+  conflicts:
+  - C7
+  - C4
+  would_falsify: 'Already disfavoured: no periodicity, flat W1, equal amplitude from g to W2.'
+  status: live
+  confidence: 0.1
+  author: claude-opus-5.5
+  at: '2026-10-30T15:32:42+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'Gaia DR4 epoch photometry shows no repeat: in 2014 Jul - 2020 Jan no night is more than
+    0.3 mag brighter in G than the DR4 median.'
+  check:
+    series: GAIA:G
+    start: 56863.0
+    end: 58868.99999
+    statistic: brightest
+    baseline:
+    - 56863.0
+    - 58868.99999
+    op: '>'
+    value: -0.3
+  probability: 0.8
+  resolve_by: '2027-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-30T15:32:42+00:00'
+- id: P2
+  hypothesis: H1
+  statement: 'Gaia DR5 sees the 2022 brightening: the brightest night in 2022 Feb - 2023 May is more than
+    0.3 mag brighter in G than the 2015-2021 median (about -0.5 expected at the 2022 Sep 7 transit). DR5
+    is expected about 2030.'
+  check:
+    series: GAIA:G
+    start: 59611.0
+    end: 60095.99999
+    statistic: brightest
+    baseline:
+    - 57023.0
+    - 59579.99999
+    op: <
+    value: -0.3
+  probability: 0.85
+  resolve_by: '2032-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-30T15:32:42+00:00'
+literature: []
+hunt: H-0008
+featured: false
+created_at: '2026-10-30T15:29:14+00:00'

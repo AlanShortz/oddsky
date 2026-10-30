@@ -444,6 +444,56 @@
    "n_predictions": 0,
    "featured": false,
    "hunt": "H-0007"
+  },
+  {
+   "id": "OS-0018",
+   "title": "A star in Serpens brightened fivefold over four months in 2022: an apparently unreported microlensing event",
+   "hook": "Found blind in Oddsky hunt H-0008 as a colour-neutral 3.5x brightening in NEOWISE (2022 Aug 31). ATLAS shows one smooth, symmetric event peaking near 2022 Sep 19 at about 5x, lasting months. Not in TNS, the Gaia alerts, the KMTNet or OGLE lists, the ZTF microlensing catalogues, SIMBAD, VSX or ADS full text.",
+   "status": "reproduced",
+   "target": "Gaia DR3 4158424169627436800",
+   "series": [
+    "ATLAS:ATLAS_H",
+    "ATLAS:ATLAS_c",
+    "ATLAS:ATLAS_o",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "NEOWISE_EXP:W1",
+    "NEOWISE_EXP:W2",
+    "ZTF:ZTF_g",
+    "ZTF:ZTF_i",
+    "ZTF:ZTF_r"
+   ],
+   "n_claims": 10,
+   "n_hypotheses": 3,
+   "n_predictions": 6,
+   "featured": false,
+   "hunt": "H-0008"
+  },
+  {
+   "id": "OS-0019",
+   "title": "A bulge giant in Sagittarius brightened by half for four months in 2022: a blended microlensing candidate",
+   "hook": "Found blind in Oddsky hunt H-0008 as a colour-neutral 1.5x brightening in NEOWISE (2022 Sep 8). ATLAS and ZTF show one smooth event peaking in late August 2022, equal from g to 4.6 microns. ALeRCE classifies the ZTF object as LPV/YSO.",
+   "status": "reproduced",
+   "target": "Gaia DR3 4090003970570642816",
+   "series": [
+    "ATLAS:ATLAS_H",
+    "ATLAS:ATLAS_c",
+    "ATLAS:ATLAS_g",
+    "ATLAS:ATLAS_i",
+    "ATLAS:ATLAS_o",
+    "ATLAS:ATLAS_r",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "NEOWISE_EXP:W1",
+    "NEOWISE_EXP:W2",
+    "ZTF:ZTF_g",
+    "ZTF:ZTF_r"
+   ],
+   "n_claims": 8,
+   "n_hypotheses": 2,
+   "n_predictions": 2,
+   "featured": false,
+   "hunt": "H-0008"
   }
  ],
  "scorecards": [

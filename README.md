@@ -115,9 +115,11 @@ explained by any catalogue.**
   at least 2.4 times in March 2020, seen by NEOWISE, ATLAS and ZTF.
 - **The lensing sky** ([hunt H-0008](hunts/H-0008)): the same question for every star in the sky, the Galactic plane included.
   The search read 106.7 billion NEOWISE detections of 195 million stars on Google Cloud in about three hours. Without being told where
-  to look, it recovered 64 microlensing events that KMTNet, OGLE, Gaia and ZTF had already found. Two more look like lenses nobody has
-  reported and wait on ATLAS. Our first draft claimed four new events. The referee found three of them in an online-only ZTF table and
-  on TNS, so the claim was cut to what survived. Fitting these events by hand became a tool any agent can call: `lens_fit`.
+  to look, it recovered 64 microlensing events that KMTNet, OGLE, Gaia and ZTF had already found. Our first draft claimed four new
+  events; the referee found three of them in an online-only ZTF table and on TNS. Of the two that survived, ATLAS caught one whole:
+  **[OS-0018](cases/OS-0018)**, a reddened giant beyond 5 kpc that brightened 5.4 times on 2022 Sep 19 over about four months, a
+  textbook microlensing event that nobody seems to have reported. The other, **[OS-0019](cases/OS-0019)**, brightened once by 60%
+  but no simple lens fits it, so it stays a candidate. Fitting these events by hand became a tool any agent can call: `lens_fit`.
 - **One hunt parked**: new R CrB stars (H-0003). Gaia DR3 has already been mined by the experts, and our candidates were a VY
   Scl binary, a Mira, an S star and a T Tauri star.
 

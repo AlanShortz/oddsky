@@ -1,0 +1,30 @@
+== J180624 tE 130.0 d, pi_s 0.15 mas
+  piE 0.03 | mu 2: thE 0.71 M  2.91 DL  5.8 | mu 4: thE 1.42 M  5.83 DL  5.2 | mu 7: thE 2.49 M 10.20 DL  4.4
+  piE 0.10 | mu 2: thE 0.71 M  0.87 DL  4.5 | mu 4: thE 1.42 M  1.75 DL  3.4 | mu 7: thE 2.49 M  3.06 DL  2.5
+  piE 0.18 | mu 2: thE 0.71 M  0.49 DL  3.6 | mu 4: thE 1.42 M  0.97 DL  2.5 | mu 7: thE 2.49 M  1.70 DL  1.7
+  piE 0.27 | mu 2: thE 0.71 M  0.32 DL  2.9 | mu 4: thE 1.42 M  0.65 DL  1.9 | mu 7: thE 2.49 M  1.13 DL  1.2
+  piE 0.35 | mu 2: thE 0.71 M  0.25 DL  2.5 | mu 4: thE 1.42 M  0.50 DL  1.5 | mu 7: thE 2.49 M  0.87 DL  1.0
+== J183040 (fs>=0.9 fit) tE 101.0 d, pi_s 0.12 mas
+  piE 0.10 | mu 2: thE 0.55 M  0.68 DL  5.7 | mu 4: thE 1.11 M  1.36 DL  4.3 | mu 7: thE 1.94 M  2.38 DL  3.2
+  piE 0.30 | mu 2: thE 0.55 M  0.23 DL  3.5 | mu 4: thE 1.11 M  0.45 DL  2.2 | mu 7: thE 1.94 M  0.79 DL  1.4
+  piE 0.49 | mu 2: thE 0.55 M  0.14 DL  2.6 | mu 4: thE 1.11 M  0.28 DL  1.5 | mu 7: thE 1.94 M  0.49 DL  0.9
+  piE 0.70 | mu 2: thE 0.55 M  0.10 DL  2.0 | mu 4: thE 1.11 M  0.19 DL  1.1 | mu 7: thE 1.94 M  0.34 DL  0.7
+== J183040 (free-fs fit) tE 220.0 d, pi_s 0.12 mas
+  piE 0.05 | mu 2: thE 1.20 M  2.96 DL  5.5 | mu 4: thE 2.41 M  5.92 DL  4.2 | mu 7: thE 4.22 M 10.35 DL  3.0
+  piE 0.13 | mu 2: thE 1.20 M  1.14 DL  3.6 | mu 4: thE 2.41 M  2.28 DL  2.3 | mu 7: thE 4.22 M  3.98 DL  1.5
+  piE 0.30 | mu 2: thE 1.20 M  0.49 DL  2.1 | mu 4: thE 2.41 M  0.99 DL  1.2 | mu 7: thE 4.22 M  1.73 DL  0.7
+  J180624 MS lens M 0.3 Msun at 1.0 kpc: G ~ 21.2 (vs source 17.0; blend share 0.02)
+  J180624 MS lens M 0.3 Msun at 2.0 kpc: G ~ 23.6 (vs source 17.0; blend share 0.00)
+  J180624 MS lens M 0.3 Msun at 3.0 kpc: G ~ 25.4 (vs source 17.0; blend share 0.00)
+  J180624 MS lens M 0.5 Msun at 1.0 kpc: G ~ 19.8 (vs source 17.0; blend share 0.07)
+  J180624 MS lens M 0.5 Msun at 2.0 kpc: G ~ 22.2 (vs source 17.0; blend share 0.01)
+  J180624 MS lens M 0.5 Msun at 3.0 kpc: G ~ 24.0 (vs source 17.0; blend share 0.00)
+  J180624 MS lens M 0.8 Msun at 1.0 kpc: G ~ 16.9 (vs source 17.0; blend share 0.53)
+  J180624 MS lens M 0.8 Msun at 2.0 kpc: G ~ 19.3 (vs source 17.0; blend share 0.11)
+  J180624 MS lens M 0.8 Msun at 3.0 kpc: G ~ 21.1 (vs source 17.0; blend share 0.02)
+  J180624 MS lens M 1.0 Msun at 1.0 kpc: G ~ 15.6 (vs source 17.0; blend share 0.79)
+  J180624 MS lens M 1.0 Msun at 2.0 kpc: G ~ 18.0 (vs source 17.0; blend share 0.29)
+  J180624 MS lens M 1.0 Msun at 3.0 kpc: G ~ 19.8 (vs source 17.0; blend share 0.07)
+  J180624 MS lens M 1.5 Msun at 1.0 kpc: G ~ 13.9 (vs source 17.0; blend share 0.95)
+  J180624 MS lens M 1.5 Msun at 2.0 kpc: G ~ 16.3 (vs source 17.0; blend share 0.66)
+  J180624 MS lens M 1.5 Msun at 3.0 kpc: G ~ 18.1 (vs source 17.0; blend share 0.27)

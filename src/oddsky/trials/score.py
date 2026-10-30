@@ -71,7 +71,7 @@ def score(trial: Path, agent: str, answers_path: Path | None = None) -> dict:
                                   "outcome": "pending", "note": f"window closes at MJD {chk.end:.0f}; data end "
                                   f"{frame.t_mjd.max():.0f}. Will be graded when the sky gets there."})
                     continue
-                r = evaluate(chk, lambda ser, _s=full, _tb=tb: _tb._frame(_s, ser))
+                r = evaluate(chk, lambda ser, _s=full, _tb=tb: _tb._frame(_s, ser, grading=True))
                 o = {"true": 1.0, "false": 0.0}.get(r.outcome)
                 preds.append({"case": pid, "id": p.id, "statement": p.statement, "probability": p.probability,
                               "outcome": r.outcome, "observed": r.observed, "n_points": r.n_points,

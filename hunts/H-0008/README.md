@@ -74,8 +74,8 @@ about three weeks. They are withdrawn.
 
 | event | identity | peak | tE | status |
 |---|---|---|---|---|
-| **J180624.78-090411.4** (l 19.7, b +5.7) | ZTF22abjkknd (an alert object with no positive transient) | 2022 Sep 20 | 115-140 d (depends on blending) | **apparently unreported**. Checked: TNS, the full Zhai list, Gaia alerts, ALeRCE/Lasair, KMT/OGLE footprints, SIMBAD, VSX. Not checked: ADS full text, ASAS-SN. Peak and decline unobserved (15 ZTF nights). P(microlensing) 0.85. Candidate |
-| **J183040.98-220950.3** (l 10.9, b −5.6) | ZTF22aalviwh (ALeRCE class LPV/YSO) | 2022 Aug | 75-130 d, about 60% blended | apparently unreported; achromatic in g, r, W1 and W2; P(microlensing) 0.75. Candidate, pending ATLAS |
+| **J180624.78-090411.4** (l 19.7, b +5.7) = **[OS-0018](../../cases/OS-0018)** | ZTF22abjkknd (an alert object with no positive transient) | 2022 Sep 19-20 | 115-150 d | **an apparently unreported microlensing event.** ATLAS samples the peak (×5.4) and both wings; a point lens fits from c to W2 and beats any flexible bump. P(microlensing) 0.95 (ATLAS referee). Reproduced |
+| **J183040.98-220950.3** (l 10.9, b −5.6) = **[OS-0019](../../cases/OS-0019)** | ZTF22aalviwh (ALeRCE class LPV/YSO; its classifier has no microlensing class) | 2022 Aug 15-20 | unconstrained (effective timescale ~35 d) | an apparently unreported **microlensing candidate**: achromatic from g to W2, single, on the M giant itself, but a point lens needs 80-90% blend light Gaia does not see. P(microlensing) 0.65. Candidate |
 | J173342.30-205204.5 (l 5.4, b +6.6) | ZTF21abahtfi = AT 2021aicc, posted to TNS by ALeRCE as a microlensing candidate (2024) | 2021 Jul 21 | 51 d | known as a candidate; **first fit, and first infrared confirmation of achromaticity** (fs 0.97-1.05 from g to W2). Reproduced |
 | J204610.56+514104.9 (l 89.8, b +5.3) | ZTF22aagdkla (Zhai et al. 2024, high confidence) = AT 2022aexe / XOSS KATS22J002 | 2022 May 26 | 45 d | known; recovered blind. A static lens is rejected (Δχ² ≈ 220 to parallax) |
 | J190512.73+145135.7 (l 47.7, b +3.7) | ZTF21aaowecs (Zhai et al. 2024) = Gaia21bde = AT 2021dzr | 2021 Mar 31 | 35-44 d | known; recovered blind |
@@ -84,6 +84,33 @@ about three weeks. They are withdrawn.
 **What went wrong first.** The first draft of this README called four of these "new". Three were not. Zhai et al.'s full list sits
 in an online-only table that the investigators had not reached, and TNS was rate-limiting. The referee found both. The correction is
 in "what we got wrong" on the site.
+
+## ATLAS: one event, one candidate (`figures/candidates_atlas.png`)
+
+ATLAS forced photometry (tasks 5272650-1, `work/atlas/`) arrived on 30 Oct. Fits: `scripts/hunt_h0008_atlas_fit.py`
+(`work/atlas_fits.json`); second referee: [`reviews/claude-referee-atlas-2026-10-30.md`](reviews/claude-referee-atlas-2026-10-30.md).
+
+- **J180624 (OS-0018) is a microlensing event.** One smooth, symmetric brightening in 2015-2026: ×1.1 in March 2022, ×5.4 at the
+  peak on Sep 19-20 (24-26 ATLAS nights near it), ×1.2 by February 2023. Point lens with annual parallax and blending per series,
+  ATLAS + ZTF + NEOWISE: tE 112-131 d (95%), 113-153 d across 18 reduction choices, so **tE ≈ 115-150 d**; u0 0.16-0.23; source
+  fraction 0.8-1.0 in the optical and 0.7 in W1/W2 (red neighbours in WISE's beam). It beats a free symmetric bump with lens-like
+  wings (Pearson VII) by Δχ² 26-88 and a fast-rise/exponential-decay pulse by ~4,000. c and o peak within 0.3 d with the same
+  timescale. Parallax is a one-dimensional hint (Δχ² 4-36), and **no lens mass is measured** (allowed: ~0.3 to 10 M☉).
+  Before 2019 ATLAS reads it 10-40% faint, stepping with each unit's PSF width; NEOWISE is flat, so that is instrumental.
+- **J183040 (OS-0019) stays a candidate.** The brightening (×1.55-1.6, 2022 Aug 15-20) is real, single and achromatic, and the ZTF
+  difference-image centroid sits 0.09" from the Gaia star. But tE runs from 77 to over 700 d with reduction choices, a lens fits only
+  with an 80-90% blend in every band that Gaia does not resolve, and a symmetric bump fits better. Its fitted parameters are
+  withdrawn; the figure shows it without a model.
+- **What the referee corrected in our first fit:** a chi/N < 10 cut that removed the peak (chi/N grows with flux), a baseline inside
+  the lens wings (|Δt| > 250 d; now 400 d, through 2026), ZTF r field 1428 dropped (the only ZTF data on J180624's rise), the baseline
+  scatter counted twice in the errors, and a Gaussian as the only rival shape (its wings are too thin to be fair).
+- **Sealed predictions** (registered in the cases, on the Sky Ledger after merge), worded with Gaia's scanning law (GOST): DR4 shows
+  no repeat (OS-0018 brightest night > −0.5 mag, p 0.85; OS-0019 > −0.3, p 0.80); DR4 shows ATLAS's 2015-16 dip is instrumental
+  (|ΔG| < 0.1, p 0.90 and 0.95); DR5 sees the events (OS-0018 brightest night in 2022 Feb - 2023 May < −1.2 mag, p 0.85, and both wings;
+  OS-0019 < −0.3, p 0.85). A Sep-Oct 2022 window would hold only 2 Gaia transits, too few to grade.
+- **The grader now keeps Gaia's variability-outlier transits** when grading (it still drops photometry rejections). Gaia flags
+  transits that depart from a star's usual brightness, which during a lens peak are the peak itself. This also affects OS-0016 P1,
+  sealed on 29 Oct for the same kind of window; the change was made before any DR4 data exist.
 
 ## The 428 unclassified
 
@@ -102,16 +129,17 @@ asymmetric. It reproduces both H-0007 referees' hand fits in seconds (OS-0016: t
 
 ## Next
 
-- ATLAS forced photometry for J180624.78-090411.4 (2022 Jun-Nov) and J183040.98-220950.3: one light curve each settles the peak, the
-  decline and tE. Queued 2026-10-30 (tasks 5272650 and 5272651); the waiters save to `~/oddsky-runs/h0008/atlas_J180624.txt` and `atlas_J183040.txt`.
+- ATLAS for the ten strongest lens-like unclassified events that ZTF cannot check (south of ZTF, or before 2018): queued
+  2026-10-30, `work/atlas/queue.csv` (`scripts/hunt_h0008_atlas_queue.py`).
+- A TNS report for OS-0018 (needs the project's TNS account; not filed).
 - **Literature (done 2026-10-30, `scripts/hunt_h0008_ads.py`):** ADS full text has no hit for either candidate's ZTF name
   (ZTF22abjkknd, ZTF22aalviwh), WISE designation, 2MASS-style name, short name or sexagesimal coordinates (the two coordinate
   hits are unrelated papers). ADS full text is only a partial net, though: of seven names of published events used as positive
   controls, it found five and missed two that appear only in journal tables (e.g. ZTF20abwxmep in Zhai et al. 2024). A web search
   on the ZTF names finds nothing; XOSS's candidate pages were unreachable, but XOSS reports to TNS, which has nothing within 60".
   So: not in any catalogue, alert stream or text we can search, which is the strongest "apparently unreported" we can state.
-- Recompute the efficiency with real visit dates and a W1-based criterion. Then rerun the detector keeping saturated frames as a
-  flagged class, and relax the quiet-elsewhere rule for long events: black-hole lenses live at tE > 100 d.
+- The long-lens rerun is hunt [H-0009](../H-0009): saturated frames kept, the quiet-elsewhere rule relaxed for tE > 100 d, and two
+  blind spots this survey never measured (stars beside a bright one, and deblended stars) closed.
 
 ## Lessons
 
@@ -127,6 +155,7 @@ asymmetric. It reproduces both H-0007 referees' hand fits in seconds (OS-0016: t
 - TNS has objects at 7 of the 70 strong events of the first pass: the five Gaia alerts above (as ATs) and two microlensing candidates (J173342 from
   ALeRCE, J204610 from XOSS). The first vetting pass saw none, because TNS was rate-limiting.
 
-Referee: [`reviews/claude-referee-2026-10-30.md`](reviews/claude-referee-2026-10-30.md). Files: `scripts/hunt_h0008_*.py`,
+Referees: [`reviews/claude-referee-2026-10-30.md`](reviews/claude-referee-2026-10-30.md) (the survey) and
+[`reviews/claude-referee-atlas-2026-10-30.md`](reviews/claude-referee-atlas-2026-10-30.md) (the ATLAS light curves). Files: `scripts/hunt_h0008_*.py`,
 `infra/gcp/neowise_lens.py`, `infra/gcp/sky3lens*.json`, `work/` (event tables, efficiencies), `ext/` (reference catalogues),
 `figures/`. Per-pixel outputs: `gs://oddsky-sky-br3c3-data/runs/sky3lens/`.

@@ -1,0 +1,56 @@
+== J180624 main: n 893, series ['ATLAS_c_01a', 'ATLAS_c_02a', 'ATLAS_c_03a', 'ATLAS_c_04a', 'ATLAS_o_01a', 'ATLAS_o_02a', 'ATLAS_o_03a', 'ATLAS_o_04a', 'ZTF_r_1428']
+   Pearson VII symmetric chi2 1075.4 (t0, w, m = [59841.595, 34.789, 0.96]); Gaussian 3795.9
+   static   fs free: chi2 1049.6  tE 136.4 u0 +0.177 fs [0.88, 0.87, 0.98, 0.84, 0.82, 0.79, 0.85, 0.8, 0.72]
+      fs = 1.00 everywhere: chi2   1511.4 (d =  +461.8)  t0 59841.5 tE  120.7 u0 +0.212 A_max 4.81
+      fs = 0.93 everywhere: chi2   1506.2 (d =  +456.6)  t0 59841.4 tE  126.0 u0 +0.199 A_max 5.10
+      fs = 0.80 everywhere: chi2   1505.9 (d =  +456.3)  t0 59841.4 tE  138.2 u0 +0.175 A_max 5.79
+      fs = 0.60 everywhere: chi2   1549.8 (d =  +500.2)  t0 59841.2 tE  166.7 u0 +0.135 A_max 7.44
+      fs = 0.40 everywhere: chi2   1722.6 (d =  +673.0)  t0 59841.0 tE  222.0 u0 +0.093 A_max 10.77
+   parallax fs free: chi2 1014.0  tE 130.1 u0 -0.167 fs [0.83, 0.8, 0.92, 0.78, 0.76, 0.74, 0.79, 0.75, 0.67] piE [-0.273, -0.018]
+      fs = 1.00 everywhere: chi2   1461.5 (d =  +447.5)  t0 59841.0 tE  129.5 u0 +0.211 A_max 4.81 piE [-0.153, -0.03]
+      fs = 0.93 everywhere: chi2   1465.1 (d =  +451.1)  t0 59841.0 tE  133.6 u0 +0.199 A_max 5.11 piE [-0.116, -0.032]
+      fs = 0.80 everywhere: chi2   1460.3 (d =  +446.3)  t0 59841.4 tE  126.0 u0 -0.176 A_max 5.75 piE [-0.286, -0.02]
+      fs = 0.60 everywhere: chi2   1479.2 (d =  +465.2)  t0 59841.4 tE  149.6 u0 -0.137 A_max 7.35 piE [-0.326, -0.009]
+      fs = 0.40 everywhere: chi2   1487.4 (d =  +473.4)  t0 59841.1 tE  222.5 u0 +0.095 A_max 10.53 piE [0.151, -0.023]
+== J180624 atlas_only: n 877, series ['ATLAS_c_01a', 'ATLAS_c_02a', 'ATLAS_c_03a', 'ATLAS_c_04a', 'ATLAS_o_01a', 'ATLAS_o_02a', 'ATLAS_o_03a', 'ATLAS_o_04a']
+   Pearson VII symmetric chi2 1051.0 (t0, w, m = [59841.535, 34.914, 0.968]); Gaussian 3551.8
+   static   fs free: chi2 1022.9  tE 134.1 u0 +0.180 fs [0.9, 0.89, 1.0, 0.86, 0.84, 0.81, 0.87, 0.83]
+      fs = 1.00 everywhere: chi2   1283.4 (d =  +260.5)  t0 59841.7 tE  122.3 u0 +0.210 A_max 4.84
+      fs = 0.93 everywhere: chi2   1280.3 (d =  +257.4)  t0 59841.6 tE  127.8 u0 +0.197 A_max 5.14
+      fs = 0.80 everywhere: chi2   1284.3 (d =  +261.4)  t0 59841.6 tE  140.3 u0 +0.173 A_max 5.84
+      fs = 0.60 everywhere: chi2   1336.5 (d =  +313.6)  t0 59841.4 tE  169.4 u0 +0.134 A_max 7.50
+      fs = 0.40 everywhere: chi2   1519.3 (d =  +496.4)  t0 59841.3 tE  225.8 u0 +0.092 A_max 10.85
+   parallax fs free: chi2 994.4  tE 128.0 u0 -0.171 fs [0.85, 0.82, 0.94, 0.8, 0.78, 0.76, 0.81, 0.77] piE [-0.271, -0.017]
+      fs = 1.00 everywhere: chi2   1257.3 (d =  +262.9)  t0 59841.3 tE  129.4 u0 +0.209 A_max 4.85 piE [-0.132, -0.021]
+      fs = 0.93 everywhere: chi2   1258.4 (d =  +264.0)  t0 59841.6 tE  115.9 u0 -0.198 A_max 5.12 piE [-0.275, -0.008]
+      fs = 0.80 everywhere: chi2   1253.5 (d =  +259.1)  t0 59841.6 tE  125.8 u0 -0.174 A_max 5.80 piE [-0.312, -0.006]
+      fs = 0.60 everywhere: chi2   1276.8 (d =  +282.5)  t0 59841.2 tE  208.2 u0 -0.136 A_max 7.43 piE [0.198, -0.021]
+      fs = 0.40 everywhere: chi2   1281.3 (d =  +286.9)  t0 59841.5 tE  222.7 u0 +0.095 A_max 10.62 piE [0.168, -0.009]
+== J183040 main: n 686, series ['ATLAS_c_03a', 'ATLAS_c_04a', 'ATLAS_o_02a', 'ATLAS_o_03a', 'ATLAS_o_04a', 'ZTF_g_283', 'ZTF_r_283']
+   Pearson VII symmetric chi2 1121.7 (t0, w, m = [59813.741, 48.465, 0.879]); Gaussian 1433.1
+   static   fs free: chi2 1146.4  tE 279.3 u0 +0.123 fs [0.1, 0.08, 0.09, 0.09, 0.09, 0.08, 0.09]
+      fs = 1.00 everywhere: chi2   1332.3 (d =  +185.9)  t0 59812.6 tE   75.4 u0 +0.738 A_max 1.62
+      fs = 0.93 everywhere: chi2   1330.2 (d =  +183.8)  t0 59812.6 tE   77.5 u0 +0.708 A_max 1.66
+      fs = 0.80 everywhere: chi2   1325.5 (d =  +179.2)  t0 59812.7 tE   82.1 u0 +0.649 A_max 1.77
+      fs = 0.60 everywhere: chi2   1315.7 (d =  +169.3)  t0 59812.8 tE   92.4 u0 +0.545 A_max 2.03
+      fs = 0.40 everywhere: chi2   1300.1 (d =  +153.7)  t0 59813.1 tE  111.2 u0 +0.416 A_max 2.56
+   parallax fs free: chi2 1143.1  tE 220.6 u0 +0.189 fs [0.17, 0.13, 0.14, 0.16, 0.14, 0.14, 0.15] piE [-0.129, -0.037]
+      fs = 1.00 everywhere: chi2   1277.1 (d =  +133.9)  t0 59802.5 tE  100.8 u0 +0.720 A_max 1.65 piE [-0.497, -0.131]
+      fs = 0.93 everywhere: chi2   1276.3 (d =  +133.1)  t0 59802.6 tE  103.1 u0 +0.691 A_max 1.69 piE [-0.483, -0.129]
+      fs = 0.80 everywhere: chi2   1274.4 (d =  +131.3)  t0 59803.0 tE  108.2 u0 +0.633 A_max 1.81 piE [-0.454, -0.124]
+      fs = 0.60 everywhere: chi2   1270.3 (d =  +127.2)  t0 59803.9 tE  119.2 u0 +0.531 A_max 2.08 piE [-0.395, -0.114]
+      fs = 0.40 everywhere: chi2   1263.4 (d =  +120.3)  t0 59805.4 tE  138.4 u0 +0.406 A_max 2.61 piE [-0.311, -0.097]
+== J183040 atlas_only: n 560, series ['ATLAS_c_03a', 'ATLAS_c_04a', 'ATLAS_o_02a', 'ATLAS_o_03a', 'ATLAS_o_04a']
+   Pearson VII symmetric chi2 943.9 (t0, w, m = [59813.455, 48.317, 0.874]); Gaussian 1232.8
+   static   fs free: chi2 970.7  tE 285.4 u0 +0.121 fs [0.1, 0.08, 0.08, 0.09, 0.08]
+      fs = 1.00 everywhere: chi2   1136.9 (d =  +166.2)  t0 59811.8 tE   76.0 u0 +0.735 A_max 1.62
+      fs = 0.93 everywhere: chi2   1135.1 (d =  +164.4)  t0 59811.9 tE   78.1 u0 +0.706 A_max 1.67
+      fs = 0.80 everywhere: chi2   1131.2 (d =  +160.4)  t0 59811.9 tE   82.7 u0 +0.647 A_max 1.78
+      fs = 0.60 everywhere: chi2   1122.8 (d =  +152.1)  t0 59812.1 tE   93.1 u0 +0.543 A_max 2.04
+      fs = 0.40 everywhere: chi2   1109.6 (d =  +138.9)  t0 59812.4 tE  112.1 u0 +0.415 A_max 2.57
+   parallax fs free: chi2 966.6  tE 219.3 u0 +0.194 fs [0.17, 0.14, 0.15, 0.16, 0.15] piE [-0.144, -0.045]
+      fs = 1.00 everywhere: chi2   1087.2 (d =  +120.7)  t0 59801.5 tE  100.7 u0 +0.716 A_max 1.65 piE [-0.489, -0.136]
+      fs = 0.93 everywhere: chi2   1086.6 (d =  +120.0)  t0 59801.7 tE  103.0 u0 +0.687 A_max 1.70 piE [-0.475, -0.134]
+      fs = 0.80 everywhere: chi2   1085.2 (d =  +118.6)  t0 59802.1 tE  108.2 u0 +0.630 A_max 1.81 piE [-0.447, -0.128]
+      fs = 0.60 everywhere: chi2   1082.0 (d =  +115.4)  t0 59803.0 tE  119.3 u0 +0.528 A_max 2.09 piE [-0.391, -0.117]
+      fs = 0.40 everywhere: chi2   1076.6 (d =  +110.1)  t0 59804.5 tE  139.0 u0 +0.404 A_max 2.63 piE [-0.309, -0.099]

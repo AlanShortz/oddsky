@@ -1,0 +1,15 @@
+== J180624 886 off-event points 2015-2026
+  ATLAS_c       22 bins: brightest bin 1.189 at MJD 59432 (1.3 sigma formal); bins > 1.10: 4; rms of bins 0.277
+  ATLAS_o       93 bins: brightest bin 1.134 at MJD 58751 (1.6 sigma formal); bins > 1.10: 4; rms of bins 0.088
+  NEOWISE_W1    17 bins: brightest bin 1.019 at MJD 58364 (1.1 sigma formal); bins > 1.10: 0; rms of bins 0.015
+  NEOWISE_W2    17 bins: brightest bin 1.060 at MJD 60190 (2.8 sigma formal); bins > 1.10: 0; rms of bins 0.024
+  ZTF_r          1 bins: brightest bin 1.006 at MJD 60708 (0.7 sigma formal); bins > 1.10: 0; rms of bins nan
+  LS ATLAS o 2018-2026 off-event: best period 25.0 d, power 0.037, FAP 0.043, approx semi-amplitude 0.027 (flux ratio)
+== J183040 893 off-event points 2015-2026
+  ATLAS_c       31 bins: brightest bin 1.072 at MJD 60386 (2.2 sigma formal); bins > 1.10: 0; rms of bins 0.081
+  ATLAS_o       86 bins: brightest bin 1.049 at MJD 60370 (4.3 sigma formal); bins > 1.10: 0; rms of bins 0.022
+  NEOWISE_W1    11 bins: brightest bin 1.018 at MJD 57473 (2.4 sigma formal); bins > 1.10: 0; rms of bins 0.007
+  NEOWISE_W2    11 bins: brightest bin 1.014 at MJD 56747 (1.3 sigma formal); bins > 1.10: 0; rms of bins 0.010
+  ZTF_g         11 bins: brightest bin 1.045 at MJD 60151 (2.1 sigma formal); bins > 1.10: 0; rms of bins 0.020
+  ZTF_r          4 bins: brightest bin 1.013 at MJD 58728 (0.6 sigma formal); bins > 1.10: 0; rms of bins 0.015
+  LS ATLAS o 2018-2026 off-event: best period 322.9 d, power 0.053, FAP 0.0027, approx semi-amplitude 0.011 (flux ratio)

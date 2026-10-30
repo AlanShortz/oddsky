@@ -1,0 +1,41 @@
+== local reference tables
+ J180624 (l, b = 19.67, +5.72)
+   Gaia DR3                                 nearest Gaia DR3 4159994512750671232 at 277.9'
+   Gaia alerts                              nearest Gaia23cnd at 102.5'; nearest 2022 event Gaia22egk at 342.1'
+   KMTNet                                   nearest KMT-2018-BLG-0178 at 762.9'; nearest 2022 event KMT-2022-BLG-0441 at 764.4'
+   OGLE                                     nearest OGLE-2024-BLG-0899 at 395.7'; nearest 2022 event OGLE-2023-DG-0001 at 519.7'
+   OGLE GVS (Mroz+2020)                     nearest OGLE-GVS BLG847.01.3172 at 233.1'
+   TNS (ALeRCE microlensing candidate)      nearest AT 2021aicc (ZTF21abahtfi) at 851.3'
+   TNS (XOSS microlensing candidate)        nearest AT 2022aexe (XOSS KATS22J002) at 4186.4'; nearest 2022 event AT 2022aexe (XOSS KATS22J002) at 4186.4'
+   ZTF (Medford+2023)                       nearest ZTF18ablrdcc at 176.9'
+   ZTF (Rodriguez+2022)                     nearest ZTF18ablrbkj at 76.1'
+   ZTF (Zhai+2024)                          nearest ZTF18ablrbkj at 76.1'; nearest 2022 event ZTF22abcflpn at 228.5'
+ J183040 (l, b = 10.86, -5.59)
+   Gaia DR3                                 nearest Gaia DR3 4077869107439976320 at 78.1'
+   Gaia alerts                              nearest Gaia22btv at 30.5'; nearest 2022 event Gaia22btv at 30.5'
+   KMTNet                                   nearest KMT-2018-BLG-1927 at 169.3'; nearest 2022 event KMT-2022-BLG-0301 at 178.7'
+   OGLE                                     nearest OGLE-2025-BLG-0118 at 45.2'; nearest 2022 event OGLE-2023-BLG-0208 at 129.3'
+   OGLE GVS (Mroz+2020)                     nearest OGLE-GVS BLG565.32.1178 at 27.0'
+   TNS (ALeRCE microlensing candidate)      nearest AT 2021aicc (ZTF21abahtfi) at 798.6'
+   TNS (XOSS microlensing candidate)        nearest AT 2022aexe (XOSS KATS22J002) at 4775.3'; nearest 2022 event AT 2022aexe (XOSS KATS22J002) at 4775.3'
+   ZTF (Medford+2023)                       nearest PUZLE 198045_37053 at 218.4'
+   ZTF (Rodriguez+2022)                     nearest ZTF20aawanug at 166.2'
+   ZTF (Zhai+2024)                          nearest ZTF22aawaiui at 136.6'; nearest 2022 event ZTF22aawaiui at 136.6'
+== Gaia Science Alerts index (all classes)
+ index: 27076 alerts, last 2025-01-15 00:59:00
+ J180624: alerts within 60": 0
+   nearest alerts (any distance; used in r7 as Gaia scanning proxies): [('Gaia19bfu', np.float64(0.4), '2019-04-05'), ('Gaia21auk', np.float64(1.49), '2021-02-13'), ('Gaia24chd', np.float64(1.57), '2024-08-09'), ('Gaia17ask', np.float64(1.63), '2017-03-15'), ('Gaia23bkw', np.float64(1.69), '2023-04-06'), ('Gaia23cnd', np.float64(1.71), '2023-09-18')]
+ J183040: alerts within 60": 0
+   nearest alerts (any distance; used in r7 as Gaia scanning proxies): [('Gaia19dth', np.float64(0.22), '2019-08-23'), ('Gaia20esj', np.float64(0.25), '2020-10-07'), ('Gaia16bsy', np.float64(0.32), '2016-11-05'), ('Gaia21ayu', np.float64(0.39), '2021-02-18'), ('Gaia22btv', np.float64(0.51), '2022-04-19'), ('Gaia21etr', np.float64(0.93), '2021-10-18')]
+== TNS cone 60" (paced)
+ J180624: none within 60" (HTTP 200, valid CSV header)
+ J183040: none within 60" (HTTP 200, valid CSV header)
+== MOA 2022 / KMTNet 2022 alert pages
+ MOA 2022: HTTP 200, 0 coordinate pairs parsed
+ MOA 2022 (old host): UNKNOWN (HTTP 404)
+ KMTNet 2022: HTTP 200, 0 coordinate pairs parsed
+== ASAS-SN
+ J180624 /variables.json?ra=271.603281&dec=-9.069: HTTP 500, 46 bytes, starts '{"status":500,"error":"Internal Server Error"}'
+ J180624 /sky-patrol/coordinate/271.603281/-9.069: HTTP 404, 1613 bytes, starts '<!DOCTYPE html>\n<html>\n<head>\n  <title>The page you were looking for doesn\'t exist (404)</title>\n  <meta name="viewport"'
+ J183040 /variables.json?ra=277.670788&dec=-22.16: HTTP 500, 46 bytes, starts '{"status":500,"error":"Internal Server Error"}'
+ J183040 /sky-patrol/coordinate/277.670788/-22.16: HTTP 404, 1613 bytes, starts '<!DOCTYPE html>\n<html>\n<head>\n  <title>The page you were looking for doesn\'t exist (404)</title>\n  <meta name="viewport"'

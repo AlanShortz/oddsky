@@ -92,7 +92,7 @@ def grade_due(dry_run: bool = False) -> list[dict]:
                 survey = FETCH_KEY.get(chk.series.split(":")[0].strip().lower())
                 if survey:
                     fetch(store, surveys=[survey])
-                res = evaluate(chk, lambda ser, store=store: Toolbox(mode="open")._frame(store, ser))
+                res = evaluate(chk, lambda ser, store=store: Toolbox(mode="open")._frame(store, ser, grading=True))
         except Exception as e:  # an archive outage must not grade anything
             log.exception("grading seal %s", pend["seq"])
             out.append({"seq": pend["seq"], "error": str(e)[:300]})

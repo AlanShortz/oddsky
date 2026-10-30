@@ -1,0 +1,22 @@
+J180624 fs {'ATLAS_c_01a': 0.863, 'ATLAS_c_02a': 0.84, 'ATLAS_c_03a': 0.958, 'ATLAS_c_04a': 0.816, 'ATLAS_o_01a': 0.794, 'ATLAS_o_02a': 0.774, 'ATLAS_o_03a': 0.831, 'ATLAS_o_04a': 0.786, 'NEOWISE_W1': 0.684, 'NEOWISE_W2': 0.696, 'ZTF_r_1428': 0.706}
+                size                                      median                                     
+band         ATLAS_c ATLAS_o NEOWISE_W1 NEOWISE_W2 ZTF_r ATLAS_c ATLAS_o NEOWISE_W1 NEOWISE_W2  ZTF_r
+ph                                                                                                   
+(-400, -150]     9.0    56.0        2.0        2.0   NaN  -0.033  -0.005     -0.009     -0.035    NaN
+(-150, -60]     10.0    42.0        NaN        NaN   3.0   0.017  -0.021        NaN        NaN  0.011
+(-60, -20]      13.0    15.0        NaN        NaN   1.0   0.028   0.008        NaN        NaN -0.001
+(-20, 20]        6.0    21.0        1.0        1.0   4.0  -0.102   0.024     -0.000      0.003 -0.023
+(20, 60]         1.0     4.0        NaN        NaN   NaN   0.041  -0.012        NaN        NaN    NaN
+(60, 150]        NaN     1.0        NaN        NaN   NaN     NaN  -0.045        NaN        NaN    NaN
+(150, 400]      17.0    62.0        2.0        2.0   3.0   0.017  -0.004     -0.004      0.009  0.024
+J183040 fs {'ATLAS_c_01a': 0.702, 'ATLAS_c_02a': 0.239, 'ATLAS_c_03a': 0.17, 'ATLAS_c_04a': 0.135, 'ATLAS_o_01a': 0.11, 'ATLAS_o_02a': 0.145, 'ATLAS_o_03a': 0.157, 'ATLAS_o_04a': 0.142, 'NEOWISE_W1': 0.141, 'NEOWISE_W2': 0.14, 'ZTF_g_283': 0.14, 'ZTF_r_283': 0.153}
+                size                                            median                                            
+band         ATLAS_c ATLAS_o NEOWISE_W1 NEOWISE_W2 ZTF_g ZTF_r ATLAS_c ATLAS_o NEOWISE_W1 NEOWISE_W2  ZTF_g  ZTF_r
+ph                                                                                                                
+(-400, -150]     9.0    40.0        1.0        1.0   6.0   4.0  -0.000  -0.006     -0.017     -0.034 -0.011  0.014
+(-150, -60]      1.0    25.0        NaN        NaN   4.0   NaN   0.015  -0.003        NaN        NaN  0.024    NaN
+(-60, -20]       2.0     6.0        NaN        NaN   5.0   1.0   0.060   0.015        NaN        NaN -0.021  0.044
+(-20, 20]        9.0    13.0        1.0        1.0   7.0   2.0   0.001  -0.015      0.002      0.002  0.006 -0.016
+(20, 60]         5.0    19.0        NaN        NaN   3.0   NaN  -0.008   0.007        NaN        NaN  0.034    NaN
+(60, 150]        3.0     8.0        NaN        NaN   NaN   NaN  -0.022  -0.052        NaN        NaN    NaN    NaN
+(150, 400]      17.0    31.0        1.0        1.0  10.0   3.0   0.003   0.020     -0.012     -0.011  0.017  0.022

@@ -1,0 +1,265 @@
+id: OS-0018
+title: 'A star in Serpens brightened fivefold over four months in 2022: an apparently unreported microlensing
+  event'
+hook: Found blind in Oddsky hunt H-0008 as a colour-neutral 3.5x brightening in NEOWISE (2022 Aug 31).
+  ATLAS shows one smooth, symmetric event peaking near 2022 Sep 19 at about 5x, lasting months. Not in
+  TNS, the Gaia alerts, the KMTNet or OGLE lists, the ZTF microlensing catalogues, SIMBAD, VSX or ADS
+  full text.
+status: reproduced
+target:
+  name: Gaia DR3 4158424169627436800
+  ra: 271.603281
+  dec: -9.069857
+  aliases: []
+  gaia_source_id: 4158424169627436800
+summary: 'A reddened giant 20 degrees from the Galactic centre and 6 degrees off the plane brightened
+  once in 2022: x3.5 in NEOWISE on Aug 31, then x5 in ATLAS at the peak on Sep 19, back to normal by spring
+  2023. The rise and fall are symmetric and the same from 0.5 to 4.6 microns, and a point lens fits (tE
+  about 115-150 d) better than any flexible bump. Found blind by the H-0008 all-sky NEOWISE search; not
+  in any alert stream, catalogue or paper we could search.'
+claims:
+- id: C1
+  text: 'In the NEOWISE visit of 2022 Aug 31 the star was 1.37 mag brighter in W1 and 1.38 mag brighter
+    in W2 than its 20-visit median (W1 11.53, robust scatter 0.02 mag): a factor of 3.5, equal in both
+    bands. No other visit in 2014-2024 departs from the median by more than 0.15 mag. Found blind by the
+    H-0008 all-sky search.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+- id: C2
+  text: 'ATLAS (task 5272650, four units, c and o) shows one event in 2015-2026: the star rises from x1.1
+    in March 2022 to x4.9 (o) and x5.0 (c) on 2022 Sep 18-20, falls to x2.1 by late November and x1.2
+    by February 2023. The peak is sampled on 24-26 nights. No other 20-day bin in 2015-2026 is above x1.10.'
+  tag: observed
+  calls:
+  - K1
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+- id: C3
+  text: ZTF r (field 1428, catflags 0) catches the rise in 2022 at the same flux ratio as ATLAS o.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+- id: C4
+  text: A point-lens fit to ATLAS o and c (lens_fit, baseline 2023 Nov - 2026) gives t0 = 2022 Sep 19
+    (MJD 59840.7-59842.1), tE 108-139 d (95%), A_max 4.5-5.5, fs 0.87-1.1, chi2 252 for 291 dof. Across
+    18 reduction choices with ATLAS, ZTF and NEOWISE together (referee), t0 is Sep 19-20 and tE 113-153
+    d; quote tE = 115-150 d. Separate rise and decline timescales agree (ratio 0.91-0.95).
+  tag: computed
+  calls:
+  - K1
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+- id: C5
+  text: The point lens beats a free symmetric bump with lens-like wings (Pearson VII, same per-series
+    freedom) by delta chi2 = 26-88 depending on the reduction, and a fast-rise exponential-decay pulse
+    by about 4,000.
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+- id: C6
+  text: 'The source flux changes by the same factor from ATLAS c to WISE W2: fitted alone, c and o peak
+    within 0.3 d of each other with the same timescale. Blend fractions fall from 0.84-0.98 (c) to 0.68-0.73
+    (W1/W2), as expected from the red neighbours Gaia resolves (G 18.1 at 6.1", G 20.2 at 2.5") inside
+    WISE''s 6" beam.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+- id: C7
+  text: 'Before 2019 ATLAS reads the star 10-40% faint, stepping up when each unit''s PSF narrows (02a
+    between 2017 and 2018, 01a between 2019 and 2020): flux against PSF width is -0.13 mag/px in o. NEOWISE
+    W1 is flat to 0.001 +- 0.009 mag over the same years. The drift is instrumental and does not change
+    the fit.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+- id: C8
+  text: 'Gaia DR3 4158424169627436800: a reddened K giant or subgiant (GSP-Phot Teff 4770 K, A_G 3.6),
+    parallax -0.32 +- 0.13 mas (beyond ~5 kpc), no infrared excess (W1-W2 -0.13, W2-W3 0.10), l = 19.7,
+    b = +5.7.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+- id: C9
+  text: 'Annual parallax improves the fit by delta chi2 4-36 depending on the reduction, along one direction
+    (piE_N about -0.2). That is a hint, not a measurement. Without the angular Einstein radius no lens
+    mass is measured: allowed masses run from about 0.3 to 10 solar masses.'
+  tag: inferred
+  calls:
+  - K1
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+- id: C10
+  text: 'Not found (2026-10-30) in TNS (valid empty result), the Gaia Science Alerts (60"), the KMTNet
+    and OGLE EWS lists (outside both footprints), the ZTF microlensing catalogues (Zhai+2024, Rodriguez+2022,
+    Medford+2023), ALeRCE/Lasair, SIMBAD, VSX, ADS full text or a web search. ZTF22abjkknd, the ZTF object
+    at this position, has only 2025-26 negative-difference alerts. Not checked: MOA 2022 (page empty),
+    ASAS-SN (server errors).'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A foreground star or remnant passed within ~0.2 Einstein radii of the giant, magnifying it
+    about 5.4 times on 2022 Sep 19, with tE about 115-150 d.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  conflicts: []
+  would_falsify: A repeat brightening; Gaia DR5 epoch photometry flat during 2022; BP and RP changing
+    by different amounts.
+  status: live
+  confidence: 0.95
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+- id: H2
+  klass: eruptive
+  statement: An outburst of the star or an unseen companion (Be/shell, YSO accretion, nova, symbiotic).
+  supports: []
+  conflicts:
+  - C5
+  - C6
+  - C8
+  would_falsify: 'Already strongly disfavoured: symmetric lens shape, no colour change, no infrared excess,
+    no repeat in 11 years.'
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: An artifact in one survey.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  - C3
+  would_falsify: 'Already falsified: NEOWISE, ATLAS (four units) and ZTF see the same event.'
+  status: rejected
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-10-30T15:28:33+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'Gaia DR4 epoch photometry shows no repeat: in 2014 Jul - 2020 Jan no night is more than
+    0.5 mag brighter in G than the DR4 median (a lens does not repeat; a Be star, YSO or nova usually
+    would).'
+  check:
+    series: GAIA:G
+    start: 56863.0
+    end: 58868.99999
+    statistic: brightest
+    baseline:
+    - 56863.0
+    - 58868.99999
+    op: '>'
+    value: -0.5
+  probability: 0.85
+  resolve_by: '2027-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-30T15:28:33+00:00'
+- id: P2
+  statement: 'ATLAS''s low 2015-16 flux is instrumental: Gaia DR4''s median G in 2014 Jul - 2016 Jun is
+    less than 0.1 mag fainter than in 2018 Jan - 2020 Jan.'
+  check:
+    series: GAIA:G
+    start: 56863.0
+    end: 57569.99999
+    statistic: median
+    baseline:
+    - 58119.0
+    - 58868.99999
+    op: <
+    value: 0.1
+  probability: 0.9
+  resolve_by: '2027-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-30T15:28:33+00:00'
+- id: P3
+  statement: '... and less than 0.1 mag brighter (the two-sided form of the same test).'
+  check:
+    series: GAIA:G
+    start: 56863.0
+    end: 57569.99999
+    statistic: median
+    baseline:
+    - 58119.0
+    - 58868.99999
+    op: '>'
+    value: -0.1
+  probability: 0.95
+  resolve_by: '2027-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-30T15:28:33+00:00'
+- id: P4
+  hypothesis: H1
+  statement: 'Gaia DR5 epoch photometry sees the event: the brightest night in 2022 Feb - 2023 May is
+    more than 1.2 mag brighter in G than the 2015-2021 median. The lens model gives about -1.7 to -1.85
+    mag at the 2022 Sep 8 transit. (DR5 is expected about 2030; the grader will need its release name.)'
+  check:
+    series: GAIA:G
+    start: 59611.0
+    end: 60095.99999
+    statistic: brightest
+    baseline:
+    - 57023.0
+    - 59579.99999
+    op: <
+    value: -1.2
+  probability: 0.85
+  resolve_by: '2032-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-30T15:28:33+00:00'
+- id: P5
+  hypothesis: H1
+  statement: 'Gaia DR5 sees the rising wing: median G in 2022 Feb-Apr is more than 0.1 mag brighter than
+    in 2015-2021.'
+  check:
+    series: GAIA:G
+    start: 59611.0
+    end: 59699.99999
+    statistic: median
+    baseline:
+    - 57023.0
+    - 59579.99999
+    op: <
+    value: -0.1
+  probability: 0.8
+  resolve_by: '2032-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-30T15:28:33+00:00'
+- id: P6
+  hypothesis: H1
+  statement: 'Gaia DR5 sees the falling wing: median G in 2023 Mar-Apr is more than 0.1 mag brighter than
+    in 2015-2021.'
+  check:
+    series: GAIA:G
+    start: 60004.0
+    end: 60064.99999
+    statistic: median
+    baseline:
+    - 57023.0
+    - 59579.99999
+    op: <
+    value: -0.1
+  probability: 0.85
+  resolve_by: '2032-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-30T15:28:33+00:00'
+literature: []
+hunt: H-0008
+featured: false
+created_at: '2026-10-30T15:20:00+00:00'

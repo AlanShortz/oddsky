@@ -49,11 +49,13 @@ class Toolbox:
             return CaseStore(p)
         return CaseStore.find(case)
 
-    def _frame(self, store: CaseStore, series: str) -> pd.DataFrame:
+    def _frame(self, store: CaseStore, series: str, grading: bool = False) -> pd.DataFrame:
+        """A series' usable points. For grading predictions, points Gaia rejected only as variability outliers are kept:
+        during a real event (a lens peak, an eclipse) those outliers are the event itself."""
         survey, _, band = series.partition(":")
         key = SURVEY_FILES.get(survey.strip().lower(), survey.strip().lower())
         df = store.series(key)
-        df = df[df.flag == ""]
+        df = df[(df.flag == "") | (grading & (df.flag == "rejected_by_variability"))]
         if band:
             df = df[df.band.str.lower() == band.strip().lower()]
             if df.empty:
@@ -592,12 +594,12 @@ class Toolbox:
         p = next((p for p in c.predictions if p.id == prediction), None)
         if p is None or p.check is None:
             raise ValueError(f"no machine-checkable prediction {prediction}")
-        frame = self._frame(s, p.check.series)
+        frame = self._frame(s, p.check.series, grading=True)
         if frame.empty or frame.t_mjd.max() < p.check.end:
             last = float(frame.t_mjd.max()) if len(frame) else None
             return {"prediction": prediction, "outcome": "pending",
                     "note": f"window closes at MJD {p.check.end:.1f}; latest data MJD {last}"}
-        res = evaluate(p.check, lambda ser: self._frame(s, ser))
+        res = evaluate(p.check, lambda ser: self._frame(s, ser, grading=True))
         if dry_run:
             return {"prediction": prediction, "dry_run": True, **res.model_dump()}
         p.resolution = res
