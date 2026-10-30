@@ -1,0 +1,55 @@
+LOO (template < 5 deg away, n=594): median |dt| 0.13 d; share of real visits matched within 3 d: 0.959
+Gaia DR3: n 362 | old catchable 7 rec 4 | NEW catchable 6 rec 4 | recovered total 14, of which NEW-catchable 4
+KMTNet: n 18503 | old catchable 167 rec 3 | NEW catchable 161 rec 2 | recovered total 10, of which NEW-catchable 2
+OGLE: n 14069 | old catchable 118 rec 4 | NEW catchable 96 rec 4 | recovered total 9, of which NEW-catchable 4
+OGLE GVS (Mroz+2020): n 444 | old catchable 0 rec 0 | NEW catchable 5 rec 0 | recovered total 4, of which NEW-catchable 0
+ZTF (Zhai+2024 full): n 177 | old catchable 0 rec 0 | NEW catchable 85 rec 6 | recovered total 8, of which NEW-catchable 6
+inner bulge |l|<10,|b|<5 (KMT/OGLE/GVS/GaiaDR3 with mag <= 16): catchable 239 recovered 6 (0.025)
+elsewhere (KMT/OGLE/GVS/GaiaDR3 with mag <= 16): catchable 29 recovered 4 (0.138)
+Zhai full list: A>=1.6 at a real visit: 85 | recovered: 8 | recovered among A>=1.6: 6
+                        name               source       mag  A_real_visits  A_at_neowise catchable  catchable_v2          b
+           KMT-2016-BLG-1214               KMTNet 14.740000          1.429         1.433     False         False   2.004372
+           KMT-2016-BLG-1384               KMTNet 16.040000          1.785         1.164     False         False  -3.398096
+           KMT-2016-BLG-1637               KMTNet 16.660000          1.475         3.238     False         False   1.428249
+           KMT-2016-BLG-1901               KMTNet 15.040000          1.566         1.360     False         False  -2.158920
+           KMT-2018-BLG-0262               KMTNet 16.660000          2.452         1.139     False         False   1.125441
+           KMT-2019-BLG-0080               KMTNet 14.540000          1.575         1.591     False         False  -1.906680
+           KMT-2019-BLG-2551               KMTNet 16.280000          1.235         1.680     False         False   1.120710
+           KMT-2020-BLG-0038               KMTNet 15.900000          2.522         2.684      True          True   2.011052
+           KMT-2020-BLG-0803               KMTNet 15.930000         13.346         2.464      True          True   2.961955
+           KMT-2022-BLG-1430               KMTNet 14.790000          1.433         2.313      True         False  -5.682568
+          OGLE-2014-BLG-1774                 OGLE 15.209000          2.403         2.923      True          True   4.609113
+          OGLE-2015-BLG-0102                 OGLE 14.337000          1.483         1.473     False         False  -3.162519
+          OGLE-2016-BLG-0023                 OGLE 14.291000          1.649         1.657      True          True   2.004423
+          OGLE-2016-BLG-0357                 OGLE 14.707000          2.304         2.311      True          True  -2.219642
+          OGLE-2016-BLG-0994                 OGLE 15.052000          1.485         1.297     False         False  -2.158886
+          OGLE-2016-BLG-1664                 OGLE 16.887000          1.323         2.668     False         False   1.428332
+          OGLE-2019-BLG-0035                 OGLE 14.540000          1.495         1.509     False         False  -1.906682
+          OGLE-2022-BLG-0356                 OGLE 16.299000          3.744         6.509     False         False   4.955550
+          OGLE-2023-BLG-0238                 OGLE 15.429000          2.622         2.630      True          True   4.539260
+    OGLE-GVS GD2202.02.17971 OGLE GVS (Mroz+2020) 18.126000          2.043           NaN       NaN         False   3.293626
+      OGLE-GVS GD1153.20.309 OGLE GVS (Mroz+2020) 16.287000          2.332           NaN       NaN         False   2.438820
+      OGLE-GVS GD1144.30.787 OGLE GVS (Mroz+2020) 17.121000          1.918           NaN       NaN         False   3.530498
+    OGLE-GVS BLG766.01.17287 OGLE GVS (Mroz+2020) 16.573000          1.684           NaN       NaN         False   1.916842
+Gaia DR3 5984758097700788992             Gaia DR3 18.302677          1.851         1.801     False         False   3.530490
+Gaia DR3 4053164279372999680             Gaia DR3 15.634938          3.643         3.683      True          True  -5.586162
+Gaia DR3 4084984459435880064             Gaia DR3 14.151776         12.209         9.345      True          True -10.640471
+Gaia DR3 4067907184112930944             Gaia DR3 16.025540          3.567         3.744     False         False   2.320506
+Gaia DR3 5305778988625143296             Gaia DR3 15.447565          1.365         1.365     False         False  -4.407502
+Gaia DR3 4041238259061973504             Gaia DR3 16.056599          2.011         2.017     False         False  -2.219593
+Gaia DR3 5960669348421847040             Gaia DR3 16.667366          1.876         1.809     False         False  -5.229597
+Gaia DR3 6059816980526317568             Gaia DR3 15.958667          2.691         2.734      True          True   3.971082
+Gaia DR3 4159994512750671232             Gaia DR3 15.994328          1.244         1.241     False         False   2.783630
+ Gaia DR3 443788525336160512             Gaia DR3 16.651020          1.650         1.764     False         False  -1.383391
+Gaia DR3 4046189531753775872             Gaia DR3 14.391192          4.993         5.011      True          True  -8.430952
+Gaia DR3 6059400613544951552             Gaia DR3 13.575167          1.327         1.507     False         False   3.558685
+Gaia DR3 4178925766518902272             Gaia DR3 18.209286          1.608         1.436     False         False  10.048203
+Gaia DR3 5515709499618656768             Gaia DR3 16.159433          1.663         1.635     False         False  -4.744931
+                ZTF21aadrxrx ZTF (Zhai+2024 full)       NaN          1.270           NaN       NaN         False  18.400061
+                ZTF19aaonska ZTF (Zhai+2024 full)       NaN          1.519           NaN       NaN         False   6.922696
+                ZTF21aaowecs ZTF (Zhai+2024 full)       NaN          4.132           NaN       NaN          True   3.742370
+                ZTF21abqhbuh ZTF (Zhai+2024 full)       NaN          6.361           NaN       NaN          True  -4.548238
+                ZTF22aagdkla ZTF (Zhai+2024 full)       NaN          3.019           NaN       NaN          True   5.331729
+                ZTF19aabbuqn ZTF (Zhai+2024 full)       NaN          3.183           NaN       NaN          True   3.955253
+                ZTF22abcfjfp ZTF (Zhai+2024 full)       NaN          2.648           NaN       NaN          True   1.525069
+                ZTF22aaajzoi ZTF (Zhai+2024 full)       NaN          2.483           NaN       NaN          True   2.308640

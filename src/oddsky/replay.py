@@ -8,7 +8,7 @@ from . import __version__
 from .case.store import CaseStore, digest, digest10, platform_tag
 from .tools import Toolbox
 
-REPLAYABLE = {"describe_series", "compare_windows", "observer_agreement", "eclipse_period", "fold", "periodogram", "find_excursions", "cross_band", "wise_color", "ir_excess",
+REPLAYABLE = {"describe_series", "compare_windows", "observer_agreement", "eclipse_period", "fold", "lens_fit", "periodogram", "find_excursions", "cross_band", "wise_color", "ir_excess",
               "neighbors", "get_lightcurve"}
 
 

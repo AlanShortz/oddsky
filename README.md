@@ -57,7 +57,7 @@ single point of failure.
 
 | | |
 |---|---|
-| **The observatory** | 24 MCP tools: case overview, light curves, changepoints, excursions (dips and flares), Lomb-Scargle with spectral-window alias flags, cross-band colour slopes, WISE colour and infrared-excess temperature, Gaia neighbours, and tools for recording claims, hypotheses and predictions. `oddsky tools` lists them. |
+| **The observatory** | 25 MCP tools: case overview, light curves, changepoints, excursions (dips and flares), Lomb-Scargle with spectral-window alias flags, microlensing fits (point lens with annual parallax, profile ranges), cross-band colour slopes, WISE colour and infrared-excess temperature, Gaia neighbours, and tools for recording claims, hypotheses and predictions. `oddsky tools` lists them. |
 | **Archives** | Gaia DR3 (context, neighbours, variability), NEOWISE 2014-2024 (quality-cut, visit-binned), AAVSO (a century of amateur photometry), TESS (SPOC/QLP), ZTF, ATLAS (whole-sky forced photometry, 2015-), ASAS-SN. Every cut is written to provenance. |
 | **The Skeptic** | Deterministic artifact checks: blends inside each survey's beam, saturation, single-observer data, series that start mid-event (against Gaia's baseline), colour coherence across bands, survey-rhythm aliases, unobserved onsets, TESS dips on momentum dumps and sector edges, RUWE. It is code, so it cannot be talked out of a warning. |
 | **Cases** | A case is a directory (`cases/OS-0001/`): `case.yaml` holds the argument, `data/` the evidence, and `ledger.jsonl` every tool call with a digest of its result. Fork = fork. Review = pull request. `oddsky replay OS-0001` re-runs the ledger. |
@@ -113,6 +113,11 @@ explained by any catalogue.**
   measured. Gaia DR4 (December 2026) scanned the star three times during the event, and a sealed prediction says what it will show.
   A second pass over fainter stars found another: **[OS-0017](cases/OS-0017)**, a halo giant more than 6 kpc away that brightened
   at least 2.4 times in March 2020, seen by NEOWISE, ATLAS and ZTF.
+- **The lensing sky** ([hunt H-0008](hunts/H-0008)): the same question for every star in the sky, the Galactic plane included.
+  The search read 105.9 billion NEOWISE detections of 194 million stars on Google Cloud in about three hours. Without being told where
+  to look, it recovered 64 microlensing events that KMTNet, OGLE, Gaia and ZTF had already found. Two more look like lenses nobody has
+  reported and wait on ATLAS. Our first draft claimed four new events. The referee found three of them in an online-only ZTF table and
+  on TNS, so the claim was cut to what survived. Fitting these events by hand became a tool any agent can call: `lens_fit`.
 - **One hunt parked**: new R CrB stars (H-0003). Gaia DR3 has already been mined by the experts, and our candidates were a VY
   Scl binary, a Mira, an S star and a T Tauri star.
 
