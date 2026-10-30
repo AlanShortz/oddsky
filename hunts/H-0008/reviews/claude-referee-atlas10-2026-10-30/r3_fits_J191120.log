@@ -1,0 +1,144 @@
+===== J191120 variant default: 1213 points, series ATLAS_c_01a(base -11, rob 19.2, nev 10), ATLAS_c_02a(base -17, rob 37, nev 8), ATLAS_o_01a(base 75, rob 46.9, nev 38), ATLAS_o_02a(base 101, rob 42.9, nev 26), NEOWISE_W1(base 1rel, rob 0.022, nev 1), NEOWISE_W2(base 1rel, rob 0.017, nev 1), GAIA_G(base 1rel, rob 0.017, nev 6), ZTF_g_1586(base 1rel, rob 0.226, nev 7), ZTF_i_1586(base 1rel, rob 0.0146, nev 1), ZTF_r_1586(base 1rel, rob 0.0347, nev 8)
+  static    chi2    5648.0 (n 1213, k 13, BIC    5740.3)  t0 59293.77 tE 66.5 u0 +0.0186 Amax 53.8
+             ATLAS_c_01a:F=45uJy(base -11) ATLAS_c_02a:F=75uJy(base -17) ATLAS_o_01a:F=160uJy(fs=2.12) ATLAS_o_02a:F=161uJy(fs=1.60) GAIA_G:fs=0.78 NEOWISE_W1:fs=0.84 NEOWISE_W2:fs=0.80 ZTF_g_1586:fs=0.11 ZTF_i_1586:fs=0.89 ZTF_r_1586:fs=1.08
+  parallax  chi2    5600.6 (n 1213, k 15, BIC    5707.1)  t0 59293.63 tE 63.1 u0 -0.0198 Amax 50.4 piEN -0.197 piEE +0.284
+             ATLAS_c_01a:F=46uJy(base -11) ATLAS_c_02a:F=83uJy(base -17) ATLAS_o_01a:F=173uJy(fs=2.29) ATLAS_o_02a:F=166uJy(fs=1.65) GAIA_G:fs=0.94 NEOWISE_W1:fs=0.84 NEOWISE_W2:fs=0.81 ZTF_g_1586:fs=0.10 ZTF_i_1586:fs=0.69 ZTF_r_1586:fs=0.86
+  lens_asym chi2    5606.4 (n 1213, k 14, BIC    5705.8)  t0 59293.19 tE_rise 50.6 tE_fall 66.3 ratio 0.76 u0 0.0203
+  pv7       chi2    5771.1 (n 1213, k 13, BIC    5863.4)  shape 5.93e+04 2.56 0.881
+  pv7_asym  chi2    5713.9 (n 1213, k 14, BIC    5813.3)  shape 5.93e+04 0.672 0.99 0.904
+  fred      chi2    7379.2 (n 1213, k 13, BIC    7471.5)  shape 5.93e+04 1.08 4.07
+  nova      chi2    6037.3 (n 1213, k 14, BIC    6136.7)  shape 5.93e+04 10.2 4.39 1.61
+  -> best lens 5600.6 vs best non-lens pv7_asym 5713.9: dchi2 +113.3; static t0 2021-03-20
+===== J191120 variant chi_abs10: 1183 points, series ATLAS_c_01a(base -11, rob 19.2, nev 10), ATLAS_c_02a(base -9, rob 25.4, nev 8), ATLAS_o_01a(base 76, rob 45.9, nev 36), ATLAS_o_02a(base 103, rob 42.1, nev 26), NEOWISE_W1(base 1rel, rob 0.022, nev 1), NEOWISE_W2(base 1rel, rob 0.017, nev 1), GAIA_G(base 1rel, rob 0.017, nev 6), ZTF_g_1586(base 1rel, rob 0.226, nev 7), ZTF_i_1586(base 1rel, rob 0.0146, nev 1), ZTF_r_1586(base 1rel, rob 0.0347, nev 8)
+  static    chi2    1827.3 (n 1183, k 13, BIC    1919.3)  t0 59298.57 tE 44.8 u0 +0.2339 Amax 4.4
+             ATLAS_c_01a:F=72uJy(base -11) ATLAS_c_02a:F=144uJy(base -9) ATLAS_o_01a:F=282uJy(fs=3.71) ATLAS_o_02a:F=300uJy(fs=2.91) GAIA_G:fs=2.11 NEOWISE_W1:fs=1.30 NEOWISE_W2:fs=1.24 ZTF_g_1586:fs=0.10 ZTF_i_1586:fs=2.38 ZTF_r_1586:fs=2.49
+  parallax  chi2    1796.8 (n 1183, k 15, BIC    1902.9)  t0 59293.13 tE 64.9 u0 +0.0070 Amax 142.3 piEN -0.230 piEE +0.294
+             ATLAS_c_01a:F=45uJy(base -11) ATLAS_c_02a:F=64uJy(base -9) ATLAS_o_01a:F=168uJy(fs=2.21) ATLAS_o_02a:F=165uJy(fs=1.60) GAIA_G:fs=0.89 NEOWISE_W1:fs=0.83 NEOWISE_W2:fs=0.79 ZTF_g_1586:fs=0.09 ZTF_i_1586:fs=0.65 ZTF_r_1586:fs=0.81
+  lens_asym chi2    1798.0 (n 1183, k 14, BIC    1897.0)  t0 59291.48 tE_rise 50.6 tE_fall 71.3 ratio 0.71 u0 0.0131
+  pv7_asym  chi2    1820.4 (n 1183, k 14, BIC    1919.4)  shape 5.93e+04 17.4 22.1 1.26
+  nova      chi2    1809.3 (n 1183, k 14, BIC    1908.3)  shape 5.93e+04 18 40.1 3.25
+  -> best lens 1796.8 vs best non-lens nova 1809.3: dchi2 +12.5; static t0 2021-03-25
+===== J191120 variant chi_none: 1226 points, series ATLAS_c_01a(base -11, rob 19.8, nev 10), ATLAS_c_02a(base -17, rob 34.5, nev 8), ATLAS_o_01a(base 75, rob 47, nev 38), ATLAS_o_02a(base 99, rob 45.2, nev 26), NEOWISE_W1(base 1rel, rob 0.022, nev 1), NEOWISE_W2(base 1rel, rob 0.017, nev 1), GAIA_G(base 1rel, rob 0.017, nev 6), ZTF_g_1586(base 1rel, rob 0.226, nev 7), ZTF_i_1586(base 1rel, rob 0.0146, nev 1), ZTF_r_1586(base 1rel, rob 0.0347, nev 8)
+  static    chi2    4793.3 (n 1226, k 13, BIC    4885.8)  t0 59293.68 tE 66.7 u0 +0.0196 Amax 51.1
+             ATLAS_c_01a:F=46uJy(base -11) ATLAS_c_02a:F=73uJy(base -17) ATLAS_o_01a:F=163uJy(fs=2.17) ATLAS_o_02a:F=162uJy(fs=1.64) GAIA_G:fs=0.78 NEOWISE_W1:fs=0.84 NEOWISE_W2:fs=0.80 ZTF_g_1586:fs=0.11 ZTF_i_1586:fs=0.89 ZTF_r_1586:fs=1.07
+  parallax  chi2    4748.2 (n 1226, k 15, BIC    4854.9)  t0 59293.57 tE 62.8 u0 -0.0208 Amax 48.0 piEN -0.178 piEE +0.279
+             ATLAS_c_01a:F=47uJy(base -11) ATLAS_c_02a:F=82uJy(base -17) ATLAS_o_01a:F=177uJy(fs=2.34) ATLAS_o_02a:F=169uJy(fs=1.71) GAIA_G:fs=0.95 NEOWISE_W1:fs=0.85 NEOWISE_W2:fs=0.82 ZTF_g_1586:fs=0.10 ZTF_i_1586:fs=0.69 ZTF_r_1586:fs=0.87
+  lens_asym chi2    4755.2 (n 1226, k 14, BIC    4854.7)  t0 59293.19 tE_rise 50.9 tE_fall 66.4 ratio 0.77 u0 0.0209
+  pv7_asym  chi2    4859.4 (n 1226, k 14, BIC    4959.0)  shape 5.93e+04 0.947 1.38 0.904
+  nova      chi2    5108.9 (n 1226, k 14, BIC    5208.5)  shape 5.93e+04 11.1 4.54 1.6
+  -> best lens 4748.2 vs best non-lens pv7_asym 4859.4: dchi2 +111.2; static t0 2021-03-20
+===== J191120 variant base300: 1213 points, series ATLAS_c_01a(base -11, rob 19.2, nev 10), ATLAS_c_02a(base -15, rob 36.1, nev 8), ATLAS_o_01a(base 78, rob 45.6, nev 38), ATLAS_o_02a(base 104, rob 43.7, nev 26), NEOWISE_W1(base 1rel, rob 0.0227, nev 1), NEOWISE_W2(base 1rel, rob 0.0199, nev 1), GAIA_G(base 1rel, rob 0.0137, nev 6), ZTF_g_1586(base 1rel, rob 0.226, nev 7), ZTF_i_1586(base 1rel, rob 0.0294, nev 1), ZTF_r_1586(base 1rel, rob 0.0347, nev 8)
+  static    chi2    5690.3 (n 1213, k 13, BIC    5782.6)  t0 59293.80 tE 66.3 u0 +0.0184 Amax 54.4
+             ATLAS_c_01a:F=45uJy(base -11) ATLAS_c_02a:F=72uJy(base -15) ATLAS_o_01a:F=158uJy(fs=2.02) ATLAS_o_02a:F=159uJy(fs=1.54) GAIA_G:fs=0.79 NEOWISE_W1:fs=0.85 NEOWISE_W2:fs=0.80 ZTF_g_1586:fs=0.11 ZTF_i_1586:fs=0.97 ZTF_r_1586:fs=1.08
+  parallax  chi2    5643.7 (n 1213, k 15, BIC    5750.2)  t0 59293.66 tE 62.1 u0 -0.0200 Amax 50.1 piEN -0.176 piEE +0.284
+             ATLAS_c_01a:F=47uJy(base -11) ATLAS_c_02a:F=81uJy(base -15) ATLAS_o_01a:F=174uJy(fs=2.22) ATLAS_o_02a:F=168uJy(fs=1.62) GAIA_G:fs=0.97 NEOWISE_W1:fs=0.87 NEOWISE_W2:fs=0.82 ZTF_g_1586:fs=0.10 ZTF_i_1586:fs=0.76 ZTF_r_1586:fs=0.88
+  lens_asym chi2    5649.0 (n 1213, k 14, BIC    5748.4)  t0 59293.26 tE_rise 50.4 tE_fall 66.0 ratio 0.76 u0 0.0204
+  pv7_asym  chi2    5753.4 (n 1213, k 14, BIC    5852.8)  shape 5.93e+04 0.717 1.06 0.904
+  nova      chi2    6085.4 (n 1213, k 14, BIC    6184.8)  shape 5.93e+04 10.2 4.41 1.62
+  -> best lens 5643.7 vs best non-lens pv7_asym 5753.4: dchi2 +109.7; static t0 2021-03-20
+===== J191120 variant base600: 1213 points, series ATLAS_c_01a(base -27, rob 26.4, nev 10), ATLAS_c_02a(base -17, rob 38.4, nev 8), ATLAS_o_01a(base 79, rob 44.3, nev 38), ATLAS_o_02a(base 104, rob 42.9, nev 26), NEOWISE_W1(base 1rel, rob 0.0227, nev 1), NEOWISE_W2(base 1rel, rob 0.0149, nev 1), GAIA_G(base 1rel, rob 0.0237, nev 6), ZTF_g_1586(base 1rel, rob 0.177, nev 7), ZTF_i_1586(base 1rel, rob 0.0225, nev 1), ZTF_r_1586(base 1rel, rob 0.0393, nev 8)
+  static    chi2    5648.1 (n 1213, k 13, BIC    5740.4)  t0 59293.83 tE 71.8 u0 +0.0167 Amax 60.0
+             ATLAS_c_01a:F=49uJy(base -27) ATLAS_c_02a:F=65uJy(base -17) ATLAS_o_01a:F=144uJy(fs=1.81) ATLAS_o_02a:F=144uJy(fs=1.39) GAIA_G:fs=0.71 NEOWISE_W1:fs=0.76 NEOWISE_W2:fs=0.72 ZTF_g_1586:fs=-0.39 ZTF_i_1586:fs=0.80 ZTF_r_1586:fs=0.90
+  parallax  chi2    5613.4 (n 1213, k 15, BIC    5719.9)  t0 59293.74 tE 65.1 u0 -0.0185 Amax 54.2 piEN -0.175 piEE +0.274
+             ATLAS_c_01a:F=53uJy(base -27) ATLAS_c_02a:F=77uJy(base -17) ATLAS_o_01a:F=161uJy(fs=2.03) ATLAS_o_02a:F=156uJy(fs=1.51) GAIA_G:fs=0.91 NEOWISE_W1:fs=0.81 NEOWISE_W2:fs=0.77 ZTF_g_1586:fs=-0.33 ZTF_i_1586:fs=0.67 ZTF_r_1586:fs=0.79
+  lens_asym chi2    5618.4 (n 1213, k 14, BIC    5717.8)  t0 59293.38 tE_rise 53.8 tE_fall 69.8 ratio 0.77 u0 0.0191
+  pv7_asym  chi2    5681.5 (n 1213, k 14, BIC    5780.9)  shape 5.93e+04 0.2 0.3 0.871
+  nova      chi2    5962.4 (n 1213, k 14, BIC    6061.9)  shape 5.93e+04 8.94 3.6 1.55
+  -> best lens 5613.4 vs best non-lens pv7_asym 5681.5: dchi2 +68.1; static t0 2021-03-20
+===== J191120 variant no_floor: 1213 points, series ATLAS_c_01a(base -11, rob 19.2, nev 10), ATLAS_c_02a(base -17, rob 37, nev 8), ATLAS_o_01a(base 75, rob 46.9, nev 38), ATLAS_o_02a(base 101, rob 42.9, nev 26), NEOWISE_W1(base 1rel, rob 0.022, nev 1), NEOWISE_W2(base 1rel, rob 0.017, nev 1), GAIA_G(base 1rel, rob 0.017, nev 6), ZTF_g_1586(base 1rel, rob 0.226, nev 7), ZTF_i_1586(base 1rel, rob 0.0146, nev 1), ZTF_r_1586(base 1rel, rob 0.0347, nev 8)
+  static    chi2   17680.5 (n 1213, k 13, BIC   17772.9)  t0 59294.02 tE 219.4 u0 +0.0048 Amax 210.4
+             ATLAS_c_01a:F=11uJy(base -11) ATLAS_c_02a:F=17uJy(base -17) ATLAS_o_01a:F=43uJy(fs=0.57) ATLAS_o_02a:F=39uJy(fs=0.39) GAIA_G:fs=0.15 NEOWISE_W1:fs=0.19 NEOWISE_W2:fs=0.18 ZTF_g_1586:fs=0.01 ZTF_i_1586:fs=0.08 ZTF_r_1586:fs=0.12
+  parallax  chi2   17662.3 (n 1213, k 15, BIC   17768.8)  t0 59293.78 tE 133.9 u0 +0.0085 Amax 117.1 piEN +0.165 piEE +0.033
+             ATLAS_c_01a:F=19uJy(base -11) ATLAS_c_02a:F=31uJy(base -17) ATLAS_o_01a:F=76uJy(fs=1.01) ATLAS_o_02a:F=68uJy(fs=0.68) GAIA_G:fs=0.26 NEOWISE_W1:fs=0.34 NEOWISE_W2:fs=0.32 ZTF_g_1586:fs=0.02 ZTF_i_1586:fs=0.14 ZTF_r_1586:fs=0.23
+  lens_asym chi2   17676.9 (n 1213, k 14, BIC   17776.3)  t0 59294.04 tE_rise 231.5 tE_fall 219.9 ratio 1.05 u0 0.0047
+  pv7_asym  chi2   17677.6 (n 1213, k 14, BIC   17777.1)  shape 5.93e+04 1.28 1.43 0.686
+  nova      chi2   18557.2 (n 1213, k 14, BIC   18656.6)  shape 5.93e+04 8.23 2.68 1.39
+  -> best lens 17662.3 vs best non-lens pv7_asym 17677.6: dchi2 +15.4; static t0 2021-03-21
+===== J191120 variant psf_corr: 1213 points, series ATLAS_c_01a(base 14, rob 12.1, nev 10), ATLAS_c_02a(base -10, rob 29.8, nev 8), ATLAS_o_01a(base 99, rob 27.1, nev 38), ATLAS_o_02a(base 83, rob 40.5, nev 26), NEOWISE_W1(base 1rel, rob 0.022, nev 1), NEOWISE_W2(base 1rel, rob 0.017, nev 1), GAIA_G(base 1rel, rob 0.017, nev 6), ZTF_g_1586(base 1rel, rob 0.226, nev 7), ZTF_i_1586(base 1rel, rob 0.0146, nev 1), ZTF_r_1586(base 1rel, rob 0.0347, nev 8)
+  static    chi2    4678.8 (n 1213, k 13, BIC    4771.2)  t0 59294.19 tE 57.9 u0 +0.0158 Amax 63.2
+             ATLAS_c_01a:F=37uJy(fs=2.75) ATLAS_c_02a:F=113uJy(base -10) ATLAS_o_01a:F=158uJy(fs=1.61) ATLAS_o_02a:F=176uJy(fs=2.11) GAIA_G:fs=1.00 NEOWISE_W1:fs=0.99 NEOWISE_W2:fs=0.95 ZTF_g_1586:fs=0.12 ZTF_i_1586:fs=1.28 ZTF_r_1586:fs=1.48
+  parallax  chi2    4641.6 (n 1213, k 15, BIC    4748.1)  t0 59294.29 tE 61.0 u0 +0.0129 Amax 77.3 piEN -0.448 piEE +0.280
+             ATLAS_c_01a:F=32uJy(fs=2.38) ATLAS_c_02a:F=103uJy(base -10) ATLAS_o_01a:F=142uJy(fs=1.44) ATLAS_o_02a:F=156uJy(fs=1.87) GAIA_G:fs=1.05 NEOWISE_W1:fs=0.85 NEOWISE_W2:fs=0.81 ZTF_g_1586:fs=0.03 ZTF_i_1586:fs=1.01 ZTF_r_1586:fs=1.11
+  lens_asym chi2    4639.2 (n 1213, k 14, BIC    4738.7)  t0 59294.00 tE_rise 45.0 tE_fall 57.6 ratio 0.78 u0 0.0180
+  pv7_asym  chi2    4743.7 (n 1213, k 14, BIC    4843.1)  shape 5.93e+04 1.36 2.01 0.936
+  nova      chi2    5174.9 (n 1213, k 14, BIC    5274.3)  shape 5.93e+04 8.43 4.57 1.82
+  -> best lens 4641.6 vs best non-lens pv7_asym 4743.7: dchi2 +102.1; static t0 2021-03-21
+===== J191120 variant maj<3.3: 1143 points, series ATLAS_c_01a(base -11, rob 17.3, nev 10), ATLAS_c_02a(base -9, rob 22.9, nev 8), ATLAS_o_01a(base 83, rob 38.4, nev 38), ATLAS_o_02a(base 104, rob 38.6, nev 26), NEOWISE_W1(base 1rel, rob 0.022, nev 1), NEOWISE_W2(base 1rel, rob 0.017, nev 1), GAIA_G(base 1rel, rob 0.017, nev 6), ZTF_g_1586(base 1rel, rob 0.226, nev 7), ZTF_i_1586(base 1rel, rob 0.0146, nev 1), ZTF_r_1586(base 1rel, rob 0.0347, nev 8)
+  static    chi2    1298.1 (n 1143, k 13, BIC    1389.6)  t0 59293.84 tE 68.1 u0 +0.0175 Amax 57.0
+             ATLAS_c_01a:F=44uJy(base -11) ATLAS_c_02a:F=60uJy(base -9) ATLAS_o_01a:F=152uJy(fs=1.83) ATLAS_o_02a:F=153uJy(fs=1.47) GAIA_G:fs=0.76 NEOWISE_W1:fs=0.81 NEOWISE_W2:fs=0.77 ZTF_g_1586:fs=0.11 ZTF_i_1586:fs=0.84 ZTF_r_1586:fs=1.02
+  parallax  chi2    1246.5 (n 1143, k 15, BIC    1352.1)  t0 59293.75 tE 63.0 u0 -0.0190 Amax 52.6 piEN -0.186 piEE +0.288
+             ATLAS_c_01a:F=46uJy(base -11) ATLAS_c_02a:F=69uJy(base -9) ATLAS_o_01a:F=167uJy(fs=2.02) ATLAS_o_02a:F=163uJy(fs=1.56) GAIA_G:fs=0.95 NEOWISE_W1:fs=0.84 NEOWISE_W2:fs=0.80 ZTF_g_1586:fs=0.10 ZTF_i_1586:fs=0.68 ZTF_r_1586:fs=0.85
+  lens_asym chi2    1253.2 (n 1143, k 14, BIC    1351.8)  t0 59293.38 tE_rise 51.3 tE_fall 67.1 ratio 0.76 u0 0.0199
+  pv7_asym  chi2    1363.8 (n 1143, k 14, BIC    1462.4)  shape 5.93e+04 0.2 0.299 0.899
+  nova      chi2    1718.9 (n 1143, k 14, BIC    1817.5)  shape 5.93e+04 9.42 4.36 1.68
+  -> best lens 1246.5 vs best non-lens pv7_asym 1363.8: dchi2 +117.3; static t0 2021-03-20
+===== J191120 variant window+-800d: 681 points, series ATLAS_c_01a(base -3, rob 7.74, nev 10), ATLAS_c_02a(base -11, rob 36.9, nev 8), ATLAS_o_01a(base 64, rob 54.9, nev 38), ATLAS_o_02a(base 105, rob 37.9, nev 26), NEOWISE_W1(base 1rel, rob 0.022, nev 1), NEOWISE_W2(base 1rel, rob 0.017, nev 1), GAIA_G(base 1rel, rob 0.017, nev 6), ZTF_g_1586(base 1rel, rob 0.226, nev 7), ZTF_i_1586(base 1rel, rob 0.0146, nev 1), ZTF_r_1586(base 1rel, rob 0.0347, nev 8)
+  static    chi2     813.4 (n 681, k 13, BIC     898.2)  t0 59293.65 tE 66.7 u0 +0.0193 Amax 51.8
+             ATLAS_c_01a:F=41uJy(base -3) ATLAS_c_02a:F=62uJy(base -11) ATLAS_o_01a:F=165uJy(fs=2.57) ATLAS_o_02a:F=160uJy(fs=1.53) GAIA_G:fs=0.78 NEOWISE_W1:fs=0.84 NEOWISE_W2:fs=0.81 ZTF_g_1586:fs=0.11 ZTF_i_1586:fs=0.89 ZTF_r_1586:fs=1.07
+  parallax  chi2     765.5 (n 681, k 15, BIC     863.4)  t0 59293.40 tE 62.6 u0 +0.0214 Amax 46.8 piEN -0.167 piEE +0.281
+             ATLAS_c_01a:F=43uJy(base -3) ATLAS_c_02a:F=70uJy(base -11) ATLAS_o_01a:F=184uJy(fs=2.86) ATLAS_o_02a:F=169uJy(fs=1.61) GAIA_G:fs=0.94 NEOWISE_W1:fs=0.86 NEOWISE_W2:fs=0.82 ZTF_g_1586:fs=0.10 ZTF_i_1586:fs=0.68 ZTF_r_1586:fs=0.85
+  lens_asym chi2     773.9 (n 681, k 14, BIC     865.2)  t0 59292.87 tE_rise 51.8 tE_fall 67.9 ratio 0.76 u0 0.0193
+  pv7_asym  chi2     881.9 (n 681, k 14, BIC     973.2)  shape 5.93e+04 0.503 0.729 0.898
+  nova      chi2    1164.1 (n 681, k 14, BIC    1255.4)  shape 5.93e+04 10.2 4.48 1.62
+  -> best lens 765.5 vs best non-lens pv7_asym 881.9: dchi2 +116.4; static t0 2021-03-20
+===== J191120 variant o_only+WISE: 1007 points, series ATLAS_o_01a(base 75, rob 46.9, nev 38), ATLAS_o_02a(base 101, rob 42.9, nev 26), NEOWISE_W1(base 1rel, rob 0.022, nev 1), NEOWISE_W2(base 1rel, rob 0.017, nev 1), GAIA_G(base 1rel, rob 0.017, nev 6), ZTF_g_1586(base 1rel, rob 0.226, nev 7), ZTF_i_1586(base 1rel, rob 0.0146, nev 1), ZTF_r_1586(base 1rel, rob 0.0347, nev 8)
+  static    chi2    3828.3 (n 1007, k 11, BIC    3904.4)  t0 59293.76 tE 65.8 u0 +0.0188 Amax 53.1
+             ATLAS_o_01a:F=162uJy(fs=2.15) ATLAS_o_02a:F=163uJy(fs=1.62) GAIA_G:fs=0.80 NEOWISE_W1:fs=0.85 NEOWISE_W2:fs=0.82 ZTF_g_1586:fs=0.11 ZTF_i_1586:fs=0.92 ZTF_r_1586:fs=1.10
+  parallax  chi2    3782.2 (n 1007, k 13, BIC    3872.1)  t0 59293.66 tE 63.9 u0 -0.0193 Amax 51.8 piEN -0.238 piEE +0.283
+             ATLAS_o_01a:F=169uJy(fs=2.24) ATLAS_o_02a:F=163uJy(fs=1.62) GAIA_G:fs=0.93 NEOWISE_W1:fs=0.83 NEOWISE_W2:fs=0.79 ZTF_g_1586:fs=0.08 ZTF_i_1586:fs=0.70 ZTF_r_1586:fs=0.86
+  lens_asym chi2    3786.7 (n 1007, k 12, BIC    3869.6)  t0 59293.20 tE_rise 49.8 tE_fall 65.5 ratio 0.76 u0 0.0206
+  pv7_asym  chi2    3896.9 (n 1007, k 12, BIC    3979.8)  shape 5.93e+04 0.786 1.16 0.907
+  nova      chi2    4222.4 (n 1007, k 12, BIC    4305.4)  shape 5.93e+04 10.3 4.42 1.62
+  -> best lens 3782.2 vs best non-lens pv7_asym 3896.9: dchi2 +114.6; static t0 2021-03-20
+===== J191120 variant ATLAS_only: 1031 points, series ATLAS_c_01a(base -11, rob 19.2, nev 10), ATLAS_c_02a(base -17, rob 37, nev 8), ATLAS_o_01a(base 75, rob 46.9, nev 38), ATLAS_o_02a(base 101, rob 42.9, nev 26)
+  static    chi2    5379.3 (n 1031, k 7, BIC    5427.8)  t0 59294.32 tE 244.9 u0 +0.0030 Amax 338.4
+             ATLAS_c_01a:F=9uJy(base -11) ATLAS_c_02a:F=13uJy(base -17) ATLAS_o_01a:F=35uJy(fs=0.46) ATLAS_o_02a:F=33uJy(fs=0.33)
+  parallax  chi2    5365.5 (n 1031, k 9, BIC    5427.9)  t0 59294.03 tE 96.5 u0 +0.0109 Amax 91.7 piEN +0.499 piEE +0.188
+             ATLAS_c_01a:F=27uJy(base -11) ATLAS_c_02a:F=44uJy(base -17) ATLAS_o_01a:F=99uJy(fs=1.32) ATLAS_o_02a:F=93uJy(fs=0.92)
+  lens_asym chi2    5374.3 (n 1031, k 8, BIC    5429.8)  t0 59294.20 tE_rise 201.8 tE_fall 264.2 ratio 0.76 u0 0.0027
+  pv7_asym  chi2    5378.4 (n 1031, k 8, BIC    5433.9)  shape 5.93e+04 1.02 1.76 0.67
+  nova      chi2    5392.6 (n 1031, k 8, BIC    5448.1)  shape 5.93e+04 6.09 2.32 1.36
+  -> best lens 5365.5 vs best non-lens pv7_asym 5378.4: dchi2 +12.9; static t0 2021-03-21
+===== J191120 variant no_extra_surveys: 1071 points, series ATLAS_c_01a(base -11, rob 19.2, nev 10), ATLAS_c_02a(base -17, rob 37, nev 8), ATLAS_o_01a(base 75, rob 46.9, nev 38), ATLAS_o_02a(base 101, rob 42.9, nev 26), NEOWISE_W1(base 1rel, rob 0.022, nev 1), NEOWISE_W2(base 1rel, rob 0.017, nev 1)
+  static    chi2    5458.0 (n 1071, k 9, BIC    5520.8)  t0 59294.06 tE 115.0 u0 +0.0089 Amax 112.1
+             ATLAS_c_01a:F=22uJy(base -11) ATLAS_c_02a:F=33uJy(base -17) ATLAS_o_01a:F=82uJy(fs=1.09) ATLAS_o_02a:F=81uJy(fs=0.80) NEOWISE_W1:fs=0.41 NEOWISE_W2:fs=0.39
+  parallax  chi2    5441.5 (n 1071, k 11, BIC    5518.2)  t0 59293.66 tE 38.6 u0 +0.0333 Amax 30.0 piEN -0.212 piEE +1.283
+             ATLAS_c_01a:F=80uJy(base -11) ATLAS_c_02a:F=133uJy(base -17) ATLAS_o_01a:F=288uJy(fs=3.83) ATLAS_o_02a:F=275uJy(fs=2.73) NEOWISE_W1:fs=1.44 NEOWISE_W2:fs=1.38
+  lens_asym chi2    5452.0 (n 1071, k 10, BIC    5521.8)  t0 59293.83 tE_rise 80.5 tE_fall 112.4 ratio 0.72 u0 0.0103
+  pv7_asym  chi2    5481.1 (n 1071, k 10, BIC    5550.9)  shape 5.93e+04 0.2 0.361 0.818
+  nova      chi2    5492.4 (n 1071, k 10, BIC    5562.1)  shape 5.93e+04 6.13 3.73 1.66
+  -> best lens 5441.5 vs best non-lens pv7_asym 5481.1: dchi2 +39.6; static t0 2021-03-21
+===== J191120 variant offsets_free: 1213 points, series ATLAS_c_01a(base -11, rob 19.2, nev 10), ATLAS_c_02a(base -17, rob 37, nev 8), ATLAS_o_01a(base 75, rob 46.9, nev 38), ATLAS_o_02a(base 101, rob 42.9, nev 26), NEOWISE_W1(base 1rel, rob 0.022, nev 1), NEOWISE_W2(base 1rel, rob 0.017, nev 1), GAIA_G(base 1rel, rob 0.017, nev 6), ZTF_g_1586(base 1rel, rob 0.226, nev 7), ZTF_i_1586(base 1rel, rob 0.0146, nev 1), ZTF_r_1586(base 1rel, rob 0.0347, nev 8)
+  static    chi2    5554.6 (n 1213, k 23, BIC    5717.9)  t0 59293.82 tE 70.8 u0 +0.0170 Amax 59.0
+             ATLAS_c_01a:F=42uJy(base -11) ATLAS_c_02a:F=89uJy(base -17) ATLAS_o_01a:F=146uJy(fs=1.94) ATLAS_o_02a:F=154uJy(fs=1.53) GAIA_G:fs=0.72 NEOWISE_W1:fs=0.77 NEOWISE_W2:fs=0.74 ZTF_g_1586:fs=-0.02 ZTF_i_1586:fs=0.86 ZTF_r_1586:fs=0.95
+  parallax  chi2    5507.3 (n 1213, k 25, BIC    5684.8)  t0 59293.63 tE 62.7 u0 -0.0201 Amax 49.7 piEN -0.087 piEE +0.274
+             ATLAS_c_01a:F=47uJy(base -11) ATLAS_c_02a:F=107uJy(base -17) ATLAS_o_01a:F=173uJy(fs=2.30) ATLAS_o_02a:F=175uJy(fs=1.74) GAIA_G:fs=0.94 NEOWISE_W1:fs=0.86 NEOWISE_W2:fs=0.82 ZTF_g_1586:fs=0.04 ZTF_i_1586:fs=0.69 ZTF_r_1586:fs=0.83
+  lens_asym chi2    5514.9 (n 1213, k 24, BIC    5685.3)  t0 59293.26 tE_rise 53.4 tE_fall 69.6 ratio 0.77 u0 0.0192
+  pv7_asym  chi2    5572.4 (n 1213, k 24, BIC    5742.9)  shape 5.93e+04 0.2 0.287 0.844
+  nova      chi2    5920.3 (n 1213, k 24, BIC    6090.8)  shape 5.93e+04 9.76 3.65 1.53
+  -> best lens 5507.3 vs best non-lens pv7_asym 5572.4: dchi2 +65.2; static t0 2021-03-20
+===== J191120 variant fs<=1: 1213 points, series ATLAS_c_01a(base -11, rob 19.2, nev 10), ATLAS_c_02a(base -17, rob 37, nev 8), ATLAS_o_01a(base 75, rob 46.9, nev 38), ATLAS_o_02a(base 101, rob 42.9, nev 26), NEOWISE_W1(base 1rel, rob 0.022, nev 1), NEOWISE_W2(base 1rel, rob 0.017, nev 1), GAIA_G(base 1rel, rob 0.017, nev 6), ZTF_g_1586(base 1rel, rob 0.226, nev 7), ZTF_i_1586(base 1rel, rob 0.0146, nev 1), ZTF_r_1586(base 1rel, rob 0.0347, nev 8)
+  static    chi2    5648.2 (n 1213, k 13, BIC    5740.5)  t0 59293.78 tE 68.3 u0 +0.0180 Amax 55.6
+             ATLAS_c_01a:F=44uJy(base -11) ATLAS_c_02a:F=72uJy(base -17) ATLAS_o_01a:F=155uJy(fs=2.05) ATLAS_o_02a:F=155uJy(fs=1.54) GAIA_G:fs=0.75 NEOWISE_W1:fs=0.81 NEOWISE_W2:fs=0.77 ZTF_g_1586:fs=0.11 ZTF_i_1586:fs=0.83 ZTF_r_1586:fs=1.00
+  parallax  chi2    5600.6 (n 1213, k 15, BIC    5707.1)  t0 59293.63 tE 63.1 u0 -0.0198 Amax 50.4 piEN -0.197 piEE +0.284
+             ATLAS_c_01a:F=46uJy(base -11) ATLAS_c_02a:F=83uJy(base -17) ATLAS_o_01a:F=173uJy(fs=2.29) ATLAS_o_02a:F=166uJy(fs=1.65) GAIA_G:fs=0.94 NEOWISE_W1:fs=0.84 NEOWISE_W2:fs=0.81 ZTF_g_1586:fs=0.10 ZTF_i_1586:fs=0.69 ZTF_r_1586:fs=0.86
+  lens_asym chi2    5607.6 (n 1213, k 14, BIC    5707.0)  t0 59293.23 tE_rise 55.1 tE_fall 70.7 ratio 0.78 u0 0.0190
+  pv7_asym  chi2   10677.6 (n 1213, k 14, BIC   10777.1)  shape 5.93e+04 115 65.4 2.93
+  nova      chi2   11082.0 (n 1213, k 14, BIC   11181.4)  shape 5.93e+04 78 50.4 2.47
+  -> best lens 5600.6 vs best non-lens pv7_asym 10677.6: dchi2 +5077.0; static t0 2021-03-20
+
+===== robustness summary J191120
+  default            static t0 59293.8 tE   66.5 u0 0.0186 chi2   5648.0 | parallax t0 59293.6 tE   63.1 u0 -0.0198 piE (-0.20,+0.28) chi2   5600.6 | asym tEr/tEf 0.76 | best non-lens   5713.9 (d +113.3)
+  chi_abs10          static t0 59298.6 tE   44.8 u0 0.2339 chi2   1827.3 | parallax t0 59293.1 tE   64.9 u0 +0.0070 piE (-0.23,+0.29) chi2   1796.8 | asym tEr/tEf 0.71 | best non-lens   1809.3 (d +12.5)
+  chi_none           static t0 59293.7 tE   66.7 u0 0.0196 chi2   4793.3 | parallax t0 59293.6 tE   62.8 u0 -0.0208 piE (-0.18,+0.28) chi2   4748.2 | asym tEr/tEf 0.77 | best non-lens   4859.4 (d +111.2)
+  base300            static t0 59293.8 tE   66.3 u0 0.0184 chi2   5690.3 | parallax t0 59293.7 tE   62.1 u0 -0.0200 piE (-0.18,+0.28) chi2   5643.7 | asym tEr/tEf 0.76 | best non-lens   5753.4 (d +109.7)
+  base600            static t0 59293.8 tE   71.8 u0 0.0167 chi2   5648.1 | parallax t0 59293.7 tE   65.1 u0 -0.0185 piE (-0.18,+0.27) chi2   5613.4 | asym tEr/tEf 0.77 | best non-lens   5681.5 (d +68.1)
+  no_floor           static t0 59294.0 tE  219.4 u0 0.0048 chi2  17680.5 | parallax t0 59293.8 tE  133.9 u0 +0.0085 piE (+0.16,+0.03) chi2  17662.3 | asym tEr/tEf 1.05 | best non-lens  17677.6 (d +15.4)
+  psf_corr           static t0 59294.2 tE   57.9 u0 0.0158 chi2   4678.8 | parallax t0 59294.3 tE   61.0 u0 +0.0129 piE (-0.45,+0.28) chi2   4641.6 | asym tEr/tEf 0.78 | best non-lens   4743.7 (d +102.1)
+  maj<3.3            static t0 59293.8 tE   68.1 u0 0.0175 chi2   1298.1 | parallax t0 59293.7 tE   63.0 u0 -0.0190 piE (-0.19,+0.29) chi2   1246.5 | asym tEr/tEf 0.76 | best non-lens   1363.8 (d +117.3)
+  window+-800d       static t0 59293.7 tE   66.7 u0 0.0193 chi2    813.4 | parallax t0 59293.4 tE   62.6 u0 +0.0214 piE (-0.17,+0.28) chi2    765.5 | asym tEr/tEf 0.76 | best non-lens    881.9 (d +116.4)
+  o_only+WISE        static t0 59293.8 tE   65.8 u0 0.0188 chi2   3828.3 | parallax t0 59293.7 tE   63.9 u0 -0.0193 piE (-0.24,+0.28) chi2   3782.2 | asym tEr/tEf 0.76 | best non-lens   3896.9 (d +114.6)
+  ATLAS_only         static t0 59294.3 tE  244.9 u0 0.0030 chi2   5379.3 | parallax t0 59294.0 tE   96.5 u0 +0.0109 piE (+0.50,+0.19) chi2   5365.5 | asym tEr/tEf 0.76 | best non-lens   5378.4 (d +12.9)
+  no_extra_surveys   static t0 59294.1 tE  115.0 u0 0.0089 chi2   5458.0 | parallax t0 59293.7 tE   38.6 u0 +0.0333 piE (-0.21,+1.28) chi2   5441.5 | asym tEr/tEf 0.72 | best non-lens   5481.1 (d +39.6)
+  offsets_free       static t0 59293.8 tE   70.8 u0 0.0170 chi2   5554.6 | parallax t0 59293.6 tE   62.7 u0 -0.0201 piE (-0.09,+0.27) chi2   5507.3 | asym tEr/tEf 0.77 | best non-lens   5572.4 (d +65.2)
+  fs<=1              static t0 59293.8 tE   68.3 u0 0.0180 chi2   5648.2 | parallax t0 59293.6 tE   63.1 u0 -0.0198 piE (-0.20,+0.28) chi2   5600.6 | asym tEr/tEf 0.78 | best non-lens  10677.6 (d +5077.0)

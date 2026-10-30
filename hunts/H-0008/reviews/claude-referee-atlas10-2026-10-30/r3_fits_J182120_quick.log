@@ -1,0 +1,11 @@
+===== J182120 variant default: 358 points, series ATLAS_c_02a(base 86, rob 13.9, nev 16), ATLAS_o_02a(base 884, rob 46.3, nev 8), NEOWISE_W1(base 1rel, rob 0.107, nev 1), NEOWISE_W2(base 1rel, rob 0.146, nev 1)
+  static    chi2    1430.5 (n 358, k 7, BIC    1471.7)  t0 57397.43 tE 362.2 u0 +0.0001 Amax 10000.0
+             ATLAS_c_02a:F=-115uJy(fs=-1.35) ATLAS_o_02a:F=-294uJy(fs=-0.33) NEOWISE_W1:fs=0.43 NEOWISE_W2:fs=0.46
+  parallax  chi2    1126.6 (n 358, k 9, BIC    1179.5)  t0 57349.52 tE 10.0 u0 -1.7334 Amax 1.1 piEN +1.884 piEE +5.000
+             ATLAS_c_02a:F=-6182060uJy(fs=-72221.18) ATLAS_o_02a:F=-14531375uJy(fs=-16444.64) NEOWISE_W1:fs=23520.97 NEOWISE_W2:fs=25211.52
+  lens_asym chi2    1174.0 (n 358, k 8, BIC    1221.0)  t0 57325.86 tE_rise 44.0 tE_fall 326.4 ratio 0.13 u0 0.2584
+  pv7       chi2    1394.8 (n 358, k 7, BIC    1435.9)  shape 5.74e+04 0.2 0.865
+  pv7_asym  chi2    1181.6 (n 358, k 8, BIC    1228.7)  shape 5.73e+04 19.3 143 1.24
+  fred      chi2    1256.4 (n 358, k 7, BIC    1297.5)  shape 5.73e+04 19.6 135
+  nova      chi2    1241.2 (n 358, k 8, BIC    1288.2)  shape 5.73e+04 23.5 1.24e+03 10.4
+  -> best lens 1126.6 vs best non-lens pv7_asym 1181.6: dchi2 +55.1; static t0 2016-01-10

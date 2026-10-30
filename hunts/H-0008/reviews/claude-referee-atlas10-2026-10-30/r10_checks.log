@@ -1,0 +1,10 @@
+(a) J191120 ZTF colour in the decline
+  zg: baseline 21.24 mag (n 7, rob 0.240); +61..+116 d: n 6, fractional excess 0.047 +- 0.120 (mean dt 98 d)
+  zr: baseline 18.74 mag (n 38, rob 0.040); +61..+116 d: n 11, fractional excess 0.208 +- 0.019 (mean dt 88 d)
+  zi: baseline 17.52 mag (n 7, rob 0.014); +61..+116 d: n 1, fractional excess 0.132 +- 0.035 (mean dt 98 d)
+(b) baseline medians of the investigators' per-unit ATLAS series (no chi cut, mag5sig>17, dujy>0; |dt|>400 d)
+  J191120: c_01a: median -11 uJy, event max ratio -7.9 <- median <= 0: ratio sign-flipped / undefined; c_02a: median -17 uJy, event max ratio -2.9 <- median <= 0: ratio sign-flipped / undefined; o_01a: median 75 uJy, event max ratio 110.3; o_02a: median 101 uJy, event max ratio 10.0
+  J075219: c_02a: median -16 uJy, event max ratio -1.7 <- median <= 0: ratio sign-flipped / undefined; o_01a: median 14 uJy, event max ratio 49.3; o_02a: median 32 uJy, event max ratio 14.1
+  J163539: c_02a: median 71 uJy, event max ratio 8.6; o_01a: median 186 uJy, event max ratio 9.3; o_02a: median 185 uJy, event max ratio 8.5
+  J173150: c_02a: median 1943 uJy, event max ratio 6.7; o_01a: median 4141 uJy, event max ratio 7.7; o_02a: median 4072 uJy, event max ratio 7.3
+  J174440: c_03a: median 291 uJy, event max ratio 5.8; c_04a: median 311 uJy, event max ratio 6.1; o_03a: median 1253 uJy, event max ratio 7.0; o_04a: median 1294 uJy, event max ratio 3.8

@@ -1,0 +1,329 @@
+{
+ "J163539.69-355208.3": {
+  "t_peak_guess": 57977.3,
+  "t_peak_date": "2017-08-12",
+  "n": 365,
+  "atlas_nights_within_60d": 16,
+  "peak_ratio_atlas_o": 9.33,
+  "max_ratio_elsewhere_o": 1.46,
+  "gaia_G": 18.312653,
+  "l": 345.66,
+  "b": 7.79,
+  "static": {
+   "chi2": 918.7,
+   "dof": 285,
+   "t0": 57983.4,
+   "t0_date": "2017-08-18",
+   "tE": 151.8,
+   "u0": 0.11,
+   "Amax": 9.15,
+   "fs": {
+    "ATLAS_c_02a": 0.979,
+    "ATLAS_o_01a": 1.037,
+    "ATLAS_o_02a": 0.977,
+    "NEOWISE_W1": 0.882,
+    "NEOWISE_W2": 0.829
+   }
+  },
+  "parallax": {
+   "chi2": 843.8,
+   "dof": 283,
+   "t0": 57981.31,
+   "t0_date": "2017-08-16",
+   "tE": 162.6,
+   "u0": 0.093,
+   "Amax": 10.77,
+   "fs": {
+    "ATLAS_c_02a": 0.791,
+    "ATLAS_o_01a": 0.847,
+    "ATLAS_o_02a": 0.79,
+    "NEOWISE_W1": 0.722,
+    "NEOWISE_W2": 0.679
+   }
+  },
+  "pv7": 887.5,
+  "pv7_asym": 874.6,
+  "fred": 2596.5
+ },
+ "J075219.97-325515.6": {
+  "status": "ATLAS baseline not detected in any band/unit: no flux ratios (see the referee)"
+ },
+ "J185846.27+033028.5": {
+  "t_peak_guess": 57619.4,
+  "t_peak_date": "2016-08-19",
+  "n": 265,
+  "atlas_nights_within_60d": 10,
+  "peak_ratio_atlas_o": 7.68,
+  "max_ratio_elsewhere_o": 3.03,
+  "gaia_G": 17.847942,
+  "l": 36.89,
+  "b": -0.03,
+  "static": {
+   "chi2": 1326.6,
+   "dof": 111,
+   "t0": 57482.23,
+   "t0_date": "2016-04-04",
+   "tE": 590.6,
+   "u0": 0.0,
+   "Amax": 10000.0,
+   "fs": {
+    "ATLAS_o_02a": 0.186,
+    "NEOWISE_W1": 0.02,
+    "NEOWISE_W2": 0.021
+   }
+  },
+  "parallax": {
+   "chi2": 1088.8,
+   "dof": 109,
+   "t0": 57604.93,
+   "t0_date": "2016-08-04",
+   "tE": 80.7,
+   "u0": -0.237,
+   "Amax": 4.31,
+   "fs": {
+    "ATLAS_o_02a": 1.5,
+    "NEOWISE_W1": 0.043,
+    "NEOWISE_W2": 0.046
+   }
+  },
+  "pv7": 1297.4,
+  "pv7_asym": 834.3,
+  "fred": 832.0
+ },
+ "J174440.98-365619.1": {
+  "t_peak_guess": 60003.1,
+  "t_peak_date": "2023-02-28",
+  "n": 574,
+  "atlas_nights_within_60d": 18,
+  "peak_ratio_atlas_o": 6.99,
+  "max_ratio_elsewhere_o": 1.15,
+  "gaia_G": 16.187359,
+  "l": 353.06,
+  "b": -4.0,
+  "static": {
+   "chi2": 1031.2,
+   "dof": 545,
+   "t0": 60013.41,
+   "t0_date": "2023-03-10",
+   "tE": 99.8,
+   "u0": 0.173,
+   "Amax": 5.84,
+   "fs": {
+    "ATLAS_c_03a": 1.175,
+    "ATLAS_c_04a": 1.201,
+    "ATLAS_o_03a": 1.228,
+    "ATLAS_o_04a": 1.17,
+    "NEOWISE_W1": 1.03,
+    "NEOWISE_W2": 1.085
+   }
+  },
+  "parallax": {
+   "chi2": 970.6,
+   "dof": 543,
+   "t0": 60012.64,
+   "t0_date": "2023-03-09",
+   "tE": 77.8,
+   "u0": 0.204,
+   "Amax": 4.99,
+   "fs": {
+    "ATLAS_c_03a": 1.407,
+    "ATLAS_c_04a": 1.467,
+    "ATLAS_o_03a": 1.5,
+    "ATLAS_o_04a": 1.447,
+    "NEOWISE_W1": 1.268,
+    "NEOWISE_W2": 1.336
+   }
+  },
+  "pv7": 1134.5,
+  "pv7_asym": 1020.0,
+  "fred": 1155.5
+ },
+ "J182120.84-143232.7": {
+  "t_peak_guess": 57552.5,
+  "t_peak_date": "2016-06-13",
+  "n": 356,
+  "atlas_nights_within_60d": 21,
+  "peak_ratio_atlas_o": 0.57,
+  "max_ratio_elsewhere_o": 1.23,
+  "gaia_G": 16.292593,
+  "l": 16.6,
+  "b": -0.1,
+  "static": {
+   "chi2": 5800.1,
+   "dof": 187,
+   "t0": 57471.41,
+   "t0_date": "2016-03-24",
+   "tE": 1.0,
+   "u0": 0.152,
+   "Amax": 6.62,
+   "fs": {
+    "ATLAS_c_02a": 0.02,
+    "ATLAS_o_02a": 0.02,
+    "NEOWISE_W1": 1.413,
+    "NEOWISE_W2": 1.5
+   }
+  },
+  "parallax": {
+   "chi2": 5800.1,
+   "dof": 185,
+   "t0": 57471.23,
+   "t0_date": "2016-03-24",
+   "tE": 1.0,
+   "u0": 1.327,
+   "Amax": 1.18,
+   "fs": {
+    "ATLAS_c_02a": 0.02,
+    "ATLAS_o_02a": 0.02,
+    "NEOWISE_W1": 1.394,
+    "NEOWISE_W2": 1.48
+   }
+  },
+  "pv7": 5791.9,
+  "pv7_asym": 5791.3,
+  "fred": 5793.0
+ },
+ "J173150.73-444549.3": {
+  "t_peak_guess": 58305.4,
+  "t_peak_date": "2018-07-06",
+  "n": 195,
+  "atlas_nights_within_60d": 24,
+  "peak_ratio_atlas_o": 7.68,
+  "max_ratio_elsewhere_o": 1.04,
+  "gaia_G": 15.071338,
+  "l": 345.11,
+  "b": -6.09,
+  "static": {
+   "chi2": 18101.3,
+   "dof": 175,
+   "t0": 58310.23,
+   "t0_date": "2018-07-11",
+   "tE": 130.0,
+   "u0": 0.182,
+   "Amax": 5.57,
+   "fs": {
+    "ATLAS_c_02a": 1.305,
+    "ATLAS_o_01a": 1.5,
+    "ATLAS_o_02a": 1.477,
+    "NEOWISE_W1": 1.131,
+    "NEOWISE_W2": 1.157
+   }
+  },
+  "parallax": {
+   "chi2": 15857.5,
+   "dof": 173,
+   "t0": 58317.37,
+   "t0_date": "2018-07-18",
+   "tE": 257.4,
+   "u0": 0.136,
+   "Amax": 7.38,
+   "fs": {
+    "ATLAS_c_02a": 0.918,
+    "ATLAS_o_01a": 1.081,
+    "ATLAS_o_02a": 1.062,
+    "NEOWISE_W1": 0.906,
+    "NEOWISE_W2": 0.879
+   }
+  },
+  "pv7": 17038.6,
+  "pv7_asym": 16532.8,
+  "fred": 29443.6
+ },
+ "J191120.59+134303.3": {
+  "t_peak_guess": 59293.6,
+  "t_peak_date": "2021-03-20",
+  "n": 861,
+  "atlas_nights_within_60d": 17,
+  "peak_ratio_atlas_o": 110.29,
+  "max_ratio_elsewhere_o": 2.13,
+  "gaia_G": 18.388077,
+  "l": 47.39,
+  "b": 1.9,
+  "static": {
+   "chi2": 1070.6,
+   "dof": 711,
+   "t0": 59294.33,
+   "t0_date": "2021-03-21",
+   "tE": 106.9,
+   "u0": 0.007,
+   "Amax": 139.58,
+   "fs": {
+    "ATLAS_o_01a": 1.078,
+    "ATLAS_o_02a": 0.846,
+    "NEOWISE_W1": 0.442,
+    "NEOWISE_W2": 0.421
+   }
+  },
+  "parallax": {
+   "chi2": 1043.6,
+   "dof": 709,
+   "t0": 59294.5,
+   "t0_date": "2021-03-21",
+   "tE": 94.0,
+   "u0": 0.001,
+   "Amax": 1211.05,
+   "fs": {
+    "ATLAS_o_01a": 1.085,
+    "ATLAS_o_02a": 0.823,
+    "NEOWISE_W1": 0.412,
+    "NEOWISE_W2": 0.394
+   }
+  },
+  "pv7": 8964.8,
+  "pv7_asym": 8939.2,
+  "fred": 8984.1
+ },
+ "J075928.63-221055.1": {
+  "t_peak_guess": 57842.3,
+  "t_peak_date": "2017-03-30",
+  "n": 483,
+  "atlas_nights_within_60d": 37,
+  "peak_ratio_atlas_o": 1.03,
+  "max_ratio_elsewhere_o": 1.58,
+  "gaia_G": 16.978998,
+  "l": 240.36,
+  "b": 3.95,
+  "static": {
+   "chi2": 6623.4,
+   "dof": 349,
+   "t0": 57687.66,
+   "t0_date": "2016-10-26",
+   "tE": 10.0,
+   "u0": 0.006,
+   "Amax": 156.0,
+   "fs": {
+    "ATLAS_c_02a": 0.076,
+    "ATLAS_o_01a": 0.02,
+    "ATLAS_o_02a": 0.02,
+    "NEOWISE_W1": 1.494,
+    "NEOWISE_W2": 1.462
+   }
+  },
+  "parallax": {
+   "chi2": 6626.7,
+   "dof": 347,
+   "t0": 57995.65,
+   "t0_date": "2017-08-30",
+   "tE": 44.1,
+   "u0": -2.205,
+   "Amax": 1.05,
+   "fs": {
+    "ATLAS_c_02a": 0.255,
+    "ATLAS_o_01a": 0.021,
+    "ATLAS_o_02a": 0.02,
+    "NEOWISE_W1": 1.049,
+    "NEOWISE_W2": 1.026
+   }
+  },
+  "pv7": 6622.7,
+  "pv7_asym": 6622.7,
+  "fred": 6622.7
+ },
+ "J175634.35-205556.9": {
+  "status": "ATLAS not returned yet",
+  "task": "https://fallingstar-data.com/forcedphot/queue/5273742/"
+ },
+ "J174744.42-374630.7": {
+  "status": "ATLAS not returned yet",
+  "task": "https://fallingstar-data.com/forcedphot/queue/5273743/"
+ }
+}

@@ -1,0 +1,21 @@
+J163539: none within 60" (HTTP 200, valid CSV header)
+J075219: none within 60" (HTTP 200, valid CSV header)
+J185846: none within 60" (HTTP 200, valid CSV header)
+J174440: AT 2023gcb | nan | 2023-03-10 12:02:52.800 | 14.18 | Gaia23boj | 17:44:41.010 | -36:56:19.03
+J182120: none within 60" (HTTP 200, valid CSV header)
+J173150: none within 60" (HTTP 200, valid CSV header)
+J191120: AT 2021cwl | nan | 2021-02-12 10:29:16.800 | 17.87 | Gaia21atr | 19:11:20.580 | +13:43:02.53
+--- 2021cwl: HTTP 200
+   [Type |] Type | --- | Redshift | Discovery Report | Reporting Group | GaiaAlerts | Discovering Data Source | GaiaAlerts | Discovery Date | 2021-02-12 10:29:16.800 | TNS AT | Y | Public | Y | Discovery Mag | 17.87 | Filter | G-Gaia | Reporter/s | S.T. Hodgkin, E. Breedt
+   [Classification] Classification Reports | No Data | Comments | Log in | or | register | to post comments | Copyright © 2015 | Built by | klido.net | 
+   [Comments] Comments | Log in | or | register | to post comments | Copyright © 2015 | Built by | klido.net | 
+   [Remarks] Remarks | 192617 | 2021-02-12 10:29:17 | 2459257.937 | 17.87 | 0.2 | ABMag | G-Gaia | Gaia_Gaia-photometric | 60 | Robot | 192616 | 2020-11-20 22:17:46 | 2459174.429 | 21.5 | ABMag | G-Gaia | Gaia_Gaia-photometric | Robot | [Last non detection] | AT Reports | 
+   [Discovery date] Discovery date (UT) | Discovery Mag. | Filter | Related files | AT Type | Host name | Internal name | Assoc. Groups | End prop. period | Remarks | ADS Bibcode | Unreal | Auto classification | 99455 | 2021-02-14 11:45:46 | Gaia_Bot1 | S.T. Hodgkin, E. Breedt, A
+   [Reporting Group] Reporting Group | GaiaAlerts | Discovering Data Source | GaiaAlerts | Discovery Date | 2021-02-12 10:29:16.800 | TNS AT | Y | Public | Y | Discovery Mag | 17.87 | Filter | G-Gaia | Reporter/s | S.T. Hodgkin, E. Breedt, A. Delgado, D.L. Harrison, M. van Leeuwen
+--- 2023gcb: HTTP 200
+   [Type |] Type | --- | Redshift | Discovery Report | Reporting Group | GaiaAlerts | Discovering Data Source | GaiaAlerts | Discovery Date | 2023-03-10 12:02:52.800 | TNS AT | Y | Public | Y | Discovery Mag | 14.18 | Filter | G-Gaia | Reporter/s | S.T. Hodgkin, E. Breedt
+   [Classification] Classification Reports | No Data | Comments | Log in | or | register | to post comments | Copyright © 2015 | Built by | klido.net | 
+   [Comments] Comments | Log in | or | register | to post comments | Copyright © 2015 | Built by | klido.net | 
+   [Remarks] Remarks | 337904 | 2023-03-10 12:02:53 | 2460014.002 | 14.18 | 0.2 | ABMag | G-Gaia | Gaia_Gaia-photometric | 60 | Robot | 337903 | 2019-10-13 23:44:10 | 2458770.489 | 21.5 | ABMag | G-Gaia | Gaia_Gaia-photometric | Robot | [Last non detection] | AT Reports | 
+   [Discovery date] Discovery date (UT) | Discovery Mag. | Filter | Related files | AT Type | Host name | Internal name | Assoc. Groups | End prop. period | Remarks | ADS Bibcode | Unreal | Auto classification | 175215 | 2023-04-18 13:49:39 | Gaia_Bot1 | S.T. Hodgkin, E. Breedt, 
+   [Reporting Group] Reporting Group | GaiaAlerts | Discovering Data Source | GaiaAlerts | Discovery Date | 2023-03-10 12:02:52.800 | TNS AT | Y | Public | Y | Discovery Mag | 14.18 | Filter | G-Gaia | Reporter/s | S.T. Hodgkin, E. Breedt, A. Delgado, D.L. Harrison, M. van Leeuwen

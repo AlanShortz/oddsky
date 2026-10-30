@@ -1,0 +1,136 @@
+== local reference tables
+ J163539 (l 345.66 b +7.79, event 2017-08-15)
+   Gaia DR3                             nearest Gaia DR3 5970981388806648960 201.9'; nearest within 200 d of the event: Gaia DR3 5970981388806648960 201.9'
+   Gaia alerts                          nearest Gaia20eoj 42.0'; nearest within 200 d of the event: Gaia17ahk 488.9'
+   KMTNet                               nearest KMT-2018-BLG-1270 663.8'; nearest within 200 d of the event: KMT-2017-BLG-0652 672.5'
+   OGLE                                 nearest OGLE-2025-GD-0006 261.1'; nearest within 200 d of the event: OGLE-2017-BLG-0395 591.6'
+   OGLE GVS (Mroz+2020)                 nearest OGLE-GVS GD2150.13.1140 201.9'; nearest within 200 d of the event: OGLE-GVS GD2150.13.1140 201.9'
+   TNS (ALeRCE microlensing candidate)  nearest AT 2021aicc (ZTF21abahtfi) 1179.0'
+   TNS (XOSS microlensing candidate)    nearest AT 2022aexe (XOSS KATS22J002) 6193.4'
+   ZTF (Medford+2023)                   nearest PUZLE 198045_37053 1719.7'
+   ZTF (Rodriguez+2022)                 nearest ZTF19aatwaux 704.6'
+   ZTF (Zhai+2024)                      nearest ZTF19aatwaux 704.6'
+ J075219 (l 248.73 b -2.96, event 2018-03-31)
+   Gaia DR3                             nearest Gaia DR3 5599913394301352832 287.6'; nearest within 200 d of the event: Gaia DR3 4061109904516035840 6794.5'
+   Gaia alerts                          nearest Gaia23dit 77.4'; nearest within 200 d of the event: Gaia18asq 545.9'
+   KMTNet                               nearest KMT-2018-BLG-1313 6242.0'; nearest within 200 d of the event: KMT-2018-BLG-1313 6242.0'
+   OGLE                                 nearest OGLE-2023-GD-0008 4568.0'; nearest within 200 d of the event: OGLE-2018-BLG-0925 6295.8'
+   OGLE GVS (Mroz+2020)                 nearest OGLE-GVS GD1533.19.13800 417.9'; nearest within 200 d of the event: OGLE-GVS GD2054.14.1066 2223.8'
+   TNS (ALeRCE microlensing candidate)  nearest AT 2021aicc (ZTF21abahtfi) 7010.8'
+   TNS (XOSS microlensing candidate)    nearest AT 2022aexe (XOSS KATS22J002) 9530.2'
+   ZTF (Medford+2023)                   nearest PUZLE 215476_198 3585.5'
+   ZTF (Rodriguez+2022)                 nearest ZTF19adbsiat 4849.5'
+   ZTF (Zhai+2024)                      nearest ZTF20abwiild 2984.7'; nearest within 200 d of the event: ZTF0139.2+5403 7075.5'
+ J185846 (l 36.89 b -0.03, event 2016-04-07)
+   Gaia DR3                             nearest Gaia DR3 4268189072623902976 234.5'; nearest within 200 d of the event: Gaia DR3 4268189072623902976 234.5'
+   Gaia alerts                          nearest Gaia21avw 49.6'; nearest within 200 d of the event: Gaia16aye 1701.3'
+   KMTNet                               nearest KMT-2019-BLG-2882 1686.1'; nearest within 200 d of the event: KMT-2016-BLG-1584 1690.6'
+   OGLE                                 nearest OGLE-2024-DG-0018 218.1'; nearest within 200 d of the event: OGLE-2016-BLG-0746 1651.0'
+   OGLE GVS (Mroz+2020)                 nearest OGLE-GVS DG1330.26.27441 98.8'; nearest within 200 d of the event: OGLE-GVS DG1068.02.19241 234.5'
+   TNS (ALeRCE microlensing candidate)  nearest AT 2021aicc (ZTF21abahtfi) 1924.5'
+   TNS (XOSS microlensing candidate)    nearest AT 2022aexe (XOSS KATS22J002) 3187.3'
+   ZTF (Medford+2023)                   nearest PUZLE 206452_5009 214.8'
+   ZTF (Rodriguez+2022)                 nearest ZTF19aaxsdqz 288.7'
+   ZTF (Zhai+2024)                      nearest ZTF22abambyf 121.6'
+ J174440 (l 353.06 b -4.00, event 2023-03-07)
+   Gaia DR3                             nearest Gaia DR3 4040104834334974336 17.8'
+   Gaia alerts                          nearest Gaia19enm 42.7'; nearest within 200 d of the event: Gaia23ckg 102.7'
+   KMTNet                               nearest KMT-2022-BLG-0573 31.4'; nearest within 200 d of the event: KMT-2022-BLG-2222 73.7'
+   OGLE                                 nearest OGLE-2024-BLG-0717 6.9'; nearest within 200 d of the event: OGLE-2023-BLG-0322 20.9'
+   OGLE GVS (Mroz+2020)                 nearest OGLE-GVS BLG601.12.9964 128.0'
+   TNS (ALeRCE microlensing candidate)  nearest AT 2021aicc (ZTF21abahtfi) 974.8'
+   TNS (XOSS microlensing candidate)    nearest AT 2022aexe (XOSS KATS22J002) 5825.3'
+   ZTF (Medford+2023)                   nearest PUZLE 198045_37053 1170.5'
+   ZTF (Rodriguez+2022)                 nearest ZTF19aatwaux 711.1'
+   ZTF (Zhai+2024)                      nearest ZTF19aatwaux 711.1'; nearest within 200 d of the event: ZTF22abcfjfp 1139.7'
+ J182120 (l 16.60 b -0.10, event 2016-03-25)
+   Gaia DR3                             nearest Gaia DR3 4096895979980830592 167.9'; nearest within 200 d of the event: Gaia DR3 4096895979980830592 167.9'
+   Gaia alerts                          nearest Gaia23bsf 78.6'; nearest within 200 d of the event: Gaia16axo 2307.3'
+   KMTNet                               nearest KMT-2016-BLG-1584 496.5'; nearest within 200 d of the event: KMT-2016-BLG-1584 496.5'
+   OGLE                                 nearest OGLE-2024-BLG-0253 95.5'; nearest within 200 d of the event: OGLE-2016-BLG-0746 448.4'
+   OGLE GVS (Mroz+2020)                 nearest OGLE-GVS BLG772.08.28385 77.4'; nearest within 200 d of the event: OGLE-GVS BLG777.16.8388 161.7'
+   TNS (ALeRCE microlensing candidate)  nearest AT 2021aicc (ZTF21abahtfi) 778.9'
+   TNS (XOSS microlensing candidate)    nearest AT 2022aexe (XOSS KATS22J002) 4398.5'
+   ZTF (Medford+2023)                   nearest PUZLE 198940_35883 158.0'
+   ZTF (Rodriguez+2022)                 nearest ZTF19abhkrjx 184.8'
+   ZTF (Zhai+2024)                      nearest ZTF21abihdde 136.0'
+ J173150 (l 345.11 b -6.09, event 2018-07-12)
+   Gaia DR3                             nearest Gaia DR3 5951752068649725312 91.3'
+   Gaia alerts                          nearest Gaia17ahl 135.1'; nearest within 200 d of the event: Gaia18ccu 406.7'
+   KMTNet                               nearest KMT-2017-BLG-1426 513.0'; nearest within 200 d of the event: KMT-2018-BLG-1986 519.7'
+   OGLE                                 nearest OGLE-2023-BLG-0370 94.9'; nearest within 200 d of the event: OGLE-2018-BLG-1447 552.6'
+   OGLE GVS (Mroz+2020)                 nearest OGLE-GVS BLG937.05.28992 154.6'; nearest within 200 d of the event: OGLE-GVS GD1903.25.7051 209.2'
+   TNS (ALeRCE microlensing candidate)  nearest AT 2021aicc (ZTF21abahtfi) 1433.9'
+   TNS (XOSS microlensing candidate)    nearest AT 2022aexe (XOSS KATS22J002) 6308.8'
+   ZTF (Medford+2023)                   nearest PUZLE 198045_37053 1655.7'
+   ZTF (Rodriguez+2022)                 nearest ZTF19aatwaux 1079.3'
+   ZTF (Zhai+2024)                      nearest ZTF19aatwaux 1079.3'; nearest within 200 d of the event: ZTF1753.1-2006 1502.5'
+ J191120 (l 47.39 b +1.90, event 2021-03-21)
+   Gaia DR3                             nearest Gaia DR3 4320634776479693696 113.2'
+   Gaia alerts                          nearest Gaia21edg 70.4'; nearest within 200 d of the event: Gaia21edg 70.4'
+   KMTNet                               nearest KMT-2019-BLG-2882 2325.6'; nearest within 200 d of the event: KMT-2021-BLG-1787 2334.3'
+   OGLE                                 nearest OGLE-2024-DG-0018 857.7'; nearest within 200 d of the event: OGLE-2023-BLG-0167 2512.8'
+   OGLE GVS (Mroz+2020)                 nearest OGLE-GVS DG1162.25.18045 94.4'
+   TNS (ALeRCE microlensing candidate)  nearest AT 2021aicc (ZTF21abahtfi) 2525.2'; nearest within 200 d of the event: AT 2021aicc (ZTF21abahtfi) 2525.2'
+   TNS (XOSS microlensing candidate)    nearest AT 2022aexe (XOSS KATS22J002) 2548.7'
+   ZTF (Medford+2023)                   nearest PUZLE 210677_14481 310.0'
+   ZTF (Rodriguez+2022)                 nearest ZTF19aaoocwc 71.3'
+   ZTF (Zhai+2024)                      nearest ZTF19aaoocwc 71.3'; nearest within 200 d of the event: ZTF20acutkiq 80.8'
+== VizieR / SIMBAD
+ J163539
+   B/vsx/vsx: vizier.idia.ac.za: no rows (HTTP 200)
+   II/366/catalog: vizier.idia.ac.za: no rows (HTTP 200)
+   I/358/vclassre: vizier.idia.ac.za: no rows (HTTP 200)
+   II/328/allwise: vizier.idia.ac.za: _r=0.000; AllWISE=J163539.69-355208.3; W1mag=14.440; e_W1mag=0.031; W2mag=15.583; e_W2mag=0.143; W3mag=12.307; W4mag=8.831; ccf=dh00; ex=0; qph=ABUU; nb=1; na=0
+   II/246/out: vizier.idia.ac.za: _r=0.479; 2MASS=16353968-3552088; Jmag=15.769; Hmag=14.939; Kmag=14.986; Qflg=AAB; Cflg=000
+   SIMBAD 10": no object within 10" (HTTP 200)
+ J075219
+   B/vsx/vsx: vizier.idia.ac.za: no rows (HTTP 200)
+   II/366/catalog: vizier.idia.ac.za: no rows (HTTP 200)
+   I/358/vclassre: vizier.idia.ac.za: no rows (HTTP 200)
+   II/328/allwise: vizier.idia.ac.za: _r=0.000; AllWISE=J075219.97-325515.6; W1mag=13.182; e_W1mag=0.025; W2mag=13.166; e_W2mag=0.029; W3mag=12.634; W4mag=9.100; ccf=0000; ex=0; qph=AAUU; nb=1; na=0
+   II/246/out: vizier.idia.ac.za: _r=0.066; 2MASS=07521997-3255155; Jmag=15.160; Hmag=13.905; Kmag=13.430; Qflg=AAA; Cflg=000
+   SIMBAD 10": no object within 10" (HTTP 200)
+ J185846
+   B/vsx/vsx: vizier.idia.ac.za: no rows (HTTP 200)
+   II/366/catalog: vizier.idia.ac.za: no rows (HTTP 200)
+   I/358/vclassre: vizier.idia.ac.za: no rows (HTTP 200)
+   II/328/allwise: vizier.idia.ac.za: _r=0.000; AllWISE=J185846.27+033028.5; W1mag=10.602; e_W1mag=0.029; W2mag=10.259; e_W2mag=0.028; W3mag=10.484; W4mag=7.471; ccf=H0O0; ex=1; qph=AAUU; nb=2; na=0
+   II/246/out: vizier.idia.ac.za: _r=0.553; 2MASS=18584625+0330280; Jmag=14.896; Hmag=13.863; Kmag=11.859; Qflg=UAA; Cflg=0cc || _r=2.994; 2MASS=18584642+0330305; Jmag=14.271; Hmag=13.603; Kmag=13.272; Qflg=UAA; Cflg=0cc
+   SIMBAD 10": HTTP 200: 2MASS J18584625+0330352 (Y*?)
+ J174440
+   B/vsx/vsx: vizier.idia.ac.za: _r=27.26; recno=6080430; OID=6601081; Name=Gaia DR3 4040113871003724672; V=0; RAJ2000=266.16135; DEJ2000=-36.93779; Type=SR|M; max=14.330; n_max=G; min=14.480; n_min=G; Period=144.300000000000; Sp=M
+   II/366/catalog: vizier.idia.ac.za: no rows (HTTP 200)
+   I/358/vclassre: vizier.idia.ac.za: no rows (HTTP 200)
+   II/328/allwise: vizier.idia.ac.za: _r=0.000; AllWISE=J174440.98-365619.1; W1mag=11.053; e_W1mag=0.026; W2mag=11.283; e_W2mag=0.026; W3mag=11.140; e_W3mag=0.173; W4mag=8.861; ccf=00d0; ex=1; qph=AABU; nb=1; na=0
+   II/246/out: vizier.idia.ac.za: _r=0.484; 2MASS=17444102-3656190; Jmag=12.753; Hmag=11.687; Kmag=11.359; Qflg=AAA; Cflg=ccc
+   SIMBAD 10": no object within 10" (HTTP 200)
+ J182120
+   B/vsx/vsx: vizier.idia.ac.za: no rows (HTTP 200)
+   II/366/catalog: vizier.idia.ac.za: no rows (HTTP 200)
+   I/358/vclassre: vizier.idia.ac.za: no rows (HTTP 200)
+   II/328/allwise: vizier.idia.ac.za: _r=0.000; AllWISE=J182120.84-143232.7; W1mag=9.851; e_W1mag=0.029; W2mag=9.457; e_W2mag=0.026; W3mag=9.527; e_W3mag=0.139; W4mag=7.152; ccf=0ohH; ex=0; qph=AABU; nb=3; na=1
+   II/246/out: vizier.idia.ac.za: _r=0.096; 2MASS=18212083-1432327; Jmag=12.154; Hmag=11.259; Kmag=10.706; Qflg=AAA; Cflg=000
+   SIMBAD 10": HTTP 200: 2MASS J18212083-1432327 (Y*?)
+ J173150
+   B/vsx/vsx: vizier.idia.ac.za: no rows (HTTP 200)
+   II/366/catalog: vizier.idia.ac.za: no rows (HTTP 200)
+   I/358/vclassre: vizier.idia.ac.za: no rows (HTTP 200)
+   II/328/allwise: vizier.idia.ac.za: _r=0.000; AllWISE=J173150.73-444549.3; W1mag=11.633; e_W1mag=0.025; W2mag=11.754; e_W2mag=0.022; W3mag=12.164; e_W3mag=0.383; W4mag=8.566; ccf=dd00; ex=0; qph=AACU; nb=1; na=0
+   II/246/out: vizier.idia.ac.za: _r=0.329; 2MASS=17315073-4445490; Jmag=12.778; Hmag=11.996; Kmag=11.777; Qflg=AAA; Cflg=000
+   SIMBAD 10": no object within 10" (HTTP 200)
+ J191120
+   B/vsx/vsx: vizier.idia.ac.za: _r=13.76; recno=8484739; OID=7349695; Name=Gaia DR3 4320153984977927040; V=0; RAJ2000=287.83218; DEJ2000=13.71609; Type=L; max=18.010; n_max=G; min=18.170; n_min=G
+   II/366/catalog: vizier.idia.ac.za: no rows (HTTP 200)
+   I/358/vclassre: vizier.idia.ac.za: no rows (HTTP 200)
+   II/328/allwise: vizier.idia.ac.za: _r=0.000; AllWISE=J191120.59+134303.3; W1mag=13.159; e_W1mag=0.036; W2mag=13.365; e_W2mag=0.046; W3mag=12.061; e_W3mag=0.379; W4mag=9.082; ccf=0h00; ex=1; qph=AACU; nb=1; na=0
+   II/246/out: vizier.idia.ac.za: _r=0.635; 2MASS=19112059+1343027; Jmag=14.863; Hmag=13.895; Kmag=13.489; Qflg=AAA; Cflg=000
+   SIMBAD 10": no object within 10" (HTTP 200)
+== online alert pages for the event years
+ MOA 2017: HTTP 200, 0 coordinate pairs
+ MOA 2018: HTTP 200, 0 coordinate pairs
+ MOA 2023: HTTP 200, 0 coordinate pairs
+ OGLE EWS 2017: HTTP 200, 1834 coordinate pairs; J163539: nearest 591.6'
+ OGLE EWS 2018: HTTP 200, 1803 coordinate pairs; J075219: nearest 6287.9'; J173150: nearest 552.6'
+ OGLE EWS 2023: HTTP 200, 1344 coordinate pairs; J174440: nearest 20.9'
+ KMTNet 2023: HTTP 200, 0 coordinate pairs

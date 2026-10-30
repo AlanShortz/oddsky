@@ -39,9 +39,13 @@ BASE_DT = 400
 
 
 def ratio_series(t, flux, ferr, label, tpk):
-    """Flux / baseline median; the error gains the part of the baseline scatter that the quoted errors do not explain."""
+    """Flux / baseline median; the error gains the part of the baseline scatter that the quoted errors do not explain.
+    Returns None when the baseline is not clearly detected (median below 5 times its typical error, or negative): a ratio to
+    it is meaningless, and a negative baseline turns a brightening into a dip (the ATLAS follow-up referee's correction 2)."""
     base = np.abs(t - tpk) > BASE_DT
     med = np.median(flux[base])
+    if not med > 5 * np.median(ferr[base]):
+        return None
     scatter = 1.4826 * np.median(np.abs(flux[base] / med - 1))
     quoted = np.median(ferr[base] / med)
     extra = np.sqrt(max(scatter**2 - quoted**2, 0.0))
@@ -65,7 +69,8 @@ def series(k):
         if not usable(nt.t.values, tpk, 8):
             continue
         s = ratio_series(nt.t.values, nt.fl.values, nt.fe.values, f"ATLAS_{F}_{cam}", tpk)
-        rows.append(s[(s.f > 0.3) & (s.f < 20)])  # zero-flux dropouts and absurd nights
+        if s is not None:
+            rows.append(s[(s.f > 0.3) & (s.f < 20)])  # zero-flux dropouts and absurd nights
     z = pd.read_csv(os.path.join(REF, f"ztf_{k}.csv"))
     z = z[(z.catflags == 0) & z.mag.notna() & (z.mjd > WINDOW[0]) & (z.mjd < WINDOW[1])]
     for (fc, fld), d in z.groupby(["filtercode", "field"]):

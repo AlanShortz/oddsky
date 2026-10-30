@@ -1,0 +1,20 @@
+== Gaia21atr: 190 spectra, 197 light-curve detections
+  brightest spectra (integrated BP+RP / median): [3.29 2.85 2.69 1.85 1.76 1.75 1.67 1.48 1.45 1.44 1.38 1.35]
+  brightest light-curve transits (flux / median): [2.75 2.74 1.81 1.79 1.78 1.69 1.35 1.3  1.07 1.06 1.06 1.06]
+  quiescent spectra: 137; event spectra used: 8 (flux ratios [3.29 2.85 2.69 1.85 1.76 1.75 1.67 1.48])
+   spectrum #46: total x3.29; BP x7.17, RP x0.91 (BP/RP ratio change 7.89); RP blue half x1.34, red half x0.74
+   spectrum #123: total x2.85; BP x3.34, RP x2.67 (BP/RP ratio change 1.25); RP blue half x3.24, red half x2.45
+   spectrum #124: total x2.69; BP x2.73, RP x2.79 (BP/RP ratio change 0.98); RP blue half x2.52, red half x2.90
+   spectrum #120: total x1.85; BP x2.00, RP x1.83 (BP/RP ratio change 1.09); RP blue half x2.03, red half x1.75
+   spectrum #125: total x1.76; BP x1.95, RP x1.29 (BP/RP ratio change 1.51); RP blue half x1.48, red half x1.22
+   spectrum #122: total x1.75; BP x2.03, RP x1.81 (BP/RP ratio change 1.13); RP blue half x1.94, red half x1.75
+   spectrum #121: total x1.67; BP x1.48, RP x1.73 (BP/RP ratio change 0.86); RP blue half x1.83, red half x1.70
+   spectrum #104: total x1.48; BP x1.61, RP x1.23 (BP/RP ratio change 1.31); RP blue half x1.25, red half x1.22
+== Gaia23boj: 99 spectra, 113 light-curve detections
+  brightest spectra (integrated BP+RP / median): [5.85 3.01 2.2  1.52 1.1  1.09 1.08 1.08 1.08 1.07 1.07 1.07]
+  brightest light-curve transits (flux / median): [6.5  3.09 3.07 2.35 1.17 1.15 1.11 1.09 1.09 1.07 1.06 1.06]
+  quiescent spectra: 91; event spectra used: 4 (flux ratios [5.85 3.01 2.2  1.52])
+   spectrum #94: total x5.85; BP x6.43, RP x5.85 (BP/RP ratio change 1.10); RP blue half x3.92, red half x6.76
+   spectrum #95: total x3.01; BP x3.06, RP x3.04 (BP/RP ratio change 1.01); RP blue half x3.72, red half x2.72
+   spectrum #96: total x2.20; BP x2.32, RP x2.21 (BP/RP ratio change 1.05); RP blue half x1.61, red half x2.50
+   spectrum #64: total x1.52; BP x1.04, RP x1.58 (BP/RP ratio change 0.65); RP blue half x1.28, red half x1.72

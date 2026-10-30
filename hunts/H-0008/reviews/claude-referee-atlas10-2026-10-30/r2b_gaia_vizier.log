@@ -1,0 +1,90 @@
+============================== J163539 J163539.69-355208.3 target Gaia DR3 6020322385418675200
+             Source   sep   Gmag  BPmag  RPmag  BP-RP    Plx  e_Plx  RUWE       VarFlag  IPDfmp  NSS  o_Gmag
+6020322385418675200 0.768 18.313 19.407 17.282  2.126  0.007  0.208 0.976 NOT_AVAILABLE       1    0     194
+6020322385423615488 4.175 19.657 20.664 18.598  2.065  0.908  0.526 0.985 NOT_AVAILABLE       0    0     214
+6020322389727390464 6.523 19.932 20.748 19.137  1.611  0.672  0.743 1.041 NOT_AVAILABLE       0    0     199
+6020322389727388928 8.940 19.867 20.471 19.049  1.422  0.927  0.623 0.980 NOT_AVAILABLE       0    0     209
+6020322389727391744 9.506 19.947 20.919 19.112  1.807 -1.815  0.714 1.085 NOT_AVAILABLE       1    0     203
+  target: expected ATLAS o of the Gaia star ~17.80 AB = 276 uJy; ATLAS reduced-image baseline median ~186 uJy (ratio 0.67); Gaia-only share of the forced flux 0.907; other sources within 3": 0
+  astrophysical parameters: [{'Source': '6020322385418675200', 'Teff': 3869.8608, 'logg': 4.7515, 'Dist': 683.4849, 'AG': 0.6703, 'SpType-ELS': nan, 'EWHa': nan, 'ClassELS': nan, 'Rad': 0.4939, 'Lum-Flame': nan}]
+  DR3 G-flux scatter target 0.0505 (N 194); 182 stars within 3' and 0.5 mag: median 0.0297, 90th 0.0389, 99th 0.0659; percentile 94.5
+============================== J075219 J075219.97-325515.6 target Gaia DR3 5594032591941367424
+             Source  sep   Gmag  BPmag  RPmag  BP-RP  Plx  e_Plx  RUWE       VarFlag  IPDfmp  NSS  o_Gmag
+5594032591941367424 3.12 19.382 21.123 18.016  3.107 0.22  0.258 1.108 NOT_AVAILABLE       0    0     435
+  target: expected ATLAS o of the Gaia star ~18.70 AB = 120 uJy; ATLAS reduced-image baseline median ~33 uJy (ratio 0.27); Gaia-only share of the forced flux 1.000; other sources within 3": 0
+  astrophysical parameters: [{'Source': '5594032591941367424', 'Teff': nan, 'logg': nan, 'Dist': nan, 'AG': nan, 'SpType-ELS': nan, 'EWHa': nan, 'ClassELS': nan, 'Rad': nan, 'Lum-Flame': nan}]
+  DR3 G-flux scatter target 0.0554 (N 435); 70 stars within 3' and 0.5 mag: median 0.0547, 90th 0.0673, 99th 0.0797; percentile 52.9
+============================== J185846 J185846.27+033028.5 target Gaia DR3 4280846616059642368
+             Source   sep   Gmag  BPmag  RPmag  BP-RP    Plx  e_Plx  RUWE       VarFlag  IPDfmp  NSS  o_Gmag
+4280846616059642368 2.834 17.848 19.681 16.612  3.070  0.651  0.136 0.958 NOT_AVAILABLE       0    0     209
+4280846611767870208 6.830 19.369 21.345 17.950  3.395 -0.130  0.413 1.087 NOT_AVAILABLE       0    0     183
+4280846616059642880 9.117 16.430 17.467 15.444  2.022  2.335  0.061 0.991 NOT_AVAILABLE       1    0     196
+  target: expected ATLAS o of the Gaia star ~17.23 AB = 466 uJy; ATLAS reduced-image baseline median ~51 uJy (ratio 0.11); Gaia-only share of the forced flux 0.965; other sources within 3": 0
+  DR3 G-flux scatter target 0.0238 (N 209); 27 stars within 3' and 0.5 mag: median 0.0256, 90th 0.0428, 99th 0.0556; percentile 37.0
+============================== J174440 J174440.98-365619.1 target Gaia DR3 4040113866619940352
+             Source   sep   Gmag  BPmag  RPmag  BP-RP    Plx  e_Plx  RUWE       VarFlag  IPDfmp  NSS  o_Gmag
+4040113866619940352 0.450 16.187 17.814 14.908  2.905  0.015  0.070 1.259 NOT_AVAILABLE      14    0     410
+4040113871003715072 0.837 19.920    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE       0    0      61
+4040113870955986304 3.248 20.346    NaN    NaN    NaN  8.874  1.559 1.213 NOT_AVAILABLE       0    0     187
+4040113870955993472 3.965 19.428    NaN    NaN    NaN -0.560  0.782 1.205 NOT_AVAILABLE       0    0     265
+4040113871003714944 4.385 17.115 18.314 16.031  2.284  0.010  0.088 0.975 NOT_AVAILABLE       0    0     398
+4040113870955961600 4.564 20.657 22.873 20.060  2.813    NaN    NaN   NaN NOT_AVAILABLE       0    0      74
+4040113870955993344 4.706 18.100 18.412 17.033  1.378  0.309  0.162 1.044 NOT_AVAILABLE      10    0     392
+4040113871003714816 5.746 20.388    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE       0    0     120
+4040113870955989888 6.157 18.908 19.562 17.388  2.173  1.691  0.367 1.340 NOT_AVAILABLE      21    0     384
+4040113870962071424 6.579 20.879    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE       0    0      53
+4040113871003716608 6.941 19.423    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE      26    0     118
+4040113871019576704 7.289 20.891    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE       0    0      43
+4040113870955990016 7.344 19.136    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE       0    0      45
+4040113871019578880 7.375 20.562    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE       0    0      85
+4040113871004593408 7.754 20.884    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE       0    0      44
+4040113870955983232 7.915 19.711 20.610 18.532  2.078 -1.844  0.993 1.780 NOT_AVAILABLE       0    0     349
+4040113871004384128 8.662 20.602    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE      11    0      61
+4040113871019578752 8.795 17.877 18.993 16.780  2.213 -0.031  0.134 1.034 NOT_AVAILABLE       0    0     393
+4040113866644535552 9.039 19.937 20.221 18.354  1.867 -1.412  0.680 1.005 NOT_AVAILABLE       0    0     288
+4040113871004385408 9.263 20.701    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE      10    0      54
+4040113870956020096 9.502 18.279 19.243 17.278  1.965  0.409  0.182 0.988 NOT_AVAILABLE       0    0     398
+4040113870962288896 9.773 20.378 22.204 19.621  2.583    NaN    NaN   NaN NOT_AVAILABLE       0    0     170
+4040113870955999872 9.853 20.489    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE       0    0     140
+4040113870955931520 9.859 20.541    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE       0    0      82
+4040113871004385152 9.934 20.244    NaN    NaN    NaN    NaN    NaN   NaN NOT_AVAILABLE      17    0      38
+  target: expected ATLAS o of the Gaia star ~15.55 AB = 2192 uJy; ATLAS reduced-image baseline median ~1260 uJy (ratio 0.57); Gaia-only share of the forced flux 0.829; other sources within 3": 1
+  astrophysical parameters: [{'Source': '4040113866619940352', 'Teff': 4550.435, 'logg': 2.6916, 'Dist': 2000.0084, 'AG': 3.0219, 'SpType-ELS': nan, 'EWHa': -0.35591, 'ClassELS': nan, 'Rad': 7.2319, 'Lum-Flame': 1167.0}]
+  DR3 G-flux scatter target 0.0181 (N 410); 89 stars within 3' and 0.5 mag: median 0.0107, 90th 0.0183, 99th 0.1603; percentile 88.8
+============================== J182120 J182120.84-143232.7 target Gaia DR3 4146309720455045504
+             Source   sep   Gmag  BPmag  RPmag  BP-RP   Plx  e_Plx  RUWE       VarFlag  IPDfmp  NSS  o_Gmag
+4146309720455045504 0.140 16.293 18.667 14.889  3.778 0.100  0.070 1.002 NOT_AVAILABLE       0    0     171
+4146309720455048960 9.221 16.098 16.816 15.236  1.580 0.411  0.063 1.139 NOT_AVAILABLE       0    0     182
+  target: expected ATLAS o of the Gaia star ~15.59 AB = 2107 uJy; ATLAS reduced-image baseline median ~880 uJy (ratio 0.42); Gaia-only share of the forced flux 0.997; other sources within 3": 0
+  astrophysical parameters: [{'Source': '4146309720455045504', 'Teff': 6560.6157, 'logg': 2.9828, 'Dist': 1552.8813, 'AG': 5.6941, 'SpType-ELS': nan, 'EWHa': 0.03956, 'ClassELS': nan, 'Rad': 8.1927, 'Lum-Flame': 80.74}]
+  DR3 G-flux scatter target 0.0227 (N 171); 63 stars within 3' and 0.5 mag: median 0.0102, 90th 0.0133, 99th 0.0407; percentile 93.7
+============================== J173150 J173150.73-444549.3 target Gaia DR3 5952322268527918208
+             Source   sep   Gmag  BPmag  RPmag  BP-RP    Plx  e_Plx  RUWE       VarFlag  IPDfmp  NSS  o_Gmag
+5952322268527918208 0.266 15.071 15.979 14.133  1.846  0.084  0.028 1.031 NOT_AVAILABLE       0    0     397
+5952322268496980480 4.121 17.678 18.159 16.894  1.265  0.530  0.132 1.206 NOT_AVAILABLE       0    0     380
+5952322268496988544 4.379 19.757 20.401 18.903  1.498 -0.534  0.396 0.974 NOT_AVAILABLE       0    0     413
+5952322268527916288 5.371 16.858 17.381 16.173  1.208  0.689  0.067 0.937 NOT_AVAILABLE       0    0     391
+5952322268507561728 7.330 20.373 20.969 19.716  1.253  0.817  0.810 1.011 NOT_AVAILABLE       0    0     311
+5952322302867302912 7.795 20.449 19.618 19.356  0.262    NaN    NaN   NaN NOT_AVAILABLE       1    0     281
+5952322268496973568 7.905 19.502 20.261 18.941  1.321  0.083  0.361 1.063 NOT_AVAILABLE       0    0     405
+5952322298523509760 8.421 16.789 17.270 16.143  1.127  0.072  0.067 0.981 NOT_AVAILABLE       0    0     372
+5952322264163769216 9.147 16.765 17.239 16.130  1.109  0.439  0.064 1.031 NOT_AVAILABLE       0    0     397
+5952322264196091648 9.165 19.785    NaN    NaN    NaN -0.882  0.406 1.029 NOT_AVAILABLE       0    0     398
+5952322268497005056 9.244 19.521 19.858 18.485  1.374  1.765  0.596 1.755 NOT_AVAILABLE       7    0     415
+5952322268507564160 9.984 20.864 21.762 19.896  1.866    NaN    NaN   NaN NOT_AVAILABLE       0    0     142
+  target: expected ATLAS o of the Gaia star ~14.60 AB = 5239 uJy; ATLAS reduced-image baseline median ~4150 uJy (ratio 0.79); Gaia-only share of the forced flux 0.948; other sources within 3": 0
+  astrophysical parameters: [{'Source': '5952322268527918208', 'Teff': nan, 'logg': nan, 'Dist': nan, 'AG': nan, 'SpType-ELS': nan, 'EWHa': -0.00163, 'ClassELS': nan, 'Rad': nan, 'Lum-Flame': nan}]
+  DR3 G-flux scatter target 0.0059 (N 397); 45 stars within 3' and 0.5 mag: median 0.0060, 90th 0.0119, 99th 0.0208; percentile 44.4
+============================== J191120 J191120.59+134303.3 target Gaia DR3 4320154358624224256
+             Source   sep   Gmag  BPmag  RPmag  BP-RP    Plx  e_Plx  RUWE       VarFlag  IPDfmp  NSS  o_Gmag
+4320154358624224256 0.747 18.388 20.225 17.132  3.093  0.046  0.152 0.994 NOT_AVAILABLE       0    0     601
+4320154362935052160 3.277 20.370 21.497 19.143  2.354  0.673  0.673 0.966 NOT_AVAILABLE       0    0     462
+4320154362935030400 5.354 20.322 21.856 19.212  2.644  0.772  0.591 1.147 NOT_AVAILABLE       0    0     516
+4320154362935056384 5.818 19.497 21.460 18.246  3.214 -0.019  0.312 1.035 NOT_AVAILABLE       0    0     596
+4320154362935060864 6.812 19.442 20.813 18.388  2.426 -0.077  0.390 1.001 NOT_AVAILABLE       0    0     529
+4320154362935042176 7.811 19.751 20.784 18.433  2.351  0.328  0.403 1.051 NOT_AVAILABLE       0    0     574
+4320154362935042304 8.462 20.346    NaN    NaN    NaN  0.712  0.710 1.073 NOT_AVAILABLE       0    0     474
+4320154362935733760 9.739 21.066 22.095 20.274  1.821    NaN    NaN   NaN NOT_AVAILABLE       0    0     101
+  target: expected ATLAS o of the Gaia star ~17.76 AB = 286 uJy; ATLAS reduced-image baseline median ~95 uJy (ratio 0.33); Gaia-only share of the forced flux 0.865; other sources within 3": 0
+  astrophysical parameters: [{'Source': '4320154358624224256', 'Teff': 4259.955, 'logg': 4.2295, 'Dist': 653.889, 'AG': 3.1023, 'SpType-ELS': nan, 'EWHa': nan, 'ClassELS': nan, 'Rad': 1.0275, 'Lum-Flame': nan}]
+  DR3 G-flux scatter target 0.0279 (N 601); 296 stars within 3' and 0.5 mag: median 0.0323, 90th 0.0464, 99th 0.1354; percentile 25.7

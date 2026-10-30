@@ -112,7 +112,36 @@ ATLAS forced photometry (tasks 5272650-1, `work/atlas/`) arrived on 30 Oct. Fits
   transits that depart from a star's usual brightness, which during a lens peak are the peak itself. This also affects OS-0016 P1,
   sealed on 29 Oct for the same kind of window; the change was made before any DR4 data exist.
 
-## The 428 unclassified
+## ATLAS follow-up of the southern events: four more candidates
+
+ZTF cannot check events south of −30° or before 2018, so ATLAS forced photometry was queued for the ten strongest lens-like
+unclassified events there (`work/atlas/queue.csv`, `scripts/hunt_h0008_atlas_queue.py`). Eight have returned. First-pass fits:
+`scripts/hunt_h0008_atlas10.py` (`work/atlas10.json`, `figures/atlas10.png`); referee:
+[`reviews/claude-referee-atlas10-2026-10-30.md`](reviews/claude-referee-atlas10-2026-10-30.md), whose numbers supersede the
+first pass.
+
+| event | verdict | P(lens) | what is robust |
+|---|---|---|---|
+| J163539.69-355208.3 (l 345.7, b +7.8) | lens candidate (strong) | 0.75 | smooth, achromatic ×6-9 brightening in 2017 Aug, tE ≈ 120-190 d; a static lens loses to a symmetric bump, so the lens reading needs annual parallax (πE ≈ 0.38 in every variant) |
+| J173150.73-444549.3 (l 345.1, b −6.1, G 15.1) | lens candidate | 0.55 | peak 2018 Jul 11-14; fits only with parallax; tE ≈ 120-490 d (unconstrained); rise mildly chromatic and the peak may be partly saturated |
+| J174440.98-365619.1 = Gaia23boj (AT 2023gcb, never classified) | lens candidate (strong) | 0.70 | peak 2023 Mar 8-11, tE ≈ 75-125 d; Gaia and NEOWISE see the rise; Gaia's low-resolution spectra rise equally in blue and red; inside OGLE's 2023 area with no OGLE alert (probably saturated) |
+| J191120.59+134303.3 = Gaia21atr (AT 2021cwl, never classified) | lens candidate, possibly high magnification | 0.55 | peak 2021 Mar 19-20 at ×30-50 of the Gaia star; 20 ATLAS nights above 5σ in two units and both bands, Gaia's rise, NEOWISE at +23 d and a ZTF tail; ZTF g does not rise while r does, so no hot added light; tE and u0 unconstrained |
+| J075219.97-325515.6 | inconclusive | 0.30 | a real month-long brightening in 2018 Mar-Apr (six ATLAS nights, two units), too sparsely sampled to classify |
+| J075928.63-221055.1 | inconclusive | – | the ATLAS frames around the NEOWISE event are unusable |
+| J185846.27+033028.5 | not a lens | < 0.02 | an eruptive red infrared source, likely a young star; the Gaia star matched to it is not the variable |
+| J182120.84-143232.7 | not a lens | 0.05 | an infrared variable (SIMBAD young-star candidate) that brightened again in 2021 |
+
+**What the first pass got wrong.**
+- J191120's "single-night ×110 spike" and J075219's "×48" were ratios to faint ATLAS baselines. A negative c-band baseline also
+  turned brightenings into dips. Series whose baseline is not clearly detected are now skipped.
+- Blend fractions sitting at the fit's bounds (0.02, 1.5) meant the fit was unconstrained, and were not reported as such.
+- Equal W1 and W2 brightening is no lens test for stars whose W1−W2 is already about 0: both non-lenses here passed it. What
+  separates lenses is optical against infrared, and blue against red.
+
+Not yet checked: why Gaia did not alert on J163539 or J173150 (G ≈ 16 and ≈ 13 for months), ASAS-SN, MOA (alert pages empty),
+OGLE photometry of Gaia23boj, ADS full text. ATLAS for J175634 and J174744 has not returned. None of these is a case yet.
+
+
 
 They cluster in the Galactic plane (`figures/lensing_sky.png`). In the referee's sample about 80% behave like ordinary variable stars:
 chromatic in the infrared, flat in the optical. Roughly 10-25% look like lenses, and most of those are in the south, where there is no
