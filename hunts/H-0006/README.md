@@ -27,8 +27,9 @@ NEOWISE centroid sat 0.4" toward the AGN and drifted back as they separated (-14
 blend coming apart, not dust leaving a halo star.
 
 **The survivor.** [J160708.51-320101.1](plots/J160708.51-320101.1.png) (2MASS J16070852-3201009, Gaia DR3 6036595883378187008).
-A catalogued Upper Sco (ρ Sco, Sco-Cen) member at 147 pc, spectral type M1.5 with weak Hα (Kuruwita et al. 2018), with a
-"full" disk (Luhman 2022b). **Its 3-5 µm hot-dust excess vanished between August 2021 and February 2022, and was still
+A catalogued Upper Sco (ρ Sco, Sco-Cen) member at 147 pc with a "full" disk (Luhman 2022b, classified from AllWISE 2010,
+before the change). No spectral type is published: the "M1.5" in Kuruwita et al. (2018) is their radial-velocity template, and
+Gaia's ~3,700 K suggests about M1. **Its 3-5 µm hot-dust excess vanished between August 2021 and February 2022, and was still
 absent in September 2026.**
 
 - 2010-2021: AllWISE W1-W2 = 0.43, W2-W3 = 1.9; NEOWISE W1-W2 0.29-0.57 over 16 visits, varying like a young star's.
@@ -38,18 +39,23 @@ absent in September 2026.**
 - SPHEREx (2025-26): 15.9 mJy at 4.4-5.0 µm against ~31 mJy before the step, so still no excess. The star did not dim:
   NEOWISE W1, SPHEREx 1-2.4 µm against 2MASS, and TESS all agree.
 - Gaia 2014-17: one dip in 2015, deeper in BP (a dipper, so probably an inclined disk). Kuruwita's four radial velocities
-  span 9 km/s, so it may be a spectroscopic binary, and a close companion could clear an inner disk.
+  span 9 km/s, which is not significant in their own binarity test (0.86 against a threshold of 300), and Gaia shows no sign
+  of a companion.
 - **Unknown:** the outer disk. Nothing has measured 10-24 µm since 2010 (W3 = 7.51, W4 = 5.05), so whether the dust is gone
   or hidden is open. This is not "the disk vanished".
 
 **Referee** ([report](reviews/claude-referee-2026-10-28.md)): the step is real. It survives raw single exposures (12-26
 per post-step visit; flags and fit quality unchanged), a constant 18" control star in the same frames, both scan
 directions, and a centroid test against the 7.7" neighbour. Probability of a mundane explanation: about 3%.
-**Novelty:** the star and its disk are catalogued; the fading is not in VarWISE, Park et al. 2021, the dipper papers, or
-anything the web finds. SIMBAD and ADS have not been checked (CDS was unreachable all of 2026-10-28).
+**Novelty** ([literature check, 2026-10-30](reviews/literature-2026-10-30.md)): the star and its disk are catalogued; the
+fading is not. SIMBAD (CfA mirror) has 5 references, all membership papers. ADS full text has nothing under 26 name and
+coordinate forms (positive controls work). It is not in VarWISE, and the NEOWISE disk-variability catalogues end before 2021.
+13 of 69 VizieR catalogues list it, none for a disk change. Not checked: an all-catalogue VizieR cone search, ATels.
+**Precedent:** PDS 70, also in Sco-Cen, lost its 3-5 µm inner-disk emission in NEOWISE for up to a year and then got it back
+(Gaidos et al. 2024, 2024ApJ...966..167G). So the kind of event is known; what is new here is a full-disk M star whose excess
+has stayed off for 4.5 years (to SPHEREx in 2026) with the photosphere unchanged, and a temporary loss stays possible.
 
-**Status (2026-10-28): survives the referee; interpretation open; not announced.** Before it becomes a case: SIMBAD and ADS
-novelty (CDS down), and ATLAS forced photometry (task 5266397, queued) for the optical through 2021-22. The decisive
+**Status (2026-10-30): survives the referee and the literature check; interpretation open; not announced.** The decisive
 observation is 10-20 µm photometry now, against the 2010 W3/W4, which only an astronomer can arrange.
 
 **Beyond the parallax limit: two evolved stars in the Magellanic Clouds.** Of the 34 flags with no usable parallax that

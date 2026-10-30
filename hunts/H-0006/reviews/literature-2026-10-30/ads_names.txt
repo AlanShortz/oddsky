@@ -1,0 +1,120 @@
+# token from https://ui.adsabs.harvard.edu/v1/accounts/bootstrap: ok
+
+QUERY full:"2MASS J16070852-3201009"  ->  numFound=0
+
+QUERY full:"J16070852-3201009"  ->  numFound=0
+
+QUERY full:"16070852-3201009"  ->  numFound=0
+
+QUERY full:"J160708.51-320101.1"  ->  numFound=0
+
+QUERY full:"J160708.51-320101.2"  ->  numFound=0
+
+QUERY full:"160708.51-320101"  ->  numFound=0
+
+QUERY full:"6036595883378187008"  ->  numFound=0
+
+QUERY full:"TIC 94420199"  ->  numFound=0
+
+QUERY full:"94420199"  ->  numFound=0
+
+QUERY full:"UCAC4 290-088054"  ->  numFound=0
+
+QUERY full:"J1607-3201"  ->  numFound=0
+
+QUERY full:"J160708-320101"  ->  numFound=0
+
+QUERY full:"J160708.5-320101"  ->  numFound=0
+
+QUERY full:"1607085-320101"  ->  numFound=0
+
+QUERY full:"J16070852"  ->  numFound=0
+
+QUERY full:"160708.52-320100.9"  ->  numFound=0
+
+QUERY full:"J160708.6-320100"  ->  numFound=0
+
+QUERY full:"1eRASS J160708.6-320100"  ->  numFound=0
+
+QUERY full:"472446800778"  ->  numFound=0
+
+QUERY abs:"J16070852-3201009"  ->  numFound=0
+
+QUERY abs:"2MASS J16070852-3201009"  ->  numFound=0
+# POSITIVE CONTROLS
+# token from https://ui.adsabs.harvard.edu/v1/accounts/bootstrap: ok
+
+QUERY full:"J16042165-2130284"  ->  numFound=40
+    2026AJ....172..185S | Sitko, Michael L. | Gas Flows and Mass Accretion Rates in Eight Dippers: HD 142666, HD 143006, HD 145718, V935 Sco, DoAr 25, EPIC 204638512, EPIC 205151387, and
+    2026ApJ..1009...88G | Gresko, Kyle | SMA Observations Reveal Abundant HNC Chemistry in Transition Disks
+    2026A&A...712A.222E | Empey, A. | X-Shooter survey of disc accretion in Upper Scorpius: II. A lack of correlation between accretion rates and disc properties
+    2026arXiv260627477X | Xie, Chengyan | From Young to Older Disks: JWST/MIRI Evidence for Fading Molecular Emission and Hints for Elevated C/O in Upper Scorpius
+    2026A&A...705A..49Z | Zallio, Luigi | The <SUP>12</SUP>CO gas structures of protoplanetary disks in the Upper Scorpius region
+    2026ApJ...997...91L | Law, Charles J. | A Submillimeter Survey of CS Excitation in Protoplanetary Disks: Evidence of X-Ray-driven Sulfur Chemistry
+    2025A&A...701A..93S | Stasevic, S. | Optimising reference library selection for reference-star differential imaging of discs with SPHERE/IRDIS
+    2025arXiv250918313S | Spieksma, Thomas F. M. | Exploring Black Hole Environments
+
+QUERY full:"2MASS J16042165-2130284"  ->  numFound=34
+    2026AJ....172..185S | Sitko, Michael L. | Gas Flows and Mass Accretion Rates in Eight Dippers: HD 142666, HD 143006, HD 145718, V935 Sco, DoAr 25, EPIC 204638512, EPIC 205151387, and
+    2026ApJ..1009...88G | Gresko, Kyle | SMA Observations Reveal Abundant HNC Chemistry in Transition Disks
+    2026A&A...712A.222E | Empey, A. | X-Shooter survey of disc accretion in Upper Scorpius: II. A lack of correlation between accretion rates and disc properties
+    2026ApJ...997...91L | Law, Charles J. | A Submillimeter Survey of CS Excitation in Protoplanetary Disks: Evidence of X-Ray-driven Sulfur Chemistry
+    2025A&A...701A..93S | Stasevic, S. | Optimising reference library selection for reference-star differential imaging of discs with SPHERE/IRDIS
+    2025arXiv250918313S | Spieksma, Thomas F. M. | Exploring Black Hole Environments
+    2025arXiv250603511C | Cao, Fangyi | POLARIS: A High-contrast Polarimetric Imaging Benchmark Dataset for Exoplanetary Disk Representation Learning
+    2025ApJ...978..117C | Carpenter, John M. | Extending the ALMA Census of Circumstellar Disks in the Upper Scorpius OB Association
+
+QUERY full:"J1604-2130"  ->  numFound=53
+    2026arXiv260900140W | Wu, Olivia | Using Ringed Disks to Determine Fundamental Parameters of Planet Formation
+    2026arXiv260717648F | Fukuhara, Yuya | Probing disk dynamics and dust evolution through shadows in protoplanetary disks: A case study of the HD 142527 disk
+    2026AJ....171..128B | Booth, Alice S. | The Chemical Diversity of Giant-planet Nurseries as Revealed by ALMA
+    2026aask.bookE..36G | Garufi, Antonio | Demographics of Planet-forming Disks with the SKAO
+    2025A&A...703A.235M | Miley, James M. | Resolving the large exoKuiper belt of the HD 126062 debris disc and extended gas emission in its vicinity
+    2025A&A...698A.102R | Ragusa, Enrico | The likelihood of not detecting cavity-carving companions in transition discs ─ A statistical approach
+    2024ARep...68..949G | Grigoryev, V. V. | Simulation of the Free Fall of a Gas Stream on a Protoplanetary Disk
+    2024MNRAS.527.7652Z | Zwicky, Lis | Observational chemical signatures of the past FU Ori outbursts
+
+QUERY full:"TYC 8241 2652 1"  ->  numFound=31
+    2026arXiv260912034T | Torlakcik, Sahin | An unresolved extreme warm infrared excess toward a nearby low-mass star
+    2024MNRAS.528.4528M | Moór, Attila | Abundant sub-micron grains revealed in newly discovered extreme debris discs
+    2024MNRAS.527.7749W | Watt, Lewis | Post-giant impact planetesimals sustaining extreme debris discs
+    2022MNRAS.516.5684M | Moór, Attila | Mid-infrared time-domain study of recent dust production events in the extreme debris disc of TYC 4209-1322-1
+    2022ApJ...933...13H | Higashio, Susan | Disks in Nearby Young Stellar Associations Found Via Virtual Reality
+    2021ApJ...910...27M | Moór, Attila | A New Sample of Warm Extreme Debris Disks from the ALLWISE Catalog
+    2021ApJ...907...71F | Foord, Adi | AGN Triality of Triple Mergers: Detection of Faint X-Ray Point Sources
+    2019ApJ...875...45T | Thompson, Maggie A. | Studying the Evolution of Warm Dust Encircling BD +20 307 Using SOFIA
+
+QUERY full:"ASASSN-21qj"  ->  numFound=32
+    2026arXiv261008273T | Taylor, Lucy | Blinding Lights: Simulation-Based Evidence for Terrestrial Giant Impacts as Astronomically Observable Events
+    2026arXiv260908923V | van Roestel, J. | Now you see me, now you don't: Deep, long-lived obscuration events of white dwarfs by dust and debris from disintegrating planetesimals
+    2026arXiv260626026T | Tanna, Pavan | Can giant impacts be directly detected in other star systems?
+    2026arXiv260620789Z | Zanazzi, J. J. | Dynamical Tides during High-Eccentricity Migration produces the Hot Jupiter Pile-up, Neptune Ridge, and Neptune Desert
+    2026ApJ..1000L...5T | Tzanidakis, Anastasios | Gaia-GIC-1: An Evolving Catastrophic Planetesimal Collision Candidate
+    2026MNRAS.546f2251S | Shah, Sarang | The nature of ASASSN-24fw's occultation: modelling the event as dimming by optically thick rings around a substellar companion
+    2026haex.book..216E | Espinoza, Néstor | Highlights from Exoplanet Observations by the James Webb Space Telescope
+    2026A&A...707A..58H | Hajdu, G. | RR Lyrae stars with variable mean magnitudes
+
+QUERY full:"J16064385-1908056"  ->  numFound=3
+    2026arXiv260627477X | Xie, Chengyan | From Young to Older Disks: JWST/MIRI Evidence for Fading Molecular Emission and Hints for Elevated C/O in Upper Scorpius
+    2025ApJ...978..117C | Carpenter, John M. | Extending the ALMA Census of Circumstellar Disks in the Upper Scorpius OB Association
+    2016ApJ...827..142B | Barenfeld, Scott A. | ALMA Observations of Circumstellar Disks in the Upper Scorpius OB Association
+
+QUERY full:"16064385-1908056"  ->  numFound=0
+
+QUERY full:"J16070873-1927341"  ->  numFound=2
+    2025ApJ...978..117C | Carpenter, John M. | Extending the ALMA Census of Circumstellar Disks in the Upper Scorpius OB Association
+    2019ApJ...878...45B | Barenfeld, Scott A. | The Effect of Binarity on Circumstellar Disk Evolution
+
+QUERY full:"16070873-1927341"  ->  numFound=0
+# names found later in Kuruwita tables (UCAC4-39156047) and eRASS1
+# token from https://ui.adsabs.harvard.edu/v1/accounts/bootstrap: ok
+
+QUERY full:"UCAC4-39156047"  ->  numFound=0
+
+QUERY full:"39156047"  ->  numFound=0
+
+QUERY full:"1eRASS J160708.6-320102"  ->  numFound=0
+
+QUERY full:"WISEA J160708.51-320101.1"  ->  numFound=0
+
+QUERY full:"WISE J160708.51-320101.2"  ->  numFound=0

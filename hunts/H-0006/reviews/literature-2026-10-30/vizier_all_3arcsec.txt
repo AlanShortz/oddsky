@@ -1,0 +1,6 @@
+# All-catalogue VizieR cone (r=3") at vizier.idia.ac.za: NOT COMPLETED.
+# astroquery query_region with no catalog -> HTTP 502 Bad Gateway (votable).
+# asu-tsv with no -source -> HTTP 200, 0 bytes after 69 s.
+# VizieR-4 HTML -> output truncated after ~70 s, only reached I/243..I/317 (USNO-A1, USNO-A2, USNO-B1, NOMAD, GSC2.3, PPMXL).
+# vizier.cfa.harvard.edu, vizier.cds.unistra.fr: timeouts (25 s); vizier.china-vo.org: connection failure.
+# => replaced by per-catalogue queries in vizier_targeted_3arcsec.txt

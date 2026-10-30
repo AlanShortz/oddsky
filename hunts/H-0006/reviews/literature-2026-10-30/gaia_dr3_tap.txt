@@ -1,0 +1,19 @@
+### SELECT source_id, ra, dec, phot_g_mean_mag, bp_rp, ruwe, radial_velocity, radial_velocity_error, rv_nb_transits, rv_chisq_pvalue, rv_renormalised_gof, rv_amplitude_robust, rv_template_teff, grvs_mag, phot_variable_flag, non_single_star, ipd_frac_multi_peak, ipd_gof_harmonic_amplitude FROM gaiadr3.gaia_source WHERE source_id=6036595883378187008
+source_id,ra,dec,phot_g_mean_mag,bp_rp,ruwe,radial_velocity,radial_velocity_error,rv_nb_transits,rv_chisq_pvalue,rv_renormalised_gof,rv_amplitude_robust,rv_template_teff,grvs_mag,phot_variable_flag,non_single_star,ipd_frac_multi_peak,ipd_gof_harmonic_amplitude
+6036595883378187008,241.78542428848937,-32.0170507985752,13.686893,2.3523073,1.1160556,4.0167017,2.305163,20,,,,3600.0,12.053572,VARIABLE,0,0,0.06341346
+
+### SELECT * FROM gaiadr3.vari_summary WHERE source_id=6036595883378187008
+solution_id,source_id,num_selected_g_fov,mean_obs_time_g_fov,time_duration_g_fov,min_mag_g_fov,max_mag_g_fov,mean_mag_g_fov,median_mag_g_fov,range_mag_g_fov,trimmed_range_mag_g_fov,std_dev_mag_g_fov,skewness_mag_g_fov,kurtosis_mag_g_fov,mad_mag_g_fov,abbe_mag_g_fov,iqr_mag_g_fov,stetson_mag_g_fov,std_dev_over_rms_err_mag_g_fov,outlier_median_g_fov,num_selected_bp,mean_obs_time_bp,time_duration_bp,min_mag_bp,max_mag_bp,mean_mag_bp,median_mag_bp,range_mag_bp,trimmed_range_mag_bp,std_dev_mag_bp,skewness_mag_bp,kurtosis_mag_bp,mad_mag_bp,abbe_mag_bp,iqr_mag_bp,stetson_mag_bp,std_dev_over_rms_err_mag_bp,outlier_median_bp,num_selected_rp,mean_obs_time_rp,time_duration_rp,min_mag_rp,max_mag_rp,mean_mag_rp,median_mag_rp,range_mag_rp,trimmed_range_mag_rp,std_dev_mag_rp,skewness_mag_rp,kurtosis_mag_rp,mad_mag_rp,abbe_mag_rp,iqr_mag_rp,stetson_mag_rp,std_dev_over_rms_err_mag_rp,outlier_median_rp,in_vari_classification_result,in_vari_rrlyrae,in_vari_cepheid,in_vari_planetary_transit,in_vari_short_timescale,in_vari_long_period_variable,in_vari_eclipsing_binary,in_vari_rotation_modulation,in_vari_ms_oscillator,in_vari_agn,in_vari_microlensing,in_vari_compact_companion
+375316653866487564,6036595883378187008,52,2035.19969746731,892.1733,13.634926,13.972308,13.713702,13.669254,0.33738244,0.30072138,0.09080088,1.6738741,1.8773487,0.026713867,0.19357766,0.0999947,60.974403,68.0896,293.833,54,2017.461437706693,892.1733,14.807532,15.230357,14.952836,14.901333,0.42282534,0.36167237,0.10813874,1.4643452,1.1973077,0.0431241,0.19523667,0.11200399,16.988071,22.76386,62.99524,54,2025.7810175721613,892.1733,12.532825,12.852125,12.610232,12.5672655,0.3192995,0.28050047,0.085805334,1.6688186,1.6717949,0.019313041,0.1559787,0.08597777,32.60633,43.487217,131.24648,true,false,false,false,false,false,false,false,false,false,false,false
+
+### SELECT * FROM gaiadr3.vari_classifier_result WHERE source_id=6036595883378187008
+solution_id,source_id,classifier_name,best_class_name,best_class_score
+375316653866487564,6036595883378187008,nTransits:5+,YSO,0.8673883
+
+### SELECT source_id, classlabel_espels, classprob_dsc_combmod_star, teff_gspphot, spectraltype_esphs, classlabel_dsc FROM gaiadr3.astrophysical_parameters WHERE source_id=6036595883378187008
+<VOTABLE version="1.2" xmlns="http://www.ivoa.net/xml/VOTable/v1.2">
+<RESOURCE type="results">
+<INFO name="QUERY_STATUS" value="ERROR">
+Cannot parse query 'SELECT source_id, classlabel_espels, classprob_dsc_combmod_star, teff_gspphot, spectraltype_esphs, classlabel_dsc FROM gaiadr3.astrophysical_parameters WHERE source_id=6036595883378187008' for job '5e8ea18e-d47e-11f1-9d98-bc97e148b76b-O': 1 unresolved identifiers: classlabel_dsc [l.1 c.100 - l.1 c.114] !
+ - Unknown column "classlabel_dsc" !
+

@@ -1,0 +1,462 @@
+# token from https://ui.adsabs.harvard.edu/v1/accounts/bootstrap: ok
+
+QUERY abs:("Upper Sco" OR "Upper Scorpius") AND abs:(NEOWISE) AND abs:(variab*)  ->  numFound=0
+
+QUERY abs:("Upper Sco" OR "Upper Scorpius" OR "Sco-Cen" OR "Scorpius-Centaurus") AND abs:(WISE OR NEOWISE OR "mid-infrared") AND abs:(variab* OR disappear* OR vanish* OR dissipat*) year:2019-2026  ->  numFound=2
+    2020A&A...633A..37S | Sicilia-Aguilar, A. | Time-resolved photometry of the young dipper RX J1604.3-2130A. Unveiling the structure and mass transport through the innermost disk
+    2019yCat..51560071C | Cody, A. M. | VizieR Online Data Catalog: K2 Campaign 2: young disk-bearing stars in Sco &amp; Oph (Cody+, 2018)
+
+QUERY abs:("disappearing infrared excess" OR "vanishing infrared excess" OR "disappearance of the infrared excess" OR "infrared excess disappeared" OR "infrared excess vanished")  ->  numFound=2
+    2012A&A...542A.109S | Sturm, R. | Discovery of the neutron star spin and a possible orbital period from the Be/X-ray binary IGR J05414-6858 in the LMC
+    1999PhDT........12M | Malfait, Koen Jozef | The properties and evolution of the dusty disks surrounding Herbig Ae/Be stars
+
+QUERY abs:("disk dispersal" OR "disc dispersal" OR "disk dissipation") AND abs:(NEOWISE OR WISE) AND abs:(variab* OR "time-domain" OR "real time") year:2015-2026  ->  numFound=6
+    2026AJ....172..132R | Rose, Daniel | Disk Candidates in IC 2395: A WISE Survey of the Kinematically Confirmed Membership
+    2026arXiv260723612R | Rose, Daniel | Disc Candidates in IC 2395: A WISE Survey of the Kinematically Confirmed Membership
+    2026AAS...24722001E | Edwards, Clayton | Stellar Rotation Within the Beta Pictoris Moving Group Using TESS Lightcurves
+    2025MNRAS.541.1866C | Chakraborty, Arghya | Exploring membership and variability in NGC 7419: an open cluster rich in supergiants and Be type stars
+    2018adap.prop..106Z | Zakamska, Nadia | Uncovering the Time Domain of WISE: Variability of Young Stellar Objects
+    2018AJ....155...50G | Granada, A. | Quiescent and Active Phases in Be Stars: A WISE Snapshot of Young Galactic Open Clusters
+
+QUERY abs:VarWISE  ->  numFound=5
+    2026ApJS..284...41P | Paz, Matthew | VarWISE: Infrared Variability via NEOWISE Single-exposure Photometry
+    2026arXiv260519059P | Paz, Matthew | VarWISE: Infrared Variability via NEOWISE Single Exposure Photometry
+    2026ipac.data....2K | Kirkpatrick Paz, M. | VarWISE Pure Catalog
+    2026ipac.data....3K | Kirkpatrick Paz, M. | VarWISE Extended Catalog
+    2026ipac.data....1K | Kirkpatrick Paz, M. | VarWISE Associations Table
+
+QUERY abs:(NEOWISE) AND abs:("young stellar objects" OR YSOs OR "protoplanetary disks") AND abs:(variability) year:2020-2026  ->  numFound=56
+    2026arXiv261010364Y | Yadav, Shubham | Photometric and Spectroscopic Study of Young Stellar Objects in IC 1848E Region
+    2026ApJ..1010..223C | Contreras Peña, Carlos | The FU Ori Outburst of PR Ori B
+    2026arXiv260913955M | Mathews Ben, Gregory | Investigating Variability in Long-lived Protoplanetary Disks (&gt;10 Myr) using NEOWISE
+    2026AJ....172....6T | Tobin, John J. | Radio Continuum and Water Maser Monitoring of the Outburst in HOPS 373: Free─Free Emission Does Not Respond to the Outburst
+    2026MNRAS.549ag807C | Contreras Peña, Carlos | The long-term outburst(s) of GPSV16: from an intermediate to a FUor classification
+    2026yCat..22810064Z | Zhang, J. | VizieR Online Data Catalog: Variability in YSOs from unTimely 10yr obs. (Zhang+, 2025)
+    2026ApJS..284...59K | Kang, Zihan | A Catalog of Mid-infrared Variable Sources from unTimely
+    2026A&A...709A.204C | Cesaroni, R. | Evidence for a bloated massive protostar in IRAS 20126+4104
+    2026asi..confO..21N | Neha, Sharma | Tracing a Decade of Change: Mid-Infrared Variability in 20,000 Young Stellar Objects
+    2026ApJ..1000..188K | Kulkarni, Chinmay S. | 27 yr of Spaceborne IR Astronomy: An ISO, Spitzer, WISE, and NEOWISE Survey for Large-amplitude Variability in Young Stellar Objects
+    2026AAS...24721004B | Banks, Elisabeth | Observations of Large-amplitude Variability of Dusty YSOs Within 500 pc with Spitzer and (NEO)WISE
+    2026AAS...24711804W | Westman, Jackqueline | Deep Mining of WISE to Explore Young Stellar Object Variability in Star Forming Regions
+    2026yCat..19570113W | Wang, M.-T. | VizieR Online Data Catalog: Multi-color light curves of Ex Lup (Wang+, 2023)
+    2025ApJS..281...64Z | Zhang, Jingyi | Mining Young Stellar Objects in unTimely: Probing Variability and Physical Properties
+    2025NewA..12002409N | Neumannová, K. | Lightcurves of stars in the Chamaeleon I association
+    2025JKAS...58..231K | Kim, Mi-Ryang | YSO Variability in the W51 Star-Forming Region
+    2025yCat..19530086C | Carvalho, A. S. | VizieR Online Data Catalog: The optical to IR lightcurve of V960 Mon (Carvalho+, 2023)
+    2025AJ....170..125C | Chen, Zhiwei | Submillimeter and Mid-infrared Variability of Young Stellar Objects in the M17 H II Region
+    2025arXiv250616519S | Stecklum, Bringfried | Insights gained from the Light Echo of Cepheus A HW2
+    2025ApJS..278...10N | Neha, Sharma | Illuminating Youth: Decades of Mid-infrared Variability and Color Evolution of Young Stellar Objects
+    2025RNAAS...9...86S | Stecklum, Bringfried | Disentangling Joint Light Curves Using Photocenter Shifts: A Case Study Using NEOWISE Data
+    2025ApJ...982..176S | Sheehan, Patrick D. | Submillimeter Variability in the Envelope and Warped Protostellar Disk of the Class 0 Protostar HOPS 358
+    2025MNRAS.541.3772P | Pandey, Rakesh | Testing the bloated star hypothesis in the massive young stellar object IRAS 19520+2759 through optical and infrared variability
+    2025MNRAS.537.2763M | Morris, C. | Eruptive YSOs in Cygnus-X: a mid-infrared variability study with NEOWISE and SPICY
+    2025ATel17057....1S | Stecklum, Bringfried | Serendipitous discovery of an outburst from HOPS 315
+    2025AAS...24512202B | Behling, Thomas | YSOlab: An Archival, Time Domain Exploration of Infrared Space Telescope Data from 1997 to 2024
+    2024yCat..51680122P | Park, G. | VizieR Online Data Catalog: 3.5yr monitoring of M17 SWex with JCMT &amp; NEOWISE (Park+, 2024)
+    2024yCat..22720044L | Lu, Y. | VizieR Online Data Catalog: NEOWISE variability analysis of ATLASGAL sources (Lu+, 2024)
+    2024AJ....168..122P | Park, Geumsook | Submillimeter and Mid-Infrared Variability of Young Stellar Objects in the M17SWex Intermediate-mass Star-forming Region
+    2024ApJS..272...44L | Lu, Ying | Sample and Statistical Analysis on NEOWISE Variability of ATLASGAL Sources
+
+QUERY abs:(SPHEREx) AND abs:("young stellar" OR protoplanetary OR "circumstellar disk" OR "disk" OR "ice") year:2025-2026  ->  numFound=62
+    2026nova.pres16275A | Astrobites | SPHEREx: The Niftiest Space Telescope You May Not Have Heard Of
+    2026arXiv261036223P | Perez Paolino, Facundo | Testing Pre-main-sequence Evolutionary Models with Gaia and SPHEREx Observations of Canis Major North
+    2026arXiv260918895B | Banerjee, D. P. K. | A large shell around the hypergiant VY Canis Majoris
+    2026JGRD..13147242H | Hui, Howard | Observations of Atmospheric Helium and Oxygen With SPHEREx
+    2026A&A...713A.251L | Luco, Baltasar | Very Large Telescope observations of interstellar comet 3I/ATLAS: III. High-resolution monitoring of CN and forbidden oxygen emission across
+    2026SPIE14145E..0QH | Hui, Howard | In-orbit checkout of SPHEREx and the characterization of low-Earth-orbit foregrounds
+    2026cosp...46.1570J | Jung, Sungho | When Lines Masquerade as Disks ─ Correcting Disk Mapping Bias Against Broad Emission Lines
+    2026cosp...46..229L | Lisse, Carey | SPHEREx and XMM Pre- and Post-perihelion Observations of Interstellar Object 3I/ATLAS in August and December 2025
+    2026cosp...46.2577M | Megías, Andrés | Measuring the abundance of methanol, ammonia and methane in Chamaeleon I with JWST
+    2026arXiv260724934R | Roychowdhury, Tamojeet | Using Scattered Near-Infrared Light to Map Water Ice in Prestellar Cores with SPHEREx
+    2026AAS...24821503H | Hora, Joseph | SPHEREx Mapping of Interstellar Ices
+    2026AAS...24821506L | Lisse, Carey | SPHEREx Re-Observation of Interstellar Object 3I/ATLAS in December 2025: Detection of Increased Post-Perihelion Activity, Refractory Coma Du
+    2026AAS...24832908S | Starrfield, Sumner | SphereX and the Demise of The GK Persei Planetary Nebula Hypothesis
+    2026AJ....172...41B | Borlaff, Alejandro S. | SPHEREx Confirms Predictions for Artificial Satellite Trail Pollution in Low Earth Orbit
+    2026AAS...24821501B | Bock, James | SPHEREx Mission Update
+    2026MNRAS.550g1068B | Bisht, D. | Blue straggler stars in Berkeley 18: a multiwavelength study of their physical properties and dynamical evolution
+    2026arXiv260706200G | Gandhi, Poshak | An intrinsic decline of accretion activity in GRS 1915+105
+    2026arXiv260700202K | Kakharov, Shokhruz | Prospects for Panspermia via Interstellar Objects like 3I/ATLAS
+    2026MNRAS.549ag871A | Almualla, Mouza | The THESAN project: Lyman-α intensity mapping of cosmic reionization
+    2026RNAAS..10..131K | Kiwy, Frank | SPExPI: A SPHEREx Spectrum Extraction Pipeline for Point Sources
+    2026ApJS..284...10H | Hui, Howard | Spectral Response of SPHEREx
+    2026ApJ..1002...33M | Melnick, Gary J. | The SPHEREx Ices Investigation: An Overview
+    2026ApJ..1000L..52L | Lisse, Carey M. | SPHEREx Pre-perihelion Mapping of H<SUB>2</SUB>O, CO<SUB>2</SUB>, and CO in Interstellar Object 3I/ATLAS
+    2026ApJ..1001..165H | Hora, Joseph L. | SPHEREx Widefield Infrared Spectral Mapping of Interstellar Ices and Polycyclic Aromatic Hydrocarbons
+    2026JATIS..12b7001B | Bryan, Sean | Optimized observation sequencing in low-Earth orbit with the SPHEREx survey planning software
+    2026ApJ..1000L..46B | Banerjee, D. P. K. | Detection of a Molecular Hydrogen Envelope around Nova GK Persei
+    2026RNAAS..10...94B | Brooks, Hunter | An Ultracool Dwarf Spectral Sequence Using SPHEREx
+    2026aero.conf19838H | Hart, William | Pathway to Mission Success: Lessons Learned from the SPHEREX AI&T and V&V Program
+    2026ApJ...999..139B | Bock, James J. | The SPHEREx Satellite Mission
+    2026arXiv260329835K | Korngut, Phil M. | The SPHEREx Instrument: Calibration, testing and performance measurements of the NIR spectroscopic surveyor from the laboratory to in-orbit 
+
+QUERY abs:("inner disk" OR "inner disc") AND abs:(disappear* OR vanish* OR "switched off" OR "dissipated" OR "drained") AND abs:(infrared OR "near-infrared" OR "mid-infrared") year:2005-2026  ->  numFound=95
+    2026AJ....172..185S | Sitko, Michael L. | Gas Flows and Mass Accretion Rates in Eight Dippers: HD 142666, HD 143006, HD 145718, V935 Sco, DoAr 25, EPIC 204638512, EPIC 205151387, and
+    2026AJ....172..132R | Rose, Daniel | Disk Candidates in IC 2395: A WISE Survey of the Kinematically Confirmed Membership
+    2026arXiv260723612R | Rose, Daniel | Disc Candidates in IC 2395: A WISE Survey of the Kinematically Confirmed Membership
+    2025A&A...700A.130I | Illiano, G. | Probing multi-band variability and mode switching in the candidate transitional millisecond pulsar 3FGL J1544.6─1125
+    2025MNRAS.536.1149T | Taylor, Dominic J. | The properties of the interstellar medium in dusty star-forming galaxies at z ~ 2-4: the shape of the CO spectral line energy distributions
+    2025AJ....169...20K | Kutra, Taylor | Sites of Planet Formation in Binary Systems. II. Double the Disks in DF Tau
+    2025ApJ...978...34X | Xie, Chengyan | JWST Captures a Sudden Stellar Outburst and Inner Disk Wall Destruction
+    2024ApJ...975..235V | Villenave, Marion | JWST Imaging of Edge-on Protoplanetary Disks. III. Drastic Morphological Transformation Across the Mid-infrared in Oph163131
+    2024cosp...45.1825R | Russell, David | Witnessing the onset of a black hole outburst
+    2024eas..conf.2179V | Varga, József | The variable and asymmetric dust emission in the mysterious inner disk of DG Tau
+    2024ApJ...966..167G | Gaidos, Eric | The Dynamic, Chimeric Inner Disk of PDS 70
+    2024A&A...684A.168Z | Zhong, Huisheng | Multiband reflectance and shadowing of the protoplanetary disk RX J1604.3-2130 in scattered light
+    2024AAS...24317609P | Prato, Lisa | Extreme Veiling Variability and Circumstellar Disk Evolution in the UY Aur Infrared Companion
+    2024jpl..data.3273S | Stapelfeldt, Karl | Draft version September 24, 2024 Typeset using LATEX twocolumn style in AASTeX631 JWST imaging of edge-on protoplanetary disks III. Drastic 
+    2023eas..conf..704A | Ábrahám, Péter | JWST/MIRI Spectroscopy of the Disk of the Young Eruptive Star EX Lup in Quiescence
+    2023A&A...671A..13B | Backs, F. | Massive pre-main-sequence stars in M17. Modelling hydrogen and dust in MYSO disks
+    2023ApJ...945L...7K | Kóspál, Ágnes | JWST/MIRI Spectroscopy of the Disk of the Young Eruptive Star EX Lup in Quiescence
+    2022A&A...664A..66M | Mendigutía, I. | Gaia EDR3 comparative study of protoplanetary disk fractions in young stellar clusters
+    2021A&A...654A..97G | GRAVITY Collaboration | The GRAVITY young stellar object survey. VI. Mapping the variable inner disk of HD 163296 at sub-au scales
+    2021PhDT........17L | Lucy, Adrian B. | The Detection and Description of Symbiotic Accretion From Cool Evolved Stars
+    2021A&A...650A.182G | Guzmán-Díaz, J. | Homogeneous study of Herbig Ae/Be stars from spectral energy distributions and Gaia EDR3
+    2021csss.confE..92K | Klutsch, Alexis | Variability of the mass accretion rate in the very low-mass star Par-Lup3-4
+    2020IAUS..345..185A | Ábrahám, P. | Outbursts of young Sun-like stars may change how terrestrial planets form
+    2019sf2a.conf..301K | Kluska, J. | High-angular resolution observations of HD179218: Early stages of disk dissipation?
+    2019A&A...629A..67S | Sousa, Alana P. | A study of accretion and disk diagnostics in the NGC 2264 cluster
+    2019ApJ...883...37B | Brittain, Sean D. | High-resolution Near-infrared Spectroscopy of HD 100546. IV. Orbiting Companion Disappears on Schedule
+    2019A&A...621A.123C | Cochetti, Y. R. | Spectro-interferometric observations of a sample of Be stars. Setting limits to the geometry and kinematics of stable Be disks
+    2019ApJ...870...76B | Banzatti, Andrea | Kinematic Links and the Coevolution of MHD Winds, Jets, and Inner Disks from a High-resolution Optical [O I] Survey
+    2018tcl..confE..33M | McClure, Melissa | Eye to the Telescope: Observing the Inner 1 AU of Protoplanetary Disks
+    2018MNRAS.480.4468R | Ross, Nicholas P. | A new physical interpretation of optical and infrared variability in quasars
+# token from https://ui.adsabs.harvard.edu/v1/accounts/bootstrap: ok
+
+QUERY abs:("Upper Sco" OR "Upper Scorpius" OR "Sco-Cen" OR "Scorpius-Centaurus" OR "rho Oph" OR "Lupus") AND abs:(disk OR disc) AND abs:(variab*) AND abs:(infrared) year:2022-2026  ->  numFound=22
+    2026ApJ..1010...38M | Ma, Jie | JWST Imaging of Edge-on Protoplanetary Disks. V. Flux Ratio Reversal and Disk-edge Structure in the Flying Saucer
+    2026arXiv261017136M | Ma, Jie | JWST Imaging of Edge-on Protoplanetary Disks. V. Flux Ratio Reversal and Disk-edge Structure in the Flying Saucer
+    2026RAA....26g5005G | Gao, Fei | Evolution of Dust Properties and Disk Structure of the Young Star EX Lup
+    2026jpl..data.1014M | Ma, Jie | JWST Imaging of Edge-on Protoplanetary Disks. V. Flux Ratio Reversal and Disk-Edge Structure in the Flying Saucer
+    2025ApJ...993...85Y | Yamaguchi, Masayuki | Peculiar Disk Substructures Associated with the Young Eruptive Star EX Lupi
+    2025A&A...699A.145D | Delfini, L. | Star formation and accretion rates within 500 pc as traced by Gaia DR3 XP spectra
+    2025ApJ...987...37N | Nagy, Zsófia | The 2023 Outburst of the Gaia Alerted EXor Gaia23bab
+    2025ApJ...984L..51S | Smith, Sarah A. | JWST's Sharper View of EX Lup: Cold Water from Ice Sublimation during Accretion Outbursts
+    2025PhDT........10S | Szabo, Zsofia Marianna | Radio and millimeter observations of the environments of young stars undergoing accretion bursts
+    2024A&A...691A..18P | Pouilly, K. | Multi-kilogauss magnetic field driving the magnetospheric accretion process in EX Lupi
+    2024csss.confE..13T | Tofflemire, Benjamin | Resolving Surface Features on Young M Dwarfs that Host Transient Corotating Material
+    2024A&A...686A.160F | Fiorellino, Eleonora | The enigma of Gaia18cjb: A possible rare hybrid of FUor and EXor properties
+    2024MNRAS.529.2630K | Kuhn, Michael A. | The 2022-2023 accretion outburst of the young star V1741 Sgr
+    2023MNRAS.524.5548S | Siwak, Michał | Gaia21bty: An EXor light curve exhibiting a FUor spectrum
+    2023A&A...676A.123D | Demars, D. | Emission line variability of young 10-30 M<SUB>Jup</SUB> companions. I. The case of GQ Lup b and GSC 06214-00210 b
+    2023eas..conf..704A | Ábrahám, Péter | JWST/MIRI Spectroscopy of the Disk of the Young Eruptive Star EX Lup in Quiescence
+    2023MNRAS.521.5669C | Contreras Peña, Carlos | Photometric and spectroscopic monitoring of YSOs in nearby star-forming regions - I. Eruptive YSOs
+    2023ApJ...945L...7K | Kóspál, Ágnes | JWST/MIRI Spectroscopy of the Disk of the Young Eruptive Star EX Lup in Quiescence
+    2023A&A...670A.142S | Sousa, A. P. | New insights on the near-infrared veiling of young stars using CFHT/SPIRou data
+    2022ApJ...941..165P | Park, Sunkyung | Photometric and Spectroscopic Study of the EXor-like Eruptive Young Star Gaia19fct
+
+QUERY abs:(SPHEREx) AND abs:(variab* OR "time-domain" OR "multi-epoch") year:2025-2026  ->  numFound=63
+    2026arXiv260918895B | Banerjee, D. P. K. | A large shell around the hypergiant VY Canis Majoris
+    2026JGRD..13147242H | Hui, Howard | Observations of Atmospheric Helium and Oxygen With SPHEREx
+    2026A&A...713A.211E | Euclid Collaboration | Euclid preparation: C. Decomposing components of the extragalactic background light using multi-band intensity mapping cross-correlations
+    2026arXiv260930551H | Huang, Caroline D. | Breaking the AGB Color Degeneracy with Variability and H$_2$O: A Consistent Picture of AGB Chemistry, Dust, and the J-Region Across Environm
+    2026SPIE14145E..0QH | Hui, Howard | In-orbit checkout of SPHEREx and the characterization of low-Earth-orbit foregrounds
+    2026SPIE14147E..2AK | Kim, Ji Hoon | The 7-Dimensional Telescope and the 7-Dimensional Sky Survey: status report on final commissioning and survey operation
+    2026A&A...712A..36P | Padmanabhan, Hamsa | Intensity mapping of Loeb-Rybicki halos from scattering of galactic Lyman-α emission by the diffuse intergalactic medium before reionization
+    2026cosp...46.1569W | Woo, Jong-Hak | New Determination of Black Hole Masses: Constraints from Reverberation Mapping, Dynamical Modeling, and the Fundamental Plane of the BLR Siz
+    2026cosp...46.1570J | Jung, Sungho | When Lines Masquerade as Disks ─ Correcting Disk Mapping Bias Against Broad Emission Lines
+    2026arXiv260724917R | Roy, Anirban | Interlopers as Signal in Line Intensity Mapping
+    2026ApJ..1005...44C | Cagliari, Marina S. | Disentangling Target Lines from Interlopers and Continuum with Neural Networks: A SPHEREx Intensity Mapping Case Study
+    2026AAS...24821505M | Minasyan, Mary | Mapping Galaxy Evolution with SPHEREx Observations of the Extragalactic Background Light
+    2026AAS...24832908S | Starrfield, Sumner | SphereX and the Demise of The GK Persei Planetary Nebula Hypothesis
+    2026AJ....172...41B | Borlaff, Alejandro S. | SPHEREx Confirms Predictions for Artificial Satellite Trail Pollution in Low Earth Orbit
+    2026MNRAS.550g1068B | Bisht, D. | Blue straggler stars in Berkeley 18: a multiwavelength study of their physical properties and dynamical evolution
+    2026MNRAS.549ag871A | Almualla, Mouza | The THESAN project: Lyman-α intensity mapping of cosmic reionization
+    2026RNAAS..10..131K | Kiwy, Frank | SPExPI: A SPHEREx Spectrum Extraction Pipeline for Point Sources
+    2026ApJS..284...10H | Hui, Howard | Spectral Response of SPHEREx
+    2026ApJ..1002..158Z | Zhang, Wei | The γ-Ray-emitting Blazar B3 1239+376 at z = 3.82 Identified in a Multiwavelength Context
+    2026ApJ..1000L..52L | Lisse, Carey M. | SPHEREx Pre-perihelion Mapping of H<SUB>2</SUB>O, CO<SUB>2</SUB>, and CO in Interstellar Object 3I/ATLAS
+
+QUERY abs:(NEOWISE OR WISE) AND abs:("infrared excess") AND abs:(disappear* OR vanish* OR "lost" OR "faded" OR "decline") AND abs:(young OR "pre-main" OR "T Tauri" OR disk) year:2012-2026  ->  numFound=12
+    2026MNRAS.552g1771M | Merc, J. | Highly bipolar planetary nebula Hen 2-57 and its possible symbiotic core
+    2026arXiv260425327C | Chen, Yanhui | LAMOST J052016.79+345651.7: An EW-type Binary with Emission Line Spectra and Circumstellar Material
+    2026A&A...706A.249G | Garcia-Moreno, G. | Analysis of mass-transferring binary candidates in the Milky Way
+    2025prim.book..498S | Stapelfeldt, Karl | Charting Circumstellar Disk Evolution through a PRIMA All-Sky Survey
+    2023jpl..data.1651M | Mamajek, Eric | Three new late-type stellar companions to very dusty WISE debris disks identified with VLT/SPHERE imaging
+    2022MNRAS.516.5684M | Moór, Attila | Mid-infrared time-domain study of recent dust production events in the extreme debris disc of TYC 4209-1322-1
+    2021AJ....161...78M | Matthews, Elisabeth C. | Three New Late-type Stellar Companions to Very Dusty WISE Debris Disks Identified with SPHERE Imaging
+    2019ApJ...872L..25D | Debes, John H. | A 3 Gyr White Dwarf with Warm Dust Discovered via the Backyard Worlds: Planet 9 Citizen Science Project
+    2018AJ....156...71C | Cody, Ann Marie | The Many-faceted Light Curves of Young Disk-bearing Stars in Upper Sco -- Oph Observed by K2 Campaign 2
+    2014AAS...22344116T | Theissen, Christopher | SDSS M-dwarfs with WISE Signatures of Infrared Excess: Evidence of Warm Circumstellar Material in Low-Mass Field Populations
+    2012AAS...22043004H | Hoard, D. W. | Status Report On The Wise Infrared Excesses around Degenerates (WIRED) Survey
+    2012adap.prop...32R | Rieke, George | Planetary System Evolution in the Terrestrial Zone
+
+QUERY abs:("transition disk" OR "transitional disk" OR "transition disc") AND abs:("real time" OR "in action" OR "caught" OR "variab*") AND abs:(infrared) year:2010-2026  ->  numFound=107
+    2026AJ....171...93L | Liu, Jialin | The Identification of New Herbig Ae/Be Stars from LAMOST DR7
+    2026ApJ...997....9Z | Zhang, Zhumao | Discovery of a Years-delayed Radio Flare from an Unusually Slowly Evolving Tidal Disruption Event Candidate
+    2025ApJ...995...86G | Grimble, William | The Two-zone Temperature Distribution Model: Inferences on the Structure and Composition of Dusty Protoplanetary Disks
+    2025A&A...698L..14D | Donati, J.-F. | Mass, gas, and Gauss around a T Tauri Star with SPIRou
+    2025A&A...696A..46N | Nagel, Erick | A dusty magnetospheric stream as the physical mechanism responsible for stellar occultations: Interpretation of the TESS light curve of the 
+    2025AAS...24537005G | Grimble, William | The Two-Zone Temperature Distribution (TZTD) Model: A Simple Formulation of the Distribution of Thermal Emission in Disks
+    2024ApJ...974L..38Z | Zhang, Shangjia | 3D Radiation-hydrodynamical Simulations of Shadows on Transition Disks
+    2023MNRAS.526.2077A | Arce-Tord, Carla | Radio-continuum decrements associated to shadowing from the central warp in transition disc DoAr 44
+    2023A&A...677A..76P | Portilla-Revelo, B. | Constraining the gas distribution in the PDS 70 disc as a method to assess the effect of planet-disc interactions
+    2023ApJ...953...55S | Sallum, Steph | Systematic Multiepoch Monitoring of LkCa 15: Dynamic Dust Structures on Solar System Scales
+    2023eas..conf..382S | Soulain, Anthony | Sparse Aperture Masking (SAM): The promising AMI/friend of the JWST
+    2023A&A...672A...5B | Bouvier, J. | Stable accretion and episodic outflows in the young transition disk system GM Aurigae. A semester-long optical and near-infrared spectrophot
+    2023A&A...671A.140G | Guzmán-Díaz, J. | Relation between metallicities and spectral energy distributions of Herbig Ae/Be stars. A potential link with planet formation
+    2022A&A...667A.124G | Gangi, M. | GIARPS High-resolution Observations of T Tauri stars (GHOsT). IV. Accretion properties of the Taurus-Auriga young association
+    2022MNRAS.516.5244S | Sun, Jia | Deep near-infrared survey towards the W40 and Serpens South region in the Aquila Rift: A comprehensive catalogue of young stellar objects
+    2021A&A...650A.182G | Guzmán-Díaz, J. | Homogeneous study of Herbig Ae/Be stars from spectral energy distributions and Gaia EDR3
+    2020A&A...642A.162G | GRAVITY Collaboration | The GRAVITY young stellar object survey. III. The dusty disk of RY Lup
+    2020hst..prop16305C | Choquet, Elodie | Witnessing giant planet formation in action: a unique view of the emblematic PDS 70 system with HST
+    2020MNRAS.493.4022L | Liffman, Kurt | Infrared variability due to magnetic pressure-driven jets, dust ejection and quasi-puffed-up inner rims
+    2020ApJ...892..111F | Francis, Logan | Dust-depleted Inner Disks in a Large Sample of Transition Disks through Long-baseline ALMA Observations
+
+QUERY abs:(dipper OR dippers) AND abs:("Upper Sco" OR "Upper Scorpius") year:2015-2026  ->  numFound=18
+    2025AN....34640082E | Elsanhoury, W. H. | Enhanced Kinematics and Distribution Characteristics of Upper Scorpius and Ophiuchus Associations Based on Gaia DR3
+    2022AJ....163..212C | Cody, Ann Marie | The Many-faceted Light Curves of Young Disk-bearing Stars in Taurus as Seen by K2
+    2021scgr.confE..31S | Squicciarini, Vito | A dip in the past: the star formation history of young associations narrated by kinematics
+    2021AJ....161...60S | Stauffer, John | Even More Rapidly Rotating Pre-main-sequence M Dwarfs with Highly Structured Light Curves: An Initial Survey in the Lower Centaurus-Crux and
+    2020A&A...633A..37S | Sicilia-Aguilar, A. | Time-resolved photometry of the young dipper RX J1604.3-2130A. Unveiling the structure and mass transport through the innermost disk
+    2020svos.conf..409V | Venuti, L. | Dynamics of star-disk interaction processes in young, low-mass stars as seen from space
+    2019ApJ...872..159M | Moore, Keavin | The Rotation-disk Connection in Young Brown Dwarfs: Strong Evidence for Early Rotational Braking
+    2018tcl..confE..45P | Pinilla, Paola | Variable Outer Disk Shadowing around the Dipper Star J160421.7-213028
+    2018adap.prop..157G | Gaidos, Eric | Using K2 to Explore Episodic Stellar Variability during the Epoch of Planet Formation
+    2018AJ....156...71C | Cody, Ann Marie | The Many-faceted Light Curves of Young Disk-bearing Stars in Upper Sco -- Oph Observed by K2 Campaign 2
+    2018MNRAS.476.2968H | Hedges, Christina | Discovery of new dipper stars with K2: a window into the inner disc region of T Tauri stars
+    2017EPJWC.15203014Z | Zhang, Yapeng | "Dipper" stars in the Upper Sco and ρ Oph star forming regions identified from the K2 mission
+    2017nsf....1716495K | Kraus, Adam | The Mass-Radius Relation of Young Stars from K2
+    2017MNRAS.470..202B | Bodman, Eva H. L. | Dippers and dusty disc edges: new diagnostics and comparison to model predictions
+    2017PhDT.......274H | Hedges, Christina Louise | Shedding New Light on Old Data: Finding New Results for Exoplanet Science in Archival Data
+    2017AJ....153..152S | Stauffer, John | Orbiting Clouds of Material at the Keplerian Co-rotation Radius of Rapidly Rotating Low-mass WTTs in Upper Sco
+    2017nova.pres.2110K | Kohler, Susanna | More Unusual Light Curves from Kepler
+    2016ApJ...816...69A | Ansdell, M. | Young ``Dipper" Stars in Upper Sco and Oph Observed by K2
+
+QUERY author:"Contreras Pena, C" abs:(NEOWISE)  ->  numFound=27
+    2026arXiv261019018G | Guo, Zhen | SPICY 30021: an embedded bona fide FUor with a mid-infrared precursor
+    2026ApJ..1010..223C | Contreras Peña, Carlos | The FU Ori Outburst of PR Ori B
+    2026arXiv260909722C | Contreras Pena, Carlos | The FU Ori outburst of PR Ori B
+    2026AJ....172....6T | Tobin, John J. | Radio Continuum and Water Maser Monitoring of the Outburst in HOPS 373: Free─Free Emission Does Not Respond to the Outburst
+    2026MNRAS.549ag807C | Contreras Peña, Carlos | The long-term outburst(s) of GPSV16: from an intermediate to a FUor classification
+    2026yCat..19570113W | Wang, M.-T. | VizieR Online Data Catalog: Multi-color light curves of Ex Lup (Wang+, 2023)
+    2025JKAS...58..231K | Kim, Mi-Ryang | YSO Variability in the W51 Star-Forming Region
+    2025AJ....170..125C | Chen, Zhiwei | Submillimeter and Mid-infrared Variability of Young Stellar Objects in the M17 H II Region
+    2025ApJ...982..176S | Sheehan, Patrick D. | Submillimeter Variability in the Envelope and Warped Protostellar Disk of the Class 0 Protostar HOPS 358
+    2025MNRAS.537.2763M | Morris, C. | Eruptive YSOs in Cygnus-X: a mid-infrared variability study with NEOWISE and SPICY
+    2024yCat..51680122P | Park, G. | VizieR Online Data Catalog: 3.5yr monitoring of M17 SWex with JCMT &amp; NEOWISE (Park+, 2024)
+    2024AJ....168..122P | Park, Geumsook | Submillimeter and Mid-Infrared Variability of Young Stellar Objects in the M17SWex Intermediate-mass Star-forming Region
+    2024yCat..19290060Y | Yoon, S.-Y. | VizieR Online Data Catalog: K-band &amp; smm light curves of the protostar HOPS 373 (Yoon+, 2022)
+    2024MNRAS.52711651A | Ashraf, Mizna | An outburst and FU Ori-type disc of a former low-luminosity protostar
+    2024ApJ...962...38L | Lee, Sieun | Mid-infrared Variability of Young Stellar Objects on Timescales of Days to Years
+    2023JKAS...56..253C | Contreras Peña, Carlos | New Eruptive YSOs from SPICY and WISE
+    2023yCat..74953614C | Contreras Pena, C. | VizieR Online Data Catalog: IR and sub-mm variability in protostars (Contreras+, 2020)
+    2023yCat..19200132P | Park, W. | VizieR Online Data Catalog: NEOWISE 6.5yr variability in YSOs (Park+, 2021)
+    2022eas..conf..895L | Lucas, Philip | Advances in the Infrared Time Domain from VISTA/VVV and WISE/NEOWISE
+    2022ApJ...929...60Y | Yoon, Sung-Yong | Dissecting the Different Components of the Modest Accretion Bursts of the Very Young Protostar HOPS 373
+
+QUERY author:"Park, W" abs:(NEOWISE) year:2021  ->  numFound=2
+    2021ApJ...916L..20L | Lee, Jeong-Eun | AGB Interlopers in YSO Catalogs Hunted out by NEOWISE
+    2021BKAS...46...57P | Park, Wooseok | Quantifying Variability of YSOs in the Mid-IR Over Six Years with NEOWISE
+
+QUERY author:"Lakeland" abs:(variab*)  ->  numFound=9
+    2026AJ....171..233M | McWilliam, Naomi | Identifying Exoplanets with Deep Learning. VI. Enhancing Neural Network Mitigation of Stellar Activity RV Signals with Additional Metrics
+    2025MNRAS.543.1974A | Anna John, A. | Granulation on a quiet K dwarf: HD 166620 I. Spectral signatures as a function of line-formation temperature
+    2025MNRAS.541.3942O | O'Sullivan, Niamh K. | Measuring the Sun's radial velocity variability due to supergranulation over a magnetic cycle.
+    2024MNRAS.531.4464D | Dalal, S. | Trio of super-Earth candidates orbiting K-dwarf HD 48948: a new habitable zone candidate
+    2024MNRAS.527.7681L | Lakeland, Ben S. | The magnetically quiet solar surface dominates HARPS-N solar RVs during low activity
+    2023MNRAS.521..354W | Wilson, Andrew J. | A naive Bayes classifier for identifying Class II YSOs
+    2023yCat.7293....0W | Wilson, A. J. | VizieR Online Data Catalog: Classifier catalogue of class II YSO posteriors (Wilson+, 2023)
+    2022MNRAS.514.2736L | Lakeland, Ben S. | Towards an understanding of YSO variability: a multiwavelength analysis of bursting, dipping, and symmetrically varying light curves of disc
+    2022csss.confE.111L | Lakeland, B. | A measurement of YSO accretion with structure functions
+
+QUERY abs:("mid-infrared variability" OR "MIR variability") AND abs:("Class II" OR "T Tauri" OR "disk-bearing") year:2018-2026  ->  numFound=6
+    2026asi..confO..21N | Neha, Sharma | Tracing a Decade of Change: Mid-Infrared Variability in 20,000 Young Stellar Objects
+    2025JKAS...58..231K | Kim, Mi-Ryang | YSO Variability in the W51 Star-Forming Region
+    2025ApJS..278...10N | Neha, Sharma | Illuminating Youth: Decades of Mid-infrared Variability and Color Evolution of Young Stellar Objects
+    2025MNRAS.537.2763M | Morris, C. | Eruptive YSOs in Cygnus-X: a mid-infrared variability study with NEOWISE and SPICY
+    2022ApJ...936...31U | Uchiyama, Mizuho | Mid-infrared and Maser Flux Variability Correlation in Massive Young Stellar Object G036.70+00.09
+    2018AJ....155...99W | Wolk, Scott J. | YSOVAR: Mid-infrared Variability among YSOs in the Star Formation Region Serpens South
+
+QUERY full:"16070852-3201009" OR full:"J16070852-320100"  ->  numFound=0
+# token from https://ui.adsabs.harvard.edu/v1/accounts/bootstrap: ok
+
+QUERY full:"NEOWISE" AND full:("Upper Sco" OR "Upper Scorpius") AND full:("inner disk" OR "inner disc") AND full:(disappeared OR vanished OR "turned off" OR "switched off") year:2022-2026  ->  numFound=7
+    2026arXiv260924329B | Bergez-Casalou, C. | Impact of accretion variability on the CO emission of a disk around a very-low-mass star with JWST
+    2026arXiv260605237P | PLUS Science Team | GREX-PLUS Science Book v2
+    2026ApJ..1000..112S | Singh, Koshvendra | Gaia24ccy: An Outburst Followed the Footsteps of its Predecessor
+    2026A&A...707A.216P | Polnitzky, Fabian A. | Precise determination of circumstellar disk lifetimes: Disk evolution in a single star-forming region
+    2024come.book..731F | Fitzsimmons, Alan | Interstellar Objects and Exocomets
+    2023AJ....166..189E | Elizabethson, Astaroth | Machine-learning Morphological Classification of TESS Light Curves of T Tauri Stars
+    2022ApJ...933...13H | Higashio, Susan | Disks in Nearby Young Stellar Associations Found Via Virtual Reality
+
+QUERY abs:(SPHEREx) AND abs:("Upper Sco" OR "Upper Scorpius" OR "Sco-Cen" OR Ophiuchus OR "T Tauri" OR "pre-main-sequence")  ->  numFound=1
+    2026arXiv261036223P | Perez Paolino, Facundo | Testing Pre-main-sequence Evolutionary Models with Gaia and SPHEREx Observations of Canis Major North
+
+QUERY abs:("infrared excess") AND abs:(variab* OR disappear*) AND abs:("M dwarf" OR "M-dwarf" OR "low-mass star") AND abs:(young OR disk) year:2015-2026  ->  numFound=17
+    2026A&A...714A.105W | Wu, S.-Y. | Ellipsoidal modulation and multi-wavelength activity in the pre-cataclysmic binary RX J1553.0+4457
+    2026AJ....171...93L | Liu, Jialin | The Identification of New Herbig Ae/Be Stars from LAMOST DR7
+    2024PASA...41...55A | Azatyan, Naira | Searching for stellar population in the molecular cloud GRSMC 045.49+00.04
+    2023MNRAS.520.5433H | Herbert, Carys | A survey for variable young stars with small telescopes - VII. Spot properties on YSOs in IC 5070
+    2020PhDT.........4V | Vioque, Miguel | A census of Herbig Ae/Be stars: new candidates and analysis from a Gaia perspective
+    2020MNRAS.496L..75K | Kennedy, Grant M. | A low-mass stellar companion to the young variable star RZ Psc
+    2020A&A...634A.128N | Nguyen-Thanh, D. | Sporadic and intense accretion in a 1 Myr-old brown dwarf candidate
+    2019gaia.confE..52V | Vioque, Miguel | New catalogue of intermediate mass Pre-Main Sequence objects in Gaia DR2 using Machine Learning
+    2019MNRAS.484.4260S | Scholz, Aleks | Clumpy dust rings around non-accreting young stars
+    2019hsax.conf..437V | Vioque, M. | Gaia study on the formation of intermediate mass stars
+    2019A&A...621A.123C | Cochetti, Y. R. | Spectro-interferometric observations of a sample of Be stars. Setting limits to the geometry and kinematics of stable Be disks
+    2018MNRAS.476.3290M | Murphy, Simon J. | WISE J080822.18-644357.3 - a 45 Myr-old accreting M dwarf hosting a primordial disc
+    2018A&A...609L...2B | Banzatti, A. | Observing the linked depletion of dust and CO gas at 0.1-10 au in disks of intermediate-mass stars
+    2017MNRAS.471..740O | Osborn, H. P. | Periodic eclipses of the young star PDS 110 discovered with WASP and KELT photometry
+    2016MNRAS.458.3118B | Bozhinova, I. | Variability in young very low mass stars: two surprises from spectrophotometric monitoring
+
+QUERY abs:("primordial disk" OR "protoplanetary disk" OR "protoplanetary disc") AND abs:(NEOWISE) AND abs:(fading OR fade OR dimming OR decline OR disappear*) year:2018-2026  ->  numFound=3
+    2026arXiv260913955M | Mathews Ben, Gregory | Investigating Variability in Long-lived Protoplanetary Disks (&gt;10 Myr) using NEOWISE
+    2026ApJ..1000..188K | Kulkarni, Chinmay S. | 27 yr of Spaceborne IR Astronomy: An ISO, Spitzer, WISE, and NEOWISE Survey for Large-amplitude Variability in Young Stellar Objects
+    2025ApJ...982..176S | Sheehan, Patrick D. | Submillimeter Variability in the Envelope and Warped Protostellar Disk of the Class 0 Protostar HOPS 358
+
+QUERY title:(unTimely) author:"Meisner"  ->  numFound=1
+    2023AJ....165...36M | Meisner, Aaron M. | unTimely: a Full-sky, Time-domain unWISE Catalog
+
+QUERY author:"Melis, C" year:2012 title:"rapid disappearance"  ->  numFound=1
+    2012Natur.487...74M | Melis, Carl | Rapid disappearance of a warm, dusty circumstellar disk
+
+QUERY title:"ASASSN-21qj" OR (author:"Kenworthy" year:2023 abs:"planetary collision")  ->  numFound=7
+    2024AGUFMP13C.3088L | Lock, Simon James | When Worlds (probably) Collide: An exoplanet collision remnant observed around ASASSN-21qj
+    2024ESS.....562303K | Kenworthy, Matthew | ASASSN-21qj: the direct detection and characterisation of an ice giant exoplanet collision towards a solar type star
+    2023Natur.622..251K | Kenworthy, Matthew | A planetary collision afterglow and transit of the resultant debris cloud
+    2023ApJ...954..140M | Marshall, Jonathan P. | Sudden Extreme Obscuration of a Sun-like Main-sequence Star: Evolution of the Circumstellar Dust around ASASSN-21qj
+    2022ATel15531....1R | Rizzo Smith, M. | An Update on ASASSN-21qj: A Rapidly Fading, Sun-Like Star; Back With a Vengeance
+    2021ATel14900....1B | Balam, D. D. | Near-Sun Photometric Follow-up of the Rapidly-Fading Sun-like Star ASASSN-21qj
+    2021ATel14879....1R | Rizzo Smith, M. | ASASSN-21qj: A Rapidly Fading, Sun-Like Star
+
+QUERY author:"Park, Wooseok" year:2021  ->  numFound=11
+    2021arXiv211105756A | Acharya, U. A. | Systematic study of nuclear effects in $p$$+$Al, $p$$+$Au, $d$$+$Au, and $^{3}$He$+$Au collisions at $\sqrt{s_{_{NN}}}=200$ GeV using $\pi^0
+    2021ApJ...920..132P | Park, Wooseok | Quantifying Variability of Young Stellar Objects in the Mid-infrared Over 6 Years with the Near-Earth Object Wide-field Infrared Survey Expl
+    2021GeoRL..4893803I | Imbol Nkwinkwa, A. S. N. | Mean-State Dependence of CO<SUB>2</SUB>-Forced Tropical Atlantic Sector Climate Change
+    2021PlDis.105.2727P | Park, J.-C. | First Report of Postharvest Tuber Rot of American Groundnut (Apios americana) Caused by Fusarium acuminatum
+    2021ApJ...916L..20L | Lee, Jeong-Eun | AGB Interlopers in YSO Catalogs Hunted out by NEOWISE
+    2021PhRvB.103v4515S | Shrestha, K. | Spectroscopic evidence for the direct involvement of local moments in the pairing process of the heavy-fermion superconductor CeCoIn<SUB>5</
+    2021PhRvB.103o5125P | Park, W. K. | Topological nature of the Kondo insulator Sm B<SUB>6</SUB> and its sensitiveness to Sm vacancy
+    2021APLM....9c1103L | Lee, M. | Brain-inspired ferroelectric Si nanowire synaptic device
+    2021BKAS...46...57P | Park, Wooseok | Quantifying Variability of YSOs in the Mid-IR Over Six Years with NEOWISE
+    2021NuPhA100522094A | Acharya, U. A. | PHENIX Collaboration
+    2021AAS...23741006N | Nguyen, C. | Probing the Near-Infrared Extragalactic Background Light with the CIBER missions
+
+QUERY author:"Muzerolle" year:2009 abs:"LRLL 31"  ->  numFound=1
+    2009ApJ...704L..15M | Muzerolle, James | Evidence for Dynamical Changes in a Transitional Protoplanetary Disk with Mid-Infrared Variability
+
+QUERY author:"Flaherty" abs:(IC 348 AND variab*) year:2011-2013  ->  numFound=8
+    2013AJ....145...66F | Flaherty, K. M. | Kinks and Dents in Protoplanetary Disks: Rapid Infrared Variability as Evidence for Large Structural Perturbations
+    2013yCatp038049301M | Muzerolle, J. | VizieR Online Data Catalog: LRL 54361 Spitzer light curves (Muzerolle+, 2013)
+    2012noao.prop..297F | Flaherty, Kevin | Understanding the Influence of Variable Accretion on Protoplanetary Disk Structure
+    2012ApJ...748...71F | Flaherty, K. M. | Infrared Variability of Evolved Protoplanetary Disks: Evidence for Scale Height Variations in the Inner Disk
+    2011noao.prop..433M | Muzerolle, James | Periodic Protostellar Variability: Testing the Pulsed Accretion Hypothesis
+    2011sptz.prop80174F | Flaherty, Kevin | Connecting Young Stellar Object Variability Across the Great Observatories: A Combined Spitzer and Chandra Study of Variability in IC 348
+    2011ApJ...732...83F | Flaherty, K. M. | The Highly Dynamic Behavior of the Innermost Dust and Gas in the Transition Disk Variable LRLL 31
+    2011AAS...21743445F | Flaherty, Kevin M. | Young Stellar Object Variability as a Probe of Circumstellar Structure
+
+QUERY author:"Espaillat" year:2011 abs:(seesaw OR "pre-transitional")  ->  numFound=7
+    2011noao.prop..161K | Kraus, Stefan | Resolving planet-cleared gaps in transitional/pre-transitional disks with NIR+MIR+sub-mm interferometry
+    2011AAS...21831204E | Espaillat, Catherine | Protoplanetary disks to planets
+    2011ApJ...729...47Z | Zhu, Zhaohuan | Transitional and Pre-transitional Disks: Gap Opening by Multiple Planets?
+    2011noao.prop..191K | Kraus, Stefan | Resolving planet-cleared gaps in transitional/pre-transitional disks with NIR+MIR+sub-mm interferometry
+    2011ApJ...728...49E | Espaillat, C. | A Spitzer IRS Study of Infrared Variability in Transitional and Pre-transitional Disks Around T Tauri Stars
+    2011AAS...21713103E | Espaillat, Catherine | Mid-Infrared Variability in Protoplanetary Disks with Gaps and Holes
+    2011AAS...21732203Z | Zhu, Zhaohuan | Transitional And Pre-transitional Disks: Gap Opening By Multiple Planets?
+
+QUERY author:"Meng, Huan" abs:(impact AND ID8)  ->  numFound=3
+    2019AJ....157..202S | Su, Kate Y. L. | Extreme Debris Disk Variability: Exploring the Diverse Outcomes of Large Asteroid Impacts During the Era of Terrestrial Planet Formation
+    2015ApJ...805...77M | Meng, Huan Y. A. | Planetary Collisions Outside the Solar System: Time Domain Characterization of Extreme Debris Disks
+    2015AAS...22533002M | Meng, Huan | Planetary Collisions outside the Solar System: Time Domain Characterization of Extreme Debris Disks
+
+QUERY abs:("Peter Pan") AND abs:(disk OR disc) year:2016-2026  ->  numFound=19
+    2026arXiv260913955M | Mathews Ben, Gregory | Investigating Variability in Long-lived Protoplanetary Disks (&gt;10 Myr) using NEOWISE
+    2026AAS...24711201E | Eyestone, Sydney | The Mysterious Case of the ∼45 Myr Old M Dwarf Disks
+    2025A&A...704A.181M | Mâlin, Mathilde | JWST-TST High Contrast: Medium-resolution spectroscopy reveals a carbon-rich circumplanetary disk around the young accreting exoplanet Delor
+    2025A&A...699A.145D | Delfini, L. | Star formation and accretion rates within 500 pc as traced by Gaia DR3 XP spectra
+    2025ApJ...983..153O | Ooyama, Wataru | Secret of Longevity: Protoplanetary Disks as a Source of Gas in Debris Disks
+    2025AJ....169..141W | Wang, Xiao-Long | LAMOST Reveals Long-lived Protoplanetary Disks
+    2024A&A...688A.149D | Derkink, Annelotte | Disk Evolution Study Through Imaging of Nearby Young Stars (DESTINYS): PDS 111, an old T Tauri star with a young-looking disk
+    2023AAS...24114001K | Kuchner, Marc | Citizen Science at NASA
+    2023A&A...669L..12R | Ringqvist, Simon C. | Resolved near-UV hydrogen emission lines at 40-Myr super-Jovian protoplanet Delorme 1 (AB)b. Indications of magnetospheric accretion
+    2022AJ....164..165L | Liu, Michael C. | On the Unusual Variability of 2MASS J06195260-2903592: A Long-lived Disk around a Young Ultracool Dwarf
+    2022ApJ...935..111L | Laos, Emily | Chandra Observations of Six Peter Pan Disks: Diversity of X-Ray-driven Internal Photoevaporation Rates Does Not Explain Their Rare Longevity
+    2022MNRAS.509...44W | Wilhelm, Maite J. C. | Exploring the possibility of Peter Pan discs across stellar mass
+    2021csss.confE.281S | Silverberg, Steven M. | Peter Pan Disks: Long-lived Accretion Disks Around ≥20 Myr Low-Mass Stars
+    2020PhT..2020a.710. |  | Peter Pan disks
+    2020MNRAS.496L.111C | Coleman, Gavin A. L. | Peter Pan discs: finding Neverland's parameters
+# token from https://ui.adsabs.harvard.edu/v1/accounts/bootstrap: ok
+
+QUERY title:"TYC 8241 2652 1" year:2013-2018  ->  numFound=1
+    2017A&A...598A..82G | Günther, Hans Moritz | TYC 8241 2652 1 and the case of the disappearing disk: No smoking gun yet
+
+QUERY abs:("inner disk" OR "inner disc" OR "near-infrared excess" OR "hot dust") AND abs:(reappear* OR returned OR recovered OR "re-formed" OR replenish*) AND abs:(variab*) AND abs:(young OR "T Tauri" OR protoplanetary) year:2010-2026  ->  numFound=21
+    2026RAA....26g5005G | Gao, Fei | Evolution of Dust Properties and Disk Structure of the Young Star EX Lup
+    2026PhDT........36D | de Carvalho, Adolfo Sjoberg | A Detailed Study of the Inner Disks of FU Ori Objects and the Star-Disk Boundary
+    2026PhDT.........2C | Carvalho, Adolfo Sjoberg de | A Detailed Study of the Inner Disks of FU Ori Objects and the Star-Disk Boundary
+    2025MNRAS.539.1613H | Hammond, Iain | Keplerian motion of a compact source orbiting the inner disc of PDS 70: a third protoplanet in resonance with b and c?
+    2025ApJ...978...34X | Xie, Chengyan | JWST Captures a Sudden Stellar Outburst and Inner Disk Wall Destruction
+    2024PhDT........84S | Spitzer, Fridolin | The onset of planet formation inferred from isotope anomalies in meteorites
+    2024ApJ...973L..16E | Espaillat, C. C. | Evidence for Dust Depletion in a Misaligned Protoplanetary Disk with JWST
+    2024A&A...684A.168Z | Zhong, Huisheng | Multiband reflectance and shadowing of the protoplanetary disk RX J1604.3-2130 in scattered light
+    2024jwst.prop.4727B | Banzatti, Andrea | Snowline pulsations and UV photo-chemistry in planet-forming regions
+    2024adap.prop..157C | Cody, Ann Marie | An All-sky Time-domain Survey for Young Stars
+    2023Natur.620..516P | Perotti, G. | Water in the terrestrial planet-forming zone of the PDS 70 disk
+    2022MNRAS.513.5790C | Casassus, Simon | Variable structure in the PDS 70 disc and uncertainties in radio-interferometric image restoration
+
+QUERY abs:("K-band excess" OR "L-band excess" OR "3-5 micron" OR "3-5 μm") AND abs:(variab* OR disappear*) AND abs:("T Tauri" OR young OR protoplanetary) year:2008-2026  ->  numFound=37
+    2026arXiv261010130C | Chen, Xiaodian | A Recurrent Infrared Modulation in the Warm Post-impact Debris Disk NGC 2547 ID8
+    2026ApJ..1010..223C | Contreras Peña, Carlos | The FU Ori Outburst of PR Ori B
+    2026SolES..1100317G | Ganai, Javid A. | Redox evolution and marine anoxia across the Permian-Triassic boundary (PTB): Evidence from Neo-Tethyan successions of the NW Himalaya
+    2025CBET.5530....1L | Lisse, C. M. | Rw Aurigae a
+    2024ApJ...974L..11F | Franson, Kyle | JWST/NIRCam 4─5 μm Imaging of the Giant Planet AF Lep b
+    2024ApJ...966..167G | Gaidos, Eric | The Dynamic, Chimeric Inner Disk of PDS 70
+    2024RNAAS...8...64K | Kulkarni, Chinmay S. | The Infrared Variability of V1647 Ori over 26 yr with Spitzer, (NEO)WISE, and ISO
+    2024adap.prop...92P | Pillai, Thushara | A WISE Unveiling of Variability towards High-Mass Protostars in Our Galaxy
+    2023MNRAS.521.5669C | Contreras Peña, Carlos | Photometric and spectroscopic monitoring of YSOs in nearby star-forming regions - I. Eruptive YSOs
+    2023ApJ...943L..16S | Schneider, Adam C. | Redder than Red: Discovery of an Exceptionally Red L/T Transition Dwarf
+    2022ApJ...936...31U | Uchiyama, Mizuho | Mid-infrared and Maser Flux Variability Correlation in Massive Young Stellar Object G036.70+00.09
+    2022adap.prop..156M | Megeath, Tom | Surveying 3-5 Micron Variability of Young Stellar Objects with Spitzer
+
+QUERY abs:("transitional disk" OR "transition disk" OR "inner cavity") AND abs:(forming OR "opening" OR "caught in the act" OR "real time") AND abs:(NEOWISE OR WISE OR Spitzer) year:2012-2026  ->  numFound=76
+    2026ApJ...999L..31T | Thanathibodee, Thanawuth | Indications of Rapid Dust Formation in the Inner Region of a Protoplanetary Disk
+    2026AJ....171...93L | Liu, Jialin | The Identification of New Herbig Ae/Be Stars from LAMOST DR7
+    2025ApJ...995...86G | Grimble, William | The Two-zone Temperature Distribution Model: Inferences on the Structure and Composition of Dusty Protoplanetary Disks
+    2025MNRAS.541.2246B | Ben, Gregory Mathews | Protoplanetary disc survival time-scales: a blind survey of young clusters up to 100 Myr in the solar vicinity
+    2025AAS...24543304R | Romero-Mirza, Carlos | A Multi-Wavelength Perspective of Chemistry and Pebble Delivery in Planet-Forming Disks
+    2025AAS...24537005G | Grimble, William | The Two-Zone Temperature Distribution (TZTD) Model: A Simple Formulation of the Distribution of Thermal Emission in Disks
+    2024ApJ...974..297D | Dottori, H. | Evidence of a Forming Nucleus in the Fourcade─Figueroa Galaxy
+    2024A&A...682A..91V | Vlasblom, Marissa | Mid-infrared spectra of T Tauri disks: Modeling the effects of a small inner cavity on CO<SUB>2</SUB> and H<SUB>2</SUB>O emission
+    2023ApJ...947L...6G | Grant, Sierra L. | MINDS. The Detection of <SUP>13</SUP>CO<SUB>2</SUB> with JWST-MIRI Indicates Abundant CO<SUB>2</SUB> in a Protoplanetary Disk
+    2023A&A...672A..92A | Antonellini, S. | Mid-infrared blends and continuum signatures of dust drift and accretion in protoplanetary disks
+    2023yCat..75201390S | Szilagyi, M. | VizieR Online Data Catalog: Gaia view of the Cepheus OB2 (Szilagyi+, 2023)
+    2023AAS...24134903G | Grimble, William | The EaRTH Disk Model: Analysis and Integration of Protoplanetary Disk Mineralogy and Structure
+
+QUERY abs:(dipper) AND abs:(NEOWISE OR WISE) AND abs:(variab*) year:2018-2026  ->  numFound=19
+    2026MNRAS.550g1212R | Rose, D. | Star formation in the NE-Circinus molecular cloud complex
+    2026AJ....172..132R | Rose, Daniel | Disk Candidates in IC 2395: A WISE Survey of the Kinematically Confirmed Membership
+    2026arXiv260723612R | Rose, Daniel | Disc Candidates in IC 2395: A WISE Survey of the Kinematically Confirmed Membership
+    2026MNRAS.549g1003B | Bisht, Mohit Singh | Evolution of the dusty nova QY Mus from eruption to quiescence
+    2026ApJ..1000L...5T | Tzanidakis, Anastasios | Gaia-GIC-1: An Evolving Catastrophic Planetesimal Collision Candidate
+    2025AJ....170..220B | Bisht, Mohit Singh | The Unexplored Dusty Nova LMCN 2009-05a in the Large Magellanic Cloud
+    2025PASP..137j4206B | Bhattacharjee, Soumyadeep | Variability of Central Stars of Planetary Nebulae with the Zwicky Transient Facility. II. Long-timescale Variables including Wide Binary and
+    2025ApJ...982..176S | Sheehan, Patrick D. | Submillimeter Variability in the Envelope and Warped Protostellar Disk of the Class 0 Protostar HOPS 358
+    2024A&A...686A.269Z | Zhang, J.-Y. | Young stellar objects from the LAMOST and ZTF surveys: Physical properties, classification, and light curve analysis
+    2024AJ....167...85H | Hodapp, Klaus W. | An Episode of Occultation Events in Gaia21bcv
+    2023ApJ...959...43S | Su, Kate Y. L. | RZ Piscium Hosts a Compact and Highly Perturbed Debris Disk
+    2023ApJ...954..140M | Marshall, Jonathan P. | Sudden Extreme Obscuration of a Sun-like Main-sequence Star: Evolution of the Circumstellar Dust around ASASSN-21qj
+# token from https://ui.adsabs.harvard.edu/v1/accounts/bootstrap: ok
+
+QUERY bibcode:2022AJ....163...25L  ->  numFound=1
+    2022AJ....163...25L | Luhman, K. L. | A Census of the Circumstellar Disk Populations in the Sco-Cen Complex
+
+QUERY bibcode:2022AJ....163...24L  ->  numFound=1
+    2022AJ....163...24L | Luhman, K. L. | A Census of the Stellar Populations in the Sco-Cen Complex
+
+QUERY bibcode:2016ApJ...816...69A  ->  numFound=1
+    2016ApJ...816...69A | Ansdell, M. | Young ``Dipper" Stars in Upper Sco and Oph Observed by K2
+
+QUERY bibcode:2018AJ....156...71C  ->  numFound=1
+    2018AJ....156...71C | Cody, Ann Marie | The Many-faceted Light Curves of Young Disk-bearing Stars in Upper Sco -- Oph Observed by K2 Campaign 2
+
+QUERY bibcode:2017MNRAS.470..202B  ->  numFound=1
+    2017MNRAS.470..202B | Bodman, Eva H. L. | Dippers and dusty disc edges: new diagnostics and comparison to model predictions
+
+QUERY bibcode:2026ApJS..284...41P  ->  numFound=1
+    2026ApJS..284...41P | Paz, Matthew | VarWISE: Infrared Variability via NEOWISE Single-exposure Photometry
+
+QUERY bibcode:2023ApJ...954..134K  ->  numFound=1
+    2023ApJ...954..134K | Kerr, Ronan | SPYGLASS. IV. New Stellar Survey of Recent Star Formation within 1 kpc
+
+QUERY title:"Gaia DR3" title:"young stellar object" author:"Marton"  ->  numFound=1
+    2023eas..conf.1704M | Marton, Gábor | Deep learning validation of the Gaia DR3 Young Stellar Object Candidates

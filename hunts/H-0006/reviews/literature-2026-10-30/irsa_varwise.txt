@@ -1,0 +1,48 @@
+### SELECT designation, ra, dec, vartype, confidence, variability_snr, w1_amp, w2_amp, n_obs, DISTANCE(POINT('ICRS',ra,dec),POINT('ICRS',241.785503,-32.016950))*3600 AS sep FROM varwisepure WHERE CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',241.785503,-32.016950,30.0/3600))=1
+designation,ra,dec,vartype,confidence,variability_snr,w1_amp,w2_amp,n_obs,sep
+
+### SELECT designation, ra, dec, vartype, confidence, variability_snr, w1_amp, w2_amp, n_obs, DISTANCE(POINT('ICRS',ra,dec),POINT('ICRS',241.785503,-32.016950))*3600 AS sep FROM varwiseext WHERE CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',241.785503,-32.016950,30.0/3600))=1
+designation,ra,dec,vartype,confidence,variability_snr,w1_amp,w2_amp,n_obs,sep
+
+# positive control: nearest VarWISE ext sources within 10 arcmin
+### SELECT designation, ra, dec, vartype, confidence, DISTANCE(POINT('ICRS',ra,dec),POINT('ICRS',241.785503,-32.016950))*3600 AS sep FROM varwiseext WHERE CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',241.785503,-32.016950,10.0/60))=1 ORDER BY sep
+<?xml version="1.0" encoding="utf-8"?>
+<VOTABLE version="1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.ivoa.net/xml/VOTable/v1.3" xsi:schemaLocation="http://www.ivoa.net/xml/VOTable/v1.3 http://www.ivoa.net/xml/VOTable/v1.3">
+  <DESCRIPTION>Caltech/IPAC-IRSA IVOA Table Access Protocol (sync) Service</DESCRIPTION>
+  <RESOURCE type="results">
+    <INFO name="QUERY_STATUS" value="ERROR">UsageFault: BAD_REQUEST: ORA-01722: invalid number
+
+</INFO>
+  </RESOURCE>
+
+# positive control 2: RX J1604.3-2130A (Upper Sco dipper, known mid-IR variable) at 241.0905 -21.5079
+### SELECT designation, ra, dec, vartype, confidence, w1_amp, w2_amp FROM varwiseext WHERE CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',241.0905,-21.5079,10.0/3600))=1
+designation,ra,dec,vartype,confidence,w1_amp,w2_amp
+
+# positive control (retry, no ORDER BY): VarWISE ext sources within 5 arcmin of target
+### SELECT designation, ra, dec, vartype, confidence, w2_amp FROM varwiseext WHERE CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',241.785503,-32.016950,0.0833))=1
+designation,ra,dec,vartype,confidence,w2_amp
+VarWISE J160658.04-320253.1,241.74184,-32.04810,ew,0.7261,0.559
+
+# positive control 3: VarWISE pure within 1 deg of RX J1604.3-2130A (count)
+### SELECT COUNT(*) AS n FROM varwisepure WHERE CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',241.0905,-21.5079,1.0))=1
+n
+20
+
+### SELECT designation, ra, dec, vartype, confidence, w2_amp, simbad_type FROM varwiseext WHERE CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',241.0905,-21.5079,0.02))=1
+designation,ra,dec,vartype,confidence,w2_amp,simbad_type
+
+# what classes does VarWISE assign? (within 5 deg of Upper Sco centre 243,-23, ext)
+### SELECT vartype, COUNT(*) AS n FROM varwiseext WHERE CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',243.0,-23.0,5.0))=1 GROUP BY vartype
+vartype,n
+unclear,70
+ea,137
+rr,658
+cv,298
+agn,249
+sn,20
+lpv,386
+ew,458
+yso,342
+cep,14
+

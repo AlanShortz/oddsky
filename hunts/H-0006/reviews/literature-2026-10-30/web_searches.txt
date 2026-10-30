@@ -1,0 +1,6 @@
+# WebSearch (2026-10-30), standard mode
+"J16070852-3201009"                         -> no page mentions it
+"6036595883378187008"                       -> no page mentions it (unrelated blockchain/OEIS hits)
+"J160708.51-320101" OR "J1607-3201" young star disk -> nothing about this star
+SPHEREx Upper Scorpius disk infrared excess variability 2026 arXiv -> no SPHEREx Upper Sco disk-variability paper
+young star inner disk infrared excess disappeared NEOWISE 2022 Upper Sco M dwarf arXiv 2025 2026 -> only TYC 8241 2652 1 (Melis 2012; Gunther 2017) and Upper Sco background papers

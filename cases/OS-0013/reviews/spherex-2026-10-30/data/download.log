@@ -1,0 +1,34 @@
+487 images
+0 2026W13_1A_0187_1_D1.fits ok zones=[56, 57]
+50 2026W08_1A_0390_1_D4.fits ok zones=[76, 77]
+100 2026W09_2A_0004_2_D2.fits ok zones=[68, 69, 79, 80]
+146 2026W10_1A_0045_2_D2.fits FAIL HTTP Error 503: Service Unavailable
+150 2026W10_1A_0291_1_D3.fits ok zones=[97, 98, 108, 109]
+156 2026W14_2A_0270_1_D2.fits FAIL HTTP Error 503: Service Unavailable
+Traceback (most recent call last):
+KeyError: "Extension 'PSF' not found."
+487 images
+161 2026W31_1B_0565_1 ERROR KeyError: "Extension 'PSF' not found."
+162 2026W31_1B_0565_1 ERROR KeyError: "Extension 'PSF' not found."
+163 2026W31_1B_0565_2 ERROR KeyError: "Extension 'PSF' not found."
+164 2026W31_1B_0565_2 ERROR KeyError: "Extension 'PSF' not found."
+165 2026W31_1B_0565_3 ERROR KeyError: "Extension 'PSF' not found."
+166 2026W31_1B_0565_3 ERROR KeyError: "Extension 'PSF' not found."
+167 2026W31_1B_0565_4 ERROR KeyError: "Extension 'PSF' not found."
+168 2026W31_1B_0565_4 ERROR KeyError: "Extension 'PSF' not found."
+169 2026W31_2A_0031_4 ERROR KeyError: "Extension 'PSF' not found."
+170 2026W31_2A_0031_4 ERROR KeyError: "Extension 'PSF' not found."
+171 2026W31_2A_0117_1 ERROR KeyError: "Extension 'PSF' not found."
+172 2026W31_2A_0117_1 ERROR KeyError: "Extension 'PSF' not found."
+173 2026W31_2A_0117_2 ERROR KeyError: "Extension 'PSF' not found."
+174 2026W31_2A_0117_2 ERROR KeyError: "Extension 'PSF' not found."
+175 2026W31_2A_0117_3 ERROR KeyError: "Extension 'PSF' not found."
+487 images
+200 2026W32_2A_0210_1_D3.fits ok zones=[386, 397, 408]
+236 2026W33_2A_0019_1_D4.fits FAIL HTTP Error 503: Service Unavailable
+250 2026W33_2A_0176_4_D4.fits ok zones=[20, 21, 41, 42]
+300 2026W34_1A_0471_3_D1.fits ok zones=[222, 223, 224, 243, 244, 245, 264, 265, 266]
+350 2025W35_1A_0012_1_D1.fits ok zones=[84, 85]
+400 2025W34_2B_0297_1_D1.fits ok zones=[2]
+450 2025W32_1A_0214_2_D3.fits ok zones=[89, 90, 100, 101]
+done

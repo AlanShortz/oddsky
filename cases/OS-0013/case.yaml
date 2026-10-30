@@ -11,10 +11,11 @@ target:
   gaia_source_id: 5792808347020475136
 summary: 'Gaia DR3 5792808347020475136, a K3 main-sequence star, was photospheric from 2010 to 2017. Between
   two NEOWISE visits in 2018 its W1 and W2 rose by 0.17 and 0.36 mag (33-38 sigma); the excess (16% and
-  38% of the star) has a ~1000 K colour temperature and persisted into early 2024. Twenty-seven field stars
-  stay flat, the WISE position does not move, and the star shows no pre-main-sequence overluminosity (lithium untested). Its variability is catalogued
-  in VarWISE (Paz et al. 2026) as a long-period variable; Oddsky''s contribution is the interpretation.
-  No optical dimming was seen in 2018 (a 0.1 mag ASAS-SN brightening inside the onset window is unexplained, C11). Refereed: about 93% astrophysical.'
+  38% of the star) has a ~1000 K colour temperature and persisted into early 2024. Twenty-seven field
+  stars stay flat, the WISE position does not move, and the star shows no pre-main-sequence overluminosity
+  (lithium untested). Its variability is catalogued in VarWISE (Paz et al. 2026) as a long-period variable;
+  Oddsky''s contribution is the interpretation. No optical dimming was seen in 2018 (a 0.1 mag ASAS-SN
+  brightening inside the onset window is unexplained, C11). Refereed: about 93% astrophysical.'
 claims:
 - id: C1
   text: 'Field test (IRSA Gator neowiser_p1bs_psd, all exposures within 300" of the target; outside the
@@ -171,6 +172,17 @@ claims:
   calls: []
   author: claude-audit
   at: '2026-10-28T19:25:23+00:00'
+- id: C14
+  text: 'SPHEREx (487 images, 2025 Aug - 2026 Oct; forced PSF photometry calibrated on 27 NEOWISE-steady
+    field stars) measures the star +36 +- 3% above its pre-2018 photosphere at 4.4-5.0 um (NEOWISE post-2018
+    level predicts +41%) and +13 +- 2% at 3.0-3.8 um (+16% predicted), in all three seasons; no field
+    star exceeds +8%. The 4.6/3.4 um excess ratio matches ~1000 K dust and the centroid stays within ~0.5"
+    of the K dwarf from 2 to 4.6 um. The star also reads 5-6% high at H and K, unexplained, so the plausible
+    excess is +30% to +37%. Report: cases/OS-0013/reviews/spherex-2026-10-30.md.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-30T16:50:50+00:00'
 hypotheses: []
 predictions: []
 literature: []

@@ -1,0 +1,62 @@
+flux column: f_ap_nbsub;  calibration C per release/window:
+release              qr2    qr3
+win                            
+D5 3.80-4.40       0.993  1.013
+H 1.50-1.80        1.027  1.007
+J 1.10-1.40        0.996  0.975
+K 2.00-2.40        0.996  0.986
+W1-like 3.00-3.80  0.939  0.955
+W2-like 4.40-5.00  0.954  0.942
+
+           window  n_img   lam  f_target_mJy  photosphere_mJy  n_comp  comp_sd  target_sem  excess   err  expected_if_present comps_above_target  comp_max
+      J 1.10-1.40     35 1.232        28.041           27.725      27    0.018       0.011   0.032 0.022                0.001               2/27     0.271
+      H 1.50-1.80     28 1.681        30.454           27.570      27    0.026       0.006   0.085 0.027                0.008               1/27     0.282
+      K 2.00-2.40     30 2.155        21.938           21.064      27    0.029       0.007   0.066 0.030                0.031               1/27     0.221
+W1-like 3.00-3.80     44 3.310        11.421           10.580      27    0.022       0.006   0.137 0.022                0.161               0/27     0.088
+     D5 3.80-4.40     52 4.090         8.534            6.879      27    0.028       0.011   0.227 0.030                0.297               0/27     0.125
+W2-like 4.40-5.00     79 4.676         6.744            5.219      27    0.038       0.012   0.370 0.040                0.407               0/27     0.162
+
+neighbours: SPHEREx / (2MASS+AllWISE 2010 reference), field-calibrated, minus 1:
+window               D5 3.80-4.40  H 1.50-1.80  J 1.10-1.40  K 2.00-2.40  W1-like 3.00-3.80  W2-like 4.40-5.00
+allwise                                                                                                       
+J144344.80-761206.0        -0.056          NaN          NaN        0.025             -0.009              0.011
+J144348.59-761140.2        -0.022        0.071        0.094        0.031              0.007              0.004
+J144349.60-761159.9        -0.103        0.023        0.089        0.043             -0.102              0.021
+
+colour tests (independent of each star's absolute normalisation):
+  W2-like 4.40-5.00 / K 2.00-2.40: target +0.295 relative to field median (field robust sd 0.034, field max +0.106, n=27); expected if excess persists +0.364
+  W2-like 4.40-5.00 / H 1.50-1.80: target +0.273 relative to field median (field robust sd 0.051, field max +0.154, n=27); expected if excess persists +0.395
+  W1-like 3.00-3.80 / K 2.00-2.40: target +0.075 relative to field median (field robust sd 0.026, field max +0.065, n=27); expected if excess persists +0.126
+  W2-like 4.40-5.00 / W1-like 3.00-3.80: target +0.198 relative to field median (field robust sd 0.026, field max +0.095, n=27); expected if excess persists +0.211
+
+target per season (field-calibrated excess, median of images):
+                                size  excess
+win               season                    
+D5 3.80-4.40      2025 Aug-Sep    16   0.208
+                  2026 Feb-Apr    16   0.225
+                  2026 Aug-Oct    20   0.251
+H 1.50-1.80       2025 Aug-Sep    12   0.092
+                  2026 Feb-Apr     8   0.073
+                  2026 Aug-Oct     8   0.088
+J 1.10-1.40       2025 Aug-Sep    12   0.050
+                  2026 Feb-Apr    13   0.007
+                  2026 Aug-Oct    10   0.021
+K 2.00-2.40       2025 Aug-Sep    10   0.040
+                  2026 Feb-Apr     8   0.059
+                  2026 Aug-Oct    12   0.071
+W1-like 3.00-3.80 2025 Aug-Sep    11   0.138
+                  2026 Feb-Apr    15   0.140
+                  2026 Aug-Oct    18   0.137
+W2-like 4.40-5.00 2025 Aug-Sep    26   0.351
+                  2026 Feb-Apr    20   0.334
+                  2026 Aug-Oct    33   0.413
+
+field median per season (should be ~1):
+season             2025 Aug-Sep  2026 Feb-Apr  2026 Aug-Oct
+win                                                        
+D5 3.80-4.40              0.994         1.004           1.0
+H 1.50-1.80               1.002         1.008           1.0
+J 1.10-1.40               0.996         1.003           1.0
+K 2.00-2.40               1.005         1.010           1.0
+W1-like 3.00-3.80         0.998         1.003           1.0
+W2-like 4.40-5.00         0.990         1.002           1.0
