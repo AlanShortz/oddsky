@@ -501,10 +501,10 @@ export async function renderLedger() {
   const entries = arr(data.entries);
   const seals = new Map();
   const result = h('div', { class: 'verify-out', role: 'status' });
-  const bar = h('div', { class: 'verify-bar' }, h('span'));
+  const bar = h('div', { class: 'verify-bar', hidden: true }, h('span'));
   const btn = h('button', { type: 'button', class: 'btn' }, 'Verify the chain in your browser');
   btn.addEventListener('click', async () => {
-    btn.disabled = true; result.textContent = '';
+    btn.disabled = true; bar.hidden = false; result.textContent = '';
     let prev = '0'.repeat(64), ok = true, i = 0;
     for (const e of entries) {
       const hex = [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(`${e.prev}\n${e.body}`)))].map((b) => b.toString(16).padStart(2, '0')).join('');
@@ -538,7 +538,7 @@ export async function renderLedger() {
             : h('p', { class: 'lg-st' }, b.text ?? '')),
       h('div', { class: 'lg-hash mono', title: `hash ${e.hash}\nprev ${e.prev}` }, e.hash.slice(0, 12), h('span', { class: 'lg-prev' }, `← ${e.prev.slice(0, 8)}`)));
   });
-  return h('article', { class: 'page front ledger' },
+  return h('article', { class: 'page front ledger-page' },
     h('header', { class: 'page-head' },
       h('p', { class: 'kicker' }, 'The Sky Ledger'),
       h('h1', null, 'Nothing here can be edited. Check for yourself.'),
