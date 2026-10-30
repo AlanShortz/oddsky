@@ -10,7 +10,7 @@ MIRRORS = [
     "https://vizier.idia.ac.za/viz-bin/asu-tsv",
     "https://vizier.cds.unistra.fr/viz-bin/asu-tsv",
 ]
-a = pd.read_csv(sys.argv[1])
+a = pd.read_csv(sys.argv[1], dtype={"g_source_id": str})  # 19-digit Gaia ids: keep as text, or they round-trip as float
 
 
 def lookup(r):
