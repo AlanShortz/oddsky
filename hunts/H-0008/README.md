@@ -9,7 +9,8 @@ but a magnified star brightens equally in both bands, which almost nothing else 
 does not.
 
 **Data.** NEOWISE-R single exposures 2014-2024 from IRSA's Parquet on AWS, read on Google Cloud (run `sky3lens`,
-`infra/gcp/neowise_lens.py`).
+`infra/gcp/neowise_lens.py`). The Large Magellanic Cloud adds 5 clean brightenings and no lens: its strongest is a hot LMC star
+brightening by 1.1 mag in 2021, most likely a Be-star outburst.
 
 Reference events, built into `ext/reference_lenses.csv` by `scripts/hunt_h0008_reference.py`:
 - KMTNet (2016-2024) and OGLE EWS (2014-2025);
@@ -25,9 +26,9 @@ Follow-up: AllWISE, Gaia DR3, VSX (VizieR mirror), ZTF DR (IRSA), TNS, ALeRCE, S
 
 | | |
 |---|---|
-| sky | 12,261 of 12,288 HEALPix pixels. The 27 missing are almost all the Large Magellanic Cloud, whose density exhausted the VMs' memory (`work/missing_pixels.txt`) |
-| data | 105.9 billion NEOWISE detections |
-| stars searched | 194.1 million with ≥ 10 NEOWISE visits |
+| sky | all 12,288 HEALPix pixels. The 27 densest, almost all of them the Large Magellanic Cloud, needed 64 GB machines (`infra/gcp/sky3lens_lmc.json`) |
+| data | 106.7 billion NEOWISE detections |
+| stars searched | 194.7 million with ≥ 10 NEOWISE visits |
 | compute | Google Cloud Batch, spot VMs, about 3 hours |
 | event | 1-3 consecutive visits brighter in both W1 and W2 by ≥ max(0.2 mag, 6σ), equal in the two bands to 0.1 + 15%, every other visit quiet |
 
@@ -35,13 +36,13 @@ Follow-up: AllWISE, Gaia DR3, VSX (VizieR mirror), ZTF DR (IRSA), TNS, ALeRCE, S
 
 | step | n | what fell out |
 |---|---|---|
-| one-visit events in both bands | 2,451 | |
-| isolated brightenings, not at the first or last visit | 1,016 | 818 isolated fades (not followed up), 617 events at the first or last visit |
-| clean | 661 | 355 whose event visit is full of artifact-flagged frames (latents, ghosts, halos), whose PSF fit got 3× worse, or with quasar colours |
+| one-visit events in both bands | 2,465 | |
+| isolated brightenings, not at the first or last visit | 1,022 | 821 isolated fades (not followed up), 622 events at the first or last visit |
+| clean | 666 | 356 whose event visit is full of artifact-flagged frames (latents, ghosts, halos), whose PSF fit got 3× worse, or with quasar colours |
 | **known microlensing events** (within 6" and in time, or typed Microlens in VSX) | **64** | |
 | this project's own events (OS-0016, OS-0017) | 2 | |
-| cataclysmic variables in outburst / young stars / other catalogued variables | 40 / 26 / 103 | |
-| unclassified | 426 | see below |
+| cataclysmic variables in outburst / young stars / other catalogued variables | 41 / 26 / 105 | |
+| unclassified | 428 | see below |
 
 ## Known events, found blind
 
@@ -84,11 +85,12 @@ about three weeks. They are withdrawn.
 in an online-only table that the investigators had not reached, and TNS was rate-limiting. The referee found both. The correction is
 in "what we got wrong" on the site.
 
-## The 426 unclassified
+## The 428 unclassified
 
 They cluster in the Galactic plane (`figures/lensing_sky.png`). In the referee's sample about 80% behave like ordinary variable stars:
 chromatic in the infrared, flat in the optical. Roughly 10-25% look like lenses, and most of those are in the south, where there is no
-ZTF to check them. 70 are strong (achromatic to 0.08 mag, ≥ 0.4 mag; `work/sky3_strong.csv`). Four still coincide with Gaia alerts
+ZTF to check them. 66 are strong (achromatic to 0.08 mag, ≥ 0.4 mag; `work/sky3_strong.csv`; TNS was rate-limiting again for 32 of them, recorded as
+errors; the referee's paced TNS pass, `reviews/claude-referee-2026-10-30/r16_tns_strong.csv`, covers the same events). Four still coincide with Gaia alerts
 that Gaia never classified (Gaia21atr, Gaia23boj, Gaia23bnj, Gaia23crp = AT 2023tvg); for an alert with no spectrum, a brightening equal at 3.4 and 4.6 µm is
 a classification hint.
 
@@ -102,7 +104,12 @@ asymmetric. It reproduces both H-0007 referees' hand fits in seconds (OS-0016: t
 
 - ATLAS forced photometry for J180624.78-090411.4 (2022 Jun-Nov) and J183040.98-220950.3: one light curve each settles the peak, the
   decline and tE. Queued 2026-10-30 (tasks 5272650 and 5272651); the waiters save to `~/oddsky-runs/h0008/atlas_J180624.txt` and `atlas_J183040.txt`.
-- An ADS full-text search for both before any public "new" claim.
+- **Literature (done 2026-10-30, `scripts/hunt_h0008_ads.py`):** ADS full text has no hit for either candidate's ZTF name
+  (ZTF22abjkknd, ZTF22aalviwh), WISE designation, 2MASS-style name, short name or sexagesimal coordinates (the two coordinate
+  hits are unrelated papers). ADS full text is only a partial net, though: of seven names of published events used as positive
+  controls, it found five and missed two that appear only in journal tables (e.g. ZTF20abwxmep in Zhai et al. 2024). A web search
+  on the ZTF names finds nothing; XOSS's candidate pages were unreachable, but XOSS reports to TNS, which has nothing within 60".
+  So: not in any catalogue, alert stream or text we can search, which is the strongest "apparently unreported" we can state.
 - Recompute the efficiency with real visit dates and a W1-based criterion. Then rerun the detector keeping saturated frames as a
   flagged class, and relax the quiet-elsewhere rule for long events: black-hole lenses live at tE > 100 d.
 
@@ -117,7 +124,7 @@ asymmetric. It reproduces both H-0007 referees' hand fits in seconds (OS-0016: t
   second bug silently emptied the id-based Gaia DR3 microlensing check, and it had also re-corrupted the H-0007 tables 'fixed' a day
   earlier. Every table is regenerated and checked (0 float-looking ids). Counts are unchanged: all 14 Gaia DR3 lenses had already
   been found by position.
-- TNS has objects at 7 of the 70 strong events: the five Gaia alerts above (as ATs) and two microlensing candidates (J173342 from
+- TNS has objects at 7 of the 70 strong events of the first pass: the five Gaia alerts above (as ATs) and two microlensing candidates (J173342 from
   ALeRCE, J204610 from XOSS). The first vetting pass saw none, because TNS was rate-limiting.
 
 Referee: [`reviews/claude-referee-2026-10-30.md`](reviews/claude-referee-2026-10-30.md). Files: `scripts/hunt_h0008_*.py`,

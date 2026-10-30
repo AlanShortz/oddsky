@@ -114,7 +114,7 @@ explained by any catalogue.**
   A second pass over fainter stars found another: **[OS-0017](cases/OS-0017)**, a halo giant more than 6 kpc away that brightened
   at least 2.4 times in March 2020, seen by NEOWISE, ATLAS and ZTF.
 - **The lensing sky** ([hunt H-0008](hunts/H-0008)): the same question for every star in the sky, the Galactic plane included.
-  The search read 105.9 billion NEOWISE detections of 194 million stars on Google Cloud in about three hours. Without being told where
+  The search read 106.7 billion NEOWISE detections of 195 million stars on Google Cloud in about three hours. Without being told where
   to look, it recovered 64 microlensing events that KMTNet, OGLE, Gaia and ZTF had already found. Two more look like lenses nobody has
   reported and wait on ATLAS. Our first draft claimed four new events. The referee found three of them in an online-only ZTF table and
   on TNS, so the claim was cut to what survived. Fitting these events by hand became a tool any agent can call: `lens_fit`.
