@@ -2,6 +2,17 @@
   "_comment": "Editorial summaries of each hunt for the website. The README in hunts/<ID>/ is the source of truth; these numbers are copied from its funnel table. A hunt whose directory is missing is skipped, so an entry can land before its hunt merges.",
   "hunts": [
     {
+      "id": "H-0009",
+      "title": "The long lenses",
+      "question": "The lensing-sky search could not see saturated peaks, events lasting longer than one NEOWISE visit, or stars beside a bright neighbour. Black-hole lenses would hide exactly there. What does a search without those blind spots find?",
+      "date": "2026-10-30",
+      "state": "survey done; candidates not yet followed up",
+      "scale": "211.7 million stars · 108.3 billion NEOWISE detections · the whole sky",
+      "funnel": [[211675962, "stars with 10+ NEOWISE visits"], [3757, "single-peaked brightenings, one to six visits"], [1308, "clean, not at the first or last visit"], [118, "known microlensing events, found blind"], [122, "strong and unexplained, not yet followed up"]],
+      "verdict": "Searching the stars the first pass skipped, those beside bright neighbours and those blended with others, matters more than the new rule for long events. The search now finds 118 known microlensing events instead of 64, and 43 of 353 catchable ones instead of 18, with the biggest gain in the crowded bulge. Its 122 strong unexplained brightenings, many of them long and colour-neutral, are where a black-hole lens would be; none has been followed up yet.",
+      "cases": []
+    },
+    {
       "id": "H-0008",
       "title": "The lensing sky",
       "question": "When a foreground star passes almost exactly in front of a background one, it acts as a lens and the background star brightens equally at every wavelength. NEOWISE looked at every star twice a year for ten years. How many lenses did it see?",

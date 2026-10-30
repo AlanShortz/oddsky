@@ -1,0 +1,67 @@
+{
+ "taskGroups": [
+  {
+   "taskCount": 257,
+   "parallelism": 25,
+   "taskSpec": {
+    "runnables": [
+     {
+      "container": {
+       "imageUri": "python:3.12-slim",
+       "entrypoint": "/bin/bash",
+       "commands": [
+        "-c",
+        "set -euo pipefail; PIP_DISABLE_PIP_VERSION_CHECK=1 pip install -q --root-user-action=ignore --no-cache-dir numpy==2.* pandas==2.* pyarrow==21.* && python -u /mnt/disks/oddsky/code/neowise_lens.py --mode long --out /mnt/disks/oddsky/runs/sky4long --pixel-list /mnt/disks/oddsky/code/pixels_sky4_dense.txt --pixels-per-task 1"
+       ],
+       "volumes": [
+        "/mnt/disks/oddsky:/mnt/disks/oddsky:rw"
+       ]
+      }
+     }
+    ],
+    "volumes": [
+     {
+      "gcs": {
+       "remotePath": "oddsky-sky-br3c3-data"
+      },
+      "mountPath": "/mnt/disks/oddsky"
+     }
+    ],
+    "computeResource": {
+     "cpuMilli": 3500,
+     "memoryMib": 28000
+    },
+    "maxRetryCount": 3,
+    "maxRunDuration": "10800s"
+   }
+  }
+ ],
+ "allocationPolicy": {
+  "instances": [
+   {
+    "policy": {
+     "machineType": "n2d-highmem-4",
+     "provisioningModel": "SPOT",
+     "bootDisk": {
+      "sizeGb": 50
+     }
+    }
+   }
+  ],
+  "location": {
+   "allowedLocations": [
+    "regions/us-west1"
+   ]
+  },
+  "serviceAccount": {
+   "email": "oddsky-batch@oddsky-sky-br3c3.iam.gserviceaccount.com"
+  }
+ },
+ "logsPolicy": {
+  "destination": "CLOUD_LOGGING"
+ },
+ "labels": {
+  "app": "oddsky",
+  "hunt": "h-0009"
+ }
+}

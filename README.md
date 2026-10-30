@@ -120,6 +120,10 @@ explained by any catalogue.**
   **[OS-0018](cases/OS-0018)**, a reddened giant beyond 5 kpc that brightened 5.4 times on 2022 Sep 19 over about four months, a
   textbook microlensing event that nobody seems to have reported. The other, **[OS-0019](cases/OS-0019)**, brightened once by 60%
   but no simple lens fits it, so it stays a candidate. Fitting these events by hand became a tool any agent can call: `lens_fit`.
+- **The long lenses** ([hunt H-0009](hunts/H-0009)): the lensing-sky search again, without its blind spots (saturated peaks,
+  multi-visit events, stars beside bright neighbours or blended with others). It finds 118 known microlensing events instead
+  of 64; most of the gain comes from stars the first pass never searched. Its 122 strong unexplained brightenings, where a
+  black-hole lens would hide, are not yet followed up.
 - **One hunt parked**: new R CrB stars (H-0003). Gaia DR3 has already been mined by the experts, and our candidates were a VY
   Scl binary, a Mira, an S star and a T Tauri star.
 
