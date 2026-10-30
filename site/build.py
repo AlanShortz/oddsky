@@ -452,6 +452,14 @@ def build(out: Path = DIST) -> None:
         shutil.rmtree(out)
     shutil.copytree(WEB, out, ignore=shutil.ignore_patterns("dev", "README.md", ".DS_Store"))
 
+    for hunt in hunts:  # a hunt's headline figure (hunts.json "figure", relative to hunts/<ID>/) is copied next to the data
+        if hunt.get("figure"):
+            src = ROOT / "hunts" / hunt["id"] / hunt["figure"]
+            if src.exists():
+                dst = out / "data" / "hunt-figures" / f"{hunt['id']}-{src.name}"
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(src, dst)
+                hunt["figure_url"] = f"/data/hunt-figures/{dst.name}"
     write(out / "data" / "hunts.json", json.dumps({"hunts": hunts, "wrong": wrong}, ensure_ascii=False, indent=1))
     write(out / "data" / "docket.json", json.dumps({"built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                                                     "items": docket}, ensure_ascii=False, indent=1))

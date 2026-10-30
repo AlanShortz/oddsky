@@ -1,0 +1,64 @@
+==================== J204610.56+514104.9
+          source_id      ra    dec  phot_g_mean_mag  bp_rp  parallax  parallax_over_error  ruwe phot_variable_flag  non_single_star  teff_gspphot  logg_gspphot  distance_gspphot  ag_gspphot  classprob_dsc_combmod_star  classprob_dsc_combmod_quasar  phot_g_n_obs  phot_g_mean_flux_over_error  ipd_frac_multi_peak  has_epoch_photometry   sep
+2182020583845639168 311.544 51.685           15.905  1.563     0.419                7.746 1.801      NOT_AVAILABLE                0      6702.005         4.263          1360.205       1.885                         1.0                           0.0           327                     1119.493                    1                 False 0.225
+  vari_summary: none
+  vari_classifier_result: none
+  vari_microlensing: none
+  G relative flux scatter (proxy for variability): [{'source_id': 2182020583845639168, 'g_rel_scatter': 0.0162, 'phot_g_n_obs': 327}]
+  AllWISE: [{'designation': 'J204610.56+514104.9', 'ph_qual': 'AABU', 'cc_flags': 'PP00', 'var_flg': 'nnnn', 'ext_flg': 0, 'w1mpro': 13.245, 'w1sigmpro': 0.024, 'w2mpro': 13.318, 'w3mpro': 12.215, 'w3sigmpro': 0.203, 'w3snr': 5.4, 'w4mpro': 9.465, 'w4snr': 0.5, 'w1rchi2': 1.965, 'w3rchi2': 0.986, 'nb': 1, 'na': 0}]
+  VSX (30"): ['Gaia DR3 2182020579538835072  \tDSCT|GDOR|SXPHE               \t 12.400\t 12.440\t     0.015193000000\t20.86'] [HTTP 200]
+  SIMBAD (10"): none [HTTP 200]
+==================== J190512.73+145135.7
+          source_id      ra    dec  phot_g_mean_mag  bp_rp  parallax  parallax_over_error  ruwe phot_variable_flag  non_single_star  teff_gspphot  logg_gspphot  distance_gspphot  ag_gspphot  classprob_dsc_combmod_star  classprob_dsc_combmod_quasar  phot_g_n_obs  phot_g_mean_flux_over_error  ipd_frac_multi_peak  has_epoch_photometry   sep
+4506677267832399104 286.303 14.860           18.409  2.197    -0.108               -0.728 0.972      NOT_AVAILABLE                0      3928.591          4.48           756.706       1.162                         1.0                           0.0           676                      911.283                    0                 False 0.288
+4506677267853373056 286.303 14.861           19.335  1.748     0.455                1.578 0.970      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                         1.0                           0.0           656                      479.000                    3                 False 4.797
+4506677267853371520 286.302 14.858           20.039  1.719     0.839                1.442 1.019      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                         1.0                           0.0           586                      277.145                    0                 False 5.929
+  vari_summary: none
+  vari_classifier_result: none
+  vari_microlensing: none
+  G relative flux scatter (proxy for variability): [{'source_id': 4506677267832399104, 'g_rel_scatter': 0.0285, 'phot_g_n_obs': 676}]
+  AllWISE: [{'designation': 'J190512.73+145135.7', 'ph_qual': 'AAUU', 'cc_flags': 0, 'var_flg': 'nnnn', 'ext_flg': 1, 'w1mpro': 14.644, 'w1sigmpro': 0.054, 'w2mpro': 14.764, 'w3mpro': 12.848, 'w3sigmpro': nan, 'w3snr': -0.6, 'w4mpro': 8.32, 'w4snr': 1.5, 'w1rchi2': 3.26, 'w3rchi2': 0.9787, 'nb': 2, 'na': 1}]
+  VSX (30"): ['Gaia DR3 4506677263505939328  \tROT                           \t 17.900\t 18.020\t                   \t20.95'] [HTTP 200]
+  SIMBAD (10"): none [HTTP 200]
+==================== J173342.30-205204.5
+          source_id      ra     dec  phot_g_mean_mag  bp_rp  parallax  parallax_over_error  ruwe phot_variable_flag  non_single_star  teff_gspphot  logg_gspphot  distance_gspphot  ag_gspphot  classprob_dsc_combmod_star  classprob_dsc_combmod_quasar  phot_g_n_obs  phot_g_mean_flux_over_error  ipd_frac_multi_peak  has_epoch_photometry   sep
+4118334743127985664 263.426 -20.868           14.765  2.524     0.096                3.597 0.962      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                       1.000                           0.0           409                     3122.292                    0                 False 0.574
+4118334743079544448 263.426 -20.867           20.479    NaN       NaN                  NaN   NaN      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                         NaN                           NaN           109                       67.818                    0                 False 2.417
+4118334743099401856 263.427 -20.868           20.654  1.948       NaN                  NaN   NaN      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                       0.999                           0.0           146                       89.584                    0                 False 2.442
+4118334743079544576 263.426 -20.867           19.013  1.846    -0.003               -0.012 1.118      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                       1.000                           0.0           402                      408.378                    7                 False 3.054
+4118334743079505408 263.427 -20.869           17.851  2.179     0.310                2.638 0.970      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                       1.000                           0.0           395                      743.865                    0                 False 3.246
+4118334743127985408 263.426 -20.869           20.037    NaN     0.049                0.074 1.085      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                         NaN                           NaN           288                      204.714                    0                 False 3.867
+4118334743079531136 263.425 -20.869           17.684  1.604    -1.773               -6.657 1.891      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                       1.000                           0.0           340                      245.235                    0                 False 4.399
+4118334743079499136 263.426 -20.869           19.453    NaN    -0.336               -0.964 0.943      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                         NaN                           NaN           365                      354.672                    0                 False 4.822
+4118334743098577152 263.428 -20.867           20.724    NaN       NaN                  NaN   NaN      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                         NaN                           NaN            62                       46.124                    0                 False 4.881
+4118334743154332800 263.425 -20.868           20.778    NaN       NaN                  NaN   NaN      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                         NaN                           NaN            83                       42.239                    6                 False 5.246
+  vari_summary: none
+  vari_classifier_result: none
+  vari_microlensing: none
+  G relative flux scatter (proxy for variability): [{'source_id': 4118334743127985664, 'g_rel_scatter': 0.0065, 'phot_g_n_obs': 409}]
+  AllWISE: [{'designation': 'J173342.30-205204.5', 'ph_qual': 'AAAU', 'cc_flags': 'P000', 'var_flg': 'n10n', 'ext_flg': 1, 'w1mpro': 10.149, 'w1sigmpro': 0.023, 'w2mpro': 10.337, 'w3mpro': 10.143, 'w3sigmpro': 0.095, 'w3snr': 11.5, 'w4mpro': 8.656, 'w4snr': 0.4, 'w1rchi2': 10.66, 'w3rchi2': 0.7237, 'nb': 1, 'na': 0}]
+  VSX (30"): none [HTTP 200]
+  SIMBAD (10"): none [HTTP 200]
+==================== J180624.78-090411.4
+          source_id      ra   dec  phot_g_mean_mag  bp_rp  parallax  parallax_over_error  ruwe phot_variable_flag  non_single_star  teff_gspphot  logg_gspphot  distance_gspphot  ag_gspphot  classprob_dsc_combmod_star  classprob_dsc_combmod_quasar  phot_g_n_obs  phot_g_mean_flux_over_error  ipd_frac_multi_peak  has_epoch_photometry   sep
+4158424169627436800 271.603 -9.07           17.004  3.153    -0.322               -2.543 1.293      NOT_AVAILABLE                0      4770.088         3.407          1261.745       3.564                         1.0                           0.0           219                      683.487                    1                 False 0.404
+4158424173922723840 271.603 -9.07           20.152  3.820     0.862                0.884 0.988      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                         1.0                           0.0           177                      133.675                    0                 False 2.538
+  vari_summary: none
+  vari_classifier_result: none
+  vari_microlensing: none
+  G relative flux scatter (proxy for variability): [{'source_id': 4158424169627436800, 'g_rel_scatter': 0.0217, 'phot_g_n_obs': 219}]
+  AllWISE: [{'designation': 'J180624.78-090411.4', 'ph_qual': 'AABU', 'cc_flags': 0, 'var_flg': '11nn', 'ext_flg': 1, 'w1mpro': 11.513, 'w1sigmpro': 0.025, 'w2mpro': 11.644, 'w3mpro': 11.543, 'w3sigmpro': 0.26, 'w3snr': 4.2, 'w4mpro': 9.057, 'w4snr': -1.0, 'w1rchi2': 7.714, 'w3rchi2': 0.6996, 'nb': 1, 'na': 0}]
+  VSX (30"): none [HTTP 200]
+  SIMBAD (10"): none [HTTP 200]
+==================== J180441.77-182728.7
+          source_id      ra     dec  phot_g_mean_mag  bp_rp  parallax  parallax_over_error  ruwe phot_variable_flag  non_single_star  teff_gspphot  logg_gspphot  distance_gspphot  ag_gspphot  classprob_dsc_combmod_star  classprob_dsc_combmod_quasar  phot_g_n_obs  phot_g_mean_flux_over_error  ipd_frac_multi_peak  has_epoch_photometry   sep
+4095451084255303296 271.174 -18.458           17.688  4.764     0.334                1.988 1.191      NOT_AVAILABLE                0      4230.553         2.489           754.489       6.077                         1.0                           0.0           211                      596.576                    0                 False 0.482
+4095451088565451520 271.174 -18.457           20.165    NaN     0.629                0.574 1.070      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                         NaN                           NaN           114                      108.098                    0                 False 4.251
+4095451290424417920 271.174 -18.457           19.776  3.679     0.206                0.297 1.084      NOT_AVAILABLE                0           NaN           NaN               NaN         NaN                         1.0                           0.0           163                      186.832                    5                 False 4.890
+  vari_summary: none
+  vari_classifier_result: none
+  vari_microlensing: none
+  G relative flux scatter (proxy for variability): [{'source_id': 4095451084255303296, 'g_rel_scatter': 0.0243, 'phot_g_n_obs': 211}]
+  AllWISE: [{'designation': 'J180441.77-182728.7', 'ph_qual': 'AABU', 'cc_flags': '00h0', 'var_flg': '111n', 'ext_flg': 1, 'w1mpro': 9.973, 'w1sigmpro': 0.024, 'w2mpro': 10.08, 'w3mpro': 9.842, 'w3sigmpro': 0.131, 'w3snr': 8.3, 'w4mpro': 8.577, 'w4snr': 0.4, 'w1rchi2': 5.354, 'w3rchi2': 0.6039, 'nb': 2, 'na': 0}]
+  VSX (30"): none [HTTP 200]
+  SIMBAD (10"): none [HTTP 200]

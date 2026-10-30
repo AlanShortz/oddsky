@@ -1,0 +1,19 @@
+static_noblend {'chi2': 186.7, 'n': 160, 'dof': 157, 't0': np.float64(59815.86), 'tE': np.float64(74.85), 'u0': np.float64(0.7676), 'Amax': 1.57}
+static_blend {'chi2': 184.4, 'n': 160, 'dof': 153, 't0': np.float64(59816.96), 'tE': np.float64(112.19), 'u0': np.float64(0.4197), 'Amax': 2.54, 'fs': {'NEOWISE_W1': 0.373, 'NEOWISE_W2': 0.368, 'ZTF_g_283': 0.38, 'ZTF_r_283': 0.41}}
+parallax_blend {'chi2': 184.1, 'n': 160, 'dof': 151, 't0': np.float64(59815.55), 'tE': np.float64(131.17), 'u0': np.float64(-0.3116), 'Amax': 3.32, 'piEN': np.float64(-0.128), 'piEE': np.float64(0.05), 'fs': {'NEOWISE_W1': 0.246, 'NEOWISE_W2': 0.242, 'ZTF_g_283': 0.251, 'ZTF_r_283': 0.27}}
+asym {'t0': np.float64(59813.48), 'tE_rise': np.float64(72.02), 'tE_fall': np.float64(93.28), 'u0': np.float64(0.7721), 'chi2': np.float64(186.2)} coverage {'n_peak': 16, 'n_rise': 15, 'n_decline': 9, 'largest_gap_within_1tE_days': 81.0}
+2018 g 5 median offset 0.034 min -0.07 max 0.09
+2018 r 5 median offset 0.011 min -0.0 max 0.02
+2019 g 7 median offset -0.003 min -0.04 max 0.03
+2019 r 13 median offset 0.015 min -0.04 max 0.05
+2020 g 3 median offset -0.029 min -0.04 max 0.01
+2021 g 13 median offset 0.002 min -0.08 max 0.09
+2021 r 8 median offset -0.031 min -0.08 max 0.05
+2022 g 19 median offset -0.398 min -0.54 max -0.05
+2022 r 3 median offset -0.456 min -0.5 max -0.31
+2023 g 10 median offset -0.032 min -0.06 max 0.03
+2023 r 3 median offset -0.033 min -0.08 max -0.03
+2024 g 17 median offset 0.004 min -0.07 max 0.06
+2024 r 7 median offset -0.02 min -0.04 max 0.36
+2025 g 19 median offset -0.003 min -0.08 max 0.04
+2025 r 4 median offset -0.005 min -0.04 max 0.07

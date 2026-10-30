@@ -21,7 +21,7 @@ import numpy as np
 import pandas as pd
 
 from . import skeptic as _skeptic
-from .analysis import color, excursions, periodogram, stats
+from .analysis import color, excursions, lensing, periodogram, stats
 from .case.model import CLASSES, Check, Claim, Hypothesis, Prediction
 from .case.store import CaseStore
 from .paths import cases_dir
@@ -337,6 +337,86 @@ class Toolbox:
         return self._log(s, "fold", dict(case=case, series=series, period=period, t0=t0, window_phase=window_phase,
                                          n_bins=n_bins), out)
 
+    def lens_fit(self, case: str, series: list[str], start: float | str, end: float | str, parallax: bool = True,
+                 blend: bool = False, baseline_start: float | str | None = None, baseline_end: float | str | None = None) -> dict:
+        """Fit a gravitational microlensing event: a point source magnified by a point lens, without and (by default) with
+        annual parallax, to one or more series at once (e.g. ["ATLAS:ATLAS_o", "ATLAS:ATLAS_c", "NEOWISE:W1"]). Each series
+        is binned per night and turned into flux / its own baseline (median outside [start, end], or over the baseline window).
+        Errors include that series' baseline night-to-night scatter and 1% of flux. Returns t0, tE, u0, A_max (and piE, fs),
+        95% ranges for t0 and tE from chi-square profiles (not covariance), how well the peak and wings are sampled, and how
+        much the parallax model improves on the static one. A static fit much worse than the parallax fit means the light curve
+        is asymmetric; a peak with no points means t0 and A_max rest on the wings. Microlensing is achromatic: fit the bands
+        together and compare their residuals."""
+        s = self.store(case)
+        c = s.load()
+        a, b = self._t(start), self._t(end, end=True)
+        ts, fs_, es, gs = [], [], [], []
+        per = {}
+        for ser in series:
+            df = stats.daily_bins(self._frame(s, ser), 1.0)
+            if self._t(baseline_start) is not None and self._t(baseline_end, end=True) is not None:
+                base_df = df[(df.t_mjd >= self._t(baseline_start)) & (df.t_mjd <= self._t(baseline_end, end=True))]
+            else:
+                base_df = df[(df.t_mjd < a) | (df.t_mjd > b)]
+            if len(base_df) < 5:
+                raise ValueError(f"{ser}: fewer than 5 baseline nights; give a baseline window")
+            m0 = float(np.median(base_df.mag))
+            ratio_base = 10 ** (-0.4 * (base_df.mag.to_numpy(float) - m0))
+            floor = max(float(stats.robust_std(ratio_base)), 0.005)
+            w = df[(df.t_mjd >= a) & (df.t_mjd <= b)]
+            if w.empty:
+                raise ValueError(f"{ser}: no data between start and end")
+            f = 10 ** (-0.4 * (w.mag.to_numpy(float) - m0))
+            e = np.sqrt((0.921 * f * w.err.to_numpy(float)) ** 2 + floor**2 + (0.01 * f) ** 2)
+            ts.append(w.t_mjd.to_numpy(float))
+            fs_.append(f)
+            es.append(e)
+            gs += [ser] * len(w)
+            per[ser] = {"baseline_mag": round(m0, 4), "baseline_scatter_frac": round(floor, 4), "n_nights": int(len(w)),
+                        "peak_ratio_observed": round(float(f.max()), 3)}
+        t, f, e = np.concatenate(ts), np.concatenate(fs_), np.concatenate(es)
+        ra = c.target.ra if c.target else None
+        dec = c.target.dec if c.target else None
+        out = {"series": per, "n_points": int(len(t))}
+        fits = {}
+        for name, par in (("static", False), ("parallax", True)) if parallax else (("static", False),):
+            prob = lensing.Problem(t, f, e, gs, ra=ra, dec=dec, parallax=par, blend=blend)
+            p, chi2 = prob.fit()
+            dof = int(len(t) - len(p))
+            r = {"t0_mjd": round(float(p[0]), 2), "tE_days": round(float(p[1]), 2), "u0": round(float(p[2]), 4),
+                 "A_max": round(float(lensing.magnification(abs(p[2]))), 3), "chi2": round(chi2, 1), "dof": dof}
+            if par:
+                r.update({"piE_N": round(float(p[3]), 3), "piE_E": round(float(p[4]), 3),
+                          "piE": round(float(np.hypot(p[3], p[4])), 3), "t0par_mjd": prob.t0par})
+            if blend:
+                r["fs"] = {n: round(float(v), 3) for n, v in zip(prob.names, p[prob.nlens:], strict=True)}
+            resid = (f - prob.model(p)) / f
+            r["mean_residual_by_series"] = {g: round(float(resid[np.asarray(gs) == g].mean()), 4) for g in prob.names}
+            fits[name] = (prob, p, chi2, r)
+            out[name] = r
+        name = "parallax" if parallax else "static"
+        prob, p, chi2, r = fits[name]
+        t0lo, t0hi, t0open = lensing.profile_range(prob, p, chi2, 0, max(0.6 * p[1], 5.0))
+        telo, tehi, teopen = lensing.profile_range(prob, p, chi2, 1, max(0.7 * p[1], 5.0))
+        out["ranges_95"] = {"model": name, "t0_mjd": [round(t0lo, 1), round(t0hi, 1)], "tE_days": [round(telo, 1), round(tehi, 1)],
+                            "open_ended": bool(t0open or teopen),
+                            "note": "profile ranges, chi-square rescaled to 1 per dof; open_ended means the scan hit its edge"}
+        cov = lensing.coverage(t, p[0], p[1], p[2])
+        out["coverage"] = cov
+        warn = []
+        if cov["n_peak"] == 0:
+            warn.append("no data in the peak: t0 and A_max rest on the wings")
+        if cov["n_rise"] < 3:
+            warn.append("the rise is barely sampled")
+        if parallax and out["static"]["chi2"] - out["parallax"]["chi2"] > 25:
+            warn.append(f"the static model is worse by chi2 {out['static']['chi2'] - out['parallax']['chi2']:.0f}: the light curve is "
+                        "asymmetric; parallax is one explanation, a binary source (xallarap) or calibration offsets between series are others")
+        if r["chi2"] / max(r["dof"], 1) > 3:
+            warn.append("chi2/dof > 3: errors underestimated or the model is incomplete")
+        out["warnings"] = warn
+        return self._log(s, "lens_fit", dict(case=case, series=series, start=start, end=end, parallax=parallax, blend=blend,
+                                             baseline_start=baseline_start, baseline_end=baseline_end), out)
+
     def periodogram(self, case: str, series: str, min_period: float = 0.5, max_period: float | None = None,
                     start: float | str | None = None, end: float | str | None = None) -> dict:
         """Lomb-Scargle periodogram with the survey's spectral window, flagging peaks that match
@@ -585,7 +665,7 @@ def evaluate(check: Check, frame: Callable[[str], pd.DataFrame]):
 
 
 OPEN_TOOLS = ["list_cases", "list_classes", "case_overview", "get_lightcurve", "describe_series", "compare_windows",
-              "observer_agreement", "eclipse_period", "fold", "periodogram", "find_excursions", "cross_band", "wise_color", "ir_excess", "neighbors",
+              "observer_agreement", "eclipse_period", "fold", "lens_fit", "periodogram", "find_excursions", "cross_band", "wise_color", "ir_excess", "neighbors",
               "skeptic_report", "add_claim", "retract_claim", "add_hypothesis", "update_hypothesis", "register_prediction", "check_prediction",
               "open_case", "literature"]
 BLIND_TOOLS = [t for t in OPEN_TOOLS if t not in ("check_prediction", "open_case", "literature")]

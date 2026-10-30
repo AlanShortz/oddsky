@@ -1,0 +1,16 @@
+share of events with a >= 0.2 mag NEOWISE visit that the 'others calm' / edge rule would reject (unblended, noise-free):
+                n  rejected
+tE_bin                     
+(0, 20]      2271     0.052
+(20, 40]     3826     0.058
+(40, 70]     4090     0.058
+(70, 100]    1630     0.155
+(100, 150]   1093     0.306
+(150, 2000]  1236     0.341
+        name    tE  A_real_visits detector
+ZTF21aawqeqn 125.2          2.321     pass
+ZTF19abagvae 132.5         13.110     pass
+ZTF21abrgqfr  54.9          5.450     pass
+ZTF21abmnkml 110.8          3.504     pass
+ZTF21acqomnw 105.6          3.239     pass
+ZTF18absrimp  65.8          2.448     pass

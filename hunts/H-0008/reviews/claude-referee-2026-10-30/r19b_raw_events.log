@@ -1,0 +1,4 @@
+       allwise_cntr     kind  edge            t     dw1       dw2  n_visits               file                     name
+2813101501351057452 brighten False 59672.268305 -0.3935 -0.378251        20 pixel=7600.parquet ZTF22aaajzoi (recovered)
+2711018201351020504 brighten False 59822.732171 -0.9945 -1.009000        21 pixel=7274.parquet ZTF22abcfjfp (recovered)
+not in the raw event table: ['ZTF19abagvae', 'ZTF21abmnkml', 'ZTF21abrgqfr', 'ZTF21aawqeqn', 'ZTF21acqomnw', 'ZTF18absrimp']

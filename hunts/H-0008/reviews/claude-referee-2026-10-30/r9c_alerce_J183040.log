@@ -1,0 +1,2 @@
+ZTF22aalviwh ndet 38 first 59727.41884260019 | positive: [59727.4, 59733.4, 59733.4, 59737.4, 59739.4, 59748.4, 59752.3, 59752.4, 59755.4, 59757.3, 59759.3, 59759.4, 59761.4, 59763.3, 59765.3, 59768.3, 59782.3, 59784.3, 59784.3, 59786.3, 59788.3, 59790.3, 59793.2, 59805.2, 59807.3, 59809.2, 59812.2, 59814.2, 59818.2, 59822.2] | negative: 0
+    [('lc_classifier_periodic', 'LPV', 0.46), ('lc_classifier_top', 'Periodic', 0.54), ('stamp_classifier', 'VS', 0.66), ('lc_classifier_transient', 'SLSN', 0.33), ('lc_classifier_stochastic', 'YSO', 0.89), ('lc_classifier', 'LPV', 0.25)]

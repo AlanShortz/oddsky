@@ -980,6 +980,9 @@ button.env-hyp:hover { color: var(--accent); }
 .hunt-scale { font-size: 12px; color: var(--muted); margin: 0; line-height: 1.6; }
 .hunt-top { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 34px; align-items: start; margin-bottom: 30px; }
 @media (max-width: 860px) { .hunt-top { grid-template-columns: 1fr; } }
+.hunt-figure { margin: 0 0 30px; }
+.hunt-figure img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); background: #fff; }
+.hunt-figure figcaption { font-size: 13px; color: var(--muted, #666); margin-top: 8px; max-width: 900px; }
 .hunt-readme { margin-top: 40px; max-width: 900px; border-top: 3px double var(--rule); padding-top: 18px; }
 
 .funnel { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; }

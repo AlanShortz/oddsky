@@ -1,0 +1,31 @@
+no AllWISE source within 3": 59 of 85
+W1 distribution (with source): {'count': 26.0, 'mean': 14.04, 'std': 2.24, 'min': 9.64, '25%': 12.19, '50%': 14.26, '75%': 15.4, 'max': 17.79}
+W1 <= 13: 8, recovered 3
+W1 <= 14: 11, recovered 4
+W1 <= 15: 15, recovered 6
+          name  A_real_visits  w1mpro  nb      sep          b  recovered
+  ZTF19abagvae         13.110   9.645 1.0 0.136122  -2.438480      False
+  ZTF22abcfjfp          2.648   9.973 2.0 0.561654   1.525069       True
+  ZTF22aaajzoi          2.483  10.512 1.0 0.217545   2.308640       True
+  ZTF21abmnkml          3.504  11.995 1.0 0.608074  -3.056260      False
+  ZTF21abqhbuh          6.361  12.008 1.0 0.201841  -4.548238       True
+  ZTF21abrgqfr          5.450  12.112 2.0 0.177031   4.608358      False
+  ZTF21aawqeqn          2.321  12.127 1.0 0.519708   6.880462      False
+  ZTF21acqomnw          3.239  12.372 2.0 0.325936  -6.860888      False
+  ZTF18absrimp          2.448  13.147 2.0 1.211358   2.813277      False
+  ZTF22aagdkla          3.019  13.245 1.0 0.212189   5.331729       True
+ZTF2050.9+2747          1.886  13.706 2.0 2.722677 -10.338194      False
+  ZTF22abmqxzj          3.359  14.171 2.0 0.662798   0.773953      False
+ZTF1844.0-1439          1.879  14.239 1.0 2.373326  -5.021179      False
+  ZTF19aabbuqn          3.183  14.271 1.0 0.329496   3.955253       True
+  ZTF21aaowecs          4.132  14.644 2.0 0.313402   3.742370       True
+  ZTF18abhxjmj          1.652  15.011 2.0 0.476229   4.937174      False
+  ZTF19aaprbng          1.607  15.133 1.0 0.681016   7.338386      False
+  ZTF20actffyp          2.312  15.184 1.0 0.230008  -5.605961      False
+  ZTF22abcflaq          1.665  15.281 1.0 0.296374   7.312202      False
+  ZTF20abztmco          3.757  15.434 1.0 0.221867 -10.243553      False
+  ZTF22abejuat      11156.465  15.481 1.0 0.197947   8.902548      False
+ZTF0527.8+5142          2.489  15.970 1.0 0.270531   9.267499      False
+  ZTF19abpangr          2.206  17.003 1.0 1.181674  14.886315      False
+  ZTF19abfrdeg          1.651  17.095 1.0 1.662737  -8.287214      False
+  ZTF20abwiild          2.908  17.407 1.0 1.291663  12.399533      False

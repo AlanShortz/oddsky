@@ -2,6 +2,19 @@
   "_comment": "Editorial summaries of each hunt for the website. The README in hunts/<ID>/ is the source of truth; these numbers are copied from its funnel table. A hunt whose directory is missing is skipped, so an entry can land before its hunt merges.",
   "hunts": [
     {
+      "id": "H-0008",
+      "title": "The lensing sky",
+      "question": "When a foreground star passes almost exactly in front of a background one, it acts as a lens and the background star brightens equally at every wavelength. NEOWISE looked at every star twice a year for ten years. How many lenses did it see?",
+      "date": "2026-10-30",
+      "state": "survey done, refereed",
+      "scale": "194 million stars · 105.9 billion NEOWISE detections · the whole sky including the Galactic plane · KMTNet, OGLE, Gaia and ZTF as references",
+      "funnel": [[194082390, "stars with 10+ NEOWISE visits"], [2451, "one-visit events in both bands"], [661, "clean, isolated brightenings"], [64, "known microlensing events, found blind"], [2, "apparently unreported lens candidates"]],
+      "verdict": "Without being told where to look, the search recovered 64 microlensing events that KMTNet, OGLE, Gaia and ZTF had already found, and none of the matches is a coincidence. Two more look like lenses that nobody has reported, and they wait on an ATLAS light curve. A third, posted to TNS only as a candidate, gets its first fit here. NEOWISE is a real but partial lens detector: good for bright stars in the Galactic disk, nearly blind in the crowded bulge, and unable to see saturated peaks.",
+      "figure": "figures/lensing_sky.png",
+      "figure_caption": "Every HEALPix pixel searched (grey, by number of stars) and every clean one-night brightening, coloured by what it turned out to be. Stars: microlensing events, known (orange) and new or unreported (red: OS-0016, OS-0017 and the two candidates).",
+      "cases": []
+    },
+    {
       "id": "H-0007",
       "title": "One night in the infrared",
       "question": "NEOWISE looked at every star for about a day, twice a year, for ten years. Which ordinary stars were dramatically different on just one of those days?",
@@ -134,6 +147,12 @@
       "case": "OS-0017",
       "title": "A peak three weeks off",
       "text": "From NEOWISE and the tail in ZTF, a referee predicted when ATLAS would show this event peaking, and how bright. ATLAS put the peak three weeks earlier and higher. The model had no parallax, which bends the light curve; with it, all three surveys agree."
+    },
+    {
+      "case": null,
+      "href": "/hunt/H-0008",
+      "title": "Three discoveries that weren't",
+      "text": "We announced four new microlensing events in the draft. The referee found three of them in a ZTF catalogue whose full table lives only on the journal's website, and on TNS, which had been refusing our queries. One survives. We also withdrew an efficiency estimate whose model of when NEOWISE looked was off by three weeks for half the visits."
     }
   ]
 }
