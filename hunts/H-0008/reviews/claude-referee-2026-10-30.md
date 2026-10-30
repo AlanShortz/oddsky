@@ -15,11 +15,17 @@ All four "new" events are microlensing. **The novelty claim fails for three of t
 - **J204610** is ZTF22aagdkla and **J190512** is ZTF21aaowecs (= Gaia21bde). Both are *high-confidence* events in the full
   Zhai et al. 2024 list (ApJ 978, 76) with the same t0, tE and u0 as the investigators'.
 - **J173342** was reported to TNS in 2024 by ALeRCE as a "microlensing event candidate" (AT 2021aicc = ZTF21abahtfi).
-- **J180624** is the one event that survives as apparently unreported.
+- **J180624** is the one event that survives as apparently unreported. This review adds a second candidate of the same quality
+  from the investigators' own list, J183040.98-220950.3.
 
-The efficiency statement rests on a NEOWISE visibility model that misplaces about half of all visits by about three weeks.
-On top of that, the pipeline cannot see two kinds of lens: those that peak brighter than W1 ≈ 8 (saturated frames are
-dropped) and long events (tE > 100 d). "Works as a survey in the disk/halo" is not shown.
+The efficiency statement rests on a NEOWISE visibility model that, from 2016 on, puts one of the two yearly visits about three
+weeks early or late. That changes individual events a lot but the aggregate rates little. More importantly, the pipeline
+cannot see three kinds of lens:
+- events that peak brighter than W1 ≈ 8 (saturated frames are dropped);
+- long events, tE > 100 d (the "all other visits calm" rule);
+- faint sources with no AllWISE counterpart.
+
+"Less efficient in the inner bulge" survives. "Works as a survey in the disk/halo" is not shown.
 
 - P(the 60 catalogue matches are mostly chance coincidences) < 0.01. The expected number of false matches is ≤ 2.
 - P(microlensing) per event, and novelty status:
@@ -30,7 +36,7 @@ dropped) and long events (tE > 100 d). "Works as a survey in the disk/halo" is n
 | J190512.73+145135.7 | ZTF21aaowecs (Zhai+2024 high-confidence, tE 43.7, u0 0.10) = Gaia21bde = AT 2021dzr | 0.97 | **known, published** |
 | J173342.30-205204.5 | ZTF21abahtfi = AT 2021aicc, ALeRCE "Microlensing event candidate" (2024TNSTR2737....1M) | 0.95 | **reported candidate**: no published fit found; the NEOWISE IR epoch and the fit are new |
 | J180624.78-090411.4 | ZTF22abjkknd (ZTF alert object; only 2025-26 negative-difference alerts, no positive transient) | 0.85 | **apparently new** (TNS, Zhai, Gaia alerts, KMT/OGLE, ALeRCE/Lasair, SIMBAD, VSX all negative; ADS full text and ASAS-SN not checked) |
-| J183040.98-220950.3 (found by this review in the investigators' own strong list) | ZTF22aalviwh (public alerts 59727-59822; ALeRCE class LPV/YSO, not microlensing); 2022 event, g/r/W1/W2 achromatic, tE ≈ 75-130 d, about 60% blended | 0.75 | apparently new (same checks; TNS per r16) |
+| J183040.98-220950.3 (found by this review in the investigators' own strong list) | ZTF22aalviwh (public alerts 59727-59822; ALeRCE class LPV/YSO, not microlensing); 2022 event, g/r/W1/W2 achromatic, tE ≈ 75-130 d, about 60% blended | 0.75 | apparently new (TNS none within 10″, not in Zhai, Gaia alerts or KMT/OGLE; ALeRCE classifies it LPV/YSO) |
 | J180441.77-182728.7 (sanity check) | ZTF22abcfjfp (Zhai+2024 "possible") | 0.9 | known; the method reproduces Zhai's tE (15.2 vs 14.1 d) |
 
 ## 2. Attacks and results
@@ -196,7 +202,9 @@ event, but it was already reported as a candidate.
   - *Fit:* point lens with blending, χ² 184/153, tE 112 d, u0 0.42. fs = 0.37-0.41 in g, r, W1 and W2 alike, i.e. achromatic
     with about 60% blend light (4 Gaia sources within 3″).
   - *Context:* outside the KMT/OGLE EWS footprints. Nothing in Gaia alerts or the reference tables within 27′.
-  - It is as good a lens candidate as J180624 and should be treated the same way. [TNS: see r16 below.]
+  - *Novelty:* it is ZTF22aalviwh in the public ZTF alert stream, which ALeRCE classifies as LPV/YSO, not microlensing (r9c).
+    TNS has nothing within 10″ (r16).
+  - It is as good a lens candidate as J180624 and should be treated the same way.
 
 The Gaia DR3 "VARIABLE flag 0.7%" statistic is circular: VSX includes the Gaia DR3 classifications, so anything flagged was
 already classified. It should not be used as evidence either way.
@@ -213,8 +221,10 @@ without ATLAS or OGLE.
   neighbours at 4.8 and 5.9″ (G 19.3, 20.0), consistent with its IR fs of 0.67.
 - *Physical consistency:* tE of 37-143 d for disk/bulge lenses at l = 5-90° is normal. J180624 (tE 115-143 d) is long but not
   extreme.
-- *Untapped data:* ATLAS forced photometry was requested for all five (r1). The shared queue had not started our task after
-  more than 2 h behind other tasks. **This is the main missing check for J180624's decline and peak.**
+- *Untapped data:* ATLAS forced photometry was requested for all five (r1). The shared queue started no task at all between
+  01:04 and 05:00 UTC on 30 Oct. Our task 5272574 is still queued, and another session has since queued J180624 and J183040
+  (tasks 5272650/1). Note that our r1 job itself then died at the 2-h background limit, so only the server-side task survives.
+  **This is the main missing check for J180624's and J183040's peak and decline.**
 
 ## 3. Most plausible mundane explanation remaining
 
@@ -266,10 +276,11 @@ points that way, but the peak and the whole decline are unsampled.
 
 ## 6. Tool fixes (what let the mistakes through)
 
-1. **`hunt_h0008_vet.py` TNS lookup.** The `tns` column is empty for all 70 strong events, yet r7/r16 find TNS objects for at
-   least five of them: AT 2021dzr, AT 2022aexe, AT 2021aicc, AT 2023gcb, AT 2021cwl. Any response without a `Name` column must
-   be recorded as UNKNOWN, never "". Write "none" explicitly. Fetch the object page, because the remarks ("Microlensing event
-   candidate") are where the classification lives; the TNS type is empty.
+1. **`hunt_h0008_vet.py` TNS lookup.** The `tns` column is empty for all 70 strong events. r16 re-queried all 70 at 30 s
+   spacing, with no 429s and no errors, and found TNS objects for 7 of them: AT 2021dzr, 2022aexe, 2021aicc, 2023gcb, 2021cwl,
+   2023tvg and 2023fru. Two of those are reported microlensing candidates. Any response without a `Name` column must be recorded
+   as UNKNOWN, never "". Write "none" explicitly. Fetch the object page, because the remarks ("Microlensing event candidate")
+   are where the classification lives; the TNS type field is empty.
 2. **Gaia source ids written as floats** (`g_source_id` = 5.870565195217874e+18 in sky3_x/sky3_classified). The
    `gaiadr3.vari_microlensing` check in `hunt_h0008_classify.py` therefore returns an empty table with no columns, silently. I
    verified that the same query with the integer ids returns hits. Keep ids as strings or int64 end to end, and fail loudly

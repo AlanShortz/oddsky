@@ -112,8 +112,13 @@ asymmetric. It reproduces both H-0007 referees' hand fits in seconds (OS-0016: t
   journal tables. Missing one (Zhai's full list) turned three recoveries into false discoveries until the referee found it.
 - An HTTP 429 from TNS is not "nothing found". The vetting script now records it as an error.
 - The plane is where both the lenses and the impostors are. Artifact share per visit and a χ² test removed a third of the raw events.
-- 19-digit ids lost precision as float64 a third time: concatenating empty per-pixel tables made `allwise_cntr` float. The scripts
-  skip empty tables now.
+- 19-digit ids lost precision as float64 again, twice: concatenating empty per-pixel tables made `allwise_cntr` float, and the VSX
+  step re-read the cross-match table without fixing the Gaia id column's type, so exact Gaia ids came back as `4.08e+18`. The
+  second bug silently emptied the id-based Gaia DR3 microlensing check, and it had also re-corrupted the H-0007 tables 'fixed' a day
+  earlier. Every table is regenerated and checked (0 float-looking ids). Counts are unchanged: all 14 Gaia DR3 lenses had already
+  been found by position.
+- TNS has objects at 7 of the 70 strong events: the five Gaia alerts above (as ATs) and two microlensing candidates (J173342 from
+  ALeRCE, J204610 from XOSS). The first vetting pass saw none, because TNS was rate-limiting.
 
 Referee: [`reviews/claude-referee-2026-10-30.md`](reviews/claude-referee-2026-10-30.md). Files: `scripts/hunt_h0008_*.py`,
 `infra/gcp/neowise_lens.py`, `infra/gcp/sky3lens*.json`, `work/` (event tables, efficiencies), `ext/` (reference catalogues),
