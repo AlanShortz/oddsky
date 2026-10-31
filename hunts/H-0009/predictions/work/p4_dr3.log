@@ -1,0 +1,18 @@
+J163539 6020322385418675200: G 18.313 BP-RP 2.13 n_obs(CCD) 194 matched_transits 27 (GOST forecast to 2017-05-28: 28; delivered 96%) vis_periods 15 var_flag NOT_AVAILABLE RUWE 0.98 ipd_multi 1
+    per-transit G rms estimate 0.0204 mag (an upper bound if the star varied in 2014-17)
+    DR3 within 6": 2; target share of G flux 0.78; others: G 19.66 at 4.9"
+J173150 5952322268527918208: G 15.071 BP-RP 1.85 n_obs(CCD) 397 matched_transits 47 (GOST forecast to 2017-05-28: 47; delivered 100%) vis_periods 17 var_flag NOT_AVAILABLE RUWE 1.03 ipd_multi 0
+    per-transit G rms estimate 0.0022 mag (an upper bound if the star varied in 2014-17)
+    DR3 within 6": 4; target share of G flux 0.77; others: G 17.68 at 4.4"; G 19.76 at 4.5"; G 16.86 at 5.6"
+J124517 5862971688685406976: G 17.756 BP-RP 3.22 n_obs(CCD) 459 matched_transits 54 (GOST forecast to 2017-05-28: 58; delivered 93%) vis_periods 27 var_flag NOT_AVAILABLE RUWE 0.99 ipd_multi 0
+    per-transit G rms estimate 0.0083 mag (an upper bound if the star varied in 2014-17)
+    DR3 within 6": 1; target share of G flux 1.00; others: 
+J160706 5932843350525331968: G 18.003 BP-RP 3.96 n_obs(CCD) 577 matched_transits 73 (GOST forecast to 2017-05-28: 77; delivered 95%) vis_periods 23 var_flag NOT_AVAILABLE RUWE 1.03 ipd_multi 0
+    per-transit G rms estimate 0.0136 mag (an upper bound if the star varied in 2014-17)
+    DR3 within 6": 5; target share of G flux 0.72; others: G 20.89 at 1.9"; G 20.76 at 4.5"; G 20.44 at 5.2"; G 20.13 at 5.7"
+J131026 5863586423081438848: G 17.749 BP-RP 3.54 n_obs(CCD) 456 matched_transits 64 (GOST forecast to 2017-05-28: 68; delivered 94%) vis_periods 25 var_flag NOT_AVAILABLE RUWE 2.17 ipd_multi 1
+    per-transit G rms estimate 0.0254 mag (an upper bound if the star varied in 2014-17)
+    DR3 within 6": 1; target share of G flux 1.00; others: 
+J154239 5882495205642608896: G 17.242 BP-RP 3.23 n_obs(CCD) 498 matched_transits 59 (GOST forecast to 2017-05-28: 63; delivered 94%) vis_periods 23 var_flag NOT_AVAILABLE RUWE 0.96 ipd_multi 0
+    per-transit G rms estimate 0.0076 mag (an upper bound if the star varied in 2014-17)
+    DR3 within 6": 7; target share of G flux 0.48; others: G 17.58 at 3.2"; G 20.70 at 3.6"; G 19.36 at 4.2"; G 20.64 at 4.2"; G 19.94 at 4.7"; G 20.67 at 5.9"

@@ -1,0 +1,84 @@
+id: OS-0020
+title: 'A star in Scorpius brightened ninefold in August 2017 and Gaia never alerted: a microlensing candidate'
+hook: Found blind in Oddsky hunt H-0008 (NEOWISE x8 in W1 and W2 on 2017 Aug 17). ATLAS shows one smooth,
+  achromatic event peaking in mid-August 2017; a point lens with annual parallax fits. Gaia scanned it
+  during the event without an alert; DR4 will show what it saw.
+status: reproduced
+target:
+  name: Gaia DR3 6020322385418675200
+  ra: 248.915374
+  dec: -35.86921
+  aliases: []
+  gaia_source_id: 6020322385418675200
+summary: ''
+claims:
+- id: C1
+  text: 'NEOWISE on 2017 Aug 17: x8 brighter in both W1 and W2 than the star''s 2014-2024 median; every
+    other visit quiet. Found blind by hunt H-0008.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+- id: C2
+  text: ATLAS (task 5273734) shows one smooth brightening in 2016-2026, peaking at x6-9 in mid-August
+    2017 and back to normal by early 2018. A point lens fits only with annual parallax (piE ~0.38 in every
+    reduction); tE ~120-190 d (hunts/H-0008/reviews/claude-referee-atlas10-2026-10-30.md).
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+- id: C3
+  text: Gaia scanned the star 19 d before, 3 d after and 33 d after the ATLAS peak and issued no alert;
+    Gaia alerted on only 5 of 12 comparable DR3 lenses, so the missing alert is weak evidence (hunts/H-0009/predictions/dr4_referee.md).
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+- id: C4
+  text: Not in TNS, the Gaia alerts, the KMTNet, OGLE or ZTF microlensing lists, or a web search (2026-10-30).
+    MOA and ASAS-SN not checked.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A foreground lens magnified the star for about four months in 2017 (P 0.75, ATLAS-follow-up
+    referee).
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  conflicts: []
+  would_falsify: Gaia DR4 flat during the event, or a repeat.
+  status: live
+  confidence: 0.75
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'Gaia DR4 G epoch photometry of Gaia DR3 6020322385418675200 (or the DR4 source cross-matched
+    to it): the median G of the transits in MJD 57949-58042 (2017-07-15 to 2017-10-16 00:00; forecast
+    6 transits on Jul 29, Aug 20 and Sep 19) is more than 1.2 mag brighter than the median G in MJD 56863.5-57570
+    (2014-07-25 to 2016-07-01). Model: 1.6-2.1 mag.'
+  check:
+    series: GAIA:G
+    start: 57949.0
+    end: 58042.0
+    statistic: median
+    baseline:
+    - 56863.5
+    - 57570.0
+    op: <
+    value: -1.2
+  probability: 0.93
+  resolve_by: '2027-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-31T03:31:12+00:00'
+literature: []
+hunt: H-0008
+featured: false
+created_at: '2026-10-31T02:50:03+00:00'

@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-10-31T03:01:29+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "0 fail, 2 warn, 4 pass, 0 skipped",
+  "counts": {
+    "fail": 0,
+    "warn": 2,
+    "pass": 4,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "pass",
+      "finding": "no Gaia source within 6.1\"",
+      "numbers": {
+        "radius_arcsec": 6.1
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "408 exposures; cuts removed up to 49 (12%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 408,
+        "removed_per_band": {
+          "W1": 49,
+          "W2": 35
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "warn",
+      "finding": "the only optical data are TESS: one spacecraft, normalised per sector. Nothing here has been seen by a second instrument.",
+      "numbers": {}
+    },
+    {
+      "id": "alias_neowise_exp_W2",
+      "title": "Periodicity vs survey rhythms (NEOWISE_EXP W2)",
+      "status": "warn",
+      "finding": "strongest period 181.64 d coincides with: half year (NEOWISE cadence); matches spectral-window peak at 181.64 d",
+      "numbers": {
+        "top_period_days": 181.64347993831407,
+        "power": 0.6633414866980395
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 0.99 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 0.9898027
+      }
+    }
+  ]
+}

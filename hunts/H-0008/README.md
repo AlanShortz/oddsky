@@ -139,7 +139,12 @@ first pass.
   separates lenses is optical against infrared, and blue against red.
 
 Not yet checked: why Gaia did not alert on J163539 or J173150 (G ≈ 16 and ≈ 13 for months), ASAS-SN, MOA (alert pages empty),
-OGLE photometry of Gaia23boj, ADS full text. ATLAS for J175634 and J174744 has not returned. None of these is a case yet.
+OGLE photometry of Gaia23boj, ADS full text. J163539 and J173150 are now cases OS-0020 and OS-0021, with sealed Gaia DR4
+predictions (hunt H-0009).
+
+The last two returned later and are not yet refereed: J175634.35-205556.9 (G 15.2, l 8.2, b +2.0) shows a sharp, symmetric ×6
+brightening in 2022 March lasting about two weeks, and J174744.42-374630.7 (G 13.8, l 352.7, b −5.0) a smooth ×2 brightening
+through most of 2022. Neither matches a KMTNet or OGLE event: the nearest are OGLE events 8-10' from J175634, in 2015 and 2023.
 
 
 

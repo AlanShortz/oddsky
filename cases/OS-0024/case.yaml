@@ -1,0 +1,54 @@
+id: OS-0024
+title: 'A star in Centaurus was 2.5 times brighter on one NEOWISE visit in 2015: a test for Gaia DR4'
+hook: 'Found blind in Oddsky hunts H-0008/H-0009: x2.5 in both W1 and W2 on 2015 Aug 1, every other visit
+  quiet. No optical survey covered it; Gaia DR4 is the second instrument.'
+status: observation
+target:
+  name: Gaia DR3 5863586423081438848
+  ra: 197.610553
+  dec: -61.383156
+  aliases: []
+  gaia_source_id: 5863586423081438848
+summary: ''
+claims:
+- id: C1
+  text: 'NEOWISE on 2015 Aug 1: x2.5 brighter in both W1 and W2 than the star''s median; every other visit
+    quiet. No optical survey covered the event. Found blind by hunts H-0008/H-0009.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+- id: C2
+  text: Gaia DR3 built this star's mean G from fewer CCD measurements than its neighbours (1.4th percentile)
+    and shows high scatter, which in 47 calibration lenses favours an event Gaia saw (likelihood ratio
+    ~7; hunts/H-0009/predictions/dr4_referee.md).
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+hypotheses: []
+predictions:
+- id: P1
+  statement: 'Gaia DR4 G epoch photometry of Gaia DR3 5863586423081438848 (or the DR4 source cross-matched
+    to it): the median G of the transits in MJD 57185-57300 (2015-06-12 to 2015-10-05 00:00; forecast
+    6 transits on 4 nights) is more than 0.2 mag brighter than the median G in MJD 57600-58868 (2016-07-31
+    to 2020-01-20). Tests: a months-long event on the Gaia star (lens or slow non-lens) against an artifact,
+    a flare or an event on another star.'
+  check:
+    series: GAIA:G
+    start: 57185.0
+    end: 57300.0
+    statistic: median
+    baseline:
+    - 57600.0
+    - 58868.0
+    op: <
+    value: -0.2
+  probability: 0.7
+  resolve_by: '2027-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-31T03:31:12+00:00'
+literature: []
+hunt: H-0009
+featured: false
+created_at: '2026-10-31T03:06:04+00:00'

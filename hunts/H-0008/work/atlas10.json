@@ -319,11 +319,111 @@
   "fred": 6622.7
  },
  "J175634.35-205556.9": {
-  "status": "ATLAS not returned yet",
-  "task": "https://fallingstar-data.com/forcedphot/queue/5273742/"
+  "t_peak_guess": 59659.4,
+  "t_peak_date": "2022-03-21",
+  "n": 961,
+  "atlas_nights_within_60d": 29,
+  "peak_ratio_atlas_o": 5.95,
+  "max_ratio_elsewhere_o": 1.17,
+  "gaia_G": 15.242986,
+  "l": 8.15,
+  "b": 1.96,
+  "static": {
+   "chi2": 1469.9,
+   "dof": 752,
+   "t0": 59663.0,
+   "t0_date": "2022-03-25",
+   "tE": 11.3,
+   "u0": 0.114,
+   "Amax": 8.85,
+   "fs": {
+    "ATLAS_c_02a": 0.02,
+    "ATLAS_c_03a": 1.164,
+    "ATLAS_c_04a": 0.02,
+    "ATLAS_o_01a": 1.161,
+    "ATLAS_o_02a": 1.5,
+    "ATLAS_o_03a": 1.137,
+    "ATLAS_o_04a": 1.124,
+    "NEOWISE_W1": 1.114,
+    "NEOWISE_W2": 1.192
+   }
+  },
+  "parallax": {
+   "chi2": 1466.3,
+   "dof": 750,
+   "t0": 59661.2,
+   "t0_date": "2022-03-23",
+   "tE": 92.5,
+   "u0": 0.02,
+   "Amax": 50.52,
+   "fs": {
+    "ATLAS_c_02a": 1.5,
+    "ATLAS_c_03a": 0.072,
+    "ATLAS_c_04a": 0.02,
+    "ATLAS_o_01a": 0.068,
+    "ATLAS_o_02a": 0.104,
+    "ATLAS_o_03a": 0.067,
+    "ATLAS_o_04a": 0.068,
+    "NEOWISE_W1": 0.065,
+    "NEOWISE_W2": 0.069
+   }
+  },
+  "pv7": 1488.9,
+  "pv7_asym": 1488.2,
+  "fred": 2603.3
  },
  "J174744.42-374630.7": {
-  "status": "ATLAS not returned yet",
-  "task": "https://fallingstar-data.com/forcedphot/queue/5273743/"
+  "t_peak_guess": 59654.4,
+  "t_peak_date": "2022-03-16",
+  "n": 868,
+  "atlas_nights_within_60d": 35,
+  "peak_ratio_atlas_o": 2.09,
+  "max_ratio_elsewhere_o": 1.15,
+  "gaia_G": 13.839335,
+  "l": 352.66,
+  "b": -4.95,
+  "static": {
+   "chi2": 2546.6,
+   "dof": 728,
+   "t0": 59655.45,
+   "t0_date": "2022-03-17",
+   "tE": 107.7,
+   "u0": 0.682,
+   "Amax": 1.71,
+   "fs": {
+    "ATLAS_c_02a": 0.32,
+    "ATLAS_c_03a": 1.346,
+    "ATLAS_c_04a": 1.317,
+    "ATLAS_o_01a": 0.392,
+    "ATLAS_o_02a": 0.02,
+    "ATLAS_o_03a": 1.434,
+    "ATLAS_o_04a": 1.414,
+    "NEOWISE_W1": 1.474,
+    "NEOWISE_W2": 1.5
+   }
+  },
+  "parallax": {
+   "chi2": 2388.1,
+   "dof": 726,
+   "t0": 59649.04,
+   "t0_date": "2022-03-11",
+   "tE": 86.4,
+   "u0": -0.673,
+   "Amax": 1.73,
+   "fs": {
+    "ATLAS_c_02a": 0.987,
+    "ATLAS_c_03a": 1.33,
+    "ATLAS_c_04a": 1.255,
+    "ATLAS_o_01a": 1.145,
+    "ATLAS_o_02a": 0.02,
+    "ATLAS_o_03a": 1.424,
+    "ATLAS_o_04a": 1.413,
+    "NEOWISE_W1": 1.472,
+    "NEOWISE_W2": 1.5
+   }
+  },
+  "pv7": 2485.7,
+  "pv7_asym": 2422.4,
+  "fred": 2446.5
  }
 }

@@ -75,8 +75,9 @@ stars beside bright ones and blended ones, which crowd the bulge and the plane.
 
 ## Candidates (not followed up)
 
-The 122 strong unexplained events are in `work/sky4_strong.csv`. TNS rate-limited 60 of the lookups again (recorded as errors,
-not as "nothing"), so novelty is unchecked for half of them. 102 lie within 5° of the plane and 112 have no ZTF window
+The 122 strong unexplained events are in `work/sky4_strong.csv`. TNS rate-limited 60 of the lookups at first; a slow re-query
+(`scripts/hunt_tns_retry.py`) completed all of them: 116 have no TNS object within 60", and the other 6 are Gaia alerts (one
+confirmed supernova, five never classified). 102 lie within 5° of the plane and 112 have no ZTF window
 and ATLAS is the next check. Two families deserve follow-up first:
 
 - **Long, colour-neutral events** (two to six visits, achromatic): the black-hole-lens search proper. Examples: J160706.90-533729.5
@@ -88,8 +89,32 @@ and ATLAS is the next check. Two families deserve follow-up first:
 
 The pass also catches non-stellar transients: J101348.30+180734.9 is the host of SN 2022ffg (Gaia22bxs, a Type II supernova).
 
+## Gaia DR4 as the second instrument (`predictions/`)
+
+Gaia DR4 (scheduled 2 December 2026) publishes epoch photometry for 2014.6-2020.1. For events nobody else observed, it is the only
+possible second instrument, so predictions were sealed before it lands. Six events, one prediction each, now cases:
+
+| case | event | prediction (Gaia G, median unless stated, against a quiet baseline) | P |
+|---|---|---|---|
+| OS-0020 | J163539 (H-0008, ATLAS ×6-9 in 2017) | more than 1.2 mag brighter in 2017 Jul 15 - Oct 16 | 0.93 |
+| OS-0021 | J173150 (H-0008, ATLAS ×7.7 in 2018) | brightest night in 2018 Feb 1 - Oct 9 more than 1.0 mag brighter | 0.90 |
+| OS-0022 | J124517 (NEOWISE ×6.9, 2018 Jul) | more than 0.15 mag brighter in 2018 May 17 - Aug 10 | 0.50 |
+| OS-0023 | J160706 (NEOWISE ×8.3, 2017 Aug) | more than 0.5 mag brighter in 2017 Jul 11 - Sep 29 | 0.74 |
+| OS-0024 | J131026 (NEOWISE ×2.5, 2015 Aug) | more than 0.2 mag brighter in 2015 Jun 12 - Oct 5 | 0.70 |
+| OS-0025 | J154239 (NEOWISE ×2.3, 2017 Aug) | more than 0.15 mag brighter in 2017 Jul 11 - Sep 24 (a neighbour 3.2" away may be the variable) | 0.45 |
+
+Every window holds 5-10 forecast Gaia transits (GOST scanning law), so each check has at most a 3% chance of coming back
+unresolvable. The design (`predictions/dr4_proposal.md`) proposed 13; the referee (`predictions/dr4_referee.md`) kept one per
+event, because the others were 96-99% determined by the kept ones and would have counted one bet several times on the ledger.
+Gaia scanned J163539 and J173150 during their events without an alert; that is weak evidence, since Gaia alerted on only 5 of 12
+comparable DR3 lenses.
+
+Before DR4 is graded: confirm the epoch-photometry fetch works for DR4 (`src/oddsky/data/gaia_epoch.py` falls back to DR3 on any
+error, and these stars have no DR3 epoch photometry), and check that each DR4 source lies within 0.5" and 0.3 mag of its DR3
+counterpart. Grading changes after DR4 lands are limited to mapping DR4 columns.
+
 ## Next
 
-- ATLAS forced photometry for the strongest long, colour-neutral events, and a referee before anything is called a lens.
-- Re-query TNS slowly for the 60 failed lookups.
-- Gaia DR4 (December 2026) for every event in 2014.7-2020.1.
+- ATLAS forced photometry for ten strong events it can cover is queued (`work/atlas/queue.csv`); a referee before anything is
+  called a lens.
+- Grade the six DR4 predictions in December.

@@ -1,0 +1,88 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  query:
+    adql: SELECT source_id, ra, dec, parallax, parallax_over_error, pmra, pmdec, ruwe, phot_g_mean_mag,
+      phot_bp_mean_mag, phot_rp_mean_mag, bp_rp, phot_variable_flag, teff_gspphot, distance_gspphot, non_single_star,
+      DISTANCE(POINT(248.915374,-35.86921), POINT(ra,dec))*3600 AS sep_arcsec FROM gaiadr3.gaia_source
+      WHERE 1=CONTAINS(POINT(ra,dec), CIRCLE(248.915374,-35.86921,0.008333333333333333)) ORDER BY sep_arcsec
+  retrieved_at: '2026-10-31T02:51:01+00:00'
+  rows_raw: 44
+  rows_kept: 44
+  cuts: []
+  notes: []
+  status: ok
+gaia_epoch:
+  archive: ESA Gaia epoch photometry (datalink; DR4 if published, else DR3)
+  query:
+    source_id: 6020322385418675200
+  retrieved_at: '2026-10-31T02:53:35+00:00'
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  notes:
+  - no Gaia epoch photometry (DR3 published it only for sources Gaia flagged as variable)
+  status: empty
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  query:
+    catalog: neowiser_p1bs_psd
+    spatial: cone
+    radius: 3.0
+    radunits: arcsec
+    objstr: 248.915374 -35.86921
+    outfmt: 1
+    selcols: mjd,w1mpro,w1sigmpro,w2mpro,w2sigmpro,qual_frame,qi_fact,saa_sep,moon_masked,cc_flags,ph_qual,w1sat,w2sat,nb,na,w1snr,w2snr,w1rchi2,w2rchi2
+  retrieved_at: '2026-10-31T02:53:50+00:00'
+  rows_raw: 280
+  rows_kept: 41
+  cuts:
+  - 'W1: qual_frame > 0 removed 1'
+  - 'W1: saa_sep > 0 removed 63'
+  - 'W1: moon_masked == ''00'' removed 18'
+  - 'W2: qual_frame > 0 removed 1'
+  - 'W2: saa_sep > 0 removed 63'
+  - 'W2: moon_masked == ''00'' removed 18'
+  - 'W2: ph_qual[1] in (A,B) removed 97'
+  - 'W2: w2snr >= 4 removed 51'
+  notes:
+  - rows_kept counts 6-month visits (W1 and W2), not exposures
+  status: ok
+neowise_exp:
+  archive: IRSA Gator neowiser_p1bs_psd (single exposures)
+  query:
+    catalog: neowiser_p1bs_psd
+    spatial: cone
+    radius: 3.0
+    radunits: arcsec
+    objstr: 248.915374 -35.86921
+    outfmt: 1
+    selcols: mjd,w1mpro,w1sigmpro,w2mpro,w2sigmpro,qual_frame,qi_fact,saa_sep,moon_masked,cc_flags,ph_qual,w1sat,w2sat,nb,na,w1snr,w2snr,w1rchi2,w2rchi2
+  retrieved_at: '2026-10-31T02:54:00+00:00'
+  rows_raw: 280
+  rows_kept: 248
+  cuts:
+  - 'W1: qual_frame > 0 removed 1'
+  - 'W1: saa_sep > 0 removed 63'
+  - 'W1: moon_masked == ''00'' removed 18'
+  - 'W2: qual_frame > 0 removed 1'
+  - 'W2: saa_sep > 0 removed 63'
+  - 'W2: moon_masked == ''00'' removed 18'
+  - 'W2: ph_qual[1] in (A,B) removed 97'
+  - 'W2: w2snr >= 4 removed 51'
+  notes: []
+  status: ok
+atlas:
+  archive: ATLAS forced photometry (fallingstar-data.com), reduced images
+  query:
+    ra: 248.915374
+    dec: -35.86921
+    use_reduced: true
+    task: '5273734'
+  retrieved_at: '2026-10-31T02:54:00+00:00'
+  rows_raw: 3539
+  rows_kept: 3090
+  cuts: []
+  notes:
+  - reused the hunt's server response hunts/H-0008/work/atlas/atlas_J163539.txt
+  - 'chi_n cut disabled: chi_n rises with flux'
+  status: ok

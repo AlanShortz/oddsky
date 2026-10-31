@@ -1,0 +1,76 @@
+id: OS-0021
+title: 'A G = 15 star in Scorpius brightened nearly eightfold for months in 2018: a long microlensing
+  candidate'
+hook: 'Found blind in Oddsky hunt H-0008 (NEOWISE: x1.4 on 2018 Mar 16 and x3.0 on 2018 Aug 27, equal
+  in W1 and W2). ATLAS shows a smooth x7.7 event peaking 2018 Jul 11-14; a lens fits only with annual
+  parallax, and the timescale is poorly constrained.'
+status: reproduced
+target:
+  name: Gaia DR3 5952322268527918208
+  ra: 262.961311
+  dec: -44.763659
+  aliases: []
+  gaia_source_id: 5952322268527918208
+summary: ''
+claims:
+- id: C1
+  text: 'NEOWISE: x1.4 on 2018 Mar 16 and x3.0 on 2018 Aug 27, equal in W1 and W2; every other visit quiet.
+    Found blind by hunt H-0008.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+- id: C2
+  text: ATLAS (task 5273739) shows one smooth x7.7 brightening peaking 2018 Jul 11-14. A static lens needs
+    a source brighter than all the light in the aperture and is excluded; a lens fits only with annual
+    parallax, and tE is unconstrained (~120-490 d). The rise is mildly chromatic and the peak may be partly
+    saturated (hunts/H-0008/reviews/claude-referee-atlas10-2026-10-30.md).
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+- id: C3
+  text: Gaia scanned the star 27, 50 and 80 d after the ATLAS peak without an alert.
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A long microlensing event with annual parallax (P 0.55, ATLAS-follow-up referee); not established.
+  supports:
+  - C1
+  - C2
+  - C3
+  conflicts: []
+  would_falsify: Gaia DR4 flat during the event, or a repeat.
+  status: live
+  confidence: 0.55
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'Gaia DR4 G epoch photometry of Gaia DR3 5952322268527918208 (or the DR4 source cross-matched
+    to it): the brightest nightly-median G in MJD 58150-58400 (2018-02-01 to 2018-10-09 00:00; forecast
+    10 transits on 6 nights) is more than 1.0 mag brighter than the median G in MJD 56863.5-57935 (2014-07-25
+    to 2017-07-01). Model: 1.4-1.85 mag, on 2018 Aug 9.'
+  check:
+    series: GAIA:G
+    start: 58150.0
+    end: 58400.0
+    statistic: brightest
+    baseline:
+    - 56863.5
+    - 57935.0
+    op: <
+    value: -1.0
+  probability: 0.9
+  resolve_by: '2027-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-31T03:31:12+00:00'
+literature: []
+hunt: H-0008
+featured: false
+created_at: '2026-10-31T02:54:01+00:00'

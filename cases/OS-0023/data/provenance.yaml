@@ -1,0 +1,73 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  query:
+    adql: SELECT source_id, ra, dec, parallax, parallax_over_error, pmra, pmdec, ruwe, phot_g_mean_mag,
+      phot_bp_mean_mag, phot_rp_mean_mag, bp_rp, phot_variable_flag, teff_gspphot, distance_gspphot, non_single_star,
+      DISTANCE(POINT(241.778721,-53.624783), POINT(ra,dec))*3600 AS sep_arcsec FROM gaiadr3.gaia_source
+      WHERE 1=CONTAINS(POINT(ra,dec), CIRCLE(241.778721,-53.624783,0.008333333333333333)) ORDER BY sep_arcsec
+  retrieved_at: '2026-10-31T03:02:32+00:00'
+  rows_raw: 133
+  rows_kept: 133
+  cuts: []
+  notes: []
+  status: ok
+gaia_epoch:
+  archive: ESA Gaia epoch photometry (datalink; DR4 if published, else DR3)
+  query:
+    source_id: 5932843350525331968
+  retrieved_at: '2026-10-31T03:05:52+00:00'
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  notes:
+  - no Gaia epoch photometry (DR3 published it only for sources Gaia flagged as variable)
+  status: empty
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  query:
+    catalog: neowiser_p1bs_psd
+    spatial: cone
+    radius: 3.0
+    radunits: arcsec
+    objstr: 241.778721 -53.624783
+    outfmt: 1
+    selcols: mjd,w1mpro,w1sigmpro,w2mpro,w2sigmpro,qual_frame,qi_fact,saa_sep,moon_masked,cc_flags,ph_qual,w1sat,w2sat,nb,na,w1snr,w2snr,w1rchi2,w2rchi2
+  retrieved_at: '2026-10-31T03:05:59+00:00'
+  rows_raw: 272
+  rows_kept: 42
+  cuts:
+  - 'W1: qual_frame > 0 removed 27'
+  - 'W1: cc_flags[0] == ''0'' removed 93'
+  - 'W1: nb == 1 (no blending) removed 7'
+  - 'W1: w1rchi2 < 5x source median removed 1'
+  - 'W2: qual_frame > 0 removed 27'
+  - 'W2: cc_flags[1] == ''0'' removed 32'
+  - 'W2: nb == 1 (no blending) removed 6'
+  - 'W2: w2rchi2 < 5x source median removed 1'
+  notes:
+  - rows_kept counts 6-month visits (W1 and W2), not exposures
+  status: ok
+neowise_exp:
+  archive: IRSA Gator neowiser_p1bs_psd (single exposures)
+  query:
+    catalog: neowiser_p1bs_psd
+    spatial: cone
+    radius: 3.0
+    radunits: arcsec
+    objstr: 241.778721 -53.624783
+    outfmt: 1
+    selcols: mjd,w1mpro,w1sigmpro,w2mpro,w2sigmpro,qual_frame,qi_fact,saa_sep,moon_masked,cc_flags,ph_qual,w1sat,w2sat,nb,na,w1snr,w2snr,w1rchi2,w2rchi2
+  retrieved_at: '2026-10-31T03:06:03+00:00'
+  rows_raw: 272
+  rows_kept: 350
+  cuts:
+  - 'W1: qual_frame > 0 removed 27'
+  - 'W1: cc_flags[0] == ''0'' removed 93'
+  - 'W1: nb == 1 (no blending) removed 7'
+  - 'W1: w1rchi2 < 5x source median removed 1'
+  - 'W2: qual_frame > 0 removed 27'
+  - 'W2: cc_flags[1] == ''0'' removed 32'
+  - 'W2: nb == 1 (no blending) removed 6'
+  - 'W2: w2rchi2 < 5x source median removed 1'
+  notes: []
+  status: ok

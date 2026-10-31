@@ -6,11 +6,11 @@
       "title": "The long lenses",
       "question": "The lensing-sky search could not see saturated peaks, events lasting longer than one NEOWISE visit, or stars beside a bright neighbour. Black-hole lenses would hide exactly there. What does a search without those blind spots find?",
       "date": "2026-10-30",
-      "state": "survey done; candidates not yet followed up",
+      "state": "survey done; six Gaia DR4 predictions sealed",
       "scale": "211.7 million stars · 108.3 billion NEOWISE detections · the whole sky",
       "funnel": [[211675962, "stars with 10+ NEOWISE visits"], [3757, "single-peaked brightenings, one to six visits"], [1308, "clean, not at the first or last visit"], [118, "known microlensing events, found blind"], [122, "strong and unexplained, not yet followed up"]],
-      "verdict": "Searching the stars the first pass skipped, those beside bright neighbours and those blended with others, matters more than the new rule for long events. The search now finds 118 known microlensing events instead of 64, and 43 of 353 catchable ones instead of 18, with the biggest gain in the crowded bulge. Its 122 strong unexplained brightenings, many of them long and colour-neutral, are where a black-hole lens would be; none has been followed up yet.",
-      "cases": []
+      "verdict": "Searching the stars the first pass skipped, those beside bright neighbours and those blended with others, matters more than the new rule for long events. The search now finds 118 known microlensing events instead of 64, and 43 of 353 catchable ones instead of 18, with the biggest gain in the crowded bulge. Its 122 strong unexplained brightenings, many of them long and colour-neutral, are where a black-hole lens would be; Six events that no optical survey caught, or that ATLAS confirmed, now carry sealed predictions for Gaia DR4, due 2 December 2026.",
+      "cases": ["OS-0020", "OS-0021", "OS-0022", "OS-0023", "OS-0024", "OS-0025"]
     },
     {
       "id": "H-0008",

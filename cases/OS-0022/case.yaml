@@ -1,0 +1,46 @@
+id: OS-0022
+title: 'A star in Crux was seven times brighter on one NEOWISE visit in 2018: a test for Gaia DR4'
+hook: 'Found blind in Oddsky hunts H-0008/H-0009: x6.9 in both W1 and W2 on 2018 Jul 14, every other visit
+  quiet. No optical survey covered it; Gaia DR4 is the second instrument.'
+status: observation
+target:
+  name: Gaia DR3 5862971688685406976
+  ra: 191.322207
+  dec: -63.02375
+  aliases: []
+  gaia_source_id: 5862971688685406976
+summary: ''
+claims:
+- id: C1
+  text: 'NEOWISE on 2018 Jul 14: x6.9 brighter in both W1 and W2 (2.10 and 2.12 mag) than the star''s
+    median; every other visit quiet. No optical survey covered the event. Found blind by hunts H-0008/H-0009.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+hypotheses: []
+predictions:
+- id: P1
+  statement: 'Gaia DR4 G epoch photometry of Gaia DR3 5862971688685406976 (or the DR4 source cross-matched
+    to it): the median G of the transits in MJD 58255-58340 (2018-05-17 to 2018-08-10 00:00; forecast
+    6 transits on May 26, Jun 19 and Jul 27) is more than 0.15 mag brighter than the median G in MJD 56863.5-57935
+    (2014-07-25 to 2017-07-01). Tests: a weeks-to-months brightening of the Gaia star (lens, or slow non-lens
+    outburst) against a short outburst, an artifact or an event on another star.'
+  check:
+    series: GAIA:G
+    start: 58255.0
+    end: 58340.0
+    statistic: median
+    baseline:
+    - 56863.5
+    - 57935.0
+    op: <
+    value: -0.15
+  probability: 0.5
+  resolve_by: '2027-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-31T03:31:12+00:00'
+literature: []
+hunt: H-0009
+featured: false
+created_at: '2026-10-31T02:57:26+00:00'

@@ -1,0 +1,53 @@
+id: OS-0025
+title: 'A star in Norma was 2.3 times brighter on one NEOWISE visit in 2017: a test for Gaia DR4'
+hook: 'Found blind in Oddsky hunts H-0008/H-0009: x2.3 in both W1 and W2 on 2017 Aug 12, every other visit
+  quiet. No optical survey covered it; Gaia DR4 is the second instrument.'
+status: observation
+target:
+  name: Gaia DR3 5882495205642608896
+  ra: 235.664651
+  dec: -57.43371
+  aliases: []
+  gaia_source_id: 5882495205642608896
+summary: ''
+claims:
+- id: C1
+  text: 'NEOWISE on 2017 Aug 12: x2.3 brighter in both W1 and W2 than the star''s median; every other
+    visit quiet. No optical survey covered the event. Found blind by hunts H-0008/H-0009.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+- id: C2
+  text: A Gaia G 17.6 neighbour 3.2" away carries 73% of the target's G flux inside the NEOWISE beam,
+    so the brightening may belong to it.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T03:31:12+00:00'
+hypotheses: []
+predictions:
+- id: P1
+  statement: 'Gaia DR4 G epoch photometry of Gaia DR3 5882495205642608896 (or the DR4 source cross-matched
+    to it): the median G of the transits in MJD 57945-58020 (2017-07-11 to 2017-09-24 00:00; forecast
+    5 transits on Jul 21, Aug 17 and Sep 15) is more than 0.15 mag brighter than the median G in MJD 56863.5-57630
+    (2014-07-25 to 2016-08-30). Tests: a brightening of the Gaia star lasting more than ~2 weeks (lens
+    or slow non-lens) against a short outburst, an artifact or an event on the G 17.6 neighbour.'
+  check:
+    series: GAIA:G
+    start: 57945.0
+    end: 58020.0
+    statistic: median
+    baseline:
+    - 56863.5
+    - 57630.0
+    op: <
+    value: -0.15
+  probability: 0.45
+  resolve_by: '2027-12-31'
+  author: claude-opus-5.5
+  registered_at: '2026-10-31T03:31:12+00:00'
+literature: []
+hunt: H-0009
+featured: false
+created_at: '2026-10-31T03:11:13+00:00'

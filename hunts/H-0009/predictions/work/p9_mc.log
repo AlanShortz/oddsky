@@ -1,0 +1,66 @@
+== J163539 (G 18.313), priors {'ATLAS': 0.97, 'N': 0.03}
+   A peak median                      P(true) 0.939 P(unres) 0.031 -> stake 0.969   [true/unres per scenario: ATLAS: 0.97/0.03  N: 0.00/0.00]
+   A' peak median -1.2                P(true) 0.939 P(unres) 0.031 -> stake 0.969   [true/unres per scenario: ATLAS: 0.97/0.03  N: 0.00/0.00]
+   B rise wing                        P(true) 0.960 P(unres) 0.010 -> stake 0.970   [true/unres per scenario: ATLAS: 0.99/0.01  N: 0.00/0.01]
+   C decline wing                     P(true) 0.963 P(unres) 0.007 -> stake 0.970   [true/unres per scenario: ATLAS: 0.99/0.01  N: 0.00/0.01]
+   A peak median                      (20% loss) P(true) 0.927 P(unres) 0.043 -> stake 0.969
+   A' peak median -1.2                (20% loss) P(true) 0.927 P(unres) 0.043 -> stake 0.969
+   B rise wing                        (20% loss) P(true) 0.919 P(unres) 0.053 -> stake 0.970
+   C decline wing                     (20% loss) P(true) 0.917 P(unres) 0.055 -> stake 0.970
+== J173150 (G 15.071), priors {'ATLAS': 0.95, 'N': 0.05}
+   A peak brightest                   P(true) 0.877 P(unres) 0.075 -> stake 0.948   [true/unres per scenario: ATLAS: 0.92/0.08  N: 0.00/0.05]
+   A3 Feb-Oct brightest               P(true) 0.918 P(unres) 0.001 -> stake 0.919   [true/unres per scenario: ATLAS: 0.97/0.00  N: 0.00/0.00]
+   A2 Feb-Oct median                  P(true) 0.945 P(unres) 0.001 -> stake 0.946   [true/unres per scenario: ATLAS: 0.99/0.00  N: 0.00/0.00]
+   B rise wing                        P(true) 0.948 P(unres) 0.002 -> stake 0.950   [true/unres per scenario: ATLAS: 1.00/0.00  N: 0.00/0.00]
+   C 2019 back to baseline            P(true) 1.000 P(unres) 0.000 -> stake 1.000   [true/unres per scenario: ATLAS: 1.00/0.00  N: 1.00/0.00]
+   A peak brightest                   (20% loss) P(true) 0.751 P(unres) 0.207 -> stake 0.947
+   A3 Feb-Oct brightest               (20% loss) P(true) 0.905 P(unres) 0.003 -> stake 0.907
+   A2 Feb-Oct median                  (20% loss) P(true) 0.938 P(unres) 0.003 -> stake 0.941
+   B rise wing                        (20% loss) P(true) 0.929 P(unres) 0.022 -> stake 0.950
+   C 2019 back to baseline            (20% loss) P(true) 1.000 P(unres) 0.000 -> stake 1.000
+== J124517: lens posterior ESS 226, chi2min 5.9 (22 visits), t0 window 58152..58519; tE median 68 (16-84: 42-90); t0-tvis 16/50/84: [-6.  0.  6.]; fs_W1 median 0.75; tE2 (fall) median 68; F draws 600
+== J124517 (G 17.756), priors {'L': 0.35, 'R': 0.15, 'F': 0.15, 'N': 0.35}
+   A brightest -58..+27               P(true) 0.567 P(unres) 0.010 -> stake 0.573   [true/unres per scenario: L: 0.97/0.02  R: 0.96/0.02  F: 0.51/0.00  N: 0.02/0.00]
+   A' brightest -33..+57              P(true) 0.537 P(unres) 0.066 -> stake 0.575   [true/unres per scenario: L: 0.92/0.08  R: 0.91/0.07  F: 0.49/0.06  N: 0.02/0.05]
+   B median -58..+27                  P(true) 0.500 P(unres) 0.010 -> stake 0.505   [true/unres per scenario: L: 0.94/0.02  R: 0.91/0.02  F: 0.22/0.00  N: 0.00/0.00]
+   B' median -58..+87                 P(true) 0.479 P(unres) 0.005 -> stake 0.482   [true/unres per scenario: L: 0.93/0.01  R: 0.89/0.01  F: 0.14/0.00  N: 0.00/0.00]
+   A brightest -58..+27               (20% loss) P(true) 0.551 P(unres) 0.026 -> stake 0.565
+   A' brightest -33..+57              (20% loss) P(true) 0.465 P(unres) 0.189 -> stake 0.573
+   B median -58..+27                  (20% loss) P(true) 0.486 P(unres) 0.026 -> stake 0.499
+   B' median -58..+87                 (20% loss) P(true) 0.480 P(unres) 0.006 -> stake 0.483
+== J160706: lens posterior ESS 41, chi2min 13.5 (21 visits), t0 window 57620..58178; tE median 250 (16-84: 236-283); t0-tvis 16/50/84: [-15. -12.  -0.]; fs_W1 median 0.91; tE2 (fall) median 142; F draws 0
+== J160706 (G 18.003), priors {'L': 0.55, 'R': 0.2, 'F': 0.0, 'N': 0.25}
+   A median -35..+45                  P(true) 0.721 P(unres) 0.030 -> stake 0.743   [true/unres per scenario: L: 0.96/0.04  R: 0.96/0.04  N: 0.00/0.00]
+   A' median -35..+45 (-1.0)          P(true) 0.704 P(unres) 0.030 -> stake 0.726   [true/unres per scenario: L: 0.96/0.04  R: 0.88/0.04  N: 0.00/0.00]
+   B brightest -35..+45 < -1.5        P(true) 0.691 P(unres) 0.030 -> stake 0.713   [true/unres per scenario: L: 0.96/0.04  R: 0.81/0.04  N: 0.00/0.00]
+   C rise+peak median                 P(true) 0.722 P(unres) 0.021 -> stake 0.738   [true/unres per scenario: L: 0.97/0.03  R: 0.94/0.02  N: 0.00/0.00]
+   D decline wing                     P(true) 0.507 P(unres) 0.275 -> stake 0.698   [true/unres per scenario: L: 0.70/0.27  R: 0.62/0.29  N: 0.00/0.27]
+   A median -35..+45                  (20% loss) P(true) 0.687 P(unres) 0.077 -> stake 0.745
+   A' median -35..+45 (-1.0)          (20% loss) P(true) 0.671 P(unres) 0.077 -> stake 0.728
+   B brightest -35..+45 < -1.5        (20% loss) P(true) 0.660 P(unres) 0.077 -> stake 0.715
+   C rise+peak median                 (20% loss) P(true) 0.720 P(unres) 0.022 -> stake 0.736
+   D decline wing                     (20% loss) P(true) 0.361 P(unres) 0.486 -> stake 0.702
+== J131026: lens posterior ESS 347, chi2min 5.4 (22 visits), t0 window 57058..57425; tE median 131 (16-84: 113-165); t0-tvis 16/50/84: [ 4. 20. 32.]; fs_W1 median 0.64; tE2 (fall) median 131; F draws 600
+== J131026 (G 17.749), priors {'L': 0.5, 'R': 0.2, 'F': 0.05, 'N': 0.25}
+   A median -51..+64                  P(true) 0.670 P(unres) 0.021 -> stake 0.685   [true/unres per scenario: L: 0.97/0.03  R: 0.91/0.03  F: 0.11/0.00  N: 0.00/0.00]
+   A' median -51..+64 (-0.2)          P(true) 0.685 P(unres) 0.021 -> stake 0.699   [true/unres per scenario: L: 0.97/0.03  R: 0.97/0.03  F: 0.13/0.00  N: 0.00/0.00]
+   B brightest -51..+64 < -0.6        P(true) 0.674 P(unres) 0.021 -> stake 0.689   [true/unres per scenario: L: 0.97/0.03  R: 0.84/0.03  F: 0.38/0.00  N: 0.01/0.00]
+   B' brightest -51..+64 < -0.4       P(true) 0.700 P(unres) 0.021 -> stake 0.715   [true/unres per scenario: L: 0.97/0.03  R: 0.93/0.03  F: 0.42/0.00  N: 0.03/0.00]
+   C wide median -115..+130           P(true) 0.676 P(unres) 0.000 -> stake 0.676   [true/unres per scenario: L: 1.00/0.00  R: 0.89/0.00  F: 0.00/0.00  N: 0.00/0.00]
+   A median -51..+64                  (20% loss) P(true) 0.659 P(unres) 0.037 -> stake 0.684
+   A' median -51..+64 (-0.2)          (20% loss) P(true) 0.673 P(unres) 0.037 -> stake 0.700
+   B brightest -51..+64 < -0.6        (20% loss) P(true) 0.659 P(unres) 0.037 -> stake 0.685
+   B' brightest -51..+64 < -0.4       (20% loss) P(true) 0.685 P(unres) 0.037 -> stake 0.711
+   C wide median -115..+130           (20% loss) P(true) 0.676 P(unres) 0.000 -> stake 0.676
+== J154239: lens posterior ESS 1758, chi2min 6.5 (21 visits), t0 window 57811..58175; tE median 55 (16-84: 32-80); t0-tvis 16/50/84: [-15.   2.  16.]; fs_W1 median 0.68; tE2 (fall) median 55; F draws 600
+== J154239 (G 17.242), priors {'L': 0.3, 'R': 0.1, 'F': 0.15, 'N': 0.45}
+   A brightest -33..+42               P(true) 0.476 P(unres) 0.020 -> stake 0.486   [true/unres per scenario: L: 0.96/0.04  R: 0.91/0.03  F: 0.59/0.02  N: 0.02/0.01]
+   A' brightest -33..+42 (-0.25)      P(true) 0.507 P(unres) 0.020 -> stake 0.518   [true/unres per scenario: L: 0.96/0.04  R: 0.96/0.03  F: 0.71/0.02  N: 0.03/0.01]
+   B median -33..+42                  P(true) 0.405 P(unres) 0.020 -> stake 0.413   [true/unres per scenario: L: 0.90/0.04  R: 0.83/0.03  F: 0.34/0.02  N: 0.00/0.01]
+   B' median -33..+42 (-0.15)         P(true) 0.443 P(unres) 0.020 -> stake 0.453   [true/unres per scenario: L: 0.96/0.04  R: 0.93/0.03  F: 0.41/0.02  N: 0.00/0.01]
+   C Oct-Nov 2017 (+60..+110)         P(true) 0.215 P(unres) 0.000 -> stake 0.215   [true/unres per scenario: L: 0.57/0.00  R: 0.45/0.00  F: 0.00/0.00  N: 0.00/0.00]
+   A brightest -33..+42               (20% loss) P(true) 0.454 P(unres) 0.067 -> stake 0.486
+   A' brightest -33..+42 (-0.25)      (20% loss) P(true) 0.481 P(unres) 0.067 -> stake 0.515
+   B median -33..+42                  (20% loss) P(true) 0.391 P(unres) 0.067 -> stake 0.419
+   B' median -33..+42 (-0.15)         (20% loss) P(true) 0.428 P(unres) 0.067 -> stake 0.458
+   C Oct-Nov 2017 (+60..+110)         (20% loss) P(true) 0.215 P(unres) 0.000 -> stake 0.215

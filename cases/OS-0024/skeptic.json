@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-10-31T03:11:13+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "0 fail, 3 warn, 3 pass, 0 skipped",
+  "counts": {
+    "fail": 0,
+    "warn": 3,
+    "pass": 3,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "pass",
+      "finding": "no Gaia source within 6.1\"",
+      "numbers": {
+        "radius_arcsec": 6.1
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "370 exposures; cuts removed up to 66 (18%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 370,
+        "removed_per_band": {
+          "W1": 66,
+          "W2": 40
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "warn",
+      "finding": "the only optical data are TESS: one spacecraft, normalised per sector. Nothing here has been seen by a second instrument.",
+      "numbers": {}
+    },
+    {
+      "id": "alias_neowise_exp_W2",
+      "title": "Periodicity vs survey rhythms (NEOWISE_EXP W2)",
+      "status": "warn",
+      "finding": "strongest period 20.27 d coincides with: matches spectral-window peak at 20.25 d",
+      "numbers": {
+        "top_period_days": 20.26886884487224,
+        "power": 0.7156518700813439
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "warn",
+      "finding": "RUWE = 2.17 > 1.4: likely an unresolved companion, or a photocentre shifted by variability",
+      "numbers": {
+        "ruwe": 2.1728134
+      }
+    }
+  ]
+}

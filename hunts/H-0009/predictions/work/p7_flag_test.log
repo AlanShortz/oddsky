@@ -1,0 +1,57 @@
+              source_id  paczynski0_u0  paczynski0_te  paczynski0_tmax  phot_g_mean_mag
+0   5972707141027232896  -6.344005e-01      48.224796      2647.742044        18.232271
+1   5984758097700788992  -3.073327e-01      37.115280      2228.334247        18.302677
+2   5932291262591322240  -1.027932e-01      42.189224      1938.444913        19.492764
+3   4041281792784924928  -8.442165e-02      66.083755      1892.877496        19.081781
+4   5861145095000219904  -1.968888e-04      23.714367      2621.111730        19.627974
+5   4063274151469596928  -4.294444e-05      35.130550      2283.489784        17.203684
+6   5962744333088467968  -4.259876e-05      27.357250      2461.350250        20.469156
+7   4064049685012894080  -4.064503e-05      30.525040      2276.209721        19.251019
+8   4096895979980830592  -9.996472e-06      33.147747      2430.716419        18.743654
+9   4061145771721121792  -7.836470e-06      37.742638      2055.300754        17.665178
+10  4060408862783337344  -6.571656e-06      84.174034      1818.973713        20.203941
+11  4145925372472941568  -5.382290e-06      45.277340      2044.987786        18.893053
+12  4116567308158603392  -4.314618e-06     109.276230      2234.023347        18.586508
+13  5932749758903448448  -3.547629e-06      64.162346      2648.227254        20.765670
+14  4067940826629400832  -5.305998e-07      20.628150      2500.039652        19.594755
+15  5969060713789360000   3.316026e-07      62.829660      2592.077431        17.543820
+16  4059256780768511616   3.405585e-07      93.715850      1961.645988        20.550514
+17  4053693114402109568   1.971461e-06      33.781080      2620.973590        19.469492
+18  6733269879761239168   3.510351e-06      71.809006      2486.714446        18.126543
+19  6059816980526317568   4.058913e-06     176.390240      2517.941106        15.958667
+20  3292310414861319936   4.956676e-06      50.894707      1818.680378        16.328339
+21  4043698789930892160   6.549232e-06      23.398682      2491.979107        16.947155
+22  4064540513876708096   7.156392e-06      29.489283      2278.279530        16.751340
+23  5964077937551918720   8.461348e-06      89.399956      2040.881237        19.071316
+24  4095830312689418368   1.434447e-05      27.514835      2055.895150        18.467564
+5972707141027232896: 54 G transits with mag (0 rej_phot, 1 rej_var); 0 without mag; brightest dm -0.57
+5984758097700788992: 57 G transits with mag (0 rej_phot, 1 rej_var); 0 without mag; brightest dm -1.26
+5932291262591322240: 44 G transits with mag (0 rej_phot, 0 rej_var); 0 without mag; brightest dm -2.41
+4041281792784924928: 55 G transits with mag (0 rej_phot, 2 rej_var); 0 without mag; brightest dm -1.94
+5861145095000219904: 51 G transits with mag (0 rej_phot, 0 rej_var); 0 without mag; brightest dm -0.88
+4063274151469596928: 27 G transits with mag (0 rej_phot, 0 rej_var); 0 without mag; brightest dm -0.65
+5962744333088467968: 12 G transits with mag (0 rej_phot, 0 rej_var); 0 without mag; brightest dm -0.69
+4064049685012894080: 28 G transits with mag (0 rej_phot, 1 rej_var); 0 without mag; brightest dm -0.67
+4096895979980830592: 24 G transits with mag (0 rej_phot, 0 rej_var); 0 without mag; brightest dm -0.68
+4061145771721121792: 27 G transits with mag (0 rej_phot, 0 rej_var); 0 without mag; brightest dm -1.04
+4060408862783337344: 14 G transits with mag (0 rej_phot, 0 rej_var); 0 without mag; brightest dm -0.48
+4145925372472941568: 26 G transits with mag (0 rej_phot, 0 rej_var); 0 without mag; brightest dm -0.61
+4116567308158603392: 44 G transits with mag (0 rej_phot, 1 rej_var); 0 without mag; brightest dm -1.79
+5932749758903448448: 24 G transits with mag (0 rej_phot, 1 rej_var); 0 without mag; brightest dm -1.84
+4067940826629400832: 35 G transits with mag (0 rej_phot, 0 rej_var); 0 without mag; brightest dm -1.88
+5969060713789360000: 67 G transits with mag (0 rej_phot, 1 rej_var); 0 without mag; brightest dm -2.14
+4059256780768511616: 28 G transits with mag (0 rej_phot, 1 rej_var); 0 without mag; brightest dm -1.37
+4053693114402109568: 24 G transits with mag (0 rej_phot, 0 rej_var); 0 without mag; brightest dm -1.09
+6733269879761239168: 29 G transits with mag (0 rej_phot, 3 rej_var); 0 without mag; brightest dm -2.01
+6059816980526317568: 65 G transits with mag (0 rej_phot, 1 rej_var); 0 without mag; brightest dm -3.13
+3292310414861319936: 41 G transits with mag (0 rej_phot, 1 rej_var); 0 without mag; brightest dm -0.26
+4043698789930892160: 46 G transits with mag (0 rej_phot, 2 rej_var); 0 without mag; brightest dm -1.76
+4064540513876708096: 25 G transits with mag (0 rej_phot, 0 rej_var); 0 without mag; brightest dm -0.59
+5964077937551918720: 41 G transits with mag (0 rej_phot, 1 rej_var); 0 without mag; brightest dm -1.45
+4095830312689418368: 30 G transits with mag (0 rej_phot, 1 rej_var); 0 without mag; brightest dm -0.61
+              n  rej_phot  rej_var
+bin                               
+-0.1..99    755         0        4
+-0.3..-0.1   70         0        5
+-1.0..-0.3   61         0        4
+-99..-1.0    32         0        5

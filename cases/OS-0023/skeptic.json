@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-10-31T03:06:03+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "0 fail, 2 warn, 4 pass, 0 skipped",
+  "counts": {
+    "fail": 0,
+    "warn": 2,
+    "pass": 4,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "warn",
+      "finding": "4 Gaia source(s) within 6.1\"; brightest contributes 14.1% of the target's G flux at 5.7\"",
+      "numbers": {
+        "radius_arcsec": 6.1,
+        "n_inside": 4,
+        "total_flux_ratio_G": 0.3955,
+        "brightest_flux_ratio": 0.141,
+        "brightest_sep": 5.7369
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "272 exposures; cuts removed up to 128 (47%) per band; 2 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 272,
+        "removed_per_band": {
+          "W1": 128,
+          "W2": 66
+        },
+        "thin_visits": 2
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "warn",
+      "finding": "the only optical data are TESS: one spacecraft, normalised per sector. Nothing here has been seen by a second instrument.",
+      "numbers": {}
+    },
+    {
+      "id": "alias_neowise_exp_W2",
+      "title": "Periodicity vs survey rhythms (NEOWISE_EXP W2)",
+      "status": "pass",
+      "finding": "strongest period 8.11 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 8.113506711341806,
+        "power": 0.786440361610673
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 1.03 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 1.0314444
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-10-31T03:17:03+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "1 fail, 1 warn, 4 pass, 0 skipped",
+  "counts": {
+    "fail": 1,
+    "warn": 1,
+    "pass": 4,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "fail",
+      "finding": "6 Gaia source(s) within 6.1\"; brightest contributes 73.2% of the target's G flux at 3.2\". A variable neighbour could produce this signal.",
+      "numbers": {
+        "radius_arcsec": 6.1,
+        "n_inside": 6,
+        "total_flux_ratio_G": 1.0857,
+        "brightest_flux_ratio": 0.7317,
+        "brightest_sep": 3.2155
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "328 exposures; cuts removed up to 29 (9%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 328,
+        "removed_per_band": {
+          "W1": 29,
+          "W2": 23
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "warn",
+      "finding": "the only optical data are TESS: one spacecraft, normalised per sector. Nothing here has been seen by a second instrument.",
+      "numbers": {}
+    },
+    {
+      "id": "alias_neowise_exp_W2",
+      "title": "Periodicity vs survey rhythms (NEOWISE_EXP W2)",
+      "status": "pass",
+      "finding": "strongest period 2.55 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 2.5476789131597677,
+        "power": 0.6116866708395446
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 0.96 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 0.9555184
+      }
+    }
+  ]
+}

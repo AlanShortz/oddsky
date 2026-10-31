@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-10-31T02:54:00+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "0 fail, 5 warn, 4 pass, 0 skipped",
+  "counts": {
+    "fail": 0,
+    "warn": 5,
+    "pass": 4,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "warn",
+      "finding": "1 Gaia source(s) within 6.1\"; brightest contributes 29.0% of the target's G flux at 4.9\"",
+      "numbers": {
+        "radius_arcsec": 6.1,
+        "n_inside": 1,
+        "total_flux_ratio_G": 0.2898,
+        "brightest_flux_ratio": 0.2898,
+        "brightest_sep": 4.9231
+      }
+    },
+    {
+      "id": "blend_atlas",
+      "title": "Neighbours inside the ATLAS beam (8.0\")",
+      "status": "warn",
+      "finding": "2 Gaia source(s) within 8.0\"; brightest contributes 29.0% of the target's G flux at 4.9\"",
+      "numbers": {
+        "radius_arcsec": 8.0,
+        "n_inside": 2,
+        "total_flux_ratio_G": 0.5149,
+        "brightest_flux_ratio": 0.2898,
+        "brightest_sep": 4.9231
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "warn",
+      "finding": "280 exposures; cuts removed up to 230 (82%) per band; 15 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 280,
+        "removed_per_band": {
+          "W1": 82,
+          "W2": 230
+        },
+        "thin_visits": 15
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "warn",
+      "finding": "optical data from 1 independent source(s): ATLAS (3090). One instrument or observer is a single point of failure; seek a second.",
+      "numbers": {
+        "n_sources": 1,
+        "top_sources": {
+          "ATLAS": 3090
+        }
+      }
+    },
+    {
+      "id": "onset_atlas_ATLAS_o",
+      "title": "Was the start seen? (ATLAS ATLAS_o)",
+      "status": "warn",
+      "finding": "the 0.74-mag dip peaking at MJD 57880 begins at the edge of the data or right after a gap; its true start and shape are unobserved",
+      "numbers": {
+        "event": {
+          "direction": "fainter",
+          "start_mjd": 57879.575671,
+          "end_mjd": 57907.5013635,
+          "duration_days": 27.925692500000878,
+          "peak_mjd": 57879.575671,
+          "depth_mag": 0.7420166932672387,
+          "n_bins": 3,
+          "ingress_days": 0.0,
+          "egress_days": 27.925692500000878,
+          "baseline_mag": 16.929579072147078,
+          "asymmetry": 1.0,
+          "cameras_involved": 4,
+          "starts_after_gap": true,
+          "ends_before_gap": false
+        }
+      }
+    },
+    {
+      "id": "alias_atlas_ATLAS_o",
+      "title": "Periodicity vs survey rhythms (ATLAS ATLAS_o)",
+      "status": "pass",
+      "finding": "strongest period 377.75 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 377.747969073405,
+        "power": 0.6051193592193677
+      }
+    },
+    {
+      "id": "alias_neowise_exp_W1",
+      "title": "Periodicity vs survey rhythms (NEOWISE_EXP W1)",
+      "status": "pass",
+      "finding": "strongest period 2.72 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 2.7187454607145067,
+        "power": 0.8705930246298449
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 0.98 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 0.9756906
+      }
+    }
+  ]
+}
