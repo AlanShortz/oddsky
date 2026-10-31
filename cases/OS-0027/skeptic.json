@@ -1,0 +1,103 @@
+{
+  "generated_at": "2026-10-31T19:34:18+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "2 fail, 3 warn, 3 pass, 0 skipped",
+  "counts": {
+    "fail": 2,
+    "warn": 3,
+    "pass": 3,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "fail",
+      "finding": "4 Gaia source(s) within 6.1\"; brightest contributes 271.6% of the target's G flux at 6.0\". A variable neighbour could produce this signal.",
+      "numbers": {
+        "radius_arcsec": 6.1,
+        "n_inside": 4,
+        "total_flux_ratio_G": 3.999,
+        "brightest_flux_ratio": 2.7165,
+        "brightest_sep": 6.0157
+      }
+    },
+    {
+      "id": "blend_atlas",
+      "title": "Neighbours inside the ATLAS beam (8.0\")",
+      "status": "fail",
+      "finding": "6 Gaia source(s) within 8.0\"; brightest contributes 271.6% of the target's G flux at 6.0\". A variable neighbour could produce this signal.",
+      "numbers": {
+        "radius_arcsec": 8.0,
+        "n_inside": 6,
+        "total_flux_ratio_G": 6.1096,
+        "brightest_flux_ratio": 2.7165,
+        "brightest_sep": 6.0157
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "274 exposures; cuts removed up to 104 (38%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 274,
+        "removed_per_band": {
+          "W1": 104,
+          "W2": 84
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "warn",
+      "finding": "optical data from 1 independent source(s): ATLAS (2326). One instrument or observer is a single point of failure; seek a second.",
+      "numbers": {
+        "n_sources": 1,
+        "top_sources": {
+          "ATLAS": 2326
+        }
+      }
+    },
+    {
+      "id": "alias_atlas_ATLAS_o",
+      "title": "Periodicity vs survey rhythms (ATLAS ATLAS_o)",
+      "status": "warn",
+      "finding": "strongest period 0.80 d coincides with: matches spectral-window peak at 0.80 d",
+      "numbers": {
+        "top_period_days": 0.7982953491170944,
+        "power": 0.651397864831322
+      }
+    },
+    {
+      "id": "alias_neowise_exp_W2",
+      "title": "Periodicity vs survey rhythms (NEOWISE_EXP W2)",
+      "status": "warn",
+      "finding": "strongest period 16.58 d coincides with: matches spectral-window peak at 16.55 d",
+      "numbers": {
+        "top_period_days": 16.583641118453126,
+        "power": 0.8899881162198505
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 1.07 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 1.0660284
+      }
+    }
+  ]
+}

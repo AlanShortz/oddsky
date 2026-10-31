@@ -613,6 +613,83 @@
    "n_predictions": 1,
    "featured": false,
    "hunt": "H-0009"
+  },
+  {
+   "id": "OS-0026",
+   "title": "A star in Scorpius brightened sixfold in 2015, seen by NEOWISE and Gaia: an apparently unreported microlensing candidate",
+   "hook": "Found blind in Oddsky hunts H-0008/H-0009 (NEOWISE x4.5 on 2015 Sep 7). Gaia DR3 epoch photometry shows the same event, x5.9 seven days earlier and fading over six weeks, equal in BP and RP. Gaia's own classifier labels the star MICROLENSING.",
+   "status": "reproduced",
+   "target": "Gaia DR3 5959812622743175552",
+   "series": [
+    "ATLAS:ATLAS_c",
+    "ATLAS:ATLAS_g",
+    "ATLAS:ATLAS_i",
+    "ATLAS:ATLAS_o",
+    "ATLAS:ATLAS_r",
+    "GAIA:BP",
+    "GAIA:G",
+    "GAIA:RP",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "NEOWISE_EXP:W1",
+    "NEOWISE_EXP:W2"
+   ],
+   "n_claims": 5,
+   "n_hypotheses": 1,
+   "n_predictions": 0,
+   "featured": false,
+   "hunt": "H-0009"
+  },
+  {
+   "id": "OS-0027",
+   "title": "A star in Sagittarius brightened 2.6 times in September 2015, equally in Gaia and NEOWISE: a microlensing candidate",
+   "hook": "Found blind in Oddsky hunts H-0008/H-0009 (NEOWISE x2.7 on 2015 Sep 15). Gaia DR3 epoch photometry shows x2.6 nine days earlier and twenty days later, equal in G and RP. Gaia's own classifier labels the star MICROLENSING.",
+   "status": "reproduced",
+   "target": "Gaia DR3 4143495279954502016",
+   "series": [
+    "ATLAS:ATLAS_H",
+    "ATLAS:ATLAS_c",
+    "ATLAS:ATLAS_g",
+    "ATLAS:ATLAS_i",
+    "ATLAS:ATLAS_o",
+    "ATLAS:ATLAS_r",
+    "GAIA:BP",
+    "GAIA:G",
+    "GAIA:RP",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "NEOWISE_EXP:W1",
+    "NEOWISE_EXP:W2"
+   ],
+   "n_claims": 4,
+   "n_hypotheses": 1,
+   "n_predictions": 0,
+   "featured": false,
+   "hunt": "H-0009"
+  },
+  {
+   "id": "OS-0028",
+   "title": "A star in Sagittarius brightened briefly in March 2022 while OGLE was paused: a short microlensing candidate",
+   "hook": "Found blind in Oddsky hunt H-0008 (NEOWISE x2.2 on 2022 Mar 19). ATLAS shows a sharp, symmetric event peaking on 2022 Mar 25 and lasting about two weeks, the same in optical and infrared. OGLE was paused and the star is outside KMTNet's fields.",
+   "status": "reproduced",
+   "target": "Gaia DR3 4070998667212085888",
+   "series": [
+    "ATLAS:ATLAS_H",
+    "ATLAS:ATLAS_c",
+    "ATLAS:ATLAS_g",
+    "ATLAS:ATLAS_i",
+    "ATLAS:ATLAS_o",
+    "ATLAS:ATLAS_r",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "NEOWISE_EXP:W1",
+    "NEOWISE_EXP:W2"
+   ],
+   "n_claims": 4,
+   "n_hypotheses": 1,
+   "n_predictions": 0,
+   "featured": false,
+   "hunt": "H-0008"
   }
  ],
  "scorecards": [

@@ -1,0 +1,103 @@
+{
+  "generated_at": "2026-10-31T19:42:40+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "0 fail, 4 warn, 4 pass, 0 skipped",
+  "counts": {
+    "fail": 0,
+    "warn": 4,
+    "pass": 4,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "pass",
+      "finding": "10 Gaia source(s) within 6.1\"; brightest contributes 6.2% of the target's G flux at 4.4\"",
+      "numbers": {
+        "radius_arcsec": 6.1,
+        "n_inside": 10,
+        "total_flux_ratio_G": 0.2873,
+        "brightest_flux_ratio": 0.0618,
+        "brightest_sep": 4.4309
+      }
+    },
+    {
+      "id": "blend_atlas",
+      "title": "Neighbours inside the ATLAS beam (8.0\")",
+      "status": "warn",
+      "finding": "17 Gaia source(s) within 8.0\"; brightest contributes 39.1% of the target's G flux at 7.3\"",
+      "numbers": {
+        "radius_arcsec": 8.0,
+        "n_inside": 17,
+        "total_flux_ratio_G": 0.8263,
+        "brightest_flux_ratio": 0.3908,
+        "brightest_sep": 7.3074
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "warn",
+      "finding": "259 exposures; cuts removed up to 161 (62%) per band; 5 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 259,
+        "removed_per_band": {
+          "W1": 161,
+          "W2": 85
+        },
+        "thin_visits": 5
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "warn",
+      "finding": "optical data from 1 independent source(s): ATLAS (4250). One instrument or observer is a single point of failure; seek a second.",
+      "numbers": {
+        "n_sources": 1,
+        "top_sources": {
+          "ATLAS": 4250
+        }
+      }
+    },
+    {
+      "id": "alias_atlas_ATLAS_o",
+      "title": "Periodicity vs survey rhythms (ATLAS ATLAS_o)",
+      "status": "warn",
+      "finding": "strongest period 360.68 d coincides with: matches spectral-window peak at 360.68 d; year (seasonal gaps)",
+      "numbers": {
+        "top_period_days": 360.67799191364463,
+        "power": 0.19573321318058834
+      }
+    },
+    {
+      "id": "alias_neowise_exp_W2",
+      "title": "Periodicity vs survey rhythms (NEOWISE_EXP W2)",
+      "status": "pass",
+      "finding": "strongest period 6.77 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 6.767976942500397,
+        "power": 0.4135368325785283
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 0.99 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 0.99423325
+      }
+    }
+  ]
+}

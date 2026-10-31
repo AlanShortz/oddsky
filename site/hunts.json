@@ -10,7 +10,7 @@
       "scale": "211.7 million stars · 108.3 billion NEOWISE detections · the whole sky",
       "funnel": [[211675962, "stars with 10+ NEOWISE visits"], [3757, "single-peaked brightenings, one to six visits"], [1308, "clean, not at the first or last visit"], [118, "known microlensing events, found blind"], [122, "strong and unexplained, not yet followed up"]],
       "verdict": "Searching the stars the first pass skipped, those beside bright neighbours and those blended with others, matters more than the new rule for long events. The search now finds 118 known microlensing events instead of 64, and 43 of 353 catchable ones instead of 18, with the biggest gain in the crowded bulge. Its 122 strong unexplained brightenings, many of them long and colour-neutral, are where a black-hole lens would be; Six events that no optical survey caught, or that ATLAS confirmed, now carry sealed predictions for Gaia DR4, due 2 December 2026.",
-      "cases": ["OS-0020", "OS-0021", "OS-0022", "OS-0023", "OS-0024", "OS-0025"]
+      "cases": ["OS-0020", "OS-0021", "OS-0022", "OS-0023", "OS-0024", "OS-0025", "OS-0026", "OS-0027"]
     },
     {
       "id": "H-0008",
@@ -23,7 +23,7 @@
       "verdict": "Without being told where to look, the search recovered 64 microlensing events that KMTNet, OGLE, Gaia and ZTF had already found, and none of the matches is a coincidence. It also found one nobody seems to have reported: OS-0018, a giant that brightened 5.4 times in September 2022 over about four months. ATLAS caught the whole event, and a point lens fits it from the optical to 4.6 microns. A second, OS-0019, brightened once by 60% but no simple lens fits it, so it stays a candidate. ATLAS follow-up of the southern events adds four more candidates, two of them unclassified Gaia alerts. NEOWISE is a real but partial lens detector: good for bright stars in the Galactic disk, nearly blind in the crowded bulge, and unable to see saturated peaks.",
       "figure": "figures/lensing_sky.png",
       "figure_caption": "Every HEALPix pixel searched (grey, by number of stars) and every clean one-night brightening, coloured by what it turned out to be. Stars: microlensing events, known (orange) and new or unreported (red: OS-0016 to OS-0019).",
-      "cases": ["OS-0018", "OS-0019"]
+      "cases": ["OS-0018", "OS-0019", "OS-0028"]
     },
     {
       "id": "H-0007",

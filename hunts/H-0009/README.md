@@ -108,7 +108,7 @@ single exposure for all 122 strong events and 117 of the 118 known lenses.
 | J184240, J182621 | on a neighbour | 0.10 | the brightening sits on another source 1.1" and 2.5" away |
 | J173349 | unconstrained | 0.15 | no ATLAS frame near the event; OGLE observed the field in 2015 without an alert |
 
-The Gaia DR3 classifier already labels J172057 and J180402 MICROLENSING, though neither is in the DR3 microlensing catalogue. A
+The Gaia DR3 classifier already labels J172057 and J180402 MICROLENSING, though neither is in the DR3 microlensing catalogue. Both are now cases: **[OS-0026](../../cases/OS-0026)** (J172057) and **[OS-0027](../../cases/OS-0027)** (J180402). A
 further strong event, J180839.93-151910.5, is ×1.52 in Gaia DR3, equal in BP and RP; ATLAS is queued.
 
 **Do the relaxed rules let artifacts in?** Yes, but not through the flags they relaxed.

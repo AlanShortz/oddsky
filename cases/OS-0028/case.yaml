@@ -1,0 +1,66 @@
+id: OS-0028
+title: 'A star in Sagittarius brightened briefly in March 2022 while OGLE was paused: a short microlensing
+  candidate'
+hook: Found blind in Oddsky hunt H-0008 (NEOWISE x2.2 on 2022 Mar 19). ATLAS shows a sharp, symmetric
+  event peaking on 2022 Mar 25 and lasting about two weeks, the same in optical and infrared. OGLE was
+  paused and the star is outside KMTNet's fields.
+status: reproduced
+target:
+  name: Gaia DR3 4070998667212085888
+  ra: 269.1431574054454
+  dec: -20.93253611105695
+  aliases: []
+  gaia_source_id: 4070998667212085888
+summary: ''
+claims:
+- id: C1
+  text: 'NEOWISE on 2022 Mar 19: x2.22 in W1 and x2.31 in W2, on the rise a few days before the ATLAS
+    peak, matching ATLAS o (x2.25) at that time (hunts/H-0008/reviews/claude-referee-atlas10b-2026-10-31.md).'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:42:40+00:00'
+- id: C2
+  text: 'ATLAS (task 5273742, four units, both bands) shows one event in 2015-2026: t0 2022 Mar 25.0 +-
+    0.5 d, tE about 10-14 d, u0 0.08-0.15, source flux share about 1 in ATLAS c, o and NEOWISE W1, W2.
+    The peak fell in a 4-day gap, so the maximum (x7-14) was not observed. A static lens beats a free
+    symmetric bump by delta chi2 16-23.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:42:40+00:00'
+- id: C3
+  text: OGLE was paused from 2020 Mar 18 to 2022 Aug 12; the star is in an OGLE-IV field but just outside
+    KMTNet's BLG38. Gaia passed on 2022 Mar 25 00:11 UT, at the peak, without an alert; only DR5 will
+    show it.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:42:40+00:00'
+- id: C4
+  text: Not in TNS, the Gaia alerts, the KMTNet, OGLE or ZTF lists, VSX, SIMBAD or a web search. MOA 2022
+    unchecked.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:42:40+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A short microlensing event, tE 10-14 d, peaking 2022 Mar 25 (P 0.75, H-0008 ATLAS referee).
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  conflicts: []
+  would_falsify: A repeat brightening, or a colour change.
+  status: live
+  confidence: 0.75
+  author: claude-opus-5.5
+  at: '2026-10-31T19:42:40+00:00'
+predictions: []
+literature: []
+hunt: H-0008
+featured: false
+created_at: '2026-10-31T19:34:19+00:00'

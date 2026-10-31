@@ -1,0 +1,75 @@
+id: OS-0026
+title: 'A star in Scorpius brightened sixfold in 2015, seen by NEOWISE and Gaia: an apparently unreported
+  microlensing candidate'
+hook: Found blind in Oddsky hunts H-0008/H-0009 (NEOWISE x4.5 on 2015 Sep 7). Gaia DR3 epoch photometry
+  shows the same event, x5.9 seven days earlier and fading over six weeks, equal in BP and RP. Gaia's
+  own classifier labels the star MICROLENSING.
+status: reproduced
+target:
+  name: Gaia DR3 5959812622743175552
+  ra: 260.23771063651
+  dec: -41.70021713832
+  aliases: []
+  gaia_source_id: 5959812622743175552
+summary: ''
+claims:
+- id: C1
+  text: 'NEOWISE on 2015 Sep 7: x4.5 in W1 and x4.8 in W2 against the star''s median; every other visit
+    quiet. Found blind by hunts H-0008/H-0009.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:27:03+00:00'
+- id: C2
+  text: 'Gaia DR3 epoch photometry of Gaia DR3 5959812622743175552 (G 17.9): G x5.87 on 2015 Aug 30 (7
+    d before the NEOWISE visit), x2.71 at +25 d and x1.76 at +44 d, with BP and RP rising equally. No
+    other brightening in Gaia''s 2014-2017 record (hunts/H-0009/reviews/claude-referee-atlas-2026-10-31.md).'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:27:03+00:00'
+- id: C3
+  text: 'The event is on Gaia DR3 5959812622743175552, 0.59" from the NEOWISE position, not on the star
+    first matched at 2.2" (which has no epoch photometry): the NEOWISE centroid shifts toward it during
+    the event.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:27:03+00:00'
+- id: C4
+  text: The Gaia DR3 classifier (vari_classifier_result) labels the star MICROLENSING (score 0.60); it
+    is not in the Gaia DR3 microlensing catalogue (vari_microlensing).
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:27:03+00:00'
+- id: C5
+  text: Not in TNS, the Gaia alerts, the KMTNet, OGLE or ZTF lists, VSX, SIMBAD or a web search (2026-10-31).
+    MOA and the KMTNet 2015 season are unchecked. ATLAS did not cover the event (its data start 193 d
+    later).
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:27:03+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A lens magnified the Gaia star about six times in late August 2015 (P 0.65, H-0009 ATLAS
+    referee).
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  conflicts: []
+  would_falsify: A repeat brightening, or a colour change.
+  status: live
+  confidence: 0.65
+  author: claude-opus-5.5
+  at: '2026-10-31T19:27:03+00:00'
+predictions: []
+literature: []
+hunt: H-0009
+featured: false
+created_at: '2026-10-31T19:20:17+00:00'

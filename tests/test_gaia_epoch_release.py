@@ -86,3 +86,10 @@ def test_report_records_a_failed_release_and_the_source_release(monkeypatch):
     assert rep["releases"][0]["release"] == "Gaia DR4" and not rep["releases"][0]["ok"]
     assert "KeyError" in rep["releases"][0]["error"]
     assert rep["source_release"] == {7: "Gaia DR3"}
+
+
+def test_named_gaia_source_wins_over_a_brighter_neighbour():
+    from oddsky.fetch import gaia_id_in_name
+
+    assert gaia_id_in_name("Gaia DR3 5959812622743175552") == 5959812622743175552
+    assert gaia_id_in_name("V1309 Sco") is None

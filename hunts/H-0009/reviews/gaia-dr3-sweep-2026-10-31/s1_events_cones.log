@@ -1,0 +1,31 @@
+H-0008 strong 66, H-0009 strong 122 (10 frame artifacts dropped)
+H-0008 strong events that H-0009's referee calls frame artifacts: 0
+deduplicated: 118 events (60 in both, 52 H-0009 only, 6 H-0008 only)
+  J185035.91-014014.4: H-0009 peak t 58374.7, H-0008 event t 58210.6 (both analysed)
+  H-0008 only: J064205.81+071917.2 t 59125.0 dw1 -0.43; in sky4_classified: no
+  H-0008 only: J101423.62-603507.1 t 57397.3 dw1 -0.78; in sky4_classified: no
+  H-0008 only: J131736.15-642615.1 t 59619.0 dw1 -0.60; in sky4_classified: no
+  H-0008 only: J163808.41-414832.7 t 58180.9 dw1 -0.75; in sky4_classified: no
+  H-0008 only: J175844.62-263022.5 t 57279.2 dw1 -0.62; in sky4_classified: class unclassified, dw1 -0.62, dw2 -0.70, t 57279.2
+  H-0008 only: J201542.68+382806.1 t 57520.1 dw1 -0.57; in sky4_classified: class unclassified, dw1 -0.54, dw2 -0.67, t 57520.1
+in the DR3 epoch span (56863-57900): 35; with centroid test: 112; off-target: 22
+  J180730.57-220016.2: no Gaia DR3 source within 4"
+  J131900.24-371433.7: no Gaia DR3 source within 4"
+  J180559.66-215319.2: no Gaia DR3 source within 4"
+  J184700.06-002702.7: no Gaia DR3 source within 4"
+  J173845.19-321346.1: no Gaia DR3 source within 4"
+  J172214.29-364055.7: no Gaia DR3 source within 4"
+  J181331.72-171333.9: no Gaia DR3 source within 4"
+  J175120.35-271621.8: no Gaia DR3 source within 4"
+  J190857.59+080922.1: no Gaia DR3 source within 4"
+  J182109.55-163557.5: no Gaia DR3 source within 4"
+  J182333.07-135416.2: no Gaia DR3 source within 4"
+  J173627.75-305525.6: no Gaia DR3 source within 4"
+  J175107.00-262758.6: no Gaia DR3 source within 4"
+  J175135.53-262831.0: no Gaia DR3 source within 4"
+  J174124.21-303055.8: no Gaia DR3 source within 4"
+  J172715.09-335631.2: no Gaia DR3 source within 4"
+  J172515.27-344254.1: no Gaia DR3 source within 4"
+  J181839.52-145852.3: no Gaia DR3 source within 4"
+  J184926.32-022735.9: no Gaia DR3 source within 4"
+210 Gaia DR3 sources within 4" of 99 events; 210 unique; VARIABLE 3; with epoch photometry 3

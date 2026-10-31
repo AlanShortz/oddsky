@@ -43,6 +43,14 @@ def open_case(name: str, title: str | None = None, hook: str = "", ra: float | N
     return store
 
 
+def gaia_id_in_name(name: str | None) -> int | None:
+    """The source_id in a target named "Gaia DR3 <id>" (or DR2/EDR3), else None."""
+    import re
+
+    m = re.match(r"\s*Gaia\s+(?:DR3|EDR3|DR2)\s+(\d{6,})\s*$", name or "")
+    return int(m.group(1)) if m else None
+
+
 def fetch(store: CaseStore, surveys: tuple[str, ...] | list[str] = SURVEYS) -> dict:
     case = store.load()
     t = case.target
@@ -63,8 +71,14 @@ def fetch(store: CaseStore, surveys: tuple[str, ...] | list[str] = SURVEYS) -> d
         prov["gaia"] = p.model_dump()
         if not cone.empty:
             close = cone[cone.sep_arcsec < 3.0]
-            # The target is the brightest source within 3"; a faint closer source is a neighbour.
-            tgt = (close.sort_values("phot_g_mean_mag") if not close.empty else cone).iloc[0]
+            named = gaia_id_in_name(t.name)
+            if named is not None and (cone.source_id.astype("int64") == named).any():
+                # A case opened as "Gaia DR3 <id>" is about that source, even when a brighter star sits nearby (OS-0026's
+                # event is on a G 17.9 star 0.6" from a brighter one).
+                tgt = cone[cone.source_id.astype("int64") == named].iloc[0]
+            else:
+                # Otherwise the target is the brightest source within 3"; a faint closer source is a neighbour.
+                tgt = (close.sort_values("phot_g_mean_mag") if not close.empty else cone).iloc[0]
             case.target.gaia_source_id = int(tgt.source_id)
             ctx["gaia"] = gaia.context(tgt)
             ctx["gaia"]["sep_from_target_coords_arcsec"] = float(tgt.sep_arcsec)

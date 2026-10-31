@@ -147,7 +147,7 @@ The last two returned later; referee:
 
 | event | verdict | P(lens) | what is robust |
 |---|---|---|---|
-| J175634.35-205556.9 (G 15.2, l 8.2, b +2.0) | lens candidate (strong) | 0.75 | t0 2022 Mar 25.0 ± 0.5 d, tE ≈ 10-14 d, u0 0.08-0.15, source flux share ≈ 1 in ATLAS c, o and NEOWISE W1, W2 (achromatic: NEOWISE ×2.22/×2.31 against ATLAS o ×2.25 four days before the peak). The peak fell in a 4-day gap, so the maximum (×7-14) was not observed. A static lens beats a free symmetric bump by Δχ² 16-23 |
+| J175634.35-205556.9 (G 15.2, l 8.2, b +2.0) = **[OS-0028](../../cases/OS-0028)** | lens candidate (strong) | 0.75 | t0 2022 Mar 25.0 ± 0.5 d, tE ≈ 10-14 d, u0 0.08-0.15, source flux share ≈ 1 in ATLAS c, o and NEOWISE W1, W2 (achromatic: NEOWISE ×2.22/×2.31 against ATLAS o ×2.25 four days before the peak). The peak fell in a 4-day gap, so the maximum (×7-14) was not observed. A static lens beats a free symmetric bump by Δχ² 16-23 |
 | J174744.42-374630.7 (G 13.8, l 352.7, b −5.0) | inconclusive, leaning lens | 0.40 | a ×2.0-2.07 plateau from 2022 Mar 9 to Apr 7, equal in o, W1 and W2; a lens fits only with annual parallax and realistic blending, and the c/o ratio wanders; the star, a luminous bulge M giant, varies by ~5% |
 
 **Why nobody reported them:** OGLE was paused from 2020 Mar 18 to 2022 Aug 12 (COVID-19), and both events peaked in March

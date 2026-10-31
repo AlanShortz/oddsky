@@ -1,0 +1,61 @@
+id: OS-0027
+title: 'A star in Sagittarius brightened 2.6 times in September 2015, equally in Gaia and NEOWISE: a microlensing
+  candidate'
+hook: Found blind in Oddsky hunts H-0008/H-0009 (NEOWISE x2.7 on 2015 Sep 15). Gaia DR3 epoch photometry
+  shows x2.6 nine days earlier and twenty days later, equal in G and RP. Gaia's own classifier labels
+  the star MICROLENSING.
+status: reproduced
+target:
+  name: Gaia DR3 4143495279954502016
+  ra: 271.00958351919
+  dec: -18.31329775461
+  aliases: []
+  gaia_source_id: 4143495279954502016
+summary: ''
+claims:
+- id: C1
+  text: 'NEOWISE on 2015 Sep 15: x2.7 in W1 and x2.75 in W2 against the star''s median; every other visit
+    quiet.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:34:18+00:00'
+- id: C2
+  text: 'Gaia DR3 epoch photometry: G x2.60 at -9 d and x2.57 at +20 d, RP the same (hunts/H-0009/reviews/claude-referee-atlas-2026-10-31.md).'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:34:18+00:00'
+- id: C3
+  text: The Gaia DR3 classifier labels the star MICROLENSING (score 0.26); it is not in the Gaia DR3 microlensing
+    catalogue.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:34:18+00:00'
+- id: C4
+  text: ATLAS's 2015 images at this position are too blurred (PSF 4 px) to measure the event.
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-10-31T19:34:18+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A lens magnified the star about 2.6 times around 2015 September (P 0.60, H-0009 ATLAS referee).
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  conflicts: []
+  would_falsify: A repeat brightening, or a colour change.
+  status: live
+  confidence: 0.6
+  author: claude-opus-5.5
+  at: '2026-10-31T19:34:18+00:00'
+predictions: []
+literature: []
+hunt: H-0009
+featured: false
+created_at: '2026-10-31T19:27:03+00:00'
