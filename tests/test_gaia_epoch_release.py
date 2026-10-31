@@ -71,3 +71,18 @@ def test_grading_keeps_gaia_variability_outliers(tmp_path, monkeypatch):
     assert len(tb._frame(store, "GAIA:G")) == 1
     graded = tb._frame(store, "GAIA:G", grading=True)
     assert sorted(graded.mag) == [13.0, 13.2, 15.0]
+
+
+def test_report_records_a_failed_release_and_the_source_release(monkeypatch):
+    """A DR4 failure falls back silently in `fetch`; `fetch_report` must say what failed and where each source came from."""
+    def fake(ids, chunk, release):
+        if release == "Gaia DR4":
+            raise KeyError("g_transit_time")
+        return {i: pd.DataFrame({"t_mjd": [57000.0]}) for i in ids}
+
+    monkeypatch.setattr(gaia_epoch, "_fetch_release", fake)
+    out, rep = gaia_epoch.fetch_report([7])
+    assert set(out) == {7}
+    assert rep["releases"][0]["release"] == "Gaia DR4" and not rep["releases"][0]["ok"]
+    assert "KeyError" in rep["releases"][0]["error"]
+    assert rep["source_release"] == {7: "Gaia DR3"}

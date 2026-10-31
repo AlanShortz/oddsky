@@ -31,18 +31,32 @@ RELEASES = ("Gaia DR4", "Gaia DR3")
 def fetch(source_ids: list[int], chunk: int = 50, releases: tuple[str, ...] = RELEASES) -> dict[int, pd.DataFrame]:
     """Epoch photometry for many sources at once (the server takes at most 50 ids per request), from the newest
     release that answers. Sources without epoch photometry are simply absent."""
+    return fetch_report(source_ids, chunk, releases)[0]
+
+
+def fetch_report(source_ids: list[int], chunk: int = 50,
+                 releases: tuple[str, ...] = RELEASES) -> tuple[dict[int, pd.DataFrame], dict]:
+    """`fetch`, plus a report of what happened: for each release tried, whether it answered, how many sources it returned
+    and the error if it failed; and which release each source came from. A failing DR4 request falls back to DR3 without
+    raising, so the report is how a renamed release or a changed schema is noticed instead of silently waiting."""
     out: dict[int, pd.DataFrame] = {}
+    report: dict = {"releases": [], "source_release": {}}
     ids_all = [int(s) for s in source_ids]
     for rel in releases:
         todo = [s for s in ids_all if s not in out]
         if not todo:
             break
         try:
-            out.update(_fetch_release(todo, chunk, rel))
-        except Exception:  # noqa: BLE001  an unreleased or renamed release must not break the older one
+            got = _fetch_release(todo, chunk, rel)
+        except Exception as e:  # noqa: BLE001  an unreleased or renamed release must not break the older one
+            report["releases"].append({"release": rel, "ok": False, "n": 0, "error": f"{type(e).__name__}: {str(e)[:200]}"})
             if rel == releases[-1]:
                 raise
-    return out
+            continue
+        report["releases"].append({"release": rel, "ok": True, "n": len(got), "error": ""})
+        out.update(got)
+        report["source_release"].update({sid: rel for sid in got})
+    return out, report
 
 
 def _fetch_release(source_ids: list[int], chunk: int, release: str) -> dict[int, pd.DataFrame]:
@@ -90,14 +104,20 @@ def to_series(raw: pd.DataFrame) -> pd.DataFrame:
 
 def lightcurve(source_id: int) -> tuple[pd.DataFrame, Provenance]:
     prov = Provenance(archive="ESA Gaia epoch photometry (datalink; DR4 if published, else DR3)", query={"source_id": int(source_id)})
-    got = fetch([source_id])
+    got, report = fetch_report([source_id])
     df = got.get(int(source_id), series.empty())
+    used = report["source_release"].get(int(source_id))
+    prov.query["release_used"] = used
+    for r in report["releases"]:
+        if not r["ok"]:
+            prov.notes.append(f"{r['release']} request failed ({r['error']}); fell back to the next release")
     prov.rows_raw = len(df)
     prov.rows_kept = int((df.flag == "").sum()) if len(df) else 0
     if df.empty:
         prov.status = "empty"
         prov.notes.append("no Gaia epoch photometry (DR3 published it only for sources Gaia flagged as variable)")
     else:
+        prov.notes.append(f"epoch photometry from {used}")
         prov.notes.append("variability_flag rejections are kept but flagged; Gaia flagged them as outliers, "
                           "which for a real dip can mean the dip itself")
     return df, prov
