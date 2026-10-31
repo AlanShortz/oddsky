@@ -1,0 +1,34 @@
+P(VARIABLE source within 4"):
+  known lenses, not Gaia-selected: 14/23 = 0.61 (95% 0.39-0.80)
+  strong events in the DR3 span with a Gaia source within 4": 3/28 = 0.11 (95% 0.02-0.28)
+
+Gaia G of the matched star: known (unbiased) median 16.06, strong (chosen source) median 17.24
+GOST transits within +-30 d: known median 2 (min 0), strong median 3 (min 0)
+
+G 0-17.0:
+  known: 11/19 = 0.58 (95% 0.33-0.80)
+  strong: 1/12 = 0.08 (95% 0.00-0.38)
+
+G 17.0-22:
+  known: 3/4 = 0.75 (95% 0.19-0.99)
+  strong: 2/15 = 0.13 (95% 0.02-0.40)
+
+>= 2 GOST transits within +-30 d:
+  known: 14/20 = 0.70 (95% 0.46-0.88)
+  strong: 3/27 = 0.11 (95% 0.02-0.29)
+
+implied lens fraction among in-span strong events with a Gaia source (background VARIABLE rate ~0): 0.18
+  Monte Carlo (flat priors): median 0.21, 95% 0.06-0.50
+  per event: absence of a VARIABLE flag multiplies the lens odds by ~0.39 (P(no flag | lens) / P(no flag | no optical event ~ 1))
+
+known lenses without a VARIABLE source (unbiased set):
+        designation            t       dw1         G  gost_n30                                                                                 known
+J155915.96-550655.7 56898.655660 -0.789001 16.490803         2                         OGLE-GVS GD1157.13.582 (OGLE GVS (Mroz+2020), 1.7", t0 56883)
+J181430.79-303319.2 56923.292820 -1.694000 15.554318         2                                             OGLE-2014-BLG-1356 (OGLE, 0.4", t0 56928)
+J174505.02-251709.4 57463.861687 -0.240499 15.662360         3 OGLE-2016-BLG-0023 (OGLE, 0.1", t0 57518); KMT-2016-BLG-1214 (KMTNet, 0.4", t0 57517)
+J175204.12-292408.0 57636.473177 -0.290500 13.233182         0                                            KMT-2016-BLG-2461 (KMTNet, 1.2", t0 57624)
+J180510.04-244817.7 57467.957656 -0.848001 16.265310         2                                            KMT-2016-BLG-2095 (KMTNet, 1.3", t0 57457)
+J175416.34-204633.6 57101.651823 -0.749000 15.934049         4                                             OGLE-2015-BLG-0405 (OGLE, 0.8", t0 57102)
+J175633.59-215946.1 57637.358947 -0.299749 18.217598         1 OGLE-2016-BLG-1664 (OGLE, 0.1", t0 57664); KMT-2016-BLG-1637 (KMTNet, 0.3", t0 57664)
+J180834.39-282636.6 56922.142257 -0.521500 14.896636         3                                             OGLE-2014-BLG-1537 (OGLE, 0.2", t0 56945)
+J180159.11-270303.6 57638.569935 -0.335999 16.574902         1 OGLE-2016-BLG-0994 (OGLE, 1.0", t0 57609); KMT-2016-BLG-1901 (KMTNet, 1.1", t0 57609)

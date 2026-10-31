@@ -2,7 +2,8 @@
 Primary: VizieR copies of the DR3 variability tables (I/358, idia mirror), 4" cones around every event position:
 varisum (= vari_summary: in_vari_* flags), vclassre (= vari_classifier_result) and vmicro (= vari_microlensing).
 Cross-check: the ESA TAP (gaiadr3.vari_classifier_result, vari_summary, vari_microlensing) with IN() lists of 25 ids, short
-timeouts; it hung for 40 min on the first attempt today, so a TAP failure is logged, not fatal.
+timeouts; it hung for 40 min on the first attempt today, so a TAP failure is logged, not fatal (a table is abandoned at its
+first failed chunk; `--no-tap` skips it).
 phot_variable_flag and has_epoch_photometry come from s1 (I/355/gaiadr3 VarFlag, EpochPh). Writes data/vari_*.csv (ids as str)."""
 import io
 import os
@@ -23,7 +24,7 @@ def viz(table, ra, dec):
     for k in range(5):
         try:
             q = requests.get("https://vizier.idia.ac.za/viz-bin/asu-tsv", params={
-                "-source": f"I/358/{table}", "-c": f"{ra} {dec}", "-c.rs": 4, "-c.u": "arcsec", "-out.all": "", "-out.add": "_r"},
+                "-source": f"I/358/{table}", "-c": f"{ra} {dec}", "-c.rs": 4, "-c.u": "arcsec", "-out": "**", "-out.add": "_r"},
                 headers=UA, timeout=120)
             if q.status_code == 200:
                 break
@@ -57,7 +58,9 @@ for t, parts in out.items():
 missing = set(cn.source_id[cn.VarFlag == "VARIABLE"]) - set(pd.read_csv(os.path.join(DATA, "vari_varisum.csv"), dtype=str).source_id)
 print("VARIABLE sources (s1) missing from varisum:", missing or "none")
 
-# ESA TAP cross-check
+# ESA TAP cross-check (skip with --no-tap)
+if "--no-tap" in sys.argv:
+    sys.exit()
 ids = sorted(cn.source_id.unique())
 for name, q in {
     "vari_classifier_result": "SELECT source_id, classifier_name, best_class_name, best_class_score FROM gaiadr3.vari_classifier_result WHERE source_id IN ({})",

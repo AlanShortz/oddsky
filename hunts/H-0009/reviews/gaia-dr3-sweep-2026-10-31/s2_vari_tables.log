@@ -1,0 +1,13 @@
+VizieR I/358/varisum: 3 rows within 4" of 3 events
+        designation    _r           source_id NG   Gmagmed   Gmagmin   Gmagmax VCR Vmicro VLPV VST VEB
+J172057.02-414201.2 0.592 5959812622743175552 38 17.852764 15.931534 17.924871   1      0    0   0   0
+J180402.28-181847.5 0.431 4143495279954502016 27 18.653690 17.616182 18.695362   1      0    0   0   0
+J180839.93-151910.5 0.278 4145977633638478336 28 16.040005 15.583719 16.055733   1      0    0   0   0
+VizieR I/358/vclassre: 3 rows within 4" of 3 events
+        designation    _r           source_id   Classifier        Class       ClassSc
+J172057.02-414201.2 0.592 5959812622743175552 nTransits:5+ MICROLENSING 6.0337156e-01
+J180402.28-181847.5 0.431 4143495279954502016 nTransits:5+ MICROLENSING 2.5917298e-01
+J180839.93-151910.5 0.278 4145977633638478336 nTransits:5+ MICROLENSING 2.1491228e-01
+VizieR I/358/vmicro: 0 rows within 4" of 0 events
+VARIABLE sources (s1) missing from varisum: none
+[2026-10-31 16:22 EDT] ESA TAP cross-check killed: no answer to its first query (vari_classifier_result, 25 ids) in ~45 min. An ad-hoc TAP query earlier the same day (source_id IN 5959812622743175552, 4143495279954502016, 4145977633638478336) returned nTransits:5+ MICROLENSING 0.60337156 / 0.25917298 / 0.21491228, identical to VizieR I/358/vclassre.

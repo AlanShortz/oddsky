@@ -126,6 +126,21 @@ further strong event, J180839.93-151910.5, is ×1.52 in Gaia DR3, equal in BP an
 None of the four NEOWISE-only events with sealed DR4 predictions (OS-0022 to OS-0025) is an artifact or off target; OS-0022's event
 frames scatter 3.6× more than usual.
 
+## Gaia DR3 sweep (`work/gaia_dr3_sweep.csv`)
+
+Every strong event from H-0008 and H-0009 (118 after removing the 10 frame artifacts and duplicates) was checked against Gaia DR3:
+variability tables, classifier and epoch photometry for all 210 Gaia sources within 4"
+([report](reviews/gaia-dr3-sweep-2026-10-31.md)).
+
+- 35 events fall inside DR3's epoch-photometry span (2014.6-2017.4). Gaia confirms three as achromatic brightenings at the NEOWISE
+  time: J172057 (×6.1 in G, BP and RP alike; OS-0026), J180402 (×2.6 in G and RP; OS-0027) and J180839.93-151910.5 (×1.5 in G,
+  BP and RP alike, 16 d before NEOWISE's ×1.6). The DR3 classifier labels all three MICROLENSING; none is in the DR3 microlensing
+  catalogue. No other source near any event has DR3 epoch photometry, so the other 32 cannot be tested in DR3.
+- A population estimate: 61% of known lenses in the same span have a Gaia-variable source within 4", against 3 of 28 strong
+  events, which implies that about 20% of these events (95%: 6-50%) are lenses on the Gaia star, in line with H-0008's 10-25%.
+- Gaia DR4 publishes epoch photometry for every source, so it can test 61 events: the 32 untested in DR3 and the 29 between
+  2017.4 and 2020.1. 54 later events wait for DR5.
+
 ## Gaia DR4 as the second instrument (`predictions/`)
 
 Gaia DR4 (scheduled 2 December 2026) publishes epoch photometry for 2014.6-2020.1. For events nobody else observed, it is the only

@@ -69,7 +69,7 @@ def at(r, w):
 
 
 def fmt(x):
-    return "" if x is None else f"{x.f:.2f}+-{x.err:.2f}@{x.dt:+.0f}d"
+    return "" if x is None else f"{x['f']:.2f}+-{x['err']:.2f}@{x['dt']:+.0f}d"
 
 
 def centroid_pick(e, c):
@@ -91,7 +91,7 @@ def centroid_pick(e, c):
 
 
 rows, details = [], []
-for e in ev.to_dict("records"):
+for e in (pd.Series(x) for x in ev.to_dict("records")):
     c = cn[cn.allwise_cntr == e["allwise_cntr"]].reset_index(drop=True)
     t = e["t"]
     in3 = DR3_T0 <= t <= DR3_T1
@@ -129,11 +129,12 @@ for e in ev.to_dict("records"):
         notes.append(f"no Gaia source within 4\" explains the centroid shift (best miss {cmiss:.2f}\", {csig:.0f} sigma; implied source "
                      f"{coff:.1f}\" from the AllWISE position)")
     row = dict(designation=e["designation"], hunts=e["hunts"], t=round(t, 3), date=mjd2date(t), dw1=round(e["dw1"], 3),
+               neowise_ratio=round(10 ** (-0.4 * e["dw1"]), 2),
                nblock=e.get("nblock"), in_dr3_span=in3, in_dr4_span=in4, off_target=e.get("off_target"), n_gaia_4as=len(c),
                n_variable_4as=int((c.VarFlag == "VARIABLE").sum()), survey_source_id=e["g_source_id"] if isinstance(e["g_source_id"], str) else "",
                gaia_source_id=sid or "", choice=basis, sep=np.nan, G=np.nan, bp_rp=np.nan, var_flag="",
                classifier="", in_vari_microlensing=False, n_epochs=0, gost_n30=n30, gost_n90=n90,
-               G_30="", BP_30="", RP_30="", G_90max="", dBP_minus_dRP="", n_repeat=0, verdict="", notes="")
+               G_30="", BP_30="", RP_30="", G_90max="", dBP_minus_dRP="", dG_minus_dRP="", n_repeat=0, verdict="", notes="")
     if sid is not None:
         s = c[c.source_id == sid].iloc[0]
         row.update(sep=round(s.sep, 2), G=round(s.Gmag, 2), bp_rp=round(s.BPRP, 2) if np.isfinite(s.BPRP) else np.nan,
@@ -171,7 +172,8 @@ for e in ev.to_dict("records"):
             w = np.array([1 / d[1] ** 2 for d in diffs])
             dd = float(np.sum(w * np.array([d[0] for d in diffs])) / w.sum())
             de = float(1 / np.sqrt(w.sum()))
-            row["dBP_minus_dRP"] = f"{dd:+.2f}+-{de:.2f}"
+            row["dBP_minus_dRP"] = f"{dd:+.2f}+-{de:.2f}" if not bp_faint else "BP too faint"
+            row["dG_minus_dRP"] = f"{np.mean([d[3] - d[5] for d in diffs]):+.3f}"
             details.append((e["designation"], sid, diffs))
         # repeats: other epochs > 150 d away brightening by >= half the event excess and >= 5 sigma
         rep = pd.DataFrame()

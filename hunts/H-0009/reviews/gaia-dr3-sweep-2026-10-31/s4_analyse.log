@@ -1,0 +1,104 @@
+118 events -> work/gaia_dr3_sweep.csv
+
+verdict
+after the DR4 span: waits for DR5                                            54
+outside the DR3 span: waits for DR4                                          29
+no Gaia epoch photometry (untested): no source within 4" flagged VARIABLE    25
+no Gaia epoch photometry (untested): no Gaia DR3 source within 4"             7
+Gaia-confirmed achromatic brightening (lens candidate)                        3 
+
+in the DR3 span: 35
+verdict
+Gaia-confirmed achromatic brightening (lens candidate)                        3
+no Gaia epoch photometry (untested): no Gaia DR3 source within 4"             7
+no Gaia epoch photometry (untested): no source within 4" flagged VARIABLE    25 
+
+        designation       date    dw1      gaia_source_id                     choice  sep     G        classifier  in_vari_microlensing  n_epochs  gost_n30            G_30           BP_30           RP_30         G_90max dBP_minus_dRP  n_repeat
+J172057.02-414201.2 2015-09-07 -1.632 5959812622743175552 epoch photometry brightens 0.59 17.87 MICROLENSING 0.60                 False        39         2  6.12+-0.02@-7d  6.10+-0.13@-7d  6.23+-0.03@-7d  6.12+-0.02@-7d   +0.02+-0.02         0
+J180402.28-181847.5 2015-09-15 -1.074 4143495279954502016 epoch photometry brightens 0.43 18.66 MICROLENSING 0.26                 False        28         2  2.60+-0.03@-9d  1.70+-1.25@-9d  2.69+-0.05@-9d  2.60+-0.03@-9d  BP too faint         0
+J180839.93-151910.5 2016-03-21 -0.523 4145977633638478336 epoch photometry brightens 0.28 16.04 MICROLENSING 0.21                 False        28         3 1.39+-0.01@+15d 1.38+-0.04@+15d 1.39+-0.01@+15d 1.52+-0.01@-16d   -0.00+-0.02         0 
+
+J172057.02-414201.2 5959812622743175552 colour test per epoch (dBP-dRP, err, dt, dG, dBP, dRP):
+   +0.023  +0.023  -7.257  -1.967  -1.963  -1.986
+   +0.017  +0.042  +24.796  -1.130  -1.202  -1.219
+   -0.008  +0.066  +44.258  -0.656  -0.672  -0.664
+J180402.28-181847.5 4143495279954502016 colour test per epoch (dBP-dRP, err, dt, dG, dBP, dRP):
+   +0.499  +0.802  -9.428  -1.039  -0.576  -1.075
+   -4.017  +0.025  +19.557  -1.029  -5.098  -1.081
+   -0.178  +0.552  +42.017  -0.626  -0.837  -0.658
+J180839.93-151910.5 4145977633638478336 colour test per epoch (dBP-dRP, err, dt, dG, dBP, dRP):
+   -0.001  +0.032  -15.906  -0.458  -0.462  -0.461
+   +0.009  +0.032  +14.544  -0.357  -0.350  -0.359
+   -0.022  +0.038  +35.047  -0.150  -0.170  -0.148
+
+MICROLENSING in the DR3 classifier (any source within 4"):
+  5959812622743175552 score 0.60: J172057.02-414201.2 (0.59")
+  4143495279954502016 score 0.26: J180402.28-181847.5 (0.43")
+  4145977633638478336 score 0.21: J180839.93-151910.5 (0.28")
+
+every classifier result:
+        designation           source_id   Classifier best_class_name  best_class_score
+J172057.02-414201.2 5959812622743175552 nTransits:5+    MICROLENSING          0.603372
+J180402.28-181847.5 4143495279954502016 nTransits:5+    MICROLENSING          0.259173
+J180839.93-151910.5 4145977633638478336 nTransits:5+    MICROLENSING          0.214912
+vari_microlensing rows: 0
+
+in-span events without epoch photometry:
+        designation       date    dw1  n_gaia_4as      gaia_source_id                       choice  sep     G      var_flag  gost_n30                                                                                                                                                                          notes
+J172246.71-403331.7 2014-09-13 -0.470           1 5960257061625105024                 survey match 0.14 17.97 NOT_AVAILABLE         4                                                                                                                                  GOST: 4 predicted Gaia transits within +-30 d
+J172729.10-323917.2 2014-09-13 -0.470           2 4054748744344748544                 survey match 0.11 18.89 NOT_AVAILABLE         4                                                                                                                                  GOST: 4 predicted Gaia transits within +-30 d
+J173525.98-335850.5 2014-09-15 -0.757           3 4053635935507980800  centroid shift (off-target) 0.35   NaN NOT_AVAILABLE         4                                                                                                                                  GOST: 4 predicted Gaia transits within +-30 d
+J180744.93-222226.3 2014-09-22 -0.411           1 4069725604546345472                 survey match 0.15 19.95 NOT_AVAILABLE         2                                                                                                                                  GOST: 2 predicted Gaia transits within +-30 d
+J180730.57-220016.2 2014-09-22 -1.169           0                      centroid shift (off-target)  NaN   NaN                       0                                                                                                                                                                               
+J211957.84+572625.7 2014-12-21 -0.429           1 2178980910929234944                 survey match 1.09 20.45 NOT_AVAILABLE         2                                                                                                                                  GOST: 2 predicted Gaia transits within +-30 d
+J131900.24-371433.7 2015-01-24 -1.103           0                     no Gaia DR3 source within 4"  NaN   NaN                       3                                                                                                                                                                               
+J123522.62-622827.0 2015-02-01 -0.923           1 6053935349230889344  centroid shift (off-target) 0.67 12.49 NOT_AVAILABLE         3 no Gaia source within 4" explains the centroid shift (best miss 1.32", 10 sigma; implied source 1.8" from the AllWISE position); GOST: 3 predicted Gaia transits within +-30 d
+J181035.29-105156.9 2015-03-24 -0.986           1 4157149599451570944                 survey match 0.27 17.10 NOT_AVAILABLE         5                                                                                                                                  GOST: 5 predicted Gaia transits within +-30 d
+J131026.53-612259.2 2015-08-01 -1.011           1 5863586423081438848                 survey match 0.12 17.75 NOT_AVAILABLE         2                                                                                                                                  GOST: 2 predicted Gaia transits within +-30 d
+J130153.27-655628.5 2015-08-04 -0.490           3 5858515677297526656                 survey match 0.27 15.55 NOT_AVAILABLE         3                                                                                                                                  GOST: 3 predicted Gaia transits within +-30 d
+J171723.15-403337.1 2015-09-06 -0.409           3 5971935666113330048                 survey match 0.83 18.82 NOT_AVAILABLE         3                                                                                                                                  GOST: 3 predicted Gaia transits within +-30 d
+J172130.29-372518.3 2015-09-07 -0.559           2 5972880279747996160                 survey match 0.90 19.11 NOT_AVAILABLE         3                                                                         centroid shift prefers 5972880284058708992 (miss 0.23"); GOST: 3 predicted Gaia transits within +-30 d
+J173349.59-264330.5 2015-09-08 -0.592           5 4061588260756165632                 survey match 0.30 16.22 NOT_AVAILABLE         4                                                                                                                                  GOST: 4 predicted Gaia transits within +-30 d
+J175844.62-263022.5 2015-09-14 -0.622           6 4064033505903753728                 survey match 1.67 17.24 NOT_AVAILABLE         2                                                                                                                                  GOST: 2 predicted Gaia transits within +-30 d
+J180559.66-215319.2 2015-09-15 -0.611           0                     no Gaia DR3 source within 4"  NaN   NaN                       2                                                                                                                                                                               
+J184700.06-002702.7 2015-09-28 -0.717           0                     no Gaia DR3 source within 4"  NaN   NaN                       3                                                                                                                                                                               
+J192602.96+134138.7 2015-10-10 -0.496           1 4319553612961496192                 survey match 0.59 20.60 NOT_AVAILABLE         2                                                                                                                                  GOST: 2 predicted Gaia transits within +-30 d
+J101423.62-603507.1 2016-01-10 -0.781           1 5254932176492837376                 survey match 0.12 14.45 NOT_AVAILABLE         2                                                                                                                                  GOST: 2 predicted Gaia transits within +-30 d
+J170153.51-425620.0 2016-03-09 -0.851           2 5966156701720599680                 survey match 0.50 15.71 NOT_AVAILABLE         2                                                                                                                                  GOST: 2 predicted Gaia transits within +-30 d
+J173845.19-321346.1 2016-03-15 -1.651           0                     no Gaia DR3 source within 4"  NaN   NaN                       3                                                                                                                                                                               
+J182120.84-143232.7 2016-03-24 -1.273           1 4146309720455045504                 survey match 0.14 16.29 NOT_AVAILABLE         4                                                                                                                                  GOST: 4 predicted Gaia transits within +-30 d
+J184017.78-134852.3 2016-03-28 -0.481           4 4103821395764717440                 survey match 0.17 16.30 NOT_AVAILABLE         4                                                                                                                                  GOST: 4 predicted Gaia transits within +-30 d
+J185846.27+033028.5 2016-04-06 -1.870           1 4280846616059642368  centroid shift (off-target) 2.83 17.85 NOT_AVAILABLE         4 no Gaia source within 4" explains the centroid shift (best miss 2.78", 64 sigma; implied source 0.6" from the AllWISE position); GOST: 4 predicted Gaia transits within +-30 d
+J201542.68+382806.1 2016-05-12 -0.570           3 2060942088532024704                 survey match 0.29 16.55 NOT_AVAILABLE         2                                                                                                                                  GOST: 2 predicted Gaia transits within +-30 d
+J033351.36+561412.5 2016-08-30 -0.770           1  448377646353031040                 survey match 0.08 18.83 NOT_AVAILABLE         4                                                                                                                                  GOST: 4 predicted Gaia transits within +-30 d
+J044653.95+425943.5 2016-09-08 -0.455           1  204505284418239872                 survey match 0.12  8.34 NOT_AVAILABLE         0                                                                                                                                  GOST: 0 predicted Gaia transits within +-30 d
+J075928.63-221055.1 2016-10-31 -1.009           1 5711343503294249856                 survey match 0.08 16.98 NOT_AVAILABLE         2                                                                                                                                  GOST: 2 predicted Gaia transits within +-30 d
+J164900.93-433618.0 2017-03-07 -0.465           1 5967450719527687168  centroid shift (off-target) 2.02 16.23 NOT_AVAILABLE         3 no Gaia source within 4" explains the centroid shift (best miss 1.11", 21 sigma; implied source 1.2" from the AllWISE position); GOST: 3 predicted Gaia transits within +-30 d
+J172214.29-364055.7 2017-03-12 -0.611           0                      centroid shift (off-target)  NaN   NaN                       2                                                                                                                                                                               
+J180255.46-160745.2 2017-03-22 -0.726           3 4145148082128337664  centroid shift (off-target) 2.28 17.65 NOT_AVAILABLE         3                                                                                                                                  GOST: 3 predicted Gaia transits within +-30 d
+J181331.72-171333.9 2017-03-24 -0.655           0                     no Gaia DR3 source within 4"  NaN   NaN                       3                                                                                                                                                                               
+
+off-target events (re-association):
+        designation       date    survey_source_id      gaia_source_id  sep     G                                                                                                                                                                          notes
+J173525.98-335850.5 2014-09-15 4053635939839764608 4053635935507980800 0.35   NaN                                                                                                                                  GOST: 4 predicted Gaia transits within +-30 d
+J180730.57-220016.2 2014-09-22                                          NaN   NaN                                                                                                                                                                               
+J123522.62-622827.0 2015-02-01 6053935349230889344 6053935349230889344 0.67 12.49 no Gaia source within 4" explains the centroid shift (best miss 1.32", 10 sigma; implied source 1.8" from the AllWISE position); GOST: 3 predicted Gaia transits within +-30 d
+J172057.02-414201.2 2015-09-07 5959812622743175808 5959812622743175552 0.59 17.87                                                                                                              G baseline 17.90, scatter 0.018 (flux), max outside +-150 d x1.07
+J185846.27+033028.5 2016-04-06 4280846616059642368 4280846616059642368 2.83 17.85 no Gaia source within 4" explains the centroid shift (best miss 2.78", 64 sigma; implied source 0.6" from the AllWISE position); GOST: 4 predicted Gaia transits within +-30 d
+J164900.93-433618.0 2017-03-07 5967450719527687168 5967450719527687168 2.02 16.23 no Gaia source within 4" explains the centroid shift (best miss 1.11", 21 sigma; implied source 1.2" from the AllWISE position); GOST: 3 predicted Gaia transits within +-30 d
+J172214.29-364055.7 2017-03-12                                          NaN   NaN                                                                                                                                                                               
+J180255.46-160745.2 2017-03-22 4145148086414772864 4145148082128337664 2.28 17.65                                                                                                                                  GOST: 3 predicted Gaia transits within +-30 d
+J161946.51-492721.6 2018-03-02 5935607763281500800 5935607763281500800 1.17 20.61                                                no Gaia source within 4" explains the centroid shift (best miss 0.62", 23 sigma; implied source 0.7" from the AllWISE position)
+J175120.35-271621.8 2018-03-19                                          NaN   NaN                                                                                                                                                                               
+J180010.34-243417.6 2018-09-01 4069002813088944128 4069002813088944128 2.32 17.68                                                no Gaia source within 4" explains the centroid shift (best miss 1.53", 28 sigma; implied source 0.5" from the AllWISE position)
+J184240.11-052241.7 2021-03-30 4253602328541881728 4253602332877519744 1.15 19.27                                                                                                                                                                               
+J173341.49-373056.5 2021-08-26 5962508109884262784 5962508109829640064 2.46 18.82                                                                                                                                                                               
+J145817.85-565156.7 2022-02-18 5881211079088199296 5881211079062699392 1.26 17.91                                                                                                                                                                               
+J174616.44-293354.1 2022-03-17 4056892246560836736 4056892246560836736 2.80 19.93                                                no Gaia source within 4" explains the centroid shift (best miss 1.78", 27 sigma; implied source 0.2" from the AllWISE position)
+J180949.71-183629.1 2022-03-22                     4095564780641450496 3.53 20.77                                                no Gaia source within 4" explains the centroid shift (best miss 3.61", 77 sigma; implied source 1.0" from the AllWISE position)
+J160954.47-500234.4 2022-08-12 5983197203509006080 5983197203509006080 0.93 19.54                                                no Gaia source within 4" explains the centroid shift (best miss 0.37", 11 sigma; implied source 0.2" from the AllWISE position)
+J164522.30-450528.3 2022-08-17 5943237244421179520 5943237244421179520 0.38 20.22                                                no Gaia source within 4" explains the centroid shift (best miss 0.35", 15 sigma; implied source 0.6" from the AllWISE position)
+J171543.83-304322.0 2022-08-21 5980694405807718272 5980694410123549056 1.30 18.47                                                                                                                                                                               
+J084243.48-411109.4 2022-11-25 5525245563950667520 5525245563950667392 1.70 19.26                                                 no Gaia source within 4" explains the centroid shift (best miss 0.55", 7 sigma; implied source 3.3" from the AllWISE position)
+J175636.71-243505.6 2023-03-21                     4067540088974583808 3.93 17.05                                                no Gaia source within 4" explains the centroid shift (best miss 1.51", 22 sigma; implied source 0.6" from the AllWISE position)
+J181839.52-145852.3 2023-09-06                                          NaN   NaN                                                                                                                                                                               
