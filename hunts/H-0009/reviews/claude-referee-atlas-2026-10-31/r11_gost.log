@@ -1,0 +1,8 @@
+158 FOV transits in the GOST span; 7 between 2021 Feb and 2022 Mar:
+  2021-02-18 MJD 59263.16 FOV1 (10 CCD crossings): no ATLAS night within 20 d on both sides
+  2021-02-18 MJD 59263.23 FOV2 (10 CCD crossings): no ATLAS night within 20 d on both sides
+  2021-03-13 MJD 59286.65 FOV1 (10 CCD crossings): ATLAS o x1.15 (dG ~ -0.15 if Gaia's G sees the same fraction)
+  2021-04-10 MJD 59314.64 FOV1 (10 CCD crossings): no ATLAS night within 20 d on both sides
+  2021-08-22 MJD 59448.24 FOV2 (10 CCD crossings): ATLAS o x2.58 (dG ~ -1.03 if Gaia's G sees the same fraction)
+  2021-09-18 MJD 59475.16 FOV1 (9 CCD crossings): ATLAS o x2.43 (dG ~ -0.96 if Gaia's G sees the same fraction)
+  2022-02-28 MJD 59638.28 FOV2 (10 CCD crossings): ATLAS o x1.02 (dG ~ -0.02 if Gaia's G sees the same fraction)

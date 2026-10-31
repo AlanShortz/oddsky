@@ -1,0 +1,25 @@
+== J172057 J172057.02-414201.2  peak guess 57272.0
+
+-- variant: Gaia G/RP + NEOWISE   n 108  series NEOWISE_W1(base 1, nev 1), NEOWISE_W2(base 1, nev 1), GAIA_G(base 1, nev 4), GAIA_RP(base 1, nev 4)
+   static    chi2     199.2 (n 108, k 7, BIC     232.0)  t0 57251.18 tE 39.0 u0 +0.8221 Amax 1.5
+             GAIA_G:fs=11.97 GAIA_RP:fs=12.16 NEOWISE_W1:fs=10.03 NEOWISE_W2:fs=10.70
+   parallax  chi2     193.5 (n 108, k 9, BIC     235.6)  t0 57260.81 tE 593.7 u0 -0.0305 Amax 32.8 piEN -0.361 piEE +0.113
+             GAIA_G:fs=0.15 GAIA_RP:fs=0.15 NEOWISE_W1:fs=0.13 NEOWISE_W2:fs=0.14
+   lens_asym chi2     197.4 (n 108, k 8, BIC     234.9)  t0 57270.21 tE_rise 88.7 tE_fall 64.9 ratio 1.37 u0 0.2120
+   pv7       chi2     197.6 (n 108, k 7, BIC     230.4)  shape 5.73e+04 41.9 1.62
+   pv7_asym  chi2     195.4 (n 108, k 8, BIC     232.9)  shape 5.73e+04 38.8 30.4 1.36
+   fred      chi2     224.5 (n 108, k 7, BIC     257.3)  shape 5.71e+04 0.159 30.5
+   nova      chi2     200.2 (n 108, k 8, BIC     237.7)  shape 5.73e+04 40.2 49.2 3.46
+   => static-parallax +5.7; best non-lens (pv7_asym) - best lens +1.9; chi2/dof best lens 1.95
+
+-- variant: fs<=1   n 108  series NEOWISE_W1(base 1, nev 1), NEOWISE_W2(base 1, nev 1), GAIA_G(base 1, nev 4), GAIA_RP(base 1, nev 4)
+   static    chi2     204.3 (n 108, k 7, BIC     237.1)  t0 57270.45 tE 78.2 u0 +0.1476 Amax 6.8
+             GAIA_G:fs=0.99 GAIA_RP:fs=1.00 NEOWISE_W1:fs=0.62 NEOWISE_W2:fs=0.66
+   parallax  chi2     193.5 (n 108, k 9, BIC     235.6)  t0 57260.81 tE 593.7 u0 -0.0305 Amax 32.8 piEN -0.361 piEE +0.113
+             GAIA_G:fs=0.15 GAIA_RP:fs=0.15 NEOWISE_W1:fs=0.13 NEOWISE_W2:fs=0.14
+   lens_asym chi2     197.7 (n 108, k 8, BIC     235.2)  t0 57273.05 tE_rise 104.3 tE_fall 73.0 ratio 1.43 u0 0.1442
+   pv7       chi2    9727.9 (n 108, k 7, BIC    9760.7)  shape 5.73e+04 350 16.4
+   pv7_asym  chi2    9719.2 (n 108, k 8, BIC    9756.7)  shape 5.73e+04 544 437 26.3
+   fred      chi2    9751.2 (n 108, k 7, BIC    9784.0)  shape 5.71e+04 1.02e+03 26.3
+   nova      chi2    9893.4 (n 108, k 8, BIC    9930.8)  shape 5.73e+04 74.2 67.4 1.98
+   => static-parallax +10.8; best non-lens (pv7_asym) - best lens +9525.7; chi2/dof best lens 1.95

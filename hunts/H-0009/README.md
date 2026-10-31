@@ -50,6 +50,7 @@ reference events).
 | dwarf novae and CVs / young stars / other catalogued variables | 50 / 36 / 212 |
 | unclassified | 892 (576 one-visit, 316 two-to-six-visit) |
 | strong (≥ 0.4 mag, achromatic to 0.08 mag) and unexplained | 122, 56 of them not in H-0008 |
+| after removing exposure-level artifacts (referee, below) | **112** |
 
 ## What the new rules buy
 
@@ -85,9 +86,45 @@ and ATLAS is the next check. Two families deserve follow-up first:
   2017-18), J170153.51-425620.0 (two visits in 2015-16). Many two-to-six-visit events are chromatic by 0.1-0.25 mag, which
   points to young stars rather than lenses.
 - **Single-visit events on stars the strict pass could not search** (fitted with two or three components on nearly every visit), e.g.
-  J194519.88+274002.7 (×3.5, 2016), J182621.38-175812.7 (×2.8, 2020) and J181035.29-105156.9 (×2.5, 2015).
+  J181035.29-105156.9 (×2.5, 2015). Two examples first listed here, J194519.88+274002.7 and J182621.38-175812.7, were withdrawn: the
+  first is an exposure-level artifact, the second a brightening of a neighbour 2.5" away (referee, below).
 
 The pass also catches non-stellar transients: J101348.30+180734.9 is the host of SN 2022ffg (Gaia22bxs, a Type II supernova).
+
+## ATLAS follow-up and the artifact test
+
+ATLAS forced photometry for ten strong events; referee:
+[`reviews/claude-referee-atlas-2026-10-31.md`](reviews/claude-referee-atlas-2026-10-31.md), which also downloaded every NEOWISE
+single exposure for all 122 strong events and 117 of the 118 known lenses.
+
+| event | verdict | P(lens) | evidence |
+|---|---|---|---|
+| J172057.02-414201.2 | lens candidate | 0.65 | Gaia DR3 epoch photometry ×5.9, equal in BP and RP, 7 d before NEOWISE's ×4.5; on Gaia DR3 5959812622743175552 (0.59" away), not the star first matched at 2.2" |
+| J180402.28-181847.5 | lens candidate | 0.60 | Gaia DR3 ×2.6, equal in BP and RP, against NEOWISE ×2.7; ATLAS's 2015 images are too blurred to tell |
+| J174401.99-382512.2 | inconclusive | 0.40 | a real six-month event (2021 Mar - 2022 Feb), ×2.4-2.6 in ATLAS o and c and ×2.3-2.5 in W1/W2; a lens needs annual parallax and fits no better than a lopsided bump (the first read of "×5" divided by a blurred baseline) |
+| J025145.03+602012.5 | not a lens | < 0.02 | a catalogued young B8 star in W5; it dims by 7-17% in ATLAS at the infrared peak |
+| J064439.73+011503.3 | not a lens | 0.03 | a clear optical rise, far smaller than the infrared one |
+| J185035, J170153 | no optical counterpart | ≤ 0.10 | infrared-only events (J185035: a two-year rise on a source far too red for the Gaia star) |
+| J184240, J182621 | on a neighbour | 0.10 | the brightening sits on another source 1.1" and 2.5" away |
+| J173349 | unconstrained | 0.15 | no ATLAS frame near the event; OGLE observed the field in 2015 without an alert |
+
+The Gaia DR3 classifier already labels J172057 and J180402 MICROLENSING, though neither is in the DR3 microlensing catalogue. A
+further strong event, J180839.93-151910.5, is ×1.52 in Gaia DR3, equal in BP and RP; ATLAS is queued.
+
+**Do the relaxed rules let artifacts in?** Yes, but not through the flags they relaxed.
+- Halo-, deblend- and saturation-flagged event frames are as common among known lenses (71%) as among strong events (70%):
+  the flags belong to the star's surroundings, not to the event. Cutting on them would throw away most of what this pass gained.
+- The artifacts are exposure-level: in some frames a brighter neighbour 2-5" away is not detected separately, its flux lands in
+  a detection near the star, and the "within 2" of the AllWISE position" rule keeps exactly those frames. 10 of the 56 new strong
+  events, 0 of the 66 that H-0008 also found, and 2 of 117 known lenses. They are flagged in `work/sky4_strong.csv`
+  (`frame_artifact`) and removed from the count above.
+- 31 of 122 strong events (13 of 117 known lenses) brightened on a source other than the matched Gaia star; the NEOWISE centroid's
+  shift during the event points at it (`off_target`). Those events need re-matching, not rejecting.
+- The fix for the next run: compute visit medians from every detection matched to the source, not only those within 2", and
+  re-associate each event to the Gaia star its centroid shift points at.
+
+None of the four NEOWISE-only events with sealed DR4 predictions (OS-0022 to OS-0025) is an artifact or off target; OS-0022's event
+frames scatter 3.6× more than usual.
 
 ## Gaia DR4 as the second instrument (`predictions/`)
 
@@ -115,6 +152,6 @@ counterpart. Grading changes after DR4 lands are limited to mapping DR4 columns.
 
 ## Next
 
-- ATLAS forced photometry for ten strong events it can cover is queued (`work/atlas/queue.csv`); a referee before anything is
-  called a lens.
+- ATLAS for J180839 (queued). Optical checks for the other strong events, and re-matching the 31 off-target ones.
+- Rerun the long pass with the exposure-level fix above.
 - Grade the six DR4 predictions in December.

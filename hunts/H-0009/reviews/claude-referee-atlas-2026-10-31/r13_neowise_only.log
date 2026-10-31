@@ -1,0 +1,28 @@
+== J185035 all visits (fs<=1 for the lens), n 40
+   static    chi2      40.3 (n 40, k 5, BIC      58.7)  t0 58330.93 tE 145.8 u0 +0.0001 Amax 10000.0
+             NEOWISE_W1:fs=0.99 NEOWISE_W2:fs=1.00
+   parallax  chi2      29.1 (n 40, k 7, BIC      54.9)  t0 58380.72 tE 220.1 u0 +0.3051 Amax 3.4 piEN -0.005 piEE +0.182
+             NEOWISE_W1:fs=0.99 NEOWISE_W2:fs=1.00
+   pv7       chi2    5816.1 (n 40, k 5, BIC    5834.6)  shape 5.84e+04 1.14e+03 50
+   pv7_asym  chi2    5590.0 (n 40, k 6, BIC    5612.1)  shape 5.84e+04 1.09e+03 693 31.1
+== J185035 peak visit dropped (saturated) (fs<=1 for the lens), n 38
+   static    chi2      32.4 (n 38, k 5, BIC      50.6)  t0 58323.05 tE 137.0 u0 +0.0001 Amax 10000.0
+             NEOWISE_W1:fs=1.00 NEOWISE_W2:fs=0.99
+   parallax  chi2      28.3 (n 38, k 7, BIC      53.7)  t0 58374.18 tE 175.0 u0 -0.0048 Amax 206.4 piEN -0.191 piEE +0.113
+             NEOWISE_W1:fs=1.00 NEOWISE_W2:fs=0.98
+   pv7       chi2      34.0 (n 38, k 5, BIC      52.2)  shape 5.83e+04 226 3.11
+   pv7_asym  chi2      28.4 (n 38, k 6, BIC      50.2)  shape 5.82e+04 133 294 2.22
+== J184240 all visits (fs<=1 for the lens), n 38
+   static    chi2      38.0 (n 38, k 5, BIC      56.2)  t0 59383.18 tE 54.3 u0 +3.0000 Amax 1.0
+             NEOWISE_W1:fs=65.80 NEOWISE_W2:fs=72.26
+   parallax  chi2      37.1 (n 38, k 7, BIC      62.6)  t0 59391.89 tE 10.4 u0 -2.9997 Amax 1.0 piEN -1.423 piEE -2.913
+             NEOWISE_W1:fs=1051.88 NEOWISE_W2:fs=1154.51
+   pv7       chi2      36.8 (n 38, k 5, BIC      55.0)  shape 5.94e+04 902 21.9
+   pv7_asym  chi2      36.4 (n 38, k 6, BIC      58.2)  shape 5.94e+04 1.66e+03 1.34e+03 50
+== J184240 fs<=1 (fs<=1 for the lens), n 38
+   static    chi2      38.4 (n 38, k 5, BIC      56.6)  t0 59384.03 tE 169.0 u0 +0.3881 Amax 2.7
+             NEOWISE_W1:fs=0.91 NEOWISE_W2:fs=1.00
+   parallax  chi2      37.8 (n 38, k 7, BIC      63.3)  t0 59387.55 tE 122.1 u0 -0.0443 Amax 22.6 piEN -0.018 piEE -0.119
+             NEOWISE_W1:fs=0.91 NEOWISE_W2:fs=1.00
+   pv7       chi2      36.8 (n 38, k 5, BIC      55.0)  shape 5.94e+04 902 21.9
+   pv7_asym  chi2      36.4 (n 38, k 6, BIC      58.2)  shape 5.94e+04 1.66e+03 1.34e+03 50

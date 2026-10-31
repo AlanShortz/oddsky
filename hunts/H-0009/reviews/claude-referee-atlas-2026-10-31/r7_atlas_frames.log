@@ -1,0 +1,131 @@
+== J174401: 77 frames within 30 d of 2021-08-28
+  2021-08-01 dt  -27.1 c 01a nfr 8 npos 6 med      275 scat/err   1.2 chiN     2.7 maj 2.75 (season 2.70) dm5 +0.18 dsky +0.14 apfit -0.377 (season -0.382)
+  2021-08-05 dt  -23.1 c 01a nfr 8 npos 6 med      306 scat/err   1.0 chiN     3.0 maj 2.65 (season 2.70) dm5 +0.18 dsky +0.00 apfit -0.389 (season -0.382)
+  2021-08-07 dt  -21.1 o 02a nfr 4 npos 3 med      906 scat/err   0.6 chiN     2.9 maj 2.44 (season 2.25) dm5 +0.09 dsky +0.84 apfit -0.533 (season -0.518)
+  2021-08-09 dt  -19.1 c 01a nfr 4 npos 3 med      301 scat/err   1.0 chiN     3.6 maj 2.33 (season 2.70) dm5 +0.07 dsky +0.16 apfit -0.413 (season -0.382)
+  2021-08-11 dt  -17.1 o 02a nfr 3 npos 3 med     1013 scat/err   1.0 chiN     0.8 maj 2.20 (season 2.25) dm5 -0.71 dsky -0.50 apfit -0.513 (season -0.518)
+  2021-08-13 dt  -15.2 o 01a nfr 4 npos 3 med      940 scat/err   0.9 chiN     5.8 maj 2.39 (season 2.35) dm5 +0.05 dsky +0.62 apfit -0.447 (season -0.443)
+  2021-08-21 dt   -7.1 o 01a nfr 4 npos 3 med     1022 scat/err   1.0 chiN     2.3 maj 2.25 (season 2.35) dm5 -0.45 dsky -1.57 apfit -0.411 (season -0.443)
+  2021-08-25 dt   -3.2 o 01a nfr 4 npos 3 med      986 scat/err   0.9 chiN     4.4 maj 2.22 (season 2.35) dm5 +0.33 dsky -0.16 apfit -0.446 (season -0.443)
+  2021-08-27 dt   -1.1 c 02a nfr 4 npos 3 med      267 scat/err   0.8 chiN     2.8 maj 3.09 (season 2.64) dm5 -0.10 dsky +0.05 apfit -0.406 (season -0.451)
+  2021-08-29 dt   +0.8 o 01a nfr 4 npos 3 med     1002 scat/err   0.9 chiN     4.3 maj 2.17 (season 2.35) dm5 +0.52 dsky +0.38 apfit -0.464 (season -0.443)
+  2021-08-31 dt   +2.8 c 02a nfr 8 npos 6 med      300 scat/err   1.5 chiN     1.7 maj 2.71 (season 2.64) dm5 +0.00 dsky +0.01 apfit -0.447 (season -0.451)
+  2021-09-06 dt   +8.9 o 01a nfr 2 npos 2 med      958 scat/err   0.6 chiN     2.8 maj 2.58 (season 2.35) dm5 -0.32 dsky +0.26 apfit -0.424 (season -0.443)
+  2021-09-08 dt  +10.8 c 02a nfr 4 npos 3 med      324 scat/err   0.8 chiN     1.3 maj 2.42 (season 2.64) dm5 +0.14 dsky -0.23 apfit -0.469 (season -0.451)
+  2021-09-10 dt  +12.9 o 01a nfr 4 npos 3 med      828 scat/err   2.3 chiN     4.5 maj 3.00 (season 2.35) dm5 -0.17 dsky -0.03 apfit -0.463 (season -0.443)
+  2021-09-12 dt  +14.8 o 02a nfr 4 npos 3 med      978 scat/err   1.4 chiN     2.1 maj 2.33 (season 2.25) dm5 +0.04 dsky +0.23 apfit -0.504 (season -0.518)
+  2021-09-22 dt  +24.8 o 01a nfr 4 npos 3 med      800 scat/err   0.9 chiN     3.9 maj 2.71 (season 2.35) dm5 -0.34 dsky -0.89 apfit -0.490 (season -0.443)
+  2021-09-26 dt  +28.8 o 01a nfr 4 npos 3 med      748 scat/err   0.5 chiN     4.0 maj 2.96 (season 2.35) dm5 +0.05 dsky -0.26 apfit -0.452 (season -0.443)
+== J180402: 24 frames within 30 d of 2015-09-15
+  2015-09-23 dt   +8.1 o 02a nfr 6 npos 3 med      216 scat/err   1.4 chiN     2.7 maj 3.97 (season 4.00) dm5 +0.00 dsky -0.03 apfit -0.547 (season -0.512)
+  2015-09-24 dt   +9.1 o 02a nfr 2 npos 2 med       70 scat/err   0.4 chiN     2.1 maj 4.07 (season 4.00) dm5 -0.10 dsky -0.22 apfit -0.519 (season -0.512)
+  2015-10-01 dt  +16.1 o 02a nfr 1 npos 1 med      185 scat/err   nan chiN     4.4 maj 4.11 (season 4.00) dm5 +0.39 dsky +1.47 apfit -0.534 (season -0.512)
+  2015-10-03 dt  +18.1 o 02a nfr 1 npos 1 med      218 scat/err   nan chiN     3.8 maj 3.96 (season 4.00) dm5 +0.45 dsky +0.89 apfit -0.539 (season -0.512)
+  2015-10-09 dt  +24.1 c 02a nfr 5 npos 3 med      -63 scat/err   1.6 chiN     1.6 maj 4.44 (season 4.27) dm5 -0.30 dsky -0.06 apfit -0.466 (season -0.458)
+  2015-10-13 dt  +28.1 c 02a nfr 4 npos 3 med      -34 scat/err   0.7 chiN     2.2 maj 4.91 (season 4.27) dm5 -0.02 dsky -0.02 apfit -0.457 (season -0.458)
+  2015-10-14 dt  +29.1 c 02a nfr 5 npos 3 med      -47 scat/err   2.8 chiN     2.3 maj 4.72 (season 4.27) dm5 -0.07 dsky -0.06 apfit -0.477 (season -0.458)
+== J025145: 90 frames within 30 d of 2021-08-23
+  2021-08-04 dt  -18.9 o 01a nfr 8 npos 6 med    47443 scat/err  40.3 chiN  6995.1 maj 1.87 (season 2.91) dm5 +0.67 dsky +0.70 apfit -0.487 (season -0.465)
+  2021-08-08 dt  -14.8 c 01a nfr 4 npos 3 med    37853 scat/err   5.5 chiN  2977.3 maj 2.29 (season 2.29) dm5 -0.05 dsky -0.06 apfit -0.397 (season -0.396)
+  2021-08-10 dt  -12.9 o 02a nfr 4 npos 3 med    49342 scat/err   1.7 chiN  1822.9 maj 2.31 (season 2.19) dm5 +0.39 dsky +1.10 apfit -0.453 (season -0.457)
+  2021-08-12 dt  -10.9 c 01a nfr 4 npos 3 med    37645 scat/err   3.7 chiN  3061.7 maj 2.26 (season 2.29) dm5 +0.04 dsky +0.02 apfit -0.394 (season -0.396)
+  2021-08-14 dt   -8.9 o 02a nfr 4 npos 3 med    49216 scat/err   4.7 chiN  1990.5 maj 2.39 (season 2.19) dm5 +0.30 dsky +0.87 apfit -0.445 (season -0.457)
+  2021-08-16 dt   -6.8 c 01a nfr 4 npos 3 med    37996 scat/err   2.8 chiN  2345.2 maj 2.39 (season 2.29) dm5 -0.02 dsky +0.06 apfit -0.398 (season -0.396)
+  2021-08-18 dt   -4.8 o 02a nfr 4 npos 3 med    49345 scat/err   3.8 chiN   896.1 maj 2.14 (season 2.19) dm5 +0.32 dsky +0.78 apfit -0.459 (season -0.457)
+  2021-08-20 dt   -2.8 o 01a nfr 4 npos 3 med    44838 scat/err   1.8 chiN  3334.8 maj 2.05 (season 2.91) dm5 +0.57 dsky +0.51 apfit -0.419 (season -0.465)
+  2021-08-22 dt   -0.9 o 02a nfr 4 npos 3 med    45450 scat/err   5.6 chiN   288.1 maj 2.17 (season 2.19) dm5 -0.41 dsky -0.86 apfit -0.453 (season -0.457)
+  2021-08-26 dt   +3.1 o 02a nfr 4 npos 2 med    42958 scat/err   0.9 chiN   363.4 maj 2.05 (season 2.19) dm5 +0.00 dsky -0.00 apfit -0.461 (season -0.457)
+  2021-08-28 dt   +5.1 o 01a nfr 4 npos 3 med    40521 scat/err   3.1 chiN   679.0 maj 2.17 (season 2.91) dm5 +0.24 dsky -0.13 apfit -0.416 (season -0.465)
+  2021-08-30 dt   +6.9 c 02a nfr 4 npos 3 med    33320 scat/err   6.5 chiN   296.1 maj 2.54 (season 2.57) dm5 -0.17 dsky -0.38 apfit -0.404 (season -0.404)
+  2021-09-01 dt   +9.1 o 01a nfr 2 npos 1 med    40888 scat/err  12.6 chiN   881.3 maj 2.00 (season 2.91) dm5 -0.09 dsky -0.40 apfit -0.413 (season -0.465)
+  2021-09-05 dt  +13.1 o 01a nfr 4 npos 3 med    42756 scat/err   3.0 chiN  1414.4 maj 2.09 (season 2.91) dm5 +0.66 dsky +0.82 apfit -0.421 (season -0.465)
+  2021-09-07 dt  +15.1 c 02a nfr 4 npos 3 med    35032 scat/err   8.2 chiN   702.2 maj 2.81 (season 2.57) dm5 +0.00 dsky +0.08 apfit -0.395 (season -0.404)
+  2021-09-09 dt  +17.1 o 01a nfr 8 npos 6 med    46084 scat/err  22.1 chiN   462.1 maj 3.45 (season 2.91) dm5 +0.28 dsky +0.62 apfit -0.364 (season -0.465)
+  2021-09-11 dt  +19.1 c 02a nfr 4 npos 3 med    37269 scat/err   2.4 chiN   965.1 maj 2.34 (season 2.57) dm5 +0.08 dsky +0.00 apfit -0.427 (season -0.404)
+  2021-09-13 dt  +21.0 o 01a nfr 8 npos 6 med    50390 scat/err  37.6 chiN   670.0 maj 3.10 (season 2.91) dm5 +0.15 dsky +0.32 apfit -0.544 (season -0.465)
+  2021-09-15 dt  +23.1 c 02a nfr 4 npos 2 med    36153 scat/err   6.8 chiN  1435.6 maj 2.34 (season 2.57) dm5 +0.07 dsky +0.02 apfit -0.428 (season -0.404)
+  2021-09-21 dt  +29.1 o 01a nfr 4 npos 3 med    47416 scat/err   1.5 chiN    63.8 maj 2.98 (season 2.91) dm5 -0.46 dsky -0.90 apfit -0.456 (season -0.465)
+== J185035: 72 frames within 30 d of 2018-09-13
+  2018-08-18 dt  -26.3 o 01a nfr 8 npos 6 med       81 scat/err   4.7 chiN     2.7 maj 3.79 (season 3.36) dm5 +0.09 dsky +0.31 apfit -0.446 (season -0.470)
+  2018-08-30 dt  -14.3 o 01a nfr 4 npos 3 med      144 scat/err   1.0 chiN     1.5 maj 3.00 (season 3.36) dm5 +0.03 dsky -0.32 apfit -0.507 (season -0.470)
+  2018-09-01 dt  -12.3 o 02a nfr 4 npos 3 med      139 scat/err   0.7 chiN     1.2 maj 2.27 (season 2.31) dm5 +0.09 dsky +0.30 apfit -0.456 (season -0.453)
+  2018-09-03 dt  -10.3 o 01a nfr 4 npos 3 med       31 scat/err   1.7 chiN     3.4 maj 3.58 (season 3.36) dm5 +0.24 dsky +0.36 apfit -0.449 (season -0.470)
+  2018-09-11 dt   -2.3 o 01a nfr 4 npos 3 med      118 scat/err   1.3 chiN     1.8 maj 3.33 (season 3.36) dm5 +0.35 dsky +0.47 apfit -0.484 (season -0.470)
+  2018-09-17 dt   +3.6 o 02a nfr 4 npos 3 med      170 scat/err   0.6 chiN     1.2 maj 2.08 (season 2.31) dm5 +0.05 dsky -0.07 apfit -0.500 (season -0.453)
+  2018-09-19 dt   +5.6 o 01a nfr 4 npos 3 med       31 scat/err   1.9 chiN     1.8 maj 3.40 (season 3.36) dm5 -0.22 dsky -0.79 apfit -0.450 (season -0.470)
+  2018-09-21 dt   +7.6 o 02a nfr 4 npos 3 med      140 scat/err   1.4 chiN     1.5 maj 2.56 (season 2.31) dm5 -0.39 dsky -0.52 apfit -0.452 (season -0.453)
+  2018-09-24 dt  +10.6 o 02a nfr 4 npos 3 med      132 scat/err   0.2 chiN     1.1 maj 2.25 (season 2.31) dm5 -0.41 dsky -0.77 apfit -0.406 (season -0.453)
+  2018-09-26 dt  +12.6 o 01a nfr 4 npos 3 med       54 scat/err   0.8 chiN     1.6 maj 3.49 (season 3.36) dm5 -0.31 dsky -0.97 apfit -0.472 (season -0.470)
+  2018-09-29 dt  +15.6 o 02a nfr 4 npos 3 med      136 scat/err   0.8 chiN     1.4 maj 2.45 (season 2.31) dm5 +0.04 dsky +0.27 apfit -0.460 (season -0.453)
+  2018-10-01 dt  +17.6 o 01a nfr 4 npos 3 med       60 scat/err   2.1 chiN     2.5 maj 3.27 (season 3.36) dm5 +0.29 dsky +0.53 apfit -0.469 (season -0.470)
+  2018-10-03 dt  +19.6 o 02a nfr 4 npos 3 med      150 scat/err   0.3 chiN     1.7 maj 2.38 (season 2.31) dm5 +0.17 dsky +0.58 apfit -0.471 (season -0.453)
+  2018-10-05 dt  +21.6 o 01a nfr 8 npos 6 med      139 scat/err   1.5 chiN     1.2 maj 3.20 (season 3.36) dm5 -0.28 dsky -0.47 apfit -0.486 (season -0.470)
+  2018-10-07 dt  +23.6 c 02a nfr 4 npos 3 med       61 scat/err   0.6 chiN     1.0 maj 2.62 (season 2.62) dm5 +0.00 dsky -0.08 apfit -0.401 (season -0.413)
+  2018-10-11 dt  +27.6 c 02a nfr 4 npos 3 med       49 scat/err   1.1 chiN     1.2 maj 2.64 (season 2.62) dm5 -0.01 dsky -0.20 apfit -0.403 (season -0.413)
+== J182621: 37 frames within 30 d of 2020-03-27
+  2020-02-26 dt  -29.5 c 02a nfr 4 npos 3 med      604 scat/err   1.6 chiN    92.7 maj 3.12 (season 2.61) dm5 -0.38 dsky -0.45 apfit -0.469 (season -0.496)
+  2020-03-10 dt  -16.5 o 02a nfr 7 npos 5 med     1590 scat/err   2.4 chiN    40.8 maj 3.48 (season 2.26) dm5 -0.68 dsky -1.11 apfit -0.482 (season -0.593)
+  2020-03-11 dt  -15.5 o 01a nfr 4 npos 3 med     1276 scat/err   1.7 chiN   125.9 maj 2.92 (season 2.36) dm5 -0.12 dsky -0.82 apfit -0.399 (season -0.469)
+  2020-04-08 dt  +12.5 o 01a nfr 4 npos 3 med     1234 scat/err   0.5 chiN   130.0 maj 2.70 (season 2.36) dm5 -0.59 dsky -1.55 apfit -0.428 (season -0.469)
+  2020-04-10 dt  +14.5 o 02a nfr 3 npos 3 med     1112 scat/err   2.7 chiN    65.0 maj 2.55 (season 2.26) dm5 -0.89 dsky -1.13 apfit -0.535 (season -0.593)
+  2020-04-18 dt  +22.5 o 02a nfr 4 npos 3 med     1008 scat/err   2.1 chiN   355.4 maj 2.34 (season 2.26) dm5 -0.05 dsky +0.62 apfit -0.581 (season -0.593)
+  2020-04-20 dt  +24.5 o 01a nfr 4 npos 3 med     1183 scat/err   2.2 chiN   261.7 maj 2.38 (season 2.36) dm5 -0.09 dsky +0.04 apfit -0.471 (season -0.469)
+  2020-04-22 dt  +26.5 c 02a nfr 4 npos 3 med      444 scat/err   1.2 chiN   428.5 maj 2.35 (season 2.61) dm5 +0.04 dsky -0.04 apfit -0.516 (season -0.496)
+  2020-04-24 dt  +28.4 o 01a nfr 3 npos 3 med     1156 scat/err   1.4 chiN    81.4 maj 2.55 (season 2.36) dm5 -0.76 dsky -1.06 apfit -0.421 (season -0.469)
+== J184240: 51 frames within 30 d of 2021-03-30
+  2021-03-03 dt  -27.3 o 01a nfr 4 npos 3 med      738 scat/err   1.4 chiN     3.7 maj 2.08 (season 2.05) dm5 +0.02 dsky -0.43 apfit -0.454 (season -0.468)
+  2021-03-15 dt  -15.4 o 01a nfr 4 npos 3 med      746 scat/err   1.1 chiN     5.8 maj 2.08 (season 2.05) dm5 +0.02 dsky +0.46 apfit -0.476 (season -0.468)
+  2021-03-19 dt  -11.4 o 01a nfr 4 npos 3 med      694 scat/err   1.0 chiN     8.3 maj 2.25 (season 2.05) dm5 +0.03 dsky +0.56 apfit -0.463 (season -0.468)
+  2021-03-31 dt   +0.6 o 01a nfr 3 npos 3 med      807 scat/err   1.1 chiN     2.6 maj 1.99 (season 2.05) dm5 -0.24 dsky -0.87 apfit -0.469 (season -0.468)
+  2021-04-02 dt   +2.6 o 02a nfr 4 npos 3 med      828 scat/err   1.2 chiN     2.8 maj 2.00 (season 2.16) dm5 -0.52 dsky -1.04 apfit -0.565 (season -0.572)
+  2021-04-07 dt   +7.7 o 01a nfr 4 npos 3 med      750 scat/err   0.9 chiN     3.3 maj 2.02 (season 2.05) dm5 +0.18 dsky -0.03 apfit -0.477 (season -0.468)
+  2021-04-08 dt   +8.6 c 01a nfr 4 npos 3 med      322 scat/err   1.1 chiN     7.3 maj 2.42 (season 2.38) dm5 +0.02 dsky -0.00 apfit -0.435 (season -0.433)
+  2021-04-12 dt  +12.6 c 01a nfr 4 npos 3 med      296 scat/err   2.4 chiN     5.7 maj 2.48 (season 2.38) dm5 -0.02 dsky -0.11 apfit -0.435 (season -0.433)
+  2021-04-18 dt  +18.6 o 02a nfr 4 npos 3 med      762 scat/err   0.7 chiN     4.6 maj 2.19 (season 2.16) dm5 +0.11 dsky +0.09 apfit -0.558 (season -0.572)
+  2021-04-22 dt  +22.6 o 02a nfr 4 npos 3 med      793 scat/err   0.7 chiN     4.5 maj 2.12 (season 2.16) dm5 +0.12 dsky -0.23 apfit -0.571 (season -0.572)
+  2021-04-24 dt  +24.6 o 01a nfr 4 npos 3 med      749 scat/err   1.5 chiN     6.6 maj 2.24 (season 2.05) dm5 -0.47 dsky -0.42 apfit -0.410 (season -0.468)
+  2021-04-27 dt  +27.6 o 01a nfr 4 npos 3 med      630 scat/err   0.7 chiN     8.3 maj 2.47 (season 2.05) dm5 -0.72 dsky -1.36 apfit -0.378 (season -0.468)
+  2021-04-28 dt  +28.6 o 01a nfr 4 npos 3 med      752 scat/err   0.8 chiN     2.6 maj 2.12 (season 2.05) dm5 -0.70 dsky -1.31 apfit -0.396 (season -0.468)
+== J064439: 77 frames within 30 d of 2020-10-04
+  2020-09-08 dt  -25.5 o 01a nfr 3 npos 2 med    24189 scat/err   7.3 chiN   165.0 maj 2.11 (season 2.22) dm5 -0.06 dsky -0.05 apfit -0.403 (season -0.402)
+  2020-09-10 dt  -23.5 o 02a nfr 4 npos 3 med    24348 scat/err   1.6 chiN   157.4 maj 2.16 (season 2.13) dm5 +0.41 dsky +0.54 apfit -0.444 (season -0.461)
+  2020-09-16 dt  -17.5 o 01a nfr 4 npos 3 med    24396 scat/err   2.5 chiN   739.3 maj 2.09 (season 2.22) dm5 +0.36 dsky +0.81 apfit -0.403 (season -0.402)
+  2020-09-18 dt  -15.5 c 02a nfr 4 npos 3 med    18007 scat/err   4.6 chiN   240.2 maj 2.74 (season 2.54) dm5 -0.20 dsky -0.25 apfit -0.392 (season -0.412)
+  2020-09-20 dt  -13.5 o 01a nfr 4 npos 3 med    24862 scat/err   3.7 chiN   396.1 maj 2.04 (season 2.22) dm5 +0.26 dsky +0.61 apfit -0.394 (season -0.402)
+  2020-09-22 dt  -11.5 c 02a nfr 4 npos 3 med    18232 scat/err   4.9 chiN    78.5 maj 2.53 (season 2.54) dm5 -0.23 dsky -0.31 apfit -0.403 (season -0.412)
+  2020-09-28 dt   -5.5 o 01a nfr 4 npos 3 med    29686 scat/err   3.6 chiN   388.7 maj 2.25 (season 2.22) dm5 +0.27 dsky +0.75 apfit -0.395 (season -0.402)
+  2020-10-04 dt   +0.4 o 02a nfr 4 npos 3 med    29621 scat/err  12.9 chiN    52.3 maj 2.35 (season 2.13) dm5 -0.37 dsky -0.13 apfit -0.416 (season -0.461)
+  2020-10-06 dt   +2.5 o 01a nfr 4 npos 3 med    28192 scat/err   3.2 chiN   341.2 maj 2.17 (season 2.22) dm5 +0.07 dsky -0.04 apfit -0.401 (season -0.402)
+  2020-10-10 dt   +6.5 o 01a nfr 4 npos 3 med    26578 scat/err   4.8 chiN   104.3 maj 2.20 (season 2.22) dm5 -0.43 dsky -0.61 apfit -0.403 (season -0.402)
+  2020-10-14 dt  +10.5 o 01a nfr 4 npos 3 med    25605 scat/err   4.7 chiN   467.2 maj 2.33 (season 2.22) dm5 +0.35 dsky +0.88 apfit -0.394 (season -0.402)
+  2020-10-16 dt  +12.5 c 02a nfr 4 npos 3 med    17927 scat/err   2.9 chiN    65.0 maj 2.62 (season 2.54) dm5 -0.70 dsky -0.85 apfit -0.394 (season -0.412)
+  2020-10-18 dt  +14.4 o 01a nfr 4 npos 3 med    25342 scat/err   2.4 chiN   405.1 maj 2.25 (season 2.22) dm5 +0.41 dsky +1.05 apfit -0.410 (season -0.402)
+  2020-10-20 dt  +16.4 c 02a nfr 4 npos 3 med    18146 scat/err   3.2 chiN   244.8 maj 2.72 (season 2.54) dm5 -0.05 dsky -0.11 apfit -0.401 (season -0.412)
+  2020-10-22 dt  +18.4 o 01a nfr 4 npos 3 med    25310 scat/err   4.8 chiN    41.3 maj 1.99 (season 2.22) dm5 -0.73 dsky -0.27 apfit -0.414 (season -0.402)
+  2020-10-24 dt  +20.5 c 02a nfr 4 npos 3 med    18086 scat/err   3.5 chiN    93.5 maj 2.31 (season 2.54) dm5 +0.02 dsky +0.00 apfit -0.426 (season -0.412)
+  2020-10-26 dt  +22.4 o 01a nfr 4 npos 3 med    25086 scat/err   1.8 chiN    91.5 maj 1.89 (season 2.22) dm5 -0.41 dsky -0.19 apfit -0.423 (season -0.402)
+  2020-10-31 dt  +27.4 o 01a nfr 2 npos 2 med    24637 scat/err   7.9 chiN   215.6 maj 2.04 (season 2.22) dm5 -0.23 dsky -0.69 apfit -0.432 (season -0.402)
+  2020-11-01 dt  +28.4 o 02a nfr 8 npos 6 med    24839 scat/err  16.2 chiN   137.7 maj 2.12 (season 2.13) dm5 -0.31 dsky -0.71 apfit -0.516 (season -0.461)
+== J172057: no ATLAS frame within 30 d
+== J170153: 5 frames within 30 d of 2016-03-09
+  2016-03-18 dt   +8.8 o 02a nfr 2 npos 2 med     2505 scat/err   2.4 chiN     9.4 maj 3.89 (season 3.79) dm5 +0.39 dsky +0.83 apfit -0.495 (season -0.508)
+  2016-03-30 dt  +20.8 o 02a nfr 3 npos 3 med     2491 scat/err   1.4 chiN     5.7 maj 3.79 (season 3.79) dm5 -0.03 dsky -0.06 apfit -0.508 (season -0.508)
+== J173349: no ATLAS frame within 30 d
+
+== Saturation tests (within-night flux vs PSF width)
+  J025145 o event +-30 d    : n   60 median peak proxy    10222 uJy/px^2; d(flux)/d(maj) within night +3.41 +- 2.15 %/px; chi/N median 707
+  J025145 o baseline >400 d : n 1723 median peak proxy     7871 uJy/px^2; d(flux)/d(maj) within night -4.44 +- 0.99 %/px; chi/N median 297
+  J025145 c event +-30 d    : n   28 median peak proxy     7036 uJy/px^2; d(flux)/d(maj) within night -8.22 +- 1.46 %/px; chi/N median 1290
+  J025145 c baseline >400 d : n  538 median peak proxy     5409 uJy/px^2; d(flux)/d(maj) within night -4.15 +- 1.60 %/px; chi/N median 354
+  J025145 o baseline frames narrow PSF maj<2.2: n  350 median flux    48092 chi/N    684
+  J025145 o baseline frames 2.2-2.6           : n  523 median flux    48575 chi/N    480
+  J025145 o baseline frames maj>=2.6          : n  890 median flux    48289 chi/N    171
+  J025145 o event frames (+-15 d): n 34 median maj 2.14 median flux 44838 chi/N 1018
+  J064439 o event +-30 d    : n   55 median peak proxy     5924 uJy/px^2; d(flux)/d(maj) within night -3.04 +- 2.29 %/px; chi/N median 165
+  J064439 o baseline >400 d : n 2318 median peak proxy     4272 uJy/px^2; d(flux)/d(maj) within night -0.72 +- 0.88 %/px; chi/N median 112
+  J064439 c event +-30 d    : n   20 median peak proxy     2918 uJy/px^2; d(flux)/d(maj) within night +7.83 +- 4.20 %/px; chi/N median 116
+  J064439 c baseline >400 d : n  600 median peak proxy     2688 uJy/px^2; d(flux)/d(maj) within night +0.28 +- 1.19 %/px; chi/N median 112
+  J064439 o baseline frames narrow PSF maj<2.2: n  255 median flux    24312 chi/N    266
+  J064439 o baseline frames 2.2-2.6           : n 1026 median flux    24342 chi/N    199
+  J064439 o baseline frames maj>=2.6          : n 1111 median flux    24483 chi/N     44
+  J064439 o event frames (+-15 d): n 28 median maj 2.24 median flux 26578 chi/N 315

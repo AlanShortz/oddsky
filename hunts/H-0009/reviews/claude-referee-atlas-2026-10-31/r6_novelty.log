@@ -1,0 +1,61 @@
+/Users/alanshortz/conductor/workspaces/oddsky/philadelphia-v2/hunts/H-0009/reviews/claude-referee-atlas-2026-10-31/r6_novelty.py:49: DeprecationWarning: numpy.fix is deprecated. Use numpy.trunc instead, which is faster and follows the Array API standard.
+  a["t"] = pd.to_datetime(a.Date).map(lambda d: d.to_julian_date()) - 2400000.5
+== local reference lists
+ J174401 (2021-08-28, l 351.72 b -4.66): nearest any year OGLE-2023-BLG-0664 (OGLE) 12.4'; nearest within 200 d KMT-2021-BLG-3279 (KMTNet, t0 2021-05-31) 127.5'; events within 30': {'OGLE': 1}
+ J180402 (2015-09-15, l 11.30 b +1.73): nearest any year ZTF22abcfjfp (ZTF (Zhai+2024)) 12.8'; nearest within 200 d Gaia DR3 4095830312689418368 (Gaia DR3, t0 2015-08-18) 55.3'; events within 30': {'Gaia alerts': 1, 'OGLE': 3, 'OGLE GVS (Mroz+2020)': 1, 'ZTF (Zhai+2024)': 1}
+ J025145 (2021-08-23, l 137.29 b +0.86): nearest any year Gaia23bst (Gaia alerts) 76.4'; nearest within 200 d Gaia21cyc (Gaia alerts, t0 2021-06-19) 184.1'; events within 30': {}
+ J185035 (2018-09-13, l 31.35 b -0.58): nearest any year Gaia21ckj (Gaia alerts) 49.3'; nearest within 200 d ZTF1856.2-0110 (ZTF (Zhai+2024), t0 2018-08-21) 89.9'; events within 30': {}
+ J182621 (2020-03-27, l 14.13 b -2.76): nearest any year ZTF20abgrpjg (ZTF (Zhai+2024)) 19.3'; nearest within 200 d ZTF20abgrpjg (ZTF (Zhai+2024), t0 2020-07-14) 19.3'; events within 30': {'Gaia alerts': 1, 'OGLE': 4, 'ZTF (Zhai+2024)': 1}
+ J184240 (2021-03-30, l 27.15 b -0.51): nearest any year Gaia23ddj (Gaia alerts) 21.4'; nearest within 200 d ZTF1853.4-0404 (ZTF (Zhai+2024), t0 2021-06-29) 178.5'; events within 30': {'Gaia alerts': 1, 'OGLE': 3}
+ J064439 (2020-10-04, l 211.05 b -0.94): nearest any year Gaia23deh (Gaia alerts) 140.1'; nearest within 200 d ZTF20abwiild (ZTF (Zhai+2024), t0 2020-08-27) 995.6'; events within 30': {}
+ J172057 (2015-09-07, l 346.56 b -2.74): nearest any year Gaia21ayr (Gaia alerts) 27.6'; nearest within 200 d Gaia DR3 5965732938772861056 (Gaia DR3, t0 2015-04-09) 78.3'; events within 30': {'Gaia alerts': 1}
+ J170153 (2016-03-09, l 343.48 b -0.63): nearest any year Gaia20avj (Gaia alerts) 79.0'; nearest within 200 d OGLE-GVS GD1081.12.49497 (OGLE GVS (Mroz+2020), t0 2016-03-05) 94.6'; events within 30': {}
+ J173349 (2015-09-08, l 0.49 b +3.38): nearest any year KMT-2021-BLG-0847 (KMTNet) 3.0'; nearest within 200 d OGLE-2015-BLG-1839 (OGLE, t0 2015-08-20) 6.7'; events within 30': {'Gaia alerts': 1, 'KMTNet': 148, 'OGLE': 107}
+== Gaia alerts live list
+ HTTP 200: 27076 alerts, latest 2025-01-15 00:59:00
+ J174401: within 60": none; nearest within 200 d: Gaia21dxx (2021-08-21 22:01:49) 81.2'
+ J180402: within 60": none; nearest within 200 d: Gaia16aan (2016-01-21 16:42:37) 1356.8'
+ J025145: within 60": none; nearest within 200 d: Gaia21blt (2021-03-22 12:57:09) 7.1'
+ J185035: within 60": none; nearest within 200 d: Gaia19apn (2019-02-14 15:02:10) 161.1'
+ J182621: within 60": none; nearest within 200 d: Gaia20dwp (2020-08-19 09:13:58) 19.3'
+ J184240: within 60": none; nearest within 200 d: Gaia21bte (2021-04-07 14:54:08) 41.9'
+ J064439: within 60": none; nearest within 200 d: Gaia20bxd (2020-04-19 20:14:16) 112.9'
+ J172057: within 60": none; nearest within 200 d: Gaia15aej (2015-03-28 03:28:40) 826.2'
+ J170153: within 60": none; nearest within 200 d: Gaia16avw (2016-07-20 23:18:52) 106.4'
+ J173349: within 60": none; nearest within 200 d: Gaia15aef (2015-03-24 21:25:09) 1423.3'
+== TNS 60" cone
+ J174401: none within 60" (HTTP 200, valid CSV header)
+ J180402: none within 60" (HTTP 200, valid CSV header)
+ J172057: none within 60" (HTTP 200, valid CSV header)
+== SIMBAD (CfA) 30"
+ J174401: HTTP 200, 4 rows
+     Object Gaia DR3 5961508653751481216  ---  EB*  ---  OID=@25955790   (@@-1,255)  ---  coobox=17074
+     Coordinates(ICRS,ep=J2000,eq=2000): 17 44 01.7398895601  -38 25 22.493109283 (Opt ) A [0.0780 0.0640 90] 2020yCat.1350....0G
+     Coordinates(FK4,ep=B1950,eq=1950): 17 40 35.1467840718  -38 24 04.901315869
+     Coordinates(Gal,ep=J2000,eq=2000): 351.7207973788640  -04.6597583324568
+ J180402: HTTP 200, 4 rows
+     Object Gaia DR3 4143495279954498432  ---  EB*  ---  OID=@25518823   (@@-1,255)  ---  coobox=18692
+     Coordinates(ICRS,ep=J2000,eq=2000): 18 04 03.0773738150  -18 18 37.531959504 (Opt ) A [0.1251 0.1036 90] 2020yCat.1350....0G
+     Coordinates(FK4,ep=B1950,eq=1950): 18 01 07.1706893739  -18 18 48.714329002
+     Coordinates(Gal,ep=J2000,eq=2000): 011.3000264022468  +01.7307848540987
+ J025145: HTTP 200, 5 rows
+     1|      0.05|Y*O|02 51 45.0311008992 +60 20 12.450729948|     ~|12.16    |12.04    |     ~|     ~|B8.0           |   7|   0
+     2|     11.17|*  |02 51 46.0840830293 +60 20 20.500191179|     ~|     ~   |     ~   |     ~|     ~|~              |   3|   0
+     3|     18.33|*  |02 51 47.1652718366 +60 20 03.261695145|     ~|     ~   |     ~   |     ~|     ~|~              |   1|   0
+     4|     25.28|G  |02 51 41.9469336888 +60 20 01.826189736|     ~|     ~   |     ~   |     ~|     ~|~              |   1|   0
+     5|     25.59|*  |02 51 48.1335108206 +60 20 23.682763301|     ~|     ~   |     ~   |     ~|     ~|~              |   2|   0
+ J185035: no object within 30" (HTTP 200)
+ J182621: no object within 30" (HTTP 200)
+ J184240: no object within 30" (HTTP 200)
+ J064439: no object within 30" (HTTP 200)
+ J172057: HTTP 200, 2 rows
+     1|      7.41|LP?|17 20 57.6740435778 -41 42 02.423415703|     ~|     ~|     ~|     ~|     ~|~              |   1|   0
+     2|     16.30|EB*|17 20 55.6216849795 -41 42 05.762624841|     ~|     ~|     ~|     ~|     ~|~              |   1|   0
+ J170153: HTTP 200, 2 rows
+     1|      0.51|*  |17 01 53.4698 -42 56 19.823|     ~|     ~|     ~|     ~|     ~|~              |   1|   0
+     2|     16.24|smm|17 01 52.082 -42 56 15.89  |     ~|     ~|     ~|     ~|     ~|~              |   1|   0
+ J173349: HTTP 200, 4 rows
+     Object OGLE BLG-ECL-31779  ---  EB*  ---  OID=@12592113   (@@-1,255)  ---  coobox=17114
+     Coordinates(ICRS,ep=J2000,eq=2000): 17 33 49.7126063784  -26 43 13.960057044 (Opt ) C [4.3100 2.7242 90] 2020yCat.1350....0G
+     Coordinates(FK4,ep=B1950,eq=1950): 17 30 42.5643329476  -26 41 12.942414099
+     Coordinates(Gal,ep=J2000,eq=2000): 000.4922632801235  +03.3854407950839

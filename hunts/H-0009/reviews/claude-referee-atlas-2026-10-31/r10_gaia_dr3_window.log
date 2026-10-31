@@ -1,0 +1,9 @@
+36 strong events with the NEOWISE peak inside the DR3 epoch span
+3 VARIABLE Gaia sources within 3":
+        designation            t       dw1              source   sep         G
+J172057.02-414201.2 57272.161760 -1.632500 5959812622743175552 0.592 17.872038
+J180402.28-181847.5 57280.168655 -1.073750 4143495279954502016 0.431 18.659428
+J180839.93-151910.5 57468.906199 -0.522749 4145977633638478336 0.278 16.042616
+== J172057.02-414201.2 (NEOWISE 2015-09-07, W1 x4.50) Gaia 5959812622743175552 G 17.87: median 17.85, robust scatter 0.062; within 60 d: -7d x5.87, +25d x2.71, +44d x1.76, +44d x1.75
+== J180402.28-181847.5 (NEOWISE 2015-09-15, W1 x2.69) Gaia 4143495279954502016 G 18.66: median 18.65, robust scatter 0.034; within 60 d: -9d x2.60, +20d x2.57, +42d x1.76, +42d x1.79
+== J180839.93-151910.5 (NEOWISE 2016-03-21, W1 x1.62) Gaia 4145977633638478336 G 16.04: median 16.04, robust scatter 0.009; within 60 d: -16d x1.52, +15d x1.39, +15d x1.39, +35d x1.14, +35d x1.15

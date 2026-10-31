@@ -1,0 +1,470 @@
+============================== J174401 J174401.99-382512.2 G 17.55 BP-RP 2.39  NEOWISE peak visit 59454.45 (2021-08-28), dW1 -0.92; block 1 visits: ['2021-08-28']
+raw c/o rows 3752; after cuts 3472; years 2016.2-2026.8
+baselines (nights > 400 d from every block visit):
+  c 02a: n   48 median     87.6 uJy (19.04 AB) robust scatter   33.8 (excess floor  31.0); median/scatter   2.6; PSF maj 2.76
+  c 03a: n   40 median    114.4 uJy (18.75 AB) robust scatter   18.0 (excess floor  15.4); median/scatter   6.3; PSF maj 2.55
+  c 04a: n   47 median    121.7 uJy (18.69 AB) robust scatter   19.4 (excess floor  16.4); median/scatter   6.3; PSF maj 2.69
+  o 01a: n   96 median    194.8 uJy (18.18 AB) robust scatter  201.0 (excess floor 198.2); median/scatter   1.0; PSF maj 3.00
+  o 02a: n   58 median    385.4 uJy (17.44 AB) robust scatter   47.6 (excess floor  40.1); median/scatter   8.1; PSF maj 2.39
+  o 03a: n  197 median    372.0 uJy (17.47 AB) robust scatter   55.2 (excess floor  50.8); median/scatter   6.7; PSF maj 2.47
+  o 04a: n  147 median    401.8 uJy (17.39 AB) robust scatter   57.9 (excess floor  54.0); median/scatter   6.9; PSF maj 2.46
+  PSF slope c: -72.4 uJy/px (-63.3%/px of 114); maj range 2.3-3.2
+  PSF slope o: -200.9 uJy/px (-54.0%/px of 372); maj range 2.2-3.4
+  o +-10 d PSF-corrected: excess   +753.1 +-   99.8 -> ratio 4.866 +- 0.512
+  o +-30 d PSF-corrected: excess   +567.3 +-   25.7 -> ratio 2.575 +- 0.071
+  c +-10 d PSF-corrected: excess   +213.9 +-   23.2 -> ratio 3.442 +- 0.265
+  c +-30 d PSF-corrected: excess   +213.9 +-   18.9 -> ratio 3.443 +- 0.216
+  o    +-10 d of peak visit:  4 nights, excess   +791.8 +-   99.8 uJy, baseline   194.8 -> ratio 5.065 +- 0.512 (chi2nu 0.0)
+  o    +-30 d of peak visit: 11 nights, excess   +592.8 +-   25.7 uJy, baseline   360.1 -> ratio 2.646 +- 0.071 (chi2nu 0.7)
+  c    +-10 d of peak visit:  2 nights, excess   +198.6 +-   23.2 uJy, baseline    87.6 -> ratio 3.268 +- 0.265 (chi2nu 0.5)
+  c    +-30 d of peak visit:  3 nights, excess   +210.7 +-   18.9 uJy, baseline    87.6 -> ratio 3.405 +- 0.216 (chi2nu 0.6)
+  both +-10 d of peak visit:  6 nights, excess   +229.2 +-   59.1 uJy, baseline    93.1 -> ratio 3.461 +- 0.635 (chi2nu 6.8)
+  both +-30 d of peak visit: 14 nights, excess   +344.3 +-   52.1 uJy, baseline   182.9 -> ratio 2.882 +- 0.285 (chi2nu 11.7)
+    block visit 2021-08-28 o +-10: 4 nights, ratio 5.065 +- 0.512
+    block visit 2021-08-28 o +-30: 11 nights, ratio 2.646 +- 0.071
+  nearest nights: o 01a +0.8 d ratio 5.15; c 02a -1.1 d ratio 3.08; c 02a +2.8 d ratio 3.46
+  largest 20-d o bin away from the visit (|dt|>60 d, >=2 nights): dt -70 d (2021-06-19) ratio 1.942 +- 0.081 (11.6 sigma); bins > 5 sigma: 3 of 106
+  20-d o bins within 200 d: -190:0.87(-0.1) -170:2.15(+1.9) -150:1.90(+1.2) -130:1.40(+3.6) -110:1.61(+5.1) -90:1.70(+8.1) -70:1.94(+11.6) -50:4.01(+5.9) -30:2.38(+12.3) -10:2.84(+12.8) +10:2.75(+14.4) +30:3.92(+4.9) +50:3.21(+3.0) +170:0.65(-1.5) +190:1.14(+2.2)
+  nights within 60 d of the peak visit:
+      date   dvis F cam  n  nraw     ujy  ujy_err  ubase  ratio   sig  maj    m5  chi
+2021-06-30 -59.03 o 01a  7     8  764.69    12.35 194.79   3.93  2.87 2.15 18.55 3.68
+2021-07-04 -55.03 o 01a  7     8  753.46    17.80 194.79   3.87  2.81 2.34 18.64 4.03
+2021-07-08 -51.03 o 01a  4     4  801.21    24.07 194.79   4.11  3.04 2.03 18.33 2.22
+2021-07-10 -49.07 c 02a  1     1  265.00    20.00  87.59   3.03  4.80 2.51 18.76 1.02
+2021-07-16 -43.05 o 01a  4     4  807.06    21.73 194.79   4.14  3.07 2.54 18.60 5.74
+2021-07-28 -31.04 o 01a  4     4  634.02    54.95 194.79   3.25  2.14 3.22 18.34 5.26
+2021-08-07 -21.11 o 02a  4     4  908.71    15.88 385.40   2.36 12.13 2.44 18.58 2.86
+2021-08-11 -17.14 o 02a  3     3  994.94    38.74 385.40   2.58 10.93 2.20 17.79 0.82
+2021-08-13 -15.16 o 01a  4     4  937.18    15.68 194.79   4.81  3.73 2.39 18.48 5.78
+2021-08-21  -7.09 o 01a  4     4 1013.10    23.90 194.79   5.20  4.10 2.25 17.98 2.33
+2021-08-25  -3.16 o 01a  4     4  973.50    16.55 194.79   5.00  3.92 2.22 18.76 4.38
+2021-08-27  -1.15 c 02a  4     4  269.74    10.73  87.59   3.08  5.55 3.09 18.88 2.80
+2021-08-29   0.85 o 01a  4     4 1003.44    14.03 194.79   5.15  4.07 2.17 18.95 4.29
+2021-08-31   2.84 c 02a  8     8  302.75    10.92  87.59   3.46  6.54 2.71 18.98 1.67
+2021-09-06   8.86 o 01a  2     2  955.96    32.74 194.79   4.91  3.79 2.58 18.11 2.76
+2021-09-08  10.81 c 02a  4     4  321.58     9.21  87.59   3.67  7.23 2.42 19.12 1.25
+2021-09-10  12.85 o 01a  4     4  802.26    49.72 194.79   4.12  2.97 3.00 18.26 4.46
+2021-09-12  14.80 o 02a  4     4  995.85    24.69 385.40   2.58 12.96 2.34 18.54 2.12
+2021-09-22  24.79 o 01a  4     4  812.33    22.93 194.79   4.17  3.10 2.72 18.10 3.87
+2021-09-26  28.77 o 01a  4     4  756.62    23.68 194.79   3.88  2.81 2.96 18.48 3.95
+2021-10-04  36.78 o 01a  4     4  722.06    21.09 194.79   3.71  2.65 2.97 18.11 4.02
+2021-10-08  40.77 o 01a  2     3  672.98    28.63 194.79   3.45  2.39 2.94 18.17 5.78
+2021-10-16  48.76 o 01a  4     4  576.25    44.98 194.79   2.96  1.88 2.77 17.68 1.46
+============================== J180402 J180402.28-181847.5 G 18.66 BP-RP 4.25  NEOWISE peak visit 57280.17 (2015-09-15), dW1 -1.07; block 1 visits: ['2015-09-15']
+raw c/o rows 5070; after cuts 4822; years 2015.6-2026.8
+baselines (nights > 400 d from every block visit):
+  c 01a: n   18 median      4.2 uJy (22.33 AB) robust scatter    5.4 (excess floor   0.0); median/scatter   0.8; PSF maj 2.57
+  c 02a: n   92 median      0.7 uJy (24.25 AB) robust scatter    9.3 (excess floor   5.0); median/scatter   0.1; PSF maj 2.66
+  c 03a: n   53 median      3.6 uJy (22.52 AB) robust scatter    8.5 (excess floor   4.0); median/scatter   0.4; PSF maj 2.61
+  c 04a: n   59 median     -1.0 uJy (nan AB) robust scatter   11.0 (excess floor   7.6); median/scatter  -0.1; PSF maj 2.69
+  o 01a: n  235 median    104.1 uJy (18.86 AB) robust scatter   36.9 (excess floor  34.0); median/scatter   2.8; PSF maj 2.77
+  o 02a: n  162 median     81.3 uJy (19.13 AB) robust scatter   16.9 (excess floor   8.0); median/scatter   4.8; PSF maj 2.31
+  o 03a: n  174 median     93.8 uJy (18.97 AB) robust scatter   20.0 (excess floor  15.2); median/scatter   4.7; PSF maj 2.52
+  o 04a: n  207 median     84.0 uJy (19.09 AB) robust scatter   26.6 (excess floor  22.4); median/scatter   3.2; PSF maj 2.44
+  PSF slope c: +6.3 uJy/px (+874.6%/px of 1); maj range 2.4-3.3
+  PSF slope o: +35.0 uJy/px (+37.3%/px of 94); maj range 2.0-3.6
+  o +-10 d PSF-corrected: excess    +45.8 +-   83.3 -> ratio 1.564 +- 1.025
+  o +-30 d PSF-corrected: excess    +54.5 +-   36.1 -> ratio 1.670 +- 0.444
+  c +-30 d PSF-corrected: excess    -52.7 +-   13.0 -> ratio -71.559 +- 17.974
+  o    +-10 d of peak visit:  2 nights, excess    +99.6 +-   81.6 uJy, baseline    81.3 -> ratio 2.225 +- 1.004 (chi2nu 8.7)
+  o    +-30 d of peak visit:  4 nights, excess   +108.8 +-   35.3 uJy, baseline    81.3 -> ratio 2.339 +- 0.434 (chi2nu 3.1)
+  c    +-10 d of peak visit: NO ATLAS NIGHT
+  c    +-30 d of peak visit:  3 nights, excess    -39.2 +-   13.0 uJy, baseline     0.7 -> ratio -52.986 +- 17.974 (chi2nu 0.2)
+  both +-10 d of peak visit:  2 nights, excess    +99.6 +-   81.6 uJy, baseline    81.3 -> ratio 2.225 +- 1.004 (chi2nu 8.7)
+  both +-30 d of peak visit:  7 nights, excess     +4.8 +-   30.9 uJy, baseline    24.7 -> ratio 1.196 +- 1.253 (chi2nu 8.0)
+    block visit 2015-09-15 o +-10: 2 nights, ratio 2.225 +- 1.004
+    block visit 2015-09-15 o +-30: 4 nights, ratio 2.339 +- 0.434
+  nearest nights: o 02a +8.1 d ratio 2.96; o 02a +9.1 d ratio 0.86; o 02a +16.1 d ratio 2.28
+  largest 20-d o bin away from the visit (|dt|>60 d, >=2 nights): dt +1030 d (2018-07-11) ratio 1.369 +- 0.126 (2.9 sigma); bins > 5 sigma: 0 of 127
+  20-d o bins within 200 d: -50:1.64(+2.6) +10:2.34(+3.1) +30:2.58(+0.1) +50:2.05(+1.4) +190:1.82(+0.4)
+  nights within 60 d of the peak visit:
+      date   dvis F cam  n  nraw    ujy  ujy_err  ubase  ratio   sig  maj    m5  chi
+2015-07-25 -51.80 o 02a  5     5 133.41    18.61  81.28   1.64  2.57 3.70 18.66 4.24
+2015-08-08 -37.79 c 02a  2     2 -28.00    18.65   0.73 -38.57 -1.49 5.08 19.00 3.14
+2015-08-09 -36.83 c 02a  6     6 -19.09    12.72   0.73 -26.30 -1.45 4.05 19.27 3.38
+2015-08-10 -35.83 c 02a  6     6   0.52     8.28   0.73   0.72 -0.02 3.96 19.31 3.39
+2015-08-11 -34.83 c 02a  5     5 -10.24     9.69   0.73 -14.11 -1.00 4.05 19.26 3.31
+2015-09-23   8.07 o 02a  6     6 240.90    33.35  81.28   2.96  4.65 3.97 18.19 2.68
+2015-09-24   9.05 o 02a  2     2  69.87    45.95  81.28   0.86 -0.24 4.07 18.09 2.10
+2015-10-01  16.09 o 02a  1     1 185.00    39.00  81.28   2.28  2.60 4.11 18.58 4.40
+2015-10-03  18.10 o 02a  1     1 218.00    42.00  81.28   2.68  3.20 3.96 18.64 3.76
+2015-10-09  24.06 c 02a  5     5 -54.65    27.19   0.73 -75.28 -2.00 4.44 18.63 1.63
+2015-10-13  28.06 c 02a  4     4 -35.15    15.34   0.73 -48.41 -2.22 4.90 18.90 2.24
+2015-10-14  29.06 c 02a  5     5 -26.89    36.71   0.73 -37.04 -0.75 4.72 18.86 2.31
+2015-10-16  31.05 c 02a  4     4 -40.23    14.56   0.73 -55.41 -2.66 4.27 18.82 2.45
+2015-10-22  37.05 c 02a  4     4  -7.80    27.80   0.73 -10.75 -0.30 4.66 18.30 1.30
+2015-10-23  38.06 o 02a  2     2 209.92  2323.00  81.28   2.58  0.06 5.26 18.12 1.48
+2015-10-26  41.05 o 02a  3     3 166.25    62.40  81.28   2.05  1.35 4.74 17.90 0.63
+============================== J025145 J025145.03+602012.5 G 12.61 BP-RP 0.84  NEOWISE peak visit 59449.45 (2021-08-23), dW1 -1.01; block 2 visits: ['2021-01-29', '2021-08-23']
+raw c/o rows 3233; after cuts 2802; years 2015.6-2026.8
+baselines (nights > 400 d from every block visit):
+  c 01a: n   21 median  36655.2 uJy (12.49 AB) robust scatter  564.8 (excess floor 520.4); median/scatter  64.9; PSF maj 3.34
+  c 02a: n   94 median  37852.2 uJy (12.45 AB) robust scatter  587.3 (excess floor 573.4); median/scatter  64.5; PSF maj 2.62
+  o 01a: n  193 median  48331.2 uJy (12.19 AB) robust scatter  631.6 (excess floor 617.4); median/scatter  76.5; PSF maj 2.85
+  o 02a: n  172 median  48372.0 uJy (12.19 AB) robust scatter  860.2 (excess floor 841.0); median/scatter  56.2; PSF maj 2.29
+  PSF slope c: +73.1 uJy/px (+0.2%/px of 37852); maj range 2.3-4.6
+  PSF slope o: +30.4 uJy/px (+0.1%/px of 48331); maj range 2.1-3.8
+  o +-10 d PSF-corrected: excess  -4423.6 +- 1378.7 -> ratio 0.909 +- 0.029
+  o +-30 d PSF-corrected: excess  -3224.5 +-  980.7 -> ratio 0.933 +- 0.020
+  c +-10 d PSF-corrected: excess  -1141.9 +- 2824.7 -> ratio 0.969 +- 0.076
+  c +-30 d PSF-corrected: excess   -833.8 +-  946.9 -> ratio 0.978 +- 0.025
+  o    +-10 d of peak visit:  7 nights, excess  -4437.8 +- 1379.6 uJy, baseline 48348.2 -> ratio 0.908 +- 0.029 (chi2nu 25.1)
+  o    +-30 d of peak visit: 12 nights, excess  -3230.3 +-  982.7 uJy, baseline 48343.0 -> ratio 0.933 +- 0.020 (chi2nu 23.1)
+  c    +-10 d of peak visit:  2 nights, excess  -1162.3 +- 2819.7 uJy, baseline 37167.1 -> ratio 0.969 +- 0.076 (chi2nu 50.5)
+  c    +-30 d of peak visit:  6 nights, excess   -855.4 +-  943.4 uJy, baseline 37369.4 -> ratio 0.977 +- 0.025 (chi2nu 16.1)
+  both +-10 d of peak visit:  9 nights, excess  -3371.8 +- 1257.3 uJy, baseline 44709.2 -> ratio 0.925 +- 0.028 (chi2nu 30.9)
+  both +-30 d of peak visit: 18 nights, excess  -2207.2 +-  741.5 uJy, baseline 43615.3 -> ratio 0.949 +- 0.017 (chi2nu 23.1)
+    block visit 2021-01-29 o +-10: 3 nights, ratio 0.954 +- 0.019
+    block visit 2021-01-29 o +-30: 8 nights, ratio 0.966 +- 0.010
+    block visit 2021-08-23 o +-10: 7 nights, ratio 0.908 +- 0.029
+    block visit 2021-08-23 o +-30: 12 nights, ratio 0.933 +- 0.020
+  nearest nights: o 02a -0.9 d ratio 0.94; o 01a -2.8 d ratio 0.93; o 02a +3.1 d ratio 0.89
+  largest 20-d o bin away from the visit (|dt|>60 d, >=2 nights): dt +1070 d (2024-07-28) ratio 1.023 +- 0.008 (2.8 sigma); bins > 5 sigma: 0 of 102
+  20-d o bins within 200 d: -190:0.97(-1.9) -170:0.98(-1.3) -150:1.00(-0.2) -10:0.98(-1.1) +10:0.87(-6.3) +30:0.99(-1.5) +50:1.01(+0.9) +70:0.98(-4.3) +90:0.92(-0.8) +110:1.00(+0.3) +130:1.00(+0.0) +150:1.01(+1.5) +170:1.01(+1.3) +190:1.01(+1.1)
+  nights within 60 d of the peak visit:
+      date   dvis F cam  n  nraw      ujy  ujy_err    ubase  ratio    sig  maj    m5     chi
+2021-08-08 -14.82 c 01a  1     1 38040.00    56.00 36655.25   1.04   2.65 2.31 19.65 1376.57
+2021-08-10 -12.89 o 02a  2     2 49252.06   105.50 48372.05   1.02   1.04 2.49 19.45 1678.40
+2021-08-14  -8.90 o 02a  2     2 49222.00   184.00 48372.05   1.02   0.99 2.39 19.40 1574.05
+2021-08-16  -6.81 c 01a  1     1 37930.00    64.00 36655.25   1.03   2.43 2.40 18.67  198.30
+2021-08-18  -4.83 o 02a  3     3 49448.73   139.75 48372.05   1.02   1.26 2.14 19.49  700.50
+2021-08-20  -2.81 o 01a  1     1 44990.00    74.00 48331.24   0.93  -5.37 2.29 18.59  144.22
+2021-08-22  -0.91 o 02a  4     4 45329.50   211.89 48372.05   0.94  -3.51 2.16 18.69  288.09
+2021-08-26   3.12 o 02a  4     4 42966.98    35.11 48372.05   0.89  -6.42 2.05 19.10  363.44
+2021-08-28   5.13 o 01a  4     4 40556.85    99.99 48331.24   0.84 -12.43 2.17 19.24  678.96
+2021-08-30   6.94 c 02a  4     4 33427.54   198.03 37852.21   0.88  -7.29 2.54 19.40  296.06
+2021-09-01   9.13 o 01a  1     1 40179.00    95.00 48331.24   0.83 -13.05 2.04 18.40  272.47
+2021-09-05  13.10 o 01a  1     1 42707.00    64.00 48331.24   0.88  -9.06 2.29 19.58  697.17
+2021-09-07  15.12 c 02a  4     4 35144.60   234.38 37852.21   0.93  -4.37 2.82 19.58  702.25
+2021-09-09  17.14 o 01a  8     8 46134.43   531.64 48331.24   0.95  -2.70 3.45 19.28  462.10
+2021-09-11  19.11 c 02a  4     4 37242.50    73.01 37852.21   0.98  -1.05 2.34 19.66  965.10
+2021-09-13  20.92 o 01a  4     7 48516.76    38.86 48331.24   1.00   0.30 2.86 19.04  431.13
+2021-09-15  23.11 c 02a  3     3 36130.82   277.35 37852.21   0.95  -2.70 2.34 19.64 1347.03
+2021-09-21  29.06 o 01a  4     4 47380.21    65.54 48331.24   0.98  -1.53 2.98 18.54   63.81
+2021-09-25  33.11 o 01a  4     4 47935.69   129.20 48331.24   0.99  -0.63 2.93 18.79   79.77
+2021-09-27  35.07 o 02a  3     3 46276.57    46.00 48372.05   0.96  -2.49 2.17 19.17 1231.74
+2021-09-29  37.05 o 01a  3     4 48244.16    41.90 48331.24   1.00  -0.14 2.79 19.13  242.07
+2021-10-03  41.06 o 01a  5     6 47726.46   456.59 48331.24   0.99  -0.79 3.28 19.01  113.08
+2021-10-05  43.03 o 02a  4     5 46311.56    57.52 48372.05   0.96  -2.44 2.26 19.42  649.00
+2021-10-07  45.03 o 01a  5     6 48910.26   470.28 48331.24   1.01   0.75 2.95 19.24  456.22
+2021-10-11  49.05 o 01a  7     7 48997.59   166.21 48331.24   1.01   1.04 2.91 19.27  331.66
+2021-10-13  51.09 o 02a  6     6 49648.41   158.78 48372.05   1.03   1.49 2.13 19.36 1404.06
+2021-10-15  53.01 o 01a  8     8 49774.16   415.67 48331.24   1.03   1.94 2.77 18.96  422.22
+2021-10-17  55.04 o 02a  7     8 49658.16   322.96 48372.05   1.03   1.43 2.18 18.20  241.16
+2021-10-19  57.04 o 01a  4     4 48429.86    85.00 48331.24   1.00   0.16 3.02 18.56   76.59
+2021-10-21  59.04 o 02a  4     4 48400.34   172.53 48372.05   1.00   0.03 2.25 18.53  364.80
+============================== J185035 J185035.91-014014.4 G 18.98 BP-RP 2.48  NEOWISE peak visit 58374.69 (2018-09-13), dW1 -1.33; block 2 visits: ['2018-04-02', '2018-09-13']
+raw c/o rows 4188; after cuts 3908; years 2015.5-2026.8
+baselines (nights > 400 d from every block visit):
+  c 01a: n   20 median     51.9 uJy (19.61 AB) robust scatter   10.0 (excess floor   8.2); median/scatter   5.2; PSF maj 2.87
+  c 02a: n   83 median     50.4 uJy (19.64 AB) robust scatter   11.1 (excess floor   8.7); median/scatter   4.5; PSF maj 2.50
+  c 03a: n   28 median     49.9 uJy (19.65 AB) robust scatter    6.3 (excess floor   0.0); median/scatter   7.9; PSF maj 2.55
+  c 04a: n   32 median     53.6 uJy (19.58 AB) robust scatter    6.2 (excess floor   0.0); median/scatter   8.7; PSF maj 2.55
+  o 01a: n  202 median    161.3 uJy (18.38 AB) robust scatter   15.9 (excess floor  11.3); median/scatter  10.1; PSF maj 2.43
+  o 02a: n  178 median    159.6 uJy (18.39 AB) robust scatter   20.1 (excess floor  15.6); median/scatter   8.0; PSF maj 2.25
+  o 03a: n  115 median    161.4 uJy (18.38 AB) robust scatter   12.6 (excess floor   5.8); median/scatter  12.8; PSF maj 2.49
+  o 04a: n  137 median    163.5 uJy (18.37 AB) robust scatter   17.7 (excess floor  11.1); median/scatter   9.2; PSF maj 2.43
+  PSF slope c: -44.5 uJy/px (-88.2%/px of 50); maj range 2.2-4.0
+  PSF slope o: -48.7 uJy/px (-30.2%/px of 161); maj range 2.0-3.4
+  o +-10 d PSF-corrected: excess    -12.3 +-   12.8 -> ratio 0.923 +- 0.080
+  o +-30 d PSF-corrected: excess    -18.6 +-    7.1 -> ratio 0.884 +- 0.044
+  c +-30 d PSF-corrected: excess     +8.6 +-    7.5 -> ratio 1.170 +- 0.149
+  o    +-10 d of peak visit:  4 nights, excess    -31.0 +-   21.7 uJy, baseline   160.4 -> ratio 0.807 +- 0.135 (chi2nu 4.5)
+  o    +-30 d of peak visit: 14 nights, excess    -40.1 +-   11.1 uJy, baseline   160.5 -> ratio 0.750 +- 0.069 (chi2nu 4.4)
+  c    +-10 d of peak visit: NO ATLAS NIGHT
+  c    +-30 d of peak visit:  2 nights, excess     +4.9 +-    7.5 uJy, baseline    50.4 -> ratio 1.097 +- 0.149 (chi2nu 0.7)
+  both +-10 d of peak visit:  4 nights, excess    -31.0 +-   21.7 uJy, baseline   160.4 -> ratio 0.807 +- 0.135 (chi2nu 4.5)
+  both +-30 d of peak visit: 16 nights, excess    -25.2 +-   10.1 uJy, baseline   124.1 -> ratio 0.797 +- 0.081 (chi2nu 5.4)
+    block visit 2018-04-02 o +-10: none
+    block visit 2018-04-02 o +-30: none
+    block visit 2018-09-13 o +-10: 4 nights, ratio 0.807 +- 0.135
+    block visit 2018-09-13 o +-30: 14 nights, ratio 0.750 +- 0.069
+  nearest nights: o 01a -2.3 d ratio 0.73; o 02a +3.6 d ratio 1.05; o 01a +5.6 d ratio 0.23
+  largest 20-d o bin away from the visit (|dt|>60 d, >=2 nights): dt +2830 d (2026-06-13) ratio 1.079 +- 0.029 (2.8 sigma); bins > 5 sigma: 0 of 125
+  20-d o bins within 200 d: -130:-0.41(-8.0) -110:0.72(-3.5) -90:0.80(-1.9) -70:0.76(-2.3) -50:0.77(-0.6) -30:0.69(-3.4) -10:0.73(-1.8) +10:0.77(-2.4) +30:0.89(-1.3) +50:0.84(-2.1) +70:0.92(-0.9) +170:-0.62(-4.1) +190:1.10(+0.6)
+  nights within 60 d of the peak visit:
+      date   dvis F cam  n  nraw    ujy  ujy_err  ubase  ratio   sig  maj    m5  chi
+2018-07-17 -58.22 o 01a  3     3 -18.82    73.99 161.33  -0.12 -2.41 3.57 19.12 4.71
+2018-07-23 -52.23 o 02a  6     6 149.15    27.53 159.57   0.93 -0.33 2.20 17.96 1.08
+2018-08-08 -36.24 c 02a  4     4  46.75     5.07  50.42   0.93 -0.36 2.64 19.67 1.36
+2018-08-10 -34.26 o 01a  3     4 128.24    17.78 161.33   0.79 -1.57 3.81 18.51 1.28
+2018-08-12 -32.25 c 02a  8     8  49.21     5.82  50.42   0.98 -0.11 2.65 19.62 1.15
+2018-08-14 -30.27 o 01a  6     7 104.91    37.17 161.33   0.65 -1.45 3.78 18.87 2.04
+2018-08-18 -26.30 o 01a  7     7  90.18    22.25 161.33   0.56 -2.85 3.78 18.91 2.01
+2018-08-30 -14.31 o 01a  4     4 141.82    11.68 161.33   0.88 -1.20 3.00 18.86 1.49
+2018-09-01 -12.31 o 02a  4     4 146.56     8.76 159.57   0.92 -0.73 2.26 19.26 1.17
+2018-09-03 -10.32 o 01a  4     4  26.77    18.77 161.33   0.17 -6.14 3.58 19.07 3.36
+2018-09-11  -2.34 o 01a  4     4 118.27    12.48 161.33   0.73 -2.56 3.33 19.18 1.78
+2018-09-17   3.64 o 02a  4     4 168.01     9.65 159.57   1.05  0.46 2.08 19.22 1.23
+2018-09-19   5.64 o 01a  4     4  37.11    30.53 161.33   0.23 -3.81 3.40 18.61 1.77
+2018-09-21   7.64 o 02a  4     4 134.97    15.63 159.57   0.85 -1.11 2.56 18.78 1.52
+2018-09-24  10.64 o 02a  4     4 130.50    12.05 159.57   0.82 -1.48 2.25 18.76 1.08
+2018-09-26  12.65 o 01a  4     4  51.02    19.66 161.33   0.32 -4.86 3.49 18.52 1.57
+2018-09-29  15.61 o 02a  4     4 136.13     8.10 159.57   0.85 -1.34 2.45 19.22 1.38
+2018-10-01  17.62 o 01a  4     4  74.87    19.65 161.33   0.46 -3.81 3.27 19.12 2.54
+2018-10-03  19.60 o 02a  4     4 149.80     7.19 159.57   0.94 -0.57 2.38 19.34 1.70
+2018-10-05  21.60 o 01a  8     8 136.98    16.92 161.33   0.85 -1.20 3.20 18.55 1.16
+2018-10-07  23.62 c 02a  4     4  61.42     5.86  50.42   1.22  1.05 2.62 19.52 1.04
+2018-10-11  27.61 c 02a  4     4  48.84     6.40  50.42   0.97 -0.15 2.64 19.51 1.16
+2018-10-15  31.54 o 02a  4     4 147.11    11.29 159.57   0.92 -0.65 2.27 19.32 1.38
+2018-10-24  40.54 o 01a  2     2 115.67    29.34 161.33   0.72 -1.45 2.81 18.49 1.10
+2018-10-25  41.54 o 01a  4     4 134.81    22.27 161.33   0.84 -1.06 3.20 18.51 1.03
+2018-11-02  49.52 o 01a  4     4 148.35    12.28 161.33   0.92 -0.78 3.00 18.95 1.19
+2018-11-08  55.54 c 02a  4     4  46.59     5.47  50.42   0.92 -0.37 2.54 19.45 1.30
+2018-11-10  57.54 o 01a  2     2 100.85    35.50 161.33   0.63 -1.62 3.18 18.99 1.84
+2018-11-12  59.53 c 02a  4     4  57.30     6.47  50.42   1.14  0.63 2.62 19.31 1.08
+============================== J182621 J182621.38-175812.7 G 16.59 BP-RP 2.19  NEOWISE peak visit 58935.10 (2020-03-27), dW1 -1.12; block 1 visits: ['2020-03-27']
+raw c/o rows 4307; after cuts 3982; years 2015.6-2026.8
+baselines (nights > 400 d from every block visit):
+  c 01a: n   14 median    427.2 uJy (17.32 AB) robust scatter   72.5 (excess floor  70.6); median/scatter   5.9; PSF maj 2.67
+  c 02a: n   83 median    471.9 uJy (17.22 AB) robust scatter  128.6 (excess floor 126.3); median/scatter   3.7; PSF maj 2.87
+  c 03a: n   53 median    480.6 uJy (17.20 AB) robust scatter   70.5 (excess floor  67.7); median/scatter   6.8; PSF maj 2.60
+  c 04a: n   57 median    465.6 uJy (17.23 AB) robust scatter   84.6 (excess floor  82.6); median/scatter   5.5; PSF maj 2.72
+  o 01a: n  118 median   1221.1 uJy (16.18 AB) robust scatter  294.3 (excess floor 290.6); median/scatter   4.1; PSF maj 2.94
+  o 02a: n  133 median   1032.2 uJy (16.37 AB) robust scatter  117.5 (excess floor 111.7); median/scatter   8.8; PSF maj 2.37
+  o 03a: n  174 median   1180.9 uJy (16.22 AB) robust scatter   96.2 (excess floor  89.2); median/scatter  12.3; PSF maj 2.54
+  o 04a: n  196 median   1114.5 uJy (16.28 AB) robust scatter  118.7 (excess floor 113.9); median/scatter   9.4; PSF maj 2.45
+  PSF slope c: +197.6 uJy/px (+41.9%/px of 472); maj range 2.4-4.5
+  PSF slope o: +309.3 uJy/px (+27.8%/px of 1114); maj range 2.0-3.9
+  o +-30 d PSF-corrected: excess    +28.6 +-   72.8 -> ratio 1.026 +- 0.067
+  c +-30 d PSF-corrected: excess    +52.0 +-   91.0 -> ratio 1.110 +- 0.193
+  o    +-10 d of peak visit: NO ATLAS NIGHT
+  o    +-30 d of peak visit:  7 nights, excess   +102.8 +-   81.5 uJy, baseline  1078.7 -> ratio 1.095 +- 0.076 (chi2nu 1.3)
+  c    +-10 d of peak visit: NO ATLAS NIGHT
+  c    +-30 d of peak visit:  2 nights, excess    +45.8 +-   91.0 uJy, baseline   471.9 -> ratio 1.097 +- 0.193 (chi2nu 0.6)
+  both +-10 d of peak visit: NO ATLAS NIGHT
+  both +-30 d of peak visit:  9 nights, excess    +80.6 +-   58.1 uJy, baseline   842.0 -> ratio 1.096 +- 0.069 (chi2nu 1.0)
+    block visit 2020-03-27 o +-10: none
+    block visit 2020-03-27 o +-30: 7 nights, ratio 1.095 +- 0.076
+  nearest nights: o 01a +12.5 d ratio 1.02; o 02a +14.5 d ratio 0.96; o 01a -15.5 d ratio 1.03
+  largest 20-d o bin away from the visit (|dt|>60 d, >=2 nights): dt -1250 d (2016-10-24) ratio 1.974 +- 0.095 (10.2 sigma); bins > 5 sigma: 4 of 121
+  20-d o bins within 200 d: -190:1.04(+0.5) -170:1.00(+0.0) -150:0.72(-1.2) -130:0.70(-1.2) -10:1.34(+2.3) +10:0.98(-0.1) +30:0.94(-1.0) +50:1.02(+0.4) +70:0.96(-0.7) +90:0.97(-0.5) +110:0.96(-0.7) +130:1.02(+0.3) +150:0.96(-0.7) +170:0.85(-2.1) +190:0.97(-0.5)
+  nights within 60 d of the peak visit:
+      date   dvis F cam  n  nraw     ujy  ujy_err   ubase  ratio   sig  maj    m5    chi
+2020-02-26 -29.46 c 02a  4     4  588.80    32.04  471.90   1.25  0.90 3.12 18.85  92.70
+2020-03-10 -16.53 o 02a  7     7 1468.29    88.24 1032.24   1.42  3.06 3.48 18.01  40.78
+2020-03-11 -15.47 o 01a  4     4 1257.01    49.99 1221.14   1.03  0.12 2.92 18.51 125.90
+2020-04-08  12.47 o 01a  4     4 1244.20    29.55 1221.14   1.02  0.08 2.70 18.04 130.03
+2020-04-10  14.47 o 02a  3     3  990.16   167.69 1032.24   0.96 -0.21 2.55 17.80  65.05
+2020-04-18  22.52 o 02a  4     4 1022.89    46.61 1032.24   0.99 -0.08 2.34 18.64 355.40
+2020-04-20  24.52 o 01a  3     4 1192.72    23.64 1221.14   0.98 -0.10 2.38 18.54 261.69
+2020-04-22  26.50 c 02a  4     4  449.85    15.60  471.90   0.95 -0.17 2.36 19.26 428.48
+2020-04-24  28.44 o 01a  3     3 1151.25    56.40 1221.14   0.94 -0.24 2.55 17.87  81.43
+2020-04-28  32.37 o 01a  4     4 1170.68    57.74 1221.14   0.96 -0.17 2.34 18.69 218.67
+2020-04-29  33.49 o 01a  3     3 1030.95    25.14 1221.14   0.84 -0.65 2.26 18.80 239.20
+2020-04-30  34.37 c 02a  4     4  521.71    24.25  471.90   1.11  0.39 2.72 18.98 255.30
+2020-05-02  36.45 o 01a  4     4 1246.08    43.66 1221.14   1.02  0.08 2.94 18.74 161.14
+2020-05-03  37.38 o 01a  4     4 1101.02    28.21 1221.14   0.90 -0.41 2.14 18.76 231.48
+2020-05-04  38.38 o 02a  4     4  882.07    36.78 1032.24   0.85 -1.28 2.28 18.58 351.50
+2020-05-05  39.36 o 02a  4     4 1031.93    49.01 1032.24   1.00 -0.00 2.50 18.40 349.88
+2020-05-07  41.41 o 01a  4     4 1063.67    34.75 1221.14   0.87 -0.54 2.13 18.10  21.98
+2020-05-12  46.47 o 02a  4     4 1162.22    37.90 1032.24   1.13  1.10 2.24 18.46 117.83
+2020-05-14  48.35 o 01a  4     4 1123.60    24.71 1221.14   0.92 -0.33 2.33 18.67 194.04
+2020-05-16  50.41 o 02a  2     2 1051.61    44.50 1032.24   1.02  0.16 2.04 18.91 233.00
+2020-05-18  52.41 o 01a  4     4 1121.18    26.96 1221.14   0.92 -0.34 2.22 18.60 142.52
+2020-05-20  54.40 c 02a  3     3  439.14    27.19  471.90   0.93 -0.25 2.53 19.21 384.48
+2020-05-22  56.41 o 01a  4     4 1094.23    29.35 1221.14   0.90 -0.43 2.27 18.60 136.60
+2020-05-24  58.47 c 02a  4     4  532.66    22.78  471.90   1.13  0.47 2.76 19.17 303.86
+============================== J184240 J184240.11-052241.7 G 16.69 BP-RP 2.04  NEOWISE peak visit 59303.96 (2021-03-30), dW1 -0.64; block 2 visits: ['2021-03-30', '2021-09-10']
+raw c/o rows 4100; after cuts 3850; years 2015.6-2026.8
+baselines (nights > 400 d from every block visit):
+  c 01a: n    7 median    262.4 uJy (17.85 AB) robust scatter   27.8 (excess floor  25.9); median/scatter   9.4; PSF maj 3.19
+  c 02a: n   63 median    267.3 uJy (17.83 AB) robust scatter   71.1 (excess floor  70.0); median/scatter   3.8; PSF maj 2.76
+  c 03a: n   22 median    304.0 uJy (17.69 AB) robust scatter   36.2 (excess floor  34.9); median/scatter   8.4; PSF maj 2.56
+  c 04a: n   26 median    321.3 uJy (17.63 AB) robust scatter   27.0 (excess floor  25.1); median/scatter  11.9; PSF maj 2.62
+  o 01a: n  173 median    593.4 uJy (16.97 AB) robust scatter  112.7 (excess floor 110.6); median/scatter   5.3; PSF maj 2.87
+  o 02a: n  151 median    689.0 uJy (16.80 AB) robust scatter   90.0 (excess floor  87.7); median/scatter   7.7; PSF maj 2.30
+  o 03a: n  101 median    664.3 uJy (16.84 AB) robust scatter   53.1 (excess floor  48.9); median/scatter  12.5; PSF maj 2.54
+  o 04a: n  124 median    720.5 uJy (16.76 AB) robust scatter   62.4 (excess floor  58.6); median/scatter  11.6; PSF maj 2.44
+  PSF slope c: -74.1 uJy/px (-27.7%/px of 267); maj range 2.4-4.3
+  PSF slope o: -183.0 uJy/px (-26.6%/px of 689); maj range 2.1-3.8
+  o +-10 d PSF-corrected: excess    +58.0 +-   59.3 -> ratio 1.091 +- 0.093
+  o +-30 d PSF-corrected: excess    +50.2 +-   31.3 -> ratio 1.080 +- 0.050
+  c +-10 d PSF-corrected: excess    +39.0 +-   26.8 -> ratio 1.149 +- 0.102
+  c +-30 d PSF-corrected: excess    +32.2 +-   20.1 -> ratio 1.123 +- 0.077
+  o    +-10 d of peak visit:  3 nights, excess   +155.1 +-   59.3 uJy, baseline   635.2 -> ratio 1.244 +- 0.093 (chi2nu 0.1)
+  o    +-30 d of peak visit: 11 nights, excess   +122.5 +-   31.3 uJy, baseline   628.9 -> ratio 1.195 +- 0.050 (chi2nu 0.2)
+  c    +-10 d of peak visit:  1 nights, excess    +61.1 +-   26.8 uJy, baseline   262.4 -> ratio 1.233 +- 0.102 (chi2nu 0.0)
+  c    +-30 d of peak visit:  2 nights, excess    +52.1 +-   20.1 uJy, baseline   262.4 -> ratio 1.199 +- 0.077 (chi2nu 0.3)
+  both +-10 d of peak visit:  4 nights, excess    +77.1 +-   24.5 uJy, baseline   325.8 -> ratio 1.237 +- 0.075 (chi2nu 0.8)
+  both +-30 d of peak visit: 13 nights, excess    +72.7 +-   16.9 uJy, baseline   369.3 -> ratio 1.197 +- 0.046 (chi2nu 0.5)
+    block visit 2021-03-30 o +-10: 3 nights, ratio 1.244 +- 0.093
+    block visit 2021-03-30 o +-30: 11 nights, ratio 1.195 +- 0.050
+    block visit 2021-09-10 o +-10: 6 nights, ratio 1.121 +- 0.063
+    block visit 2021-09-10 o +-30: 24 nights, ratio 1.084 +- 0.031
+  nearest nights: o 01a +0.6 d ratio 1.34; o 02a +2.6 d ratio 1.18; o 01a +7.7 d ratio 1.26
+  largest 20-d o bin away from the visit (|dt|>60 d, >=2 nights): dt +150 d (2021-08-27) ratio 1.267 +- 0.071 (3.8 sigma); bins > 5 sigma: 0 of 124
+  20-d o bins within 200 d: -190:1.17(+2.7) -170:1.16(+1.9) -150:1.16(+1.2) -130:1.38(+2.0) -30:1.10(+1.1) -10:1.22(+1.7) +10:1.20(+2.6) +30:1.15(+2.3) +50:1.21(+3.0) +70:1.12(+2.5) +90:1.21(+3.1) +110:1.23(+3.8) +130:1.03(+0.6) +150:1.27(+3.8) +170:1.08(+1.6) +190:1.04(+0.7)
+  nights within 60 d of the peak visit:
+      date   dvis F cam  n  nraw    ujy  ujy_err  ubase  ratio   sig  maj    m5   chi
+2021-02-13 -45.31 c 02a  4     4 183.59    41.09 267.29   0.69 -1.03 3.90 18.32  4.76
+2021-02-15 -43.31 c 01a  4     4 247.34    18.24 262.45   0.94 -0.48 3.00 19.02  5.74
+2021-02-23 -35.31 o 01a  4     4 636.76    14.20 593.42   1.07  0.39 2.48 18.88  8.65
+2021-02-25 -33.31 o 02a  4     4 717.32    18.20 688.98   1.04  0.32 2.45 18.66  3.32
+2021-03-03 -27.32 o 01a  4     4 734.20    17.85 593.42   1.24  1.26 2.08 18.94  3.70
+2021-03-15 -15.35 o 01a  4     4 750.75    11.96 593.42   1.27  1.41 2.08 18.94  5.76
+2021-03-19 -11.35 o 01a  4     4 701.52    11.57 593.42   1.18  0.97 2.24 18.95  8.34
+2021-03-31   0.64 o 01a  3     3 794.20    20.30 593.42   1.34  1.79 1.99 18.68  2.56
+2021-04-02   2.65 o 02a  4     4 814.23    19.10 688.98   1.18  1.40 2.00 18.55  2.77
+2021-04-07   7.66 o 01a  4     4 749.75    13.11 593.42   1.26  1.40 2.02 19.10  3.30
+2021-04-08   8.63 c 01a  4     4 323.53     6.89 262.45   1.23  2.28 2.42 19.70  7.27
+2021-04-12  12.65 c 01a  4     4 303.16    15.74 262.45   1.16  1.34 2.48 19.66  5.70
+2021-04-18  18.60 o 02a  4     4 755.65    14.16 688.98   1.10  0.75 2.19 19.18  4.58
+2021-04-22  22.57 o 02a  4     4 787.84    13.59 688.98   1.14  1.11 2.12 19.20  4.51
+2021-04-24  24.60 o 01a  4     4 727.98    19.47 593.42   1.23  1.20 2.24 18.45  6.62
+2021-04-27  27.58 o 01a  4     4 636.12    16.49 593.42   1.07  0.38 2.47 18.20  8.35
+2021-04-28  28.56 o 01a  4     4 755.66    16.29 593.42   1.27  1.45 2.12 18.22  2.58
+2021-05-02  32.58 o 01a  4     4 636.38    16.42 593.42   1.07  0.38 2.58 18.70  6.07
+2021-05-04  34.60 o 02a  4     4 775.81    18.49 688.98   1.13  0.97 2.16 18.65  2.39
+2021-05-10  40.59 o 01a  2     3 640.89    16.34 593.42   1.08  0.42 2.53 19.09 13.46
+2021-05-12  42.57 c 02a  4     4 322.23     6.34 267.29   1.21  0.78 2.27 19.23  6.00
+2021-05-14  44.57 o 01a  4     4 718.66    20.58 593.42   1.21  1.11 2.30 19.13  8.35
+2021-05-16  46.64 c 02a  4     4 265.00    16.44 267.29   0.99 -0.03 3.04 19.08  8.90
+2021-05-18  48.54 o 01a  4     4 736.78    11.85 593.42   1.24  1.29 2.00 18.92  3.80
+2021-05-20  50.55 c 02a  4     4 324.99     6.17 267.29   1.22  0.82 2.34 19.46  5.82
+2021-05-24  54.50 o 02a  4     4 804.14    31.30 688.98   1.17  1.24 2.00 18.60  2.86
+2021-05-25  55.45 o 01a  4     4 761.19    17.09 593.42   1.28  1.50 1.98 18.30  2.42
+2021-05-26  56.54 o 01a  4     4 785.48    13.12 593.42   1.32  1.72 1.92 19.42  2.85
+============================== J064439 J064439.73+011503.3 G 13.03 BP-RP 1.01  NEOWISE peak visit 59126.12 (2020-10-04), dW1 -0.59; block 3 visits: ['2019-10-05', '2020-03-11', '2020-10-04']
+raw c/o rows 3851; after cuts 3237; years 2015.8-2026.8
+baselines (nights > 400 d from every block visit):
+  c 01a: n    6 median  16966.9 uJy (13.33 AB) robust scatter  414.7 (excess floor 414.0); median/scatter  40.9; PSF maj 3.27
+  c 02a: n   67 median  17325.0 uJy (13.30 AB) robust scatter  329.0 (excess floor 322.2); median/scatter  52.7; PSF maj 2.83
+  c 03a: n   34 median  17377.9 uJy (13.30 AB) robust scatter  237.0 (excess floor 229.3); median/scatter  73.3; PSF maj 2.57
+  c 04a: n   32 median  17338.8 uJy (13.30 AB) robust scatter  227.3 (excess floor 221.7); median/scatter  76.3; PSF maj 2.65
+  o 01a: n  131 median  24450.0 uJy (12.93 AB) robust scatter  373.1 (excess floor 368.0); median/scatter  65.5; PSF maj 2.92
+  o 02a: n  115 median  24384.3 uJy (12.93 AB) robust scatter  284.9 (excess floor 274.6); median/scatter  85.6; PSF maj 2.37
+  o 03a: n  132 median  24308.2 uJy (12.94 AB) robust scatter  335.4 (excess floor 324.7); median/scatter  72.5; PSF maj 2.47
+  o 04a: n  152 median  24262.8 uJy (12.94 AB) robust scatter  514.9 (excess floor 510.7); median/scatter  47.1; PSF maj 2.44
+  PSF slope c: -141.4 uJy/px (-0.8%/px of 17325); maj range 2.3-4.7
+  PSF slope o: +33.3 uJy/px (+0.1%/px of 24308); maj range 2.1-4.2
+  o +-10 d PSF-corrected: excess  +3902.6 +-  734.8 -> ratio 1.160 +- 0.030
+  o +-30 d PSF-corrected: excess  +1542.3 +-  575.8 -> ratio 1.063 +- 0.024
+  c +-30 d PSF-corrected: excess   +766.2 +-  147.0 -> ratio 1.044 +- 0.008
+  o    +-10 d of peak visit:  4 nights, excess  +3894.8 +-  737.7 uJy, baseline 24439.9 -> ratio 1.159 +- 0.030 (chi2nu 13.4)
+  o    +-30 d of peak visit: 11 nights, excess  +1531.3 +-  576.8 uJy, baseline 24431.4 -> ratio 1.063 +- 0.024 (chi2nu 25.6)
+  c    +-10 d of peak visit: NO ATLAS NIGHT
+  c    +-30 d of peak visit:  5 nights, excess   +778.5 +-  147.0 uJy, baseline 17325.0 -> ratio 1.045 +- 0.008 (chi2nu 0.1)
+  both +-10 d of peak visit:  4 nights, excess  +3894.8 +-  737.7 uJy, baseline 24439.9 -> ratio 1.159 +- 0.030 (chi2nu 13.4)
+  both +-30 d of peak visit: 16 nights, excess  +1248.4 +-  384.2 uJy, baseline 21760.8 -> ratio 1.057 +- 0.018 (chi2nu 18.2)
+    block visit 2019-10-05 o +-10: 3 nights, ratio 1.041 +- 0.033
+    block visit 2019-10-05 o +-30: 10 nights, ratio 1.019 +- 0.010
+    block visit 2020-03-11 o +-10: 3 nights, ratio 1.018 +- 0.009
+    block visit 2020-03-11 o +-30: 6 nights, ratio 1.040 +- 0.025
+    block visit 2020-10-04 o +-10: 4 nights, ratio 1.159 +- 0.030
+    block visit 2020-10-04 o +-30: 11 nights, ratio 1.063 +- 0.024
+  nearest nights: o 02a +0.4 d ratio 1.21; o 01a +2.5 d ratio 1.15; o 01a -5.5 d ratio 1.21
+  largest 20-d o bin away from the visit (|dt|>60 d, >=2 nights): dt +110 d (2021-01-22) ratio 1.073 +- 0.007 (10.0 sigma); bins > 5 sigma: 2 of 117
+  20-d o bins within 200 d: -190:1.01(+1.1) -170:0.98(-1.6) -150:1.00(-0.1) -30:0.99(-0.8) -10:1.21(+14.0) +10:1.10(+3.3) +30:1.02(+2.9) +50:1.01(+0.6) +70:1.01(+0.9) +90:1.10(+2.7) +110:1.07(+10.0) +130:1.03(+2.8) +150:1.00(+0.3) +170:1.01(+1.7) +190:1.02(+3.0)
+  nights within 60 d of the peak visit:
+      date   dvis F cam  n  nraw      ujy  ujy_err    ubase  ratio   sig  maj    m5    chi
+2020-08-31 -33.51 o 01a  3     3 24229.01   134.94 24450.05   0.99 -0.56 2.29 18.85 132.11
+2020-09-08 -25.51 o 01a  2     2 24120.54    78.50 24450.05   0.99 -0.88 2.19 18.96  98.19
+2020-09-10 -23.50 o 02a  4     4 24366.85    41.61 24384.33   1.00 -0.06 2.16 19.20 157.43
+2020-09-18 -15.52 c 02a  2     2 18154.86    41.00 17325.01   1.05  2.55 2.78 19.44 182.91
+2020-09-22 -11.53 c 02a  4     4 18234.60   109.02 17325.01   1.05  2.67 2.53 19.44  78.48
+2020-09-28  -5.53 o 01a  1     1 29642.00    53.00 24450.05   1.21 13.96 2.59 19.32  70.83
+2020-10-04   0.44 o 02a  4     4 29505.57   431.59 24384.33   1.21 10.01 2.36 18.43  52.28
+2020-10-06   2.51 o 01a  1     1 28030.00    56.00 24450.05   1.15  9.62 2.07 19.21 240.41
+2020-10-10   6.45 o 01a  4     4 26507.55   142.45 24450.05   1.08  5.21 2.20 18.74 104.28
+2020-10-14  10.44 o 01a  1     1 25548.00    50.00 24450.05   1.04  2.96 2.68 19.38 155.75
+2020-10-16  12.46 c 02a  3     4 17914.86    34.14 17325.01   1.03  1.82 2.62 18.97  64.98
+2020-10-20  16.41 c 02a  3     3 18169.58    45.06 17325.01   1.05  2.60 2.75 19.62 236.97
+2020-10-22  18.40 o 01a  4     4 25439.16   213.59 24450.05   1.04  2.32 2.00 18.44  41.33
+2020-10-24  20.47 c 02a  4     4 18054.96    72.14 17325.01   1.04  2.21 2.32 19.69  93.46
+2020-10-26  22.39 o 01a  4     4 25115.44    67.30 24450.05   1.03  1.78 1.89 18.76  91.53
+2020-10-31  27.40 o 01a  1     1 24956.00    56.00 24450.05   1.02  1.36 2.01 18.96 160.19
+2020-11-01  28.41 o 02a  8     8 24826.48   354.61 24384.33   1.02  0.99 2.12 18.48 137.70
+2020-11-03  30.38 o 01a  3     4 25110.95    38.94 24450.05   1.03  1.79 2.02 18.92  80.13
+2020-11-07  34.41 o 01a  3     3 24620.40    57.25 24450.05   1.01  0.46 2.77 19.12 187.98
+2020-11-17  44.40 c 02a  3     3 17758.49   158.57 17325.01   1.03  1.21 2.42 19.28 122.53
+2020-11-19  46.27 o 01a  4     4 24281.55   102.60 24450.05   0.99 -0.44 2.31 19.20 143.93
+2020-11-25  52.47 c 02a  4     4 17464.51   130.18 17325.01   1.01  0.40 2.51 19.69 205.59
+2020-11-27  54.32 o 01a  2     3 24478.56    35.33 24450.05   1.00  0.08 2.01 19.23  84.47
+2020-11-29  56.31 o 02a  4     4 24712.21    36.14 24384.33   1.01  1.18 2.04 18.76 126.45
+============================== J172057 J172057.02-414201.2 G 17.21 BP-RP 2.00  NEOWISE peak visit 57272.16 (2015-09-07), dW1 -1.63; block 1 visits: ['2015-09-07']
+raw c/o rows 3299; after cuts 3022; years 2016.2-2026.8
+baselines (nights > 400 d from every block visit):
+  c 01a: n   12 median    177.0 uJy (18.28 AB) robust scatter   38.3 (excess floor  36.2); median/scatter   4.6; PSF maj 2.74
+  c 02a: n   38 median    165.1 uJy (18.36 AB) robust scatter   17.7 (excess floor  13.5); median/scatter   9.3; PSF maj 2.67
+  c 03a: n   44 median    194.1 uJy (18.18 AB) robust scatter   22.8 (excess floor  20.5); median/scatter   8.5; PSF maj 2.53
+  c 04a: n   74 median    199.9 uJy (18.15 AB) robust scatter   20.8 (excess floor  18.0); median/scatter   9.6; PSF maj 2.60
+  o 01a: n  131 median    472.8 uJy (17.21 AB) robust scatter  133.6 (excess floor 130.4); median/scatter   3.5; PSF maj 2.73
+  o 02a: n   54 median    508.5 uJy (17.13 AB) robust scatter   57.0 (excess floor  50.3); median/scatter   8.9; PSF maj 2.38
+  o 03a: n  189 median    541.2 uJy (17.07 AB) robust scatter   40.8 (excess floor  34.0); median/scatter  13.3; PSF maj 2.46
+  o 04a: n  179 median    534.9 uJy (17.08 AB) robust scatter   51.2 (excess floor  45.9); median/scatter  10.4; PSF maj 2.41
+  PSF slope c: -70.7 uJy/px (-36.4%/px of 194); maj range 2.3-3.2
+  PSF slope o: -146.7 uJy/px (-27.4%/px of 535); maj range 2.1-3.3
+  o    +-10 d of peak visit: NO ATLAS NIGHT
+  o    +-30 d of peak visit: NO ATLAS NIGHT
+  c    +-10 d of peak visit: NO ATLAS NIGHT
+  c    +-30 d of peak visit: NO ATLAS NIGHT
+  both +-10 d of peak visit: NO ATLAS NIGHT
+  both +-30 d of peak visit: NO ATLAS NIGHT
+    block visit 2015-09-07 o +-10: none
+    block visit 2015-09-07 o +-30: none
+  nearest nights: o 02a +193.5 d ratio -0.32; o 02a +205.5 d ratio 0.31; o 01a +650.3 d ratio 1.01
+  largest 20-d o bin away from the visit (|dt|>60 d, >=2 nights): dt +3270 d (2024-08-20) ratio 1.065 +- 0.025 (2.6 sigma); bins > 5 sigma: 0 of 107
+  20-d o bins within 200 d: +190:-0.32(-7.7)
+  nights within 60 d of the peak visit:
+============================== J170153 J170153.51-425620.0 G 15.71 BP-RP 1.66  NEOWISE peak visit 57456.82 (2016-03-09), dW1 -0.85; block 2 visits: ['2015-09-03', '2016-03-09']
+raw c/o rows 2855; after cuts 2632; years 2016.2-2026.8
+baselines (nights > 400 d from every block visit):
+  c 01a: n   11 median   1125.7 uJy (16.27 AB) robust scatter   34.8 (excess floor  33.1); median/scatter  32.4; PSF maj 2.65
+  c 02a: n   35 median   1141.5 uJy (16.26 AB) robust scatter   40.6 (excess floor  38.4); median/scatter  28.1; PSF maj 2.70
+  c 03a: n   39 median   1082.0 uJy (16.31 AB) robust scatter   40.7 (excess floor  39.0); median/scatter  26.6; PSF maj 2.50
+  c 04a: n   69 median   1127.2 uJy (16.27 AB) robust scatter   28.2 (excess floor  26.3); median/scatter  39.9; PSF maj 2.63
+  o 01a: n  110 median   2292.3 uJy (15.50 AB) robust scatter  102.7 (excess floor 100.5); median/scatter  22.3; PSF maj 2.77
+  o 02a: n   38 median   2269.5 uJy (15.51 AB) robust scatter   58.5 (excess floor  53.4); median/scatter  38.8; PSF maj 2.41
+  o 03a: n  173 median   2168.5 uJy (15.56 AB) robust scatter   52.2 (excess floor  48.1); median/scatter  41.5; PSF maj 2.47
+  o 04a: n  180 median   2240.5 uJy (15.52 AB) robust scatter   82.0 (excess floor  79.5); median/scatter  27.3; PSF maj 2.40
+  PSF slope c: +10.2 uJy/px (+0.9%/px of 1127); maj range 2.3-3.3
+  PSF slope o: +93.7 uJy/px (+4.2%/px of 2240); maj range 2.1-3.4
+  o +-10 d PSF-corrected: excess    +92.7 +-   81.1 -> ratio 1.041 +- 0.036
+  o +-30 d PSF-corrected: excess    +93.5 +-   50.7 -> ratio 1.041 +- 0.022
+  o    +-10 d of peak visit:  1 nights, excess   +227.1 +-   81.1 uJy, baseline  2269.5 -> ratio 1.100 +- 0.036 (chi2nu 0.0)
+  o    +-30 d of peak visit:  2 nights, excess   +221.9 +-   50.7 uJy, baseline  2269.5 -> ratio 1.098 +- 0.022 (chi2nu 0.0)
+  c    +-10 d of peak visit: NO ATLAS NIGHT
+  c    +-30 d of peak visit: NO ATLAS NIGHT
+  both +-10 d of peak visit:  1 nights, excess   +227.1 +-   81.1 uJy, baseline  2269.5 -> ratio 1.100 +- 0.036 (chi2nu 0.0)
+  both +-30 d of peak visit:  2 nights, excess   +221.9 +-   50.7 uJy, baseline  2269.5 -> ratio 1.098 +- 0.022 (chi2nu 0.0)
+    block visit 2015-09-03 o +-10: none
+    block visit 2015-09-03 o +-30: none
+    block visit 2016-03-09 o +-10: 1 nights, ratio 1.100 +- 0.036
+    block visit 2016-03-09 o +-30: 2 nights, ratio 1.098 +- 0.022
+  nearest nights: o 02a +8.8 d ratio 1.10; o 02a +20.8 d ratio 1.10; o 01a +469.6 d ratio 1.05
+  largest 20-d o bin away from the visit (|dt|>60 d, >=2 nights): dt +470 d (2017-06-22) ratio 1.091 +- 0.034 (2.7 sigma); bins > 5 sigma: 0 of 99
+  20-d o bins within 200 d: +10:1.10(+2.8) +30:1.10(+3.4)
+  nights within 60 d of the peak visit:
+      date  dvis F cam  n  nraw     ujy  ujy_err   ubase  ratio  sig  maj    m5  chi
+2016-03-18  8.82 o 02a  2     2 2496.68    61.00 2269.54    1.1 2.80 3.89 18.69 9.36
+2016-03-30 20.80 o 02a  3     3 2488.05    37.02 2269.54    1.1 3.36 3.79 18.27 5.70
+============================== J173349 J173349.59-264330.5 G 16.22 BP-RP 4.18  NEOWISE peak visit 57273.67 (2015-09-08), dW1 -0.59; block 2 visits: ['2015-09-08', '2016-03-14']
+raw c/o rows 3980; after cuts 3764; years 2015.6-2026.8
+baselines (nights > 400 d from every block visit):
+  c 01a: n   18 median     60.8 uJy (19.44 AB) robust scatter   25.2 (excess floor  22.5); median/scatter   2.4; PSF maj 2.84
+  c 02a: n   82 median     65.1 uJy (19.37 AB) robust scatter   10.3 (excess floor   1.1); median/scatter   6.3; PSF maj 2.60
+  c 03a: n   44 median     63.1 uJy (19.40 AB) robust scatter   15.9 (excess floor  12.2); median/scatter   4.0; PSF maj 2.64
+  c 04a: n   58 median     69.2 uJy (19.30 AB) robust scatter   13.9 (excess floor   9.8); median/scatter   5.0; PSF maj 2.62
+  o 01a: n  169 median    784.8 uJy (16.66 AB) robust scatter   73.8 (excess floor  68.2); median/scatter  10.6; PSF maj 2.73
+  o 02a: n  120 median    808.5 uJy (16.63 AB) robust scatter   45.1 (excess floor  37.2); median/scatter  17.9; PSF maj 2.27
+  o 03a: n  173 median    810.1 uJy (16.63 AB) robust scatter   39.5 (excess floor  29.6); median/scatter  20.5; PSF maj 2.49
+  o 04a: n  207 median    839.1 uJy (16.59 AB) robust scatter   53.0 (excess floor  46.4); median/scatter  15.8; PSF maj 2.40
+  PSF slope c: -38.2 uJy/px (-58.7%/px of 65); maj range 2.3-3.2
+  PSF slope o: -142.5 uJy/px (-17.6%/px of 810); maj range 2.0-3.3
+  o    +-10 d of peak visit: NO ATLAS NIGHT
+  o    +-30 d of peak visit: NO ATLAS NIGHT
+  c    +-10 d of peak visit: NO ATLAS NIGHT
+  c    +-30 d of peak visit: NO ATLAS NIGHT
+  both +-10 d of peak visit: NO ATLAS NIGHT
+  both +-30 d of peak visit: NO ATLAS NIGHT
+    block visit 2015-09-08 o +-10: none
+    block visit 2015-09-08 o +-30: none
+    block visit 2016-03-14 o +-10: 1 nights, ratio 0.432 +- 0.100
+    block visit 2016-03-14 o +-30: 2 nights, ratio 0.306 +- 0.104
+  nearest nights: o 02a -45.3 d ratio 0.98; o 02a +192.0 d ratio 0.43; o 02a +204.0 d ratio 0.22
+  largest 20-d o bin away from the visit (|dt|>60 d, >=2 nights): dt +3110 d (2024-03-14) ratio 1.057 +- 0.024 (2.4 sigma); bins > 5 sigma: 0 of 119
+  20-d o bins within 200 d: -50:0.98(-0.2) +190:0.43(-5.7)
+  nights within 60 d of the peak visit:
+      date   dvis F cam  n  nraw    ujy  ujy_err  ubase  ratio   sig  maj    m5  chi
+2015-07-25 -45.31 o 02a  3     3 796.37    40.82 808.52   0.98 -0.22 3.53 18.56 5.46

@@ -1,0 +1,29 @@
+report: [{'release': 'Gaia DR3', 'ok': True, 'n': 2, 'error': ''}]
+== J180402 Gaia DR3 4143495279954502016: 28 G transits 2015-02-25..2017-05-04; median G 18.653, robust scatter 0.034, range 17.62..18.70
+   transits within 120 d of the NEOWISE visit (2015-09-15, W1 x2.69):
+    t_mjd     dt    mag   err     dG  ratio flag
+57270.740 -9.428 17.616 0.006 -1.037  2.599     
+57299.726 19.557 17.627 0.008 -1.026  2.573     
+57322.149 41.980 18.040 0.009 -0.613  1.759     
+57322.223 42.054 18.019 0.010 -0.634  1.793     
+   BP: median 21.103; within 120 d: -9.4d +0.000, +19.6d -4.522, +42.0d -0.134, +42.1d -0.387
+   RP: median 17.094; within 120 d: -9.4d -1.068, +19.6d -1.075, +42.0d -0.663, +42.1d -0.641
+   five brightest G transits: 2015-09-05 -1.04, 2015-10-04 -1.03, 2015-10-27 -0.63, 2015-10-27 -0.61, 2015-04-17 -0.05
+== J172057 Gaia DR3 5959812622743175552: 39 G transits 2014-09-07..2017-03-19; median G 17.853, robust scatter 0.062, range 15.93..17.92
+   transits within 120 d of the NEOWISE visit (2015-09-07, W1 x4.50):
+    t_mjd     dt    mag   err     dG  ratio flag
+57264.904 -7.257 15.932 0.003 -1.921  5.868     
+57296.958 24.796 16.769 0.005 -1.084  2.714     
+57316.383 44.221 17.240 0.005 -0.613  1.759     
+57316.457 44.295 17.245 0.008 -0.608  1.750     
+   BP: median 19.268; within 120 d: -7.3d -1.943, +24.8d -1.182, +44.2d -0.656, +44.3d -0.649
+   RP: median 16.689; within 120 d: -7.3d -1.918, +24.8d -1.150, +44.2d -0.590, +44.3d -0.601
+   five brightest G transits: 2015-08-30 -1.92, 2015-10-01 -1.08, 2015-10-21 -0.61, 2015-10-21 -0.61, 2016-01-25 -0.10
+== J172057 5959812622743175808: no DR3 epoch photometry
+== J170153 5966156701720599680: no DR3 epoch photometry
+== J173349 4061588260756165632: no DR3 epoch photometry
+4143495279954502016 vclassre: [' 4443077\t4143495279954502016\t375316653866487564\tnTransits:5+\tMICROLENSING              \t 2.5917298e-01\t271.00958351919\t-18.31329775461'] recno	Source	SolID	Classifier	Class	ClassSc	RA_ICRS	DE_ICRS
+5959812622743175552 vclassre: [' 8578586\t5959812622743175552\t375316653866487564\tnTransits:5+\tMICROLENSING              \t 6.0337156e-01\t260.23771063651\t-41.70021713832'] recno	Source	SolID	Classifier	Class	ClassSc	RA_ICRS	DE_ICRS
+5959812622743175808 vclassre: none 
+5966156701720599680 vclassre: none 
+4061588260756165632 vclassre: none 

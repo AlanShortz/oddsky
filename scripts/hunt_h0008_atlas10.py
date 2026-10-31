@@ -10,7 +10,7 @@ excursion elsewhere, and a figure per star (figures/atlas10.png).
 This is a first pass. The referee (reviews/claude-referee-atlas10-2026-10-30.md) supersedes its parameters: ratios to a faint
 ATLAS baseline exaggerate amplitudes (J191120's "x110" is x30-50 of the Gaia star), series with an undetected baseline are now
 skipped, and blend fractions at their bounds (0.02, 1.5) mean the fit is not constrained.
-usage: uv run python scripts/hunt_h0008_atlas10.py
+usage: uv run python scripts/hunt_h0008_atlas10.py [--hunt H-0009]
 """
 
 import json
@@ -32,10 +32,15 @@ from hunt_h0008_atlas_fit import BASE_DT, ratio_series, shape_fit  # noqa: E402
 from oddsky.analysis.lensing import Problem, magnification  # noqa: E402
 from oddsky.data import atlas  # noqa: E402
 
-ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hunts", "H-0008")
+# H-0008 by default; `--hunt H-0009` runs the same analysis on hunt H-0009's ATLAS follow-up (its queue, strong table, sky4long
+# light curves), writing work/atlas10.json and figures/atlas10.png inside that hunt.
+HUNT = sys.argv[sys.argv.index("--hunt") + 1] if "--hunt" in sys.argv else "H-0008"
+CFG = {"H-0008": ("atlas10", "h0008/lightcurves", "sky3_strong.csv"),
+       "H-0009": ("atlas", "h0009/lightcurves", "sky4_strong.csv")}[HUNT]
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hunts", HUNT)
 WORK = os.path.join(ROOT, "work")
-RAW = os.path.expanduser("~/oddsky-runs/h0008/atlas10")
-LC = os.path.expanduser("~/oddsky-runs/h0008/lightcurves")
+RAW = os.path.expanduser(f"~/oddsky-runs/{HUNT.lower().replace('-', '')}/{CFG[0]}")
+LC = os.path.expanduser(f"~/oddsky-runs/{CFG[1]}")
 
 
 def atlas_series(path, tpk_guess):
@@ -76,7 +81,7 @@ def neowise_series(pixel, cntr, tpk):
 
 def main():
     q = pd.read_csv(os.path.join(WORK, "atlas", "queue.csv"))
-    strong = pd.read_csv(os.path.join(WORK, "sky3_strong.csv"), dtype={"g_source_id": str})
+    strong = pd.read_csv(os.path.join(WORK, CFG[2]), dtype={"g_source_id": str})
     out, panels = {}, []
     for _, r in q.iterrows():
         key = r.designation.split(".")[0]
@@ -137,7 +142,7 @@ def main():
         ax.tick_params(labelsize=7)
     for ax in list(axes.flat)[n:]:
         ax.axis("off")
-    fig.suptitle("H-0008 ATLAS follow-up: ATLAS o (orange), c (cyan), NEOWISE W1 (blue), W2 (pink); line: static lens, ATLAS o",
+    fig.suptitle(f"{HUNT} ATLAS follow-up: ATLAS o (orange), c (cyan), NEOWISE W1 (blue), W2 (pink); line: static lens, ATLAS o",
                  fontsize=9)
     fig.tight_layout()
     fig.savefig(os.path.join(ROOT, "figures", "atlas10.png"), dpi=120)
