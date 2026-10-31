@@ -1,0 +1,15 @@
+== J175634: GOST span 2014-07-25T10:31:26.000 (TCB) .. 2025-07-01T01:10:23.729 (TCB); 109 FOV transits
+   2022-02-25 22:38  dt   -25.4 d  FOV1  ATLAS o x1.03 (dG ~ -0.03); bracketing nights -7.3/+1.4 d
+   2022-03-25 00:11  dt    +1.7 d  FOV2  ATLAS o x5.37 (dG ~ -1.83); bracketing nights -1.7/+2.4 d
+   2022-04-18 00:06  dt   +25.7 d  FOV2  ATLAS o x1.03 (dG ~ -0.03); bracketing nights -0.7/+1.0 d
+== J174744: GOST span 2014-07-25T10:31:26.000 (TCB) .. 2025-07-01T01:10:23.729 (TCB); 186 FOV transits
+   2021-08-22 15:56  dt  -205.7 d  FOV1  ATLAS o x1.01 (dG ~ -0.01); bracketing nights -1.3/+2.6 d
+   2021-08-22 17:43  dt  -205.7 d  FOV2  ATLAS o x1.01 (dG ~ -0.01); bracketing nights -1.4/+2.6 d
+   2021-09-18 03:48  dt  -179.2 d  FOV1  ATLAS o x1.01 (dG ~ -0.01); bracketing nights -5.9/+4.1 d
+   2022-02-28 06:41  dt   -16.1 d  FOV2  no ATLAS night within the gap (-11.9/+9.9 d; o x1.82 before, x2.04 after)
+   2022-03-28 04:38  dt   +11.8 d  FOV1  ATLAS o x1.97 (dG ~ -0.74); bracketing nights -0.8/+2.1 d
+   2022-03-28 06:25  dt   +11.9 d  FOV2  ATLAS o x1.97 (dG ~ -0.74); bracketing nights -0.9/+2.0 d
+   2022-09-02 06:53  dt  +169.9 d  FOV2  ATLAS o x1.11 (dG ~ -0.11); bracketing nights -0.5/+6.5 d
+   2022-10-03 00:31  dt  +200.6 d  FOV2  ATLAS o x1.08 (dG ~ -0.08); bracketing nights -1.3/+1.1 d
+   2022-10-23 22:45  dt  +221.5 d  FOV1  ATLAS o x1.01 (dG ~ -0.01); bracketing nights -0.2/+2.9 d
+   2022-10-24 00:31  dt  +221.6 d  FOV2  ATLAS o x1.01 (dG ~ -0.01); bracketing nights -0.2/+2.8 d

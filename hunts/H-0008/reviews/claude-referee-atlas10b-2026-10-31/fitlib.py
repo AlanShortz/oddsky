@@ -1,4 +1,6 @@
-"""Fits in EXCESS-flux space (referee's own code; magnification and the parallax geometry come from oddsky.analysis.lensing).
+"""Copied from claude-referee-atlas10-2026-10-30/fitlib.py and extended for this pass (fs_min floor; reviewed line by line).
+
+Fits in EXCESS-flux space (referee's own code; magnification and the parallax geometry come from oddsky.analysis.lensing).
 
 Every series g is modelled as  d_g(t) = F_g * P(t; theta) [+ c_g],  d = flux - baseline median.  P = A(u) - 1 for a point lens
 (F_g = source flux), or a non-lens profile.  F_g (and optional offsets c_g) are linear and solved exactly for every theta
@@ -129,13 +131,13 @@ def ztf_series(path, flags=(0,)):
 
 # ----------------------------------------------------------------------------------------------------------- models
 class Fitter:
-    def __init__(self, df, ra=None, dec=None, t0par=None, offsets=False, fs_cap=None):
+    def __init__(self, df, ra=None, dec=None, t0par=None, offsets=False, fs_cap=None, fs_min=None):
         """fs_cap: dict series -> max F (e.g. the baseline flux: no negative blend). offsets: free constant per series."""
         self.t, self.d, self.e = df.t.values.astype(float), df.d.values.astype(float), df.e.values.astype(float)
         self.names = sorted(df.g.unique())
         self.gi = df.g.map({s: i for i, s in enumerate(self.names)}).values
         self.idx = [np.where(self.gi == i)[0] for i in range(len(self.names))]
-        self.offsets, self.fs_cap = offsets, fs_cap or {}
+        self.offsets, self.fs_cap, self.fs_min = offsets, fs_cap or {}, fs_min or {}
         self.ra, self.dec, self.t0par = ra, dec, t0par
         self._par = None
 
@@ -162,6 +164,11 @@ class Fitter:
                 if self.offsets:
                     c[1] = np.sum(w * (y - cap * p)) / np.sum(w)
             c[0] = max(c[0], 0.0) if cap is not None else c[0]
+            lo_ = self.fs_min.get(self.names[i])
+            if lo_ is not None and c[0] < lo_:  # amplitude floor (e.g. Gaia-based minimum source flux)
+                c[0] = lo_
+                if self.offsets:
+                    c[1] = np.sum(w * (y - lo_ * p)) / np.sum(w)
             m[ix] = c[0] * p + c[1]
             coef.append(c)
         return m, coef

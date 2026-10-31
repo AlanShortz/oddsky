@@ -1,0 +1,17 @@
+== TNS 60" cone
+ J175634: none within 60" (HTTP 200, valid CSV header)
+ J174744: none within 60" (HTTP 200, valid CSV header)
+== SIMBAD (CfA) 30"
+ J175634: HTTP 200; 
+   1|     10.65|El*|17 56 33.7336081872 -20 56 03.014293452|     ~|     ~|19.479   |     ~|17.429   |~              |   3|   0
+   2|     11.43|EB*|17 56 33.90 -20 56 06.4                |     ~|     ~|19.052   |     ~|17.286   |~              |   2|   0
+ J174744: no object within 30" (HTTP 200)
+== alert pages, 2022
+ OGLE EWS 2022: HTTP 200, 108807 bytes, 359 coordinate pairs; J175634: nearest 185.1' (n within 30': 0); J174744: nearest 141.3' (n within 30': 0)
+ KMTNet 2022: HTTP 200, 1524779 bytes, 0 coordinate pairs
+ MOA 2022 (moaprime): HTTP 200, 531 bytes, 0 coordinate pairs
+ MOA 2022 (iabond): HTTP 404, 4843 bytes, 0 coordinate pairs
+== Gaia alerts live list
+ HTTP 200: 27076 alerts, latest 2025-01-15 00:59:00
+ J175634: within 60": 0; nearest Gaia19axg 24.1' 2019-03-09; Gaia24bar 26.8' 2024-03-17
+ J174744: within 60": 0; nearest Gaia18aka 17.9' 2018-02-08; Gaia19enm 44.9' 2019-10-14

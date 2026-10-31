@@ -1,0 +1,25 @@
+== J175634
+  o: 102 off-event 20-d bins (>=3 nights), median 0.999, robust bin scatter 0.022; brightest: 2019-04-18 x1.048 (+2.2 sig, n 6); 2019-03-27 x1.044 (+2.0 sig, n 3); 2017-06-24 x1.038 (+1.7 sig, n 4); 2019-05-24 x1.035 (+1.6 sig, n 6) | faintest: 2015-09-29 x0.915; 2022-10-15 x0.952
+  c: 38 off-event 20-d bins (>=3 nights), median 0.995, robust bin scatter 0.026; brightest: 2016-09-01 x1.070 (+2.9 sig, n 3); 2025-06-27 x1.061 (+2.6 sig, n 3); 2022-07-30 x1.042 (+1.8 sig, n 4); 2025-04-02 x1.038 (+1.7 sig, n 6) | faintest: 2015-10-14 x0.903; 2024-10-01 x0.948
+== J174744
+  o: 81 off-event 20-d bins (>=3 nights), median 1.001, robust bin scatter 0.018; brightest: 2017-10-07 x1.073 (+3.9 sig, n 3); 2017-08-26 x1.065 (+3.5 sig, n 3); 2017-07-18 x1.063 (+3.4 sig, n 3); 2018-06-03 x1.057 (+3.1 sig, n 4) | faintest: 2020-10-03 x0.964; 2020-08-10 x0.964
+  c: 19 off-event 20-d bins (>=3 nights), median 0.993, robust bin scatter 0.025; brightest: 2025-09-16 x1.034 (+1.6 sig, n 3); 2024-08-02 x1.033 (+1.6 sig, n 3); 2023-05-20 x1.024 (+1.2 sig, n 3); 2026-09-12 x1.023 (+1.2 sig, n 4) | faintest: 2023-08-13 x0.956; 2026-03-25 x0.968
+  2021 season (all units, 20-d bins, PSF-corrected ratio):
+    c 2021-04-11 dt   -339 x0.972 (n 3, units ['01a'])
+    c 2021-04-19 dt   -331 x0.964 (n 1, units ['01a'])
+    c 2021-05-19 dt   -301 x1.055 (n 1, units ['02a'])
+    c 2021-06-10 dt   -279 x0.991 (n 3, units ['01a'])
+    c 2021-07-10 dt   -249 x1.052 (n 1, units ['02a'])
+    c 2021-08-05 dt   -223 x0.974 (n 3, units ['01a'])
+    c 2021-08-29 dt   -199 x1.004 (n 2, units ['02a'])
+    c 2021-09-08 dt   -189 x1.013 (n 1, units ['02a'])
+    o 2021-04-25 dt   -325 x0.999 (n 4, units ['01a', '02a'])
+    o 2021-05-18 dt   -302 x1.008 (n 6, units ['01a', '02a'])
+    o 2021-06-01 dt   -288 x1.003 (n 2, units ['01a', '02a'])
+    o 2021-06-26 dt   -263 x1.009 (n 6, units ['01a', '02a'])
+    o 2021-07-14 dt   -245 x0.993 (n 3, units ['01a', '02a'])
+    o 2021-08-07 dt   -221 x0.975 (n 4, units ['01a', '02a'])
+    o 2021-08-25 dt   -203 x1.043 (n 3, units ['01a'])
+    o 2021-09-12 dt   -185 x1.010 (n 4, units ['01a', '02a'])
+    o 2021-10-01 dt   -166 x1.039 (n 4, units ['01a', '02a'])
+    o 2021-10-16 dt   -151 x1.078 (n 1, units ['01a'])

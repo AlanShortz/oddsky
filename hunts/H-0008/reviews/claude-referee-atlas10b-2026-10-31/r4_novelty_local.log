@@ -1,0 +1,32 @@
+OGLE EWS 2019 in the local list: 1526 events, t0 2018-12-13 .. 2020-12-22; t0 before 2022-06-01: 1526
+OGLE EWS 2022 in the local list: 359 events, t0 2022-03-05 .. 2023-02-27; t0 before 2022-06-01: 1
+OGLE EWS 2023 in the local list: 1375 events, t0 2021-08-01 .. 2034-12-02; t0 before 2022-06-01: 1
+OGLE years present: [np.int64(2014), np.int64(2015), np.int64(2016), np.int64(2017), np.int64(2018), np.int64(2019), np.int64(2022), np.int64(2023), np.int64(2024), np.int64(2025)]
+KMT years present: [np.int64(2016), np.int64(2017), np.int64(2018), np.int64(2019), np.int64(2020), np.int64(2021), np.int64(2022), np.int64(2023), np.int64(2024)]
+Gaia alerts index: 27076 alerts, last 2025-01-15 00:59:00
+============================== J175634 J175634.35-205556.9
+  ogle_events.csv              within 1': 0, within 10': 3, within 30': 19, within 60': 43 | OGLE-2015-BLG-0765 8.0' t0 2015-04-23; OGLE-2015-BLG-0598 9.8' t0 2015-03-18; OGLE-2023-BLG-1081 9.8' t0 2023-08-01
+      per year within 30': {2014: 1, 2015: 6, 2016: 1, 2023: 5, 2024: 6}; within 30' and t0 in 2022: []
+  kmt_events.csv               within 1': 0, within 10': 0, within 30': 0, within 60': 21 | KMT-2024-BLG-1445 35.5' t0 -; KMT-2022-BLG-0441 38.6' t0 2022-05-04; KMT-2018-BLG-2710 39.9' t0 2018-05-30
+      per year within 30': {}; within 30' and t0 in 2022: []
+  ogle_gvs_mroz2020.csv        within 1': 0, within 10': 0, within 30': 0, within 60': 0 | OGLE-GVS BLG640.27.2302 94.0' t0 2018-04-06; OGLE-GVS BLG635.09.47116 117.8' t0 2017-09-14; OGLE-GVS BLG839.14.1791 129.8' t0 2017-08-19
+  gaia_dr3_microlensing.csv    within 1': 0, within 10': 0, within 30': 0, within 60': 0 | 4118603058326233856 99.6' t0 2015-10-28; 4070231689172730752 104.1' t0 2016-12-16; 4070219869407584768 117.5' t0 2016-04-12
+  reference_lenses.csv         within 1': 0, within 10': 3, within 30': 19, within 60': 58 | OGLE-2015-BLG-0765 8.0' t0 2015-04-23; OGLE-2015-BLG-0598 9.8' t0 2015-03-18; OGLE-2023-BLG-1081 9.8' t0 2023-08-01
+  ztf_zhai2024.csv             within 1': 0, within 10': 0, within 30': 0, within 60': 0 | ZTF20aaukggm 64.6' t0 2020-04-22; ZTF1753.1-2006 68.8' t0 2018-05-28; ZTF1752.5-2006 75.6' t0 2021-08-06
+  ztf_older.csv                within 1': 0, within 10': 0, within 30': 0, within 60': 0 | ZTF20aaukggm 64.6'; PUZLE 199814_8384 357.8'; PUZLE 198045_37053 369.1'
+  tns_reported.csv             within 1': 0, within 10': 0, within 30': 0, within 60': 0 | AT 2021aicc (ZTF21abahtfi) 320.4' t0 2021-07-22; AT 2022aexe (XOSS KATS22J002) 4891.8' t0 2022-05-27
+  Gaia alerts within 60": 0; nearest: Gaia19axg 24.1' 2019-03-09 unknown; Gaia24bar 26.8' 2024-03-17 unknown; Gaia21bsv 30.7' 2021-04-07 unknown
+  Gaia alerts in 2022 within 60': 0: 
+============================== J174744 J174744.42-374630.7
+  ogle_events.csv              within 1': 0, within 10': 0, within 30': 3, within 60': 26 | OGLE-2015-BLG-0235 24.2' t0 2015-02-23; OGLE-2025-BLG-0145 24.6' t0 2025-05-03; OGLE-2025-BLG-0144 28.9' t0 2025-02-09
+      per year within 30': {2015: 1, 2025: 2}; within 30' and t0 in 2022: []
+  kmt_events.csv               within 1': 0, within 10': 0, within 30': 0, within 60': 0 | KMT-2021-BLG-0795 84.6' t0 2021-05-25; KMT-2024-BLG-0595 84.9' t0 -; KMT-2017-BLG-1423 85.2' t0 2017-09-14
+      per year within 30': {}; within 30' and t0 in 2022: []
+  ogle_gvs_mroz2020.csv        within 1': 0, within 10': 0, within 30': 0, within 60': 0 | OGLE-GVS BLG601.12.9964 65.9' t0 2017-06-01; OGLE-GVS BLG601.07.19181 74.3' t0 2017-06-15; OGLE-GVS BLG537.15.3398 90.0' t0 2018-03-18
+  gaia_dr3_microlensing.csv    within 1': 0, within 10': 0, within 30': 0, within 60': 0 | 4040104834334974336 65.5' t0 2015-05-06; 4040243987040723712 80.6' t0 2016-01-07; 5962405713502000768 82.0' t0 2015-01-17
+  reference_lenses.csv         within 1': 0, within 10': 0, within 30': 3, within 60': 27 | OGLE-2015-BLG-0235 24.2' t0 2015-02-23; OGLE-2025-BLG-0145 24.6' t0 2025-05-03; OGLE-2025-BLG-0144 28.9' t0 2025-02-09
+  ztf_zhai2024.csv             within 1': 0, within 10': 0, within 30': 0, within 60': 0 | ZTF19aatwaux 773.1' t0 2019-06-02; ZTF21abdikzn 799.9' t0 2021-07-11; ZTF19abagvae 818.9' t0 2019-08-23
+  ztf_older.csv                within 1': 0, within 10': 0, within 30': 0, within 60': 0 | ZTF19aatwaux 773.1'; ZTF20aaukggm 1068.4'; ZTF19abpxurg 1099.3'
+  tns_reported.csv             within 1': 0, within 10': 0, within 30': 0, within 60': 0 | AT 2021aicc (ZTF21abahtfi) 1030.7' t0 2021-07-22; AT 2022aexe (XOSS KATS22J002) 5854.2' t0 2022-05-27
+  Gaia alerts within 60": 0; nearest: Gaia18aka 17.9' 2018-02-08 unknown; Gaia19enm 44.9' 2019-10-14 unknown; Gaia24bhx 45.1' 2024-04-30 unknown
+  Gaia alerts in 2022 within 60': 0: 
