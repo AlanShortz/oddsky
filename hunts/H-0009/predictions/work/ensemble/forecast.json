@@ -1,0 +1,538 @@
+{
+ "main": {
+  "label": "all 47 testable, lens fraction from the DR3 posterior",
+  "m": 47,
+  "mean": 8.91,
+  "median": 8.0,
+  "p10": 5.0,
+  "p90": 14.0,
+  "p5": 4.0,
+  "p95": 15.0,
+  "mean_resolved": 43.3,
+  "mean_lens_passes": 5.66,
+  "mean_achromatic": 3.4,
+  "mean_chromatic": 2.1,
+  "mean_undetermined": 3.41,
+  "ach_p10": 1.0,
+  "ach_p90": 6.0,
+  "ach_p5": 1.0,
+  "ach_p95": 7.0,
+  "ach_frac_of_determined_mean": 0.615,
+  "ach_frac_of_determined_p10_p90": [
+   0.333,
+   1.0
+  ],
+  "P_no_determined_colour": 0.001,
+  "und_frac_of_passes_mean": 0.375,
+  "f_L_draws_median_p10_p90": [
+   0.139,
+   0.058,
+   0.273
+  ]
+ },
+ "fL_0.20": {
+  "label": "all 47, lens fraction held at 0.20",
+  "m": 47,
+  "mean": 9.98,
+  "median": 10.0,
+  "p10": 7.0,
+  "p90": 14.0,
+  "p5": 6.0,
+  "p95": 15.0,
+  "mean_resolved": 43.3,
+  "mean_lens_passes": 6.74,
+  "mean_achromatic": 3.97,
+  "mean_chromatic": 2.16,
+  "mean_undetermined": 3.86,
+  "ach_p10": 2.0,
+  "ach_p90": 6.0,
+  "ach_p5": 1.0,
+  "ach_p95": 7.0,
+  "ach_frac_of_determined_mean": 0.655,
+  "ach_frac_of_determined_p10_p90": [
+   0.4,
+   1.0
+  ],
+  "P_no_determined_colour": 0.0,
+  "und_frac_of_passes_mean": 0.383
+ },
+ "grid": {
+  "0.00": {
+   "label": "fL=0.0",
+   "m": 47,
+   "mean": 4.93,
+   "median": 5.0,
+   "p10": 3.0,
+   "p90": 7.0,
+   "p5": 2.0,
+   "p95": 8.0,
+   "mean_resolved": 43.3,
+   "mean_lens_passes": 1.69,
+   "mean_achromatic": 1.32,
+   "mean_chromatic": 1.87,
+   "mean_undetermined": 1.73,
+   "ach_p10": 0.0,
+   "ach_p90": 2.0,
+   "ach_p5": 0.0,
+   "ach_p95": 3.0,
+   "ach_frac_of_determined_mean": 0.461,
+   "ach_frac_of_determined_p10_p90": [
+    0.0,
+    1.0
+   ],
+   "P_no_determined_colour": 0.004,
+   "und_frac_of_passes_mean": 0.337
+  },
+  "0.05": {
+   "label": "fL=0.05",
+   "m": 47,
+   "mean": 6.18,
+   "median": 6.0,
+   "p10": 4.0,
+   "p90": 9.0,
+   "p5": 3.0,
+   "p95": 10.0,
+   "mean_resolved": 43.3,
+   "mean_lens_passes": 2.95,
+   "mean_achromatic": 1.98,
+   "mean_chromatic": 1.93,
+   "mean_undetermined": 2.26,
+   "ach_p10": 1.0,
+   "ach_p90": 3.0,
+   "ach_p5": 0.0,
+   "ach_p95": 4.0,
+   "ach_frac_of_determined_mean": 0.531,
+   "ach_frac_of_determined_p10_p90": [
+    0.2,
+    1.0
+   ],
+   "P_no_determined_colour": 0.002,
+   "und_frac_of_passes_mean": 0.357
+  },
+  "0.10": {
+   "label": "fL=0.1",
+   "m": 47,
+   "mean": 7.44,
+   "median": 7.0,
+   "p10": 5.0,
+   "p90": 11.0,
+   "p5": 4.0,
+   "p95": 12.0,
+   "mean_resolved": 43.3,
+   "mean_lens_passes": 4.2,
+   "mean_achromatic": 2.63,
+   "mean_chromatic": 2.01,
+   "mean_undetermined": 2.79,
+   "ach_p10": 1.0,
+   "ach_p90": 4.0,
+   "ach_p5": 1.0,
+   "ach_p95": 5.0,
+   "ach_frac_of_determined_mean": 0.581,
+   "ach_frac_of_determined_p10_p90": [
+    0.25,
+    1.0
+   ],
+   "P_no_determined_colour": 0.001,
+   "und_frac_of_passes_mean": 0.369
+  },
+  "0.20": {
+   "label": "fL=0.2",
+   "m": 47,
+   "mean": 9.96,
+   "median": 10.0,
+   "p10": 7.0,
+   "p90": 13.0,
+   "p5": 6.0,
+   "p95": 15.0,
+   "mean_resolved": 43.3,
+   "mean_lens_passes": 6.73,
+   "mean_achromatic": 3.96,
+   "mean_chromatic": 2.15,
+   "mean_undetermined": 3.85,
+   "ach_p10": 2.0,
+   "ach_p90": 6.0,
+   "ach_p5": 1.0,
+   "ach_p95": 7.0,
+   "ach_frac_of_determined_mean": 0.655,
+   "ach_frac_of_determined_p10_p90": [
+    0.4,
+    1.0
+   ],
+   "P_no_determined_colour": 0.0,
+   "und_frac_of_passes_mean": 0.383
+  },
+  "0.30": {
+   "label": "fL=0.3",
+   "m": 47,
+   "mean": 12.52,
+   "median": 12.0,
+   "p10": 9.0,
+   "p90": 16.0,
+   "p5": 8.0,
+   "p95": 18.0,
+   "mean_resolved": 43.3,
+   "mean_lens_passes": 9.28,
+   "mean_achromatic": 5.3,
+   "mean_chromatic": 2.3,
+   "mean_undetermined": 4.93,
+   "ach_p10": 3.0,
+   "ach_p90": 8.0,
+   "ach_p5": 2.0,
+   "ach_p95": 9.0,
+   "ach_frac_of_determined_mean": 0.701,
+   "ach_frac_of_determined_p10_p90": [
+    0.5,
+    0.909
+   ],
+   "P_no_determined_colour": 0.0,
+   "und_frac_of_passes_mean": 0.391
+  },
+  "0.40": {
+   "label": "fL=0.4",
+   "m": 47,
+   "mean": 15.22,
+   "median": 15.0,
+   "p10": 11.0,
+   "p90": 19.0,
+   "p5": 10.0,
+   "p95": 21.0,
+   "mean_resolved": 43.3,
+   "mean_lens_passes": 11.94,
+   "mean_achromatic": 6.69,
+   "mean_chromatic": 2.48,
+   "mean_undetermined": 6.05,
+   "ach_p10": 4.0,
+   "ach_p90": 9.0,
+   "ach_p5": 3.0,
+   "ach_p95": 10.0,
+   "ach_frac_of_determined_mean": 0.732,
+   "ach_frac_of_determined_p10_p90": [
+    0.5,
+    0.909
+   ],
+   "P_no_determined_colour": 0.0,
+   "und_frac_of_passes_mean": 0.396
+  },
+  "0.50": {
+   "label": "fL=0.5",
+   "m": 47,
+   "mean": 18.07,
+   "median": 18.0,
+   "p10": 14.0,
+   "p90": 22.0,
+   "p5": 13.0,
+   "p95": 24.0,
+   "mean_resolved": 43.3,
+   "mean_lens_passes": 14.73,
+   "mean_achromatic": 8.16,
+   "mean_chromatic": 2.67,
+   "mean_undetermined": 7.24,
+   "ach_p10": 5.0,
+   "ach_p90": 11.0,
+   "ach_p5": 5.0,
+   "ach_p95": 12.0,
+   "ach_frac_of_determined_mean": 0.757,
+   "ach_frac_of_determined_p10_p90": [
+    0.571,
+    0.917
+   ],
+   "P_no_determined_colour": 0.0,
+   "und_frac_of_passes_mean": 0.4
+  },
+  "0.70": {
+   "label": "fL=0.7",
+   "m": 47,
+   "mean": 24.57,
+   "median": 25.0,
+   "p10": 20.0,
+   "p90": 29.0,
+   "p5": 19.0,
+   "p95": 30.0,
+   "mean_resolved": 43.3,
+   "mean_lens_passes": 21.13,
+   "mean_achromatic": 11.53,
+   "mean_chromatic": 3.11,
+   "mean_undetermined": 9.93,
+   "ach_p10": 8.0,
+   "ach_p90": 15.0,
+   "ach_p5": 7.0,
+   "ach_p95": 16.0,
+   "ach_frac_of_determined_mean": 0.79,
+   "ach_frac_of_determined_p10_p90": [
+    0.643,
+    0.929
+   ],
+   "P_no_determined_colour": 0.0,
+   "und_frac_of_passes_mean": 0.404
+  }
+ },
+ "core": {
+  "label": "blind core (no optical information)",
+  "m": 39,
+  "mean": 5.98,
+  "median": 6.0,
+  "p10": 2.0,
+  "p90": 10.0,
+  "p5": 1.0,
+  "p95": 12.0,
+  "mean_resolved": 35.8,
+  "mean_lens_passes": 3.94,
+  "mean_achromatic": 2.15,
+  "mean_chromatic": 1.25,
+  "mean_undetermined": 2.58,
+  "ach_p10": 0.0,
+  "ach_p90": 5.0,
+  "ach_p5": 0.0,
+  "ach_p95": 6.0,
+  "ach_frac_of_determined_mean": 0.616,
+  "ach_frac_of_determined_p10_p90": [
+   0.0,
+   1.0
+  ],
+  "P_no_determined_colour": 0.061,
+  "und_frac_of_passes_mean": 0.432
+ },
+ "core_fL_0.20": {
+  "label": "blind core, fL=0.20",
+  "m": 39,
+  "mean": 7.04,
+  "median": 7.0,
+  "p10": 4.0,
+  "p90": 10.0,
+  "p5": 3.0,
+  "p95": 12.0,
+  "mean_resolved": 35.8,
+  "mean_lens_passes": 4.99,
+  "mean_achromatic": 2.7,
+  "mean_chromatic": 1.31,
+  "mean_undetermined": 3.02,
+  "ach_p10": 1.0,
+  "ach_p90": 5.0,
+  "ach_p5": 0.0,
+  "ach_p95": 5.0,
+  "ach_frac_of_determined_mean": 0.686,
+  "ach_frac_of_determined_p10_p90": [
+   0.333,
+   1.0
+  ],
+  "P_no_determined_colour": 0.014,
+  "und_frac_of_passes_mean": 0.429
+ },
+ "inspan": {
+  "label": "in the DR3 span (unflagged)",
+  "m": 24,
+  "mean": 2.07,
+  "median": 2.0,
+  "p10": 0.0,
+  "p90": 4.0,
+  "p5": 0.0,
+  "p95": 5.0,
+  "mean_resolved": 21.5,
+  "mean_lens_passes": 1.08,
+  "mean_achromatic": 0.56,
+  "mean_chromatic": 0.6,
+  "mean_undetermined": 0.9,
+  "ach_p10": 0.0,
+  "ach_p90": 2.0,
+  "ach_p5": 0.0,
+  "ach_p95": 2.0,
+  "ach_frac_of_determined_mean": 0.463,
+  "ach_frac_of_determined_p10_p90": [
+   0.0,
+   1.0
+  ],
+  "P_no_determined_colour": 0.328,
+  "und_frac_of_passes_mean": 0.433
+ },
+ "post": {
+  "label": "after the DR3 span",
+  "m": 23,
+  "mean": 6.84,
+  "median": 7.0,
+  "p10": 4.0,
+  "p90": 10.0,
+  "p5": 3.0,
+  "p95": 11.0,
+  "mean_resolved": 21.8,
+  "mean_lens_passes": 4.58,
+  "mean_achromatic": 2.82,
+  "mean_chromatic": 1.51,
+  "mean_undetermined": 2.5,
+  "ach_p10": 1.0,
+  "ach_p90": 5.0,
+  "ach_p5": 1.0,
+  "ach_p95": 6.0,
+  "ach_frac_of_determined_mean": 0.648,
+  "ach_frac_of_determined_p10_p90": [
+   0.333,
+   1.0
+  ],
+  "P_no_determined_colour": 0.001,
+  "und_frac_of_passes_mean": 0.357
+ },
+ "followed": {
+  "label": "events with optical follow-up",
+  "m": 8,
+  "mean": 2.93,
+  "median": 3.0,
+  "p10": 2.0,
+  "p90": 4.0,
+  "p5": 2.0,
+  "p95": 4.0,
+  "mean_resolved": 7.5,
+  "mean_lens_passes": 1.73,
+  "mean_achromatic": 1.25,
+  "mean_chromatic": 0.85,
+  "mean_undetermined": 0.83,
+  "ach_p10": 0.0,
+  "ach_p90": 2.0,
+  "ach_p5": 0.0,
+  "ach_p95": 2.0,
+  "ach_frac_of_determined_mean": 0.615,
+  "ach_frac_of_determined_p10_p90": [
+   0.0,
+   1.0
+  ],
+  "P_no_determined_colour": 0.01,
+  "und_frac_of_passes_mean": 0.268
+ },
+ "sensitivity": {
+  "no DR3-nonflag conditioning": {
+   "mean": 11.08,
+   "p10": 6.0,
+   "p90": 17.0,
+   "p5": 5.0,
+   "p95": 19.0,
+   "mean_achromatic": 4.17
+  },
+  "no centroid evidence": {
+   "mean": 8.78,
+   "p10": 5.0,
+   "p90": 13.0,
+   "p5": 4.0,
+   "p95": 15.0,
+   "mean_achromatic": 3.36
+  },
+  "rho 0-1 (DR3 flag and DR4 pass less correlated)": {
+   "mean": 9.01,
+   "p10": 5.0,
+   "p90": 14.0,
+   "p5": 4.0,
+   "p95": 16.0,
+   "mean_achromatic": 3.41
+  },
+  "f_R mean 0.15, f_F mean 0.10": {
+   "mean": 10.81,
+   "p10": 6.0,
+   "p90": 16.0,
+   "p5": 5.0,
+   "p95": 18.0,
+   "mean_achromatic": 3.47
+  },
+  "f_R, f_F = 0": {
+   "mean": 7.07,
+   "p10": 4.0,
+   "p90": 11.0,
+   "p5": 3.0,
+   "p95": 13.0,
+   "mean_achromatic": 3.35
+  },
+  "on-star pass probabilities x0.85": {
+   "mean": 7.27,
+   "p10": 4.0,
+   "p90": 11.0,
+   "p5": 3.0,
+   "p95": 13.0,
+   "mean_achromatic": 2.78
+  }
+ },
+ "headline": "8.9 passes expected of 47 (median 8, 80% 5-14, 90% 4-15)",
+ "falsification": {
+  "rule": "with the lens fraction held at 0.20, a pass count k with P(count <= k) < 0.05 or P(count >= k) < 0.05 falsifies '~20% lenses' (recomputed by the grader for the events that resolve)",
+  "falsified_if_at_most": 5,
+  "falsified_if_at_least": 16,
+  "P_le": 0.03855,
+  "P_ge": 0.031275,
+  "achromatic": {
+   "falsified_if_at_most": 0,
+   "falsified_if_at_least": 8
+  },
+  "all_resolved": {
+   "falsified_if_at_most": 5,
+   "falsified_if_at_least": 17,
+   "achromatic": [
+    1,
+    8
+   ],
+   "firm": [
+    3,
+    20
+   ],
+   "false_alarm_two_tails": 0.04865
+  },
+  "firm_expected_resolution": [
+   2,
+   19
+  ],
+  "power": {
+   "0.0": {
+    "P_too_few": 0.61015,
+    "P_too_many": 5e-05,
+    "P_too_few_firm": 0.1902,
+    "P_too_many_firm": 0.0
+   },
+   "0.4": {
+    "P_too_few": 0.0001,
+    "P_too_many": 0.459975,
+    "P_too_few_firm": 0.0,
+    "P_too_many_firm": 0.163125
+   }
+  }
+ },
+ "flat_star_3pct_delta": 0.65,
+ "blind_core_per_event": {
+  "inspan": 0.085,
+  "after": 0.225
+ },
+ "all_per_event": {
+  "inspan": 0.086,
+  "after": 0.297
+ },
+ "fL_given_count": {
+  "3": {
+   "median": 0.011,
+   "lo90": 0.0,
+   "hi90": 0.1
+  },
+  "5": {
+   "median": 0.041,
+   "lo90": 0.0,
+   "hi90": 0.16
+  },
+  "7": {
+   "median": 0.092,
+   "lo90": 0.0,
+   "hi90": 0.242
+  },
+  "10": {
+   "median": 0.183,
+   "lo90": 0.041,
+   "hi90": 0.362
+  },
+  "13": {
+   "median": 0.287,
+   "lo90": 0.12,
+   "hi90": 0.458
+  },
+  "16": {
+   "median": 0.39,
+   "lo90": 0.204,
+   "hi90": 0.559
+  },
+  "20": {
+   "median": 0.511,
+   "lo90": 0.33,
+   "hi90": 0.674
+  }
+ }
+}

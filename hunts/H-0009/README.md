@@ -165,6 +165,22 @@ Before DR4 is graded: confirm the epoch-photometry fetch works for DR4 (`src/odd
 error, and these stars have no DR3 epoch photometry), and check that each DR4 source lies within 0.5" and 0.3 mag of its DR3
 counterpart. Grading changes after DR4 lands are limited to mapping DR4 columns.
 
+## A sample forecast for Gaia DR4 (`predictions/dr4_ensemble.md`)
+
+Beyond the six sealed per-event predictions, a forecast for the whole testable sample is pre-registered in git (the commit that
+adds it is its timestamp): of 47 strong events that Gaia DR4 can test on the survey-matched star, **8.9 should show a brightening
+at the transits nearest the NEOWISE visit (80% interval 5-14)**, of which about 6 would be lens-like. The claim under test is
+"about 20% of strong events are lens-like brightenings of the matched Gaia star". It is falsified, conditional on the non-lens
+priors, by 5 or fewer or 17 or more passes, and firmly (at the priors' bounds) by 3 or fewer or 20 or more. About 60% of the passes
+with a measurable colour should rise equally in BP and RP. The rule, sample, grader (`predictions/dr4_ensemble_grade.py`, tested on
+the three DR3-confirmed events and on 181 shifted-time controls) and what may be adapted once DR4's format is known are all fixed in
+the document; a referee's nine corrections were applied before it was committed (`predictions/dr4_ensemble_referee.md`).
+
+The sample forecast and the sealed predictions test different statements. On the sample's calibration, which uses Gaia DR3 evidence
+that postdates the seals, OS-0022, OS-0024 and OS-0025 pass with probability 0.24-0.29, against sealed stakes of 0.50, 0.70 and
+0.45. The seals stand and will be scored as registered; if they fail, the record will show calibration from a follow-up sample
+chosen for looking like lenses.
+
 ## Next
 
 - Optical checks for the other strong events, and re-matching the 31 off-target ones.

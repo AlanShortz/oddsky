@@ -1,0 +1,35 @@
+{
+ "n_pass": 12,
+ "n_resolved": 47,
+ "n_testable": 47,
+ "interval": "5-14",
+ "interval_hit": true,
+ "claim": "~20% of strong events are lens-like brightenings of the survey-matched Gaia star",
+ "falsified_if_at_most": 5,
+ "falsified_if_at_least": 16,
+ "P_le_k": 0.7584,
+ "P_ge_k": 0.35895,
+ "verdict": "consistent with ~20%",
+ "verdict_tier": "",
+ "robust_falsified_if_at_most": 3,
+ "robust_falsified_if_at_least": 20,
+ "n_achromatic": 7,
+ "colour_forecast": "hit (7/9 achromatic; hit if >= 40%)",
+ "numpy": "2.5.4",
+ "pandas": "2.3.3",
+ "python": "3.12.16",
+ "achromatic_falsified_if_at_most": 1,
+ "achromatic_falsified_if_at_least": 8,
+ "achromatic_verdict": "consistent with ~20%",
+ "fL_post_median": 0.25166666666666665,
+ "fL_post_90": [
+  0.09459863945578233,
+  0.4241768707482991
+ ],
+ "colour": {
+  "achromatic": 7,
+  "chromatic": 2,
+  "undetermined": 3
+ },
+ "achromatic_fraction_of_determined": 0.7777777777777778
+}

@@ -1,0 +1,15 @@
+designation,reason,case
+J180730.57-220016.2,"no Gaia DR3 source within 4"" of the AllWISE position: nothing to test (DR4 might add a faint source; not counted); off-target",
+J131900.24-371433.7,"no Gaia DR3 source within 4"" of the AllWISE position: nothing to test (DR4 might add a faint source; not counted)",
+J172057.02-414201.2,"Gaia DR3 epoch photometry already shows the event (achromatic brightening, 6.12+-0.02@-7d in G); not blind. Used as the grader's test set",OS-0026
+J180402.28-181847.5,"Gaia DR3 epoch photometry already shows the event (achromatic brightening, 2.60+-0.03@-9d in G); not blind. Used as the grader's test set",OS-0027
+J180559.66-215319.2,"no Gaia DR3 source within 4"" of the AllWISE position: nothing to test (DR4 might add a faint source; not counted)",
+J184700.06-002702.7,"no Gaia DR3 source within 4"" of the AllWISE position: nothing to test (DR4 might add a faint source; not counted)",
+J173845.19-321346.1,"no Gaia DR3 source within 4"" of the AllWISE position: nothing to test (DR4 might add a faint source; not counted)",
+J180839.93-151910.5,"Gaia DR3 epoch photometry already shows the event (achromatic brightening, 1.39+-0.01@+15d in G); not blind. Used as the grader's test set",OS-0029
+J172214.29-364055.7,"no Gaia DR3 source within 4"" of the AllWISE position: nothing to test (DR4 might add a faint source; not counted); off-target",
+J181331.72-171333.9,"no Gaia DR3 source within 4"" of the AllWISE position: nothing to test (DR4 might add a faint source; not counted)",
+J175120.35-271621.8,"no Gaia DR3 source within 4"" of the AllWISE position: nothing to test (DR4 might add a faint source; not counted); off-target",
+J190857.59+080922.1,"no Gaia DR3 source within 4"" of the AllWISE position: nothing to test (DR4 might add a faint source; not counted)",
+J182109.55-163557.5,"no Gaia DR3 source within 4"" of the AllWISE position: nothing to test (DR4 might add a faint source; not counted)",
+J182333.07-135416.2,"no Gaia DR3 source within 4"" of the AllWISE position: nothing to test (DR4 might add a faint source; not counted)",

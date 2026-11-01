@@ -25,9 +25,9 @@ import os
 
 import numpy as np
 import pandas as pd
+from targets import LC_DIRS, T
 
 from oddsky.analysis.lensing import magnification, sun_offsets
-from targets import LC_DIRS, T
 
 REF = os.path.join(os.path.dirname(__file__), "..", "..", "..", "H-0008", "reviews", "claude-referee-atlas10-2026-10-30", "data")
 T0PAR = {"J163539": 57980.0, "J173150": 58311.0}

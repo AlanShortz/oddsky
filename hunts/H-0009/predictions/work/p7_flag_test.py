@@ -2,7 +2,6 @@
 grader drops)? Empirical test on Gaia DR3 vari_microlensing events: 25 high-magnification events (smallest
 paczynski0_u0, peak inside the DR3 span), their DR3 epoch photometry via oddsky.data.gaia_epoch.fetch, and for each the
 fraction of transits flagged by photometry / variability, split by how far the transit is above the baseline."""
-import io
 import os
 import sys
 

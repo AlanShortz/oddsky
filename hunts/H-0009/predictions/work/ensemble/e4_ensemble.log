@@ -1,0 +1,80 @@
+8.9 passes expected of 47 (median 8, 80% 5-14, 90% 4-15)
+all 47 testable, lens fraction from the DR3 posterior      m 47  mean  8.91  median    8  80% 5-14  90% 4-15  resolved 43.3  lens passes 5.66  achromatic 3.4 (80% 1-6)  chromatic 2.1  undetermined 3.41  ach/determined 0.615 [0.333, 1.0]  P(no determined colour) 0.001
+all 47, lens fraction held at 0.20                         m 47  mean  9.98  median   10  80% 7-14  90% 6-15  resolved 43.3  lens passes 6.74  achromatic 3.97 (80% 2-6)  chromatic 2.16  undetermined 3.86  ach/determined 0.655 [0.4, 1.0]  P(no determined colour) 0.0
+blind core (no optical information)                        m 39  mean  5.98  median    6  80% 2-10  90% 1-12  resolved 35.8  lens passes 3.94  achromatic 2.15 (80% 0-5)  chromatic 1.25  undetermined 2.58  ach/determined 0.616 [0.0, 1.0]  P(no determined colour) 0.061
+blind core, fL=0.20                                        m 39  mean  7.04  median    7  80% 4-10  90% 3-12  resolved 35.8  lens passes 4.99  achromatic 2.7 (80% 1-5)  chromatic 1.31  undetermined 3.02  ach/determined 0.686 [0.333, 1.0]  P(no determined colour) 0.014
+in the DR3 span (unflagged)                                m 24  mean  2.07  median    2  80% 0-4  90% 0-5  resolved 21.5  lens passes 1.08  achromatic 0.56 (80% 0-2)  chromatic 0.6  undetermined 0.9  ach/determined 0.463 [0.0, 1.0]  P(no determined colour) 0.328
+after the DR3 span                                         m 23  mean  6.84  median    7  80% 4-10  90% 3-11  resolved 21.8  lens passes 4.58  achromatic 2.82 (80% 1-5)  chromatic 1.51  undetermined 2.5  ach/determined 0.648 [0.333, 1.0]  P(no determined colour) 0.001
+events with optical follow-up                              m  8  mean  2.93  median    3  80% 2-4  90% 2-4  resolved 7.5  lens passes 1.73  achromatic 1.25 (80% 0-2)  chromatic 0.85  undetermined 0.83  ach/determined 0.615 [0.0, 1.0]  P(no determined colour) 0.01
+
+lens fraction grid (all 47):
+  fL 0.00: mean  4.93  80% 3-7  90% 2-8  achromatic mean 1.32 (90% 0-3)
+  fL 0.05: mean  6.18  80% 4-9  90% 3-10  achromatic mean 1.98 (90% 0-4)
+  fL 0.10: mean  7.44  80% 5-11  90% 4-12  achromatic mean 2.63 (90% 1-5)
+  fL 0.20: mean  9.96  80% 7-13  90% 6-15  achromatic mean 3.96 (90% 1-7)
+  fL 0.30: mean 12.52  80% 9-16  90% 8-18  achromatic mean 5.30 (90% 2-9)
+  fL 0.40: mean 15.22  80% 11-19  90% 10-21  achromatic mean 6.69 (90% 3-10)
+  fL 0.50: mean 18.07  80% 14-22  90% 13-24  achromatic mean 8.16 (90% 5-12)
+  fL 0.70: mean 24.57  80% 20-29  90% 19-30  achromatic mean 11.53 (90% 7-16)
+
+falsification: {'rule': "with the lens fraction held at 0.20, a pass count k with P(count <= k) < 0.05 or P(count >= k) < 0.05 falsifies '~20% lenses' (recomputed by the grader for the events that resolve)", 'falsified_if_at_most': 5, 'falsified_if_at_least': 16, 'P_le': 0.03855, 'P_ge': 0.031275, 'achromatic': {'falsified_if_at_most': 0, 'falsified_if_at_least': 8}, 'all_resolved': {'falsified_if_at_most': 5, 'falsified_if_at_least': 17, 'achromatic': [1, 8], 'firm': [3, 20], 'false_alarm_two_tails': 0.04865}, 'firm_expected_resolution': [2, 19], 'power': {'0.0': {'P_too_few': 0.61015, 'P_too_many': 5e-05, 'P_too_few_firm': 0.1902, 'P_too_many_firm': 0.0}, '0.4': {'P_too_few': 0.0001, 'P_too_many': 0.459975, 'P_too_few_firm': 0.0, 'P_too_many_firm': 0.163125}}}
+lens fraction implied by a pass count (all 47 resolved; median, 90%): {'3': {'median': 0.011, 'lo90': 0.0, 'hi90': 0.1}, '5': {'median': 0.041, 'lo90': 0.0, 'hi90': 0.16}, '7': {'median': 0.092, 'lo90': 0.0, 'hi90': 0.242}, '10': {'median': 0.183, 'lo90': 0.041, 'hi90': 0.362}, '13': {'median': 0.287, 'lo90': 0.12, 'hi90': 0.458}, '16': {'median': 0.39, 'lo90': 0.204, 'hi90': 0.559}, '20': {'median': 0.511, 'lo90': 0.33, 'hi90': 0.674}}
+flat-star pass rate +2% adds 0.65 passes; per-event pass rate in-span/after: {'inspan': 0.086, 'after': 0.297} blind core: {'inspan': 0.085, 'after': 0.225}
+
+sensitivity:
+  no DR3-nonflag conditioning                        mean 11.08  80% 6-17  90% 5-19  ach 4.17
+  no centroid evidence                               mean  8.78  80% 5-13  90% 4-15  ach 3.36
+  rho 0-1 (DR3 flag and DR4 pass less correlated)    mean  9.01  80% 5-14  90% 4-16  ach 3.41
+  f_R mean 0.15, f_F mean 0.10                       mean 10.81  80% 6-16  90% 5-18  ach 3.47
+  f_R, f_F = 0                                       mean  7.07  80% 4-11  90% 3-13  ach 3.35
+  on-star pass probabilities x0.85                   mean  7.27  80% 4-11  90% 3-13  ach 2.78
+
+per event:
+        designation    case  in_dr3_span off_target  gost_n_fov_30  p_res    q_L    q_R    q_F    q_N  p_lens_onstar  p_pass_forecast  p_pass_fL20  blind_core
+J172246.71-403331.7     NaN         True      False              4 0.9750 0.9785 0.6033 0.5508 0.0204          0.072            0.130        0.144        True
+J172729.10-323917.2     NaN         True      False              4 0.9735 0.9500 0.5009 0.5830 0.0102          0.072            0.113        0.127        True
+J173525.98-335850.5     NaN         True       True              4 0.9717 0.9045 0.3679 0.4966 0.0051          0.035            0.045        0.050        True
+J180744.93-222226.3     NaN         True      False              2 0.7894 0.3457 0.0524 0.0063 0.0000          0.072            0.006        0.007        True
+J211957.84+572625.7     NaN         True      False              2 0.7876 0.1370 0.0103 0.0170 0.0000          0.072            0.002        0.003        True
+J123522.62-622827.0     NaN         True       True              3 0.9417 0.9838 0.7285 0.2727 0.0014          0.034            0.052        0.060        True
+J181035.29-105156.9     NaN         True      False              5 0.9732 0.9939 0.9057 0.7981 0.0113          0.070            0.167        0.184        True
+J131026.53-612259.2 OS-0024         True      False              2 0.7914 0.9883 0.6552 0.3033 0.0004          0.258            0.288        0.334        True
+J130153.27-655628.5     NaN         True      False              3 0.9433 0.9910 0.5224 0.3112 0.0081          0.075            0.093        0.109        True
+J171723.15-403337.1     NaN         True      False              3 0.9453 0.9377 0.3881 0.4772 0.0049          0.072            0.088        0.102        True
+J172130.29-372518.3     NaN         True      False              3 0.9453 0.9597 0.4051 0.4853 0.0063          0.076            0.080        0.094        True
+J173349.59-264330.5     NaN         True      False              4 0.9676 1.0000 0.8009 0.5852 0.0164          0.042            0.101        0.110       False
+J175844.62-263022.5     NaN         True        NaN              2 0.7964 0.9706 0.4990 0.2038 0.0004          0.064            0.063        0.074        True
+J192602.96+134138.7     NaN         True      False              2 0.7892 0.3333 0.0505 0.1283 0.0000          0.070            0.007        0.008        True
+J101423.62-603507.1     NaN         True        NaN              2 0.7795 0.9946 0.8017 0.7420 0.0102          0.062            0.110        0.123        True
+J170153.51-425620.0     NaN         True      False              2 0.7847 0.9957 0.8662 0.9881 0.0113          0.007            0.033        0.033       False
+J182120.84-143232.7     NaN         True      False              4 0.9683 1.0000 0.9196 0.5425 0.0171          0.011            0.209        0.209       False
+J184017.78-134852.3     NaN         True      False              4 0.9750 0.9647 0.5663 0.2178 0.0065          0.070            0.094        0.109        True
+J185846.27+033028.5     NaN         True       True              4 0.9665 1.0000 0.9528 0.6549 0.0150          0.000            0.029        0.029       False
+J201542.68+382806.1     NaN         True        NaN              2 0.7792 0.9572 0.4191 0.1853 0.0004          0.063            0.054        0.066        True
+J033351.36+561412.5     NaN         True      False              4 0.9712 0.9800 0.7050 0.5597 0.0120          0.067            0.130        0.145        True
+J075928.63-221055.1     NaN         True      False              2 0.7874 0.9914 0.6088 0.3161 0.0004          0.071            0.083        0.098        True
+J164900.93-433618.0     NaN         True       True              3 0.9536 0.9526 0.4773 0.2250 0.0098          0.035            0.048        0.055        True
+J180255.46-160745.2     NaN         True       True              3 0.9508 0.9334 0.5245 0.1370 0.0084          0.034            0.044        0.050        True
+J154239.48-572601.4 OS-0025        False      False              4 0.9691 0.9991 0.8482 0.6908 0.0170          0.170            0.283        0.331        True
+J163539.69-355208.3 OS-0020        False      False              4 0.9659 1.0000 0.9766 0.8870 0.0123          0.800            0.934        0.934       False
+J170655.82-373839.7     NaN        False      False              5 0.9733 0.9940 0.5875 0.6382 0.0154          0.170            0.255        0.300        True
+J040025.77+323527.4     NaN        False      False              3 0.9415 0.9982 0.8953 0.6518 0.0108          0.171            0.273        0.317        True
+J013600.31+612130.4     NaN        False      False              3 0.9509 0.9921 0.5044 0.2799 0.0077          0.179            0.219        0.268        True
+J161946.51-492721.6     NaN        False       True              4 0.9641 1.0000 0.9296 0.8571 0.0003          0.095            0.132        0.159        True
+J163808.41-414832.7     NaN        False        NaN              5 0.9703 0.9930 0.8055 0.7633 0.0188          0.159            0.263        0.305        True
+J071033.70-021828.0     NaN        False      False              2 0.7965 0.9717 0.4281 0.3302 0.0117          0.179            0.177        0.218        True
+J075219.97-325515.6     NaN        False      False              4 0.9633 0.9991 0.8206 0.4811 0.0100          0.346            0.682        0.682       False
+J124517.35-630125.0 OS-0022        False      False              3 0.9456 0.9773 0.7381 0.3319 0.0077          0.173            0.243        0.286        True
+J131433.70-604212.0     NaN        False      False              4 0.9771 0.9948 0.4754 0.1675 0.0089          0.184            0.225        0.275        True
+J173150.73-444549.3 OS-0021        False      False              3 0.9350 1.0000 0.9964 0.3907 0.0067          0.601            0.887        0.887       False
+J175905.00-174624.2     NaN        False      False              4 0.9671 1.0000 0.7504 0.6442 0.0151          0.170            0.270        0.315        True
+J180010.34-243417.6     NaN        False       True              4 0.9676 0.9991 0.8794 0.8175 0.0157          0.088            0.159        0.184        True
+J185035.91-014014.4     NaN        False      False              5 0.9680 1.0000 0.9983 0.5617 0.0137          0.009            0.062        0.062       False
+J222915.37+560017.4     NaN        False      False              2 0.7811 0.8852 0.3517 0.1499 0.0004          0.172            0.149        0.184        True
+J051237.90-060835.8     NaN        False      False              4 0.9735 0.9688 0.5451 0.5691 0.0130          0.173            0.249        0.296        True
+J161048.56-514754.1     NaN        False      False              4 0.9686 0.9939 0.4533 0.3413 0.0089          0.182            0.220        0.269        True
+J170958.77-413848.6     NaN        False      False              5 0.9727 0.9600 0.5111 0.5704 0.0041          0.170            0.234        0.278        True
+J172247.87-324616.4     NaN        False      False              3 0.9459 0.9625 0.5622 0.2515 0.0007          0.169            0.211        0.256        True
+J172244.98-363407.6     NaN        False      False              5 0.9800 0.9991 0.5633 0.8411 0.0150          0.181            0.236        0.287        True
+J081611.24-335034.8     NaN        False      False              4 0.9747 0.9906 0.6019 0.3368 0.0174          0.170            0.240        0.288        True
+J174350.48-375311.7     NaN        False      False              3 0.9445 0.9929 0.5582 0.5897 0.0084          0.171            0.240        0.284        True
