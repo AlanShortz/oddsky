@@ -30,3 +30,34 @@ gcloud batch jobs submit oddsky-sky1 --project=oddsky-sky-br3c3 --location=us-we
 
 Tasks are idempotent (a pixel with a report is skipped), so a preempted or failed job can simply be resubmitted.
 Outputs: `runs/<run>/{features,lightcurves,candidates,reports}/pixel=N.parquet|json`.
+
+## H-0012: mid-IR difference imaging of nearby galaxies (design; not run)
+
+`imaging_tile.py` (the task) and `make_imaging_job.py` (the spec) run `oddsky.imaging` over the unWISE tiles that
+the star-forming galaxies within 10 Mpc need. The target list comes from `hunts/H-0012/scripts/targets.py`: 316
+galaxies from the UNGC on 332 primary tiles (`hunts/H-0012/work/tiles_h0012.txt`). The LMC and SMC (74 and 30
+tiles) are separate projects. The design spec is `h0012a.json`.
+
+| | |
+|---|---|
+| unit | one task = 2 tiles. Per tile: fetch 25 epochs × 2 bands × (img, invvar, n) = 1.0 GB to the boot disk (≤ 2 connections), run every target galaxy that needs it, write candidates, light curves, detections and 41×41 cutouts to `runs/h0012/<tile>/<galaxy>/`, delete the 1 GB difference stacks |
+| measured cost (laptop) | 30-130 s CPU and ≤ 2.5 GB peak per full tile-band; M31's 5 tiles take 15 min with the stacked channel and leave-one-out references |
+| estimate | 332 tiles × (~2 min download + ~3 min CPU) ≈ 28 task-hours ≈ 14 VM-hours of `n2d-standard-4` spot ≈ $1-2; wall ~1-2 h at parallelism 25 |
+| storage | inputs are never stored in GCS; outputs are ~1-5 MB per galaxy-tile |
+| idempotent | a tile with `report.json` is skipped, so resubmit after preemption |
+
+**Hard gate.** The epochal coadds are in A. Meisner's personal NERSC web space, with no release or licence. The spec
+is written with `ODDSKY_UNWISE_PERMISSION=NOT-YET`, and the task exits (status 3) before any download until a human
+sets it to `granted`. That happens only after Meisner has agreed, or after the data have been mirrored with
+permission.
+
+The official fallback is to rebuild the epochs from IRSA L1b frames (`s3://nasa-irsa-wise/`) with `unwise-coadds
+--epoch` (GPL-2.0). It needs about 100× the input, plus astrometry.net and the frame indexes, and is best run in
+us-east-1 next to the bucket.
+
+```bash
+# only after permission; edit the spec to ODDSKY_UNWISE_PERMISSION=granted first
+gcloud storage cp -r src infra hunts/H-0012/work/targets_10mpc.csv hunts/H-0012/work/tiles_h0012.txt gs://oddsky-sky-br3c3-data/code/h0012/ --project=oddsky-sky-br3c3
+python3 infra/gcp/make_imaging_job.py h0012a h0012/tiles_h0012.txt 332 2 25 $(git rev-parse --short HEAD)
+gcloud batch jobs submit oddsky-h0012a --project=oddsky-sky-br3c3 --location=us-west1 --config=infra/gcp/h0012a.json
+```

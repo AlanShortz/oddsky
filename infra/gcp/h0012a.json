@@ -1,0 +1,72 @@
+{
+ "taskGroups": [
+  {
+   "taskCount": 166,
+   "parallelism": 25,
+   "taskSpec": {
+    "runnables": [
+     {
+      "container": {
+       "imageUri": "python:3.12-slim",
+       "entrypoint": "/bin/bash",
+       "commands": [
+        "-c",
+        "set -euo pipefail; PIP_DISABLE_PIP_VERSION_CHECK=1 pip install -q --root-user-action=ignore --no-cache-dir numpy==2.* scipy==1.* 'astropy>=7' pandas==2.* pyarrow==21.* httpx && export PYTHONPATH=/mnt/disks/oddsky/code/h0012/src && python -u /mnt/disks/oddsky/code/h0012/infra/gcp/imaging_tile.py --tiles /mnt/disks/oddsky/code/tiles_h0012.txt --targets /mnt/disks/oddsky/code/targets_10mpc.csv --tiles-per-task 2 --out /mnt/disks/oddsky/runs/h0012a --code-version UNCOMMITTED"
+       ],
+       "volumes": [
+        "/mnt/disks/oddsky:/mnt/disks/oddsky:rw"
+       ]
+      }
+     }
+    ],
+    "environment": {
+     "variables": {
+      "ODDSKY_UNWISE_PERMISSION": "NOT-YET"
+     }
+    },
+    "volumes": [
+     {
+      "gcs": {
+       "remotePath": "oddsky-sky-br3c3-data"
+      },
+      "mountPath": "/mnt/disks/oddsky"
+     }
+    ],
+    "computeResource": {
+     "cpuMilli": 2000,
+     "memoryMib": 7168
+    },
+    "maxRetryCount": 3,
+    "maxRunDuration": "5400s"
+   }
+  }
+ ],
+ "allocationPolicy": {
+  "instances": [
+   {
+    "policy": {
+     "machineType": "n2d-standard-4",
+     "provisioningModel": "SPOT",
+     "bootDisk": {
+      "sizeGb": 50
+     }
+    }
+   }
+  ],
+  "location": {
+   "allowedLocations": [
+    "regions/us-west1"
+   ]
+  },
+  "serviceAccount": {
+   "email": "oddsky-batch@oddsky-sky-br3c3.iam.gserviceaccount.com"
+  }
+ },
+ "logsPolicy": {
+  "destination": "CLOUD_LOGGING"
+ },
+ "labels": {
+  "app": "oddsky",
+  "hunt": "h-0012"
+ }
+}

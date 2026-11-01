@@ -1,0 +1,83 @@
+{
+ "source": "UNGC, Karachentsev, Makarov & Kaisina 2013, AJ 145, 101 (VizieR J/AJ/145/101)",
+ "provenance": {
+  "url": "https://vizier.idia.ac.za/viz-bin/asu-tsv?-source=J/AJ/145/101/catalog&-out.max=unlimited&-out.all",
+  "fetched": "2026-11-01T07:32:12Z"
+ },
+ "n_ungc": 869,
+ "n_within_dmax": 721,
+ "n_sf_within_dmax": 353,
+ "n_targets_sfr_from_type": 9,
+ "n_targets": 318,
+ "n_separate_project": 2,
+ "n_unique_tiles": 332,
+ "separate_project_tiles": {
+  "LMC": 74,
+  "SMC": 30
+ },
+ "cuts": {
+  "dmax_mpc": 10.0,
+  "logsfr_min": -2.5,
+  "a26_min_arcmin": 1.0,
+  "search_scale": 1.2
+ },
+ "n_by_distance": {
+  "<1": 8,
+  "<2": 12,
+  "<4": 67,
+  "<6": 133,
+  "<8": 229,
+  "<10.01": 318
+ },
+ "largest": [
+  {
+   "Name": "MESSIER031",
+   "Dist": 0.77,
+   "a26": 190.55,
+   "n_tiles": 11
+  },
+  {
+   "Name": "NGC0024",
+   "Dist": 9.9,
+   "a26": 7.24,
+   "n_tiles": 4
+  },
+  {
+   "Name": "MESSIER081",
+   "Dist": 3.63,
+   "a26": 28.18,
+   "n_tiles": 4
+  },
+  {
+   "Name": "MESSIER033",
+   "Dist": 0.85,
+   "a26": 69.18,
+   "n_tiles": 4
+  },
+  {
+   "Name": "NGC5128",
+   "Dist": 3.75,
+   "a26": 34.67,
+   "n_tiles": 3
+  },
+  {
+   "Name": "NGC2403",
+   "Dist": 3.18,
+   "a26": 28.18,
+   "n_tiles": 3
+  },
+  {
+   "Name": "NGC4945",
+   "Dist": 3.8,
+   "a26": 28.18,
+   "n_tiles": 3
+  },
+  {
+   "Name": "DDO161",
+   "Dist": 7.3,
+   "a26": 7.94,
+   "n_tiles": 3
+  }
+ ],
+ "estimated_input_gb": 332.0
+}
