@@ -2,6 +2,21 @@
   "_comment": "Editorial summaries of each hunt for the website. The README in hunts/<ID>/ is the source of truth; these numbers are copied from its funnel table. A hunt whose directory is missing is skipped, so an entry can land before its hunt merges.",
   "hunts": [
     {
+      "id": "H-0010",
+      "title": "Gaia's unpublished lenses",
+      "question": "Gaia's own variability classifier labels 254 stars as microlensing events, but 67 of them never made it into Gaia's published microlensing catalogue. Oddsky's blind NEOWISE search had already found three of them. What are the other 64?",
+      "date": "2026-11-01",
+      "state": "done, refereed; ATLAS follow-up queued",
+      "scale": "67 Gaia DR3 sources · Gaia DR3 epoch photometry · NEOWISE · OGLE, KMTNet, Gaia alerts, TNS, SIMBAD as references",
+      "funnel": [[67, "classifier MICROLENSING, not in Gaia's catalogue"], [28, "already catalogued lenses (OGLE, KMTNet, Gaia16aye)"], [3, "Oddsky cases found blind (OS-0026, OS-0027, OS-0029)"], [9, "apparently unreported lens candidates after the referee (3 strong)"]],
+      "verdict": "The list was known (Rimoldini et al. 2023 counted the 67) but nobody had vetted it. Nine look like microlensing events nobody has reported, three of them strong, and about 5 to 10 are expected to be real. They fell where nobody was watching: outside OGLE's alert fields, or in the months when the bulge is too close to the Sun for ground telescopes while Gaia kept scanning. Gaia's catalogue also left out 28 lenses other surveys knew, including the famous binary lens Gaia16aye.",
+      "cases": [
+        "OS-0026",
+        "OS-0027",
+        "OS-0029"
+      ]
+    },
+    {
       "id": "H-0009",
       "title": "The long lenses",
       "question": "The lensing-sky search could not see saturated peaks, events lasting longer than one NEOWISE visit, or stars beside a bright neighbour. Black-hole lenses would hide exactly there. What does a search without those blind spots find?",

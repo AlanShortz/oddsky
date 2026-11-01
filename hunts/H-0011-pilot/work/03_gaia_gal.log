@@ -1,0 +1,2 @@
+gaia_source 923 vari_summary 273 lpv 262 has_epoch 273
+POST https://gea.esac.esa.int/data-server/data failed (peer closed connection without sending complete message body (incomplete chunked read)); retry in 2s

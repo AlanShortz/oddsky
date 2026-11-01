@@ -1,0 +1,5 @@
+neowise_exp_cal 1/1
+NEOWISE exposures 35826 stars 21
+allwise_mep_exp_cal 1/1
+AllWISE-MEP exposures 2706 stars 21
+visits 849 {('NEOWISE', 'W1'): 21, ('NEOWISE', 'W2'): 21, ('WISE_MEP', 'W1'): 7, ('WISE_MEP', 'W2'): 6}

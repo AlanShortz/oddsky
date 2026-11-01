@@ -1,0 +1,68 @@
+source_id,nw_status,nw_n_visits,nw_rms_W1,nw_rms_W2,nw_in_event,nw_best_dW1,nw_best_dW2,nw_best_date,nw_best_gaia_model,nw_repeats,nw_max_other_dW1
+4043458241772263936,ok,21.0,0.026,0.027,2014-09-19: W1 -0.05 W2 -0.09 (x1.05/x1.09; Gaia lens model x1.02) | 2015-03-20: W1 -0.44 W2 -0.48 (x1.50/x1.56; Gaia lens model x1.45) | 2015-09-12: W1 -0.12 W2 -0.08 (x1.12/x1.08; Gaia lens model x1.06),-0.438,-0.479,2015-03-20,1.45,,-0.06
+4067152339419332992,ok,7.0,0.207,0.082,2015-03-19: W1 -2.16 W2 -2.28 (x7.32/x8.15; Gaia lens model x7.07),-2.161,-2.277,2015-03-19,7.074,,-0.486
+4062840084877907712,no NEOWISE source on the star,,,,,,,,,,
+508920918409038464,ok,21.0,0.023,0.118,2015-02-01: W1 -0.04 W2 -0.08 (x1.04/x1.07; Gaia lens model x1.00),-0.039,-0.075,2015-02-01,1.0,,-0.024
+4145977633638478336,ok,21.0,0.013,0.021,2016-03-21: W1 -0.52 W2 -0.56 (x1.62/x1.68; Gaia lens model x1.62),-0.523,-0.562,2016-03-21,1.616,,-0.02
+2054828730840779520,ok,21.0,0.02,0.026,2015-10-31: W1 -0.26 W2 -0.29 (x1.27/x1.31; Gaia lens model x1.32),-0.263,-0.295,2015-10-31,1.319,,-0.029
+5979167630832540032,no NEOWISE source on the star,,,,,,,,,,
+5958944416543307648,ok,16.0,0.086,0.146,2014-03-17: W1 -0.28 W2 -0.01 (x1.29/x1.01; Gaia lens model x2.26) | 2014-09-15: W1 -0.96 W2 -0.92 (x2.43/x2.33; Gaia lens model x2.29) | 2015-03-17: W1 -0.23 W2 -0.02 (x1.24/x1.01; Gaia lens model x1.19) | 2015-09-09: W1 -0.11 W2 +0.36 (x1.11/x0.72; Gaia lens model x1.05),-0.964,-0.921,2014-09-15,2.287,,-0.149
+4040204305809966848,no NEOWISE source on the star,,,,,,,,,,
+4063409292521568640,no NEOWISE source on the star,,,,,,,,,,
+4254872092666139264,no NEOWISE source on the star,,,,,,,,,,
+5593963735024586240,no NEOWISE source on the star,,,,,,,,,,
+4056368634256485504,no NEOWISE source on the star,,,,,,,,,,
+4103794114069593216,no NEOWISE source on the star,,,,,,,,,,
+5959812622743175552,ok,21.0,0.043,0.092,2015-09-07: W1 -1.63 W2 -1.69 (x4.50/x4.76; Gaia lens model x7.81),-1.632,-1.694,2015-09-07,7.805,,-0.065
+4049915123787493248,no NEOWISE source on the star,,,,,,,,,,
+4061401893561892608,no NEOWISE source on the star,,,,,,,,,,
+4120472262420519296,no NEOWISE source on the star,,,,,,,,,,
+5888321552071879552,no NEOWISE source on the star,,,,,,,,,,
+4143495279954502016,ok,21.0,0.021,0.013,2015-09-15: W1 -1.07 W2 -1.10 (x2.69/x2.75; Gaia lens model x2.91),-1.074,-1.098,2015-09-15,2.915,,-0.057
+4068476460574819584,no NEOWISE source on the star,,,,,,,,,,
+4040875007942475904,no NEOWISE source on the star,,,,,,,,,,
+4117136992643758080,no NEOWISE source on the star,,,,,,,,,,
+2030258876550898816,ok,21.0,0.058,0.086,2015-10-28: W1 -1.17 W2 -1.37 (x2.95/x3.54; Gaia lens model x1.46),-1.173,-1.371,2015-10-28,1.462,2019-05-04:-1.30/-1.53;2019-10-14:-0.40/-0.68,-1.297
+4067155397407080064,no NEOWISE source on the star,,,,,,,,,,
+5861862148375056384,ok,11.0,0.66,0.605,2014-02-09: W1 +0.65 W2 +1.12 (x0.55/x0.36; Gaia lens model x1.09) | 2014-08-08: W1 -0.21 W2 -0.12 (x1.21/x1.12; Gaia lens model x1.83) | 2015-02-05: W1 +0.38 W2 +0.31 (x0.71/x0.75; Gaia lens model x1.10),-0.211,-0.12,2014-08-08,1.832,,-0.505
+4143778198039891712,no NEOWISE source on the star,,,,,,,,,,
+1861208444041823360,ok,10.0,0.093,0.222,2016-05-07: W1 -0.21 W2 -0.18 (x1.22/x1.18; Gaia lens model x1.33),-0.213,-0.181,2016-05-07,1.331,,-0.156
+5893807634053861120,no NEOWISE source on the star,,,,,,,,,,
+4039699492609592704,no NEOWISE source on the star,,,,,,,,,,
+4068110318885022464,no NEOWISE source on the star,,,,,,,,,,
+4266315436092309504,ok,20.0,0.029,0.031,2014-10-06: W1 -0.57 W2 -0.75 (x1.69/x1.99; Gaia lens model x1.20),-0.567,-0.745,2014-10-06,1.197,,-0.075
+4063160287489483520,no NEOWISE source on the star,,,,,,,,,,
+4110560298167203584,no NEOWISE source on the star,,,,,,,,,,
+4059326835886778240,no NEOWISE source on the star,,,,,,,,,,
+4064079547909732352,no NEOWISE source on the star,,,,,,,,,,
+4116479179755030272,no NEOWISE source on the star,,,,,,,,,,
+5977088149415668736,no NEOWISE source on the star,,,,,,,,,,
+5620272814897694848,ok,20.0,0.01,0.018,2014-10-24: W1 -0.04 W2 -0.09 (x1.04/x1.09; Gaia lens model x1.07) | 2015-04-10: W1 -0.31 W2 -0.33 (x1.33/x1.35; Gaia lens model x1.27) | 2015-10-22: W1 -0.05 W2 -0.10 (x1.05/x1.10; Gaia lens model x1.02) | 2016-04-03: W1 +0.01 W2 -0.00 (x0.99/x1.00; Gaia lens model x1.01),-0.309,-0.329,2015-04-10,1.273,,-0.014
+4043178690980749824,no NEOWISE source on the star,,,,,,,,,,
+4063479523864717184,ok,21.0,0.085,0.04,2016-09-06: W1 -0.04 W2 -0.02 (x1.04/x1.02; Gaia lens model x1.01),-0.041,-0.022,2016-09-06,1.015,,-0.101
+4056588845790058368,no NEOWISE source on the star,,,,,,,,,,
+4069070918399108992,no NEOWISE source on the star,,,,,,,,,,
+4096047127002546560,"AllWISE source 3.0"" away or unmatched",,,,,,,,,,
+4089362027543538176,no NEOWISE source on the star,,,,,,,,,,
+4052046905029445376,no NEOWISE source on the star,,,,,,,,,,
+5939477464424988544,no NEOWISE source on the star,,,,,,,,,,
+5884091589077519616,no NEOWISE source on the star,,,,,,,,,,
+4097904476963000576,no NEOWISE source on the star,,,,,,,,,,
+4052673351820500480,ok,21.0,0.021,0.012,2016-03-23: W1 -0.88 W2 -0.94 (x2.24/x2.38; Gaia lens model x2.44),-0.875,-0.944,2016-03-23,2.445,,-0.046
+4062461577902611072,no NEOWISE source on the star,,,,,,,,,,
+4044193364007000448,no NEOWISE source on the star,,,,,,,,,,
+4146782166880069632,no NEOWISE source on the star,,,,,,,,,,
+5972789089004520192,no NEOWISE source on the star,,,,,,,,,,
+4265542994777483776,no NEOWISE source on the star,,,,,,,,,,
+4042386316815947648,no NEOWISE source on the star,,,,,,,,,,
+4266365704324232576,no NEOWISE source on the star,,,,,,,,,,
+4059204107239408512,no NEOWISE source on the star,,,,,,,,,,
+4119926316171065984,no NEOWISE source on the star,,,,,,,,,,
+4156259162525506816,no NEOWISE source on the star,,,,,,,,,,
+4053976376149303552,no NEOWISE source on the star,,,,,,,,,,
+4043432227076366592,no NEOWISE source on the star,,,,,,,,,,
+4041237743668797184,"AllWISE source 2.86"" away or unmatched",,,,,,,,,,
+4054091653004081408,no NEOWISE source on the star,,,,,,,,,,
+4050302358026285312,"AllWISE source 1.67"" away or unmatched",,,,,,,,,,
+2032454944878107008,too few baseline visits,,,,,,,,,,
+4152593734345648000,no NEOWISE source on the star,,,,,,,,,,

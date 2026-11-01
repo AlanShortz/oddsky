@@ -1,0 +1,64 @@
+J174618.09-253631.3 7 7
+J173332.42-421445.1 7 7
+J144905.72-545455.6 0 0
+J072830.43-204112.5 7 7
+J200958.93+321427.9 7 7
+J174656.42-190909.2 7 0
+J171847.68-300609.5 0 0
+J184922.92-000203.9 7 0
+J172020.30-381044.3 7 0
+J182124.77-190909.7 7 0
+J175414.32-275241.8 7 7
+J174036.98-223251.4 0 0
+J174029.07-331407.7 0 0
+J171234.40-353502.0 0 0
+J182656.25-264645.9 0 0
+J190032.43-004939.8 0 0
+J151331.38-523733.2 0 0
+J171838.94-334129.2 7 0
+J182811.16-082538.6 7 0
+J180313.03-150702.0 0 0
+J184837.12-051620.2 7 0
+{'source_id': '4067152339419332992', 'name': 'J174618.09-253631.3', 'vphas_status': 'ok (no source within 1.5")', 'iphas_status': 'ok-empty'}
+{'source_id': '5958944416543307648', 'name': 'J173332.42-421445.1', 'vphas_status': 'ok-empty', 'iphas_status': 'ok-empty'}
+{'source_id': '5893807634053861120', 'name': 'J144905.72-545455.6', 'vphas_status': 'ok-empty', 'iphas_status': 'ok-empty'}
+{'source_id': '5620272814897694848', 'name': 'J072830.43-204112.5', 'vphas_status': 'ok', 'vphas_r': np.float64(17.21), 'vphas_ri': np.float64(1.1900000000000013), 'vphas_rha': np.float64(0.6000000000000014), 'vphas_field_rha_med': np.float64(0.5800000000000018), 'vphas_field_rha_sig': np.float64(0.08895599999999809), 'vphas_nfield': 17, 'iphas_status': 'ok-empty'}
+{'source_id': '2054828730840779520', 'name': 'J200958.93+321427.9', 'vphas_status': 'ok-empty', 'iphas_status': 'ok', 'iphas_r': np.float64(18.36), 'iphas_ri': np.float64(1.6799999999999997), 'iphas_rha': np.float64(0.5599999999999987), 'iphas_field_rha_med': np.float64(0.6999999999999993), 'iphas_field_rha_sig': np.float64(0.1482600000000021), 'iphas_nfield': 10}
+{'source_id': '4119926316171065984', 'name': 'J174656.42-190909.2', 'vphas_status': 'ok-empty', 'iphas_status': 'ok-empty'}
+{'source_id': '4059204107239408512', 'name': 'J171847.68-300609.5', 'vphas_status': 'ok (no source within 1.5")', 'iphas_status': 'ok-empty'}
+{'source_id': '4266365704324232576', 'name': 'J184922.92-000203.9', 'vphas_status': 'ok', 'vphas_r': np.float64(21.66), 'vphas_ri': np.float64(2.09), 'vphas_rha': np.float64(0.9200000000000017), 'vphas_field_rha_med': np.float64(0.620000000000001), 'vphas_field_rha_sig': np.float64(0.14084700000000094), 'vphas_nfield': 40, 'iphas_status': 'ok', 'iphas_r': np.float64(21.93), 'iphas_ri': np.float64(2.3599999999999994), 'iphas_rha': np.float64(1.129999999999999), 'iphas_field_rha_med': np.float64(0.6499999999999986), 'iphas_field_rha_sig': np.float64(0.10378200000000042), 'iphas_nfield': 11}
+{'source_id': '5972789089004520192', 'name': 'J172020.30-381044.3', 'vphas_status': 'ok (no source within 1.5")', 'iphas_status': 'ok-empty'}
+{'source_id': '4096047127002546560', 'name': 'J182124.77-190909.7', 'vphas_status': 'ok-empty', 'iphas_status': 'ok-empty'}
+{'source_id': '4063479523864717184', 'name': 'J175414.32-275241.8', 'vphas_status': 'ok', 'vphas_r': np.float64(21.14), 'vphas_ri': np.float64(2.960000000000001), 'vphas_rha': np.float64(0.8900000000000006), 'vphas_field_rha_med': np.float64(0.8999999999999986), 'vphas_field_rha_sig': np.float64(0.13343400000000505), 'vphas_nfield': 7, 'iphas_status': 'ok-empty'}
+{'source_id': '4117136992643758080', 'name': 'J174036.98-223251.4', 'vphas_status': 'ok-empty', 'iphas_status': 'ok-empty'}
+{'source_id': '4054091653004081408', 'name': 'J174029.07-331407.7', 'vphas_status': 'ok (no source within 1.5")', 'iphas_status': 'ok-empty'}
+{'source_id': '5977088149415668736', 'name': 'J171234.40-353502.0', 'vphas_status': 'ok-empty', 'iphas_status': 'ok-empty'}
+{'source_id': '4052046905029445376', 'name': 'J182656.25-264645.9', 'vphas_status': 'ok-empty', 'iphas_status': 'ok-empty'}
+{'source_id': '4265542994777483776', 'name': 'J190032.43-004939.8', 'vphas_status': 'ok-empty', 'iphas_status': 'ok-empty'}
+{'source_id': '5888321552071879552', 'name': 'J151331.38-523733.2', 'vphas_status': 'ok-empty', 'iphas_status': 'ok-empty'}
+{'source_id': '5979167630832540032', 'name': 'J171838.94-334129.2', 'vphas_status': 'ok (no source within 1.5")', 'iphas_status': 'ok-empty'}
+{'source_id': '4156259162525506816', 'name': 'J182811.16-082538.6', 'vphas_status': 'ok (no source within 1.5")', 'iphas_status': 'ok-empty'}
+{'source_id': '4146782166880069632', 'name': 'J180313.03-150702.0', 'vphas_status': 'ok-empty', 'iphas_status': 'ok-empty'}
+{'source_id': '4254872092666139264', 'name': 'J184837.12-051620.2', 'vphas_status': 'ok (no source within 1.5")', 'iphas_status': 'ok-empty'}
+               name      G  bp_rp         plx  teff_gspphot    ag     dist   esphs  teff_esphs  espels  ew_halpha  ew_ha_err    xp  JH  HK  KW1  W1W2  W2W3   wq                                     vphas                                     iphas
+J174618.09-253631.3 17.544  3.796  0.28+-0.09      4708.017 4.799 2271.349       M         NaN     NaN      0.409      0.245  True NaN NaN  NaN   NaN   NaN None                ok (no source within 1.5")                                  ok-empty
+J173332.42-421445.1 16.794  1.693  0.34+-0.07      4765.502 1.114  950.646 unknown         NaN     NaN      0.149      0.150  True NaN NaN  NaN   NaN   NaN None                                  ok-empty                                  ok-empty
+J144905.72-545455.6 19.851  1.851  0.48+-0.37           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                                  ok-empty                                  ok-empty
+J072830.43-204112.5 17.096  2.296  0.14+-0.06      8144.337 3.895 1682.480       K         NaN     NaN     -0.115      0.106  True NaN NaN  NaN   NaN   NaN None r-Ha 0.600 vs field 0.580+-0.089 (n 17.0)                                  ok-empty
+J200958.93+321427.9 17.744  3.291  0.23+-0.08      9240.782 5.855 1919.721     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                                  ok-empty r-Ha 0.560 vs field 0.700+-0.148 (n 10.0)
+J174656.42-190909.2 17.579  2.528 -0.09+-0.11           NaN   NaN      NaN       K         NaN     NaN      0.064      0.160  True NaN NaN  NaN   NaN   NaN None                                  ok-empty                                  ok-empty
+J171847.68-300609.5 17.860  2.147  0.23+-0.13      4409.655 1.639  893.442     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                ok (no source within 1.5")                                  ok-empty
+J184922.92-000203.9 20.203  2.708 -0.41+-0.86           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None r-Ha 0.920 vs field 0.620+-0.141 (n 40.0) r-Ha 1.130 vs field 0.650+-0.104 (n 11.0)
+J172020.30-381044.3 19.220  3.346  0.12+-0.29           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                ok (no source within 1.5")                                  ok-empty
+J182124.77-190909.7 17.740  2.577  0.09+-0.16           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                                  ok-empty                                  ok-empty
+J175414.32-275241.8 19.038  4.220 -0.05+-0.27           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None  r-Ha 0.890 vs field 0.900+-0.133 (n 7.0)                                  ok-empty
+J174036.98-223251.4 19.276  2.101  0.04+-0.42           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                                  ok-empty                                  ok-empty
+J174029.07-331407.7 19.596  3.125  0.70+-0.39           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                ok (no source within 1.5")                                  ok-empty
+J171234.40-353502.0 20.083  2.581 -0.22+-0.43           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                                  ok-empty                                  ok-empty
+J182656.25-264645.9 18.896  1.587  0.48+-0.31      4160.231 0.011  954.444     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                                  ok-empty                                  ok-empty
+J190032.43-004939.8 19.150  1.990  0.94+-0.27           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                                  ok-empty                                  ok-empty
+J151331.38-523733.2 19.180  1.620 -0.40+-0.27           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                                  ok-empty                                  ok-empty
+J171838.94-334129.2 19.044  4.087  0.00+-0.28           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                ok (no source within 1.5")                                  ok-empty
+J182811.16-082538.6 19.544  3.418  0.21+-0.55           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                ok (no source within 1.5")                                  ok-empty
+J180313.03-150702.0 19.732  2.612 -0.21+-0.46           NaN   NaN      NaN     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                                  ok-empty                                  ok-empty
+J184837.12-051620.2 17.933  2.445  0.34+-0.13      3929.737 1.552  736.184     NaN         NaN     NaN        NaN        NaN False NaN NaN  NaN   NaN   NaN None                ok (no source within 1.5")                                  ok-empty

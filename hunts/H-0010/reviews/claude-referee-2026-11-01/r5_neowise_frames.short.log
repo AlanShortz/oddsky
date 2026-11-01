@@ -1,0 +1,60 @@
+/Users/alanshortz/conductor/workspaces/oddsky/philadelphia-v2/.venv/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1213: RuntimeWarning: Mean of empty slice
+  return np.nanmean(a, axis, out=out, keepdims=keepdims)
+
+=== J174618.09-253631.3 (4067152339419332992); quiet visits 20; event-window visits: [57100.0]
+ vis      mjd  n_frames  n_det  det_per_frame  n_near  W1_near  W2_near  r_near  dx_near  dy_near  clean_near  nb_near  W1_tot  W2_tot  W1_near_clean  n_near_clean
+  visit 57100.0: W1 x6.86 W2 x8.06 (near-star, 11 frames, baseline W1 10.86 rms nan); clean-only W1 x7.17 (7 frames); blend total W1 x6.77 W2 x7.51; frames with a detection <3": event 1.00 vs quiet 0.04; det/frame event 1.0 quiet 1.0; quiet centroid (+1.08,-1.59)" event (+0.14,-0.13); shift (-0.94,+1.46) +- (0.20,0.19) vs predicted for the Gaia star (-0.92,+1.36); frame scatter event 0.033 quiet nan
+
+=== J173332.42-421445.1 (5958944416543307648); quiet visits 17; event-window visits: [56733.5, 56915.5, 57098.4]
+ vis      mjd  n_frames  n_det  det_per_frame  n_near  W1_near  W2_near  r_near  dx_near  dy_near  clean_near  nb_near  W1_tot  W2_tot  W1_near_clean  n_near_clean
+  visit 56733.5: W1 x1.30 W2 x1.03 (near-star, 2 frames, baseline W1 13.81 rms 0.047); clean-only W1 x1.30 (2 frames); blend total W1 x1.30 W2 x1.04; frames with a detection <3": event 1.00 vs quiet 0.98; det/frame event 1.0 quiet 1.0; quiet centroid (-0.10,-0.10)" event (+0.01,+0.18); shift (+0.11,+0.28) +- (0.14,0.14) vs predicted for the Gaia star (+0.02,+0.02); frame scatter event nan quiet 0.108
+  visit 56915.5: W1 x2.45 W2 x2.39 (near-star, 10 frames, baseline W1 13.81 rms 0.047); clean-only W1 x2.37 (4 frames); blend total W1 x2.45 W2 x2.39; frames with a detection <3": event 1.00 vs quiet 0.98; det/frame event 1.0 quiet 1.0; quiet centroid (-0.10,-0.10)" event (-0.01,-0.01); shift (+0.10,+0.09) +- (0.06,0.06) vs predicted for the Gaia star (+0.06,+0.06); frame scatter event 0.056 quiet 0.108/Users/alanshortz/conductor/workspaces/oddsky/philadelphia-v2/.venv/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1213: RuntimeWarning: Mean of empty slice
+  return np.nanmean(a, axis, out=out, keepdims=keepdims)
+
+  visit 57098.4: W1 x1.26 W2 x1.16 (near-star, 5 frames, baseline W1 13.81 rms 0.047); clean-only W1 x1.26 (3 frames); blend total W1 x1.26 W2 x1.16; frames with a detection <3": event 1.00 vs quiet 0.98; det/frame event 1.0 quiet 1.0; quiet centroid (-0.10,-0.10)" event (+0.11,+0.07); shift (+0.21,+0.17) +- (0.09,0.09) vs predicted for the Gaia star (+0.02,+0.02); frame scatter event 0.030 quiet 0.108
+
+=== J072830.43-204112.5 (5620272814897694848); quiet visits 18; event-window visits: [56955.1, 57122.7]
+ vis      mjd  n_frames  n_det  det_per_frame  n_near  W1_near  W2_near  r_near  dx_near  dy_near  clean_near  nb_near  W1_tot  W2_tot  W1_near_clean  n_near_clean
+  visit 56955.1: W1 x1.05 W2 x1.08 (near-star, 14 frames, baseline W1 12.88 rms 0.011); clean-only W1 x1.05 (13 frames); blend total W1 x1.05 W2 x1.08; frames with a detection <3": event 1.00 vs quiet 0.99; det/frame event 1.0 quiet 1.0; quiet centroid (+0.01,-0.04)" event (+0.00,-0.04); shift (-0.01,+0.00) +- (0.03,0.03) vs predicted for the Gaia star (-0.00,+0.00); frame scatter event 0.025 quiet 0.038
+  visit 57122.7: W1 x1.34 W2 x1.34 (near-star, 13 frames, baseline W1 12.88 rms 0.011); clean-only W1 x1.34 (13 frames); blend total W1 x1.34 W2 x1.34; frames with a detection <3": event 1.00 vs quiet 0.99; det/frame event 1.0 quiet 1.0; quiet centroid (+0.01,-0.04)" event (+0.01,-0.01); shift (-0.01,+0.03) +- (0.03,0.03) vs predicted for the Gaia star (-0.00,+0.01); frame scatter event 0.030 quiet 0.038
+
+=== J200958.93+321427.9 (2054828730840779520); quiet visits 20; event-window visits: [57326.8]
+ vis      mjd  n_frames  n_det  det_per_frame  n_near  W1_near  W2_near  r_near  dx_near  dy_near  clean_near  nb_near  W1_tot  W2_tot  W1_near_clean  n_near_clean
+  visit 57326.8: W1 x1.28 W2 x1.32 (near-star, 14 frames, baseline W1 11.91 rms 0.021); clean-only W1 x1.28 (14 frames); blend total W1 x1.28 W2 x1.32; frames with a detection <3": event 1.00 vs quiet 1.00; det/frame event 1.0 quiet 1.0; quiet centroid (-0.12,+0.45)" event (-0.02,+0.34); shift (+0.09,-0.11) +- (0.02,0.03) vs predicted for the Gaia star (+0.03,-0.10); frame scatter event 0.022 quiet 0.037
+
+=== J182124.77-190909.7 (4096047127002546560); quiet visits 20; event-window visits: [57284.0]
+ vis      mjd  n_frames  n_det  det_per_frame  n_near  W1_near  W2_near  r_near  dx_near  dy_near  clean_near  nb_near  W1_tot  W2_tot  W1_near_clean  n_near_clean
+  visit 57284.0: W1 x1.14 W2 x1.15 (near-star, 13 frames, baseline W1 11.32 rms 0.040); clean-only W1 xnan (0 frames); blend total W1 x1.14 W2 x1.16; frames with a detection <3": event 1.00 vs quiet 0.43; det/frame event 1.0 quiet 1.0; quiet centroid (-2.84,+0.53)" event (-2.51,+0.40); shift (+0.33,-0.13) +- (0.02,0.06) vs predicted for the Gaia star (+0.34,-0.06); frame scatter event 0.082 quiet 0.053
+
+=== J175414.32-275241.8 (4063479523864717184); quiet visits 20; event-window visits: [57637.2]
+ vis      mjd  n_frames  n_det  det_per_frame  n_near  W1_near  W2_near  r_near  dx_near  dy_near  clean_near  nb_near  W1_tot  W2_tot  W1_near_clean  n_near_clean
+  visit 57637.2: W1 x0.99 W2 x1.02 (near-star, 5 frames, baseline W1 10.86 rms 0.115); clean-only W1 x1.04 (4 frames); blend total W1 x0.99 W2 x1.02; frames with a detection <3": event 1.00 vs quiet 0.98; det/frame event 1.0 quiet 1.0; quiet centroid (-1.00,-1.14)" event (-1.10,-1.06); shift (-0.11,+0.08) +- (0.06,0.08) vs predicted for the Gaia star (-0.01,-0.01); frame scatter event 0.159 quiet 0.080
+
+=== J174618 detail
+detections within 25" grouped by 2" cells, all visits (count, median W1, median position):
+         n     W1     W2     dx     dy   nb                 cntr
+cell                                                            
+-3,-8  246   8.83   9.00  -8.59 -21.07  1.0  2666025801351031296
+8,2    200  11.01  11.28  18.92   4.61  1.0  2666025801351033344
+2,-5   195  10.88  11.25   6.12 -12.97  2.0  2666025801351032832
+2,-1   142  10.85  11.15   4.31  -3.40  2.0                   -1
+1,-1    80  10.84  11.16   3.37  -3.00  2.0  2666025801351032832
+7,2     67  11.00  11.25  18.67   4.65  1.0  2666025801351033344
+3,-5    50  10.89  11.22   6.32 -13.03  2.0  2666025801351032832
+2,-2    31  10.81  11.10   4.55  -4.24  1.0                   -1
+-4,-8   27   8.82   8.99  -8.81 -21.05  1.0  2666025801351031296
+0,0     13   8.77   8.97   0.14  -0.17  1.0  2666025801351032832
+-3,-9    9   8.83   9.01  -8.57 -21.29  1.0  2666025801351031296
+0,-1     5  10.83  11.26   0.87  -1.67  2.0  2666025801351032832
+event visit (2015-03-19) detections within 25":
+        n     W1     W2     dx     dy   nb
+cell                                      
+-3,-8  10   8.81   8.98  -8.54 -21.06  1.0
+-4,-8   1   8.86   9.08  -8.85 -20.97  1.0
+-7,4    1   9.81  12.40 -16.60  10.10  1.0
+0,0    11   8.76   8.96   0.14  -0.13  1.0
+2,-5    1  10.77  11.10   6.25 -12.71  1.0
+7,2     2  10.99  11.13  18.66   4.62  1.0
+8,2     9  10.98  11.27  18.96   4.70  1.0
+AllWISE UNKNOWN HTTPSConnectionPool(host='vizier.cds.unistra.fr', port=443): Max retries exceeded with url: /viz-bin/asu-tsv?-source=II%2F328%2Fallwise&-c=266.5753928241038+-25.608713607924447&-c.rs=15&-out=%2A%2A&-out.add=_r%2C_RAJ2000%2C_DEJ2000&-out.max=50 (Caused by ConnectTimeoutError(<HTTPSConnection(host='vizier.cds.unistra.fr', port=443) at 0x110b764e0>, 'Connection to vizier.cds.unistra.fr timed out. (connect timeout=120)'))
+2MASS UNKNOWN HTTPSConnectionPool(host='vizier.cds.unistra.fr', port=443): Max retries exceeded with url: /viz-bin/asu-tsv?-source=II%2F246%2Fout&-c=266.5753928241038+-25.608713607924447&-c.rs=15&-out=%2A%2A&-out.add=_r%2C_RAJ2000%2C_DEJ2000&-out.max=50 (Caused by ConnectTimeoutError(<HTTPSConnection(host='vizier.cds.unistra.fr', port=443) at 0x110b76d20>, 'Connection to vizier.cds.unistra.fr timed out. (connect timeout=120)'))

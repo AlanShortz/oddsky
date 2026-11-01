@@ -1,0 +1,29 @@
+[
+ {
+  "main_id": "SP77  54-41",
+  "ra": 85.35221731937,
+  "dec": -69.30359514569,
+  "task_url": "https://fallingstar-data.com/forcedphot/queue/5277887/",
+  "submitted": "2026-11-01T04:32:01+00:00",
+  "mjd_min": 57200.0,
+  "use_reduced": true
+ },
+ {
+  "main_id": "[MG73]  94",
+  "ra": 84.5708969241,
+  "dec": -69.06691875876,
+  "task_url": "https://fallingstar-data.com/forcedphot/queue/5277888/",
+  "submitted": "2026-11-01T04:32:02+00:00",
+  "mjd_min": 57200.0,
+  "use_reduced": true
+ },
+ {
+  "main_id": "IRAS F00486-7308",
+  "ra": 12.62764412612,
+  "dec": -72.8583014814,
+  "task_url": "https://fallingstar-data.com/forcedphot/queue/5277889/",
+  "submitted": "2026-11-01T04:32:02+00:00",
+  "mjd_min": 57200.0,
+  "use_reduced": true
+ }
+]

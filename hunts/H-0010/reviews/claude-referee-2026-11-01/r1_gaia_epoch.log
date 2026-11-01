@@ -1,0 +1,23 @@
+fetch_report: [{"release": "Gaia DR3", "ok": true, "n": 21, "error": ""}]
+raw columns: ['solution_id', 'source_id', 'transit_id', 'g_transit_time', 'g_transit_flux', 'g_transit_flux_error', 'g_transit_flux_over_error', 'g_transit_mag', 'bp_obs_time', 'bp_flux', 'bp_flux_error', 'bp_flux_over_error', 'bp_mag', 'rp_obs_time', 'rp_flux', 'rp_flux_error', 'rp_flux_over_error', 'rp_mag', 'variability_flag_g_reject', 'variability_flag_bp_reject', 'variability_flag_rp_reject', 'g_other_flags', 'bp_other_flags', 'rp_other_flags', 'rejected_by_photometry']
+J174618.09-253631.3 4067152339419332992: mine 125 rows, investigators 125, matched 125, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J173332.42-421445.1 5958944416543307648: mine 81 rows, investigators 81, matched 81, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J144905.72-545455.6 5893807634053861120: mine 90 rows, investigators 90, matched 90, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J072830.43-204112.5 5620272814897694848: mine 228 rows, investigators 228, matched 228, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J200958.93+321427.9 2054828730840779520: mine 161 rows, investigators 161, matched 161, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J174656.42-190909.2 4119926316171065984: mine 162 rows, investigators 162, matched 162, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J171847.68-300609.5 4059204107239408512: mine 88 rows, investigators 88, matched 88, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J184922.92-000203.9 4266365704324232576: mine 49 rows, investigators 49, matched 49, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J172020.30-381044.3 5972789089004520192: mine 74 rows, investigators 74, matched 74, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J182124.77-190909.7 4096047127002546560: mine 72 rows, investigators 72, matched 72, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J175414.32-275241.8 4063479523864717184: mine 126 rows, investigators 126, matched 126, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J174036.98-223251.4 4117136992643758080: mine 103 rows, investigators 103, matched 103, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J174029.07-331407.7 4054091653004081408: mine 101 rows, investigators 101, matched 101, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J171234.40-353502.0 5977088149415668736: mine 172 rows, investigators 172, matched 172, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J182656.25-264645.9 4052046905029445376: mine 62 rows, investigators 62, matched 62, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J190032.43-004939.8 4265542994777483776: mine 31 rows, investigators 31, matched 31, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J151331.38-523733.2 5888321552071879552: mine 127 rows, investigators 127, matched 127, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J171838.94-334129.2 5979167630832540032: mine 71 rows, investigators 71, matched 71, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J182811.16-082538.6 4156259162525506816: mine 49 rows, investigators 49, matched 49, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J180313.03-150702.0 4146782166880069632: mine 62 rows, investigators 62, matched 62, max |dmag| 0.00e+00, only-mine 0, only-theirs 0
+J184837.12-051620.2 4254872092666139264: mine 73 rows, investigators 73, matched 73, max |dmag| 0.00e+00, only-mine 0, only-theirs 0

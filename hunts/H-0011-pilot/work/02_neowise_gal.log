@@ -1,0 +1,55 @@
+neowise_exp_gal 1/24
+neowise_exp_gal 2/24
+retry 0 ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+neowise_exp_gal 3/24
+neowise_exp_gal 4/24
+neowise_exp_gal 5/24
+neowise_exp_gal 6/24
+neowise_exp_gal 7/24
+retry 0 ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+neowise_exp_gal 8/24
+neowise_exp_gal 9/24
+retry 0 ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+neowise_exp_gal 10/24
+neowise_exp_gal 11/24
+neowise_exp_gal 12/24
+neowise_exp_gal 13/24
+neowise_exp_gal 14/24
+retry 0 ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+neowise_exp_gal 15/24
+neowise_exp_gal 16/24
+neowise_exp_gal 17/24
+neowise_exp_gal 18/24
+neowise_exp_gal 19/24
+neowise_exp_gal 20/24
+neowise_exp_gal 21/24
+neowise_exp_gal 22/24
+neowise_exp_gal 23/24
+neowise_exp_gal 24/24
+NEOWISE exposures 296355 stars 930
+allwise_mep_exp_gal 1/24
+allwise_mep_exp_gal 2/24
+allwise_mep_exp_gal 3/24
+allwise_mep_exp_gal 4/24
+allwise_mep_exp_gal 5/24
+allwise_mep_exp_gal 6/24
+allwise_mep_exp_gal 7/24
+allwise_mep_exp_gal 8/24
+allwise_mep_exp_gal 9/24
+allwise_mep_exp_gal 10/24
+allwise_mep_exp_gal 11/24
+allwise_mep_exp_gal 12/24
+allwise_mep_exp_gal 13/24
+allwise_mep_exp_gal 14/24
+allwise_mep_exp_gal 15/24
+allwise_mep_exp_gal 16/24
+allwise_mep_exp_gal 17/24
+allwise_mep_exp_gal 18/24
+allwise_mep_exp_gal 19/24
+allwise_mep_exp_gal 20/24
+allwise_mep_exp_gal 21/24
+allwise_mep_exp_gal 22/24
+allwise_mep_exp_gal 23/24
+allwise_mep_exp_gal 24/24
+AllWISE-MEP exposures 35162 stars 916
+visits 30820 {('NEOWISE', 'W1'): 718, ('NEOWISE', 'W2'): 841, ('WISE_MEP', 'W1'): 543, ('WISE_MEP', 'W2'): 623}

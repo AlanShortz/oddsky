@@ -1,0 +1,45 @@
+
+J174618.09-253631.3: total chi2 928.3 n 125
+   BP base  n  37 chi2    28.6  (|r|>4: 0)
+   BP event n   4 chi2     0.2  (|r|>4: 0)
+   G  base  n  39 chi2    66.3  (|r|>4: 0)
+   G  event n   4 chi2     1.5  (|r|>4: 0)
+   RP base  n  37 chi2   830.4  (|r|>4: 3)
+   RP event n   4 chi2     1.3  (|r|>4: 0)
+   worst: RP 57868.8 F 2.178 r -21.8; RP 57869.1 F 1.576 r -14.6; RP 57693.2 F 1.373 r -10.7; G 56945.2 F 0.972 r +3.8; G 56945.1 F 0.981 r +2.9
+
+J173332.42-421445.1: total chi2 338.1 n 79
+   BP base  n  19 chi2    34.6  (|r|>4: 1)
+   BP event n   7 chi2     1.5  (|r|>4: 0)
+   G  base  n  20 chi2    51.7  (|r|>4: 0)
+   G  event n   7 chi2    14.4  (|r|>4: 0)
+   RP base  n  19 chi2   228.3  (|r|>4: 1)
+   RP event n   7 chi2     7.6  (|r|>4: 0)
+   worst: RP 57265.2 F 1.361 r -13.9; BP 57507.2 F 0.852 r +4.5; G 57265.2 F 1.011 r +3.3; RP 57490.2 F 1.075 r -3.3; G 57317.1 F 1.000 r +3.1
+
+J144905.72-545455.6: total chi2 127.0 n 88
+   BP base  n  17 chi2    33.1  (|r|>4: 0)
+   BP event n  11 chi2     9.3  (|r|>4: 0)
+   G  base  n  20 chi2    31.2  (|r|>4: 0)
+   G  event n  12 chi2    22.6  (|r|>4: 1)
+   RP base  n  17 chi2    29.0  (|r|>4: 0)
+   RP event n  11 chi2     1.8  (|r|>4: 0)
+   worst: G 57079.7 F 3.883 r -4.3; RP 57308.9 F 5.482 r -3.9; G 56934.3 F 1.166 r +3.1; BP 57201.7 F 0.259 r +3.0; BP 57257.7 F 0.278 r +2.6
+
+J072830.43-204112.5: total chi2 1864.9 n 222
+   BP base  n  57 chi2   584.6  (|r|>4: 4)
+   BP event n  16 chi2     5.7  (|r|>4: 0)
+   G  base  n  60 chi2    53.7  (|r|>4: 0)
+   G  event n  18 chi2    78.8  (|r|>4: 1)
+   RP base  n  55 chi2  1131.3  (|r|>4: 6)
+   RP event n  16 chi2    10.8  (|r|>4: 0)
+   worst: RP 57387.5 F 3.077 r -23.8; RP 57379.5 F 1.893 r -16.3; BP 57387.5 F 10.155 r -15.0; BP 57388.0 F 8.921 r -14.7; RP 57711.1 F 1.593 r -12.8
+
+J200958.93+321427.9: total chi2 361.5 n 159
+   BP base  n  37 chi2   105.7  (|r|>4: 2)
+   BP event n  14 chi2    14.5  (|r|>4: 0)
+   G  base  n  40 chi2    52.9  (|r|>4: 0)
+   G  event n  15 chi2    30.1  (|r|>4: 0)
+   RP base  n  38 chi2   128.8  (|r|>4: 1)
+   RP event n  15 chi2    29.5  (|r|>4: 0)
+   worst: RP 57660.3 F 1.328 r -9.1; BP 57087.3 F 0.211 r +5.1; BP 57505.1 F 0.272 r +4.1; BP 57239.3 F 13.156 r -4.0; RP 56962.2 F 1.104 r -3.4

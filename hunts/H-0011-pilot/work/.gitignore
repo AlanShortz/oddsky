@@ -1,0 +1,4 @@
+# raw single-exposure pulls and the full injection table are regenerable (scripts 02, 05); copies in ~/oddsky-runs/h0011-pilot/
+neowise_exp_mc.parquet
+neowise_exp_gal.parquet
+sensitivity_ir.csv

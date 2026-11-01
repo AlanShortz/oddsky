@@ -1,0 +1,15 @@
+{
+ "releases": [
+  {
+   "release": "Gaia DR3",
+   "ok": true,
+   "n": 3,
+   "error": ""
+  }
+ ],
+ "source_release": {
+  "4043178686573272576": "Gaia DR3",
+  "4056368634242426496": "Gaia DR3",
+  "4056368638583573376": "Gaia DR3"
+ }
+}

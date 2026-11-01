@@ -1,0 +1,67 @@
+4043458241772263936 | ref: OGLE-2015-BLG-0102(OGLE,t0 2015-05-13,tE 64.107,0.2") | any: OGLE-2015-BLG-0102(OGLE,t0 2015-05-13,0.2") | alert: - | vsx: ok OGLE-BLG-ECL-154548           |EC                            |P=0.368297|3.2" | simbad: ok OGLE-2015-BLG-0102|*||refs 1|0.2";MOA  2015-BLG-20|*||refs 4|0.4";OGLE BLG-ECL-154548|EB*||refs 2|3.3"
+4067152339419332992 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok 2MASS J17461809-2536313|*||refs 4|0.1"
+4062840084877907712 | ref: KMT-2016-BLG-0641(KMTNet,t0 2016-09-14,tE 69.11,0.1");OGLE-2016-BLG-0799(OGLE,t0 2016-09-14,tE 71.528,0.2") | any: KMT-2016-BLG-0641(KMTNet,t0 2016-09-14,0.1");OGLE-2016-BLG-0799(OGLE,t0 2016-09-14,0.2") | alert: - | vsx: ok OGLE-BLG-ECL-303640           |E                             |P=1.020127|8.4" | simbad: ok -
+508920918409038464 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4145977633638478336 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+2054828730840779520 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+5979167630832540032 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+5958944416543307648 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4040204305809966848 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4063409292521568640 | ref: KMT-2016-BLG-0023(KMTNet,t0 2016-04-06,tE 66.68,0.2");OGLE-2016-BLG-0015(OGLE,t0 2016-04-06,tE 54.839,0.0") | any: KMT-2016-BLG-0023(KMTNet,t0 2016-04-06,0.2");OGLE-2016-BLG-0015(OGLE,t0 2016-04-06,0.0") | alert: - | vsx: ok Gaia DR3 4063409288209872768  |L                             |P=nan|9.2" | simbad: ok -
+4254872092666139264 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+5593963735024586240 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4056368634256485504 | ref: KMT-2016-BLG-0321(KMTNet,t0 2016-04-05,tE 43.62,0.1");OGLE-2016-BLG-0004(OGLE,t0 2016-04-05,tE 40.418,0.1") | any: KMT-2016-BLG-0321(KMTNet,t0 2016-04-05,0.1");OGLE-2016-BLG-0004(OGLE,t0 2016-04-05,0.1") | alert: - | vsx: ok Gaia DR3 4056368707303056128  |L                             |P=nan|8.8";Gaia DR3 4056368702975919744  |L                             |P=nan|7.4";Gaia | simbad: ok OGLE BLG-RRLYR-4537|RR*||refs 5|3.7"
+4103794114069593216 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+5959812622743175552 | ref: - | any: - | alert: - | vsx: ok Gaia DR3 5959812618413453696  |L                             |P=nan|7.1" | simbad: ok -
+4049915123787493248 | ref: KMT-2017-BLG-0580(KMTNet,t0 2017-05-04,tE 14.01,0.2");OGLE-2017-BLG-0541(OGLE,t0 2017-05-04,tE 15.268,0.2");OGLE-2017-BLG-0736(OGLE,t0 2017-05-04,tE 15.968,0.2") | any: KMT-2017-BLG-0580(KMTNet,t0 2017-05-04,0.2");OGLE-2017-BLG-0541(OGLE,t0 2017-05-04,0.2");OGLE-2017-BLG-0736(OGLE,t0 2017 | alert: - | vsx: ok - | simbad: ok -
+4061401893561892608 | ref: KMT-2017-BLG-0772(KMTNet,t0 2017-03-13,tE 62.94,0.4");OGLE-2017-BLG-0078(OGLE,t0 2017-03-11,tE 65.851,0.0") | any: KMT-2017-BLG-0772(KMTNet,t0 2017-03-13,0.4");OGLE-2017-BLG-0078(OGLE,t0 2017-03-11,0.0") | alert: - | vsx: ok - | simbad: ok -
+4120472262420519296 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+5888321552071879552 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4143495279954502016 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4068476460574819584 | ref: KMT-2016-BLG-2425(KMTNet,t0 2016-10-17,tE 57.56,0.0");OGLE-2017-BLG-0259(OGLE,t0 2017-01-25,tE 68.216,0.1") | any: KMT-2016-BLG-2425(KMTNet,t0 2016-10-17,0.0");OGLE-2017-BLG-0259(OGLE,t0 2017-01-25,0.1") | alert: - | vsx: ok - | simbad: ok -
+4040875007942475904 | ref: OGLE-2015-BLG-0238(OGLE,t0 2015-04-27,tE 84.388,0.1") | any: OGLE-2015-BLG-0238(OGLE,t0 2015-04-27,0.1") | alert: - | vsx: ok - | simbad: ok OGLE-2015-BLG-0238|*||refs 1|0.1"
+4117136992643758080 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+2030258876550898816 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4067155397407080064 | ref: KMT-2016-BLG-1112(KMTNet,t0 2016-05-08,tE 37.3,0.4") | any: KMT-2016-BLG-1112(KMTNet,t0 2016-05-08,0.4") | alert: - | vsx: ok - | simbad: ok -
+5861862148375056384 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4143778198039891712 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+1861208444041823360 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+5893807634053861120 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4039699492609592704 | ref: OGLE-2016-BLG-0338(OGLE,t0 2016-04-12,tE 45.088,0.0") | any: OGLE-2016-BLG-0338(OGLE,t0 2016-04-12,0.0") | alert: - | vsx: ok - | simbad: ok -
+4068110318885022464 | ref: OGLE-2016-BLG-1824(OGLE,t0 2016-11-03,tE 26.593,0.3") | any: OGLE-2016-BLG-1824(OGLE,t0 2016-11-03,0.3") | alert: - | vsx: ok OGLE-BLG-ECL-079142           |E                             |P=0.87188|1.9" | simbad: ok OGLE BLG-ECL-79142|EB*||refs 2|2.1"
+4266315436092309504 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4063160287489483520 | ref: KMT-2016-BLG-0127(KMTNet,t0 2016-02-12,tE 106.22,0.1");OGLE-2015-BLG-2093(OGLE,t0 2016-04-11,tE 321.692,0.2") | any: KMT-2016-BLG-0127(KMTNet,t0 2016-02-12,0.1");OGLE-2015-BLG-2093(OGLE,t0 2016-04-11,0.2") | alert: - | vsx: ok - | simbad: ok -
+4110560298167203584 | ref: OGLE-2015-BLG-1438(OGLE,t0 2015-08-24,tE 44.477,0.1") | any: OGLE-2015-BLG-1438(OGLE,t0 2015-08-24,0.1") | alert: - | vsx: ok - | simbad: ok -
+4059326835886778240 | ref: OGLE-2017-BLG-0114(OGLE,t0 2017-06-15,tE 104.58,0.0") | any: OGLE-2017-BLG-0114(OGLE,t0 2017-06-15,0.0") | alert: - | vsx: ok - | simbad: ok OGLE-2017-BLG-0114|Lev||refs 1|0.0"
+4064079547909732352 | ref: KMT-2016-BLG-1565(KMTNet,t0 2016-10-21,tE 13.26,0.6");OGLE-2016-BLG-1902(OGLE,t0 2016-10-22,tE 13.668,0.2") | any: KMT-2016-BLG-1565(KMTNet,t0 2016-10-21,0.6");OGLE-2016-BLG-1902(OGLE,t0 2016-10-22,0.2") | alert: - | vsx: ok - | simbad: ok OGLE BLG646.12    207|*||refs 1|0.2"
+4116479179755030272 | ref: OGLE-2015-BLG-2080(OGLE,t0 2015-10-30,tE 62.603,0.1") | any: OGLE-2015-BLG-2080(OGLE,t0 2015-10-30,0.1") | alert: - | vsx: ok - | simbad: ok OGLE BLG625.1 102091|*||refs 1|0.1"
+5977088149415668736 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+5620272814897694848 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4043178690980749824 | ref: KMT-2016-BLG-1379(KMTNet,t0 2016-03-31,tE 18.85,0.1");OGLE-2016-BLG-0235(OGLE,t0 2016-03-30,tE 18.208,0.1") | any: KMT-2016-BLG-1379(KMTNet,t0 2016-03-31,0.1");OGLE-2016-BLG-0235(OGLE,t0 2016-03-30,0.1") | alert: - | vsx: ok Gaia DR3 4043178686573272576  |L                             |P=nan|4.2" | simbad: ok OGLE BLG502.10  89057|*||refs 1|0.1"
+4063479523864717184 | ref: - | any: - | alert: - | vsx: ok Gaia DR3 4063479523864704128  |L                             |P=nan|8.3" | simbad: ok -
+4056588845790058368 | ref: OGLE-2016-BLG-1886(OGLE,t0 2017-03-03,tE 73.04,0.1") | any: OGLE-2016-BLG-1886(OGLE,t0 2017-03-03,0.1") | alert: - | vsx: ok Gaia DR3 4056588850107898880  |L                             |P=nan|7.0";Gaia DR3 4056588850170039168  |L                             |P=nan|9.4" | simbad: ok -
+4069070918399108992 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok 2MASS J18012115-2344227|Y*?||refs 1|0.1"
+4096047127002546560 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4089362027543538176 | ref: OGLE-2016-BLG-0862(OGLE,t0 2016-08-06,tE 57.751,0.1") | any: OGLE-2016-BLG-0862(OGLE,t0 2016-08-06,0.1") | alert: - | vsx: ok - | simbad: ok -
+4052046905029445376 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+5939477464424988544 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+5884091589077519616 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4097904476963000576 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4052673351820500480 | ref: OGLE-2016-BLG-0086(OGLE,t0 2016-03-01,tE 55.217,0.0") | any: OGLE-2016-BLG-0086(OGLE,t0 2016-03-01,0.0") | alert: - | vsx: ok OGLE-BLG-ELL-024070           |ELL                           |P=0.411721|3.8" | simbad: ok OGLE BLG-ELL-24070|El*||refs 3|3.8"
+4062461577902611072 | ref: OGLE-2017-BLG-0043(OGLE,t0 2017-03-03,tE 40.817,0.1") | any: OGLE-2017-BLG-0043(OGLE,t0 2017-03-03,0.1") | alert: - | vsx: ok - | simbad: ok -
+4044193364007000448 | ref: KMT-2016-BLG-0336(KMTNet,t0 2016-10-17,tE 61.86,0.1");KMT-2017-BLG-1499(KMTNet,t0 2017-01-23,tE 56.07,0.1");OGLE-2016-BLG-1765(OGLE,t0 2016-12-01,tE 45.916,0.1") | any: KMT-2016-BLG-0336(KMTNet,t0 2016-10-17,0.1");KMT-2017-BLG-1499(KMTNet,t0 2017-01-23,0.1");OGLE-2016-BLG-1765(OGLE,t0 201 | alert: - | vsx: ok - | simbad: ok -
+4146782166880069632 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+5972789089004520192 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4265542994777483776 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4042386316815947648 | ref: KMT-2016-BLG-1369(KMTNet,t0 2016-03-08,tE 199.98,0.1");OGLE-2015-BLG-0142(OGLE,t0 2015-12-16,tE 239.803,0.1") | any: KMT-2016-BLG-1369(KMTNet,t0 2016-03-08,0.1");OGLE-2015-BLG-0142(OGLE,t0 2015-12-16,0.1") | alert: - | vsx: ok - | simbad: ok -
+4266365704324232576 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4059204107239408512 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4119926316171065984 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4156259162525506816 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -
+4053976376149303552 | ref: OGLE-2015-BLG-0196(OGLE,t0 2015-04-03,tE 203.323,0.1") | any: OGLE-2015-BLG-0196(OGLE,t0 2015-04-03,0.1") | alert: - | vsx: ok - | simbad: ok OGLE-2015-BLG-0196|*||refs 4|0.0"
+4043432227076366592 | ref: KMT-2017-BLG-1105(KMTNet,t0 2017-06-06,tE 53.53,0.2");OGLE-2017-BLG-0329(OGLE,t0 2017-06-13,tE 62.844,0.3") | any: KMT-2017-BLG-1105(KMTNet,t0 2017-06-06,0.2");OGLE-2017-BLG-0329(OGLE,t0 2017-06-13,0.3") | alert: - | vsx: ok - | simbad: ok OGLE-2017-BLG-0329|*||refs 2|0.3"
+4041237743668797184 | ref: OGLE-2016-BLG-1728(OGLE,t0 2017-01-06,tE 82.43,0.2") | any: OGLE-2016-BLG-1728(OGLE,t0 2017-01-06,0.2") | alert: - | vsx: ok - | simbad: ok -
+4054091653004081408 | ref: - | any: - | alert: - | vsx: ok Gaia DR3 4054091653004088320  |L                             |P=nan|9.3";Gaia DR3 4054091648714961152  |L                             |P=nan|8.8" | simbad: ok -
+4050302358026285312 | ref: KMT-2017-BLG-0568(KMTNet,t0 2017-05-10,tE 56.6,0.1");OGLE-2017-BLG-0055(OGLE,t0 2017-05-10,tE 54.074,0.2") | any: KMT-2017-BLG-0568(KMTNet,t0 2017-05-10,0.1");OGLE-2017-BLG-0055(OGLE,t0 2017-05-10,0.2") | alert: - | vsx: ok OGLE-BLG-ECL-294713           |EC                            |P=0.421463|8.2";ASASSN-V J180510.80-294545.6  |VAR                           |P=nan|0.2" | simbad: ok -
+2032454944878107008 | ref: - | any: Gaia16aye(Gaia alerts,t0 2016-08-05,0.1") | alert: Gaia16aye(2016-08-05,ULENS,0.1",1.2 mag rise in red star near Galactic Plane) | vsx: ok Gaia16aye                     |Microlens                     |P=nan|0.1" | simbad: ok UCAC4 601-089725|**|K5|refs 26|0.1"
+4152593734345648000 | ref: - | any: - | alert: - | vsx: ok - | simbad: ok -

@@ -1,0 +1,398 @@
+== 1 OGLE EWS lenses.par 2014-2017
+ 2014: 2049 events
+ 2015: 2145 events
+ 2016: 1927 events
+ 2017: 1834 events
+== 2 KMTNet 2015 (public page) + local 2016-24
+ KMT 2015: 857 events parsed; RA 267.53-272.32, Dec -32.24--26.92
+== 3 MOA alerts
+ MOA 2014: HTTP 200, 0 table rows in <tbody> (empty page = MOA's public alert index is not served)
+ MOA 2015: HTTP 200, 0 table rows in <tbody> (empty page = MOA's public alert index is not served)
+ MOA 2016: HTTP 200, 0 table rows in <tbody> (empty page = MOA's public alert index is not served)
+ MOA 2017: HTTP 200, 0 table rows in <tbody> (empty page = MOA's public alert index is not served)
+== 4 Gaia alerts (live)
+ 27076 alerts, 2014-07-27 19:10:29 .. 2025-01-15 00:59:00
+== 5 OGLE GVS (Mroz+2020, local) and Mroz+2019 (VizieR)
+== 5b/6 VizieR: Mroz+2019, VSX, ASAS-SN variables, KMTNet 2015 (Kim+2018), VVV microlensing (Husseiniova+2021, Navarro+)
+J174618.09-253631.3 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J173332.42-421445.1 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J144905.72-545455.6 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J072830.43-204112.5 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J200958.93+321427.9 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J174656.42-190909.2 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': '_r=0.009 Class=LPV        [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J171847.68-300609.5 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J184922.92-000203.9 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J172020.30-381044.3 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J182124.77-190909.7 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': '_r=0.14 OGLE=BLG783.17.33659  [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J175414.32-275241.8 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': '_r=8.26 Name=Gaia DR3 4063479523864704128   Type=L                              [ok (vizie', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J174036.98-223251.4 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J174029.07-331407.7 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': '_r=9.31 Name=Gaia DR3 4054091653004088320   Type=L                             ; _r=8.78 N', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J171234.40-353502.0 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J182656.25-264645.9 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J190032.43-004939.8 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J151331.38-523733.2 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J171838.94-334129.2 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J182811.16-082538.6 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J180313.03-150702.0 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+J184837.12-051620.2 {'mroz2019': 'none [ok (vizier.idia.ac.za)]', 'mroz2020_gvs': 'none [ok (vizier.idia.ac.za)]', 'vsx': 'none [ok (vizier.idia.ac.za)]', 'asassn_var': 'none [ok (vizier.idia.ac.za)]', 'vivace_vvv_var': 'none [ok (vizier.idia.ac.za)]', 'navarro2020_vvv_ml': 'none [ok (vizier.idia.ac.za)]'}
+== 6b ASAS-SN transients page
+ 1226 coordinate pairs parsed
+== 7 SIMBAD (CfA TAP) 10"
+== 8 VizieR-wide cone (all catalogues): NOT RUN -- CDS VizieR unreachable (connect timeouts) on 2026-11-01
+
+J174618.09-253631.3
+   ogle_nearest: OGLE-2014-BLG-1795 8.2' (t0 2014-08-20)
+   ogle_15: 2
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0724 165.0'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2024-BLG-2344 0.5'; 93 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 223.8'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 3841")
+   simbad: 2MASS J17461809-2536313|*||refs 4|0.1"
+
+J173332.42-421445.1
+   ogle_nearest: OGLE-2014-BLG-0185 283.7' (t0 2014-03-03)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0716 636.7'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2017-BLG-1426 361.6'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 33.0'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 2479")
+   simbad: none
+
+J144905.72-545455.6
+   ogle_nearest: OGLE-2014-BLG-1732 1966.2' (t0 2014-08-17)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0716 2335.1'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2018-BLG-1313 2026.5'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 67.2'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 7564")
+   simbad: none
+
+J072830.43-204112.5
+   ogle_nearest: OGLE-2014-BLG-1732 6966.4' (t0 2014-08-17)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0716 7329.0'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2018-BLG-1313 7039.4'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 63.6'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 137778")
+   simbad: none
+
+J200958.93+321427.9
+   ogle_nearest: OGLE-2016-BLG-0746 3639.7' (t0 2016-05-08)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0474 3950.6'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2024-BLG-2284 3656.3'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 1320.9'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 155032")
+   simbad: none
+
+J174656.42-190909.2
+   ogle_nearest: OGLE-2014-BLG-0231 95.3' (t0 2014-03-30)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0817 501.1'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2018-BLG-0477 141.6'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 77.2'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: _r=0.009 Class=LPV        [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 6718")
+   simbad: none
+
+J171847.68-300609.5
+   ogle_nearest: OGLE-2014-BLG-1522 10.3' (t0 2014-08-13)
+   ogle_15: 1
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0687 407.0'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2022-BLG-1009 53.8'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 29.5'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 3262")
+   simbad: none
+
+J184922.92-000203.9
+   ogle_nearest: OGLE-2016-BLG-0746 1401.9' (t0 2016-05-08)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0474 1717.2'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2024-BLG-2284 1427.1'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 83.3'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 38349")
+   simbad: none
+
+J172020.30-381044.3
+   ogle_nearest: OGLE-2014-BLG-1732 148.9' (t0 2014-08-17)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0716 513.6'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2018-BLG-1313 206.2'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 12.2'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 7012")
+   simbad: none
+
+J182124.77-190909.7
+   ogle_nearest: OGLE-2016-BLG-0746 184.3' (t0 2016-05-08)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0474 498.6'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2024-BLG-2284 213.4'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 49.2'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: _r=0.14 OGLE=BLG783.17.33659  [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 4772")
+   simbad: none
+
+J175414.32-275241.8
+   ogle_nearest: OGLE-2015-BLG-0906 5.2' (t0 2015-05-06)
+   ogle_15: 9
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0745 17.2'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2019-BLG-1716 8.2'; 14 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 261.7'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: _r=8.26 Name=Gaia DR3 4063479523864704128   Type=L                              [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 541")
+   simbad: 2MASS J17541422-2752503|LP?||refs 1|8.3"
+
+J174036.98-223251.4
+   ogle_nearest: OGLE-2015-BLG-0518 11.2' (t0 2015-04-10)
+   ogle_15: 2
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0724 364.3'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2019-BLG-1232 15.3'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 104.0'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 7194")
+   simbad: none
+
+J174029.07-331407.7
+   ogle_nearest: OGLE-2016-BLG-1415 7.8' (t0 2016-07-07)
+   ogle_15: 3
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0716 138.1'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2019-BLG-1826 4.1'; 42 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 28.2'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: _r=9.31 Name=Gaia DR3 4054091653004088320   Type=L                             ; _r=8.78 Name=Gaia DR3 4054091648714961152   Type=L                              [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 1988")
+   simbad: 2MASS J17402961-3314132|LP?||refs 1|8.7"
+
+J171234.40-353502.0
+   ogle_nearest: OGLE-2015-BLG-0207 225.9' (t0 2015-08-04)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0716 510.9'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2018-BLG-1313 216.0'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 41.2'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 4010")
+   simbad: none
+
+J182656.25-264645.9
+   ogle_nearest: OGLE-2015-BLG-0347 67.7' (t0 2015-04-02)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0470 240.8'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2024-BLG-1918 120.9'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 67.1'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 1947")
+   simbad: none
+
+J190032.43-004939.8
+   ogle_nearest: OGLE-2016-BLG-0746 1425.1' (t0 2016-05-08)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0474 1735.5'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2024-BLG-2284 1441.3'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 60.4'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 38140")
+   simbad: none
+
+J151331.38-523733.2
+   ogle_nearest: OGLE-2014-BLG-1732 1717.9' (t0 2014-08-17)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0716 2086.1'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2018-BLG-1313 1775.9'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 63.3'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 1070")
+   simbad: none
+
+J171838.94-334129.2
+   ogle_nearest: OGLE-2016-BLG-0299 155.9' (t0 2016-05-25)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0716 407.1'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2022-BLG-2275 154.8'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 26.7'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 5817")
+   simbad: none
+
+J182811.16-082538.6
+   ogle_nearest: OGLE-2016-BLG-0746 828.1' (t0 2016-05-08)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0474 1144.0'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2024-BLG-2284 864.3'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 40.5'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 12721")
+   simbad: none
+
+J180313.03-150702.0
+   ogle_nearest: OGLE-2015-BLG-0406 335.1' (t0 2015-03-12)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0499 711.3'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2024-BLG-1445 396.9'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 31.7'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 5351")
+   simbad: none
+
+J184837.12-051620.2
+   ogle_nearest: OGLE-2016-BLG-0746 1107.2' (t0 2016-05-08)
+   ogle_15: 0
+   ogle_3as: none
+   kmt2015: nearest KMT-2015-BLG-0474 1419.6'; 0 within 15'; within 3": none
+   kmt16_24: nearest KMT-2024-BLG-2284 1126.5'; 0 within 15'; within 3": none
+   gaia_alert_60as: none
+   gvs: nearest 64.9'
+   mroz2019: none [ok (vizier.idia.ac.za)]
+   mroz2020_gvs: none [ok (vizier.idia.ac.za)]
+   vsx: none [ok (vizier.idia.ac.za)]
+   asassn_var: none [ok (vizier.idia.ac.za)]
+   vivace_vvv_var: none [ok (vizier.idia.ac.za)]
+   navarro2020_vvv_ml: none [ok (vizier.idia.ac.za)]
+   asassn_transient_60as: 0 within 60" (nearest 20089")
+   simbad: none

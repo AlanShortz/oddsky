@@ -1,0 +1,241 @@
+
+J174618.09-253631.3: 43 G transits, 40 matched to GOST; baseline scatter 0.0092
+   event 57078.64 FOV1 angle  41.4: G x1.817; baseline transits within 20 deg: 7, max excess +0.006, median +0.0000
+   event 57106.13 FOV1 angle 137.1: G x4.396; baseline transits within 20 deg: 13, max excess +0.017, median -0.0013
+   event 57106.20 FOV2 angle 137.1: G x4.415; baseline transits within 20 deg: 13, max excess +0.017, median -0.0013
+   event 57129.63 FOV1 angle  37.9: G x1.405; baseline transits within 20 deg: 7, max excess +0.006, median +0.0000
+   baseline median flux ratio by 30-deg scan-angle bin: [1.0091, 0.9976, 0.9926, 0.9997] (n [8, 5, 7, 16]); spread 0.0164
+   same-day FOV pairs in the event: FOV1 x4.396 / FOV2 x4.415 (-0.4 sig)
+   distinct event dates: 3; event scan angles: [38.0, 41.0, 137.0, 137.0]
+
+J173332.42-421445.1: 27 G transits, 26 matched to GOST; baseline scatter 0.0121
+   event 56907.71 FOV1 angle 135.2: G x2.472; baseline transits within 20 deg: 7, max excess +0.016, median +0.0025
+   event 56907.78 FOV2 angle 135.3: G x2.481; baseline transits within 20 deg: 7, max excess +0.016, median +0.0025
+   event 56942.09 FOV1 angle 150.8: G x1.869; baseline transits within 20 deg: 8, max excess +0.016, median +0.0013
+   event 56942.16 FOV2 angle 150.7: G x1.871; baseline transits within 20 deg: 8, max excess +0.016, median +0.0013
+   event 57109.39 FOV1 angle 143.1: G x1.203; baseline transits within 20 deg: 8, max excess +0.016, median +0.0013
+   event 57132.64 FOV1 angle  48.1: G x1.140; baseline transits within 20 deg: 7, max excess +0.020, median +0.0031
+   event 57132.71 FOV2 angle  48.3: G x1.160; baseline transits within 20 deg: 7, max excess +0.020, median +0.0031
+   baseline median flux ratio by 30-deg scan-angle bin: [0.9974, 1.0031, 0.9932, 1.0] (n [2, 7, 5, 5]); spread 0.0099
+   same-day FOV pairs in the event: FOV1 x2.472 / FOV2 x2.481 (-0.2 sig); FOV1 x1.869 / FOV2 x1.871 (-0.1 sig); FOV1 x1.140 / FOV2 x1.160 (-1.0 sig)
+   distinct event dates: 4; event scan angles: [48.0, 48.0, 135.0, 135.0, 143.0, 151.0, 151.0]
+
+J144905.72-545455.6: 32 G transits, 31 matched to GOST; baseline scatter 0.0639
+   event 57028.69 FOV1 angle  25.9: G x11.294; baseline transits within 20 deg: 7, max excess +0.166, median +0.0197
+   event 57045.69 FOV1 angle 144.8: G x13.974; baseline transits within 20 deg: 5, max excess +0.031, median -0.0173
+   event 57045.77 FOV2 angle 144.7: G x13.607; baseline transits within 20 deg: 5, max excess +0.031, median -0.0173
+   event 57079.67 FOV1 angle  71.8: G x3.883; baseline transits within 20 deg: 5, max excess +0.101, median -0.0481
+   event 57120.65 FOV1 angle  30.9: G x1.747; baseline transits within 20 deg: 8, max excess +0.166, median +0.0139
+   event 57120.73 FOV2 angle  31.2: G x1.687; baseline transits within 20 deg: 8, max excess +0.166, median +0.0139
+   event 57120.90 FOV1 angle  31.9: G x1.725; baseline transits within 20 deg: 8, max excess +0.166, median +0.0139
+   event 57120.98 FOV2 angle  32.2: G x1.636; baseline transits within 20 deg: 8, max excess +0.166, median +0.0139
+   event 57131.23 ? angle   nan: G x1.486; baseline transits within 20 deg: 0, max excess +nan, median +nan
+   event 57131.66 FOV1 angle  76.0: G x1.509; baseline transits within 20 deg: 5, max excess +0.101, median -0.0481
+   baseline median flux ratio by 30-deg scan-angle bin: [1.1657, 1.0081, 0.9519, 0.9827, 1.0146] (n [1, 7, 5, 3, 4]); spread 0.2137
+   same-day FOV pairs in the event: FOV1 x13.974 / FOV2 x13.607 (+0.3 sig); FOV1 x1.747 / FOV2 x1.687 (+0.4 sig); FOV1 x1.725 / FOV2 x1.636 (+0.6 sig)
+   distinct event dates: 6; event scan angles: [26.0, 31.0, 31.0, 32.0, 32.0, 72.0, 76.0, 145.0, 145.0, nan]
+
+J072830.43-204112.5: 78 G transits, 76 matched to GOST; baseline scatter 0.0099
+   event 56995.23 FOV1 angle   9.0: G x1.092; baseline transits within 20 deg: 0, max excess +nan, median +nan
+   event 56995.30 FOV2 angle   9.3: G x1.110; baseline transits within 20 deg: 0, max excess +nan, median +nan
+   event 56995.55 FOV2 angle  10.2: G x1.094; baseline transits within 20 deg: 0, max excess +nan, median +nan
+   event 57012.98 FOV1 angle  83.0: G x1.161; baseline transits within 20 deg: 13, max excess +0.040, median +0.0073
+   event 57013.06 FOV2 angle  83.3: G x1.153; baseline transits within 20 deg: 13, max excess +0.040, median +0.0073
+   event 57013.23 FOV1 angle  84.0: G x1.161; baseline transits within 20 deg: 13, max excess +0.040, median +0.0073
+   event 57072.48 FOV1 angle 119.6: G x1.699; baseline transits within 20 deg: 27, max excess +0.052, median -0.0019
+   event 57072.55 FOV2 angle 119.9: G x1.712; baseline transits within 20 deg: 27, max excess +0.052, median -0.0019
+   event 57072.73 ? angle   nan: G x1.701; baseline transits within 20 deg: 0, max excess +nan, median +nan
+   event 57072.80 FOV2 angle 120.8: G x1.707; baseline transits within 20 deg: 27, max excess +0.052, median -0.0019
+   event 57092.56 FOV2 angle  21.3: G x1.594; baseline transits within 20 deg: 5, max excess +0.008, median -0.0019
+   event 57092.73 FOV1 angle  21.9: G x1.579; baseline transits within 20 deg: 5, max excess +0.008, median -0.0019
+   event 57128.21 FOV1 angle 144.9: G x1.268; baseline transits within 20 deg: 19, max excess +0.006, median -0.0043
+   event 57165.25 FOV2 angle  74.8: G x1.158; baseline transits within 20 deg: 13, max excess +0.040, median +0.0073
+   event 57165.43 FOV1 angle  74.5: G x1.151; baseline transits within 20 deg: 13, max excess +0.040, median +0.0073
+   event 57181.68 FOV1 angle  18.0: G x1.149; baseline transits within 20 deg: 3, max excess -0.002, median -0.0040
+   event 57181.76 FOV2 angle  17.8: G x1.117; baseline transits within 20 deg: 3, max excess -0.002, median -0.0040
+   baseline median flux ratio by 30-deg scan-angle bin: [1.0085, 1.0073, 0.9981, 0.9983, 0.9947] (n [14, 13, 1, 27, 4]); spread 0.0138
+   same-day FOV pairs in the event: FOV1 x1.092 / FOV2 x1.110 (-1.1 sig); FOV1 x1.161 / FOV2 x1.153 (+0.5 sig); FOV1 x1.699 / FOV2 x1.712 (-0.4 sig); ? x1.701 / FOV2 x1.707 (-0.3 sig); FOV1 x1.149 / FOV2 x1.117 (+2.0 sig)
+   distinct event dates: 9; event scan angles: [9.0, 9.0, 10.0, 18.0, 18.0, 21.0, 22.0, 74.0, 75.0, 83.0, 83.0, 84.0, 120.0, 120.0, nan, 121.0, 145.0]
+
+J200958.93+321427.9: 55 G transits, 55 matched to GOST; baseline scatter 0.0097
+   event 57284.45 FOV1 angle 166.8: G x1.085; baseline transits within 20 deg: 10, max excess +0.016, median +0.0007
+   event 57284.52 FOV2 angle 167.0: G x1.094; baseline transits within 20 deg: 10, max excess +0.016, median +0.0007
+   event 57302.52 FOV2 angle  47.3: G x1.161; baseline transits within 20 deg: 12, max excess +0.028, median +0.0006
+   event 57338.41 FOV1 angle 112.5: G x1.410; baseline transits within 20 deg: 8, max excess +0.030, median -0.0051
+   event 57371.72 FOV2 angle 169.9: G x1.438; baseline transits within 20 deg: 8, max excess +0.016, median +0.0011
+   event 57371.89 FOV1 angle 169.4: G x1.444; baseline transits within 20 deg: 9, max excess +0.016, median +0.0007
+   event 57395.15 FOV1 angle  74.4: G x1.232; baseline transits within 20 deg: 15, max excess +0.028, median +0.0011
+   event 57395.22 FOV2 angle  74.1: G x1.217; baseline transits within 20 deg: 15, max excess +0.028, median +0.0011
+   event 57395.40 FOV1 angle  73.5: G x1.227; baseline transits within 20 deg: 15, max excess +0.028, median +0.0011
+   event 57395.47 FOV2 angle  73.2: G x1.215; baseline transits within 20 deg: 15, max excess +0.028, median +0.0011
+   baseline median flux ratio by 30-deg scan-angle bin: [0.9954, 0.9993, 1.0011, 0.9991, 0.9872, 1.0014] (n [4, 5, 15, 7, 4, 5]); spread 0.0141
+   same-day FOV pairs in the event: FOV1 x1.232 / FOV2 x1.217 (+0.8 sig); FOV1 x1.227 / FOV2 x1.215 (+0.8 sig)
+   distinct event dates: 6; event scan angles: [47.0, 73.0, 73.0, 74.0, 74.0, 112.0, 167.0, 167.0, 169.0, 170.0]
+
+J174656.42-190909.2: 54 G transits, 53 matched to GOST; baseline scatter 0.0087
+   event 56912.22 FOV1 angle 137.4: G x1.486; baseline transits within 20 deg: 7, max excess +0.045, median +0.0052
+   event 56912.30 FOV2 angle 137.4: G x1.495; baseline transits within 20 deg: 7, max excess +0.045, median +0.0052
+   event 57077.46 FOV2 angle  43.5: G x2.130; baseline transits within 20 deg: 6, max excess +0.018, median +0.0017
+   event 57104.95 FOV2 angle 136.1: G x1.647; baseline transits within 20 deg: 7, max excess +0.045, median +0.0052
+   event 57128.45 FOV2 angle  34.9: G x1.366; baseline transits within 20 deg: 6, max excess +0.018, median +0.0017
+   event 57269.92 FOV1 angle 139.6: G x1.067; baseline transits within 20 deg: 7, max excess +0.045, median +0.0052
+   baseline median flux ratio by 30-deg scan-angle bin: [1.0008, 1.0019, 1.0029, 0.996] (n [6, 5, 5, 27]); spread 0.0069
+   same-day FOV pairs in the event: FOV1 x1.486 / FOV2 x1.495 (-0.5 sig)
+   distinct event dates: 5; event scan angles: [35.0, 44.0, 136.0, 137.0, 137.0, 140.0]
+
+J171847.68-300609.5: 34 G transits, 34 matched to GOST; baseline scatter 0.0199
+   event 57689.68 FOV1 angle   2.4: G x1.147; baseline transits within 20 deg: 0, max excess +nan, median +nan
+   event 57689.76 FOV2 angle   2.1: G x1.152; baseline transits within 20 deg: 0, max excess +nan, median +nan
+   event 57689.93 FOV1 angle   1.5: G x1.153; baseline transits within 20 deg: 2, max excess -0.014, median -0.0173
+   event 57690.01 FOV2 angle   1.2: G x1.153; baseline transits within 20 deg: 2, max excess -0.014, median -0.0173
+   event 57781.51 FOV1 angle  16.0: G x1.923; baseline transits within 20 deg: 1, max excess -0.017, median -0.0168
+   event 57781.58 FOV2 angle  15.7: G x1.917; baseline transits within 20 deg: 1, max excess -0.017, median -0.0168
+   event 57781.76 FOV1 angle  15.1: G x1.894; baseline transits within 20 deg: 1, max excess -0.017, median -0.0168
+   event 57794.32 FOV1 angle 144.5: G x1.419; baseline transits within 20 deg: 8, max excess +0.065, median +0.0015
+   event 57794.39 FOV2 angle 144.3: G x1.405; baseline transits within 20 deg: 8, max excess +0.065, median +0.0015
+   baseline median flux ratio by 30-deg scan-angle bin: [0.9832, 1.0023, 1.0278, 0.9926] (n [1, 5, 3, 5]); spread 0.0446
+   same-day FOV pairs in the event: FOV1 x1.147 / FOV2 x1.152 (-0.2 sig); FOV1 x1.153 / FOV2 x1.153 (+0.0 sig); FOV1 x1.923 / FOV2 x1.917 (+0.1 sig); FOV1 x1.419 / FOV2 x1.405 (+0.3 sig)
+   distinct event dates: 3; event scan angles: [1.0, 1.0, 2.0, 2.0, 15.0, 16.0, 16.0, 144.0, 145.0]
+
+J184922.92-000203.9: 21 G transits, 21 matched to GOST; baseline scatter 0.0565
+   event 57651.55 FOV2 angle 137.7: G x1.595; baseline transits within 20 deg: 7, max excess +0.131, median -0.0088
+   event 57703.70 FOV1 angle 126.7: G x7.714; baseline transits within 20 deg: 7, max excess +0.131, median -0.0088
+   event 57827.77 FOV1 angle  44.4: G x2.251; baseline transits within 20 deg: 4, max excess +0.105, median +0.0330
+   event 57858.76 FOV1 angle 126.0: G x1.573; baseline transits within 20 deg: 7, max excess +0.131, median -0.0088
+   event 57858.83 FOV2 angle 126.1: G x1.635; baseline transits within 20 deg: 7, max excess +0.131, median -0.0088
+   event 57879.83 FOV2 angle  15.7: G x1.419; baseline transits within 20 deg: 1, max excess +0.105, median +0.1050
+   baseline median flux ratio by 30-deg scan-angle bin: [1.033, 0.9912] (n [4, 7]); spread 0.0418
+   same-day FOV pairs in the event: FOV1 x1.107 / FOV2 x1.110 (-0.0 sig); FOV1 x1.060 / FOV2 x1.171 (-1.4 sig); FOV1 x1.573 / FOV2 x1.635 (-0.7 sig)
+   distinct event dates: 5; event scan angles: [16.0, 44.0, 126.0, 126.0, 127.0, 138.0]
+
+J172020.30-381044.3: 28 G transits, 27 matched to GOST; baseline scatter 0.0218
+   event 57490.50 FOV2 angle 157.7: G x1.133; baseline transits within 20 deg: 5, max excess +0.018, median +0.0026
+   event 57641.45 FOV1 angle 138.2: G x1.757; baseline transits within 20 deg: 8, max excess +0.018, median -0.0069
+   event 57641.53 FOV2 angle 138.2: G x1.748; baseline transits within 20 deg: 8, max excess +0.018, median -0.0069
+   event 57690.18 FOV1 angle   0.3: G x3.028; baseline transits within 20 deg: 1, max excess -0.015, median -0.0147
+   event 57690.25 FOV2 angle   0.1: G x3.103; baseline transits within 20 deg: 1, max excess -0.015, median -0.0147
+   event 57782.51 FOV1 angle  12.2: G x1.559; baseline transits within 20 deg: 0, max excess +nan, median +nan
+   event 57782.59 FOV2 angle  11.9: G x1.609; baseline transits within 20 deg: 0, max excess +nan, median +nan
+   event 57796.07 FOV1 angle 138.8: G x1.455; baseline transits within 20 deg: 8, max excess +0.018, median -0.0069
+   event 57796.15 FOV2 angle 138.6: G x1.455; baseline transits within 20 deg: 8, max excess +0.018, median -0.0069
+   event 57830.80 FOV1 angle  50.3: G x1.276; baseline transits within 20 deg: 3, max excess +0.010, median +0.0076
+   event 57830.88 FOV2 angle  50.4: G x1.274; baseline transits within 20 deg: 3, max excess +0.010, median +0.0076
+   baseline median flux ratio by 30-deg scan-angle bin: [1.0076, 0.9789, 1.0026] (n [3, 6, 3]); spread 0.0287
+   same-day FOV pairs in the event: FOV1 x1.069 / FOV2 x1.110 (-1.3 sig); FOV1 x1.063 / FOV2 x1.133 (-2.2 sig); FOV1 x1.757 / FOV2 x1.748 (+0.2 sig); FOV1 x3.028 / FOV2 x3.103 (-1.0 sig); FOV1 x1.559 / FOV2 x1.609 (-1.3 sig); FOV1 x1.455 / FOV2 x1.455 (+0.0 sig); FOV1 x1.276 / FOV2 x1.274 (+0.0 sig)
+   distinct event dates: 7; event scan angles: [0.0, 0.0, 12.0, 12.0, 50.0, 50.0, 138.0, 138.0, 139.0, 139.0, 158.0]
+
+J182124.77-190909.7: 24 G transits, 23 matched to GOST; baseline scatter 0.0199
+   event 57271.41 FOV1 angle 139.0: G x1.435; baseline transits within 20 deg: 10, max excess +0.031, median -0.0015
+   event 57271.49 FOV2 angle 139.1: G x1.443; baseline transits within 20 deg: 10, max excess +0.031, median -0.0015
+   event 57298.90 FOV1 angle  42.3: G x1.205; baseline transits within 20 deg: 7, max excess +0.040, median -0.0081
+   event 57322.97 FOV2 angle 139.6: G x1.124; baseline transits within 20 deg: 10, max excess +0.031, median -0.0015
+   baseline median flux ratio by 30-deg scan-angle bin: [1.0366, 1.0019, 0.9985] (n [3, 6, 10]); spread 0.0381
+   same-day FOV pairs in the event: FOV1 x1.435 / FOV2 x1.443 (-0.2 sig)
+   distinct event dates: 3; event scan angles: [42.0, 139.0, 139.0, 140.0]
+
+J175414.32-275241.8: 48 G transits, 48 matched to GOST; baseline scatter 0.0269
+   event 57678.76 FOV2 angle  41.3: G x1.737; baseline transits within 20 deg: 6, max excess +0.052, median +0.0262
+   event 57678.93 FOV1 angle  40.7: G x1.691; baseline transits within 20 deg: 6, max excess +0.052, median +0.0262
+   event 57693.69 FOV1 angle 163.4: G x2.362; baseline transits within 20 deg: 25, max excess +0.041, median -0.0062
+   event 57693.76 FOV2 angle 163.1: G x2.372; baseline transits within 20 deg: 25, max excess +0.041, median -0.0062
+   baseline median flux ratio by 30-deg scan-angle bin: [0.9526, 1.0262, 1.0005, 0.9938] (n [4, 6, 7, 25]); spread 0.0736
+   same-day FOV pairs in the event: FOV1 x2.362 / FOV2 x2.372 (-0.1 sig)
+   distinct event dates: 2; event scan angles: [41.0, 41.0, 163.0, 163.0]
+
+J174036.98-223251.4: 35 G transits, 35 matched to GOST; baseline scatter 0.0194
+   event 57783.32 FOV2 angle   6.5: G x1.860; baseline transits within 20 deg: 2, max excess -0.010, median -0.0204
+   event 57783.50 FOV1 angle   5.8: G x1.848; baseline transits within 20 deg: 2, max excess -0.010, median -0.0204
+   event 57783.57 FOV2 angle   5.5: G x1.861; baseline transits within 20 deg: 2, max excess -0.010, median -0.0204
+   event 57783.75 FOV1 angle   4.7: G x1.853; baseline transits within 20 deg: 2, max excess -0.010, median -0.0204
+   event 57790.26 FOV1 angle 157.3: G x3.075; baseline transits within 20 deg: 11, max excess +0.026, median +0.0007
+   event 57790.51 FOV1 angle 156.2: G x3.073; baseline transits within 20 deg: 12, max excess +0.026, median +0.0000
+   event 57790.58 FOV2 angle 155.9: G x3.125; baseline transits within 20 deg: 12, max excess +0.026, median +0.0000
+   baseline median flux ratio by 30-deg scan-angle bin: [0.9927, 1.0, 1.0017] (n [2, 8, 4]); spread 0.0090
+   same-day FOV pairs in the event: FOV1 x1.848 / FOV2 x1.861 (-0.3 sig); FOV1 x3.073 / FOV2 x3.125 (-0.8 sig)
+   distinct event dates: 4; event scan angles: [5.0, 5.0, 6.0, 6.0, 156.0, 156.0, 157.0]
+
+J174029.07-331407.7: 36 G transits, 36 matched to GOST; baseline scatter 0.0281
+   event 57784.01 FOV1 angle   3.7: G x1.658; baseline transits within 20 deg: 2, max excess +0.009, median +0.0039
+   event 57784.08 FOV2 angle   3.4: G x1.725; baseline transits within 20 deg: 2, max excess +0.009, median +0.0039
+   event 57784.26 FOV1 angle   2.8: G x1.626; baseline transits within 20 deg: 2, max excess +0.009, median +0.0039
+   event 57793.57 FOV1 angle 144.3: G x3.546; baseline transits within 20 deg: 12, max excess +0.055, median -0.0049
+   event 57793.65 FOV2 angle 144.0: G x3.685; baseline transits within 20 deg: 12, max excess +0.055, median -0.0049
+   event 57830.62 FOV2 angle  47.3: G x1.187; baseline transits within 20 deg: 5, max excess +0.070, median +0.0115
+   baseline median flux ratio by 30-deg scan-angle bin: [1.0115, 0.9951, 0.9986] (n [5, 10, 4]); spread 0.0164
+   same-day FOV pairs in the event: FOV1 x1.658 / FOV2 x1.725 (-1.2 sig); FOV1 x3.546 / FOV2 x3.685 (-1.2 sig); FOV1 x1.152 / FOV2 x1.187 (-0.8 sig)
+   distinct event dates: 3; event scan angles: [3.0, 3.0, 4.0, 47.0, 144.0, 144.0]
+
+J171234.40-353502.0: 63 G transits, 59 matched to GOST; baseline scatter 0.0350
+   event 57078.90 FOV1 angle  45.4: G x1.303; baseline transits within 20 deg: 5, max excess +0.056, median +0.0246
+   event 57109.13 FOV1 angle 145.9: G x3.301; baseline transits within 20 deg: 16, max excess +0.053, median +0.0064
+   event 57109.21 FOV2 angle 146.1: G x3.317; baseline transits within 20 deg: 16, max excess +0.053, median +0.0064
+   event 57129.89 FOV1 angle  42.9: G x5.842; baseline transits within 20 deg: 5, max excess +0.056, median +0.0246
+   event 57129.96 FOV2 angle  43.2: G x5.802; baseline transits within 20 deg: 5, max excess +0.056, median +0.0246
+   baseline median flux ratio by 30-deg scan-angle bin: [0.994, 1.0246, 1.0235, 1.0052] (n [30, 5, 5, 13]); spread 0.0306
+   same-day FOV pairs in the event: FOV1 x1.303 / FOV2 x1.436 (-0.6 sig); FOV1 x3.301 / FOV2 x3.317 (-0.2 sig); FOV1 x5.842 / FOV2 x5.802 (+0.2 sig)
+   distinct event dates: 3; event scan angles: [43.0, 43.0, 45.0, 146.0, 146.0]
+
+J182656.25-264645.9: 20 G transits, 20 matched to GOST; baseline scatter 0.0149
+   event 57080.63 FOV1 angle  32.9: G x1.236; baseline transits within 20 deg: 7, max excess +0.025, median +0.0086
+   event 57080.71 FOV2 angle  32.7: G x1.208; baseline transits within 20 deg: 7, max excess +0.025, median +0.0086
+   event 57131.95 FOV2 angle  38.6: G x3.032; baseline transits within 20 deg: 7, max excess +0.025, median +0.0086
+   baseline median flux ratio by 30-deg scan-angle bin: [0.9997, 1.0086, 0.9915, 0.9947] (n [2, 5, 8, 2]); spread 0.0171
+   same-day FOV pairs in the event: FOV1 x1.236 / FOV2 x1.208 (+1.1 sig)
+   distinct event dates: 2; event scan angles: [33.0, 33.0, 39.0]
+
+J190032.43-004939.8: 19 G transits, 19 matched to GOST; baseline scatter 0.0489
+   event 57098.44 FOV2 angle 139.6: G x1.325; baseline transits within 20 deg: 9, max excess +0.019, median -0.0383
+   event 57129.68 FOV2 angle  33.6: G x2.617; baseline transits within 20 deg: 7, max excess +0.060, median +0.0276
+   baseline median flux ratio by 30-deg scan-angle bin: [0.9948, 1.0334, 0.9617] (n [1, 6, 9]); spread 0.0717
+   same-day FOV pairs in the event: none
+   distinct event dates: 2; event scan angles: [34.0, 140.0]
+
+J151331.38-523733.2: 43 G transits, 42 matched to GOST; baseline scatter 0.0163
+   event 56901.53 FOV2 angle 158.0: G x3.582; baseline transits within 20 deg: 10, max excess +0.023, median -0.0068
+   event 56935.33 FOV1 angle  10.9: G x2.574; baseline transits within 20 deg: 2, max excess +0.013, median +0.0115
+   event 56935.40 FOV2 angle  10.7: G x2.626; baseline transits within 20 deg: 2, max excess +0.013, median +0.0115
+   event 57029.26 FOV2 angle  19.5: G x1.073; baseline transits within 20 deg: 6, max excess +0.013, median +0.0046
+   event 57029.44 FOV1 angle  18.9: G x1.104; baseline transits within 20 deg: 6, max excess +0.013, median +0.0046
+   baseline median flux ratio by 30-deg scan-angle bin: [1.0115, 1.0033, 0.985, 1.0, 0.9716] (n [2, 8, 4, 7, 3]); spread 0.0399
+   same-day FOV pairs in the event: FOV1 x2.574 / FOV2 x2.626 (-1.5 sig)
+   distinct event dates: 3; event scan angles: [11.0, 11.0, 19.0, 19.0, 158.0]
+
+J171838.94-334129.2: 29 G transits, 27 matched to GOST; baseline scatter 0.0270
+   event 57679.43 FOV1 angle  43.7: G x1.800; baseline transits within 20 deg: 6, max excess +0.164, median +0.0258
+   event 57679.50 FOV2 angle  43.5: G x1.798; baseline transits within 20 deg: 6, max excess +0.164, median +0.0258
+   event 57679.68 FOV1 angle  42.8: G x1.729; baseline transits within 20 deg: 6, max excess +0.164, median +0.0258
+   event 57689.93 ? angle   nan: G x2.368; baseline transits within 20 deg: 0, max excess +nan, median +nan
+   event 57690.00 FOV2 angle   1.2: G x2.355; baseline transits within 20 deg: 2, max excess +0.026, median +0.0107
+   event 57781.83 FOV2 angle  14.8: G x1.166; baseline transits within 20 deg: 1, max excess +0.033, median +0.0329
+   event 57782.08 FOV2 angle  13.9: G x1.179; baseline transits within 20 deg: 1, max excess +0.033, median +0.0329
+   baseline median flux ratio by 30-deg scan-angle bin: [1.0329, 1.02, 0.9858, 1.0109] (n [1, 5, 6, 5]); spread 0.0471
+   same-day FOV pairs in the event: FOV1 x1.800 / FOV2 x1.798 (+0.0 sig); ? x2.368 / FOV2 x2.355 (+0.2 sig); FOV1 x1.114 / FOV2 x1.179 (-1.6 sig)
+   distinct event dates: 4; event scan angles: [1.0, 14.0, 15.0, 43.0, 43.0, 44.0, nan]
+
+J182811.16-082538.6: 18 G transits, 18 matched to GOST; baseline scatter 0.0986
+   event 57273.67 FOV1 angle 142.3: G x1.993; baseline transits within 20 deg: 7, max excess +0.009, median -0.0422
+   event 57300.23 FOV2 angle  40.9: G x9.140; baseline transits within 20 deg: 5, max excess +0.214, median +0.1325
+   event 57300.41 FOV1 angle  40.8: G x8.858; baseline transits within 20 deg: 5, max excess +0.214, median +0.1325
+   baseline median flux ratio by 30-deg scan-angle bin: [1.0, 1.1325, 0.9578] (n [1, 5, 7]); spread 0.1746
+   same-day FOV pairs in the event: FOV1 x1.836 / FOV2 x1.773 (+0.3 sig)
+   distinct event dates: 2; event scan angles: [41.0, 41.0, 142.0]
+
+J180313.03-150702.0: 20 G transits, 20 matched to GOST; baseline scatter 0.0228
+   event 57103.62 FOV1 angle 134.6: G x1.099; baseline transits within 20 deg: 7, max excess +0.026, median -0.0136
+   event 57271.24 FOV2 angle 140.1: G x1.875; baseline transits within 20 deg: 7, max excess +0.026, median -0.0136
+   event 57300.40 FOV1 angle  42.0: G x2.988; baseline transits within 20 deg: 1, max excess +0.024, median +0.0239
+   event 57322.72 FOV2 angle 141.7: G x5.864; baseline transits within 20 deg: 7, max excess +0.026, median -0.0136
+   event 57452.75 FOV2 angle  44.9: G x1.220; baseline transits within 20 deg: 1, max excess +0.024, median +0.0239
+   baseline median flux ratio by 30-deg scan-angle bin: [1.0133, 1.0239, 0.973, 0.9949] (n [3, 1, 4, 3]); spread 0.0510
+   same-day FOV pairs in the event: none
+   distinct event dates: 5; event scan angles: [42.0, 45.0, 135.0, 140.0, 142.0]
+
+J184837.12-051620.2: 25 G transits, 25 matched to GOST; baseline scatter 0.0106
+   event 57828.60 FOV2 angle  42.9: G x1.559; baseline transits within 20 deg: 8, max excess +0.015, median +0.0038
+   event 57859.76 FOV1 angle 127.1: G x1.376; baseline transits within 20 deg: 12, max excess +0.010, median -0.0012
+   event 57859.83 FOV2 angle 127.2: G x1.372; baseline transits within 20 deg: 12, max excess +0.010, median -0.0012
+   event 57880.26 FOV1 angle  16.7: G x1.189; baseline transits within 20 deg: 4, max excess +0.015, median +0.0080
+   event 57880.33 FOV2 angle  16.9: G x1.197; baseline transits within 20 deg: 4, max excess +0.015, median +0.0080
+   baseline median flux ratio by 30-deg scan-angle bin: [1.0069, 1.0022, 0.9988] (n [1, 7, 12]); spread 0.0081
+   same-day FOV pairs in the event: FOV1 x1.376 / FOV2 x1.372 (+0.2 sig); FOV1 x1.189 / FOV2 x1.197 (-0.4 sig)
+   distinct event dates: 3; event scan angles: [17.0, 17.0, 43.0, 127.0, 127.0]

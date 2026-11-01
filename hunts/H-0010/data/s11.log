@@ -1,0 +1,29 @@
+4067152339419332992 127 r:0.22 | bursts: -
+508920918409038464 1941 g:0.10;g:0.12;g:0.13;i:0.09;i:0.10;i:0.12;r:0.08;r:0.09 | bursts: -
+4145977633638478336 910 g:0.22;i:0.08;r:0.08 | bursts: -
+2054828730840779520 3278 g:0.57;g:0.66;g:0.70;i:0.06;i:0.08;r:0.12;r:0.13 | bursts: -
+4254872092666139264 790 g:0.47;r:0.17 | bursts: -
+4103794114069593216 638 r:0.41 | bursts: -
+GET https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves failed ([Errno 54] Connection reset by peer); retry in 2s
+4120472262420519296 no ZTF
+4143495279954502016 411 i:0.14;r:0.58 | bursts: -
+4117136992643758080 no ZTF
+2030258876550898816 194 g:0.14;i:0.15;r:0.24 | bursts: -
+4143778198039891712 no ZTF
+1861208444041823360 2541 g:0.75;g:0.83;i:0.15;i:0.16;i:0.21;r:0.33;r:0.35;r:0.37 | bursts: r@640:0xd 2021-02-18 -0.86;r@641:0x10 2024-01-05 -1.63
+4266315436092309504 1071 g:0.24;i:0.08;r:0.13 | bursts: -
+5620272814897694848 1521 g:0.28;g:0.39;r:0.09;r:0.11 | bursts: -
+4063479523864717184 1  | bursts: -
+GET https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves failed (_ssl.c:994: The handshake operation timed out); retry in 2s
+4069070918399108992 837 g:0.33;i:0.05;r:0.07 | bursts: -
+4096047127002546560 1098 g:0.52;i:0.15;r:0.22 | bursts: -
+4052046905029445376 187 r:0.49 | bursts: -
+4097904476963000576 42 r:0.58 | bursts: -
+4146782166880069632 2  | bursts: -
+4265542994777483776 no ZTF
+4266365704324232576 218 i:0.27;r:0.70 | bursts: -
+4059204107239408512 no ZTF
+4119926316171065984 720 g:0.37;r:0.16 | bursts: -
+4156259162525506816 674 i:0.21;r:0.64;r:0.67 | bursts: -
+GET https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves failed ([Errno 54] Connection reset by peer); retry in 2s
+4152593734345648000 409 g:0.74;i:0.16;r:0.16 | bursts: -

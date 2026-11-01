@@ -1,0 +1,8 @@
+survey-style ratio (baseline = blend at the neighbour position, W1 10.92): 7.31
+star W1 11.06: no neighbour flux in the event detection: A_W1 = 8.3
+star W1 11.06: neighbour (W1~11.4) fully merged: A_W1 = 7.6
+star W1 11.25: no neighbour flux in the event detection: A_W1 = 9.9
+star W1 11.25: neighbour (W1~11.4) fully merged: A_W1 = 9.0
+star W1 11.4: no neighbour flux in the event detection: A_W1 = 11.4
+star W1 11.4: neighbour (W1~11.4) fully merged: A_W1 = 10.4
+W2 against AllWISE W2 11.40: 9.5

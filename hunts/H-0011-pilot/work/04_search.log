@@ -1,0 +1,52 @@
+   band   lo    hi    n    med    mad  tau_med
+0    W1  2.0   3.0  361 -0.208  0.149   -0.333
+1    W1  3.0   4.0  130 -0.478  0.135   -0.587
+2    W1  4.0   5.0   58 -0.375  0.141   -0.538
+3    W1  5.0   6.0   25 -0.172  0.086   -0.371
+4    W1  6.0   7.0   30 -0.085  0.062   -0.224
+5    W1  7.0   7.5   37 -0.007  0.108    0.029
+6    W1  7.5   8.0   70  0.004  0.065    0.028
+7    W1  8.0   8.5  141 -0.006  0.035   -0.019
+8    W1  8.5   9.0  187  0.000  0.020    0.000
+9    W1  9.0  20.0  178  0.002  0.020    0.038
+10   W2 -5.0   2.0  336 -0.093  0.146   -0.133
+11   W2  2.0   3.0  154 -0.140  0.083   -0.248
+12   W2  3.0   4.0  103 -0.089  0.166   -0.171
+13   W2  4.0   5.0   80 -0.082  0.097   -0.205
+14   W2  5.0   6.0   50 -0.013  0.093   -0.052
+15   W2  6.0   7.0   32  0.052  0.071    0.274
+16   W2  7.0   7.5   45  0.008  0.056    0.100
+17   W2  7.5   8.0   66  0.023  0.063    0.150
+18   W2  8.0   8.5  119  0.004  0.046    0.065
+19   W2  8.5   9.0  158  0.008  0.031    0.122
+20   W2  9.0  20.0  233  0.015  0.020    0.215
+
+== mc stars 601 with NEOWISE 598 with Gaia epoch 432
+A_optfade_irholds    0
+B_ir_oneway          1
+C_gaia_deficit       1
+D_failedSN_shape     0
+         main_id galaxy   sp_type    logL      K  W1_med  W1_sat_frac  W1_delta     W1_dc    z_W1_dc  W1_d2010    W1_tau    W1_amp  W1_exc_min     W2_dc   dcol   g_n      g_dG    z_g_dG   GmV_res   nb_frac   cc_frac  A_optfade_irholds  B_ir_oneway  C_gaia_deficit  D_failedSN_shape
+471   [MG73]  94    LMC     K4Iab  4.6644  8.866  8.6215      0.00000   -0.0280 -0.028499  -1.424968       NaN  0.038961  0.045590    -0.07200  0.004375 -0.040  37.0 -0.056319 -0.547135  1.820599  0.382520  0.998865              False        False            True             False
+546  SP77  54-41    LMC  K5Iab-Ib  4.6376  8.933  8.1170      0.26087    0.4555  0.461250  13.099286       NaN  0.446640  0.146777    -0.11075  0.525500 -0.078   NaN       NaN       NaN -0.050680  0.023503  0.054966              False         True           False             False
+
+== gal stars 934 with NEOWISE 621 with Gaia epoch 272
+A_optfade_irholds    0
+B_ir_oneway          1
+C_gaia_deficit       1
+D_failedSN_shape     0
+             main_id   sp_type      K  W1_med  W1_sat_frac  W1_delta     W1_dc   z_W1_dc  W1_d2010    W1_tau    W1_amp  W1_exc_min     W2_dc     dcol   g_n      g_dG    z_g_dG   GmV_res   nb_frac   cc_frac  A_optfade_irholds  B_ir_oneway  C_gaia_deficit  D_failedSN_shape
+266        V* RS Cen  M1Ib-IIe  3.731  2.2840          1.0   -0.4165 -0.208750 -1.400994       NaN -0.473684  0.246111    -0.63275  0.121375 -0.44500  57.0  0.702104  7.240728  1.794640  0.000000  0.991018              False        False            True             False
+376  TYC 5974-2539-1     K3Iab  5.390  4.6255          1.0    0.3705  0.745875  5.295644       NaN  0.155556  0.478880    -0.25650  0.104500  0.34775   NaN       NaN       NaN -0.023568  0.694444  1.000000              False         True           False             False
+
+== cal stars 21 with NEOWISE 21 with Gaia epoch 14
+A_optfade_irholds    0
+B_ir_oneway          3
+C_gaia_deficit       0
+D_failedSN_shape     3
+            main_id galaxy sp_type    logL       K  W1_med  W1_sat_frac  W1_delta    W1_dc    z_W1_dc  W1_d2010    W1_tau    W1_amp  W1_exc_min     W2_dc     dcol   g_n      g_dG    z_g_dG   GmV_res   nb_frac   cc_frac  A_optfade_irholds  B_ir_oneway  C_gaia_deficit  D_failedSN_shape
+4         HD 269858    LMC     LBV  4.5208   9.225  9.3375     0.000000   1.01100  1.00925  50.462508   1.41000  0.400000  0.725733    -0.51000  1.111750 -0.11600  49.0 -0.320714 -3.260011  0.151987  0.020590  0.006083              False         True           False              True
+0         HD 269006    LMC     LBV  3.9920  10.547  7.5550     0.904762   0.99175  0.98750  15.267825   0.32200  0.866667  0.481845    -0.03775  1.008000 -0.02425  41.0 -0.004303 -0.013417 -2.216526  0.001005  0.995980              False         True           False             False
+1         HD 269582    LMC   WN10h  3.5552  11.639  9.2820     0.000000   0.74300  0.74125  37.062490       NaN  0.371429  0.253524    -0.69200  0.674375  0.06100  35.0 -0.118488 -1.185025 -0.928145  0.007700  0.568789              False        False           False              True
+8   IRAS 05298-6957    LMC     NaN  3.6580  11.382  8.2525     0.428571   0.78425  0.79000  22.435622  -0.16475  0.190476  0.955536    -0.44350  0.783000 -0.05050   NaN       NaN       NaN       NaN  0.000635  0.010159              False        False           False              True
+18         V* S Dor    LMC     Be3  4.8756   8.338  7.8340     0.857143  -0.40775 -0.41200  -6.369970       NaN -0.561905  0.185325    -0.47675 -0.306375 -0.12425  33.0 -0.240450 -2.436444 -1.251679  0.000649  0.007792              False         True           False             False

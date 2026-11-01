@@ -1,0 +1,78 @@
+4043458241772263936 allwise_cntr 211 exposures; 57101.6:-0.43:brighten 57101.6:-0.44:brighten:clean=True
+4067152339419332992 allwise_cntr 21 exposures;  
+4062840084877907712 nearest 0 exposures;  
+508920918409038464 allwise_cntr 338 exposures;  
+4145977633638478336 allwise_cntr 273 exposures;  57468.9:-0.52:brighten:clean=True
+2054828730840779520 allwise_cntr 382 exposures; 57326.8:-0.26:brighten 57326.8:-0.26:brighten:clean=True
+5979167630832540032 nearest 0 exposures;  
+5958944416543307648 allwise_cntr 76 exposures;  
+4040204305809966848 nearest 9 exposures;  
+4063409292521568640 nearest 10 exposures;  
+4254872092666139264 nearest 5 exposures;  
+5593963735024586240 nearest 1 exposures;  
+4056368634256485504 nearest 0 exposures;  
+4103794114069593216 nearest 0 exposures;  
+GET https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query failed ([Errno 54] Connection reset by peer); retry in 2s
+GET https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query failed ([Errno 54] Connection reset by peer); retry in 4s
+5959812622743175552 allwise_cntr 277 exposures; 57272.2:-1.61:brighten 57272.2:-1.63:brighten:clean=True
+4049915123787493248 nearest 0 exposures;  
+4061401893561892608 nearest 0 exposures;  
+4120472262420519296 nearest 2 exposures;  
+5888321552071879552 nearest 1 exposures;  
+4143495279954502016 allwise_cntr 274 exposures; 57280.2:-1.07:brighten 57280.2:-1.07:brighten:clean=True
+GET https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query failed ([Errno 54] Connection reset by peer); retry in 2s
+GET https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query failed ([Errno 54] Connection reset by peer); retry in 2s
+4068476460574819584 nearest 0 exposures;  
+4040875007942475904 nearest 0 exposures;  
+4117136992643758080 nearest 1 exposures;  
+2030258876550898816 allwise_cntr 355 exposures;  
+4067155397407080064 nearest 0 exposures;  
+5861862148375056384 allwise_cntr 172 exposures;  
+4143778198039891712 nearest 0 exposures;  
+1861208444041823360 allwise_cntr 163 exposures;  
+GET https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query failed ([Errno 54] Connection reset by peer); retry in 2s
+5893807634053861120 nearest 0 exposures;  
+4039699492609592704 nearest 1 exposures;  
+4068110318885022464 nearest 181 exposures;  
+4266315436092309504 allwise_cntr 284 exposures;  
+4063160287489483520 nearest 1 exposures;  
+4110560298167203584 nearest 12 exposures;  
+4059326835886778240 nearest 9 exposures;  
+4064079547909732352 nearest 0 exposures;  
+GET https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query failed ([Errno 54] Connection reset by peer); retry in 2s
+4116479179755030272 nearest 1 exposures;  
+5977088149415668736 nearest 11 exposures;  
+GET https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query failed (_ssl.c:994: The handshake operation timed out); retry in 2s
+5620272814897694848 allwise_cntr 319 exposures; 57122.6:-0.31:brighten 57122.6:-0.31:brighten:clean=True
+4043178690980749824 nearest 0 exposures;  
+4063479523864717184 allwise_cntr 133 exposures;  
+4056588845790058368 nearest 15 exposures;  
+4069070918399108992 nearest 0 exposures;  
+4096047127002546560 allwise_cntr 131 exposures;  
+4089362027543538176 nearest 0 exposures;  
+4052046905029445376 nearest 1 exposures;  
+5939477464424988544 nearest 65 exposures;  
+5884091589077519616 nearest 1 exposures;  
+4097904476963000576 nearest 0 exposures;  
+4052673351820500480 allwise_cntr 261 exposures;  57470.4:-0.88:brighten:clean=True
+4062461577902611072 nearest 1 exposures;  
+4044193364007000448 nearest 0 exposures;  
+4146782166880069632 nearest 0 exposures;  
+5972789089004520192 nearest 0 exposures;  
+GET https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query failed ([Errno 54] Connection reset by peer); retry in 2s
+4265542994777483776 nearest 1 exposures;  
+4042386316815947648 nearest 0 exposures;  
+GET https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query failed ([Errno 54] Connection reset by peer); retry in 2s
+4266365704324232576 nearest 13 exposures;  
+4059204107239408512 nearest 0 exposures;  
+GET https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query failed ([Errno 54] Connection reset by peer); retry in 2s
+4119926316171065984 nearest 0 exposures;  
+4156259162525506816 nearest 25 exposures;  
+4053976376149303552 nearest 0 exposures;  
+GET https://irsa.ipac.caltech.edu/cgi-bin/Gator/nph-query failed ([Errno 54] Connection reset by peer); retry in 2s
+4043432227076366592 nearest 0 exposures;  
+4041237743668797184 allwise_cntr 138 exposures;  
+4054091653004081408 nearest 0 exposures;  
+4050302358026285312 allwise_cntr 52 exposures;  
+2032454944878107008 allwise_cntr 416 exposures; 57676.3:-1.52:brighten 57676.3:-1.52:brighten:clean=False
+4152593734345648000 nearest 0 exposures;  

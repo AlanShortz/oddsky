@@ -1,0 +1,2 @@
+ra,dec,clon,clat,mjd,w1mpro,w1sigmpro,w2mpro,w2sigmpro,qual_frame,qi_fact,saa_sep,moon_masked,cc_flags,ph_qual,w1sat,w2sat,nb,na,w1snr,w2snr,w1rchi2,w2rchi2,allwise_cntr,source_id,dist,angle
+228.379893,-52.6257375,15h13m31.17s,-52d37m32.65s,60158.95568884,15.192,0.137,14.134,,5,0.5,4.627,00,0000,BU,0.0,0.0,1,0,7.9,1.2,1.867,0.5923,<NA>,52957r061-011613,1.982884,287.15869

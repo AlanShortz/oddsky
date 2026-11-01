@@ -1,0 +1,3 @@
+targets: fetching 67
+got 67; missing 0: []
+[{'release': 'Gaia DR3', 'ok': True, 'n': 67, 'error': ''}]

@@ -1,0 +1,39 @@
+neowise_exp_mc 1/16
+neowise_exp_mc 2/16
+retry 0 ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+neowise_exp_mc 3/16
+neowise_exp_mc 4/16
+retry 1 ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+neowise_exp_mc 5/16
+neowise_exp_mc 6/16
+neowise_exp_mc 7/16
+neowise_exp_mc 8/16
+neowise_exp_mc 9/16
+neowise_exp_mc 10/16
+neowise_exp_mc 11/16
+neowise_exp_mc 12/16
+neowise_exp_mc 13/16
+neowise_exp_mc 14/16
+neowise_exp_mc 15/16
+neowise_exp_mc 16/16
+NEOWISE exposures 888069 stars 601
+allwise_mep_exp_mc 1/16
+allwise_mep_exp_mc 2/16
+allwise_mep_exp_mc 3/16
+allwise_mep_exp_mc 4/16
+retry 0 ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+allwise_mep_exp_mc 5/16
+allwise_mep_exp_mc 6/16
+retry 0 ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))
+allwise_mep_exp_mc 7/16
+allwise_mep_exp_mc 8/16
+allwise_mep_exp_mc 9/16
+allwise_mep_exp_mc 10/16
+allwise_mep_exp_mc 11/16
+allwise_mep_exp_mc 12/16
+allwise_mep_exp_mc 13/16
+allwise_mep_exp_mc 14/16
+allwise_mep_exp_mc 15/16
+allwise_mep_exp_mc 16/16
+AllWISE-MEP exposures 67052 stars 598
+visits 26019 {('NEOWISE', 'W1'): 589, ('NEOWISE', 'W2'): 592, ('WISE_MEP', 'W1'): 393, ('WISE_MEP', 'W2'): 304}
