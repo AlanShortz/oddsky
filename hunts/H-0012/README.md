@@ -454,3 +454,41 @@ uv run python hunts/H-0012/scripts/targets.py
 - M33 as a third acceptance galaxy. A per-build zero-point check on control stars as a standard pipeline output.
 - Permission from A. Meisner (or a mirror) before the scale-up; in parallel, prototype the L1b `unwise-coadds --epoch`
   route on one tile.
+
+## Provenance
+
+**Permission (2026-11-01).** Aaron Meisner agreed by phone with Alan Shortz on 2026-11-01 to Oddsky using the time-resolved
+unWISE (neo11) epochal coadds for this search, including the scale-up pull. The drafted email (`drafts/email_meisner.md`) was not
+sent. Downloads are throttled (at most 2 connections per task, parallelism lowered to 12, so at most 24 concurrent connections to
+NERSC). Credit: Meisner, Lang & Schlegel 2018 (arXiv:1710.02526) and Meisner, Caselden, Schlafly & Kiwy 2023 (unTimely).
+
+
+## The full run (2026-11-01; `work/triage_h0012a*.csv`, `scripts/merge_triage.py`)
+
+All 332 tiles of the 318 star-forming galaxies within 10 Mpc ran on Google Cloud Batch (166 tasks, ≤ 24 concurrent downloads), plus
+16 tiles rerun after two runner fixes (one galaxy no longer takes down a task; a galaxy with no candidates inside a tile's photometry
+window is kept as `no-photometry`). 178 galaxies have candidates: 25,696 variable sources after merging across tiles, 20,410 of them
+in M31.
+
+| | failed-SN-like | obscured transient | step-up | total |
+|---|---|---|---|---|
+| moving foreground star | 211 | 156 | 36 | 403 |
+| AGN / quasar | 107 | 125 | 33 | 265 |
+| Gaia foreground star | 21 | 11 | 9 | 41 |
+| known AGB/LPV | 14 | 29 | 4 | 47 |
+| known transient | 10 | 39 | 1 | 50 |
+| known failed-SN candidate | 2 | 0 | 0 | 2 |
+| unknown | 376 | 318 | 250 | 944 |
+
+23,003 sources (long-period, irregular and season-locked variables) are demoted before cross-matching.
+
+**Benchmarks, found blind.** M31-2014-DS1 is #2 of 738 by the failed-SN score; N6946-BH1 #65 (behind unidentified M31 and M33
+faders). Of 33 non-nova supernovae, LRNe, ILRTs and LBVs from 2009.5 to 2024.5 in these galaxies, 13 are recovered, and 12 of them
+rank in the obscured-transient top 31: SN 2023ixf #1, SN 2017eaw #2, AT 2023nzt (LRN) #5, SN 2023axu #6, SN 2024ggi #8, SN 2023dbc
+#11, AT 2018bwo #12, AT 2019abn #13, AT 2015dl #15, AT 2021biy #18, SN 2011ja #20, SN 2013ej #31. Most misses are background SNe Ia,
+events in the 2011-13 gap with no NEOWISE coverage, or events near masked nuclei; SN 2011dh (M51) and SN 2014J (M82) have no detection
+within 6" and are under investigation (masking).
+
+**Leads (unchecked; referee pending).** Obscured transients: an unidentified 2019-2023 rise in NGC 4945 (196.4697 −49.4162; peak
+3.3 × 10⁵ L☉, no Gaia source), and rising sources in M81, NGC 55 and M101. Failed-SN-like: unidentified faders in IC 342 (possibly
+a background AGN) and NGC 2976, and many red faders in M31 and M33 (dusty AGB stars or background AGN are the likely explanations).

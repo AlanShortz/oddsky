@@ -89,22 +89,27 @@ def run_tile(tile: str, targets, out_root: Path, code_version: str) -> dict:
     for _, r in targets[targets.tiles.str.contains(tile)].iterrows():
         gal = galaxy_from_row(r)
         wd = Path(tempfile.mkdtemp(prefix="h0012_")) / gal.name
-        dets = pd.concat([process_tile_band(gal, tile, b, wd, cfg) for b in cfg.bands], ignore_index=True)
-        cands = candidates_from(dets, cfg)
-        lcs = photometer(cands, wd, [tile], cfg.bands) if len(cands) else pd.DataFrame()
-        res = score(cands, lcs) if len(cands) else cands
-        dest = out_root / tile / gal.name
-        dest.mkdir(parents=True, exist_ok=True)
-        res.to_csv(dest / "candidates.csv", index=False)
-        dets.to_parquet(dest / "detections.parquet")
-        if len(lcs):
-            lcs.to_parquet(dest / "lightcurves.parquet")
-            np.savez_compressed(dest / "cutouts.npz", **cutouts(wd, tile, res))
-        meta = json.loads((wd / tile / "w1" / "meta.json").read_text())
-        rep["galaxies"][gal.name] = dict(n_detections=len(dets), n_candidates=len(res),
-                                         classes=res.cls.value_counts().to_dict() if len(res) else {},
-                                         builds=meta.get("builds"))
-        shutil.rmtree(wd.parent, ignore_errors=True)  # the D/S stacks (~1 GB per tile-band) never leave the VM
+        try:
+            dets = pd.concat([process_tile_band(gal, tile, b, wd, cfg) for b in cfg.bands], ignore_index=True)
+            cands = candidates_from(dets, cfg)
+            lcs = photometer(cands, wd, [tile], cfg.bands) if len(cands) else pd.DataFrame()
+            res = score(cands, lcs) if len(cands) else cands
+            dest = out_root / tile / gal.name
+            dest.mkdir(parents=True, exist_ok=True)
+            res.to_csv(dest / "candidates.csv", index=False)
+            dets.to_parquet(dest / "detections.parquet")
+            if len(lcs):
+                lcs.to_parquet(dest / "lightcurves.parquet")
+                np.savez_compressed(dest / "cutouts.npz", **cutouts(wd, tile, res))
+            mp = wd / tile / "w1" / "meta.json"  # absent when the galaxy's window holds no usable pixels on this tile
+            meta = json.loads(mp.read_text()) if mp.exists() else {}
+            rep["galaxies"][gal.name] = dict(n_detections=len(dets), n_candidates=len(res),
+                                             classes=res.cls.value_counts().to_dict() if len(res) else {},
+                                             builds=meta.get("builds"))
+        except Exception as e:  # noqa: BLE001  one galaxy must not take down the tile (and the other tile in the task)
+            rep["galaxies"][gal.name] = dict(error=f"{type(e).__name__}: {str(e)[:300]}")
+        finally:
+            shutil.rmtree(wd.parent, ignore_errors=True)  # the D/S stacks (~1 GB per tile-band) never leave the VM
     rep["seconds"] = round(time.time() - t0)
     return rep
 

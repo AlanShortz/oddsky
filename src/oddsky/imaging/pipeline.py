@@ -376,6 +376,12 @@ def photometer(cands: pd.DataFrame, workdir: Path, tile_list: list[str], bands=(
 
 
 def score(cands: pd.DataFrame, lcs: pd.DataFrame) -> pd.DataFrame:
+    if lcs is None or lcs.empty or "group" not in lcs:
+        # no candidate of this galaxy falls inside this tile's photometry window (a galaxy spanning several tiles,
+        # e.g. NGC 628): keep the candidates, unscored here; the tile that holds them measures them
+        out = cands.copy()
+        out["cls"] = "no-photometry"
+        return out
     recs = []
     for gid, lc in lcs.groupby("group"):
         m = {}

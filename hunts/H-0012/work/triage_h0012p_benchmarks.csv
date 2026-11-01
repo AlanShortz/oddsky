@@ -1,0 +1,2 @@
+name,type,disc,galaxy,dist_mpc,ra,dec,found,sep,uid,cls,cls_w1,cls_w2,triage,var_sig,L_peak,rank_obs,rank_fsn
+SN 2017eaw,SN II,2017-05-14,NGC6946,7.72,308.684,60.1933,True,0.300812,NGC6946|3090p605|53,transient,transient,transient,obscured-transient,490.449,4.65852e+06,1,

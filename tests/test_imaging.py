@@ -444,3 +444,15 @@ def test_step_class_for_quiet_gap_fader():
     assert m["chi2r"] < 5
     assert m["delta_neo_sig"] < -5
     assert metrics.classify_band(m)[0] == "step-down"
+
+
+
+def test_score_without_photometry_keeps_candidates():
+    """A galaxy spanning several tiles can have candidates on one tile but none inside its photometry window."""
+    import pandas as pd
+
+    from oddsky.imaging.pipeline import score
+
+    cands = pd.DataFrame({"group": [0, 1], "ra": [1.0, 2.0], "dec": [3.0, 4.0]})
+    out = score(cands, pd.DataFrame())
+    assert len(out) == 2 and set(out.cls) == {"no-photometry"}

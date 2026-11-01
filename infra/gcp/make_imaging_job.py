@@ -13,6 +13,9 @@ import sys
 
 name, tile_list, n_tiles, per_task, parallelism, sha = (sys.argv[1], sys.argv[2], int(sys.argv[3]), int(sys.argv[4]),
                                                        int(sys.argv[5]), sys.argv[6])
+# Permission: A. Meisner agreed by phone with Alan Shortz on 2026-11-01 to Oddsky using the neo11 epochal coadds for this
+# search (see hunts/H-0012/README.md, provenance). Pass --granted to write the spec with the gate open.
+permission = "granted" if "--granted" in sys.argv else "NOT-YET"
 tasks = -(-n_tiles // per_task)
 cmd = ("set -euo pipefail; PIP_DISABLE_PIP_VERSION_CHECK=1 pip install -q --root-user-action=ignore --no-cache-dir "
        "numpy==2.* scipy==1.* 'astropy>=7' pandas==2.* pyarrow==21.* httpx && "
@@ -26,7 +29,7 @@ job = {
         "taskSpec": {
             "runnables": [{"container": {"imageUri": "python:3.12-slim", "entrypoint": "/bin/bash", "commands": ["-c", cmd],
                                          "volumes": ["/mnt/disks/oddsky:/mnt/disks/oddsky:rw"]}}],
-            "environment": {"variables": {"ODDSKY_UNWISE_PERMISSION": "NOT-YET"}},
+            "environment": {"variables": {"ODDSKY_UNWISE_PERMISSION": permission}},
             "volumes": [{"gcs": {"remotePath": "oddsky-sky-br3c3-data"}, "mountPath": "/mnt/disks/oddsky"}],
             # measured: 1.9 GB peak per tile-band on a full 2048^2 window; 7 GB leaves room for M31-size tiles
             "computeResource": {"cpuMilli": 2000, "memoryMib": 7168},
@@ -39,4 +42,4 @@ job = {
     "logsPolicy": {"destination": "CLOUD_LOGGING"},
     "labels": {"app": "oddsky", "hunt": "h-0012"}}
 json.dump(job, open(f"infra/gcp/{name}.json", "w"), indent=1)
-print(name, "tasks", tasks, "parallelism", parallelism, "(not submitted; permission gate is NOT-YET)")
+print(name, "tasks", tasks, "parallelism", parallelism, "permission", permission)

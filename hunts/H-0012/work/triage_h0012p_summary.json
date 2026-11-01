@@ -1,0 +1,243 @@
+{
+ "run": "h0012p",
+ "run_dir": "/Users/alanshortz/oddsky-runs/h0012p",
+ "n_tiles": 4,
+ "n_galaxies": 4,
+ "n_candidate_rows": 414,
+ "n_merged": 414,
+ "n_multi_tile": 0,
+ "n_cross_galaxy": 0,
+ "classes": {
+  "lpv-like": 227,
+  "irregular": 108,
+  "brightening": 21,
+  "transient": 18,
+  "not-variable": 10,
+  "season-locked": 10,
+  "fading": 9,
+  "step-down": 4,
+  "step-up": 4,
+  "rise-then-fade": 3
+ },
+ "triage": {
+  "demoted": 345,
+  "obscured-transient": 39,
+  "failed-SN-like": 16,
+  "quiet": 10,
+  "step-up": 4
+ },
+ "fsn_shapes": {
+  "fade-no-recovery": 7,
+  "step-down": 4,
+  "rise-then-fade": 3,
+  "fading-recovering": 2
+ },
+ "survivors_what": {
+  "unknown": 23,
+  "known LPV/AGB": 23,
+  "known transient": 4,
+  "AGN / background quasar": 3,
+  "foreground star": 3,
+  "moving foreground star": 2,
+  "known": 1
+ },
+ "status": {
+  "tns_status": {
+   "ok": 59
+  },
+  "gaia_status": {
+   "ok": 59
+  },
+  "allwise_status": {
+   "ok": 59
+  },
+  "simbad_status": {
+   "ok": 59
+  }
+ },
+ "known": [
+  {
+   "name": "AT 2014ew",
+   "galaxy": "IC0010",
+   "uid": "IC0010|0057p590|159",
+   "sep": 0.448969344773403,
+   "cls": "lpv-like",
+   "triage": "demoted",
+   "rank_fsn": null,
+   "rank_obs": null,
+   "fsn_score": 0.0,
+   "obs_score": 0.0
+  },
+  {
+   "name": "AT 2019twu",
+   "galaxy": "IC0010",
+   "uid": "IC0010|0057p590|108",
+   "sep": 2.8952603369105616,
+   "cls": "irregular",
+   "triage": "demoted",
+   "rank_fsn": null,
+   "rank_obs": null,
+   "fsn_score": 0.0,
+   "obs_score": 0.0
+  },
+  {
+   "name": "AT 2016erg",
+   "galaxy": "NGC6822",
+   "uid": "NGC6822|2958m152|239",
+   "sep": 0.9193176839939754,
+   "cls": "lpv-like",
+   "triage": "demoted",
+   "rank_fsn": null,
+   "rank_obs": null,
+   "fsn_score": 0.0,
+   "obs_score": 0.0
+  },
+  {
+   "name": "AT 2016erh",
+   "galaxy": "NGC6822",
+   "uid": "NGC6822|2958m152|191",
+   "sep": 0.44285217681375505,
+   "cls": "irregular",
+   "triage": "demoted",
+   "rank_fsn": null,
+   "rank_obs": null,
+   "fsn_score": 0.0,
+   "obs_score": 0.0
+  },
+  {
+   "name": "AT 2016esb",
+   "galaxy": "NGC6822",
+   "uid": "NGC6822|2958m152|185",
+   "sep": 0.21664807003096787,
+   "cls": "irregular",
+   "triage": "demoted",
+   "rank_fsn": null,
+   "rank_obs": null,
+   "fsn_score": 0.0,
+   "obs_score": 0.0
+  },
+  {
+   "name": "AT 2019gxs",
+   "galaxy": "NGC6822",
+   "uid": "NGC6822|2958m152|93",
+   "sep": 0.27823066494372406,
+   "cls": "brightening",
+   "triage": "obscured-transient",
+   "rank_fsn": null,
+   "rank_obs": 2,
+   "fsn_score": 0.0,
+   "obs_score": 8.300468914642053
+  },
+  {
+   "name": "AT 2026nsu",
+   "galaxy": "NGC6822",
+   "uid": "NGC6822|2958m152|197",
+   "sep": 0.16194606332007938,
+   "cls": "lpv-like",
+   "triage": "demoted",
+   "rank_fsn": null,
+   "rank_obs": null,
+   "fsn_score": 0.0,
+   "obs_score": 0.0
+  },
+  {
+   "name": "N6946-BH1",
+   "galaxy": "NGC6946",
+   "uid": "NGC6946|3090p605|3",
+   "sep": 0.0,
+   "cls": "step-down",
+   "triage": "failed-SN-like",
+   "rank_fsn": 1,
+   "rank_obs": null,
+   "fsn_score": 4.389308026879856,
+   "obs_score": 0.0
+  },
+  {
+   "name": "SN 2004et",
+   "galaxy": "NGC6946",
+   "uid": "NGC6946|3090p605|128",
+   "sep": 0.26627285310651744,
+   "cls": "step-down",
+   "triage": "failed-SN-like",
+   "rank_fsn": 4,
+   "rank_obs": null,
+   "fsn_score": 2.564117364886676,
+   "obs_score": 0.0
+  },
+  {
+   "name": "SN 2008S",
+   "galaxy": "NGC6946",
+   "uid": "NGC6946|3090p605|2",
+   "sep": 0.2639713230989663,
+   "cls": "transient",
+   "triage": "obscured-transient",
+   "rank_fsn": null,
+   "rank_obs": 3,
+   "fsn_score": 0.0,
+   "obs_score": 6.547873281072245
+  },
+  {
+   "name": "SN 2017eaw",
+   "galaxy": "NGC6946",
+   "uid": "NGC6946|3090p605|53",
+   "sep": 0.29367075658517294,
+   "cls": "transient",
+   "triage": "obscured-transient",
+   "rank_fsn": null,
+   "rank_obs": 1,
+   "fsn_score": 0.0,
+   "obs_score": 40.0
+  }
+ ],
+ "n_fsn_ranked": 16,
+ "n_obs_ranked": 46,
+ "benchmarks": [
+  {
+   "name": "SN 2017eaw",
+   "type": "SN II",
+   "disc": "2017-05-14",
+   "galaxy": "NGC6946",
+   "dist_mpc": 7.72,
+   "ra": 308.6843333333333,
+   "dec": 60.19328888888889,
+   "found": true,
+   "sep": 0.30081234856564776,
+   "uid": "NGC6946|3090p605|53",
+   "cls": "transient",
+   "cls_w1": "transient",
+   "cls_w2": "transient",
+   "triage": "obscured-transient",
+   "var_sig": 490.44870102650583,
+   "L_peak": 4658515.528490274,
+   "rank_obs": 1.0,
+   "rank_fsn": NaN
+  }
+ ],
+ "tns_galaxies_not_queried": [],
+ "per_galaxy": {
+  "IC0010": {
+   "n": 149,
+   "fsn": 2,
+   "obs": 7,
+   "stepup": 0
+  },
+  "NGC6822": {
+   "n": 213,
+   "fsn": 10,
+   "obs": 26,
+   "stepup": 4
+  },
+  "NGC6946": {
+   "n": 25,
+   "fsn": 2,
+   "obs": 4,
+   "stepup": 0
+  },
+  "WLM": {
+   "n": 27,
+   "fsn": 2,
+   "obs": 2,
+   "stepup": 0
+  }
+ }
+}
