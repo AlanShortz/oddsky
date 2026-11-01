@@ -690,6 +690,33 @@
    "n_predictions": 0,
    "featured": false,
    "hunt": "H-0008"
+  },
+  {
+   "id": "OS-0029",
+   "title": "A star in Serpens brightened by half in March 2016, equally in Gaia's three bands: a microlensing candidate",
+   "hook": "Found blind in Oddsky hunt H-0009 (NEOWISE x1.6 on 2016 Mar 21). Gaia DR3 epoch photometry shows x1.5 sixteen days earlier and x1.4 fifteen days later, equal in G, BP and RP, fading by late April. Gaia's classifier labels the star MICROLENSING.",
+   "status": "reproduced",
+   "target": "Gaia DR3 4145977633638478336",
+   "series": [
+    "ATLAS:ATLAS_H",
+    "ATLAS:ATLAS_c",
+    "ATLAS:ATLAS_g",
+    "ATLAS:ATLAS_i",
+    "ATLAS:ATLAS_o",
+    "ATLAS:ATLAS_r",
+    "GAIA:BP",
+    "GAIA:G",
+    "GAIA:RP",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "NEOWISE_EXP:W1",
+    "NEOWISE_EXP:W2"
+   ],
+   "n_claims": 5,
+   "n_hypotheses": 1,
+   "n_predictions": 0,
+   "featured": false,
+   "hunt": "H-0009"
   }
  ],
  "scorecards": [

@@ -109,7 +109,7 @@ single exposure for all 122 strong events and 117 of the 118 known lenses.
 | J173349 | unconstrained | 0.15 | no ATLAS frame near the event; OGLE observed the field in 2015 without an alert |
 
 The Gaia DR3 classifier already labels J172057 and J180402 MICROLENSING, though neither is in the DR3 microlensing catalogue. Both are now cases: **[OS-0026](../../cases/OS-0026)** (J172057) and **[OS-0027](../../cases/OS-0027)** (J180402). A
-further strong event, J180839.93-151910.5, is ×1.52 in Gaia DR3, equal in BP and RP; ATLAS is queued.
+further strong event, J180839.93-151910.5, is ×1.52 in Gaia DR3, equal in BP and RP (now OS-0029).
 
 **Do the relaxed rules let artifacts in?** Yes, but not through the flags they relaxed.
 - Halo-, deblend- and saturation-flagged event frames are as common among known lenses (71%) as among strong events (70%):
@@ -134,7 +134,7 @@ variability tables, classifier and epoch photometry for all 210 Gaia sources wit
 
 - 35 events fall inside DR3's epoch-photometry span (2014.6-2017.4). Gaia confirms three as achromatic brightenings at the NEOWISE
   time: J172057 (×6.1 in G, BP and RP alike; OS-0026), J180402 (×2.6 in G and RP; OS-0027) and J180839.93-151910.5 (×1.5 in G,
-  BP and RP alike, 16 d before NEOWISE's ×1.6). The DR3 classifier labels all three MICROLENSING; none is in the DR3 microlensing
+  BP and RP alike, 16 d before NEOWISE's ×1.6; ATLAS's blurred 2016 images show the decline; now **[OS-0029](../../cases/OS-0029)**). The DR3 classifier labels all three MICROLENSING; none is in the DR3 microlensing
   catalogue. No other source near any event has DR3 epoch photometry, so the other 32 cannot be tested in DR3.
 - A population estimate: 61% of known lenses in the same span have a Gaia-variable source within 4", against 3 of 28 strong
   events, which implies that about 20% of these events (95%: 6-50%) are lenses on the Gaia star, in line with H-0008's 10-25%.
@@ -167,6 +167,6 @@ counterpart. Grading changes after DR4 lands are limited to mapping DR4 columns.
 
 ## Next
 
-- ATLAS for J180839 (queued). Optical checks for the other strong events, and re-matching the 31 off-target ones.
+- Optical checks for the other strong events, and re-matching the 31 off-target ones.
 - Rerun the long pass with the exposure-level fix above.
 - Grade the six DR4 predictions in December.

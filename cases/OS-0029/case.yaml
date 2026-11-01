@@ -1,0 +1,72 @@
+id: OS-0029
+title: 'A star in Serpens brightened by half in March 2016, equally in Gaia''s three bands: a microlensing
+  candidate'
+hook: Found blind in Oddsky hunt H-0009 (NEOWISE x1.6 on 2016 Mar 21). Gaia DR3 epoch photometry shows
+  x1.5 sixteen days earlier and x1.4 fifteen days later, equal in G, BP and RP, fading by late April.
+  Gaia's classifier labels the star MICROLENSING.
+status: reproduced
+target:
+  name: Gaia DR3 4145977633638478336
+  ra: 272.1663777
+  dec: -15.3195869
+  aliases: []
+  gaia_source_id: 4145977633638478336
+summary: ''
+claims:
+- id: C1
+  text: 'NEOWISE on 2016 Mar 21: x1.62 in W1 and x1.67 in W2 against the star''s median; every other visit
+    quiet. Found blind by hunt H-0009.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-01T02:31:44+00:00'
+- id: C2
+  text: 'Gaia DR3 epoch photometry of Gaia DR3 4145977633638478336 (G 16.0): G x1.52 at -16 d; G, BP and
+    RP x1.39, x1.38, x1.39 at +15 d; x1.15 at +35 d; no other brightening in 28 transits in 2014-2017
+    (hunts/H-0009/reviews/gaia-dr3-sweep-2026-10-31.md).'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-01T02:31:44+00:00'
+- id: C3
+  text: 'ATLAS (task 5276400), in blurred 2016 images that bias fluxes low: x1.24 (c) at +12 d, x1.37
+    and x1.20 (o) at +26 and +30 d, x0.94-0.96 at +45-52 d, consistent with Gaia''s decline.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-01T02:31:44+00:00'
+- id: C4
+  text: The Gaia DR3 classifier labels the star MICROLENSING (score 0.21); it is not in the Gaia DR3 microlensing
+    catalogue.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-01T02:31:44+00:00'
+- id: C5
+  text: Not in TNS or the Gaia alerts (2026-10-31); MOA and the KMTNet 2016 season unchecked.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-01T02:31:44+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A lens magnified the star by about half for roughly six weeks around 2016 March; the peak
+    fell between Gaia's transits.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  conflicts: []
+  would_falsify: A repeat, or BP and RP changing differently.
+  status: live
+  confidence: 0.5
+  author: claude-opus-5.5
+  at: '2026-11-01T02:31:44+00:00'
+predictions: []
+literature: []
+hunt: H-0009
+featured: false
+created_at: '2026-11-01T02:27:44+00:00'
