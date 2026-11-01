@@ -38,6 +38,17 @@ constrained; four non-lens comparison fits had not converged; scan-angle imposto
 J173332, J072830, J200958 and J182124 are clean and on the Gaia star. The tables below are the first pass; the referee's verdicts
 above supersede them where they differ.
 
+## ATLAS follow-up (`reviews/atlas-2026-11-01.md`)
+
+ATLAS forced photometry for 8 candidates (all 2015-2017 events; the three strong candidates peaked before ATLAS began in 2015
+July and cannot be tested by it). J200958.93+321427.9 is confirmed by ATLAS: o ×1.29 ± 0.04 on 2015 Dec 6-9 against ×1.31
+predicted for a brightening of the Gaia star; it stays a candidate (P 0.45; lens and bump fit equally). J184922.92-000203.9's event
+is real but not lens-shaped (12-day rise, 80-day decline; P 0.10). J182811.16-082538.6's event is real but its blue does not follow
+(ATLAS c and Gaia BP; P 0.25). J184837 is consistent but weak, and J174036 and J174029 had no ATLAS coverage. The published lens
+J182124 served as a control: ATLAS sees it only weakly (2.7σ in c), because a G 15 star 5.2" away dominates the ATLAS flux, so an
+ATLAS non-detection in a crowded field means little. The expected number of real lenses among the 20 unpublished candidates stays
+about 7.5.
+
 ## Data
 
 | | |

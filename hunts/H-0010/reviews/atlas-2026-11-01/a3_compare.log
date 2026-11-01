@@ -1,0 +1,261 @@
+======================================== J182124 J182124.77-190909.7
+Gaia G template: lens t0 57247.0 (2015-08-12) tE 59.3 u0 0.628 fs 0.73 chi2 17.0; asym PV7 t0 57230.7 w 64.4/80.9 m 2.27 amp 0.73 chi2 17.0 (n 24)
+Gaia G transits within 150 d of t0: 2015-04-18(-138):x1.04  2015-09-06(+3):x1.44  2015-09-06(+3):x1.44  2015-10-03(+30):x1.20  2015-10-27(+54):x1.12
+Gaia G away from the event (|dt| > 150 d): n 19, max x1.045, min x0.974, robust scatter 0.018
+Gaia star in ATLAS bands: c 106 uJy, o 350 uJy. Nights within 120 d (excess in uJy; pred = lens-on-star from Gaia G):
+      date     dt F cam  n  maj     ujy  ujy_err  n400  exc400  err400  n150  exc150  err150  RG_lens  pred_lens  pred_shape  gaia_near_dt  gaia_near_R
+2015-07-25 -40.21 o 02a  4 3.79 2177.01    28.99     6   54.97  183.40     9  217.81  177.43     1.50     173.48      254.87         43.04         1.44
+2015-08-08 -26.21 c 02a  2 5.66 1172.48    29.00     0     NaN     NaN     0     NaN     NaN     1.59      62.81       73.83         29.04         1.44
+2015-08-09 -25.24 c 02a  4 4.22 1026.86    12.74     0     NaN     NaN    14   56.27   54.79     1.60      63.11       73.24         28.07         1.44
+2015-08-10 -24.24 c 02a  4 4.10  957.93    18.03     0     NaN     NaN    10    0.63   58.37     1.60      63.35       72.59         27.07         1.44
+2015-08-11 -23.25 c 02a  4 4.22 1004.40    22.53     0     NaN     NaN    13   40.62   53.36     1.60      63.52       71.91         26.07         1.44
+2015-09-23  19.66 o 02a  4 4.16 2209.80    78.28     4     NaN     NaN     5  273.90  146.55     1.29     100.12      101.02         10.65         1.20
+2015-09-24  20.63 o 02a  1 3.90 1775.00    61.00     5 -360.00   79.58     9 -184.19  177.43     1.28      97.52       98.45          9.68         1.20
+2015-10-01  27.67 o 02a  1 4.50 2079.00    46.00     1     NaN     NaN     5 -232.45  297.45     1.23      80.38       81.36          2.64         1.20
+2015-10-03  29.67 o 02a  1 4.68 1994.00    51.00     0     NaN     NaN     3     NaN     NaN     1.22      76.05       76.99          0.64         1.20
+2015-10-09  35.64 c 02a  4 4.56  986.44    19.83     1     NaN     NaN    12  -40.99   89.36     1.18      19.51       19.73         -5.32         1.20
+2015-10-13  39.64 c 02a  3 5.17 1175.94    81.35     0     NaN     NaN     3     NaN     NaN     1.17      17.47       17.64         -9.33         1.20
+2015-10-14  40.63 c 02a  4 5.20 1180.53    33.83     0     NaN     NaN     2     NaN     NaN     1.16      17.01       17.16        -10.32         1.20
+2015-10-16  42.63 c 02a  3 4.81 1062.68    20.39     1     NaN     NaN     7    2.41   51.09     1.15      16.10       16.22         11.76         1.12
+2015-10-22  48.63 c 02a  2 4.93 1172.28    41.14     1     NaN     NaN     8   95.89   47.23     1.13      13.68       13.71          5.75         1.12
+2015-10-23  49.64 o 02a  1 5.23 2452.00    70.00     0     NaN     NaN     1     NaN     NaN     1.13      44.01       44.05          4.74         1.12
+2015-10-26  52.63 o 02a  2 4.81 2207.53    62.88     0     NaN     NaN     3     NaN     NaN     1.12      40.63       40.52          1.75         1.12
+  o  +-30 d, baseline |dt|>400:  1 nights; alpha -3.69 +- 0.82 (shape template -3.66 +- 0.81); chi2 alpha=0 20.5, alpha=1 33.1; predicted-signal S/N 1.2
+  o  +-30 d, baseline |dt|>150:  3 nights; alpha +0.59 +- 1.70 (shape template +0.58 +- 1.69); chi2 alpha=0 5.2, alpha=1 5.0; predicted-signal S/N 0.9
+  c  +-30 d, baseline |dt|>150:  3 nights; alpha +0.54 +- 0.50 (shape template +0.47 +- 0.44); chi2 alpha=0 1.6, alpha=1 1.4; predicted-signal S/N 2.0
+  oc +-30 d, baseline |dt|>400:  1 nights; alpha -3.69 +- 0.82 (shape template -3.66 +- 0.81); chi2 alpha=0 20.5, alpha=1 33.1; predicted-signal S/N 1.2
+  oc +-30 d, baseline |dt|>150:  6 nights; alpha +0.54 +- 0.48 (shape template +0.48 +- 0.42); chi2 alpha=0 6.8, alpha=1 6.4; predicted-signal S/N 2.2
+  o  +-90 d, baseline |dt|>400:  2 nights; alpha -2.19 +- 1.94 (shape template -1.50 +- 1.92); chi2 alpha=0 20.6, alpha=1 33.5; predicted-signal S/N 1.5
+  o  +-90 d, baseline |dt|>150:  4 nights; alpha +0.94 +- 0.97 (shape template +0.77 +- 0.75); chi2 alpha=0 6.7, alpha=1 5.1; predicted-signal S/N 1.3
+  c  +-90 d, baseline |dt|>150:  6 nights; alpha +0.63 +- 0.49 (shape template +0.54 +- 0.43); chi2 alpha=0 6.0, alpha=1 4.9; predicted-signal S/N 2.0
+  oc +-90 d, baseline |dt|>400:  2 nights; alpha -2.19 +- 1.94 (shape template -1.50 +- 1.92); chi2 alpha=0 20.6, alpha=1 33.5; predicted-signal S/N 1.5
+  oc +-90 d, baseline |dt|>150: 10 nights; alpha +0.72 +- 0.42 (shape template +0.62 +- 0.36); chi2 alpha=0 12.7, alpha=1 10.0; predicted-signal S/N 2.4
+  pooled o +-30 d (relaxed baseline): 3 nights, excess +47.7 +- 105.6 uJy, predicted +96.7; in Gaia-star units +0.14 +- 0.30 (Gaia G-1 there +0.28); ATLAS ratio 1.024 +- 0.053 against a lens on the star 1.049
+  pooled o +-90 d (relaxed baseline): 4 nights, excess +92.2 +- 90.8 uJy, predicted +116.8; in Gaia-star units +0.26 +- 0.26 (Gaia G-1 there +0.33); ATLAS ratio 1.047 +- 0.046 against a lens on the star 1.059
+  pooled c +-30 d (relaxed baseline): 3 nights, excess +33.9 +- 32.0 uJy, predicted +63.3; in Gaia-star units +0.32 +- 0.30 (Gaia G-1 there +0.60)
+  pooled c +-90 d (relaxed baseline): 6 nights, excess +37.2 +- 22.7 uJy, predicted +39.6; in Gaia-star units +0.35 +- 0.22 (Gaia G-1 there +0.37)
+======================================== J200958 J200958.93+321427.9
+Gaia G template: lens t0 57355.8 (2015-11-29) tE 43.8 u0 0.810 fs 1.00 chi2 40.8; asym PV7 t0 57359.1 w 72.0/57.2 m 2.35 amp 0.49 chi2 31.8 (n 55)
+Gaia G transits within 150 d of t0: 2015-07-26(-126):x1.01  2015-07-26(-126):x1.03  2015-08-05(-116):x1.03  2015-08-05(-116):x1.01  2015-09-19(-71):x1.08  2015-09-19(-71):x1.09  2015-10-07(-53):x1.16  2015-11-12(-17):x1.41  2015-12-15(+16):x1.44  2015-12-15(+17):x1.44  2016-01-08(+40):x1.23  2016-01-08(+40):x1.22  2016-01-08(+40):x1.23  2016-01-08(+40):x1.21  2016-02-27(+91):x1.05  2016-02-28(+91):x1.02  2016-02-28(+91):x1.04  2016-03-21(+113):x1.03  2016-03-21(+113):x0.99  2016-04-27(+150):x1.00
+Gaia G away from the event (|dt| > 150 d): n 35, max x1.022, min x0.974, robust scatter 0.008
+Gaia star in ATLAS bands: c 66 uJy, o 356 uJy. Nights within 120 d (excess in uJy; pred = lens-on-star from Gaia G):
+      date      dt F cam  n  maj    ujy  ujy_err  n400  exc400  err400  n150  exc150  err150  RG_lens  pred_lens  pred_shape  gaia_near_dt  gaia_near_R
+2015-08-06 -114.93 o 02a  3 3.64 300.64   156.60     3     NaN     NaN    14  -67.80  156.72     1.02       7.97        8.09         -1.14         1.01
+2015-10-05  -55.04 o 02a  3 3.76 431.42    22.30     2     NaN     NaN    17   63.55   25.85     1.13      47.06       53.04          2.23         1.16
+2015-10-07  -53.04 o 02a  4 4.24 371.56    16.38     0     NaN     NaN     6    7.53   46.65     1.14      50.27       56.53          0.23         1.16
+2015-10-19  -41.04 c 02a  4 4.23  91.53    11.28     0     NaN     NaN     5   17.56   11.87     1.21      13.72       15.02        -11.77         1.16
+2015-10-20  -40.05 c 02a  4 4.22  94.68    14.53     0     NaN     NaN     6   18.49   14.90     1.22      14.17       15.45        -12.76         1.16
+2015-10-21  -39.04 c 02a  4 4.22  85.34    13.56     0     NaN     NaN     5   11.36   14.06     1.22      14.64       15.91        -13.76         1.16
+2015-10-24  -36.04 o 02a  4 4.08 371.96    23.94     1     NaN     NaN     6    7.92   46.65     1.25      87.64       94.06        -16.77         1.16
+2015-10-29  -31.10 o 02a  4 3.91 418.21    27.44     1     NaN     NaN    13   50.34   28.46     1.29     102.27      107.25         14.18         1.41
+2015-11-01  -28.09 o 02a  4 4.12 395.64    18.13     0     NaN     NaN     5   33.11   58.26     1.31     111.94      115.57         11.17         1.41
+2015-12-06    6.92 o 02a  2 3.84 500.06    23.48     1     NaN     NaN    14  133.35   28.92     1.50     179.61      174.29          9.47         1.44
+2015-12-07    7.92 o 02a  2 3.93 490.87    41.50     1     NaN     NaN    13  123.00   42.19     1.50     177.80      173.37          8.47         1.44
+2015-12-08    8.88 o 02a  4 3.69 473.57    17.37     3     NaN     NaN    15  104.57   24.21     1.49     175.85      172.27          7.51         1.44
+2015-12-09    9.89 o 02a  4 3.68 483.55    16.82     3     NaN     NaN    14  115.12   23.96     1.49     173.59      170.88          6.50         1.44
+2016-03-16  108.30 o 02a  1 3.73 361.00    30.00     2     NaN     NaN    17   -6.87   30.61     1.03       9.74        5.60          5.01         1.03
+2016-03-20  112.28 o 02a  3 4.12 371.34    28.20     0     NaN     NaN     5    8.81   58.26     1.02       8.76        4.88          1.03         1.03
+  o  +-30 d, baseline |dt|>150:  5 nights; alpha +0.65 +- 0.08 (shape template +0.67 +- 0.08); chi2 alpha=0 71.8, alpha=1 20.7; predicted-signal S/N 12.9
+  oc +-30 d, baseline |dt|>150:  5 nights; alpha +0.65 +- 0.08 (shape template +0.67 +- 0.08); chi2 alpha=0 71.8, alpha=1 20.7; predicted-signal S/N 12.9
+  o  +-90 d, baseline |dt|>150:  9 nights; alpha +0.64 +- 0.07 (shape template +0.65 +- 0.07); chi2 alpha=0 81.1, alpha=1 28.2; predicted-signal S/N 13.6
+  c  +-90 d, baseline |dt|>150:  3 nights; alpha +1.12 +- 0.55 (shape template +1.03 +- 0.50); chi2 alpha=0 4.4, alpha=1 0.2; predicted-signal S/N 1.8
+  oc +-90 d, baseline |dt|>150: 12 nights; alpha +0.65 +- 0.07 (shape template +0.66 +- 0.07); chi2 alpha=0 85.4, alpha=1 28.4; predicted-signal S/N 13.8
+  pooled o +-30 d (relaxed baseline): 5 nights, excess +112.2 +- 13.5 uJy, predicted +172.7; in Gaia-star units +0.32 +- 0.04 (Gaia G-1 there +0.48); ATLAS ratio 1.305 +- 0.037 against a lens on the star 1.470
+  pooled o +-90 d (relaxed baseline): 9 nights, excess +85.4 +- 10.5 uJy, predicted +132.2; in Gaia-star units +0.24 +- 0.03 (Gaia G-1 there +0.37); ATLAS ratio 1.232 +- 0.028 against a lens on the star 1.360
+  pooled c +-90 d (relaxed baseline): 3 nights, excess +15.9 +- 7.7 uJy, predicted +14.1; in Gaia-star units +0.24 +- 0.12 (Gaia G-1 there +0.22); ATLAS ratio 1.214 +- 0.104 against a lens on the star 1.189
+======================================== J184837 J184837.12-051620.2
+Gaia G template: lens t0 57835.5 (2017-03-23) tE 42.1 u0 0.762 fs 1.00 chi2 19.0; asym PV7 t0 57827.9 w 356.7/299.7 m 35.59 amp 0.56 chi2 16.7 (n 25)
+Gaia G transits within 150 d of t0: 2016-11-10(-131):x1.01  2017-03-16(-5):x1.56  2017-04-16(+26):x1.38  2017-04-16(+27):x1.37  2017-05-07(+47):x1.19  2017-05-07(+47):x1.20
+Gaia G away from the event (|dt| > 150 d): n 19, max x1.015, min x0.976, robust scatter 0.010
+Gaia star in ATLAS bands: c 91 uJy, o 285 uJy. Nights within 120 d (excess in uJy; pred = lens-on-star from Gaia G):
+      date     dt F cam  n  maj    ujy  ujy_err  n400  exc400  err400  n150  exc150  err150  RG_lens  pred_lens  pred_shape  gaia_near_dt  gaia_near_R
+2017-03-14  -6.69 o 01a  2 3.64 276.71    51.76    12  163.62   52.62    13  167.37   52.64     1.54     154.80      159.10          1.95         1.56
+2017-03-14  -6.68 o 02a  1 3.59 133.00    68.00     1     NaN     NaN     8   32.59   68.54     1.54     154.81      159.10          1.95         1.56
+2017-03-15  -5.68 o 02a  1 3.62 200.00    73.00     1     NaN     NaN    10   88.68   73.72     1.55     157.03      159.16          0.95         1.56
+2017-04-09  19.31 o 02a  1 3.63 134.00    66.00     1     NaN     NaN    10   22.68   66.80     1.46     130.82      124.92          7.12         1.38
+2017-05-08  48.29 o 01a  3 3.04  56.11    27.61    72   10.86   29.79    80   13.82   29.15     1.18      50.87       51.59         -1.28         1.20
+2017-05-09  49.27 o 01a  4 3.14  71.20    21.24    59   13.40   36.44    66   22.87   31.45     1.17      49.14       49.52         -2.26         1.20
+2017-05-10  50.22 o 02a  4 3.06  34.69    24.18     5   -5.26   24.50     5   -5.26   24.50     1.17      47.51       47.56         -3.22         1.20
+2017-05-11  51.17 o 02a  5 2.84  87.84    18.79    15   47.05   24.95    16   41.62   21.27     1.16      45.95       45.67         -4.16         1.20
+2017-05-13  53.28 o 01a  2 4.28 183.52   198.00     5   -3.24  198.01     6   19.36  198.58     1.15      42.66       41.61         -6.27         1.20
+2017-05-15  55.28 o 02a  1 2.33 -44.00    84.00   139 -130.82   84.13   147 -125.31   84.10     1.14      39.76       37.98         -8.28         1.20
+2017-05-19  59.28 o 02a  3 3.35  55.40    17.82     3     NaN     NaN    11  -24.04   59.83     1.12      34.59       31.40        -12.27         1.20
+2017-05-27  67.26 c 02a  2 2.45  -1.74    12.50    68    6.87   20.90    70    7.29   20.89     1.09       8.40        6.63        -20.26         1.20
+2017-05-31  71.22 c 02a  5 2.90  -9.75     8.39    25   13.47   16.32    25   13.47   16.32     1.08       7.36        5.32        -24.22         1.20
+2017-06-01  72.29 o 01a  1 3.95 131.00    75.00     8   -1.54   76.10     9    7.50   75.86     1.08      22.25       15.66        -25.29         1.20
+2017-06-02  73.28 o 01a  1 3.07  44.00    32.00    68   -4.33   32.21    75   -2.03   32.18     1.08      21.53       14.79        -26.27         1.20
+2017-06-05  76.27 o 01a  3 2.98  42.02    17.65    84   -6.30   30.73    91   -5.15   29.29     1.07      19.52       12.39        -29.26         1.20
+2017-06-06  77.23 o 01a  3 3.16  96.39    27.15    53   46.52   32.59    60   49.79   29.57     1.07      18.93       11.69        -30.22         1.20
+2017-06-08  79.16 o 02a  3 2.22 108.54    80.23   139   15.03   80.40   150   17.39   80.37     1.06      17.78       10.38        -32.15         1.20
+2017-06-12  83.25 o 02a  9 2.47  -6.50    17.99    92  -78.74   47.51    97  -78.14   42.05     1.05      15.61        8.01        -36.25         1.20
+2017-06-13  84.27 o 01a  2 2.88  12.81    72.50    91  -36.67   72.57    97  -35.14   72.56     1.05      15.12        7.49        -37.27         1.20
+2017-06-27  98.17 o 01a  4 3.78  75.07    59.96    11  -46.95   60.83    12  -44.85   60.64     1.03       9.92        2.86        -51.16         1.20
+2017-07-01 102.13 o 01a  3 3.26  57.70    17.91    45   -2.59   38.18    52    8.02   40.34     1.03       8.84        2.13        -55.13         1.20
+2017-07-03 104.13 o 02a  3 2.61  17.74    15.68    51  -43.49   31.09    52  -44.74   27.29     1.03       8.35        1.83        -57.13         1.20
+2017-07-11 112.13 o 02a  4 2.21  37.35    19.55   138  -57.33   63.75   149  -54.65   59.49     1.02       6.68        0.97        -65.13         1.20
+2017-07-13 114.12 o 01a  7 3.04  60.39    16.76    72   15.14   29.79    80   18.10   29.15     1.02       6.33        0.83        -67.11         1.20
+2017-07-15 116.12 o 02a  4 2.24  72.39    15.15   137  -21.11   62.27   148  -18.76   59.08     1.02       5.99        0.70        -69.12         1.20
+2017-07-17 118.12 o 01a  4 3.04  68.84    25.38    72   23.59   29.79    80   26.55   29.15     1.02       5.68        0.59        -71.12         1.20
+  o  +-30 d, baseline |dt|>400:  1 nights; alpha +1.06 +- 0.34 (shape template +1.03 +- 0.33); chi2 alpha=0 9.7, alpha=1 0.0; predicted-signal S/N 2.9
+  o  +-30 d, baseline |dt|>150:  4 nights; alpha +0.62 +- 0.23 (shape template +0.61 +- 0.22); chi2 alpha=0 11.9, alpha=1 6.7; predicted-signal S/N 4.7
+  oc +-30 d, baseline |dt|>400:  1 nights; alpha +1.06 +- 0.34 (shape template +1.03 +- 0.33); chi2 alpha=0 9.7, alpha=1 0.0; predicted-signal S/N 2.9
+  oc +-30 d, baseline |dt|>150:  4 nights; alpha +0.62 +- 0.23 (shape template +0.61 +- 0.22); chi2 alpha=0 11.9, alpha=1 6.7; predicted-signal S/N 4.7
+  o  +-90 d, baseline |dt|>400: 14 nights; alpha +0.56 +- 0.22 (shape template +0.59 +- 0.22); chi2 alpha=0 21.1, alpha=1 18.2; predicted-signal S/N 4.7
+  o  +-90 d, baseline |dt|>150: 18 nights; alpha +0.49 +- 0.16 (shape template +0.50 +- 0.16); chi2 alpha=0 25.5, alpha=1 26.4; predicted-signal S/N 6.2
+  c  +-90 d, baseline |dt|>400:  2 nights; alpha +1.38 +- 1.66 (shape template +1.80 +- 2.20); chi2 alpha=0 0.8, alpha=1 0.1; predicted-signal S/N 0.6
+  c  +-90 d, baseline |dt|>150:  2 nights; alpha +1.40 +- 1.65 (shape template +1.84 +- 2.20); chi2 alpha=0 0.8, alpha=1 0.1; predicted-signal S/N 0.6
+  oc +-90 d, baseline |dt|>400: 16 nights; alpha +0.58 +- 0.21 (shape template +0.60 +- 0.21); chi2 alpha=0 21.9, alpha=1 18.4; predicted-signal S/N 4.8
+  oc +-90 d, baseline |dt|>150: 20 nights; alpha +0.50 +- 0.16 (shape template +0.51 +- 0.16); chi2 alpha=0 26.3, alpha=1 26.5; predicted-signal S/N 6.2
+  pooled o +-30 d (relaxed baseline): 4 nights, excess +90.4 +- 31.9 uJy, predicted +149.7; in Gaia-star units +0.32 +- 0.11 (Gaia G-1 there +0.53)
+  pooled o +-90 d (relaxed baseline): 18 nights, excess +16.0 +- 9.2 uJy, predicted +45.3; in Gaia-star units +0.06 +- 0.03 (Gaia G-1 there +0.16)
+  pooled c +-90 d (relaxed baseline): 2 nights, excess +11.1 +- 12.9 uJy, predicted +7.8; in Gaia-star units +0.12 +- 0.14 (Gaia G-1 there +0.09)
+======================================== J174036 J174036.98-223251.4
+Gaia G template: lens t0 57793.7 (2017-02-09) tE 19.0 u0 0.288 fs 1.00 chi2 28.8; asym PV7 t0 57803.0 w 36.7/29.8 m 6.50 amp 4.32 chi2 24.0 (n 35)
+Gaia G transits within 150 d of t0: 2016-09-13(-149):x0.97  2016-10-31(-101):x0.97  2016-11-01(-101):x1.00  2017-01-30(-11):x1.87  2017-01-30(-11):x1.86  2017-01-30(-11):x1.87  2017-01-30(-10):x1.86  2017-02-06(-4):x3.09  2017-02-06(-4):x3.09  2017-02-06(-4):x3.14  2017-03-16(+35):x1.11  2017-04-25(+75):x1.02  2017-04-25(+75):x1.00  2017-04-26(+75):x0.95  2017-04-26(+75):x1.01  2017-04-26(+75):x0.98  2017-04-26(+75):x0.96  2017-04-26(+75):x1.03  2017-04-30(+79):x0.98  2017-04-30(+79):x0.99  2017-04-30(+80):x0.99  2017-04-30(+80):x1.01  2017-05-01(+80):x1.00  2017-05-01(+80):x0.99
+Gaia G away from the event (|dt| > 150 d): n 11, max x1.033, min x0.978, robust scatter 0.024
+Gaia star in ATLAS bands: c 39 uJy, o 87 uJy. Nights within 120 d (excess in uJy; pred = lens-on-star from Gaia G):
+      date     dt F cam  n  maj     ujy  ujy_err  n400  exc400  err400  n150  exc150  err150  RG_lens  pred_lens  pred_shape  gaia_near_dt  gaia_near_R
+2017-03-14  32.48 o 01a  4 3.67  -78.60    80.32     6  183.56  148.39     8  183.56  145.72     1.09       7.63       15.81          2.19         1.11
+2017-03-14  32.50 o 02a  4 3.62 -286.87    34.59     4     NaN     NaN     9  -94.71  106.30     1.09       7.62       15.75          2.17         1.11
+2017-03-15  33.50 o 02a  4 3.52 -269.11    34.78     4     NaN     NaN     8  -42.94  149.15     1.08       7.03       12.73          1.17         1.11
+2017-05-06  85.48 o 02a  3 2.18  261.35    30.86    85   98.04   85.25    92   87.74   89.03     1.00       0.35        0.00         -5.51         0.99
+2017-05-08  87.46 o 01a  4 3.28 -364.10    32.68    34 -121.87   95.10    40 -120.75   67.20     1.00       0.32        0.00         -7.49         0.99
+2017-05-09  88.41 o 01a  3 3.20  -99.06    39.97    36  118.89  101.69    42  126.68   88.86     1.00       0.31        0.00         -8.43         0.99
+2017-05-18  97.46 o 02a  5 2.62  169.27    22.00    42  -31.93  100.71    46  -35.37  100.61     1.00       0.21        0.00        -17.49         0.99
+2017-05-21 100.49 o 01a  2 3.11 -322.95   118.00    33 -137.62  119.54    39 -124.40  119.28     1.00       0.19        0.00        -20.51         0.99
+2017-05-22 101.46 c 02a  4 2.72   47.41    14.23    56  -15.23   26.49    60  -17.18   25.93     1.00       0.08        0.00        -21.49         0.99
+2017-05-24 103.48 o 01a  2 4.04 -398.32    36.41     3     NaN     NaN     3     NaN     NaN     1.00       0.17        0.00        -23.51         0.99
+2017-05-25 104.49 o 01a  1 4.74 -208.00    62.00     2     NaN     NaN     2     NaN     NaN     1.00       0.16        0.00        -24.51         0.99
+2017-05-26 105.45 c 02a  3 2.57   74.35    13.03    58    9.06   26.55    62    8.08   25.22     1.00       0.07        0.00        -25.47         0.99
+2017-05-28 107.47 o 01a  2 4.87 -231.71    41.36     1     NaN     NaN     1     NaN     NaN     1.00       0.15        0.00        -27.49         0.99
+2017-05-29 108.48 o 01a  4 4.96  -71.64   100.21     1     NaN     NaN     1     NaN     NaN     1.00       0.14        0.00        -28.50         0.99
+2017-05-30 109.44 c 02a  5 2.70   74.92     9.92    55   13.67   26.47    59   10.87   25.71     1.00       0.06        0.00        -29.46         0.99
+2017-06-01 111.47 o 01a  3 3.82 -430.25    33.86     7 -161.07   72.99     9 -161.07   71.97     1.00       0.13        0.00        -31.50         0.99
+2017-06-02 112.46 o 01a  4 3.12 -284.28    48.26    34  -97.18  110.09    40  -85.13  113.29     1.00       0.12        0.00        -32.49         0.99
+2017-06-03 113.43 o 02a  3 2.46  215.93    44.91    70   26.91   87.03    75   17.71   89.78     1.00       0.12        0.00        -33.45         0.99
+2017-06-05 115.43 o 01a  4 2.85 -192.87    40.75    37 -146.97  156.68    39 -134.04  152.64     1.00       0.11        0.00        -35.45         0.99
+2017-06-06 116.38 o 01a  4 3.28 -265.83    26.15    34  -23.61   95.10    40  -22.49   67.20     1.00       0.11        0.00        -36.41         0.99
+  o  +-90 d, baseline |dt|>400:  4 nights; alpha +25.18 +- 22.75 (shape template +11.61 +- 11.28); chi2 alpha=0 5.9, alpha=1 5.7; predicted-signal S/N 0.1
+  o  +-90 d, baseline |dt|>150:  6 nights; alpha -1.11 +- 13.08 (shape template -0.49 +- 6.51); chi2 alpha=0 8.7, alpha=1 8.7; predicted-signal S/N 0.1
+  oc +-90 d, baseline |dt|>400:  4 nights; alpha +25.18 +- 22.75 (shape template +11.61 +- 11.28); chi2 alpha=0 5.9, alpha=1 5.7; predicted-signal S/N 0.1
+  oc +-90 d, baseline |dt|>150:  6 nights; alpha -1.11 +- 13.08 (shape template -0.49 +- 6.51); chi2 alpha=0 8.7, alpha=1 8.7; predicted-signal S/N 0.1
+  pooled o +-90 d (relaxed baseline): 6 nights, excess -2.0 +- 39.1 uJy, predicted +2.3; in Gaia-star units -0.02 +- 0.45 (Gaia G-1 there +0.03)
+======================================== J180313 J180313.03-150702.0
+Gaia G template: lens t0 57329.2 (2015-11-03) tE 95.2 u0 0.158 fs 0.96 chi2 33.7; asym PV7 t0 57399.7 w 29.1/8.0 m 1.82 amp 200.00 chi2 17.6 (n 20)
+Gaia G transits within 150 d of t0: 2015-09-06(-54):x1.85  2015-10-05(-25):x2.94  2015-10-27(-2):x5.78  2016-03-05(+128):x1.20
+Gaia G away from the event (|dt| > 150 d): n 16, max x1.082, min x0.884, robust scatter 0.029
+Gaia star in ATLAS bands: c 12 uJy, o 50 uJy. Nights within 120 d (excess in uJy; pred = lens-on-star from Gaia G):
+      date      dt F cam  n  maj     ujy  ujy_err  n400  exc400  err400  n150  exc150  err150  RG_lens  pred_lens  pred_shape  gaia_near_dt  gaia_near_R
+2015-07-19 -102.73 o 02a  3 3.97  -21.32    27.52     4     NaN     NaN     8   64.44   51.89     1.25      12.41       13.12         48.89         1.85
+2015-07-25  -96.72 o 02a  5 3.73  -65.06    23.88     3     NaN     NaN     8  -17.44   59.97     1.28      14.06       14.83         42.88         1.85
+2015-08-08  -82.72 c 02a  2 5.08 1326.48   885.50     0     NaN     NaN     8 1430.54  885.53     1.38       4.63        4.86         28.88         1.85
+2015-08-09  -81.75 c 02a  6 4.34  -65.23    13.91     1     NaN     NaN    11    3.65   14.50     1.39       4.73        4.97         27.91         1.85
+2015-08-10  -80.74 c 02a  6 4.22  -52.78    12.85     1     NaN     NaN    11   16.09   14.25     1.40       4.84        5.08         26.91         1.85
+2015-08-11  -79.75 c 02a  5 4.26  -22.73    14.75     1     NaN     NaN    11   46.14   15.32     1.41       4.95        5.20         25.91         1.85
+2015-09-23  -36.85 o 02a  6 4.14  -78.77    52.40     2     NaN     NaN     5   33.83   53.14     2.29      64.28       66.21         12.17         2.94
+2015-09-24  -35.86 o 02a  2 4.05  -40.68   137.50     4     NaN     NaN     6   71.31  137.87     2.34      66.36       68.24         11.19         2.94
+2015-10-02  -27.83 o 02a  1 4.63   22.00    60.00     0     NaN     NaN     5  263.69   70.44     2.76      87.32       88.12          3.15         2.94
+2015-10-03  -26.82 o 02a  1 4.68 -174.00    65.00     0     NaN     NaN     4     NaN     NaN     2.82      90.54       91.09          2.15         2.94
+2015-10-09  -20.85 c 02a  4 4.59  -25.38    18.83     1     NaN     NaN     9   76.13   32.18     3.28      27.51       27.08         -3.83         2.94
+2015-10-13  -16.85 c 02a  4 5.40 -221.48    74.26     0     NaN     NaN     2     NaN     NaN     3.68      32.25       31.21         -7.83         2.94
+2015-10-14  -15.85 c 02a  5 5.47 -222.67    30.54     0     NaN     NaN     1     NaN     NaN     3.79      33.58       32.36         -8.82         2.94
+2015-10-16  -13.86 c 02a  4 5.27 -161.58    28.02     0     NaN     NaN     4     NaN     NaN     4.03      36.45       34.82        -10.82         2.94
+2015-10-22   -7.87 c 02a  4 5.00  -89.48    55.07     0     NaN     NaN     7   16.21   55.32     4.86      46.54       43.77          5.51         5.78
+2015-10-23   -6.86 o 02a  2 5.72 -418.53   120.00     0     NaN     NaN     0     NaN     NaN     5.02     199.48      187.70          4.51         5.78
+2015-10-26   -3.87 o 02a  1 5.05 -411.00    78.00     0     NaN     NaN     3     NaN     NaN     5.47     222.02      211.72          1.51         5.78
+  o  +-30 d, baseline |dt|>150:  1 nights; alpha +3.02 +- 0.81 (shape template +2.99 +- 0.80); chi2 alpha=0 14.0, alpha=1 6.3; predicted-signal S/N 1.2
+  c  +-30 d, baseline |dt|>150:  2 nights; alpha +1.58 +- 1.21 (shape template +1.67 +- 1.22); chi2 alpha=0 5.7, alpha=1 2.6; predicted-signal S/N 1.2
+  oc +-30 d, baseline |dt|>150:  3 nights; alpha +2.32 +- 0.78 (shape template +2.38 +- 0.75); chi2 alpha=0 19.7, alpha=1 8.9; predicted-signal S/N 1.7
+  o  +-90 d, baseline |dt|>150:  3 nights; alpha +1.75 +- 0.86 (shape template +1.70 +- 0.85); chi2 alpha=0 14.7, alpha=1 6.6; predicted-signal S/N 1.8
+  c  +-90 d, baseline |dt|>150:  6 nights; alpha +2.11 +- 1.11 (shape template +2.21 +- 1.11); chi2 alpha=0 18.7, alpha=1 13.0; predicted-signal S/N 1.3
+  oc +-90 d, baseline |dt|>150:  9 nights; alpha +1.88 +- 0.63 (shape template +1.87 +- 0.62); chi2 alpha=0 33.4, alpha=1 19.6; predicted-signal S/N 2.2
+  pooled o +-30 d (relaxed baseline): 1 nights, excess +263.7 +- 70.4 uJy, predicted +87.3; in Gaia-star units +5.31 +- 1.42 (Gaia G-1 there +1.76)
+  pooled o +-90 d (relaxed baseline): 3 nights, excess +113.2 +- 40.5 uJy, predicted +72.1; in Gaia-star units +2.28 +- 0.82 (Gaia G-1 there +1.45)
+  pooled c +-30 d (relaxed baseline): 2 nights, excess +61.0 +- 27.8 uJy, predicted +32.3; in Gaia-star units +5.06 +- 2.31 (Gaia G-1 there +2.68)
+  pooled c +-90 d (relaxed baseline): 6 nights, excess +24.5 +- 8.1 uJy, predicted +7.2; in Gaia-star units +2.04 +- 0.67 (Gaia G-1 there +0.59)
+======================================== J184922 J184922.92-000203.9
+Gaia G template: lens t0 57724.2 (2016-12-02) tE 147.8 u0 0.000 fs 1.00 chi2 93.7; asym PV7 t0 57735.4 w 8.9/13.0 m 1.31 amp 200.00 chi2 5.8 (n 21)
+Gaia G transits within 150 d of t0: 2016-09-20(-82):x1.54  2016-11-11(-30):x7.43  2017-03-15(+94):x2.17  2017-04-15(+125):x1.52  2017-04-15(+125):x1.58  2017-05-06(+146):x1.37
+Gaia G away from the event (|dt| > 150 d): n 15, max x1.128, min x0.895, robust scatter 0.096
+Gaia star in ATLAS bands: c 11 uJy, o 38 uJy. Nights within 120 d (excess in uJy; pred = lens-on-star from Gaia G):
+      date      dt F cam  n  maj     ujy  ujy_err  n400  exc400  err400  n150  exc150  err150  RG_lens  pred_lens  pred_shape  gaia_near_dt  gaia_near_R
+2016-08-15 -118.37 o 02a  3 4.30  -56.89    91.80     0     NaN     NaN     7    0.61   92.43     1.62      23.55        8.23         36.18         1.54
+2016-08-16 -117.33 o 02a  5 4.46  -66.08    44.32     0     NaN     NaN     5    0.59   46.29     1.63      23.96        8.42         35.14         1.54
+2016-08-19 -114.33 o 02a  3 3.89 -163.91    32.43     2     NaN     NaN     6 -120.80   33.36     1.66      25.21        8.99         32.14         1.54
+2016-08-30 -103.39 c 02a  5 3.95  -34.60     7.16     1     NaN     NaN     4     NaN     NaN     1.80       9.11        3.47         21.19         1.54
+2016-09-07  -95.40 c 02a  5 3.82  -18.40     7.95     1     NaN     NaN     3     NaN     NaN     1.93      10.56        4.26         13.21         1.54
+2016-09-16  -86.42 o 02a  1 3.48  -44.00    69.00     3     NaN     NaN     6   -0.89   70.15     2.11      42.27       18.38          4.22         1.54
+2016-09-19  -83.42 o 02a  5 3.43  -22.35    15.63     4     NaN     NaN     7   17.38   48.77     2.18      44.96       20.10          1.23         1.54
+2016-09-27  -75.44 c 02a  5 4.07   -7.49     7.17     1     NaN     NaN     7    8.46    7.49     2.41      15.95        7.74         -6.76         1.54
+2016-10-01  -71.46 c 02a  5 3.99  -86.77    16.92     1     NaN     NaN     5  -70.81   17.04     2.54      17.47        8.87        -10.74         1.54
+2016-10-09  -63.47 o 02a  5 3.57   25.86    16.17     3     NaN     NaN     7   65.59   17.53     2.88      71.27       40.03        -18.72         1.54
+2016-10-11  -61.48 o 02a  5 3.68  124.17    17.17     2     NaN     NaN     5  170.65   17.74     2.98      75.09       43.36        -20.72         1.54
+2016-10-15  -57.50 o 02a 10 3.58  103.53    19.36     3     NaN     NaN     5  150.01   19.87     3.20      83.69       51.23        -24.70         1.54
+2016-10-19  -53.52 o 02a  5 3.77   67.36    14.06     2     NaN     NaN     6  110.47   15.33     3.47      93.92       61.20         23.48         7.43
+2016-10-27  -45.52 c 02a  5 3.70    8.03     8.99     0     NaN     NaN     2     NaN     NaN     4.20      36.27       27.17         15.48         7.43
+2016-10-31  -41.52 c 02a  5 4.43 -121.38     9.07     1     NaN     NaN     7 -106.66    9.29     4.70      41.99       33.96         11.48         7.43
+2016-11-04  -37.51 c 02a  2 4.05  -60.52    16.61     1     NaN     NaN     5  -44.56   16.73     5.36      49.39       43.33          7.47         7.43
+2017-04-09  118.86 o 02a 10 3.44   -3.21    11.15     3     NaN     NaN     6   39.90   33.49     1.45      17.25       23.90          6.15         1.52
+  o  +-90 d, baseline |dt|>150:  6 nights; alpha +1.45 +- 0.23 (shape template +2.36 +- 0.39); chi2 alpha=0 215.6, alpha=1 42.1; predicted-signal S/N 9.5
+  c  +-90 d, baseline |dt|>150:  4 nights; alpha -1.77 +- 0.68 (shape template -2.33 +- 0.80); chi2 alpha=0 157.5, alpha=1 315.5; predicted-signal S/N 5.9
+  oc +-90 d, baseline |dt|>150: 10 nights; alpha +0.56 +- 0.54 (shape template +0.55 +- 0.85); chi2 alpha=0 373.1, alpha=1 357.6; predicted-signal S/N 11.2
+  pooled o +-90 d (relaxed baseline): 6 nights, excess +116.5 +- 8.5 uJy, predicted +80.2; in Gaia-star units +3.07 +- 0.22 (Gaia G-1 there +2.11)
+  pooled c +-90 d (relaxed baseline): 4 nights, excess -40.9 +- 5.2 uJy, predicted +27.7; in Gaia-star units -3.61 +- 0.46 (Gaia G-1 there +2.44)
+======================================== J182811 J182811.16-082538.6
+Gaia G template: lens t0 57298.0 (2015-10-03) tE 381.5 u0 0.005 fs 0.07 chi2 8.0; asym PV7 t0 57296.9 w 2.7/2.9 m 0.61 amp 13.87 chi2 8.4 (n 18)
+Gaia G transits within 150 d of t0: 2015-09-08(-30):x1.99  2015-10-05(-4):x9.14  2015-10-05(-4):x8.86  2015-10-30(+22):x1.84  2015-10-30(+22):x1.77  2016-03-05(+149):x1.21  2016-03-05(+149):x1.20
+Gaia G away from the event (|dt| > 150 d): n 11, max x1.132, min x0.915, robust scatter 0.093
+Gaia star in ATLAS bands: c 11 uJy, o 68 uJy. Nights within 120 d (excess in uJy; pred = lens-on-star from Gaia G):
+      date     dt F cam  n  maj     ujy  ujy_err  n400  exc400  err400  n150  exc150  err150  RG_lens  pred_lens  pred_shape  gaia_near_dt  gaia_near_R
+2015-07-26 -74.64 o 02a  4 3.59 -405.05    36.63     3     NaN     NaN    14   37.96   40.84     1.30      20.76       18.34         44.29         1.99
+2015-08-12 -57.67 c 02a  4 3.90 -138.73     9.74     1     NaN     NaN    16    8.34   11.86     1.42       4.87        4.41         27.32         1.99
+2015-09-23 -15.77 o 02a  4 3.86 -353.85    26.13     2     NaN     NaN     9   88.00   51.66     3.45     167.27      217.03         11.99         9.14
+2015-09-24 -14.80 o 02a  1 3.64 -366.00    74.00     2     NaN     NaN    14   77.00   74.75     3.72     185.23      247.59         11.02         9.14
+2015-10-02  -6.76 o 02a  1 4.09  -62.00    34.00     0     NaN     NaN     9  379.86   40.41    12.29     769.57      934.03          2.98         9.14
+2015-10-03  -5.77 o 02a  1 4.01 -171.00    37.00     0     NaN     NaN    11  254.00   42.22    12.91     811.65      830.16          1.98         9.14
+2015-10-09   0.21 c 02a  4 4.06 -166.91    13.15     1     NaN     NaN    16  -15.18   14.20     4.76      43.22       46.02         -3.82         8.86
+2015-10-13   4.21 c 02a  3 4.64 -157.70    15.69     0     NaN     NaN     4     NaN     NaN     3.34      26.92       28.40         -7.82         8.86
+2015-10-14   5.20 c 02a  3 4.51 -165.43    23.68     0     NaN     NaN    10   -8.03   24.66     3.14      24.56       25.78         -8.81         8.86
+2015-10-16   7.21 c 02a  4 4.25 -142.20    22.15     1     NaN     NaN    11    9.47   22.61     2.81      20.82       21.61        -10.81         8.86
+2015-10-23  14.22 o 02a  2 4.78 -302.94    43.45     0     NaN     NaN     0     NaN     NaN     2.17      79.78       79.70          7.41         1.84
+2015-10-27  18.20 o 02a  1 4.44 -610.00    98.00     0     NaN     NaN     1     NaN     NaN     1.97      66.07       64.84          3.43         1.84
+  o  +-30 d, baseline |dt|>150:  4 nights; alpha +0.40 +- 0.05 (shape template +0.36 +- 0.03); chi2 alpha=0 128.5, alpha=1 271.9; predicted-signal S/N 27.4
+  c  +-30 d, baseline |dt|>150:  3 nights; alpha -0.29 +- 0.30 (shape template -0.27 +- 0.28); chi2 alpha=0 1.4, alpha=1 18.9; predicted-signal S/N 3.3
+  oc +-30 d, baseline |dt|>150:  7 nights; alpha +0.39 +- 0.05 (shape template +0.36 +- 0.04); chi2 alpha=0 129.9, alpha=1 290.8; predicted-signal S/N 27.6
+  o  +-90 d, baseline |dt|>150:  5 nights; alpha +0.40 +- 0.05 (shape template +0.36 +- 0.03); chi2 alpha=0 129.4, alpha=1 272.1; predicted-signal S/N 27.4
+  c  +-90 d, baseline |dt|>150:  4 nights; alpha -0.26 +- 0.30 (shape template -0.25 +- 0.28); chi2 alpha=0 1.9, alpha=1 19.0; predicted-signal S/N 3.4
+  oc +-90 d, baseline |dt|>150:  9 nights; alpha +0.39 +- 0.05 (shape template +0.36 +- 0.03); chi2 alpha=0 131.3, alpha=1 291.1; predicted-signal S/N 27.6
+  pooled o +-30 d (relaxed baseline): 4 nights, excess +244.3 +- 24.1 uJy, predicted +592.0; in Gaia-star units +3.58 +- 0.35 (Gaia G-1 there +8.69)
+  pooled o +-90 d (relaxed baseline): 5 nights, excess +191.1 +- 20.7 uJy, predicted +444.8; in Gaia-star units +2.80 +- 0.30 (Gaia G-1 there +6.53)
+  pooled c +-30 d (relaxed baseline): 3 nights, excess -8.2 +- 10.8 uJy, predicted +34.5; in Gaia-star units -0.71 +- 0.94 (Gaia G-1 there +3.00)
+  pooled c +-90 d (relaxed baseline): 4 nights, excess -0.7 +- 8.0 uJy, predicted +21.1; in Gaia-star units -0.06 +- 0.70 (Gaia G-1 there +1.83)
+======================================== J174029 J174029.07-331407.7
+Gaia G template: lens t0 57798.8 (2017-02-14) tE 28.6 u0 0.022 fs 0.57 chi2 50.4; asym PV7 t0 57803.1 w 7.9/6.5 m 1.36 amp 8.48 chi2 51.7 (n 36)
+Gaia G transits within 150 d of t0: 2016-10-30(-106):x0.98  2016-10-31(-106):x0.99  2017-01-31(-14):x1.63  2017-01-31(-14):x1.70  2017-01-31(-14):x1.60  2017-02-09(-5):x3.49  2017-02-09(-5):x3.63  2017-03-18(+32):x1.13  2017-03-18(+32):x1.17  2017-04-30(+75):x1.02  2017-04-30(+75):x1.01  2017-04-30(+75):x1.01  2017-04-30(+75):x1.01  2017-04-30(+76):x1.02  2017-04-30(+76):x1.02  2017-05-01(+76):x1.01  2017-05-01(+76):x1.02  2017-05-01(+76):x1.05  2017-05-01(+76):x0.99
+Gaia G away from the event (|dt| > 150 d): n 17, max x1.054, min x0.949, robust scatter 0.034
+Gaia star in ATLAS bands: c 13 uJy, o 64 uJy. Nights within 120 d (excess in uJy; pred = lens-on-star from Gaia G):
+      date     dt F cam  n  maj      ujy  ujy_err  n400  exc400  err400  n150  exc150  err150  RG_lens  pred_lens  pred_shape  gaia_near_dt  gaia_near_R
+2017-05-05  80.38 o 01a  1 4.05 -1131.00   109.00     5 -174.73  572.86     6 -241.77  709.61     1.01       0.78        0.68         -4.09         0.99
+2017-05-06  81.37 o 02a  1 2.45   -25.00    41.00    72   -0.43   41.11    76    1.52   41.12     1.01       0.75        0.65         -5.08         0.99
+2017-05-08  83.33 o 01a  4 3.36  -582.46    62.59    23 -253.97   96.08    28 -246.37   92.82     1.01       0.69        0.61         -7.04         0.99
+2017-05-09  84.27 o 01a  3 3.38  -222.50    32.68    23  105.99   96.08    27  118.88   87.97     1.01       0.67        0.59         -7.98         0.99
+2017-05-18  93.35 o 02a  4 2.84  -131.77    21.09    16  -55.38   30.55    16  -55.38   30.55     1.01       0.47        0.44        -17.06         0.99
+2017-05-20  95.36 o 01a  1 7.14  2377.00    80.00     0     NaN     NaN     0     NaN     NaN     1.01       0.44        0.42        -19.07         0.99
+2017-05-21  96.36 o 01a  2 4.12  -782.14    33.03     5   40.03  648.70     6 -112.71  403.85     1.01       0.42        0.40        -20.07         0.99
+2017-05-22  97.33 c 02a  8 3.06   -22.51     6.47    30    5.04   10.03    32    5.04   10.09     1.01       0.08        0.08        -21.04         0.99
+2017-05-24  99.35 o 01a  2 4.12  -920.39    82.50     5  -98.21  648.70     6 -250.96  403.85     1.01       0.38        0.37        -23.06         0.99
+2017-05-26 101.33 c 02a  9 2.81    -1.42     6.70    45   20.33   11.06    49   20.33   11.05     1.01       0.07        0.07        -25.04         0.99
+2017-05-28 103.36 o 01a  4 6.22 -3549.07   744.48     0     NaN     NaN     1     NaN     NaN     1.01       0.33        0.33        -27.07         0.99
+2017-05-29 104.35 o 01a  4 6.08 -4593.22   537.71     0     NaN     NaN     1     NaN     NaN     1.01       0.32        0.32        -28.06         0.99
+2017-05-30 105.31 c 02a  5 2.60     9.12     6.34    49   28.19    8.76    54   28.72    9.42     1.00       0.06        0.06        -29.02         0.99
+2017-06-01 107.32 o 01a  2 4.42 -1627.62    41.25     6 -662.53  612.80     7 -805.44  633.06     1.00       0.29        0.30        -31.03         0.99
+2017-06-02 108.32 o 01a  3 3.33  -423.05    23.70    24  -88.11   85.17    29  -81.66   81.72     1.00       0.28        0.29        -32.03         0.99
+2017-06-03 109.31 o 02a  4 2.79   -69.94    20.02    18    0.26   46.42    18    0.26   46.42     1.00       0.27        0.28        -33.02         0.99
+2017-06-05 111.30 o 01a  4 3.22  -390.36    42.05    27  -94.69   75.31    32  -73.32   89.70     1.00       0.25        0.27        -35.01         0.99
+2017-06-06 112.26 o 01a  5 2.95  -291.52    93.98    37  -71.30   94.73    40  -70.43   94.81     1.00       0.25        0.26        -35.97         0.99
+2017-06-13 119.31 o 01a  4 3.37  -480.84    45.65    23 -152.35   96.08    28 -144.74   92.82     1.00       0.20        0.22        -43.02         0.99
+  o  +-90 d, baseline |dt|>400:  4 nights; alpha -27.58 +- 78.04 (shape template -31.66 +- 89.23); chi2 alpha=0 8.3, alpha=1 8.3; predicted-signal S/N 0.0
+  o  +-90 d, baseline |dt|>150:  4 nights; alpha -20.70 +- 80.89 (shape template -23.70 +- 92.47); chi2 alpha=0 9.0, alpha=1 9.0; predicted-signal S/N 0.0
+  oc +-90 d, baseline |dt|>400:  4 nights; alpha -27.58 +- 78.04 (shape template -31.66 +- 89.23); chi2 alpha=0 8.3, alpha=1 8.3; predicted-signal S/N 0.0
+  oc +-90 d, baseline |dt|>150:  4 nights; alpha -20.70 +- 80.89 (shape template -23.70 +- 92.47); chi2 alpha=0 9.0, alpha=1 9.0; predicted-signal S/N 0.0
+  pooled o +-90 d (relaxed baseline): 4 nights, excess -15.3 +- 34.5 uJy, predicted +0.7; in Gaia-star units -0.24 +- 0.54 (Gaia G-1 there +0.01)

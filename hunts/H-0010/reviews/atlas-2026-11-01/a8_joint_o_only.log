@@ -1,0 +1,6 @@
+============================== J184922 J184922.92-000203.9 ATLAS nights within 150 d: 14 (o 14, c 0)
+  lens     tied s: chi2   136.1 (Gaia 93.9, ATLAS 42.2; n 35, k 5) BIC 153.9; s o 1.47; p 5.77e+04, 145, 0.0001, 1 (t0 2016-12-01)
+  lens_fs1 tied s: chi2   136.1 (Gaia 93.9, ATLAS 42.2; n 35, k 4) BIC 150.3; s o 1.47; p 5.77e+04, 145, 0.0001 (t0 2016-12-01)
+  pv7a     tied s: chi2    33.0 (Gaia 7.6, ATLAS 25.4; n 35, k 6) BIC 54.4; s o 0.57; p 5.77e+04, 46.5, 314, 8.74, 6.8 (t0 2016-10-17)
+  gauss_a  tied s: chi2    33.7 (Gaia 8.2, ATLAS 25.5; n 35, k 5) BIC 51.5; s o 0.57; p 5.77e+04, 12.2, 80.2, 6.74 (t0 2016-10-17)
+  Gaia only: lens chi2 93.7, pv7a chi2 5.8; with ATLAS: dBIC(best shape - best lens) = -98.8

@@ -1,0 +1,170 @@
+fetch_report: [{"release": "Gaia DR3", "ok": true, "n": 8, "error": ""}]
+J182124: epoch rows 72; G 24, BP 24, RP 24; flagged 2
+J200958: epoch rows 161; G 55, BP 53, RP 53; flagged 6
+J184837: epoch rows 73; G 25, BP 24, RP 24; flagged 3
+J174036: epoch rows 103; G 35, BP 34, RP 34; flagged 2
+J180313: epoch rows 62; G 20, BP 21, RP 21; flagged 5
+J184922: epoch rows 49; G 21, BP 8, RP 20; flagged 1
+J182811: epoch rows 49; G 18, BP 14, RP 17; flagged 2
+J174029: epoch rows 101; G 36, BP 29, RP 36; flagged 2
+J182124 12 30.2s
+J200958 6 56.6s
+J184837 10 53.2s
+J174036 34 19.6s
+J180313 16 41.7s
+J184922 2 1.4s
+J182811 TAP error 503 Server Error: 503 for url: https://gea.esac.esa.int/tap-server/tap/sync
+J182811 8 8.2s
+J174029 8 51.6s
+
+J182124 J182124.77-190909.7  G 17.74 BP 19.05 RP 16.47  -> c 106 uJy, o 350 uJy (Gaia-predicted)
+  neighbours within 10":
+          source_id  sep  phot_g_mean_mag  bp_rp  ruwe phot_variable_flag      fc      fo
+4096047127002546560 0.00            17.74   2.58  1.20           VARIABLE  105.73  349.51
+4096047126938855296 2.87            19.34   3.00  0.97      NOT_AVAILABLE   17.40   79.56
+4096047127002546688 3.95            20.80    NaN   NaN      NOT_AVAILABLE   15.60   15.60
+4096047126938863232 4.35            17.70   3.02  1.01      NOT_AVAILABLE   82.53  370.12
+4096047127002550272 5.23            15.02   1.63  0.95      NOT_AVAILABLE 1974.27 3847.57
+4096047126948325376 5.64            20.62   2.39   NaN      NOT_AVAILABLE    6.83   22.59
+4096047126938856960 7.56            19.63   2.45  0.95      NOT_AVAILABLE   17.85   58.29
+4096047126944672256 8.41            20.78   2.31   NaN      NOT_AVAILABLE   10.63   23.78
+4096047122643957504 8.78            18.51   3.43  1.04      NOT_AVAILABLE   29.15  176.43
+4096047126938886016 8.93            19.69   2.16  1.04      NOT_AVAILABLE   21.49   55.50
+4096047126938837120 9.19            19.85   2.65  1.26      NOT_AVAILABLE   16.75   53.06
+4096047126938892928 9.81            20.70    NaN   NaN      NOT_AVAILABLE   17.09   17.09
+  target share of the ATLAS forced flux (PSF maj 3.8 px; sources <= 8"): c 0.10, o 0.14  (<= 10": c 0.09, o 0.14)
+  target share of the ATLAS forced flux (PSF maj 3.2 px; sources <= 8"): c 0.12, o 0.18  (<= 10": c 0.12, o 0.18)
+  target share of the ATLAS forced flux (PSF maj 2.6 px; sources <= 8"): c 0.20, o 0.27  (<= 10": c 0.19, o 0.27)
+
+J200958 J200958.93+321427.9  G 17.74 BP 19.69 RP 16.40  -> c 66 uJy, o 356 uJy (Gaia-predicted)
+  neighbours within 10":
+          source_id  sep  phot_g_mean_mag  bp_rp  ruwe phot_variable_flag    fc     fo
+2054828730840779520 0.00            17.74   3.29  0.97           VARIABLE 65.54 356.15
+2054828735138577536 1.90            19.72    NaN  1.00      NOT_AVAILABLE 42.20  42.20
+2054875666243390336 4.58            18.61   2.93  1.00      NOT_AVAILABLE 35.73 155.96
+2054828735139803008 4.83            21.02   2.14   NaN      NOT_AVAILABLE  7.19  17.07
+2054828735139463296 8.38            21.01   2.17   NaN      NOT_AVAILABLE  6.40  16.58
+2054828730840775808 9.40            20.76   2.28  1.10      NOT_AVAILABLE  9.26  22.71
+  target share of the ATLAS forced flux (PSF maj 3.8 px; sources <= 8"): c 0.51, o 0.73  (<= 10": c 0.51, o 0.72)
+  target share of the ATLAS forced flux (PSF maj 3.2 px; sources <= 8"): c 0.54, o 0.76  (<= 10": c 0.54, o 0.76)
+  target share of the ATLAS forced flux (PSF maj 2.6 px; sources <= 8"): c 0.59, o 0.81  (<= 10": c 0.59, o 0.81)
+
+J184837 J184837.12-051620.2  G 17.93 BP 19.21 RP 16.76  -> c 91 uJy, o 285 uJy (Gaia-predicted)
+  neighbours within 10":
+          source_id  sep  phot_g_mean_mag  bp_rp  ruwe phot_variable_flag    fc     fo
+4254872092666139264 0.00            17.93   2.45  1.07           VARIABLE 90.96 284.87
+4254872097006110592 3.89            19.05   2.19  0.99      NOT_AVAILABLE 34.66  96.99
+4254872097006115584 3.92            18.69   3.91  1.01      NOT_AVAILABLE 18.97 154.07
+4254872097006128512 4.75            20.55   2.15   NaN      NOT_AVAILABLE 14.54  29.14
+4254872097016998400 5.16            20.89   2.25   NaN      NOT_AVAILABLE  6.92  18.76
+4254872097006115712 5.48            18.83   2.11  1.04      NOT_AVAILABLE 44.23 118.36
+4254872097006103808 7.01            19.25   2.15  0.90      NOT_AVAILABLE 28.95  80.02
+4254872092669687936 7.03            19.03   2.30  1.27      NOT_AVAILABLE 39.90 106.64
+4254872097045928192 9.34            19.20   2.24  0.96      NOT_AVAILABLE 39.47  94.64
+4254872131365872256 9.48            20.28   2.77  0.95      NOT_AVAILABLE  9.46  34.66
+  target share of the ATLAS forced flux (PSF maj 3.8 px; sources <= 8"): c 0.52, o 0.50  (<= 10": c 0.51, o 0.49)
+  target share of the ATLAS forced flux (PSF maj 3.2 px; sources <= 8"): c 0.60, o 0.56  (<= 10": c 0.59, o 0.56)
+  target share of the ATLAS forced flux (PSF maj 2.6 px; sources <= 8"): c 0.70, o 0.67  (<= 10": c 0.70, o 0.66)
+
+J174036 J174036.98-223251.4  G 19.28 BP 20.04 RP 17.94  -> c 39 uJy, o 87 uJy (Gaia-predicted)
+  neighbours within 10":
+          source_id  sep  phot_g_mean_mag  bp_rp  ruwe phot_variable_flag     fc      fo
+4117136992643758080 0.00            19.28   2.10  1.05           VARIABLE  38.59   86.53
+4117136992655008128 2.29            20.12   2.04  1.02      NOT_AVAILABLE  28.00   46.42
+4117136997078387840 2.42            20.38    NaN  2.22      NOT_AVAILABLE  22.97   22.97
+4117136997008139904 3.05            20.26    NaN   NaN      NOT_AVAILABLE  25.65   25.65
+4117136992655006080 3.69            19.61   2.37  0.99      NOT_AVAILABLE  18.12   57.91
+4117136997008148096 4.01            16.30   2.37  1.02      NOT_AVAILABLE 406.83 1255.07
+4117136992655103488 4.07            20.10   2.26  1.05      NOT_AVAILABLE  18.85   42.97
+4117136992655107712 4.80            20.34    NaN  1.07      NOT_AVAILABLE  23.85   23.85
+4117136992655105792 5.36            20.25    NaN   NaN      NOT_AVAILABLE  25.96   25.96
+4117136992655103616 5.67            20.55    NaN   NaN      NOT_AVAILABLE  19.79   19.79
+4117136997009214464 5.93            20.34    NaN   NaN      NOT_AVAILABLE  23.85   23.85
+4117136997010403072 6.23            20.75    NaN   NaN      NOT_AVAILABLE  16.41   16.41
+4117136992655009152 6.53            19.67   2.46  1.02      NOT_AVAILABLE  16.38   55.24
+4117136996904698752 7.22            20.60    NaN   NaN      NOT_AVAILABLE  18.88   18.88
+4117136992655098880 7.35              NaN    NaN   NaN      NOT_AVAILABLE    NaN     NaN
+4117136996902963712 7.47            20.67    NaN   NaN      NOT_AVAILABLE  17.64   17.64
+4117136992655099008 7.51            20.49   2.45   NaN      NOT_AVAILABLE  11.58   30.15
+4117136992633826944 8.26            17.75   2.43  1.22      NOT_AVAILABLE 112.19  341.66
+4117136996904684672 8.32            19.83    NaN   NaN      NOT_AVAILABLE  38.35   38.35
+4117136992655101952 8.37            20.61   1.58   NaN      NOT_AVAILABLE   8.90   20.04
+4117136997008151808 8.57            19.13   2.37  1.23      NOT_AVAILABLE  33.50   96.34
+4117136992655174656 8.69            20.65    NaN   NaN      NOT_AVAILABLE  17.97   17.97
+4117136992633815936 8.91            16.57   3.02  0.97      NOT_AVAILABLE 224.67 1028.56
+4117136997078344064 9.01            20.06    NaN  1.09      NOT_AVAILABLE  31.07   31.07
+4117136992655109760 9.10            20.60    NaN   NaN      NOT_AVAILABLE  18.73   18.73
+4117136997009208320 9.17            19.91    NaN   NaN      NOT_AVAILABLE  35.45   35.45
+4117136997010404096 9.18            20.78    NaN   NaN      NOT_AVAILABLE  15.92   15.92
+4117136992655007872 9.23            20.05    NaN   NaN      NOT_AVAILABLE  31.15   31.15
+4117136996904684800 9.47            20.15    NaN   NaN      NOT_AVAILABLE  28.35   28.35
+4117136992655096832 9.52            20.40   1.95  1.06      NOT_AVAILABLE  16.28   31.45
+4117136992655100672 9.80            20.41   2.01  1.01      NOT_AVAILABLE   8.95   25.30
+4117136992655097856 9.88            20.35   1.93  1.00      NOT_AVAILABLE  17.16   32.78
+4117136997008129664 9.93            19.84    NaN  1.05      NOT_AVAILABLE  38.01   38.01
+4117136992655004544 9.94            19.96   2.00  1.07      NOT_AVAILABLE  17.27   41.84
+  target share of the ATLAS forced flux (PSF maj 3.8 px; sources <= 8"): c 0.09, o 0.08  (<= 10": c 0.07, o 0.07)
+  target share of the ATLAS forced flux (PSF maj 3.2 px; sources <= 8"): c 0.10, o 0.09  (<= 10": c 0.09, o 0.08)
+  target share of the ATLAS forced flux (PSF maj 2.6 px; sources <= 8"): c 0.14, o 0.12  (<= 10": c 0.13, o 0.12)
+
+J180313 J180313.03-150702.0  G 19.73 BP 21.49 RP 18.88  -> c 12 uJy, o 50 uJy (Gaia-predicted)
+  neighbours within 10":
+          source_id  sep  phot_g_mean_mag  bp_rp  ruwe phot_variable_flag    fc     fo
+4146782166880069632 0.00            19.73   2.61  1.10           VARIABLE 12.05  49.66
+4146782166880059776 3.50            20.28    NaN   NaN      NOT_AVAILABLE 25.32  25.32
+4146782162558528512 4.06            19.75   1.77  1.02      NOT_AVAILABLE 28.47  53.46
+4146782166880059648 4.24            20.04   2.10  1.03      NOT_AVAILABLE 16.38  40.42
+4146782166880049792 5.63            19.91   1.87  0.96      NOT_AVAILABLE 19.09  43.30
+4146782166880059136 6.19            20.76    NaN   NaN      NOT_AVAILABLE 16.28  16.28
+4146782162558554240 6.26            18.52   2.10  2.11      NOT_AVAILABLE 72.69 169.15
+4146782166880044032 6.72            18.99   2.41  1.00      NOT_AVAILABLE 38.09 111.13
+4146782166880082304 6.93            20.80    NaN   NaN      NOT_AVAILABLE 15.58  15.58
+4146782166880044160 7.59            20.69    NaN   NaN      NOT_AVAILABLE 17.27  17.27
+4146782166880074112 7.96            19.93   1.91  0.91      NOT_AVAILABLE 17.45  41.87
+4146782166880037888 8.34            20.21   2.20  1.32      NOT_AVAILABLE 13.87  35.44
+4146782166880093824 8.79            20.47   2.14   NaN      NOT_AVAILABLE  8.27  24.70
+4146782166897329408 9.33            20.83   2.26   NaN      NOT_AVAILABLE  8.38  20.85
+4146782166880108800 9.63            19.57    NaN  1.02      NOT_AVAILABLE 48.62  48.62
+4146782166880105344 9.90            20.20   2.20  1.27      NOT_AVAILABLE 12.45  34.08
+  target share of the ATLAS forced flux (PSF maj 3.8 px; sources <= 8"): c 0.10, o 0.20  (<= 10": c 0.10, o 0.18)
+  target share of the ATLAS forced flux (PSF maj 3.2 px; sources <= 8"): c 0.14, o 0.26  (<= 10": c 0.13, o 0.25)
+  target share of the ATLAS forced flux (PSF maj 2.6 px; sources <= 8"): c 0.21, o 0.38  (<= 10": c 0.21, o 0.38)
+
+J184922 J184922.92-000203.9  G 20.20 BP 21.47 RP 18.76  -> c 11 uJy, o 38 uJy (Gaia-predicted)
+  neighbours within 10":
+          source_id  sep  phot_g_mean_mag  bp_rp  ruwe phot_variable_flag    fc    fo
+4266365704324232576 0.00            20.20   2.71  1.11           VARIABLE 11.34 38.01
+4266359828812746112 6.66            20.98   0.32   NaN      NOT_AVAILABLE 31.66 18.26
+  target share of the ATLAS forced flux (PSF maj 3.8 px; sources <= 8"): c 0.55, o 0.88  (<= 10": c 0.55, o 0.88)
+  target share of the ATLAS forced flux (PSF maj 3.2 px; sources <= 8"): c 0.67, o 0.92  (<= 10": c 0.67, o 0.92)
+  target share of the ATLAS forced flux (PSF maj 2.6 px; sources <= 8"): c 0.83, o 0.97  (<= 10": c 0.83, o 0.97)
+
+J182811 J182811.16-082538.6  G 19.54 BP 21.60 RP 18.18  -> c 11 uJy, o 68 uJy (Gaia-predicted)
+  neighbours within 10":
+          source_id  sep  phot_g_mean_mag  bp_rp  ruwe phot_variable_flag    fc     fo
+4156259162525506816 0.00            19.54   3.42  1.26           VARIABLE 11.49  68.15
+4156259093801323136 7.03            19.87    NaN  1.03      NOT_AVAILABLE 36.73  36.73
+4156259098111444608 7.36            20.12    NaN  1.10      NOT_AVAILABLE 29.21  29.21
+4156259098111446656 7.45            18.61   3.67  0.88      NOT_AVAILABLE 25.22 167.60
+4156259166838252544 8.27            20.31   2.11  0.99      NOT_AVAILABLE 13.57  32.41
+4156259162525505536 8.41            20.25   3.47  1.23      NOT_AVAILABLE  5.53  34.97
+4156259098111448320 9.58            19.90    NaN  1.03      NOT_AVAILABLE 35.92  35.92
+4156259166831855872 9.96            20.57   2.69  1.10      NOT_AVAILABLE  7.22  25.91
+  target share of the ATLAS forced flux (PSF maj 3.8 px; sources <= 8"): c 0.35, o 0.57  (<= 10": c 0.30, o 0.51)
+  target share of the ATLAS forced flux (PSF maj 3.2 px; sources <= 8"): c 0.50, o 0.71  (<= 10": c 0.45, o 0.67)
+  target share of the ATLAS forced flux (PSF maj 2.6 px; sources <= 8"): c 0.74, o 0.88  (<= 10": c 0.72, o 0.86)
+
+J174029 J174029.07-331407.7  G 19.60 BP 21.43 RP 18.30  -> c 13 uJy, o 64 uJy (Gaia-predicted)
+  neighbours within 10":
+          source_id  sep  phot_g_mean_mag  bp_rp  ruwe phot_variable_flag    fc     fo
+4054091653004081408 0.00            19.60   3.12  1.10           VARIABLE 12.96  63.72
+4054091653019389056 4.30            21.08  -0.87   NaN      NOT_AVAILABLE 35.91  12.95
+4054091653052771584 6.94            20.30   3.32  1.12      NOT_AVAILABLE  5.74  33.17
+4054091653011094144 6.97            20.70   2.32  1.02      NOT_AVAILABLE  8.38  22.93
+4054091653015900416 7.31            20.79   1.78   NaN      NOT_AVAILABLE 13.99  22.66
+4054091653004059136 7.84            20.60    NaN   NaN      NOT_AVAILABLE 18.79  18.79
+4054091648714961152 8.77            18.13   5.18  1.12           VARIABLE 14.71 276.67
+4054091653004088320 9.25            19.33   3.94  1.24           VARIABLE 11.40  89.10
+  target share of the ATLAS forced flux (PSF maj 3.8 px; sources <= 8"): c 0.29, o 0.67  (<= 10": c 0.27, o 0.47)
+  target share of the ATLAS forced flux (PSF maj 3.2 px; sources <= 8"): c 0.36, o 0.77  (<= 10": c 0.35, o 0.64)
+  target share of the ATLAS forced flux (PSF maj 2.6 px; sources <= 8"): c 0.48, o 0.88  (<= 10": c 0.48, o 0.84)

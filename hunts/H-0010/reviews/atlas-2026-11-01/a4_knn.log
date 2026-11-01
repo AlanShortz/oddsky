@@ -1,0 +1,256 @@
+======================================== J182124 J182124.77-190909.7 Gaia t0 2015-09-03; Gaia star c 106 uJy, o 350 uJy
+error-model inflation per series (robust std of excess/error on quiet nights; n; median kNN scatter uJy): c_02a:0.95(n108,44.4)  c_03a:0.63(n52,37.6)  c_04a:1.09(n57,53.7)  o_01a:0.69(n198,140.6)  o_02a:0.72(n173,96.7)  o_03a:0.65(n166,84.9)  o_04a:0.89(n196,112.0)
+Gaia G lens, fs=1: t0 2015-08-12 tE 53.8 u0 0.748 chi2 17.0; fs free: t0 2015-08-12 tE 59.3 u0 0.628 fs 0.73 chi2 17.0 (n 24)
+      date     dt F cam  n  maj  mnr     ujy      kb   kd    kexc   kerr  ksig  R_fs1  R_fsfree  R_interp  pred_fs1  pred_fsfree  pred_interp
+2015-07-25 -40.21 o 02a  4 3.79 3.49 2177.01 1959.19 1.36  217.81 306.57  0.71   1.51      1.50       NaN    178.56       173.48          NaN
+2015-08-08 -26.21 c 02a  2 5.66 3.92 1172.48 1052.16 2.43  120.32  96.17  1.25   1.60      1.59       NaN     63.19        62.81          NaN
+2015-08-09 -25.24 c 02a  4 4.22 3.80 1026.86 1003.30 0.90   23.57 103.72  0.23   1.60      1.60       NaN     63.41        63.11          NaN
+2015-08-10 -24.24 c 02a  4 4.10 3.69  957.93 1003.30 0.95  -45.37 104.70 -0.43   1.60      1.60       NaN     63.57        63.35          NaN
+2015-08-11 -23.25 c 02a  4 4.22 3.80 1004.40 1003.30 0.90    1.10 105.78  0.01   1.60      1.60       NaN     63.66        63.52          NaN
+2015-09-23  19.66 o 02a  4 4.16 3.47 2209.80 2109.07 1.21  100.72 356.61  0.28   1.29      1.29      1.30    100.59       100.12       103.86
+2015-09-24  20.63 o 02a  1 3.90 3.39 1775.00 2109.07 1.17 -334.07 325.37 -1.03   1.28      1.28      1.29     97.98        97.52       100.93
+2015-10-01  27.67 o 02a  1 4.50 3.55 2079.00 2109.07 1.62  -30.07 349.50 -0.09   1.23      1.23      1.23     80.73        80.38        79.57
+2015-10-03  29.67 o 02a  1 4.68 3.49 1994.00 2109.07 1.85 -115.07 350.37 -0.33   1.22      1.22      1.21     76.35        76.05        73.49
+2015-10-09  35.64 c 02a  4 4.56 3.72  986.44  998.46 1.14  -12.02  89.65 -0.13   1.18      1.18      1.19     19.56        19.51        19.75
+2015-10-13  39.64 c 02a  3 5.17 4.17 1175.94 1052.16 1.58  123.78 127.20  0.97   1.17      1.17      1.17     17.49        17.47        18.33
+2015-10-14  40.63 c 02a  4 5.20 4.22 1180.53 1052.16 1.61  128.37  98.11  1.31   1.16      1.16      1.17     17.02        17.01        17.98
+2015-10-16  42.63 c 02a  3 4.81 3.74 1062.68 1052.16 1.53   10.52  93.39  0.11   1.15      1.15      1.16     16.10        16.10        17.27
+2015-10-22  48.63 c 02a  2 4.93 3.80 1172.28 1052.16 1.61  120.11 101.48  1.18   1.13      1.13      1.14     13.64        13.68        15.13
+2015-10-23  49.64 o 02a  1 5.23 3.60 2452.00 2109.07 2.66  342.93 354.45  0.97   1.13      1.13      1.14     43.86        44.01        48.83
+2015-10-26  52.63 o 02a  2 4.81 3.50 2207.53 2109.07 2.15   98.45 352.78  0.28   1.12      1.12      1.13     40.43        40.63        45.31
+  o  +-30 d: 4 nights; pooled excess -105.4 +- 172.4 uJy (-0.6 sigma); fs1: alpha -1.18 +- 1.92 (pred S/N 0.5); fsfree: alpha -1.19 +- 1.93 (pred S/N 0.5); interp: alpha -1.17 +- 1.90 (pred S/N 0.5)
+  c  +-30 d: 4 nights; pooled excess +29.2 +- 51.2 uJy (+0.6 sigma); fs1: alpha +0.46 +- 0.81 (pred S/N 1.2); fsfree: alpha +0.46 +- 0.81 (pred S/N 1.2)
+  oc +-30 d: 8 nights; pooled excess +18.3 +- 49.1 uJy (+0.4 sigma); fs1: alpha +0.21 +- 0.74 (pred S/N 1.3); fsfree: alpha +0.21 +- 0.75 (pred S/N 1.3); interp: alpha -1.17 +- 1.90 (pred S/N 0.5)
+  o  +-90 d: 7 nights; pooled excess +38.0 +- 128.8 uJy (+0.3 sigma); fs1: alpha +0.38 +- 1.25 (pred S/N 0.8); fsfree: alpha +0.38 +- 1.27 (pred S/N 0.8); interp: alpha -0.50 +- 1.79 (pred S/N 0.6)
+  c  +-90 d: 9 nights; pooled excess +49.3 +- 33.6 uJy (+1.5 sigma); fs1: alpha +0.72 +- 0.77 (pred S/N 1.3); fsfree: alpha +0.73 +- 0.77 (pred S/N 1.3); interp: alpha +3.44 +- 2.51 (pred S/N 0.4)
+  oc +-90 d: 16 nights; pooled excess +48.5 +- 32.5 uJy (+1.5 sigma); fs1: alpha +0.63 +- 0.66 (pred S/N 1.5); fsfree: alpha +0.63 +- 0.66 (pred S/N 1.5); interp: alpha +0.83 +- 1.46 (pred S/N 0.7)
+  repeat bins dropped for poor PSF match (median kNN distance >= 1 px): 20
+  repeats o: 128 20-d bins with |dt| > 200 d (2017.3-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2025-08-25 +199 +- 57 uJy (+3.5 sig, x1.57 of the star, n 4, 04a); 2017-06-03 +220 +- 68 uJy (+3.2 sig, x1.63 of the star, n 8, 01a,02a); 2018-10-24 +196 +- 66 uJy (+3.0 sig, x1.56 of the star, n 4, 01a,02a)
+  repeats c: 88 20-d bins with |dt| > 200 d (2017.4-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2017-05-24 +66 +- 33 uJy (+2.0 sig, x1.63 of the star, n 2, 02a); 2022-10-21 +109 +- 56 uJy (+1.9 sig, x2.03 of the star, n 3, 04a); 2018-06-14 +83 +- 44 uJy (+1.9 sig, x1.79 of the star, n 2, 02a)
+======================================== J200958 J200958.93+321427.9 Gaia t0 2015-11-29; Gaia star c 66 uJy, o 356 uJy
+error-model inflation per series (robust std of excess/error on quiet nights; n; median kNN scatter uJy): c_01a:0.59(n36,8.2)  c_02a:0.57(n225,5.2)  o_01a:0.57(n458,11.4)  o_02a:0.65(n435,12.8)
+Gaia G lens, fs=1: t0 2015-11-29 tE 43.8 u0 0.810 chi2 40.8; fs free: t0 2015-11-29 tE 43.8 u0 0.810 fs 1.00 chi2 40.8 (n 55)
+      date      dt F cam  n  maj  mnr    ujy     kb   kd   kexc   kerr  ksig  R_fs1  R_fsfree  R_interp  pred_fs1  pred_fsfree  pred_interp
+2015-08-06 -114.93 o 02a  3 3.64 3.38 300.64 370.44 0.58 -69.81 163.17 -0.43   1.02      1.02       NaN      7.97         7.97          NaN
+2015-10-05  -55.04 o 02a  3 3.76 3.20 431.42 365.54 0.69  65.88  43.81  1.50   1.13      1.13      1.15     47.06        47.06        54.03
+2015-10-07  -53.04 o 02a  4 4.24 3.62 371.56 369.00 0.91   2.56  36.44  0.07   1.14      1.14      1.16     50.27        50.27        56.67
+2015-10-19  -41.04 c 02a  4 4.23 3.90  91.53  79.56 0.72  11.97  19.58  0.61   1.21      1.21      1.24     13.72        13.72        15.84
+2015-10-20  -40.05 c 02a  4 4.22 3.88  94.68  79.56 0.70  15.12  21.96  0.69   1.22      1.22      1.25     14.17        14.17        16.29
+2015-10-21  -39.04 c 02a  4 4.22 3.79  85.34  79.56 0.69   5.77  21.23  0.27   1.22      1.22      1.26     14.64        14.64        16.75
+2015-10-24  -36.04 o 02a  4 4.08 3.42 371.96 369.00 0.88   2.96  41.15  0.07   1.25      1.25      1.28     87.64        87.64        98.47
+2015-10-29  -31.10 o 02a  4 3.91 3.34 418.21 370.44 1.07  47.77  39.43  1.21   1.29      1.29      1.31    102.27       102.27       110.69
+2015-11-01  -28.09 o 02a  4 4.12 3.39 395.64 369.00 0.95  26.64  37.43  0.71   1.31      1.31      1.33    111.94       111.94       118.13
+2015-12-06    6.92 o 02a  2 3.84 3.48 500.06 365.54 0.57 134.52  44.54  3.02   1.50      1.50      1.43    179.61       179.61       152.96
+2015-12-07    7.92 o 02a  2 3.93 3.68 490.87 367.87 0.68 123.00  54.48  2.26   1.50      1.50      1.43    177.80       177.80       153.27
+2015-12-08    8.88 o 02a  4 3.69 3.16 473.57 370.44 1.03 103.13  32.03  3.22   1.49      1.49      1.43    175.85       175.85       153.56
+2015-12-09    9.89 o 02a  4 3.68 3.22 483.55 369.00 0.67 114.55  36.68  3.12   1.49      1.49      1.43    173.59       173.59       153.86
+2016-03-16  108.30 o 02a  1 3.73 3.42 361.00 369.00 1.33  -8.00  36.75 -0.22   1.03      1.03      1.03      9.74         9.74        10.37
+2016-03-20  112.28 o 02a  3 4.12 3.69 371.34 367.87 1.82   3.47  36.19  0.10   1.02      1.02      1.03      8.76         8.76         9.27
+  o  +-30 d: 5 nights; pooled excess +95.9 +- 17.5 uJy (+5.5 sigma); fs1: alpha +0.61 +- 0.11 (pred S/N 9.4); fsfree: alpha +0.61 +- 0.11 (pred S/N 9.4); interp: alpha +0.68 +- 0.12 (pred S/N 8.4)
+  c +-30 d: no night with a kNN baseline
+  oc +-30 d: 5 nights; pooled excess +95.9 +- 17.5 uJy (+5.5 sigma); fs1: alpha +0.61 +- 0.11 (pred S/N 9.4); fsfree: alpha +0.61 +- 0.11 (pred S/N 9.4); interp: alpha +0.68 +- 0.12 (pred S/N 8.4)
+  o  +-90 d: 9 nights; pooled excess +66.2 +- 13.2 uJy (+5.0 sigma); fs1: alpha +0.58 +- 0.10 (pred S/N 10.1); fsfree: alpha +0.58 +- 0.10 (pred S/N 10.1); interp: alpha +0.60 +- 0.11 (pred S/N 9.4)
+  c  +-90 d: 3 nights; pooled excess +10.9 +- 12.0 uJy (+0.9 sigma); fs1: alpha +0.77 +- 0.85 (pred S/N 1.2); fsfree: alpha +0.77 +- 0.85 (pred S/N 1.2); interp: alpha +0.67 +- 0.74 (pred S/N 1.4)
+  oc +-90 d: 12 nights; pooled excess +36.1 +- 8.9 uJy (+4.1 sigma); fs1: alpha +0.58 +- 0.10 (pred S/N 10.2); fsfree: alpha +0.58 +- 0.10 (pred S/N 10.2); interp: alpha +0.61 +- 0.11 (pred S/N 9.5)
+  repeat bins dropped for poor PSF match (median kNN distance >= 1 px): 19
+  repeats o: 142 20-d bins with |dt| > 200 d (2017.3-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2019-05-26 +18 +- 9 uJy (+2.0 sig, x1.05 of the star, n 5, 01a,02a); 2023-11-23 +16 +- 8 uJy (+2.0 sig, x1.04 of the star, n 6, 01a,02a); 2022-03-13 +18 +- 10 uJy (+1.9 sig, x1.05 of the star, n 5, 01a,02a)
+  repeats c: 99 20-d bins with |dt| > 200 d (2017.4-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2022-06-01 +6 +- 3 uJy (+1.8 sig, x1.09 of the star, n 7, 02a); 2025-12-21 +26 +- 15 uJy (+1.7 sig, x1.39 of the star, n 1, 01a); 2023-05-15 +19 +- 12 uJy (+1.6 sig, x1.29 of the star, n 1, 02a)
+======================================== J184837 J184837.12-051620.2 Gaia t0 2017-03-21; Gaia star c 91 uJy, o 285 uJy
+error-model inflation per series (robust std of excess/error on quiet nights; n; median kNN scatter uJy): c_01a:0.67(n11,15.6)  c_02a:0.79(n113,19.1)  c_03a:0.88(n27,18.3)  c_04a:0.84(n30,17.1)  o_01a:0.71(n282,32.5)  o_02a:0.72(n212,43.4)  o_03a:0.77(n115,39.8)  o_04a:0.75(n145,41.4)
+Gaia G lens, fs=1: t0 2017-03-23 tE 42.1 u0 0.762 chi2 19.0; fs free: t0 2017-03-23 tE 42.1 u0 0.762 fs 1.00 chi2 19.0 (n 25)
+      date     dt F cam  n  maj  mnr    ujy     kb   kd   kexc   kerr  ksig  R_fs1  R_fsfree  R_interp  pred_fs1  pred_fsfree  pred_interp
+2017-03-14  -6.69 o 01a  2 3.64 3.51 276.71  88.40 0.71 188.31  83.50  2.26   1.54      1.54       NaN    154.80       154.80          NaN
+2017-03-14  -6.68 o 02a  1 3.59 3.53 133.00  94.57 1.07  38.43 101.24  0.38   1.54      1.54       NaN    154.81       154.81          NaN
+2017-03-15  -5.68 o 02a  1 3.62 3.55 200.00  94.57 1.04 105.43  91.32  1.15   1.55      1.55       NaN    157.03       157.03          NaN
+2017-04-09  19.31 o 02a  1 3.63 3.36 134.00 106.26 0.79  27.74  89.52  0.31   1.46      1.46      1.42    130.82       130.82       118.98
+2017-05-08  48.29 o 01a  3 3.04 2.96  56.11  35.16 0.27  20.95  41.43  0.51   1.18      1.18       NaN     50.87        50.87          NaN
+2017-05-09  49.27 o 01a  4 3.14 3.04  71.20  49.87 0.29  21.33  40.38  0.53   1.17      1.17       NaN     49.14        49.14          NaN
+2017-05-10  50.22 o 02a  4 3.06 2.24  34.69  40.79 0.81  -6.10  50.22 -0.12   1.17      1.17       NaN     47.51        47.51          NaN
+2017-05-11  51.17 o 02a  5 2.84 2.09  87.84  65.79 0.65  22.05  71.53  0.31   1.16      1.16       NaN     45.95        45.95          NaN
+2017-05-13  53.28 o 01a  2 4.28 3.29 183.52 105.80 1.34  77.73 216.95  0.36   1.15      1.15       NaN     42.66        42.66          NaN
+2017-05-15  55.28 o 02a  1 2.33 2.28 -44.00  55.04 0.20 -99.04 104.53 -0.95   1.14      1.14       NaN     39.76        39.76          NaN
+2017-05-19  59.28 o 02a  3 3.35 2.28  55.40  51.64 1.19   3.75  60.05  0.06   1.12      1.12       NaN     34.59        34.59          NaN
+2017-05-27  67.26 c 02a  2 2.45 2.29  -1.74  -8.38 0.22   6.63  31.16  0.21   1.09      1.09       NaN      8.40         8.40          NaN
+2017-05-31  71.22 c 02a  5 2.90 2.80  -9.75 -19.70 0.41   9.95  17.80  0.56   1.08      1.08       NaN      7.36         7.36          NaN
+2017-06-01  72.29 o 01a  1 3.95 3.14 131.00 116.83 0.96  14.17  94.78  0.15   1.08      1.08       NaN     22.25        22.25          NaN
+2017-06-02  73.28 o 01a  1 3.07 2.78  44.00  35.16 0.31   8.84  43.94  0.20   1.08      1.08       NaN     21.53        21.53          NaN
+2017-06-05  76.27 o 01a  3 2.98 2.70  42.02  27.02 0.29  15.00  25.21  0.60   1.07      1.07       NaN     19.52        19.52          NaN
+2017-06-06  77.23 o 01a  3 3.16 2.87  96.39  35.92 0.35  60.47  40.20  1.50   1.07      1.07       NaN     18.93        18.93          NaN
+2017-06-08  79.16 o 02a  3 2.22 2.05 108.54 142.68 0.19 -34.14 108.52 -0.31   1.06      1.06       NaN     17.78        17.78          NaN
+2017-06-12  83.25 o 02a  9 2.47 2.14  -6.50  49.85 0.24 -56.36  61.32 -0.92   1.05      1.05       NaN     15.61        15.61          NaN
+2017-06-13  84.27 o 01a  2 2.88 2.68  12.81  35.57 0.25 -22.76  80.19 -0.28   1.05      1.05       NaN     15.12        15.12          NaN
+2017-06-27  98.17 o 01a  4 3.78 2.99  75.07  91.71 0.95 -16.64  89.27 -0.19   1.03      1.03       NaN      9.92         9.92          NaN
+2017-07-01 102.13 o 01a  3 3.26 2.94  57.70  35.16 0.42  22.53  34.58  0.65   1.03      1.03       NaN      8.84         8.84          NaN
+2017-07-03 104.13 o 02a  3 2.61 2.14  17.74  59.56 0.35 -41.82  79.72 -0.52   1.03      1.03       NaN      8.35         8.35          NaN
+2017-07-11 112.13 o 02a  4 2.21 1.92  37.35  80.97 0.15 -43.62  95.26 -0.46   1.02      1.02       NaN      6.68         6.68          NaN
+2017-07-13 114.12 o 01a  7 3.04 2.94  60.39  36.00 0.24  24.39  49.61  0.49   1.02      1.02       NaN      6.33         6.33          NaN
+2017-07-15 116.12 o 02a  4 2.24 2.08  72.39 116.03 0.19 -43.64  88.11 -0.50   1.02      1.02       NaN      5.99         5.99          NaN
+2017-07-17 118.12 o 01a  4 3.04 2.78  68.84  23.93 0.30  44.91  39.57  1.14   1.02      1.02       NaN      5.68         5.68          NaN
+  o  +-30 d: 4 nights; pooled excess +96.5 +- 45.4 uJy (+2.1 sigma); fs1: alpha +0.66 +- 0.30 (pred S/N 3.3); fsfree: alpha +0.66 +- 0.30 (pred S/N 3.3); interp: alpha +0.23 +- 0.75 (pred S/N 1.3)
+  c +-30 d: no night with a kNN baseline
+  oc +-30 d: 4 nights; pooled excess +96.5 +- 45.4 uJy (+2.1 sigma); fs1: alpha +0.66 +- 0.30 (pred S/N 3.3); fsfree: alpha +0.66 +- 0.30 (pred S/N 3.3); interp: alpha +0.23 +- 0.75 (pred S/N 1.3)
+  o  +-90 d: 18 nights; pooled excess +18.9 +- 12.9 uJy (+1.5 sigma); fs1: alpha +0.55 +- 0.24 (pred S/N 4.1); fsfree: alpha +0.55 +- 0.24 (pred S/N 4.1); interp: alpha +0.23 +- 0.75 (pred S/N 1.3)
+  c  +-90 d: 2 nights; pooled excess +9.1 +- 15.5 uJy (+0.6 sigma); fs1: alpha +1.18 +- 2.03 (pred S/N 0.5); fsfree: alpha +1.18 +- 2.03 (pred S/N 0.5)
+  oc +-90 d: 20 nights; pooled excess +14.9 +- 9.9 uJy (+1.5 sigma); fs1: alpha +0.56 +- 0.24 (pred S/N 4.1); fsfree: alpha +0.56 +- 0.24 (pred S/N 4.1); interp: alpha +0.23 +- 0.75 (pred S/N 1.3)
+  repeat bins dropped for poor PSF match (median kNN distance >= 1 px): 23
+  repeats o: 126 20-d bins with |dt| > 200 d (2015.6-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2024-07-02 +43 +- 16 uJy (+2.8 sig, x1.15 of the star, n 10, 01a,02a,03a,04a); 2022-07-25 +41 +- 17 uJy (+2.4 sig, x1.15 of the star, n 6, 01a,02a,03a,04a); 2020-08-29 +39 +- 18 uJy (+2.2 sig, x1.14 of the star, n 9, 01a,02a)
+  repeats c: 74 20-d bins with |dt| > 200 d (2015.6-2026.7); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2020-05-24 +24 +- 13 uJy (+1.9 sig, x1.26 of the star, n 4, 02a); 2025-06-30 +42 +- 27 uJy (+1.5 sig, x1.46 of the star, n 1, 03a); 2023-09-18 +24 +- 17 uJy (+1.4 sig, x1.26 of the star, n 1, 03a)
+======================================== J174036 J174036.98-223251.4 Gaia t0 2017-02-10; Gaia star c 39 uJy, o 87 uJy
+error-model inflation per series (robust std of excess/error on quiet nights; n; median kNN scatter uJy): c_02a:0.79(n98,23.2)  c_03a:0.77(n48,22.0)  c_04a:0.8(n60,25.9)  o_01a:0.78(n167,80.5)  o_02a:0.84(n140,65.8)  o_03a:0.83(n162,92.5)  o_04a:0.76(n199,82.2)
+Gaia G lens, fs=1: t0 2017-02-09 tE 19.0 u0 0.288 chi2 28.8; fs free: t0 2017-02-09 tE 19.0 u0 0.288 fs 1.00 chi2 28.8 (n 35)
+      date     dt F cam  n  maj  mnr     ujy      kb   kd    kexc   kerr  ksig  R_fs1  R_fsfree  R_interp  pred_fs1  pred_fsfree  pred_interp
+2017-03-14  32.48 o 01a  4 3.67 3.30  -78.60 -244.24 0.72  165.65 125.15  1.32   1.09      1.09      1.23      7.63         7.63        19.96
+2017-03-14  32.50 o 02a  4 3.62 3.44 -286.87 -188.00 1.14  -98.87 216.54 -0.46   1.09      1.09      1.23      7.62         7.62        19.89
+2017-03-15  33.50 o 02a  4 3.52 3.40 -269.11 -188.00 1.05  -81.11 216.58 -0.37   1.08      1.08      1.18      7.03         7.03        15.29
+2017-05-06  85.48 o 02a  3 2.18 2.07  261.35  233.30 0.18   28.05  80.10  0.35   1.00      1.00       NaN      0.35         0.35          NaN
+2017-05-08  87.46 o 01a  4 3.28 3.04 -364.10 -244.24 0.42 -119.86  94.80 -1.26   1.00      1.00       NaN      0.32         0.32          NaN
+2017-05-09  88.41 o 01a  3 3.20 3.11  -99.06 -242.45 0.35  143.39  96.14  1.49   1.00      1.00       NaN      0.31         0.31          NaN
+2017-05-18  97.46 o 02a  5 2.62 2.41  169.27  135.01 0.44   34.26 113.75  0.30   1.00      1.00       NaN      0.21         0.21          NaN
+2017-05-21 100.49 o 01a  2 3.11 3.01 -322.95 -198.55 0.32 -124.40 179.80 -0.69   1.00      1.00       NaN      0.19         0.19          NaN
+2017-05-22 101.46 c 02a  4 2.72 2.60   47.41   71.61 0.22  -24.20  35.42 -0.68   1.00      1.00       NaN      0.08         0.08          NaN
+2017-05-24 103.48 o 01a  2 4.04 3.14 -398.32 -259.47 1.12 -138.85 119.06 -1.17   1.00      1.00       NaN      0.17         0.17          NaN
+2017-05-25 104.49 o 01a  1 4.74 3.55 -208.00 -255.14 1.93   47.14 138.84  0.34   1.00      1.00       NaN      0.16         0.16          NaN
+2017-05-26 105.45 c 02a  3 2.57 2.47   74.35   76.20 0.18   -1.85  29.46 -0.06   1.00      1.00       NaN      0.07         0.07          NaN
+2017-05-28 107.47 o 01a  2 4.87 3.69 -231.71 -255.14 2.09   23.43 129.07  0.18   1.00      1.00       NaN      0.15         0.15          NaN
+2017-05-29 108.48 o 01a  4 4.96 3.74  -71.64 -255.14 2.19  183.50 155.97  1.18   1.00      1.00       NaN      0.14         0.14          NaN
+2017-05-30 109.44 c 02a  5 2.70 2.64   74.92   58.40 0.25   16.52  41.33  0.40   1.00      1.00       NaN      0.06         0.06          NaN
+2017-06-01 111.47 o 01a  3 3.82 3.16 -430.25 -242.00 0.93 -188.25  92.40 -2.04   1.00      1.00       NaN      0.13         0.13          NaN
+2017-06-02 112.46 o 01a  4 3.12 2.96 -284.28 -242.00 0.34  -42.28 118.89 -0.36   1.00      1.00       NaN      0.12         0.12          NaN
+2017-06-03 113.43 o 02a  3 2.46 2.38  215.93  184.14 0.34   31.79  82.81  0.38   1.00      1.00       NaN      0.12         0.12          NaN
+2017-06-05 115.43 o 01a  4 2.85 2.67 -192.87  -96.89 0.36  -95.98 133.80 -0.72   1.00      1.00       NaN      0.11         0.11          NaN
+2017-06-06 116.38 o 01a  4 3.28 2.85 -265.83 -188.87 0.55  -76.96 147.12 -0.52   1.00      1.00       NaN      0.11         0.11          NaN/Users/alanshortz/conductor/workspaces/oddsky/philadelphia-v2/hunts/H-0010/reviews/atlas-2026-11-01/a4_knn.py:190: RuntimeWarning: invalid value encountered in scalar divide
+  m = float(np.sum(w * x.kexc) / np.sum(w))
+/Users/alanshortz/conductor/workspaces/oddsky/philadelphia-v2/hunts/H-0010/reviews/atlas-2026-11-01/a4_knn.py:191: RuntimeWarning: divide by zero encountered in scalar divide
+  me = float(1 / np.sqrt(np.sum(w)))
+/Users/alanshortz/conductor/workspaces/oddsky/philadelphia-v2/hunts/H-0010/reviews/atlas-2026-11-01/a4_knn.py:190: RuntimeWarning: invalid value encountered in scalar divide
+  m = float(np.sum(w * x.kexc) / np.sum(w))
+/Users/alanshortz/conductor/workspaces/oddsky/philadelphia-v2/hunts/H-0010/reviews/atlas-2026-11-01/a4_knn.py:191: RuntimeWarning: divide by zero encountered in scalar divide
+  me = float(1 / np.sqrt(np.sum(w)))
+
+  o +-30 d: no night with a kNN baseline
+  c +-30 d: no night with a kNN baseline
+  o  +-90 d: 6 nights; pooled excess +27.6 +- 45.6 uJy (+0.6 sigma); fs1: alpha +9.01 +- 13.55 (pred S/N 0.1); fsfree: alpha +9.01 +- 13.55 (pred S/N 0.1); interp: alpha +3.67 +- 5.07 (pred S/N 0.2)
+  c +-90 d: no night with a kNN baseline
+  oc +-90 d: 6 nights; pooled excess +27.6 +- 45.6 uJy (+0.6 sigma); fs1: alpha +9.01 +- 13.55 (pred S/N 0.1); fsfree: alpha +9.01 +- 13.55 (pred S/N 0.1); interp: alpha +3.67 +- 5.07 (pred S/N 0.2)
+  repeat bins dropped for poor PSF match (median kNN distance >= 1 px): 17
+  repeats o: 117 20-d bins with |dt| > 200 d (2017.7-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2021-03-01 +117 +- 30 uJy (+3.9 sig, x2.35 of the star, n 3, 01a); 2021-05-18 +90 +- 24 uJy (+3.8 sig, x2.04 of the star, n 6, 01a,02a); 2024-02-29 +76 +- 25 uJy (+3.1 sig, x1.88 of the star, n 15, 03a,04a)
+  repeats c: 81 20-d bins with |dt| > 200 d (2017.7-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2025-04-02 +26 +- 12 uJy (+2.1 sig, x1.67 of the star, n 6, 04a); 2019-07-03 +20 +- 13 uJy (+1.5 sig, x1.52 of the star, n 5, 02a); 2018-08-05 +27 +- 22 uJy (+1.2 sig, x1.69 of the star, n 2, 02a)
+======================================== J180313 J180313.03-150702.0 Gaia t0 2015-10-30; Gaia star c 12 uJy, o 50 uJy
+error-model inflation per series (robust std of excess/error on quiet nights; n; median kNN scatter uJy): c_02a:0.8(n118,8.2)  c_03a:0.57(n45,9.6)  c_04a:0.58(n53,9.2)  o_01a:0.64(n316,20.6)  o_02a:0.79(n180,23.3)  o_03a:0.75(n182,21.1)  o_04a:0.79(n179,29.6)
+Gaia G lens, fs=1: t0 2015-11-03 tE 93.4 u0 0.163 chi2 33.7; fs free: t0 2015-11-03 tE 95.2 u0 0.158 fs 0.96 chi2 33.7 (n 20)
+      date      dt F cam  n  maj  mnr     ujy      kb   kd    kexc   kerr  ksig  R_fs1  R_fsfree  R_interp  pred_fs1  pred_fsfree  pred_interp
+2015-07-19 -102.73 o 02a  3 3.97 3.37  -21.32  -85.00 1.27   63.68  87.18  0.73   1.25      1.25       NaN     12.32        12.41          NaN
+2015-07-25  -96.72 o 02a  5 3.73 3.54  -65.06  -85.00 1.05   19.94  67.58  0.30   1.28      1.28       NaN     13.96        14.06          NaN
+2015-08-08  -82.72 c 02a  2 5.08 3.41 1326.48  -82.08 1.92 1408.56 895.96  1.57   1.38      1.38       NaN      4.60         4.63          NaN
+2015-08-09  -81.75 c 02a  6 4.34 3.80  -65.23  -72.37 0.89    7.14  45.53  0.16   1.39      1.39       NaN      4.71         4.73          NaN
+2015-08-10  -80.74 c 02a  6 4.22 3.69  -52.78  -68.87 0.91   16.09  38.59  0.42   1.40      1.40       NaN      4.82         4.84          NaN
+2015-08-11  -79.75 c 02a  5 4.26 3.73  -22.73  -68.87 0.90   46.14  39.42  1.17   1.41      1.41       NaN      4.93         4.95          NaN
+2015-09-23  -36.85 o 02a  6 4.14 3.53  -78.77  -92.51 1.41   13.74  96.45  0.14   2.30      2.29      2.49     64.33        64.28        73.80
+2015-09-24  -35.86 o 02a  2 4.05 3.60  -40.68  -88.35 1.35   47.67 165.20  0.29   2.34      2.34      2.52     66.41        66.36        75.64
+2015-10-02  -27.83 o 02a  1 4.63 3.65   22.00  -92.51 1.72  114.51 101.58  1.13   2.76      2.76      2.83     87.37        87.32        90.64
+2015-10-03  -26.82 o 02a  1 4.68 3.37 -174.00  -92.51 1.96  -81.49 105.15 -0.77   2.82      2.82      2.86     90.58        90.54        92.52
+2015-10-09  -20.85 c 02a  4 4.59 3.76  -25.38  -72.37 1.33   46.99  47.66  0.99   3.28      3.28      3.43     27.50        27.51        29.28
+2015-10-13  -16.85 c 02a  4 5.40 4.22 -221.48  -86.21 1.73 -135.28  92.80 -1.46   3.67      3.68      3.94     32.22        32.25        35.39
+2015-10-14  -15.85 c 02a  5 5.47 4.09 -222.67  -86.21 1.93 -136.46  57.93 -2.36   3.78      3.79      4.06     33.54        33.58        36.91
+2015-10-16  -13.86 c 02a  4 5.27 3.72 -161.58  -86.21 1.96  -75.37  50.50 -1.49   4.02      4.03      4.32     36.40        36.45        39.96
+2015-10-22   -7.87 c 02a  4 5.00 3.92  -89.48  -82.08 1.40   -7.40  76.27 -0.10   4.85      4.86      5.08     46.43        46.54        49.12
+2015-10-23   -6.86 o 02a  2 5.72 3.76 -418.53 -112.61 3.08 -305.93 194.03 -1.58   5.01      5.02      5.20    199.02       199.48       208.80
+2015-10-26   -3.87 o 02a  1 5.05 3.62 -411.00 -111.38 2.33 -299.62 143.57 -2.09   5.46      5.47      5.58    221.66       222.02       227.68
+  o  +-30 d: 4 nights; pooled excess -72.2 +- 61.7 uJy (-1.2 sigma); fs1: alpha -0.92 +- 0.55 (pred S/N 2.2); fsfree: alpha -0.92 +- 0.55 (pred S/N 2.2); interp: alpha -0.89 +- 0.54 (pred S/N 2.3)
+  c  +-30 d: 5 nights; pooled excess -46.9 +- 26.6 uJy (-1.8 sigma); fs1: alpha -1.45 +- 1.05 (pred S/N 1.3); fsfree: alpha -1.45 +- 1.04 (pred S/N 1.3); interp: alpha -1.37 +- 0.96 (pred S/N 1.4)
+  oc +-30 d: 9 nights; pooled excess -50.8 +- 24.4 uJy (-2.1 sigma); fs1: alpha -1.06 +- 0.48 (pred S/N 2.6); fsfree: alpha -1.06 +- 0.48 (pred S/N 2.6); interp: alpha -1.02 +- 0.46 (pred S/N 2.7)
+  o  +-90 d: 6 nights; pooled excess -38.6 +- 49.6 uJy (-0.8 sigma); fs1: alpha -0.78 +- 0.44 (pred S/N 2.4); fsfree: alpha -0.78 +- 0.44 (pred S/N 2.4); interp: alpha -0.74 +- 0.43 (pred S/N 2.5)
+  c  +-90 d: 9 nights; pooled excess -6.5 +- 17.6 uJy (-0.4 sigma); fs1: alpha -1.29 +- 0.94 (pred S/N 1.3); fsfree: alpha -1.28 +- 0.94 (pred S/N 1.3); interp: alpha -1.37 +- 0.96 (pred S/N 1.4)
+  oc +-90 d: 15 nights; pooled excess -10.1 +- 16.6 uJy (-0.6 sigma); fs1: alpha -0.90 +- 0.42 (pred S/N 2.7); fsfree: alpha -0.90 +- 0.42 (pred S/N 2.7); interp: alpha -0.89 +- 0.41 (pred S/N 2.8)
+  repeat bins dropped for poor PSF match (median kNN distance >= 1 px): 20
+  repeats o: 134 20-d bins with |dt| > 200 d (2017.3-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 1); top: 2026-02-20 +47 +- 12 uJy (+3.9 sig, x1.96 of the star, n 5, 02a); 2024-09-15 +32 +- 9 uJy (+3.5 sig, x1.64 of the star, n 15, 01a,03a,04a); 2019-07-05 +32 +- 11 uJy (+3.0 sig, x1.64 of the star, n 7, 01a,02a)
+  repeats c: 85 20-d bins with |dt| > 200 d (2017.4-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2020-05-23 +13 +- 6 uJy (+2.2 sig, x2.05 of the star, n 4, 02a); 2020-04-27 +14 +- 6 uJy (+2.2 sig, x2.17 of the star, n 5, 02a); 2019-06-08 +25 +- 13 uJy (+2.0 sig, x3.12 of the star, n 1, 02a)
+======================================== J184922 J184922.92-000203.9 Gaia t0 2016-12-11; Gaia star c 11 uJy, o 38 uJy
+error-model inflation per series (robust std of excess/error on quiet nights; n; median kNN scatter uJy): c_01a:1.0(n10,5.5)  c_02a:0.69(n99,6.0)  c_03a:0.31(n19,6.7)  c_04a:0.58(n32,7.1)  o_01a:0.57(n285,9.5)  o_02a:0.61(n216,11.5)  o_03a:0.54(n114,8.6)  o_04a:0.61(n134,13.4)
+Gaia G lens, fs=1: t0 2016-12-02 tE 147.8 u0 0.000 chi2 93.7; fs free: t0 2016-12-02 tE 147.8 u0 0.000 fs 1.00 chi2 93.7 (n 21)
+      date      dt F cam  n  maj  mnr     ujy     kb   kd    kexc   kerr  ksig  R_fs1  R_fsfree  R_interp  pred_fs1  pred_fsfree  pred_interp
+2016-08-15 -118.37 o 02a  3 4.30 3.84  -56.89  -8.97 2.31  -47.92 103.19 -0.46   1.62      1.62       NaN     23.55        23.55          NaN
+2016-08-16 -117.33 o 02a  5 4.46 3.83  -66.08  -8.97 2.40  -57.11  69.66 -0.82   1.63      1.63       NaN     23.96        23.96          NaN
+2016-08-19 -114.33 o 02a  3 3.89 3.56 -163.91  -0.73 1.87 -163.18  45.77 -3.56   1.66      1.66       NaN     25.21        25.21          NaN
+2016-08-30 -103.39 c 02a  5 3.95 3.82  -34.60  -3.13 1.89  -31.47  16.80 -1.87   1.80      1.80       NaN      9.11         9.11          NaN
+2016-09-07  -95.40 c 02a  5 3.82 3.66  -18.40  -3.13 1.71  -15.27  17.23 -0.89   1.93      1.93       NaN     10.56        10.56          NaN
+2016-09-16  -86.42 o 02a  1 3.48 3.32  -44.00  -0.73 1.40  -43.27  74.36 -0.58   2.11      2.11       NaN     42.27        42.27          NaN
+2016-09-19  -83.42 o 02a  5 3.43 3.16  -22.35  -8.97 1.25  -13.39  32.26 -0.41   2.18      2.18       NaN     44.96        44.96          NaN
+2016-09-27  -75.44 c 02a  5 4.07 3.68   -7.49  -0.09 1.90   -7.41  16.29 -0.45   2.41      2.41       NaN     15.95        15.95          NaN
+2016-10-01  -71.46 c 02a  5 3.99 3.69  -86.77  -3.13 1.86  -83.64  23.64 -3.54   2.54      2.54       NaN     17.47        17.47          NaN
+2016-10-09  -63.47 o 02a  5 3.57 3.37   25.86  -8.97 1.48   34.82  47.79  0.73   2.88      2.88       NaN     71.27        71.27          NaN
+2016-10-11  -61.48 o 02a  5 3.68 3.37  124.17 -10.02 1.55  134.19  50.16  2.68   2.98      2.98       NaN     75.09        75.09          NaN
+2016-10-15  -57.50 o 02a 10 3.58 3.18  103.53  -8.97 1.36  112.49  50.16  2.24   3.20      3.20       NaN     83.69        83.69          NaN
+2016-10-19  -53.52 o 02a  5 3.77 3.15   67.36  -8.97 1.52   76.33  48.13  1.59   3.47      3.47       NaN     93.92        93.92          NaN
+2016-10-27  -45.52 c 02a  5 3.70 3.65    8.03  -0.09 1.59    8.12  15.61  0.52   4.20      4.20       NaN     36.27        36.27          NaN
+2016-10-31  -41.52 c 02a  5 4.43 4.06 -121.38  -6.12 2.37 -115.26  21.28 -5.42   4.70      4.70       NaN     41.99        41.99          NaN
+2016-11-04  -37.51 c 02a  2 4.05 3.84  -60.52 -11.15 1.90  -49.37  30.48 -1.62   5.36      5.36       NaN     49.39        49.39          NaN
+2017-04-09  118.86 o 02a 10 3.44 3.12   -3.21  -8.97 1.16    5.76  46.97  0.12   1.45      1.45      1.64     17.25        17.25        24.51/Users/alanshortz/conductor/workspaces/oddsky/philadelphia-v2/hunts/H-0010/reviews/atlas-2026-11-01/a4_knn.py:190: RuntimeWarning: invalid value encountered in scalar divide
+  m = float(np.sum(w * x.kexc) / np.sum(w))
+/Users/alanshortz/conductor/workspaces/oddsky/philadelphia-v2/hunts/H-0010/reviews/atlas-2026-11-01/a4_knn.py:191: RuntimeWarning: divide by zero encountered in scalar divide
+  me = float(1 / np.sqrt(np.sum(w)))
+
+  o +-30 d: no night with a kNN baseline
+  c +-30 d: no night with a kNN baseline
+  o  +-90 d: 6 nights; pooled excess +44.7 +- 18.9 uJy (+2.4 sigma); fs1: alpha +0.83 +- 0.32 (pred S/N 3.6); fsfree: alpha +0.83 +- 0.32 (pred S/N 3.6)
+  c  +-90 d: 5 nights; pooled excess -34.9 +- 8.8 uJy (-4.0 sigma); fs1: alpha -1.13 +- 0.72 (pred S/N 3.7); fsfree: alpha -1.13 +- 0.72 (pred S/N 3.7)
+  oc +-90 d: 11 nights; pooled excess -20.7 +- 8.0 uJy (-2.6 sigma); fs1: alpha -0.16 +- 0.47 (pred S/N 5.2); fsfree: alpha -0.16 +- 0.47 (pred S/N 5.2)
+  repeat bins dropped for poor PSF match (median kNN distance >= 1 px): 20
+  repeats o: 128 20-d bins with |dt| > 200 d (2017.5-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2022-09-09 +7 +- 5 uJy (+1.5 sig, x1.18 of the star, n 12, 01a,02a,03a,04a); 2024-02-28 +16 +- 12 uJy (+1.4 sig, x1.43 of the star, n 4, 02a,04a); 2020-09-17 +6 +- 5 uJy (+1.3 sig, x1.16 of the star, n 6, 01a,02a)
+  repeats c: 66 20-d bins with |dt| > 200 d (2017.6-2026.7); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2021-07-09 +5 +- 5 uJy (+1.0 sig, x1.46 of the star, n 2, 02a); 2019-09-24 +10 +- 11 uJy (+1.0 sig, x1.91 of the star, n 1, 02a); 2020-04-19 +8 +- 9 uJy (+0.9 sig, x1.71 of the star, n 1, 02a)
+======================================== J182811 J182811.16-082538.6 Gaia t0 2015-10-09; Gaia star c 11 uJy, o 68 uJy
+error-model inflation per series (robust std of excess/error on quiet nights; n; median kNN scatter uJy): c_02a:0.79(n122,13.4)  c_03a:0.89(n26,11.5)  c_04a:0.8(n33,15.3)  o_01a:0.67(n314,42.8)  o_02a:0.73(n220,30.0)  o_03a:0.73(n123,32.8)  o_04a:0.67(n166,50.1)
+Gaia G lens, fs=1: t0 2015-10-02 tE 44.2 u0 0.094 chi2 14.4; fs free: t0 2015-10-03 tE 381.5 u0 0.005 fs 0.07 chi2 8.0 (n 18)
+      date     dt F cam  n  maj  mnr     ujy      kb   kd    kexc   kerr  ksig  R_fs1  R_fsfree  R_interp  pred_fs1  pred_fsfree  pred_interp
+2015-07-26 -74.64 o 02a  4 3.59 3.36 -405.05 -441.86 0.58   36.81  77.51  0.47   1.12      1.30       NaN      8.39        20.76          NaN
+2015-08-12 -57.67 c 02a  4 3.90 3.70 -138.73 -151.79 0.57   13.06  21.20  0.62   1.25      1.42       NaN      2.82         4.87          NaN
+2015-09-23 -15.77 o 02a  4 3.86 3.30 -353.85 -444.15 0.75   90.29  48.52  1.86   4.37      3.45      5.91    229.93       167.27       334.96
+2015-09-24 -14.80 o 02a  1 3.64 3.16 -366.00 -424.62 0.66   58.62  96.43  0.61   4.76      3.72      6.18    256.59       185.23       352.72
+2015-10-02  -6.76 o 02a  1 4.09 3.47  -62.00 -447.41 0.85  385.41  58.37  6.60  10.59     12.29      8.34    653.35       769.57       500.20
+2015-10-03  -5.77 o 02a  1 4.01 3.21 -171.00 -447.41 0.91  276.41  60.49  4.57  10.55     12.91      8.61    650.68       811.65       518.40
+2015-10-09   0.21 c 02a  4 4.06 3.74 -166.91 -151.67 0.58  -15.25  24.07 -0.63   5.77      4.76      7.80     54.79        43.22        78.08
+2015-10-13   4.21 c 02a  3 4.64 4.04 -157.70 -153.88 1.04   -3.83  29.29 -0.13   4.00      3.34      6.68     34.46        26.92        65.31
+2015-10-14   5.20 c 02a  3 4.51 4.17 -165.43 -153.88 0.88  -11.55  35.89 -0.32   3.71      3.14      6.41     31.16        24.56        62.14
+2015-10-16   7.21 c 02a  4 4.25 3.71 -142.20 -151.79 0.72    9.59  30.99  0.31   3.24      2.81      5.85     25.76        20.82        55.72
+2015-10-23  14.22 o 02a  2 4.78 3.84 -302.94 -447.41 1.77  144.47  65.85  2.19   2.28      2.17      3.90     87.45        79.78       197.47
+2015-10-27  18.20 o 02a  1 4.44 3.60 -610.00 -447.41 1.49 -162.59 113.79 -1.43   1.98      1.97      2.79     66.93        66.07       122.00
+  o  +-30 d: 6 nights; pooled excess +180.6 +- 26.7 uJy (+6.8 sigma); fs1: alpha +0.50 +- 0.08 (pred S/N 16.5); fsfree: alpha +0.42 +- 0.07 (pred S/N 19.3); interp: alpha +0.53 +- 0.11 (pred S/N 14.8)
+  c  +-30 d: 4 nights; pooled excess -6.3 +- 14.6 uJy (-0.4 sigma); fs1: alpha -0.20 +- 0.35 (pred S/N 2.8); fsfree: alpha -0.25 +- 0.45 (pred S/N 2.2); interp: alpha -0.11 +- 0.21 (pred S/N 4.7)
+  oc +-30 d: 10 nights; pooled excess +36.7 +- 12.8 uJy (+2.9 sigma); fs1: alpha +0.48 +- 0.07 (pred S/N 16.8); fsfree: alpha +0.42 +- 0.06 (pred S/N 19.4); interp: alpha +0.47 +- 0.10 (pred S/N 15.5)
+  o  +-90 d: 7 nights; pooled excess +165.4 +- 25.2 uJy (+6.6 sigma); fs1: alpha +0.50 +- 0.07 (pred S/N 16.5); fsfree: alpha +0.43 +- 0.06 (pred S/N 19.3); interp: alpha +0.53 +- 0.11 (pred S/N 14.8)
+  c  +-90 d: 5 nights; pooled excess -0.1 +- 12.0 uJy (-0.0 sigma); fs1: alpha -0.19 +- 0.35 (pred S/N 2.8); fsfree: alpha -0.22 +- 0.45 (pred S/N 2.2); interp: alpha -0.11 +- 0.21 (pred S/N 4.7)
+  oc +-90 d: 12 nights; pooled excess +30.5 +- 10.8 uJy (+2.8 sigma); fs1: alpha +0.48 +- 0.06 (pred S/N 16.8); fsfree: alpha +0.42 +- 0.05 (pred S/N 19.4); interp: alpha +0.47 +- 0.10 (pred S/N 15.5)
+  repeat bins dropped for poor PSF match (median kNN distance >= 1 px): 22
+  repeats o: 133 20-d bins with |dt| > 200 d (2017.2-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2026-08-01 +33 +- 12 uJy (+2.7 sig, x1.48 of the star, n 5, 01a,03a); 2021-06-26 +23 +- 10 uJy (+2.3 sig, x1.34 of the star, n 6, 01a,02a); 2022-07-25 +25 +- 17 uJy (+1.4 sig, x1.36 of the star, n 6, 01a,02a,03a,04a)
+  repeats c: 76 20-d bins with |dt| > 200 d (2017.4-2026.4); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2019-04-09 +22 +- 13 uJy (+1.7 sig, x2.88 of the star, n 1, 02a); 2022-06-01 +13 +- 9 uJy (+1.4 sig, x2.15 of the star, n 3, 02a); 2022-05-03 +19 +- 13 uJy (+1.4 sig, x2.64 of the star, n 2, 02a)
+======================================== J174029 J174029.07-331407.7 Gaia t0 2017-02-14; Gaia star c 13 uJy, o 64 uJy
+error-model inflation per series (robust std of excess/error on quiet nights; n; median kNN scatter uJy): c_02a:0.62(n86,12.4)  c_03a:0.63(n49,9.7)  c_04a:0.67(n61,10.6)  o_01a:0.75(n153,50.6)  o_02a:0.73(n119,24.5)  o_03a:0.77(n177,39.4)  o_04a:0.76(n208,40.1)
+Gaia G lens, fs=1: t0 2017-02-15 tE 21.8 u0 0.050 chi2 50.8; fs free: t0 2017-02-14 tE 28.6 u0 0.022 fs 0.57 chi2 50.4 (n 36)
+      date     dt F cam  n  maj  mnr      ujy      kb   kd     kexc   kerr  ksig  R_fs1  R_fsfree  R_interp  pred_fs1  pred_fsfree  pred_interp
+2017-05-05  80.38 o 01a  1 4.05 3.41 -1131.00 -399.65 1.01  -731.35 198.44 -3.69   1.01      1.01       NaN      0.57         0.78          NaN
+2017-05-06  81.37 o 02a  1 2.45 2.12   -25.00  -23.17 0.31    -1.83  55.61 -0.03   1.01      1.01       NaN      0.55         0.75          NaN
+2017-05-08  83.33 o 01a  4 3.36 3.17  -582.46 -283.17 0.45  -299.29 140.24 -2.13   1.01      1.01       NaN      0.50         0.69          NaN
+2017-05-09  84.27 o 01a  3 3.38 3.17  -222.50 -305.59 0.55    83.09 120.73  0.69   1.01      1.01       NaN      0.48         0.67          NaN
+2017-05-18  93.35 o 02a  4 2.84 2.58  -131.77  -58.70 0.71   -73.06  65.19 -1.12   1.01      1.01       NaN      0.33         0.47          NaN
+2017-05-20  95.36 o 01a  1 7.14 5.58  2377.00 -424.14 4.85  2801.14 329.91  8.49   1.00      1.01       NaN      0.31         0.44          NaN
+2017-05-21  96.36 o 01a  2 4.12 2.93  -782.14 -358.75 1.46  -423.40 182.72 -2.32   1.00      1.01       NaN      0.30         0.42          NaN
+2017-05-22  97.33 c 02a  8 3.06 2.78   -22.51  -27.37 0.48     4.86  15.76  0.31   1.00      1.01       NaN      0.06         0.08          NaN
+2017-05-24  99.35 o 01a  2 4.12 3.20  -920.39 -380.89 1.25  -539.50 166.91 -3.23   1.00      1.01       NaN      0.26         0.38          NaN
+2017-05-26 101.33 c 02a  9 2.81 2.52    -1.42  -20.35 0.39    18.93  11.02  1.72   1.00      1.01       NaN      0.05         0.07          NaN
+2017-05-28 103.36 o 01a  4 6.22 4.47 -3549.07 -424.14 3.58 -3124.94 851.26 -3.67   1.00      1.01       NaN      0.23         0.33          NaN
+2017-05-29 104.35 o 01a  4 6.08 4.33 -4593.22 -424.14 3.41 -4169.09 659.15 -6.32   1.00      1.01       NaN      0.22         0.32          NaN
+2017-05-30 105.31 c 02a  5 2.60 2.44     9.12  -11.01 0.20    20.14  26.43  0.76   1.00      1.00       NaN      0.04         0.06          NaN
+2017-06-01 107.32 o 01a  2 4.42 3.46 -1627.62 -399.65 1.51 -1227.98 238.13 -5.16   1.00      1.00       NaN      0.20         0.29          NaN
+2017-06-02 108.32 o 01a  3 3.33 3.16  -423.05 -281.91 0.48  -141.14  96.68 -1.46   1.00      1.00       NaN      0.19         0.28          NaN
+2017-06-03 109.31 o 02a  4 2.79 2.58   -69.94  -73.39 0.61     3.45  48.00  0.07   1.00      1.00       NaN      0.18         0.27          NaN
+2017-06-05 111.30 o 01a  4 3.22 2.99  -390.36 -247.94 0.44  -142.42  94.56 -1.51   1.00      1.00       NaN      0.17         0.25          NaN
+2017-06-06 112.26 o 01a  5 2.95 2.84  -291.52 -221.25 0.25   -70.27 130.85 -0.54   1.00      1.00       NaN      0.17         0.25          NaN
+2017-06-13 119.31 o 01a  4 3.37 2.96  -480.84 -281.91 0.54  -198.93  98.22 -2.03   1.00      1.00       NaN      0.13         0.20          NaN
+  o +-30 d: no night with a kNN baseline
+  c +-30 d: no night with a kNN baseline
+  o  +-90 d: 4 nights; pooled excess -61.3 +- 46.2 uJy (-1.3 sigma); fs1: alpha -118.27 +- 204.18 (pred S/N 0.0); fsfree: alpha -85.84 +- 148.57 (pred S/N 0.0)
+  c +-90 d: no night with a kNN baseline
+  oc +-90 d: 4 nights; pooled excess -61.3 +- 46.2 uJy (-1.3 sigma); fs1: alpha -118.27 +- 204.18 (pred S/N 0.0); fsfree: alpha -85.84 +- 148.57 (pred S/N 0.0)
+  repeat bins dropped for poor PSF match (median kNN distance >= 1 px): 12
+  repeats o: 117 20-d bins with |dt| > 200 d (2017.7-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2025-03-15 +34 +- 13 uJy (+2.6 sig, x1.53 of the star, n 11, 03a,04a); 2024-03-21 +28 +- 13 uJy (+2.1 sig, x1.45 of the star, n 12, 03a,04a); 2025-05-12 +38 +- 18 uJy (+2.1 sig, x1.60 of the star, n 9, 03a,04a)
+  repeats c: 83 20-d bins with |dt| > 200 d (2017.7-2026.8); bins > 4 sigma 0, > 5 sigma 0 (< -5 sigma: 0); top: 2022-02-06 +42 +- 28 uJy (+1.5 sig, x4.28 of the star, n 1, 03a); 2025-04-02 +10 +- 7 uJy (+1.5 sig, x1.78 of the star, n 6, 04a); 2026-09-07 +9 +- 7 uJy (+1.4 sig, x1.72 of the star, n 4, 02a,04a)

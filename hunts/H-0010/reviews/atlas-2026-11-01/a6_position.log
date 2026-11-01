@@ -1,0 +1,159 @@
+============================== J182124 J182124.77-190909.7
+  c 02a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -28 .. +80 uJy over 14 cells; overall robust scatter 39
+  o 02a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -81 .. +82 uJy over 23 cells; overall robust scatter 80
+  event frames with |z| > 1.5 (kNN) or |local z| > 1.5, with the local (same detector position) quiet residuals:
+      date     dt F cam  ujy  resid     z  kdist    x    y  loc_n  loc_med  loc_sc  loc_z
+2015-08-09 -25.26 c 02a 1035   67.0  1.52   0.55 2414 1994      0      NaN     NaN    NaN
+2015-08-11 -23.28 c 02a 1036   68.0  1.54   0.49 2452 1992      0      NaN     NaN    NaN
+2015-09-23  19.67 o 02a 2418  204.0  1.00   0.96 1010 3439     13     18.0   43.00   2.13
+2015-09-24  20.63 o 02a 1775 -312.0 -1.21   0.69 2445 2012     14     24.5   82.28  -3.29
+2015-10-01  27.67 o 02a 2079 -243.0 -0.97   1.11 1011 3445     13     18.0   43.00  -4.15
+2015-10-03  29.67 o 02a 1994 -328.0 -1.31   1.37  998 3441     13     18.0   43.00  -5.19
+2015-10-13  39.63 c 02a 1310  198.0  2.23   1.28 2491 2004      0      NaN     NaN    NaN
+2015-10-14  40.62 c 02a 1255  167.0  2.47   0.80 2488 2013      0      NaN     NaN    NaN
+2015-10-16  42.62 c 02a 1080  109.0  2.24   0.44 2475 2011      0      NaN     NaN    NaN
+2015-10-16  42.65 c 02a  868 -189.0 -2.02   1.09 1043 3444     13     19.0   69.68  -2.70
+2015-10-26  52.63 o 02a 2155 -167.0 -0.64   1.48 2512 2007     14     24.5   82.28  -1.60
+  o +-30 d, kNN distance < 1 px, resid    : 2 nights / 4 frames; mean excess +2.3 +- 112.4 uJy (+0.01 +- 0.32 of the Gaia star); mean prediction (fs=1 lens) +99.3; alpha +0.04 +- 1.52
+  o +-30 d, kNN distance < 1 px, resid_loc: 2 nights / 4 frames; mean excess -20.2 +- 112.4 uJy (-0.06 +- 0.32 of the Gaia star); mean prediction (fs=1 lens) +99.3; alpha -0.19 +- 1.53
+  o +-60 d, kNN distance < 1 px, resid    : 3 nights / 8 frames; mean excess +78.6 +- 80.5 uJy (+0.23 +- 0.23 of the Gaia star); mean prediction (fs=1 lens) +125.7; alpha +0.68 +- 0.60
+  o +-60 d, kNN distance < 1 px, resid_loc: 3 nights / 8 frames; mean excess +60.5 +- 80.5 uJy (+0.17 +- 0.23 of the Gaia star); mean prediction (fs=1 lens) +125.7; alpha +0.57 +- 0.62
+  c +-30 d, kNN distance < 1 px, resid    : 3 nights / 12 frames; mean excess +22.6 +- 14.1 uJy (+0.21 +- 0.13 of the Gaia star); mean prediction (fs=1 lens) +63.5; alpha +0.36 +- 0.31
+  c +-30 d, kNN distance < 1 px, resid_loc: 3 nights / 12 frames; mean excess +9.1 +- 14.6 uJy (+0.09 +- 0.14 of the Gaia star); mean prediction (fs=1 lens) +63.5; alpha +0.14 +- 0.32
+  c +-60 d, kNN distance < 1 px, resid    : 8 nights / 23 frames; mean excess +32.9 +- 11.9 uJy (+0.31 +- 0.11 of the Gaia star); mean prediction (fs=1 lens) +34.3; alpha +0.44 +- 0.33
+  c +-60 d, kNN distance < 1 px, resid_loc: 8 nights / 23 frames; mean excess +21.2 +- 12.3 uJy (+0.20 +- 0.12 of the Gaia star); mean prediction (fs=1 lens) +34.3; alpha +0.22 +- 0.34
+============================== J200958 J200958.93+321427.9
+  c 02a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -8 .. +3 uJy over 28 cells; overall robust scatter 13
+  o 02a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -16 .. +13 uJy over 42 cells; overall robust scatter 22
+  event frames with |z| > 1.5 (kNN) or |local z| > 1.5, with the local (same detector position) quiet residuals:
+      date     dt F cam  ujy  resid     z  kdist    x    y  loc_n  loc_med  loc_sc  loc_z
+2015-10-05 -55.04 o 02a  441   67.0  1.34   0.44 7497 4763     47     -4.0   14.83   1.74
+2015-10-05 -55.01 o 02a  165 -204.0 -3.14   0.58 6025 6201      0      NaN     NaN    NaN
+2015-10-29 -31.12 o 02a  469   97.0  1.94   0.50 7587 4792     47     -5.0   13.34   2.72
+2015-10-29 -31.11 o 02a  436   64.0  1.26   0.44 7577 4792     47     -5.0   13.34   2.04
+2015-12-06   6.91 o 02a  488  110.0  3.08   0.32 7992 4370      0      NaN     NaN    NaN
+2015-12-06   6.92 o 02a  523  151.0  2.82   0.43 8281 4962     10    -19.0   37.06   3.12
+2015-12-07   7.91 o 02a  527  153.0  3.62   0.39 7998 4373      0      NaN     NaN    NaN
+2015-12-07   7.92 o 02a  444   72.0  1.42   0.59 8286 4967     10    -19.0   37.06   1.65
+2015-12-08   8.86 o 02a  522  152.0  1.65   0.52 8014 4349      0      NaN     NaN    NaN
+2015-12-08   8.87 o 02a  516  146.0  2.19   0.53 8303 4938     10    -19.0   37.06   3.11
+2015-12-08   8.89 o 02a  465   70.0  1.51   0.26 7429 3772     16     15.5   17.05   1.66
+2015-12-08   8.90 o 02a  454   82.0  1.89   0.34 7125 5516     39      0.0   22.24   2.34
+2015-12-09   9.88 o 02a  506  134.0  2.65   0.41 8296 4945     10    -19.0   37.06   3.17
+2015-12-09   9.90 o 02a  494  116.0  2.63   0.26 7422 3781     16     15.5   17.05   2.64
+2015-12-09   9.91 o 02a  470   98.0  1.96   0.37 7121 5526     39      0.0   22.24   2.62
+  o +-30 d, kNN distance < 1 px, resid    : 5 nights / 16 frames; mean excess +90.4 +- 12.9 uJy (+0.25 +- 0.04 of the Gaia star); mean prediction (fs=1 lens) +163.8; alpha +0.58 +- 0.08
+  o +-30 d, kNN distance < 1 px, resid_loc: 5 nights / 16 frames; mean excess +94.0 +- 12.6 uJy (+0.26 +- 0.04 of the Gaia star); mean prediction (fs=1 lens) +163.8; alpha +0.60 +- 0.08
+  o +-60 d, kNN distance < 1 px, resid    : 9 nights / 32 frames; mean excess +58.5 +- 9.8 uJy (+0.16 +- 0.03 of the Gaia star); mean prediction (fs=1 lens) +122.9; alpha +0.53 +- 0.07
+  o +-60 d, kNN distance < 1 px, resid_loc: 9 nights / 32 frames; mean excess +62.8 +- 9.7 uJy (+0.18 +- 0.03 of the Gaia star); mean prediction (fs=1 lens) +122.9; alpha +0.56 +- 0.07
+  c +-60 d, kNN distance < 1 px, resid    : 3 nights / 12 frames; mean excess +10.7 +- 10.0 uJy (+0.16 +- 0.15 of the Gaia star); mean prediction (fs=1 lens) +14.2; alpha +0.75 +- 0.70
+  c +-60 d, kNN distance < 1 px, resid_loc: 3 nights / 12 frames; mean excess +9.7 +- 10.0 uJy (+0.15 +- 0.15 of the Gaia star); mean prediction (fs=1 lens) +14.2; alpha +0.68 +- 0.70
+============================== J184837 J184837.12-051620.2
+  o 01a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -36 .. +23 uJy over 28 cells; overall robust scatter 42
+  o 02a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -37 .. +76 uJy over 27 cells; overall robust scatter 53
+  event frames with |z| > 1.5 (kNN) or |local z| > 1.5, with the local (same detector position) quiet residuals:
+      date    dt F cam  ujy  resid     z  kdist    x     y  loc_n  loc_med  loc_sc  loc_z
+2017-03-14 -6.70 o 01a  257  168.0  2.18   0.69 3832  9908      0      NaN     NaN    NaN
+2017-03-14 -6.68 o 01a  322  268.0  2.71   0.42 4411  9313     10     -9.5   28.91   2.82
+2017-05-13 53.28 o 01a  414  198.0  2.34   1.92 5934  9437     39     11.0   40.03   2.62
+2017-05-19 59.28 o 02a   81  -86.0 -1.80   0.16 2770 10064      9     46.0   54.86  -2.17
+  o +-30 d, kNN distance < 1 px, resid    : 3 nights / 5 frames; mean excess +111.1 +- 47.9 uJy (+0.39 +- 0.17 of the Gaia star); mean prediction (fs=1 lens) +147.6; alpha +0.76 +- 0.32
+  o +-30 d, kNN distance < 1 px, resid_loc: 3 nights / 5 frames; mean excess +112.3 +- 47.9 uJy (+0.39 +- 0.17 of the Gaia star); mean prediction (fs=1 lens) +147.6; alpha +0.78 +- 0.32
+  o +-60 d, kNN distance < 1 px, resid    : 10 nights / 22 frames; mean excess +14.6 +- 13.2 uJy (+0.05 +- 0.05 of the Gaia star); mean prediction (fs=1 lens) +75.3; alpha +0.46 +- 0.22
+  o +-60 d, kNN distance < 1 px, resid_loc: 10 nights / 22 frames; mean excess +10.1 +- 13.2 uJy (+0.04 +- 0.05 of the Gaia star); mean prediction (fs=1 lens) +75.3; alpha +0.41 +- 0.27
+============================== J174036 J174036.98-223251.4
+  o 01a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -56 .. +91 uJy over 23 cells; overall robust scatter 87
+  o 02a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -40 .. +64 uJy over 19 cells; overall robust scatter 74
+  event frames with |z| > 1.5 (kNN) or |local z| > 1.5, with the local (same detector position) quiet residuals:
+      date    dt F cam  ujy  resid    z  kdist    x    y  loc_n  loc_med  loc_sc  loc_z
+2017-03-14 32.47 o 01a  -14  256.0 2.25   0.68 6839 4781      0      NaN     NaN    NaN
+2017-03-14 32.51 o 01a  123  347.0 2.57   0.31 7135 5643      0      NaN     NaN    NaN
+  o +-60 d, kNN distance < 1 px, resid    : 2 nights / 12 frames; mean excess -0.5 +- 51.7 uJy (-0.01 +- 0.60 of the Gaia star); mean prediction (fs=1 lens) +7.3; alpha +0.37 +- 11.14
+  o +-60 d, kNN distance < 1 px, resid_loc: 2 nights / 12 frames; mean excess +45.8 +- 47.9 uJy (+0.53 +- 0.55 of the Gaia star); mean prediction (fs=1 lens) +7.3; alpha +6.48 +- 8.51
+============================== J180313 J180313.03-150702.0
+  c 02a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -12 .. +8 uJy over 15 cells; overall robust scatter 19
+  o 02a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -16 .. +26 uJy over 24 cells; overall robust scatter 36
+  event frames with |z| > 1.5 (kNN) or |local z| > 1.5, with the local (same detector position) quiet residuals:
+      date     dt F cam  ujy  resid     z  kdist    x    y  loc_n  loc_med  loc_sc  loc_z
+2015-09-23 -36.86 o 02a  177  245.0  2.22   0.56 3755  123     12     -9.0   71.91   2.22
+2015-09-24 -35.86 o 02a  127  219.0  1.71   0.81 3750  120     12     -9.0   71.91   1.73
+2015-10-02 -27.83 o 02a   22  277.0  1.72   1.23 2292 1559     16      6.0   25.95   4.15
+2015-10-03 -26.82 o 02a -174  130.0  1.32   1.50 2287 1568     16      6.0   25.95   1.77
+2015-10-09 -20.87 c 02a -486 -356.0 -4.72   1.30 3740  110      0      NaN     NaN    NaN
+2015-10-13 -16.87 c 02a -442 -318.0 -4.84   1.79 3794  112      0      NaN     NaN    NaN
+2015-10-13 -16.85 c 02a -192  -77.0 -1.62   1.00 2354 1565     13     -7.0   35.58  -1.38
+2015-10-13 -16.84 c 02a -269 -150.0 -3.03   1.11 2352 1564     13     -7.0   35.58  -2.83
+2015-10-14 -15.87 c 02a -221 -101.0 -1.68   1.18 3791  123      0      NaN     NaN    NaN
+2015-10-14 -15.86 c 02a -285 -166.0 -3.63   0.86 2347 1574     13     -7.0   35.58  -3.14
+2015-10-14 -15.84 c 02a -260 -141.0 -2.93   1.05 2346 1572     13     -7.0   35.58  -2.54
+2015-10-16 -13.87 c 02a -215 -102.0 -1.75   0.84 3779  120      0      NaN     NaN    NaN
+2015-10-16 -13.84 c 02a -195  -76.0 -1.63   1.26 2335 1571     13     -7.0   35.58  -1.34
+2015-10-22  -7.87 c 02a -245 -126.0 -1.70   1.07 3732  127      0      NaN     NaN    NaN
+2015-10-23  -6.86 o 02a -556 -241.0 -2.25   2.53 3825  134      9    -22.0  124.54  -1.44
+2015-10-26  -3.87 o 02a -411 -251.0 -1.07   1.77 1152 9822     13     18.0  106.75  -2.03
+  o +-60 d, kNN distance < 1 px, resid    : 2 nights / 7 frames; mean excess +53.7 +- 48.3 uJy (+1.08 +- 0.97 of the Gaia star); mean prediction (fs=1 lens) +65.4; alpha +0.83 +- 0.75
+  o +-60 d, kNN distance < 1 px, resid_loc: 2 nights / 7 frames; mean excess +49.4 +- 52.3 uJy (+0.99 +- 1.05 of the Gaia star); mean prediction (fs=1 lens) +65.4; alpha +0.77 +- 0.81
+  c +-30 d, kNN distance < 1 px, resid    : 5 nights / 12 frames; mean excess -9.2 +- 17.2 uJy (-0.76 +- 1.43 of the Gaia star); mean prediction (fs=1 lens) +35.2; alpha -0.30 +- 1.01
+  c +-30 d, kNN distance < 1 px, resid_loc: 5 nights / 12 frames; mean excess -6.7 +- 17.3 uJy (-0.56 +- 1.43 of the Gaia star); mean prediction (fs=1 lens) +35.2; alpha -0.23 +- 1.02
+  c +-60 d, kNN distance < 1 px, resid    : 5 nights / 12 frames; mean excess -9.2 +- 17.2 uJy (-0.76 +- 1.43 of the Gaia star); mean prediction (fs=1 lens) +35.2; alpha -0.30 +- 1.01
+  c +-60 d, kNN distance < 1 px, resid_loc: 5 nights / 12 frames; mean excess -6.7 +- 17.3 uJy (-0.56 +- 1.43 of the Gaia star); mean prediction (fs=1 lens) +35.2; alpha -0.23 +- 1.02
+============================== J184922 J184922.92-000203.9
+  c 02a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -8 .. +2 uJy over 9 cells; overall robust scatter 12
+  o 02a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -13 .. +8 uJy over 25 cells; overall robust scatter 21
+  event frames with |z| > 1.5 (kNN) or |local z| > 1.5, with the local (same detector position) quiet residuals:
+      date     dt F cam  ujy  resid     z  kdist    x     y  loc_n  loc_med  loc_sc  loc_z
+2016-10-01 -71.48 c 02a  -89  -66.0 -1.93   0.56 2583  9705     11     -6.0   17.79  -2.06
+2016-10-01 -71.46 c 02a -117  -93.0 -3.00   0.58 2565  9665     13     -6.0   17.79  -3.44
+2016-10-01 -71.45 c 02a  -86  -62.0 -1.85   0.55 2624  9741     11     -8.0   14.83  -2.04
+2016-10-01 -71.44 c 02a  -85  -53.0 -1.71   0.52 2646  9621     11     -6.0   17.79  -1.76
+2016-10-09 -63.46 o 02a   19   73.0  1.47   0.61 5850  2078     14      0.0   17.79   1.95
+2016-10-09 -63.45 o 02a   87  141.0  3.00   0.60 5811  2136      0      NaN     NaN    NaN
+2016-10-11 -61.50 o 02a  102  150.0  2.85   0.59 7268  2175      0      NaN     NaN    NaN
+2016-10-11 -61.49 o 02a   82  130.0  2.82   0.73 7250  2135      0      NaN     NaN    NaN
+2016-10-11 -61.48 o 02a  172  226.0  4.26   0.64 7304  2214      0      NaN     NaN    NaN
+2016-10-11 -61.46 o 02a  157  205.0  4.35   0.62 7327  2095      8     -4.5   19.27   5.36
+2016-10-11 -61.45 o 02a  108  162.0  3.05   0.65 7288  2152      0      NaN     NaN    NaN
+2016-10-15 -57.54 o 02a  255  301.0  3.56   0.81 8094   670     19     -3.0   38.55   3.49
+2016-10-15 -57.53 o 02a   96  150.0  2.71   0.66 8073   628     20     -2.5   35.58   2.81
+2016-10-15 -57.51 o 02a  146  200.0  3.62   0.62 8130   706     19     -3.0   38.55   3.61
+2016-10-15 -57.50 o 02a  113  152.0  2.24   0.84 3859 10306     21    -12.0   28.17   2.62
+2016-10-15 -57.50 o 02a  137  191.0  3.07   0.65 8153   587     21     -2.0   38.55   3.06
+2016-10-15 -57.48 o 02a   50   94.0  1.45   0.73 3915 10381     15    -16.0   37.06   1.68
+2016-10-15 -57.48 o 02a   72  126.0  2.02   0.59 8112   644     21     -2.0   38.55   2.03
+2016-10-15 -57.47 o 02a   71  126.0  1.65   0.76 3936 10263     23    -12.0   28.17   1.97
+2016-10-15 -57.46 o 02a  100  144.0  2.06   0.74 3895 10321     20    -14.0   27.43   2.39
+2016-10-19 -53.53 o 02a   61  115.0  2.75   0.94 8379  1469     20      0.0   28.91   2.86
+2016-10-19 -53.52 o 02a   92  146.0  3.66   0.84 8438  1549      9     10.0   26.69   3.72
+2016-10-19 -53.51 o 02a   75  129.0  3.23   0.83 8456  1430     12      6.5   28.17   3.25
+2016-10-19 -53.49 o 02a   57  105.0  2.55   0.79 8417  1486     12      6.5   31.88   2.36
+2016-10-27 -45.49 c 02a   26   50.0  1.52   0.76 5203  8131      0      NaN     NaN    NaN
+2016-10-31 -41.54 c 02a -115  -97.0 -2.45   0.58 2301  8939      9     -4.0    8.90  -4.25
+2016-10-31 -41.53 c 02a -120 -104.0 -2.63   0.70 2283  8898      9     -4.0    8.90  -4.57
+2016-10-31 -41.52 c 02a -121  -91.0 -2.73   0.65 2341  8974     11     -4.0    8.90  -3.97
+2016-10-31 -41.51 c 02a -144 -128.0 -3.28   0.74 2361  8855      9     -4.0    8.90  -5.91
+2016-10-31 -41.49 c 02a  -99  -83.0 -2.02   0.78 2320  8913      9     -4.0    8.90  -3.20
+  o +-60 d, kNN distance < 1 px, resid    : 2 nights / 14 frames; mean excess +138.5 +- 14.5 uJy (+3.64 +- 0.38 of the Gaia star); mean prediction (fs=1 lens) +88.8; alpha +1.54 +- 0.25
+  o +-60 d, kNN distance < 1 px, resid_loc: 2 nights / 14 frames; mean excess +139.6 +- 14.5 uJy (+3.67 +- 0.38 of the Gaia star); mean prediction (fs=1 lens) +88.8; alpha +1.55 +- 0.33
+  c +-60 d, kNN distance < 1 px, resid    : 3 nights / 12 frames; mean excess -25.8 +- 10.1 uJy (-2.27 +- 0.89 of the Gaia star); mean prediction (fs=1 lens) +42.6; alpha -0.73 +- 1.00
+  c +-60 d, kNN distance < 1 px, resid_loc: 3 nights / 12 frames; mean excess -24.4 +- 10.1 uJy (-2.15 +- 0.89 of the Gaia star); mean prediction (fs=1 lens) +42.6; alpha -0.70 +- 0.97
+============================== J182811 J182811.16-082538.6
+  c 02a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -8 .. +2 uJy over 14 cells; overall robust scatter 16
+  o 02a: quiet-frame kNN residual median by 1500-px detector cell (n >= 15): range -22 .. +17 uJy over 26 cells; overall robust scatter 32
+  event frames with |z| > 1.5 (kNN) or |local z| > 1.5, with the local (same detector position) quiet residuals:
+      date     dt F cam  ujy  resid     z  kdist    x    y  loc_n  loc_med  loc_sc  loc_z
+2015-09-23 -15.75 o 02a -322  115.0  1.53   0.69 2632 4934     15      9.0   41.51   1.50
+2015-10-02  -6.76 o 02a  -62  382.0  5.59   0.71 2623 4928     15      9.0   41.51   6.95
+2015-10-03  -5.77 o 02a -171  266.0  3.16   0.83 2616 4936     15      9.0   41.51   4.62
+2015-10-09   0.19 c 02a -204  -64.0 -1.72   0.40 4081 3484      8     -9.0    7.41  -1.73
+2015-10-16   7.23 c 02a  -84   70.0  1.93   0.87 2659 4939      9     -1.0   14.83   2.37
+2015-10-23  14.21 o 02a -272  172.0  2.08   1.16 4166 3508     17     -4.0   43.00   2.31
+2015-10-23  14.24 o 02a -331  132.0  1.51   1.94 4170 3506     17     -4.0   43.00   1.84
+  o +-30 d, kNN distance < 1 px, resid    : 4 nights / 7 frames; mean excess +157.4 +- 28.9 uJy (+2.31 +- 0.42 of the Gaia star); mean prediction (fs=1 lens) +447.6; alpha +0.48 +- 0.07
+  o +-30 d, kNN distance < 1 px, resid_loc: 4 nights / 7 frames; mean excess +156.3 +- 28.9 uJy (+2.29 +- 0.42 of the Gaia star); mean prediction (fs=1 lens) +447.6; alpha +0.47 +- 0.07
+  o +-60 d, kNN distance < 1 px, resid    : 4 nights / 7 frames; mean excess +157.4 +- 28.9 uJy (+2.31 +- 0.42 of the Gaia star); mean prediction (fs=1 lens) +447.6; alpha +0.48 +- 0.07
+  o +-60 d, kNN distance < 1 px, resid_loc: 4 nights / 7 frames; mean excess +156.3 +- 28.9 uJy (+2.29 +- 0.42 of the Gaia star); mean prediction (fs=1 lens) +447.6; alpha +0.47 +- 0.07
+  c +-30 d, kNN distance < 1 px, resid    : 4 nights / 14 frames; mean excess -5.5 +- 10.9 uJy (-0.48 +- 0.95 of the Gaia star); mean prediction (fs=1 lens) +36.5; alpha -0.21 +- 0.27
+  c +-30 d, kNN distance < 1 px, resid_loc: 4 nights / 14 frames; mean excess -3.5 +- 10.9 uJy (-0.31 +- 0.95 of the Gaia star); mean prediction (fs=1 lens) +36.5; alpha -0.15 +- 0.27
+  c +-60 d, kNN distance < 1 px, resid    : 5 nights / 18 frames; mean excess -0.8 +- 8.9 uJy (-0.07 +- 0.78 of the Gaia star); mean prediction (fs=1 lens) +29.8; alpha -0.20 +- 0.27
+  c +-60 d, kNN distance < 1 px, resid_loc: 5 nights / 18 frames; mean excess +2.1 +- 9.0 uJy (+0.18 +- 0.78 of the Gaia star); mean prediction (fs=1 lens) +29.8; alpha -0.13 +- 0.27
+============================== J174029 no event frames
