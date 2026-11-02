@@ -1,0 +1,17 @@
+[
+ {
+  "uid": "MESSIER081|1507p696|6",
+  "stage": "sia",
+  "error": "ERR ConnectError: [Errno 54] Connection reset by peer"
+ },
+ {
+  "uid": "NGC4605|1894p620|3",
+  "stage": "sia",
+  "error": "ERR ParserError: Error tokenizing data. C error: Expected 51 fields in line 3429, saw 52\n"
+ },
+ {
+  "uid": "NGC4605|1894p620|3",
+  "stage": "sia",
+  "error": "ERR ConnectTimeout: _ssl.c:994: The handshake operation timed out"
+ }
+]

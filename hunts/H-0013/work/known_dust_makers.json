@@ -1,0 +1,816 @@
+[
+ {
+  "name": "SPIRITS 16ln",
+  "aliases": [
+   "N604-WRXc",
+   "[GLM2019] N604-WRXc",
+   "SPIRITS16ln",
+   "Gaia DR3 303386770278587776"
+  ],
+  "category": "episodic_dust_WC_binary",
+  "galaxy": "M33 (giant HII region NGC 604), d=0.84 Mpc",
+  "ra": 23.635876,
+  "dec": 30.784518,
+  "pos_source": "Gaia DR3 303386770278587776 via SIMBAD (coo_qual A). HST/ACS position (Garofali+2019 Table) 01:34:32.615 +30:47:04.178 and Spitzer position (Lau+2021 Table 1) 01:34:32.61 +30:47:04.3 agree to <0.15\"; Lau+2021 Spitzer-HST 1-sigma error circle 0.165\". SIMBAD: 'SPIRITS 16ln' and 'SPIRITS16ln' resolve to the same object as '[GLM2019] N604-WRXc' (the bare string 'N604-WRXc' is not a SIMBAD identifier).",
+  "period_d": null,
+  "period_err_d": null,
+  "period_constraint_d": [
+   804,
+   3214
+  ],
+  "peaks": [
+   2015.24
+  ],
+  "amp_notes": "Spitzer/IRAC (Lau+2021): quiescent 2003.99-2006.10 F3.6=632+/-30 uJy, F4.5=597+/-26 uJy; brightest observed 2015.24 (MJD 57111.7, first SPIRITS epoch, already fading) F3.6=973 uJy, F4.5=979 uJy => excess ~+340 / +380 uJy; 711/682 uJy by 2016.28. Quiescence-subtracted peak M[3.6]=-9.8, [3.6]-[4.5]~0.6. True IR peak lies somewhere in the 2006.10-2015.24 Spitzer gap; X-ray (0.5-2 keV) peak 2006.44 (2006 Jun 9, Garofali+2019), Lx~3e35 erg/s.",
+  "classification": "WC4 + O colliding-wind binary candidate (X-ray bright); episodic dust maker",
+  "refs": [
+   {
+    "bibcode": "2021ApJ...909..113L",
+    "arxiv": "2011.09732",
+    "note": "Lau et al. 2021, Revealing Efficient Dust Formation at Low Metallicity in Extragalactic WC Binaries (Table 1 positions, Table 3 classes/periods, Table 6 IRAC light curves); period constraint 8.8 > P > 2.2 yr"
+   },
+   {
+    "bibcode": "2019ApJ...880....8G",
+    "arxiv": "1906.03274",
+    "note": "Garofali et al. 2019, First candidate colliding-wind binary in M33 (HST position, WC4+O spectrum, X-ray light curve)"
+   }
+  ],
+  "confidence_notes": "Identification secure (Lau+2021 claim SPIRITS 16ln = N604-WRXc). Period only bounded; the single recorded IR peak epoch is a lower bound on the true peak date. WISE caveat: inside NGC 604, a very bright extended HII region; HST neighbours N604-WRXa (0.45\") and WRXb (0.6\", brighter in optical) are unresolved. Note: Oddsky H-0012 already flagged an 'obscured-transient' 0.2\" from this object (triage CSVs)."
+ },
+ {
+  "name": "SPIRITS 19q",
+  "aliases": [
+   "SPIRITS19q"
+  ],
+  "category": "episodic_dust_WC_binary",
+  "galaxy": "NGC 2403 (HII region VS 51), d=3.2 Mpc",
+  "ra": 114.325875,
+  "dec": 65.563611,
+  "pos_source": "Lau+2021 Table 1 Spitzer position 07:37:18.21 +65:33:49.0 (repeated in Lau/2026 JWST paper); SIMBAD same (coo_qual D, from Lau+2021). Quoted to 0.01 s / 0.1\"; true accuracy ~0.3\" (Spitzer).",
+  "period_d": null,
+  "period_err_d": null,
+  "period_constraint_d": [
+   4383,
+   null
+  ],
+  "peaks": [
+   2018.47
+  ],
+  "amp_notes": "Spitzer (Lau+2021): quiescent 2004.77-2017.03 F3.6=345+/-9 uJy, F4.5=326+/-8 uJy (cluster/HII blend, M[3.6]=-12.73). Rise first seen 2017.48; peak 2018.47 (MJD 58288.9) F3.6=1738 uJy, F4.5=1980 uJy => excess +1393 / +1655 uJy (M[3.6]=-14.49, M[4.5]=-15.12); fading ~0.4 mag/yr (3.6) and ~0.3 mag/yr (4.5) to 2019.58. unWISE forced photometry (2026 JWST paper, Table 1): baseline W1~3.05 mJy, W2~4.95 mJy (larger blend); peak 2018.20 (MJD 58189.9) W1=4.62, W2=8.35 mJy => excess ~+1.6 / +3.4 mJy; still above baseline in 2024.2 (W1 3.36, W2 5.37 mJy). Dust mass 6.6e-6 Msun.",
+  "classification": "WC4 (early-type WC) binary candidate in luminous cluster (M_V~-9.5); WC association with the outburst confirmed by JWST/NIRSpec IFU (2024 Apr)",
+  "refs": [
+   {
+    "bibcode": "2021ApJ...909..113L",
+    "arxiv": "2011.09732",
+    "note": "Lau et al. 2021, Revealing Efficient Dust Formation at Low Metallicity in Extragalactic WC Binaries (Table 1 positions, Table 3 classes/periods, Table 6 IRAC light curves); P >~ 12 yr (quiescent 2004-2017)"
+   },
+   {
+    "bibcode": "2026PASP..138j4207R",
+    "arxiv": "2609.00477",
+    "note": "SPIRITS 19q: JWST/NIRSpec confirmation; includes unWISE W1/W2 light curve 2010-2024; assumes min. period 12 yr"
+   },
+   {
+    "bibcode": "2021jwst.prop.1863L",
+    "arxiv": null,
+    "note": "JWST GO 1863 proposal (Lau), context only"
+   }
+  ],
+  "confidence_notes": "Best-characterised single outburst in the sample and the one with a published unWISE light curve: an ideal positive for a WISE detector (only one cycle, so it tests detection, not recurrence). Caveat: Oddsky H-0012 matched a Gaia source (DR3 1089774769415015552, plx/err 4.7) at this position and labelled it 'foreground star'; 19q sits in a luminous compact cluster, so that parallax is probably spurious. A foreground-star veto would wrongly reject this known object."
+ },
+ {
+  "name": "SPIRITS 16df",
+  "aliases": [
+   "SPIRITS16df",
+   "NGC 2403-V / VS 41 WR region (Drissen+1999)"
+  ],
+  "category": "irregular_dust_WC_candidate",
+  "galaxy": "NGC 2403 (HII region VS 41), d=3.2 Mpc",
+  "ra": 114.242,
+  "dec": 65.623306,
+  "pos_source": "Lau+2021 Table 1: 07:36:58.08 +65:37:23.9; SIMBAD same (coo_qual D). ~0.3\" (Spitzer).",
+  "period_d": null,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "Irregular, low amplitude: median F3.6=479+/-17 uJy, F4.5=536+/-15 uJy (M[3.6]=-13.09); max deviation ~10% (~0.1 mag, ~50 uJy) over 2004.77-2019.58; [3.6]-[4.5]=0.61 (hot dust colour).",
+  "classification": "WC4 star (spectrum matches VS 41 WR emission) in a compact cluster (M_V~-9.3); possible dust-forming WC binary",
+  "refs": [
+   {
+    "bibcode": "2021ApJ...909..113L",
+    "arxiv": "2011.09732",
+    "note": "Lau et al. 2021, Revealing Efficient Dust Formation at Low Metallicity in Extragalactic WC Binaries (Table 1 positions, Table 3 classes/periods, Table 6 IRAC light curves); variability type 'Irregular', period '?'"
+   }
+  ],
+  "confidence_notes": "No outburst, no period: useful only as a hard negative/control (a recurrence detector should NOT fire). Note: about 1.5' from Oddsky's NGC 2403 obs#50, but a different object."
+ },
+ {
+  "name": "SPIRITS 14apu",
+  "aliases": [
+   "SPIRITS14apu"
+  ],
+  "category": "irregular_or_quasi_periodic_dust_WC_candidate",
+  "galaxy": "M101 (near HII region NGC5457+166.4+86.3), d=6.4-6.95 Mpc",
+  "ra": 210.882379,
+  "dec": 54.373631,
+  "pos_source": "Karambelkar+2019 Table 3 (deg) = SIMBAD (coo_qual C); Lau+2021 Table 1 gives 14:03:31.77 +54:22:25.1 (210.882375, 54.373639), agreement 0.03\".",
+  "period_d": 1752,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [
+   2013.28,
+   2017.47
+  ],
+  "amp_notes": "Karambelkar+2019: P=1752 d (quality 'silver'), mean M[3.6]=-14.93, M[4.5]=-15.51, peak-to-peak 0.29 / 0.25 mag. Lau+2021: minimum 2004.18 F3.6=400, F4.5=440 uJy; dip in late 2014-2015; brightest at last epoch 2019.82 F3.6=624, F4.5=711 uJy (excess ~+220 / +270 uJy over minimum); cluster-subtracted M[3.6]=-13.58, colour 0.90. Peak epochs listed here are local maxima read by me from Lau+2021 Table 6 (2013.28 at 3.6 um; 2017.47 at both bands), not values quoted by the authors.",
+  "classification": "WC candidate (C III/He II 4650/4686 blend seen, C IV not detected; 'WCE?') in a luminous cluster (M_V~-10)",
+  "refs": [
+   {
+    "bibcode": "2021ApJ...909..113L",
+    "arxiv": "2011.09732",
+    "note": "Lau et al. 2021, Revealing Efficient Dust Formation at Low Metallicity in Extragalactic WC Binaries (Table 1 positions, Table 3 classes/periods, Table 6 IRAC light curves); variability type 'Irregular', period '?'"
+   },
+   {
+    "bibcode": "2019ApJ...877..110K",
+    "arxiv": "1901.07179",
+    "note": "Karambelkar et al. 2019, SPIRITS Catalog of Infrared Variables (Table 3 positions/periods/amplitudes); listed as LPV with P=1752 d"
+   }
+  ],
+  "confidence_notes": "The two papers disagree on variability type (Lau: irregular; K19: 1752 d quasi-period). Low amplitude (~0.25-0.3 mag) on a bright cluster blend; at 6.4 Mpc likely hard in WISE. Treat as a marginal positive."
+ },
+ {
+  "name": "SPIRITS 18hb",
+  "aliases": [
+   "SPIRITS18hb"
+  ],
+  "category": "episodic_dust_WC_candidate",
+  "galaxy": "NGC 6946 (3.9\" from HII complex NGC 6946-26), d=7.72 Mpc",
+  "ra": 308.782,
+  "dec": 60.187833,
+  "pos_source": "Lau+2021 Table 1: 20:35:07.68 +60:11:16.2; SIMBAD same (coo_qual D). ~0.3\" (Spitzer).",
+  "period_d": null,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [
+   2019.13
+  ],
+  "amp_notes": "Lau+2021: steady 2004.44-2017.90 (median F3.6=460+/-20, F4.5=380+/-20 uJy; colour 0.27); rise from 2017.90 over ~1 yr; 3.6 um peak 2019.13 (MJD 58529.8) F3.6=542, F4.5=504 uJy; 4.5 um max 2019.34 (536 uJy); faded by 2019.85 (463/444 uJy). Excess ~+80 / +125-155 uJy; quiescence-subtracted M[3.6]=-13.14+/-0.42, colour 0.93+/-0.48.",
+  "classification": "Early-type WC (WCE: C IV 5801-12 and C III/He II blend, no C III 5696); episodic? dust maker",
+  "refs": [
+   {
+    "bibcode": "2021ApJ...909..113L",
+    "arxiv": "2011.09732",
+    "note": "Lau et al. 2021, Revealing Efficient Dust Formation at Low Metallicity in Extragalactic WC Binaries (Table 1 positions, Table 3 classes/periods, Table 6 IRAC light curves); variability 'Episodic?', period '?'"
+   }
+  ],
+  "confidence_notes": "Single small outburst (~0.2-0.3 mag) on a bright cluster/HII blend at 7.7 Mpc: very hard in WISE. If periodic, Spitzer coverage implies P >~ 13.5 yr (no outburst 2004.4-2017.9, with gaps). That is my inference, not a published value."
+ },
+ {
+  "name": "SPIRITS 14bqe",
+  "aliases": [
+   "SPIRITS14bqe"
+  ],
+  "category": "periodic_dust_WC_candidate",
+  "galaxy": "IC 1613 (star-forming region 'Reg 155', Melena+2009), d=0.724 Mpc",
+  "ra": 16.258125,
+  "dec": 2.147583,
+  "pos_source": "Lau+2021 Table 1: 01:05:01.95 +02:08:51.3; SIMBAD same (coo_qual D). Spitzer 2-sigma positional uncertainty 0.6\"; point-like WIRC Ks counterpart; a second NIR source sits 1.8\" SE (no mid-IR emission).",
+  "period_d": 3105,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [
+   2010.12,
+   2018.89
+  ],
+  "amp_notes": "Lau+2021: two outbursts with equal peaks: 2010.12 (MJD 55241) F3.6=107, F4.5=189 uJy and 2018.89 (MJD 58443.65) F3.6=104, F4.5=188 uJy; quiescence F3.6=63, F4.5=82 uJy => excess ~+44 / +107 uJy (+0.6 / +0.9 mag at 3.6/4.5). Fades back over ~2 yr. Colour 0.77 (quiescent, persistent dust) to 1.10 (peak). M[4.5]=-9.35 at peak. The peaks in Table 6 are 8.77 yr apart, the paper quotes ~8.5 yr, and the 2018 peak is poorly sampled (2018.34 to 2019.27). The single 4.5 um point at 2003.97 (115 uJy) sits above quiescence, perhaps the tail of an earlier ~2001-02 outburst (my inference). Extrapolated next peak ~2027.4-2027.7 (my extrapolation).",
+  "classification": "Unclassified dusty IR source (no optical spectrum); candidate persistent + episodic dust-forming WC binary; Z~0.16 Zsun. NIR M_Ks=-6.4 matches dusty WC9 stars",
+  "refs": [
+   {
+    "bibcode": "2021ApJ...909..113L",
+    "arxiv": "2011.09732",
+    "note": "Lau et al. 2021, Revealing Efficient Dust Formation at Low Metallicity in Extragalactic WC Binaries (Table 1 positions, Table 3 classes/periods, Table 6 IRAC light curves); 'Episodic', P~8.5 yr (two peaks)"
+   },
+   {
+    "bibcode": "2021ApJ...922..177M",
+    "arxiv": "2107.08304",
+    "note": "Massey et al. 2021: IC 1613 has only one known WR star (a WO); footnote cites 14bqe as a possible dust-forming WC binary"
+   }
+  ],
+  "confidence_notes": "The only extragalactic candidate within 10 Mpc with two observed recurrences. It is also nearby (0.72 Mpc), isolated and point-like, so it is the best periodic positive for a WISE recurrence test. Its WR nature is unconfirmed (no spectrum, and Massey+2021 counts no WC star in IC 1613). The period rests on two peaks."
+ },
+ {
+  "name": "HD 36402",
+  "aliases": [
+   "BAT99-38",
+   "Brey 31",
+   "Sk -67 104",
+   "Gaia DR3 4658681898503248256",
+   "2MASS J05260396-6729570"
+  ],
+  "category": "periodic_dust_WC_binary",
+  "galaxy": "LMC (N51D superbubble), d=0.05 Mpc",
+  "ra": 81.516516,
+  "dec": -67.499191,
+  "pos_source": "Gaia DR3 4658681898503248256 via SIMBAD (coo_qual A, ~mas).",
+  "period_d": 1866,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [
+   2010.91,
+   2016.41
+  ],
+  "amp_notes": "WISE/NEOWISE (Williams 2019 Table): W1 9.25 (2010.91, near max) / 9.29 (2016.41, max) to 10.18 (2018.88), so dW1~0.93 mag; W2 8.38/8.43 to 9.33, so dW2~0.95 mag. W1-W2 stays ~0.85-0.87: dust is always present (variable, not purely episodic). Rise and fade ~1.5 yr each. Williams+2013: IRAC/WISE rises in 2004-05 and 2009-10, interval 4.7+/-0.2 yr; old near-IR ephemeris T=1996.9+4.7N (superseded). Projected maxima with P=5.11 yr: ~2021.5, ~2026.6 (my projection).",
+  "classification": "WC4(+O?) + O8I: probable triple; inner WC4+O 3.03-d binary, dust period presumably the outer O8I orbit; dust maximum near X-ray minimum (colliding winds)",
+  "refs": [
+   {
+    "bibcode": "2013MNRAS.431.1160W",
+    "arxiv": "1302.2002",
+    "note": "Williams et al. 2013: variable dust formation, P~4.7+/-0.2 yr"
+   },
+   {
+    "bibcode": "2019MNRAS.488.1282W",
+    "arxiv": "1906.11595",
+    "note": "Williams 2019: NEOWISE-R; period revised to 5.11 yr (WISE alone 5.2 yr); max early 2016"
+   },
+   {
+    "bibcode": "2011BSRSL..80..195W",
+    "arxiv": "1007.3645",
+    "note": "Williams et al. 2011: heated dust, ~800 K; two luminous YSOs nearby"
+   }
+  ],
+  "confidence_notes": "Secure periodic dust maker. Not within the 'nearby galaxy' WISE regime (LMC, bright W1~9-10, well detected). Caveat: two luminous YSOs nearby (Williams+2011) can blend at WISE resolution. No error is published for the 5.11 yr period; the earlier 4.7 yr value had +/-0.2 yr."
+ },
+ {
+  "name": "HD 38030",
+  "aliases": [
+   "BAT99-84",
+   "Brey 68",
+   "Sk -69 222",
+   "Gaia DR3 4657657119321014400",
+   "2MASS J05365138-6925568"
+  ],
+  "category": "episodic_dust_WC_binary",
+  "galaxy": "LMC (~23' from R136/30 Dor), d=0.05 Mpc",
+  "ra": 84.214083,
+  "dec": -69.432428,
+  "pos_source": "Gaia DR3 4657657119321014400 via SIMBAD (coo_qual A).",
+  "period_d": null,
+  "period_err_d": null,
+  "period_constraint_d": [
+   7305,
+   null
+  ],
+  "peaks": [
+   2018.76
+  ],
+  "amp_notes": "WISE (Williams+2021 Table): flat 2010.31-2017.77 at W1~12.70, W2~12.53; rising 2018.31 (12.00/11.26); max 2018.76 W1=11.52, W2=10.62 (dW1=1.18, dW2=1.91 mag); fading 2019.31-2020.76 to 12.60/12.08. Dust colour temperature ~830 K. Ks quiescent 2000-2010. Interval >20 yr; a possible 1996-97 DENIS brightening would imply ~22 yr (doubtful).",
+  "classification": "WC4 + O9.7III-IV companion (absorption lines, RV shift of C IV); episodic colliding-wind dust maker like WR 140/WR 19",
+  "refs": [
+   {
+    "bibcode": "2019MNRAS.488.1282W",
+    "arxiv": "1906.11595",
+    "note": "Williams 2019: discovery of the 2018 NEOWISE-R dust episode"
+   },
+   {
+    "bibcode": "2019RNAAS...3...71W",
+    "arxiv": null,
+    "note": "Williams et al. 2019 RNAAS: preliminary report with light curves"
+   },
+   {
+    "bibcode": "2021MNRAS.505.5029W",
+    "arxiv": "2106.03781",
+    "note": "Williams et al. 2021: O9.7 companion, full WISE history 2010-2020, interval >20 yr"
+   }
+  ],
+  "confidence_notes": "Secure single episode (one cycle), so it tests detection rather than recurrence. No X-ray detection (Chandra)."
+ },
+ {
+  "name": "SPIRITS 15nz",
+  "aliases": [
+   "SPIRITS15nz"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "M83, m-M=28.34 (d~4.7 Mpc)",
+  "ra": 204.284875,
+  "dec": -29.838806,
+  "pos_source": "Bond+2022 Table 2 (Spitzer-derived J2000 13:37:08.37 -29:50:19.7; 0.01 s / 0.1\" quoted)",
+  "period_d": 1614,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "Bond+2022 Table 5: mean [4.5]=16.66 mag (M[4.5]=-12.17), peak-to-peak d[4.5]=1.07 mag; [3.6] insufficient. Peak epochs not tabulated (light curves only in figures).",
+  "classification": "Periodic/suspected periodic dusty IR variable; likely a dusty massive AGB star (~5-10 Msun), not a dust-forming massive binary",
+  "refs": [
+   {
+    "bibcode": "2022ApJ...928..158B",
+    "arxiv": "2202.11040",
+    "note": "Bond et al. 2022, HST imaging of SPIRITS transients and variables (Table 2 positions, Table 5 periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class: a pulsating LPV, not an episodic dust maker; included as a periodic mid-IR positive with period ~1-6 yr. Faint ([4.5]~15-17 mag) and in crowded disks, so WISE detectability is doubtful for most. "
+ },
+ {
+  "name": "SPIRITS 15qo",
+  "aliases": [
+   "SPIRITS15qo"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "NGC 1313, m-M=28.14 (d~4.2 Mpc)",
+  "ra": 49.563583,
+  "dec": -66.500944,
+  "pos_source": "Bond+2022 Table 2 (Spitzer-derived J2000 03:18:15.26 -66:30:03.4; 0.01 s / 0.1\" quoted)",
+  "period_d": 1232,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "Bond+2022 Table 5: mean [4.5]=16.11 mag (M[4.5]=-11.68), peak-to-peak d[4.5]=1.43 mag; mean [3.6]=16.69, d[3.6]=1.37 mag. Peak epochs not tabulated (light curves only in figures).",
+  "classification": "Periodic/suspected periodic dusty IR variable; likely a dusty massive AGB star (~5-10 Msun), not a dust-forming massive binary",
+  "refs": [
+   {
+    "bibcode": "2022ApJ...928..158B",
+    "arxiv": "2202.11040",
+    "note": "Bond et al. 2022, HST imaging of SPIRITS transients and variables (Table 2 positions, Table 5 periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class: a pulsating LPV, not an episodic dust maker; included as a periodic mid-IR positive with period ~1-6 yr. Faint ([4.5]~15-17 mag) and in crowded disks, so WISE detectability is doubtful for most. "
+ },
+ {
+  "name": "SPIRITS 15aag",
+  "aliases": [
+   "SPIRITS15aag"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "NGC 1313, m-M=28.14 (d~4.2 Mpc)",
+  "ra": 49.598458,
+  "dec": -66.506722,
+  "pos_source": "Bond+2022 Table 2 (Spitzer-derived J2000 03:18:23.63 -66:30:24.2; 0.01 s / 0.1\" quoted)",
+  "period_d": 1233,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "Bond+2022 Table 5: mean [4.5]=17.07 mag (M[4.5]=-11.07), peak-to-peak d[4.5]=1.55 mag; mean [3.6]=18.1, d[3.6]=1.63 mag. Peak epochs not tabulated (light curves only in figures).",
+  "classification": "Periodic/suspected periodic dusty IR variable; likely a dusty massive AGB star (~5-10 Msun), not a dust-forming massive binary",
+  "refs": [
+   {
+    "bibcode": "2022ApJ...928..158B",
+    "arxiv": "2202.11040",
+    "note": "Bond et al. 2022, HST imaging of SPIRITS transients and variables (Table 2 positions, Table 5 periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class: a pulsating LPV, not an episodic dust maker; included as a periodic mid-IR positive with period ~1-6 yr. Faint ([4.5]~15-17 mag) and in crowded disks, so WISE detectability is doubtful for most. "
+ },
+ {
+  "name": "SPIRITS 15ahg",
+  "aliases": [
+   "SPIRITS15ahg"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "NGC 2403, m-M=27.51 (d~3.2 Mpc)",
+  "ra": 114.155833,
+  "dec": 65.634056,
+  "pos_source": "Bond+2022 Table 2 (Spitzer-derived J2000 07:36:37.40 +65:38:02.6; 0.01 s / 0.1\" quoted)",
+  "period_d": 1163,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "Bond+2022 Table 5: mean [4.5]=16.13 mag (M[4.5]=-11.38), peak-to-peak d[4.5]=1.16 mag; mean [3.6]=16.49, d[3.6]=0.93 mag. Peak epochs not tabulated (light curves only in figures).",
+  "classification": "Periodic/suspected periodic dusty IR variable; likely a dusty massive AGB star (~5-10 Msun), not a dust-forming massive binary",
+  "refs": [
+   {
+    "bibcode": "2022ApJ...928..158B",
+    "arxiv": "2202.11040",
+    "note": "Bond et al. 2022, HST imaging of SPIRITS transients and variables (Table 2 positions, Table 5 periods/amplitudes); HST counterpart"
+   }
+  ],
+  "confidence_notes": "Secondary class: a pulsating LPV, not an episodic dust maker; included as a periodic mid-IR positive with period ~1-6 yr. Faint ([4.5]~15-17 mag) and in crowded disks, so WISE detectability is doubtful for most. HST counterpart"
+ },
+ {
+  "name": "SPIRITS 14al",
+  "aliases": [
+   "SPIRITS14al"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "NGC 2403, m-M=27.51 (d~3.2 Mpc)",
+  "ra": 114.134917,
+  "dec": 65.623917,
+  "pos_source": "Bond+2022 Table 2 (Spitzer-derived J2000 07:36:32.38 +65:37:26.1; 0.01 s / 0.1\" quoted)",
+  "period_d": 2160,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "Bond+2022 Table 5: mean [4.5]=15.2 mag (M[4.5]=-12.31), peak-to-peak d[4.5]=0.82 mag; mean [3.6]=16.6, d[3.6]=0.96 mag. Peak epochs not tabulated (light curves only in figures).",
+  "classification": "Periodic/suspected periodic dusty IR variable; likely a dusty massive AGB star (~5-10 Msun), not a dust-forming massive binary",
+  "refs": [
+   {
+    "bibcode": "2022ApJ...928..158B",
+    "arxiv": "2202.11040",
+    "note": "Bond et al. 2022, HST imaging of SPIRITS transients and variables (Table 2 positions, Table 5 periods/amplitudes); period approximate (~2160 d); classed 'Periodic?'"
+   }
+  ],
+  "confidence_notes": "Secondary class: a pulsating LPV, not an episodic dust maker; included as a periodic mid-IR positive with period ~1-6 yr. Faint ([4.5]~15-17 mag) and in crowded disks, so WISE detectability is doubtful for most. period approximate (~2160 d); classed 'Periodic?'"
+ },
+ {
+  "name": "SPIRITS 14dd",
+  "aliases": [
+   "SPIRITS14dd"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "NGC 2403, m-M=27.51 (d~3.2 Mpc)",
+  "ra": 114.125167,
+  "dec": 65.632722,
+  "pos_source": "Bond+2022 Table 2 (Spitzer-derived J2000 07:36:30.04 +65:37:57.8; 0.01 s / 0.1\" quoted)",
+  "period_d": 1418,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "Bond+2022 Table 5: mean [4.5]=15.92 mag (M[4.5]=-11.59), peak-to-peak d[4.5]=1.11 mag; mean [3.6]=16.89, d[3.6]=0.95 mag. Peak epochs not tabulated (light curves only in figures).",
+  "classification": "Periodic/suspected periodic dusty IR variable; likely a dusty massive AGB star (~5-10 Msun), not a dust-forming massive binary",
+  "refs": [
+   {
+    "bibcode": "2022ApJ...928..158B",
+    "arxiv": "2202.11040",
+    "note": "Bond et al. 2022, HST imaging of SPIRITS transients and variables (Table 2 positions, Table 5 periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class: a pulsating LPV, not an episodic dust maker; included as a periodic mid-IR positive with period ~1-6 yr. Faint ([4.5]~15-17 mag) and in crowded disks, so WISE detectability is doubtful for most. "
+ },
+ {
+  "name": "SPIRITS 15afp",
+  "aliases": [
+   "SPIRITS15afp"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "NGC 6946, m-M=28.27 (d~4.5 Mpc)",
+  "ra": 308.748542,
+  "dec": 60.188361,
+  "pos_source": "Bond+2022 Table 2 (Spitzer-derived J2000 20:34:59.65 +60:11:18.1; 0.01 s / 0.1\" quoted)",
+  "period_d": 1650,
+  "period_err_d": null,
+  "period_constraint_d": [
+   1650,
+   null
+  ],
+  "peaks": [],
+  "amp_notes": "Bond+2022 Table 5: mean [4.5]=16.87 mag (M[4.5]=-11.4), peak-to-peak d[4.5]=1.13 mag; mean [3.6]=17.63, d[3.6]=0.79 mag. Peak epochs not tabulated (light curves only in figures).",
+  "classification": "Periodic/suspected periodic dusty IR variable; likely a dusty massive AGB star (~5-10 Msun), not a dust-forming massive binary",
+  "refs": [
+   {
+    "bibcode": "2022ApJ...928..158B",
+    "arxiv": "2202.11040",
+    "note": "Bond et al. 2022, HST imaging of SPIRITS transients and variables (Table 2 positions, Table 5 periods/amplitudes); period is a lower limit (>1650 d); classed 'Periodic?'"
+   }
+  ],
+  "confidence_notes": "Secondary class: a pulsating LPV, not an episodic dust maker; included as a periodic mid-IR positive with period ~1-6 yr. Faint ([4.5]~15-17 mag) and in crowded disks, so WISE detectability is doubtful for most. period is a lower limit (>1650 d); classed 'Periodic?'"
+ },
+ {
+  "name": "SPIRITS 15wt",
+  "aliases": [
+   "SPIRITS15wt"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "NGC 7793, m-M=27.77 (d~3.6 Mpc)",
+  "ra": 359.43075,
+  "dec": -32.584194,
+  "pos_source": "Bond+2022 Table 2 (Spitzer-derived J2000 23:57:43.38 -32:35:03.1; 0.01 s / 0.1\" quoted)",
+  "period_d": 1188,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "Bond+2022 Table 5: mean [4.5]=16.03 mag (M[4.5]=-11.75), peak-to-peak d[4.5]=0.94 mag; mean [3.6]=16.55, d[3.6]=0.9 mag. Peak epochs not tabulated (light curves only in figures).",
+  "classification": "Periodic/suspected periodic dusty IR variable; likely a dusty massive AGB star (~5-10 Msun), not a dust-forming massive binary",
+  "refs": [
+   {
+    "bibcode": "2022ApJ...928..158B",
+    "arxiv": "2202.11040",
+    "note": "Bond et al. 2022, HST imaging of SPIRITS transients and variables (Table 2 positions, Table 5 periods/amplitudes); HST counterpart"
+   }
+  ],
+  "confidence_notes": "Secondary class: a pulsating LPV, not an episodic dust maker; included as a periodic mid-IR positive with period ~1-6 yr. Faint ([4.5]~15-17 mag) and in crowded disks, so WISE detectability is doubtful for most. HST counterpart"
+ },
+ {
+  "name": "SPIRITS 14bbc",
+  "aliases": [
+   "SPIRITS14bbc"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "NGC 7793, m-M=27.77 (d~3.6 Mpc)",
+  "ra": 359.442833,
+  "dec": -32.589056,
+  "pos_source": "Bond+2022 Table 2 (Spitzer-derived J2000 23:57:46.28 -32:35:20.6; 0.01 s / 0.1\" quoted)",
+  "period_d": 1498,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "Bond+2022 Table 5: mean [4.5]=15.57 mag (M[4.5]=-12.2), peak-to-peak d[4.5]=1.13 mag; mean [3.6]=16.29, d[3.6]=1.12 mag. Peak epochs not tabulated (light curves only in figures).",
+  "classification": "Periodic/suspected periodic dusty IR variable; likely a dusty massive AGB star (~5-10 Msun), not a dust-forming massive binary",
+  "refs": [
+   {
+    "bibcode": "2022ApJ...928..158B",
+    "arxiv": "2202.11040",
+    "note": "Bond et al. 2022, HST imaging of SPIRITS transients and variables (Table 2 positions, Table 5 periods/amplitudes); HST counterpart"
+   }
+  ],
+  "confidence_notes": "Secondary class: a pulsating LPV, not an episodic dust maker; included as a periodic mid-IR positive with period ~1-6 yr. Faint ([4.5]~15-17 mag) and in crowded disks, so WISE detectability is doubtful for most. HST counterpart"
+ },
+ {
+  "name": "SPIRITS 15mr",
+  "aliases": [
+   "SPIRITS15mr"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "NGC 4605, m-M=28.72 (d~5.5 Mpc)",
+  "ra": 189.978625,
+  "dec": 61.612861,
+  "pos_source": "Bond+2022 Table 2 (Spitzer-derived J2000 12:39:54.87 +61:36:46.3; 0.01 s / 0.1\" quoted)",
+  "period_d": 1113,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "Bond+2022 Table 5: mean [4.5]=14.96 mag (M[4.5]=-13.76), peak-to-peak d[4.5]=1.32 mag; mean [3.6]=15.71, d[3.6]=1.37 mag. Peak epochs not tabulated (light curves only in figures).",
+  "classification": "Periodic/suspected periodic dusty IR variable; likely a dusty massive AGB star (~5-10 Msun), not a dust-forming massive binary",
+  "refs": [
+   {
+    "bibcode": "2022ApJ...928..158B",
+    "arxiv": "2202.11040",
+    "note": "Bond et al. 2022, HST imaging of SPIRITS transients and variables (Table 2 positions, Table 5 periods/amplitudes); HST counterpart"
+   }
+  ],
+  "confidence_notes": "Secondary class: a pulsating LPV, not an episodic dust maker; included as a periodic mid-IR positive with period ~1-6 yr. Faint ([4.5]~15-17 mag) and in crowded disks, so WISE detectability is doubtful for most. HST counterpart"
+ },
+ {
+  "name": "SPIRITS 15mt",
+  "aliases": [
+   "SPIRITS15mt"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "NGC 4605, m-M=28.72 (d~5.5 Mpc)",
+  "ra": 190.028917,
+  "dec": 61.606194,
+  "pos_source": "Bond+2022 Table 2 (Spitzer-derived J2000 12:40:06.94 +61:36:22.3; 0.01 s / 0.1\" quoted)",
+  "period_d": 1800,
+  "period_err_d": null,
+  "period_constraint_d": [
+   1800,
+   null
+  ],
+  "peaks": [],
+  "amp_notes": "Bond+2022 Table 5: mean [4.5]=16.69 mag (M[4.5]=-12.03), peak-to-peak d[4.5]=2.16 mag; mean [3.6]=16.86, d[3.6]=1.67 mag. Peak epochs not tabulated (light curves only in figures).",
+  "classification": "Periodic/suspected periodic dusty IR variable; likely a dusty massive AGB star (~5-10 Msun), not a dust-forming massive binary",
+  "refs": [
+   {
+    "bibcode": "2022ApJ...928..158B",
+    "arxiv": "2202.11040",
+    "note": "Bond et al. 2022, HST imaging of SPIRITS transients and variables (Table 2 positions, Table 5 periods/amplitudes); period is a lower limit (>1800 d); classed 'Periodic?'; HST counterpart suspected"
+   }
+  ],
+  "confidence_notes": "Secondary class: a pulsating LPV, not an episodic dust maker; included as a periodic mid-IR positive with period ~1-6 yr. Faint ([4.5]~15-17 mag) and in crowded disks, so WISE detectability is doubtful for most. period is a lower limit (>1800 d); classed 'Periodic?'; HST counterpart suspected"
+ },
+ {
+  "name": "SPIRITS 16ea",
+  "aliases": [
+   "SPIRITS16ea"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "NGC 4214, m-M=27.34 (d~2.9 Mpc)",
+  "ra": 183.910875,
+  "dec": 36.329694,
+  "pos_source": "Bond+2022 Table 2 (Spitzer-derived J2000 12:15:38.61 +36:19:46.9; 0.01 s / 0.1\" quoted)",
+  "period_d": 670,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "Bond+2022 Table 5: mean [4.5]=16.51 mag (M[4.5]=-10.83), peak-to-peak d[4.5]=1.11 mag; [3.6] insufficient. Peak epochs not tabulated (light curves only in figures).",
+  "classification": "Periodic/suspected periodic dusty IR variable; likely a dusty massive AGB star (~5-10 Msun), not a dust-forming massive binary",
+  "refs": [
+   {
+    "bibcode": "2022ApJ...928..158B",
+    "arxiv": "2202.11040",
+    "note": "Bond et al. 2022, HST imaging of SPIRITS transients and variables (Table 2 positions, Table 5 periods/amplitudes); period approximate (~670 d); classed 'Periodic?'; counterpart equivocal"
+   }
+  ],
+  "confidence_notes": "Secondary class: a pulsating LPV, not an episodic dust maker; included as a periodic mid-IR positive with period ~1-6 yr. Faint ([4.5]~15-17 mag) and in crowded disks, so WISE detectability is doubtful for most. period approximate (~670 d); classed 'Periodic?'; counterpart equivocal"
+ },
+ {
+  "name": "SPIRITS 14aue",
+  "aliases": [
+   "SPIRITS14aue"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "IC 342, d=3.39 Mpc (K19 Table 1)",
+  "ra": 56.70243,
+  "dec": 68.067607,
+  "pos_source": "Karambelkar+2019 Table 3 (deg, 6 dp); SIMBAD identical (coo_qual C)",
+  "period_d": 344,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "K19 Table 3: mean M[3.6]=-14.31, M[4.5]=-14.8; peak-to-peak d[3.6]=0.14, d[4.5]=0.11 mag; quality 'gold'. Peak epochs not tabulated.",
+  "classification": "Extremely luminous IR long-period variable (K19: massive/super-AGB, extreme RSG, or interacting binary); may be a cluster blend",
+  "refs": [
+   {
+    "bibcode": "2019ApJ...877..110K",
+    "arxiv": "1901.07179",
+    "note": "Karambelkar et al. 2019, SPIRITS Catalog of Infrared Variables (Table 3 positions/periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class (pulsating LPV, not an episodic dust maker). One of the K19 variables with M[4.5]<-13. very low amplitude. Periods are quasi-periods from <=~5 yr of SPIRITS data; no errors published."
+ },
+ {
+  "name": "SPIRITS 15ty",
+  "aliases": [
+   "SPIRITS15ty"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "NGC 6946, d=5.89 Mpc (K19 Table 1)",
+  "ra": 308.730675,
+  "dec": 60.135467,
+  "pos_source": "Karambelkar+2019 Table 3 (deg, 6 dp); SIMBAD identical (coo_qual C)",
+  "period_d": 1587,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "K19 Table 3: mean M[3.6]=-13.97, M[4.5]=-14.8; peak-to-peak d[3.6]=0.47, d[4.5]=0.43 mag; quality 'gold'. Peak epochs not tabulated.",
+  "classification": "Extremely luminous IR long-period variable (K19: massive/super-AGB, extreme RSG, or interacting binary); may be a cluster blend",
+  "refs": [
+   {
+    "bibcode": "2019ApJ...877..110K",
+    "arxiv": "1901.07179",
+    "note": "Karambelkar et al. 2019, SPIRITS Catalog of Infrared Variables (Table 3 positions/periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class (pulsating LPV, not an episodic dust maker). One of the K19 variables with M[4.5]<-13. associated with cluster catalogues (K19 refs 2,3,4). Periods are quasi-periods from <=~5 yr of SPIRITS data; no errors published."
+ },
+ {
+  "name": "SPIRITS 15pk",
+  "aliases": [
+   "SPIRITS15pk"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "M101, d=6.95 Mpc (K19 Table 1)",
+  "ra": 210.885626,
+  "dec": 54.295308,
+  "pos_source": "Karambelkar+2019 Table 3 (deg, 6 dp); SIMBAD identical (coo_qual C)",
+  "period_d": 1750,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "K19 Table 3: mean M[3.6]=-13.38, M[4.5]=-14.2; peak-to-peak d[3.6]=0.24, d[4.5]=0.29 mag; quality 'bronze'. Peak epochs not tabulated.",
+  "classification": "Extremely luminous IR long-period variable (K19: massive/super-AGB, extreme RSG, or interacting binary); may be a cluster blend",
+  "refs": [
+   {
+    "bibcode": "2019ApJ...877..110K",
+    "arxiv": "1901.07179",
+    "note": "Karambelkar et al. 2019, SPIRITS Catalog of Infrared Variables (Table 3 positions/periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class (pulsating LPV, not an episodic dust maker). One of the K19 variables with M[4.5]<-13. cluster association (K19 ref 1). Periods are quasi-periods from <=~5 yr of SPIRITS data; no errors published."
+ },
+ {
+  "name": "SPIRITS 18ec",
+  "aliases": [
+   "SPIRITS18ec"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "M51, d=8.58 Mpc (K19 Table 1)",
+  "ra": 202.512772,
+  "dec": 47.170201,
+  "pos_source": "Karambelkar+2019 Table 3 (deg, 6 dp); SIMBAD identical (coo_qual C)",
+  "period_d": 2538,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "K19 Table 3: mean M[3.6]=-13.42, M[4.5]=-13.97; peak-to-peak d[3.6]=0.54, d[4.5]=0.6 mag; quality 'gold'. Peak epochs not tabulated.",
+  "classification": "Extremely luminous IR long-period variable (K19: massive/super-AGB, extreme RSG, or interacting binary); may be a cluster blend",
+  "refs": [
+   {
+    "bibcode": "2019ApJ...877..110K",
+    "arxiv": "1901.07179",
+    "note": "Karambelkar et al. 2019, SPIRITS Catalog of Infrared Variables (Table 3 positions/periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class (pulsating LPV, not an episodic dust maker). One of the K19 variables with M[4.5]<-13. cluster association (K19 ref 5). Periods are quasi-periods from <=~5 yr of SPIRITS data; no errors published."
+ },
+ {
+  "name": "SPIRITS 15js",
+  "aliases": [
+   "SPIRITS15js"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "M83, d=4.66 Mpc (K19 Table 1)",
+  "ra": 204.211515,
+  "dec": -29.873467,
+  "pos_source": "Karambelkar+2019 Table 3 (deg, 6 dp); SIMBAD identical (coo_qual C)",
+  "period_d": 1603,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "K19 Table 3: mean M[3.6]=-12.87, M[4.5]=-13.59; peak-to-peak d[3.6]=0.95, d[4.5]=0.86 mag; quality 'silver'. Peak epochs not tabulated.",
+  "classification": "Extremely luminous IR long-period variable (K19: massive/super-AGB, extreme RSG, or interacting binary); may be a cluster blend",
+  "refs": [
+   {
+    "bibcode": "2019ApJ...877..110K",
+    "arxiv": "1901.07179",
+    "note": "Karambelkar et al. 2019, SPIRITS Catalog of Infrared Variables (Table 3 positions/periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class (pulsating LPV, not an episodic dust maker). One of the K19 variables with M[4.5]<-13. cluster association (K19 ref 6). Periods are quasi-periods from <=~5 yr of SPIRITS data; no errors published."
+ },
+ {
+  "name": "SPIRITS 14apz",
+  "aliases": [
+   "SPIRITS14apz"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "M101, d=6.95 Mpc (K19 Table 1)",
+  "ra": 210.718431,
+  "dec": 54.336889,
+  "pos_source": "Karambelkar+2019 Table 3 (deg, 6 dp); SIMBAD identical (coo_qual C)",
+  "period_d": 1397,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "K19 Table 3: mean M[3.6]=-12.0, M[4.5]=-13.48; peak-to-peak d[3.6]=1.52, d[4.5]=0.99 mag; quality 'gold'. Peak epochs not tabulated.",
+  "classification": "Extremely luminous IR long-period variable (K19: massive/super-AGB, extreme RSG, or interacting binary); may be a cluster blend",
+  "refs": [
+   {
+    "bibcode": "2019ApJ...877..110K",
+    "arxiv": "1901.07179",
+    "note": "Karambelkar et al. 2019, SPIRITS Catalog of Infrared Variables (Table 3 positions/periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class (pulsating LPV, not an episodic dust maker). One of the K19 variables with M[4.5]<-13. cluster association (K19 refs 1,2). Periods are quasi-periods from <=~5 yr of SPIRITS data; no errors published."
+ },
+ {
+  "name": "SPIRITS 16do",
+  "aliases": [
+   "SPIRITS16do"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "M83, d=4.66 Mpc (K19 Table 1)",
+  "ra": 204.279883,
+  "dec": -29.89054,
+  "pos_source": "Karambelkar+2019 Table 3 (deg, 6 dp); SIMBAD identical (coo_qual C)",
+  "period_d": 2071,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "K19 Table 3: mean M[3.6]=-12.35, M[4.5]=-13.47; peak-to-peak d[3.6]=0.36, d[4.5]=0.42 mag; quality 'silver'. Peak epochs not tabulated.",
+  "classification": "Extremely luminous IR long-period variable (K19: massive/super-AGB, extreme RSG, or interacting binary); may be a cluster blend",
+  "refs": [
+   {
+    "bibcode": "2019ApJ...877..110K",
+    "arxiv": "1901.07179",
+    "note": "Karambelkar et al. 2019, SPIRITS Catalog of Infrared Variables (Table 3 positions/periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class (pulsating LPV, not an episodic dust maker). One of the K19 variables with M[4.5]<-13. . Periods are quasi-periods from <=~5 yr of SPIRITS data; no errors published."
+ },
+ {
+  "name": "SPIRITS 15jt",
+  "aliases": [
+   "SPIRITS15jt"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "M83, d=4.66 Mpc (K19 Table 1)",
+  "ra": 204.284774,
+  "dec": -29.848441,
+  "pos_source": "Karambelkar+2019 Table 3 (deg, 6 dp); SIMBAD identical (coo_qual C)",
+  "period_d": 928,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "K19 Table 3: mean M[3.6]=-13.0, M[4.5]=-13.42; peak-to-peak d[3.6]=0.53, d[4.5]=0.76 mag; quality 'silver'. Peak epochs not tabulated.",
+  "classification": "Extremely luminous IR long-period variable (K19: massive/super-AGB, extreme RSG, or interacting binary); may be a cluster blend",
+  "refs": [
+   {
+    "bibcode": "2019ApJ...877..110K",
+    "arxiv": "1901.07179",
+    "note": "Karambelkar et al. 2019, SPIRITS Catalog of Infrared Variables (Table 3 positions/periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class (pulsating LPV, not an episodic dust maker). One of the K19 variables with M[4.5]<-13. K19 ref 8 association. Periods are quasi-periods from <=~5 yr of SPIRITS data; no errors published."
+ },
+ {
+  "name": "SPIRITS 16po",
+  "aliases": [
+   "SPIRITS16po"
+  ],
+  "category": "periodic_dusty_LPV",
+  "galaxy": "M83, d=4.66 Mpc (K19 Table 1)",
+  "ra": 204.256266,
+  "dec": -29.907444,
+  "pos_source": "Karambelkar+2019 Table 3 (deg, 6 dp); SIMBAD identical (coo_qual C)",
+  "period_d": 1206,
+  "period_err_d": null,
+  "period_constraint_d": null,
+  "peaks": [],
+  "amp_notes": "K19 Table 3: mean M[3.6]=-12.56, M[4.5]=-13.35; peak-to-peak d[3.6]=0.39, d[4.5]=0.32 mag; quality 'bronze'. Peak epochs not tabulated.",
+  "classification": "Extremely luminous IR long-period variable (K19: massive/super-AGB, extreme RSG, or interacting binary); may be a cluster blend",
+  "refs": [
+   {
+    "bibcode": "2019ApJ...877..110K",
+    "arxiv": "1901.07179",
+    "note": "Karambelkar et al. 2019, SPIRITS Catalog of Infrared Variables (Table 3 positions/periods/amplitudes)"
+   }
+  ],
+  "confidence_notes": "Secondary class (pulsating LPV, not an episodic dust maker). One of the K19 variables with M[4.5]<-13. K19 ref 9 association. Periods are quasi-periods from <=~5 yr of SPIRITS data; no errors published."
+ }
+]

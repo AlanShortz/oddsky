@@ -1,0 +1,223 @@
+{
+ "overall": {
+  "n": 1433,
+  "recovered": 0.302,
+  "recovered_with_candidate_stage": 0.278,
+  "period_within_10pct_of_recovered": 0.97
+ },
+ "by_snr_w2": {
+  "0-2": {
+   "n": 520,
+   "rate": 0.002
+  },
+  "2-4": {
+   "n": 189,
+   "rate": 0.053
+  },
+  "4-8": {
+   "n": 165,
+   "rate": 0.182
+  },
+  "8-16": {
+   "n": 150,
+   "rate": 0.527
+  },
+  "16-32": {
+   "n": 134,
+   "rate": 0.701
+  },
+  "32-1000000000.0": {
+   "n": 275,
+   "rate": 0.796
+  }
+ },
+ "by_logL_w2": {
+  "3.5-4.0": {
+   "n": 341,
+   "rate": 0.05
+  },
+  "4.0-4.5": {
+   "n": 341,
+   "rate": 0.176
+  },
+  "4.5-5.0": {
+   "n": 376,
+   "rate": 0.359
+  },
+  "5.0-5.5": {
+   "n": 375,
+   "rate": 0.589
+  }
+ },
+ "by_logL_w2_with_candidate_stage": {
+  "3.5-4.0": {
+   "n": 341,
+   "rate": 0.044
+  },
+  "4.0-4.5": {
+   "n": 341,
+   "rate": 0.155
+  },
+  "4.5-5.0": {
+   "n": 376,
+   "rate": 0.316
+  },
+  "5.0-5.5": {
+   "n": 375,
+   "rate": 0.565
+  }
+ },
+ "by_P_bright(snr_w2>=8)": {
+  "2-3": {
+   "n": 144,
+   "rate": 0.556
+  },
+  "3-4.5": {
+   "n": 114,
+   "rate": 0.842
+  },
+  "4.5-6": {
+   "n": 101,
+   "rate": 0.921
+  },
+  "6-8": {
+   "n": 97,
+   "rate": 0.784
+  },
+  "8-12": {
+   "n": 103,
+   "rate": 0.456
+  }
+ },
+ "by_n_peaks_in_data_bright": {
+  "0": {
+   "n": 3,
+   "rate": 0.667
+  },
+  "1": {
+   "n": 100,
+   "rate": 0.43
+  },
+  "2": {
+   "n": 158,
+   "rate": 0.81
+  },
+  "3": {
+   "n": 95,
+   "rate": 0.874
+  },
+  "4": {
+   "n": 68,
+   "rate": 0.941
+  },
+  "5": {
+   "n": 71,
+   "rate": 0.732
+  },
+  "6": {
+   "n": 56,
+   "rate": 0.357
+  },
+  "7": {
+   "n": 8,
+   "rate": 0.0
+  }
+ },
+ "by_host_class_bright": {
+  "brightening": {
+   "n": 30,
+   "rate": 0.6
+  },
+  "fading": {
+   "n": 31,
+   "rate": 0.516
+  },
+  "irregular": {
+   "n": 112,
+   "rate": 0.741
+  },
+  "lpv-like": {
+   "n": 174,
+   "rate": 0.684
+  },
+  "not-variable": {
+   "n": 116,
+   "rate": 0.767
+  },
+  "rise-then-fade": {
+   "n": 2,
+   "rate": 0.5
+  },
+  "season-locked": {
+   "n": 30,
+   "rate": 0.533
+  },
+  "step-down": {
+   "n": 27,
+   "rate": 0.741
+  },
+  "step-up": {
+   "n": 26,
+   "rate": 0.923
+  },
+  "transient": {
+   "n": 11,
+   "rate": 0.545
+  }
+ },
+ "by_distance_logL_ge_4.5": {
+  "0-1 Mpc": {
+   "n": 72,
+   "rate": 0.903
+  },
+  "1-2 Mpc": {
+   "n": 28,
+   "rate": 0.821
+  },
+  "2-4 Mpc": {
+   "n": 237,
+   "rate": 0.637
+  },
+  "4-7 Mpc": {
+   "n": 173,
+   "rate": 0.439
+  },
+  "7-11 Mpc": {
+   "n": 241,
+   "rate": 0.17
+  }
+ },
+ "false_positives": {
+  "n_sources": 1527,
+  "shuffle_rate": 0.0033,
+  "n_shuffle": 5,
+  "phase_rate": 0.0714,
+  "n_phase": 109,
+  "phase_by_class": {
+   "brightening": 8,
+   "fading": 16,
+   "irregular": 29,
+   "lpv-like": 18,
+   "not-variable": 3,
+   "rise-then-fade": 2,
+   "season-locked": 23,
+   "step-down": 6,
+   "step-up": 1,
+   "transient": 3
+  },
+  "phase_by_real_light_verdict": {
+   "recurrent": [
+    22,
+    141
+   ],
+   "rejected": [
+    86,
+    1376
+   ],
+   "weak": [
+    1,
+    10
+   ]
+  }
+ }
+}

@@ -1,0 +1,6233 @@
+{
+ "MESSIER081|1507p696|6": {
+  "galaxy": "MESSIER081",
+  "ra": 148.73908236932482,
+  "dec": 69.14675897742896,
+  "gaia_3as": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "1070474934439610752",
+     "ra": 148.7390740260557,
+     "dec": 69.14679755184753,
+     "phot_g_mean_mag": 20.252756,
+     "bp_rp": 0.37021446,
+     "parallax_over_error": -2.1093159,
+     "pm": 4.0110383,
+     "ruwe": 1.886971,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 2.4635793e-10
+    }
+   ]
+  },
+  "simbad_10as": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[HAE2008] 7",
+     "otype": "reg",
+     "ra": 148.73934166666666,
+     "dec": 69.14699722222224,
+     "sep": 0.9198012241212498
+    },
+    {
+     "main_id": "[PR95] 50996",
+     "otype": "HII",
+     "ra": 148.736875,
+     "dec": 69.14701666666667,
+     "sep": 2.97698435319024
+    },
+    {
+     "main_id": "HK NGC 3031 652",
+     "otype": "HII",
+     "ra": 148.73583333333335,
+     "dec": 69.1463888888889,
+     "sep": 4.371679223348153
+    },
+    {
+     "main_id": "[LET2019] NGC 3031  27",
+     "otype": "HXB",
+     "ra": 148.738484,
+     "dec": 69.148575,
+     "sep": 6.582494667865808
+    },
+    {
+     "main_id": "[BKC98] C3",
+     "otype": "MoC",
+     "ra": 148.73166666666668,
+     "dec": 69.14722222222223,
+     "sep": 9.648426939112912
+    }
+   ]
+  },
+  "allwise_6as": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J095457.30+690848.1",
+     "ra": 148.7387665,
+     "dec": 69.1466982,
+     "w1mpro": 13.394,
+     "w2mpro": 13.027,
+     "w3mpro": 8.665,
+     "w4mpro": 6.051,
+     "cc_flags": 0,
+     "ext_flg": 3
+    }
+   ]
+  },
+  "seip_4as": {
+   "status": "ok",
+   "rows": [
+    {
+     "ra": 148.738445,
+     "dec": 69.146532,
+     "i1_f_ap1": NaN,
+     "i2_f_ap1": NaN,
+     "i3_f_ap1": NaN,
+     "i4_f_ap1": NaN,
+     "m1_f_psf": 22540.0
+    }
+   ]
+  },
+  "mast_1as": {
+   "status": "ok",
+   "n": 60,
+   "obs": [
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48620.6
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48621.5
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F785LP",
+     48630.5
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48630.5
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48641.2
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48642.0
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48643.2
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F785LP",
+     48643.3
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48644.6
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48646.4
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48649.2
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F785LP",
+     48649.2
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48653.1
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48657.7
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F785LP",
+     48662.9
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48662.9
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48984.2
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48987.2
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F785LP",
+     48987.3
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48992.3
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     49000.0
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F785LP",
+     49000.1
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     49012.2
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     49029.2
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F785LP",
+     49144.7
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F785LP",
+     49230.1
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F785LP",
+     49276.6
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F785LP",
+     49292.9
+    ],
+    [
+     "HST",
+     "WFPC/WFC",
+     "F785LP",
+     49311.1
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     49644.5
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F814W",
+     49644.5
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     49666.5
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F814W",
+     49666.5
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F439W",
+     49737.5
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F555W",
+     49737.5
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     49737.5
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F336W",
+     49737.6
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F814W",
+     49737.6
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     49747.4
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F814W",
+     49747.4
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F814W",
+     49808.6
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     49808.6
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F300W",
+     50472.3
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     50472.3
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F606W",
+     50472.4
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     50472.4
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53261.7
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53262.5
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53262.5
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53473.9
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F435W",
+     53710.3
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F435W",
+     53816.1
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53816.1
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53816.2
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53816.9
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F435W",
+     53816.9
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53816.9
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F555W",
+     55150.1
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F555W",
+     55298.6
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     55298.6
+    ]
+   ]
+  },
+  "tns_30as": {
+   "status": "ok",
+   "rows": [
+    {
+     "Name": "AT 2026dvq",
+     "Obj. Type": NaN,
+     "Discovery Date (UT)": "2026-02-20 09:55:17.760",
+     "sep": 22.641885045076567
+    }
+   ]
+  },
+  "ads": {
+   "full:\"09:54:57.4\"": {
+    "n": 4,
+    "docs": [
+     {
+      "bibcode": "2018icns.conf..126H",
+      "year": "2018",
+      "title": "Air navigation service efficiency of European airports utilizing data envelopment analysis"
+     },
+     {
+      "bibcode": "2001PhRvD..64h2002F",
+      "year": "2001",
+      "title": "Modulating the experimental signature of a stochastic gravitational wave background"
+     },
+     {
+      "bibcode": "2021arXiv210809797S",
+      "year": "2021",
+      "title": "Wind Power Projection using Weather Forecasts by Novel Deep Neural Networks"
+     },
+     {
+      "bibcode": "2010A&A...521A..48S",
+      "year": "2010",
+      "title": "Kiloparsec-scale star formation law in M 81 and M 101 based on AKARI far-infrared observations"
+     }
+    ]
+   },
+   "full:\"095457.4\"": {
+    "n": 3,
+    "docs": [
+     {
+      "bibcode": "2018icns.conf..126H",
+      "year": "2018",
+      "title": "Air navigation service efficiency of European airports utilizing data envelopment analysis"
+     },
+     {
+      "bibcode": "2001PhRvD..64h2002F",
+      "year": "2001",
+      "title": "Modulating the experimental signature of a stochastic gravitational wave background"
+     },
+     {
+      "bibcode": "2021arXiv210809797S",
+      "year": "2021",
+      "title": "Wind Power Projection using Weather Forecasts by Novel Deep Neural Networks"
+     }
+    ]
+   },
+   "full:\"09 54 57.4\"": {
+    "n": 2,
+    "docs": [
+     {
+      "bibcode": "2010A&A...521A..48S",
+      "year": "2010",
+      "title": "Kiloparsec-scale star formation law in M 81 and M 101 based on AKARI far-infrared observations"
+     },
+     {
+      "bibcode": "2025arXiv250114148R",
+      "year": "2025",
+      "title": "SelfPrompt: Confidence-Aware Semi-Supervised Tuning for Robust Vision-Language Model Adaptation"
+     }
+    ]
+   },
+   "full:\"148.739\" full:\"69.147\"": {
+    "n": 1,
+    "docs": [
+     {
+      "bibcode": "2012ChPhC..36....3M",
+      "year": "2012",
+      "title": "The Ame2012 atomic mass evaluation"
+     }
+    ]
+   },
+   "full:\"M81\" full:(\"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\" OR \"periodic dust\")": {
+    "n": 213,
+    "docs": [
+     {
+      "bibcode": "2010ApJ...716..490S",
+      "year": "2010",
+      "title": "Anomalous Silicate Dust Emission in the Type 1 Liner Nucleus of M81"
+     },
+     {
+      "bibcode": "2003ApJS..144..213S",
+      "year": "2003",
+      "title": "Chandra X-Ray Observations of the Spiral Galaxy M81"
+     },
+     {
+      "bibcode": "2014AJ....148..133P",
+      "year": "2014",
+      "title": "A New Method to Estimate Local Pitch Angles in Spiral Galaxies: Application to Spiral Arms and Feathers in M81 and M51"
+     },
+     {
+      "bibcode": "2026arXiv260900477R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2018MNRAS.474.2987H",
+      "year": "2018",
+      "title": "Modelling the colliding-wind spectra of the WC8d+O8-9IV binary CV Ser (WR 113)"
+     },
+     {
+      "bibcode": "1994AJ....107.1022R",
+      "year": "1994",
+      "title": "UBVRI Photometry of SN 1993J in M81: The First 120 Days"
+     },
+     {
+      "bibcode": "2013ApJ...762...64G",
+      "year": "2013",
+      "title": "The Mid-IR Contribution of Dust-enshrouded Stars in Six Nearby Galaxies"
+     },
+     {
+      "bibcode": "2021NatAs...5..928S",
+      "year": "2021",
+      "title": "An energetic hot wind from the low-luminosity active galactic nucleus M81*"
+     },
+     {
+      "bibcode": "1977ApJ...211..707S",
+      "year": "1977",
+      "title": "M82 sans explosion: a galaxy drifts through dust. Or, can a simple field galaxy find stardust in the M81 group?"
+     },
+     {
+      "bibcode": "1997AJ....113..231W",
+      "year": "1997",
+      "title": "Infrared Photometry of Supernova 1993J in M81"
+     },
+     {
+      "bibcode": "2025A&A...697A.132S",
+      "year": "2025",
+      "title": "JWST/MIRI detects the dusty SN1993J about 30 years after explosion"
+     },
+     {
+      "bibcode": "2022MNRAS.509.3235Z",
+      "year": "2022",
+      "title": "Rescued from oblivion: detailed analysis of archival Spitzer data of SN 1993J"
+     },
+     {
+      "bibcode": "2019ApJ...878...71L",
+      "year": "2019",
+      "title": "Uncovering Red and Dusty Ultraluminous X-Ray Sources with Spitzer"
+     },
+     {
+      "bibcode": "2020ApJ...902...62Z",
+      "year": "2020",
+      "title": "A New Transition Wolf-Rayet WN/C Star in the Milky Way"
+     },
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     },
+     {
+      "bibcode": "2006MNRAS.371...38W",
+      "year": "2006",
+      "title": "The interplay between star formation and the nuclear environment of our Galaxy: deep X-ray observations of the Galactic centre Arches and Qu"
+     },
+     {
+      "bibcode": "2022ApJ...926..209S",
+      "year": "2022",
+      "title": "Evidence for A Hot Wind from High-resolution X-Ray Spectroscopic Observation of the Low-luminosity Active Galactic Nucleus in NGC 7213"
+     },
+     {
+      "bibcode": "1994Natur.369..380W",
+      "year": "1994",
+      "title": "Blue-shifted oxygen lines and the clumpy ejecta of supernova 1993J"
+     },
+     {
+      "bibcode": "2012ApJ...747...23S",
+      "year": "2012",
+      "title": "Discovery of Variability of the Progenitor of SN 2011dh in M 51 Using the Large Binocular Telescope"
+     },
+     {
+      "bibcode": "2022MNRAS.515.4302N",
+      "year": "2022",
+      "title": "Dust masses for a large sample of core-collapse supernovae from optical emission line asymmetries: dust formation on 30-year time-scales"
+     },
+     {
+      "bibcode": "2003ApJ...597..374B",
+      "year": "2003",
+      "title": "SN 1993J VLBI. III. The Evolution of the Radio Shell"
+     },
+     {
+      "bibcode": "2013ApJ...767...52K",
+      "year": "2013",
+      "title": "Finding \u03b7 Car Analogs in Nearby Galaxies Using Spitzer. I. Candidate Selection"
+     },
+     {
+      "bibcode": "2017ApJ...840...27S",
+      "year": "2017",
+      "title": "On the Optical-to-silicate Extinction Ratio as a Probe of the Dust Size in Active Galactic Nuclei"
+     },
+     {
+      "bibcode": "2010ApJ...718.1456O",
+      "year": "2010",
+      "title": "Observations of the Optical Transient in NGC 300 with AKARI/IRC: Possibilities of Asymmetric Dust Formation"
+     },
+     {
+      "bibcode": "2011ApJ...732..109M",
+      "year": "2011",
+      "title": "Dust and the Type II-plateau Supernova 2004dj"
+     },
+     {
+      "bibcode": "2020A&A...636A..48G",
+      "year": "2020",
+      "title": "The VMC Survey. XXXVII. Pulsation periods of dust-enshrouded AGB stars in the Magellanic Clouds"
+     },
+     {
+      "bibcode": "2004NewAR..48..749V",
+      "year": "2004",
+      "title": "Extragalactic binaries as core-collapse supernova progenitors"
+     },
+     {
+      "bibcode": "2008A&A...477..105D",
+      "year": "2008",
+      "title": "Spatial distribution of dust in the shell elliptical NGC 5982"
+     },
+     {
+      "bibcode": "2026A&A...709A.219V",
+      "year": "2026",
+      "title": "The role of mass loss in constraining quenching time in dwarf galaxies from asymptotic-giant-branch and red-giant-branch star counts"
+     },
+     {
+      "bibcode": "2014MNRAS.438.2328N",
+      "year": "2014",
+      "title": "Evolution of thermally pulsing asymptotic giant branch stars - III. Dust production at supersolar metallicities"
+     }
+    ]
+   },
+   "full:\"M81\" full:(\"infrared variable\" OR \"mid-infrared variable\" OR SPIRITS) full:(periodic OR \"long-period\")": {
+    "n": 22,
+    "docs": [
+     {
+      "bibcode": "2019ApJ...877..110K",
+      "year": "2019",
+      "title": "SPIRITS Catalog of Infrared Variables: Identification of Extremely Luminous Long Period Variables"
+     },
+     {
+      "bibcode": "2019ApJ...886...40J",
+      "year": "2019",
+      "title": "The SPIRITS Sample of Luminous Infrared Transients: Uncovering Hidden Supernovae and Dusty Stellar Outbursts in Nearby Galaxies"
+     },
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     },
+     {
+      "bibcode": "2026arXiv260900477R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2022AJ....163...97D",
+      "year": "2022",
+      "title": "Red Variable Stars in Three M81 Group Dwarf Galaxies"
+     },
+     {
+      "bibcode": "1973ApJ...186.1083S",
+      "year": "1973",
+      "title": "Waves in the Solar Atmosphere. III. The Propagation of Periodic Wave Trains in a Gravitational Atmosphere"
+     },
+     {
+      "bibcode": "2021AJ....162..152D",
+      "year": "2021",
+      "title": "New Blue and Red Variable Stars in NGC 247"
+     },
+     {
+      "bibcode": "1974ApJ...189...89D",
+      "year": "1974",
+      "title": "Infrared fluxes, spectral types, and temperatures for very cool stars."
+     },
+     {
+      "bibcode": "2024A&A...681A..97A",
+      "year": "2024",
+      "title": "O Corona, where art thou? eROSITA's view of UV-optical-IR variability-selected massive black holes in low-mass galaxies"
+     },
+     {
+      "bibcode": "2021gacv.workE..44D",
+      "year": "2021",
+      "title": "Accrete, Accrete, Accrete\u2026 Bang! (and repeat): The remarkable Recurrent Novae"
+     },
+     {
+      "bibcode": "1968AJ.....73..836P",
+      "year": "1968",
+      "title": "Proceedings of the Conference on Seyfert Galaxies and Related Objects, Held at Steward Observatory, University of Arizona, 14-16 February 19"
+     },
+     {
+      "bibcode": "2015A&A...575A..13F",
+      "year": "2015",
+      "title": "Properties of flat-spectrum radio-loud narrow-line Seyfert 1 galaxies"
+     },
+     {
+      "bibcode": "2000MNRAS.313..734E",
+      "year": "2000",
+      "title": "Massive star formation in galaxies: radiative transfer models of the UV to millimetre emission of starburst galaxies"
+     },
+     {
+      "bibcode": "2022Univ....8..493C",
+      "year": "2022",
+      "title": "Gap Transients Interacting with Circumstellar Medium"
+     },
+     {
+      "bibcode": "2019ApJ...878...71L",
+      "year": "2019",
+      "title": "Uncovering Red and Dusty Ultraluminous X-Ray Sources with Spitzer"
+     },
+     {
+      "bibcode": "2022MNRAS.509.3235Z",
+      "year": "2022",
+      "title": "Rescued from oblivion: detailed analysis of archival Spitzer data of SN 1993J"
+     },
+     {
+      "bibcode": "2003PASP..115..514T",
+      "year": "2003",
+      "title": "Astrophysics in 2002"
+     },
+     {
+      "bibcode": "2003PhyU...46..335C",
+      "year": "2003",
+      "title": "REVIEWS OF TOPICAL PROBLEMS:  Search for black holes"
+     },
+     {
+      "bibcode": "2022MNRAS.515.4302N",
+      "year": "2022",
+      "title": "Dust masses for a large sample of core-collapse supernovae from optical emission line asymmetries: dust formation on 30-year time-scales"
+     },
+     {
+      "bibcode": "2016MNRAS.460.1500S",
+      "year": "2016",
+      "title": "The continuing story of SN IIb 2013df: new optical and IR observations and analysis"
+     },
+     {
+      "bibcode": "2025prim.book.....M",
+      "year": "2025",
+      "title": "PRIMA General Observer Science Book Volume 2"
+     },
+     {
+      "bibcode": "2017arXiv171206950A",
+      "year": "2017",
+      "title": "French SKA White Book - The French Community towards the Square Kilometre Array"
+     }
+    ]
+   }
+  },
+  "sexagesimal": "09:54:57.4 +69:08:48"
+ },
+ "MESSIER081|1507p696|21": {
+  "galaxy": "MESSIER081",
+  "ra": 148.97065840818334,
+  "dec": 68.98446529570873,
+  "gaia_3as": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "1070469235016382336",
+     "ra": 148.96987368784272,
+     "dec": 68.98524711472717,
+     "phot_g_mean_mag": 20.398617,
+     "bp_rp": 0.41848755,
+     "parallax_over_error": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.040338762
+    },
+    {
+     "sid": "1070469235014896512",
+     "ra": 148.97162336425626,
+     "dec": 68.9843585128303,
+     "phot_g_mean_mag": 19.488766,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN
+    },
+    {
+     "sid": "1070469235014895488",
+     "ra": 148.96905637851668,
+     "dec": 68.9844738316235,
+     "phot_g_mean_mag": 21.7649,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN
+    },
+    {
+     "sid": "1070469235014896256",
+     "ra": 148.97054684781492,
+     "dec": 68.98447566851594,
+     "phot_g_mean_mag": 19.081898,
+     "bp_rp": 0.25575447,
+     "parallax_over_error": -2.2696452,
+     "pm": 2.493071,
+     "ruwe": 1.6766605,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 3.3999925e-10
+    },
+    {
+     "sid": "1070469235016984960",
+     "ra": 148.97095715456666,
+     "dec": 68.9848453094212,
+     "phot_g_mean_mag": 19.947952,
+     "bp_rp": NaN,
+     "parallax_over_error": -0.3861453,
+     "pm": 0.94229156,
+     "ruwe": 1.2828678,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN
+    },
+    {
+     "sid": "1070469235014896000",
+     "ra": 148.97177708163846,
+     "dec": 68.98389196855189,
+     "phot_g_mean_mag": 21.43532,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN
+    },
+    {
+     "sid": "1070469235014896640",
+     "ra": 148.971900164527,
+     "dec": 68.9845317680546,
+     "phot_g_mean_mag": 19.435476,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN
+    }
+   ]
+  },
+  "simbad_10as": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[KSK2013] M 81 10",
+     "otype": "s?b",
+     "ra": 148.97075,
+     "dec": 68.9844,
+     "sep": 0.2631312391115075
+    },
+    {
+     "main_id": "[PR95] 50152",
+     "otype": "HII",
+     "ra": 148.9708898192097,
+     "dec": 68.98470228596688,
+     "sep": 0.9039617952234332
+    },
+    {
+     "main_id": "PSK 311",
+     "otype": "HII",
+     "ra": 148.97166666666664,
+     "dec": 68.98444444444445,
+     "sep": 1.3038609921954678
+    },
+    {
+     "main_id": "HK NGC 3031 268",
+     "otype": "HII",
+     "ra": 148.97166666666664,
+     "dec": 68.98444444444445,
+     "sep": 1.3038609921954678
+    },
+    {
+     "main_id": "[HAE2008] 4",
+     "otype": "reg",
+     "ra": 148.97159166666663,
+     "dec": 68.98465,
+     "sep": 1.3761682275738425
+    },
+    {
+     "main_id": "[HSG2019] 10584-20.2",
+     "otype": "s*b",
+     "ra": 148.97229166666668,
+     "dec": 68.98458055555557,
+     "sep": 2.1490281171700985
+    },
+    {
+     "main_id": "[KBK87] 181",
+     "otype": "SNR",
+     "ra": 148.96904166666667,
+     "dec": 68.9858611111111,
+     "sep": 5.441176440636154
+    }
+   ]
+  },
+  "allwise_6as": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J095552.90+685904.5",
+     "ra": 148.9704377,
+     "dec": 68.9845935,
+     "w1mpro": 12.732,
+     "w2mpro": 12.216,
+     "w3mpro": 8.025,
+     "w4mpro": 5.261,
+     "cc_flags": 0,
+     "ext_flg": 3
+    }
+   ]
+  },
+  "seip_4as": {
+   "status": "ERR ConnectError: [Errno 54] Connection reset by peer",
+   "rows": []
+  },
+  "mast_1as": {
+   "status": "ok",
+   "n": 18,
+   "obs": [
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     52422.3
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     52422.4
+    ],
+    [
+     "HST",
+     "ACS/HRC",
+     "detection",
+     53263.3
+    ],
+    [
+     "HST",
+     "ACS/HRC",
+     "F250W",
+     53263.3
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53263.6
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53263.6
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F435W",
+     53709.3
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     53710.8
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F300W",
+     53710.8
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F435W",
+     53816.0
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53816.0
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53816.0
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F435W",
+     53821.2
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53821.2
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53821.2
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F555W",
+     55147.3
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     55205.0
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F555W",
+     55205.0
+    ]
+   ]
+  },
+  "tns_30as": {
+   "status": "ok",
+   "rows": [
+    {
+     "Name": "AT 2018asx",
+     "Obj. Type": NaN,
+     "Discovery Date (UT)": "2018-04-09 15:05:10.000",
+     "sep": 23.219867991067442
+    }
+   ]
+  },
+  "ads": {
+   "full:\"09:55:53.0\"": {
+    "n": 4,
+    "docs": [
+     {
+      "bibcode": "2026arXiv261038885L",
+      "year": "2026",
+      "title": "Execution bias, repeatability and mitigation cost in parameter-frozen molecular VQE energy evaluation"
+     },
+     {
+      "bibcode": "1987PhRvD..36.3571C",
+      "year": "1987",
+      "title": "Prospects for a day-night <SUP>37</SUP>Cl solar-neutrino oscillation experiment"
+     },
+     {
+      "bibcode": "1996ApJS..104..287S",
+      "year": "1996",
+      "title": "Ultraviolet Imaging Telescope Near-Ultraviolet Bright Object Catalog"
+     },
+     {
+      "bibcode": "2026arXiv260931466S",
+      "year": "2026",
+      "title": "Scaffold: Support Graph Theory Based Sparsification for Graph Neural Networks"
+     }
+    ]
+   },
+   "full:\"095553.0\"": {
+    "n": 3,
+    "docs": [
+     {
+      "bibcode": "1992AtmEB..26..491H",
+      "year": "1992",
+      "title": "Time series analysis of the interdependence among air pollutants"
+     },
+     {
+      "bibcode": "2021arXiv211004653A",
+      "year": "2021",
+      "title": "Topological Data Analysis (TDA) Techniques Enhance Hand Pose Classification from ECoG Neural Recordings"
+     },
+     {
+      "bibcode": "2026arXiv261038885L",
+      "year": "2026",
+      "title": "Execution bias, repeatability and mitigation cost in parameter-frozen molecular VQE energy evaluation"
+     }
+    ]
+   },
+   "full:\"09 55 53.0\"": {
+    "n": 3,
+    "docs": [
+     {
+      "bibcode": "1987PhRvD..36.3571C",
+      "year": "1987",
+      "title": "Prospects for a day-night <SUP>37</SUP>Cl solar-neutrino oscillation experiment"
+     },
+     {
+      "bibcode": "1996ApJS..104..287S",
+      "year": "1996",
+      "title": "Ultraviolet Imaging Telescope Near-Ultraviolet Bright Object Catalog"
+     },
+     {
+      "bibcode": "2026arXiv260931466S",
+      "year": "2026",
+      "title": "Scaffold: Support Graph Theory Based Sparsification for Graph Neural Networks"
+     }
+    ]
+   },
+   "full:\"148.971\" full:\"68.984\"": {
+    "n": 3,
+    "docs": [
+     {
+      "bibcode": "1979ApJS...40....1K",
+      "year": "1979",
+      "title": "Model atmospheres for G, F, A, B, and O stars."
+     },
+     {
+      "bibcode": "2022arXiv220103216D",
+      "year": "2022",
+      "title": "Nuclear mass table in deformed relativistic Hartree-Bogoliubov theory in continuum: I. even-even nuclei"
+     },
+     {
+      "bibcode": "2026arXiv261004886D",
+      "year": "2026",
+      "title": "Nuclear mass table in deformed relativistic Hartree-Bogoliubov theory in continuum, III: nuclei with $8 \\leq Z \\leq 120$"
+     }
+    ]
+   },
+   "full:\"M81\" full:(\"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\" OR \"periodic dust\")": {
+    "n": 213,
+    "docs": [
+     {
+      "bibcode": "2010ApJ...716..490S",
+      "year": "2010",
+      "title": "Anomalous Silicate Dust Emission in the Type 1 Liner Nucleus of M81"
+     },
+     {
+      "bibcode": "2003ApJS..144..213S",
+      "year": "2003",
+      "title": "Chandra X-Ray Observations of the Spiral Galaxy M81"
+     },
+     {
+      "bibcode": "2014AJ....148..133P",
+      "year": "2014",
+      "title": "A New Method to Estimate Local Pitch Angles in Spiral Galaxies: Application to Spiral Arms and Feathers in M81 and M51"
+     },
+     {
+      "bibcode": "2026arXiv260900477R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2018MNRAS.474.2987H",
+      "year": "2018",
+      "title": "Modelling the colliding-wind spectra of the WC8d+O8-9IV binary CV Ser (WR 113)"
+     },
+     {
+      "bibcode": "1994AJ....107.1022R",
+      "year": "1994",
+      "title": "UBVRI Photometry of SN 1993J in M81: The First 120 Days"
+     },
+     {
+      "bibcode": "2013ApJ...762...64G",
+      "year": "2013",
+      "title": "The Mid-IR Contribution of Dust-enshrouded Stars in Six Nearby Galaxies"
+     },
+     {
+      "bibcode": "2021NatAs...5..928S",
+      "year": "2021",
+      "title": "An energetic hot wind from the low-luminosity active galactic nucleus M81*"
+     },
+     {
+      "bibcode": "1977ApJ...211..707S",
+      "year": "1977",
+      "title": "M82 sans explosion: a galaxy drifts through dust. Or, can a simple field galaxy find stardust in the M81 group?"
+     },
+     {
+      "bibcode": "1997AJ....113..231W",
+      "year": "1997",
+      "title": "Infrared Photometry of Supernova 1993J in M81"
+     },
+     {
+      "bibcode": "2025A&A...697A.132S",
+      "year": "2025",
+      "title": "JWST/MIRI detects the dusty SN1993J about 30 years after explosion"
+     },
+     {
+      "bibcode": "2022MNRAS.509.3235Z",
+      "year": "2022",
+      "title": "Rescued from oblivion: detailed analysis of archival Spitzer data of SN 1993J"
+     },
+     {
+      "bibcode": "2019ApJ...878...71L",
+      "year": "2019",
+      "title": "Uncovering Red and Dusty Ultraluminous X-Ray Sources with Spitzer"
+     },
+     {
+      "bibcode": "2020ApJ...902...62Z",
+      "year": "2020",
+      "title": "A New Transition Wolf-Rayet WN/C Star in the Milky Way"
+     },
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     },
+     {
+      "bibcode": "2006MNRAS.371...38W",
+      "year": "2006",
+      "title": "The interplay between star formation and the nuclear environment of our Galaxy: deep X-ray observations of the Galactic centre Arches and Qu"
+     },
+     {
+      "bibcode": "2022ApJ...926..209S",
+      "year": "2022",
+      "title": "Evidence for A Hot Wind from High-resolution X-Ray Spectroscopic Observation of the Low-luminosity Active Galactic Nucleus in NGC 7213"
+     },
+     {
+      "bibcode": "1994Natur.369..380W",
+      "year": "1994",
+      "title": "Blue-shifted oxygen lines and the clumpy ejecta of supernova 1993J"
+     },
+     {
+      "bibcode": "2012ApJ...747...23S",
+      "year": "2012",
+      "title": "Discovery of Variability of the Progenitor of SN 2011dh in M 51 Using the Large Binocular Telescope"
+     },
+     {
+      "bibcode": "2022MNRAS.515.4302N",
+      "year": "2022",
+      "title": "Dust masses for a large sample of core-collapse supernovae from optical emission line asymmetries: dust formation on 30-year time-scales"
+     },
+     {
+      "bibcode": "2003ApJ...597..374B",
+      "year": "2003",
+      "title": "SN 1993J VLBI. III. The Evolution of the Radio Shell"
+     },
+     {
+      "bibcode": "2013ApJ...767...52K",
+      "year": "2013",
+      "title": "Finding \u03b7 Car Analogs in Nearby Galaxies Using Spitzer. I. Candidate Selection"
+     },
+     {
+      "bibcode": "2017ApJ...840...27S",
+      "year": "2017",
+      "title": "On the Optical-to-silicate Extinction Ratio as a Probe of the Dust Size in Active Galactic Nuclei"
+     },
+     {
+      "bibcode": "2010ApJ...718.1456O",
+      "year": "2010",
+      "title": "Observations of the Optical Transient in NGC 300 with AKARI/IRC: Possibilities of Asymmetric Dust Formation"
+     },
+     {
+      "bibcode": "2011ApJ...732..109M",
+      "year": "2011",
+      "title": "Dust and the Type II-plateau Supernova 2004dj"
+     },
+     {
+      "bibcode": "2020A&A...636A..48G",
+      "year": "2020",
+      "title": "The VMC Survey. XXXVII. Pulsation periods of dust-enshrouded AGB stars in the Magellanic Clouds"
+     },
+     {
+      "bibcode": "2004NewAR..48..749V",
+      "year": "2004",
+      "title": "Extragalactic binaries as core-collapse supernova progenitors"
+     },
+     {
+      "bibcode": "2008A&A...477..105D",
+      "year": "2008",
+      "title": "Spatial distribution of dust in the shell elliptical NGC 5982"
+     },
+     {
+      "bibcode": "2026A&A...709A.219V",
+      "year": "2026",
+      "title": "The role of mass loss in constraining quenching time in dwarf galaxies from asymptotic-giant-branch and red-giant-branch star counts"
+     },
+     {
+      "bibcode": "2014MNRAS.438.2328N",
+      "year": "2014",
+      "title": "Evolution of thermally pulsing asymptotic giant branch stars - III. Dust production at supersolar metallicities"
+     }
+    ]
+   },
+   "full:\"M81\" full:(\"infrared variable\" OR \"mid-infrared variable\" OR SPIRITS) full:(periodic OR \"long-period\")": {
+    "n": 22,
+    "docs": [
+     {
+      "bibcode": "2019ApJ...877..110K",
+      "year": "2019",
+      "title": "SPIRITS Catalog of Infrared Variables: Identification of Extremely Luminous Long Period Variables"
+     },
+     {
+      "bibcode": "2019ApJ...886...40J",
+      "year": "2019",
+      "title": "The SPIRITS Sample of Luminous Infrared Transients: Uncovering Hidden Supernovae and Dusty Stellar Outbursts in Nearby Galaxies"
+     },
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     },
+     {
+      "bibcode": "2026arXiv260900477R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2022AJ....163...97D",
+      "year": "2022",
+      "title": "Red Variable Stars in Three M81 Group Dwarf Galaxies"
+     },
+     {
+      "bibcode": "1973ApJ...186.1083S",
+      "year": "1973",
+      "title": "Waves in the Solar Atmosphere. III. The Propagation of Periodic Wave Trains in a Gravitational Atmosphere"
+     },
+     {
+      "bibcode": "2021AJ....162..152D",
+      "year": "2021",
+      "title": "New Blue and Red Variable Stars in NGC 247"
+     },
+     {
+      "bibcode": "1974ApJ...189...89D",
+      "year": "1974",
+      "title": "Infrared fluxes, spectral types, and temperatures for very cool stars."
+     },
+     {
+      "bibcode": "2024A&A...681A..97A",
+      "year": "2024",
+      "title": "O Corona, where art thou? eROSITA's view of UV-optical-IR variability-selected massive black holes in low-mass galaxies"
+     },
+     {
+      "bibcode": "2021gacv.workE..44D",
+      "year": "2021",
+      "title": "Accrete, Accrete, Accrete\u2026 Bang! (and repeat): The remarkable Recurrent Novae"
+     },
+     {
+      "bibcode": "1968AJ.....73..836P",
+      "year": "1968",
+      "title": "Proceedings of the Conference on Seyfert Galaxies and Related Objects, Held at Steward Observatory, University of Arizona, 14-16 February 19"
+     },
+     {
+      "bibcode": "2015A&A...575A..13F",
+      "year": "2015",
+      "title": "Properties of flat-spectrum radio-loud narrow-line Seyfert 1 galaxies"
+     },
+     {
+      "bibcode": "2000MNRAS.313..734E",
+      "year": "2000",
+      "title": "Massive star formation in galaxies: radiative transfer models of the UV to millimetre emission of starburst galaxies"
+     },
+     {
+      "bibcode": "2022Univ....8..493C",
+      "year": "2022",
+      "title": "Gap Transients Interacting with Circumstellar Medium"
+     },
+     {
+      "bibcode": "2019ApJ...878...71L",
+      "year": "2019",
+      "title": "Uncovering Red and Dusty Ultraluminous X-Ray Sources with Spitzer"
+     },
+     {
+      "bibcode": "2022MNRAS.509.3235Z",
+      "year": "2022",
+      "title": "Rescued from oblivion: detailed analysis of archival Spitzer data of SN 1993J"
+     },
+     {
+      "bibcode": "2003PASP..115..514T",
+      "year": "2003",
+      "title": "Astrophysics in 2002"
+     },
+     {
+      "bibcode": "2003PhyU...46..335C",
+      "year": "2003",
+      "title": "REVIEWS OF TOPICAL PROBLEMS:  Search for black holes"
+     },
+     {
+      "bibcode": "2022MNRAS.515.4302N",
+      "year": "2022",
+      "title": "Dust masses for a large sample of core-collapse supernovae from optical emission line asymmetries: dust formation on 30-year time-scales"
+     },
+     {
+      "bibcode": "2016MNRAS.460.1500S",
+      "year": "2016",
+      "title": "The continuing story of SN IIb 2013df: new optical and IR observations and analysis"
+     },
+     {
+      "bibcode": "2025prim.book.....M",
+      "year": "2025",
+      "title": "PRIMA General Observer Science Book Volume 2"
+     },
+     {
+      "bibcode": "2017arXiv171206950A",
+      "year": "2017",
+      "title": "French SKA White Book - The French Community towards the Square Kilometre Array"
+     }
+    ]
+   }
+  },
+  "sexagesimal": "09:55:53.0 +68:59:04"
+ },
+ "IC0342|0553p681|0": {
+  "galaxy": "IC0342",
+  "ra": 56.62799261457098,
+  "dec": 68.0192539990737,
+  "gaia_3as": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "493477452956632704",
+     "ra": 56.62974956327881,
+     "dec": 68.01965116802775,
+     "phot_g_mean_mag": 20.957087,
+     "bp_rp": 1.1637917,
+     "parallax_over_error": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.0008933461
+    },
+    {
+     "sid": "493477452958766976",
+     "ra": 56.62974097234833,
+     "dec": 68.01939162010827,
+     "phot_g_mean_mag": 21.485899,
+     "bp_rp": 1.0286732,
+     "parallax_over_error": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.0042234436
+    },
+    {
+     "sid": "493477452956111104",
+     "ra": 56.62872176941342,
+     "dec": 68.01855823950584,
+     "phot_g_mean_mag": 20.030355,
+     "bp_rp": 1.1918526,
+     "parallax_over_error": -0.57742965,
+     "pm": 0.23971592,
+     "ruwe": 0.9939113,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 5.436133e-07
+    }
+   ]
+  },
+  "simbad_10as": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[VAU2013] 112",
+     "otype": "HII",
+     "ra": 56.629999999999995,
+     "dec": 68.01869444444445,
+     "sep": 3.37258398336639
+    },
+    {
+     "main_id": "ZTF J034629.87+680112.9",
+     "otype": "EB*",
+     "ra": 56.62447314192626,
+     "dec": 68.02024867942916,
+     "sep": 5.942343888927186
+    }
+   ]
+  },
+  "allwise_6as": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J034630.45+680112.5",
+     "ra": 56.626902,
+     "dec": 68.020149,
+     "w1mpro": 13.297,
+     "w2mpro": 12.753,
+     "w3mpro": 8.4,
+     "w4mpro": 5.995,
+     "cc_flags": "000d",
+     "ext_flg": 3
+    }
+   ]
+  },
+  "seip_4as": {
+   "status": "ok",
+   "rows": []
+  },
+  "mast_1as": {
+   "status": "ok",
+   "n": 6,
+   "obs": [
+    [
+     "HST",
+     "ACS/WFC",
+     "F435W",
+     53615.0
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53615.1
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     56403.1
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F435W",
+     58768.4
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     58768.4
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     58768.4
+    ]
+   ]
+  },
+  "tns_30as": {
+   "status": "ok",
+   "rows": []
+  },
+  "ads": {
+   "full:\"03:46:30.7\"": {
+    "n": 2,
+    "docs": [
+     {
+      "bibcode": "1964PhRv..136.1417C",
+      "year": "1964",
+      "title": "Impurity States in Transition Metals"
+     },
+     {
+      "bibcode": "2012MNRAS.423.1024M",
+      "year": "2012",
+      "title": "The XMM Cluster Survey: optical analysis methodology and the first data release"
+     }
+    ]
+   },
+   "full:\"034630.7\"": {
+    "n": 2,
+    "docs": [
+     {
+      "bibcode": "1964PhRv..136.1417C",
+      "year": "1964",
+      "title": "Impurity States in Transition Metals"
+     },
+     {
+      "bibcode": "2012MNRAS.423.1024M",
+      "year": "2012",
+      "title": "The XMM Cluster Survey: optical analysis methodology and the first data release"
+     }
+    ]
+   },
+   "full:\"03 46 30.7\"": {
+    "n": 1,
+    "docs": [
+     {
+      "bibcode": "2012MNRAS.423.1024M",
+      "year": "2012",
+      "title": "The XMM Cluster Survey: optical analysis methodology and the first data release"
+     }
+    ]
+   },
+   "full:\"56.628\" full:\"68.019\"": {
+    "n": 5,
+    "docs": [
+     {
+      "bibcode": "2026arXiv260718724L",
+      "year": "2026",
+      "title": "One Rewrite to Fix Them All? Type-Aware Repair Allocation for Text-to-Image Prompt Optimization"
+     },
+     {
+      "bibcode": "1992ADNDT..51...59B",
+      "year": "1992",
+      "title": "Cross Sections for Electron Capture from Atomic Hydrogen by Fully Stripped Ions:"
+     },
+     {
+      "bibcode": "1995MNRAS.275..454T",
+      "year": "1995",
+      "title": "The age of old Magellanic Cloud clusters - I. NGC 2257"
+     },
+     {
+      "bibcode": "1982ADNDT..27..341J",
+      "year": "1982",
+      "title": "Proton Range-Energy Tables, 1 keV-10 GeV, Energy Loss, Range, Path Length, Time-of-Flight, Straggling, Multiple Scattering, and Nuclear Inte"
+     },
+     {
+      "bibcode": "1968PUSNO..19....3A",
+      "year": "1968",
+      "title": "Results of observations made with the six-inch transit circle 1956 - 1962. Part I: Observations of the Sun, Moon, and Planets; catalogue of "
+     }
+    ]
+   },
+   "full:\"IC0342\" full:(\"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\" OR \"periodic dust\")": {
+    "n": 3,
+    "docs": [
+     {
+      "bibcode": "2026arXiv260904320T",
+      "year": "2026",
+      "title": "Resolved Dust-Gas-Metallicity relations in nearby spiral galaxies"
+     },
+     {
+      "bibcode": "2025prim.book..329C",
+      "year": "2025",
+      "title": "Measuring Interstellar Carbon Abundance and Depletion via 158 \u00b5m [CII] Absorption"
+     },
+     {
+      "bibcode": "2025prim.book.....M",
+      "year": "2025",
+      "title": "PRIMA General Observer Science Book Volume 2"
+     }
+    ]
+   },
+   "full:\"IC0342\" full:(\"infrared variable\" OR \"mid-infrared variable\" OR SPIRITS) full:(periodic OR \"long-period\")": {
+    "n": 1,
+    "docs": [
+     {
+      "bibcode": "2025prim.book.....M",
+      "year": "2025",
+      "title": "PRIMA General Observer Science Book Volume 2"
+     }
+    ]
+   }
+  },
+  "sexagesimal": "03:46:30.7 +68:01:09"
+ },
+ "NGC3344|1601p242|6": {
+  "galaxy": "NGC3344",
+  "ra": 160.88166999032336,
+  "dec": 24.966303011494578,
+  "gaia_3as": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "723799025573133568",
+     "ra": 160.88186785953692,
+     "dec": 24.966340819799864,
+     "phot_g_mean_mag": 21.098791,
+     "bp_rp": -0.01068306,
+     "parallax_over_error": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.003676656
+    }
+   ]
+  },
+  "simbad_10as": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[BKD2008] WR 541",
+     "otype": "PoG",
+     "ra": 160.8817916666667,
+     "dec": 24.966361111111112,
+     "sep": 0.4488186671096777
+    },
+    {
+     "main_id": "SDSSCGB 428.1",
+     "otype": "G",
+     "ra": 160.88186785954,
+     "dec": 24.9663408198,
+     "sep": 0.659954580179107
+    },
+    {
+     "main_id": "SDSSCGB 428",
+     "otype": "CGG",
+     "ra": 160.88208333333336,
+     "dec": 24.965833333333332,
+     "sep": 2.1630344264258143
+    },
+    {
+     "main_id": "[MRD2019] SNR-C2174",
+     "otype": "SNR",
+     "ra": 160.881875,
+     "dec": 24.967466666666663,
+     "sep": 4.242251811103971
+    },
+    {
+     "main_id": "SDSS J104331.94+245757.6",
+     "otype": "G",
+     "ra": 160.88310900000002,
+     "dec": 24.966008,
+     "sep": 4.814949342927379
+    },
+    {
+     "main_id": "SDSS J104331.18+245757.0",
+     "otype": "G",
+     "ra": 160.87994583333332,
+     "dec": 24.96583888888889,
+     "sep": 5.869798880286611
+    },
+    {
+     "main_id": "SDSS J104331.29+245751.7",
+     "otype": "G",
+     "ra": 160.88039166666667,
+     "dec": 24.964377777777777,
+     "sep": 8.089617891703929
+    },
+    {
+     "main_id": "[MRD2019] SNR-C2179",
+     "otype": "SR?",
+     "ra": 160.88325,
+     "dec": 24.96813055555555,
+     "sep": 8.359106661892909
+    },
+    {
+     "main_id": "Was  14",
+     "otype": "EmG",
+     "ra": 160.88418230198,
+     "dec": 24.96707155285,
+     "sep": 8.65338837543794
+    }
+   ]
+  },
+  "allwise_6as": {
+   "status": "ERR ConnectError: [Errno 54] Connection reset by peer",
+   "rows": []
+  },
+  "seip_4as": {
+   "status": "ok",
+   "rows": [
+    {
+     "ra": 160.881728,
+     "dec": 24.966428,
+     "i1_f_ap1": NaN,
+     "i2_f_ap1": NaN,
+     "i3_f_ap1": NaN,
+     "i4_f_ap1": NaN,
+     "m1_f_psf": 8540.0
+    }
+   ]
+  },
+  "mast_1as": {
+   "status": "ok",
+   "n": 3,
+   "obs": [
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     55981.3
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     55981.3
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     55981.3
+    ]
+   ]
+  },
+  "tns_30as": {
+   "status": "ok",
+   "rows": []
+  },
+  "ads": {
+   "full:\"10:43:31.6\"": {
+    "n": 12,
+    "docs": [
+     {
+      "bibcode": "2017SPIE10433E..16B",
+      "year": "2017",
+      "title": "Extension to NIR and visible ranges of high-resolution relative spectral response measurement using Fourier Transform Infrared Spectrometer "
+     },
+     {
+      "bibcode": "1985JMoSp.112..363M",
+      "year": "1985",
+      "title": "Measurement and analysis of the \u03bd<SUB>2</SUB> and \u03bd<SUB>4</SUB> infrared bands of <SUP>13</SUP>CD <SUB>4</SUB>"
+     },
+     {
+      "bibcode": "2017FSI....68...10S",
+      "year": "2017",
+      "title": "Proliferation, survival and cell death in fish gills remodeling: From injury to recovery"
+     },
+     {
+      "bibcode": "2017SPIE10433E....H",
+      "year": "2017",
+      "title": "Electro-Optical and Infrared Systems: Technology and Applications XIV"
+     },
+     {
+      "bibcode": "2022AJ....164..257H",
+      "year": "2022",
+      "title": "ALMA Data Cubes and Continuum Maps of the Irradiated Western Wall in Carina"
+     },
+     {
+      "bibcode": "2011AcCrE..67o2556B",
+      "year": "2011",
+      "title": "3,3'-Dinitrobisphenol A"
+     },
+     {
+      "bibcode": "2022JElS..169k0509L",
+      "year": "2022",
+      "title": "A Solid/Liquid High-Energy-Density Storage Concept for Redox Flow Batteries and Its Demonstration in an H<SUB>2</SUB>-V System"
+     },
+     {
+      "bibcode": "2025arXiv251114292S",
+      "year": "2025",
+      "title": "Covariate Adjustment for the Win Odds: Application to Cardiovascular Outcomes Trials"
+     },
+     {
+      "bibcode": "2012AcCrE..68o2810M",
+      "year": "2012",
+      "title": "N-Acetyl-5-chloro-3-nitro-L-tyrosine ethyl ester"
+     },
+     {
+      "bibcode": "2015AcCrE..71.1266L",
+      "year": "2015",
+      "title": "A co-crystal of nonahydrated disodium(II) with mixed anions from m-chlorobenzoic acid and furosemide"
+     },
+     {
+      "bibcode": "2025arXiv250315942R",
+      "year": "2025",
+      "title": "Social Media for Activists: Reimagining Safety, Content Presentation, and Workflows"
+     },
+     {
+      "bibcode": "1996ApJS..106...65M",
+      "year": "1996",
+      "title": "The Third BATSE Gamma-Ray Burst Catalog"
+     }
+    ]
+   },
+   "full:\"104331.6\"": {
+    "n": 13,
+    "docs": [
+     {
+      "bibcode": "2017SPIE10433E..16B",
+      "year": "2017",
+      "title": "Extension to NIR and visible ranges of high-resolution relative spectral response measurement using Fourier Transform Infrared Spectrometer "
+     },
+     {
+      "bibcode": "1985JMoSp.112..363M",
+      "year": "1985",
+      "title": "Measurement and analysis of the \u03bd<SUB>2</SUB> and \u03bd<SUB>4</SUB> infrared bands of <SUP>13</SUP>CD <SUB>4</SUB>"
+     },
+     {
+      "bibcode": "2017FSI....68...10S",
+      "year": "2017",
+      "title": "Proliferation, survival and cell death in fish gills remodeling: From injury to recovery"
+     },
+     {
+      "bibcode": "2017SPIE10433E....H",
+      "year": "2017",
+      "title": "Electro-Optical and Infrared Systems: Technology and Applications XIV"
+     },
+     {
+      "bibcode": "2022AJ....164..257H",
+      "year": "2022",
+      "title": "ALMA Data Cubes and Continuum Maps of the Irradiated Western Wall in Carina"
+     },
+     {
+      "bibcode": "2011AcCrE..67o2556B",
+      "year": "2011",
+      "title": "3,3'-Dinitrobisphenol A"
+     },
+     {
+      "bibcode": "2022JElS..169k0509L",
+      "year": "2022",
+      "title": "A Solid/Liquid High-Energy-Density Storage Concept for Redox Flow Batteries and Its Demonstration in an H<SUB>2</SUB>-V System"
+     },
+     {
+      "bibcode": "2025arXiv251114292S",
+      "year": "2025",
+      "title": "Covariate Adjustment for the Win Odds: Application to Cardiovascular Outcomes Trials"
+     },
+     {
+      "bibcode": "2012AcCrE..68o2810M",
+      "year": "2012",
+      "title": "N-Acetyl-5-chloro-3-nitro-L-tyrosine ethyl ester"
+     },
+     {
+      "bibcode": "2023SPIE12589E..16C",
+      "year": "2023",
+      "title": "Study on power fluctuation factors of photovoltaic power generation system coupled with energy storage devices"
+     },
+     {
+      "bibcode": "2015AcCrE..71.1266L",
+      "year": "2015",
+      "title": "A co-crystal of nonahydrated disodium(II) with mixed anions from m-chlorobenzoic acid and furosemide"
+     },
+     {
+      "bibcode": "2025arXiv250208110L",
+      "year": "2025",
+      "title": "Dichotomy in the small-time asymptotics of spectral heat content for L\u00e9vy processes"
+     },
+     {
+      "bibcode": "2025arXiv250315942R",
+      "year": "2025",
+      "title": "Social Media for Activists: Reimagining Safety, Content Presentation, and Workflows"
+     }
+    ]
+   },
+   "full:\"10 43 31.6\"": {
+    "n": 6,
+    "docs": [
+     {
+      "bibcode": "2022AJ....164..257H",
+      "year": "2022",
+      "title": "ALMA Data Cubes and Continuum Maps of the Irradiated Western Wall in Carina"
+     },
+     {
+      "bibcode": "2025arXiv251102036H",
+      "year": "2025",
+      "title": "TurboMap: GPU-Accelerated Local Mapping for Visual SLAM"
+     },
+     {
+      "bibcode": "2018JMEP...27.5489Z",
+      "year": "2018",
+      "title": "The Effects of Sodium Tungstate on the Characteristics of Microarc Oxidation Coating on Ti6Al4V"
+     },
+     {
+      "bibcode": "2025arXiv250613174Y",
+      "year": "2025",
+      "title": "GeoRecon: Graph-Level Representation Learning for 3D Molecules via Reconstruction-Based Pretraining"
+     },
+     {
+      "bibcode": "2020GeolJ..55.1587K",
+      "year": "2020",
+      "title": "Geochemistry of the Palaeoproterozoic quartzites of Lower Cuddapah Supergroup, South India: Implications for the palaeoweathering, provenanc"
+     },
+     {
+      "bibcode": "1996ApJS..106...65M",
+      "year": "1996",
+      "title": "The Third BATSE Gamma-Ray Burst Catalog"
+     }
+    ]
+   },
+   "full:\"160.882\" full:\"24.966\"": {
+    "n": 0,
+    "docs": []
+   },
+   "full:\"NGC3344\" full:(\"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\" OR \"periodic dust\")": {
+    "n": 6,
+    "docs": [
+     {
+      "bibcode": "2017MNRAS.469.1445A",
+      "year": "2017",
+      "title": "The search for failed supernovae with the Large Binocular Telescope: constraints from 7 yr of data"
+     },
+     {
+      "bibcode": "2018ApJ...860...90V",
+      "year": "2018",
+      "title": "SN 2017ein and the Possible First Identification of a Type Ic Supernova Progenitor"
+     },
+     {
+      "bibcode": "2021MNRAS.508..516N",
+      "year": "2021",
+      "title": "The search for failed supernovae with the Large Binocular Telescope: a new candidate and the failed SN fraction with 11 yr of data"
+     },
+     {
+      "bibcode": "2023MNRAS.523.1474R",
+      "year": "2023",
+      "title": "The late time optical evolution of twelve core-collapse supernovae: detection of normal stellar winds"
+     },
+     {
+      "bibcode": "2015MNRAS.450.3289G",
+      "year": "2015",
+      "title": "The search for failed supernovae with the Large Binocular Telescope: first candidates"
+     },
+     {
+      "bibcode": "2014PhDT........11S",
+      "year": "2014",
+      "title": "Core-Collapse Supernova Progenitors In The Era Of Untargeted Transient Searches"
+     }
+    ]
+   },
+   "full:\"NGC3344\" full:(\"infrared variable\" OR \"mid-infrared variable\" OR SPIRITS) full:(periodic OR \"long-period\")": {
+    "n": 0,
+    "docs": []
+   }
+  },
+  "sexagesimal": "10:43:31.6 +24:57:59"
+ },
+ "NGC4945|1974m500|13": {
+  "galaxy": "NGC4945",
+  "ra": 196.41592126282305,
+  "dec": -49.420014231077054,
+  "gaia_3as": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad_10as": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise_6as": {
+   "status": "ok",
+   "rows": []
+  },
+  "seip_4as": {
+   "status": "ok",
+   "rows": []
+  },
+  "mast_1as": {
+   "status": "ok",
+   "n": 0,
+   "obs": []
+  },
+  "tns_30as": {
+   "status": "ok",
+   "rows": []
+  },
+  "ads": {
+   "full:\"13:05:39.8\"": {
+    "n": 8,
+    "docs": [
+     {
+      "bibcode": "1969PhRv..188...57B",
+      "year": "1969",
+      "title": "Analysis of Electron Correlation in Two-Electron Systems. II. Be<SUP>++</SUP>, B<SUP>3+</SUP>, C<SUP>4+</SUP>, N<SUP>5+</SUP>, and O<SUP>6+<"
+     },
+     {
+      "bibcode": "2020arXiv200603370K",
+      "year": "2020",
+      "title": "Ensuring 'well-balanced' shallow water flows via a discontinuous Galerkin finite element method: issues at lowest order"
+     },
+     {
+      "bibcode": "2006math......3486A",
+      "year": "2006",
+      "title": "On Yamabe constants of Riemannian products"
+     },
+     {
+      "bibcode": "2014SPIE.9159E..0DZ",
+      "year": "2014",
+      "title": "Computer image analysis in obtaining characteristics of images: greenhouse tomatoes in the process of generating learning sets of artificial"
+     },
+     {
+      "bibcode": "2008arXiv0804.1418A",
+      "year": "2008",
+      "title": "Smooth Yamabe invariant and surgery"
+     },
+     {
+      "bibcode": "2025arXiv251120417A",
+      "year": "2025",
+      "title": "Comparative evaluation of future collider options"
+     },
+     {
+      "bibcode": "1990JVGR...44..265Y",
+      "year": "1990",
+      "title": "Precursory earthquakes of the 1943 eruption of Paricutin volcano, Michoacan, Mexico"
+     },
+     {
+      "bibcode": "2007PMB....52.5921R",
+      "year": "2007",
+      "title": "Online gamma-camera imaging of <SUP>103</SUP>Pd seeds (OGIPS) for permanent breast seed implantation"
+     }
+    ]
+   },
+   "full:\"130539.8\"": {
+    "n": 8,
+    "docs": [
+     {
+      "bibcode": "1969PhRv..188...57B",
+      "year": "1969",
+      "title": "Analysis of Electron Correlation in Two-Electron Systems. II. Be<SUP>++</SUP>, B<SUP>3+</SUP>, C<SUP>4+</SUP>, N<SUP>5+</SUP>, and O<SUP>6+<"
+     },
+     {
+      "bibcode": "2020arXiv200603370K",
+      "year": "2020",
+      "title": "Ensuring 'well-balanced' shallow water flows via a discontinuous Galerkin finite element method: issues at lowest order"
+     },
+     {
+      "bibcode": "2006math......3486A",
+      "year": "2006",
+      "title": "On Yamabe constants of Riemannian products"
+     },
+     {
+      "bibcode": "2014SPIE.9159E..0DZ",
+      "year": "2014",
+      "title": "Computer image analysis in obtaining characteristics of images: greenhouse tomatoes in the process of generating learning sets of artificial"
+     },
+     {
+      "bibcode": "2017JPhCS.803a2015B",
+      "year": "2017",
+      "title": "Strength and gas dynamic methods of development of the axial turbine turbocharger"
+     },
+     {
+      "bibcode": "2026arXiv260513946P",
+      "year": "2026",
+      "title": "The Hunt for Red Dual AGNs I: Spatially-Resolved Mid-IR Dual AGNs in the DeCam Legacy Survey"
+     },
+     {
+      "bibcode": "2008arXiv0804.1418A",
+      "year": "2008",
+      "title": "Smooth Yamabe invariant and surgery"
+     },
+     {
+      "bibcode": "2025arXiv251120417A",
+      "year": "2025",
+      "title": "Comparative evaluation of future collider options"
+     }
+    ]
+   },
+   "full:\"13 05 39.8\"": {
+    "n": 4,
+    "docs": [
+     {
+      "bibcode": "2018ChGeo.483..218H",
+      "year": "2018",
+      "title": "The trace element and U-Pb systematics of metamorphic apatite"
+     },
+     {
+      "bibcode": "1990JVGR...44..265Y",
+      "year": "1990",
+      "title": "Precursory earthquakes of the 1943 eruption of Paricutin volcano, Michoacan, Mexico"
+     },
+     {
+      "bibcode": "1998MNRAS.300..550J",
+      "year": "1998",
+      "title": "Rotation and lithium in the late-type stars of NGC 2516"
+     },
+     {
+      "bibcode": "2007PMB....52.5921R",
+      "year": "2007",
+      "title": "Online gamma-camera imaging of <SUP>103</SUP>Pd seeds (OGIPS) for permanent breast seed implantation"
+     }
+    ]
+   },
+   "full:\"196.416\" full:\"-49.420\"": {
+    "n": 1,
+    "docs": [
+     {
+      "bibcode": "2015arXiv151108771Y",
+      "year": "2015",
+      "title": "Finite-Dimensional Lie Algebras and Their Representations for Unified Model Building"
+     }
+    ]
+   },
+   "full:\"NGC4945\" full:(\"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\" OR \"periodic dust\")": {
+    "n": 42,
+    "docs": [
+     {
+      "bibcode": "2016MNRAS.457.3241A",
+      "year": "2016",
+      "title": "Early dust formation and a massive progenitor for SN 2011ja?"
+     },
+     {
+      "bibcode": "1997ApJ...479L..23C",
+      "year": "1997",
+      "title": "The Conelike H\u03b1 Nebula in NGC 4945: A Galactic Superwind Bow Shock?"
+     },
+     {
+      "bibcode": "2025ApJ...993...94S",
+      "year": "2025",
+      "title": "Two Decades of Dust Evolution in SN 2005af through JWST, Spitzer, and Chemical Modeling"
+     },
+     {
+      "bibcode": "2016ApJ...833..231T",
+      "year": "2016",
+      "title": "A Systematic Study of Mid-infrared Emission from Core-collapse Supernovae with SPIRITS"
+     },
+     {
+      "bibcode": "2022MNRAS.515.4302N",
+      "year": "2022",
+      "title": "Dust masses for a large sample of core-collapse supernovae from optical emission line asymmetries: dust formation on 30-year time-scales"
+     },
+     {
+      "bibcode": "2026AAS...24727703R",
+      "year": "2026",
+      "title": "When the Dust Settles: Late-Time MIRI Imaging of SN 2011ja"
+     },
+     {
+      "bibcode": "2011arXiv1107.4541P",
+      "year": "2011",
+      "title": "Formation and Evolution of the Dust in Galaxies. I. The Condensation Efficiencies"
+     },
+     {
+      "bibcode": "2025prim.book..329C",
+      "year": "2025",
+      "title": "Measuring Interstellar Carbon Abundance and Depletion via 158 \u00b5m [CII] Absorption"
+     },
+     {
+      "bibcode": "2014A&ARv..22...77B",
+      "year": "2014",
+      "title": "Nonthermal particles and photons in starburst regions and superbubbles"
+     },
+     {
+      "bibcode": "2013A&A...549A..79S",
+      "year": "2013",
+      "title": "Twelve type II-P supernovae seen with the eyes of Spitzer"
+     },
+     {
+      "bibcode": "2007AN....328..953C",
+      "year": "2007",
+      "title": "Comparison of dust-to-gas ratios in luminous, ultraluminous, and  hyperluminous infrared galaxies"
+     },
+     {
+      "bibcode": "2025A&A...704A..31G",
+      "year": "2025",
+      "title": "Probing sulphur chemistry in oxygen-rich asymptotic giant branch stars with ALMA"
+     },
+     {
+      "bibcode": "2022hxga.book...92F",
+      "year": "2022",
+      "title": "The Interaction of the Active Nucleus with the Host Galaxy Interstellar Medium"
+     },
+     {
+      "bibcode": "2008ApJ...672..214G",
+      "year": "2008",
+      "title": "Stellar Evolutionary Effects on the Abundances of Polycyclic Aromatic Hydrocarbons and Supernova-Condensed Dust in Galaxies"
+     },
+     {
+      "bibcode": "2014A&A...564A..61M",
+      "year": "2014",
+      "title": "Interstellar gamma-ray emission from cosmic rays in star-forming galaxies"
+     },
+     {
+      "bibcode": "2015ApJ...812..113G",
+      "year": "2015",
+      "title": "The Dust Sublimation Radius as an Outer Envelope to the Bulk of the Narrow Fe Kalpha Line Emission in Type 1 AGNs"
+     },
+     {
+      "bibcode": "2023ApJ...943...63N",
+      "year": "2023",
+      "title": "Narrow Fe-K\u03b1 Reverberation Mapping Unveils the Deactivated Broad-line Region in a Changing-look Active Galactic Nucleus"
+     },
+     {
+      "bibcode": "2000ARA&A..38..143M",
+      "year": "2000",
+      "title": "The Evolution of Rotating Stars"
+     },
+     {
+      "bibcode": "2014ApJ...790L..28E",
+      "year": "2014",
+      "title": "Detection of 36 GHz Class I Methanol Maser Emission toward NGC 253"
+     },
+     {
+      "bibcode": "2020ApJ...896L..33X",
+      "year": "2020",
+      "title": "A Serendipitous Discovery of GeV Gamma-Ray Emission from Supernova 2004dj in a Survey of Nearby Star-forming Galaxies with Fermi-LAT"
+     },
+     {
+      "bibcode": "2015ARA&A..53..541B",
+      "year": "2015",
+      "title": "Observations of the icy universe."
+     },
+     {
+      "bibcode": "2025A&A...693A..88E",
+      "year": "2025",
+      "title": "Interpreting millimeter emission from IMEGIN galaxies NGC 2146 and NGC 2976"
+     },
+     {
+      "bibcode": "2005SSRv..119..355V",
+      "year": "2005",
+      "title": "Obscured Activity: AGN, Quasars, Starbursts and ULIGs Observed by the Infrared Space Observatory"
+     },
+     {
+      "bibcode": "2021Univ....7..141T",
+      "year": "2021",
+      "title": "Gamma Rays as Probes of Cosmic-Ray Propagation and Interactions in Galaxies"
+     },
+     {
+      "bibcode": "2001ApJ...559..463A",
+      "year": "2001",
+      "title": "Presolar SiC Grains of Type A and B: Their Isotopic Compositions and Stellar Origins"
+     },
+     {
+      "bibcode": "2026ApJ..1008...77G",
+      "year": "2026",
+      "title": "The Hidden Variability of the Torus in Local Active Galactic Nuclei: 20 yr of Chandra, XMM-Newton, and NuSTAR Observations"
+     },
+     {
+      "bibcode": "2005SSRv..119..273P",
+      "year": "2005",
+      "title": "High Excitation ISM and Gas"
+     },
+     {
+      "bibcode": "2025arXiv251100253K",
+      "year": "2025",
+      "title": "The Advanced X-ray Imaging Satellite (AXIS) Community Science Book"
+     },
+     {
+      "bibcode": "1994RPPh...57..417G",
+      "year": "1994",
+      "title": "The nucleus of our Galaxy"
+     },
+     {
+      "bibcode": "2021ApJ...912....4L",
+      "year": "2021",
+      "title": "Outflows from Super Star Clusters in the Central Starburst of NGC 253"
+     }
+    ]
+   },
+   "full:\"NGC4945\" full:(\"infrared variable\" OR \"mid-infrared variable\" OR SPIRITS) full:(periodic OR \"long-period\")": {
+    "n": 7,
+    "docs": [
+     {
+      "bibcode": "2016ApJ...833..231T",
+      "year": "2016",
+      "title": "A Systematic Study of Mid-infrared Emission from Core-collapse Supernovae with SPIRITS"
+     },
+     {
+      "bibcode": "2016MNRAS.457.3241A",
+      "year": "2016",
+      "title": "Early dust formation and a massive progenitor for SN 2011ja?"
+     },
+     {
+      "bibcode": "1990A&ARv...2..125B",
+      "year": "1990",
+      "title": "Continuum radiation from active galactic nuclei"
+     },
+     {
+      "bibcode": "2003PhyU...46..335C",
+      "year": "2003",
+      "title": "REVIEWS OF TOPICAL PROBLEMS:  Search for black holes"
+     },
+     {
+      "bibcode": "2022MNRAS.515.4302N",
+      "year": "2022",
+      "title": "Dust masses for a large sample of core-collapse supernovae from optical emission line asymmetries: dust formation on 30-year time-scales"
+     },
+     {
+      "bibcode": "2019arXiv191206213M",
+      "year": "2019",
+      "title": "Origins Space Telescope Mission Concept Study Report"
+     },
+     {
+      "bibcode": "2025prim.book.....M",
+      "year": "2025",
+      "title": "PRIMA General Observer Science Book Volume 2"
+     }
+    ]
+   }
+  },
+  "sexagesimal": "13:05:39.8 -49:25:12"
+ },
+ "NGC4605|1894p620|3": {
+  "galaxy": "NGC4605",
+  "ra": 189.97843535829483,
+  "dec": 61.61292144342925,
+  "gaia_3as": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "1580180526181155712",
+     "ra": 189.97840940226865,
+     "dec": 61.613553562502304,
+     "phot_g_mean_mag": 20.4702,
+     "bp_rp": 1.1507912,
+     "parallax_over_error": 0.18629809,
+     "pm": 1.1918035,
+     "ruwe": 1.073417,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 1.6853899e-05
+    }
+   ]
+  },
+  "simbad_10as": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "SPIRITS15mr",
+     "otype": "ev",
+     "ra": 189.978625,
+     "dec": 61.61286111111112,
+     "sep": 0.3905449427597827
+    },
+    {
+     "main_id": "[BLR2008] NGC 4605  6",
+     "otype": "MoC",
+     "ra": 189.97958333333332,
+     "dec": 61.61166666666666,
+     "sep": 4.9260173454732055
+    }
+   ]
+  },
+  "allwise_6as": {
+   "status": "ERR ConnectError: [Errno 54] Connection reset by peer",
+   "rows": []
+  },
+  "seip_4as": {
+   "status": "ok",
+   "rows": []
+  },
+  "mast_1as": {
+   "status": "ok",
+   "n": 21,
+   "obs": [
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     56526.0
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F275W",
+     56526.0
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F336W",
+     56526.1
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F438W",
+     56526.1
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     56526.2
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     56526.2
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F547M",
+     57250.1
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     57250.1
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F657N",
+     57250.1
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     57553.6
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     57553.6
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     57553.7
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     57553.7
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F218W",
+     59305.0
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     59305.0
+    ],
+    [
+     "HST",
+     "ACS/SBC",
+     "detection",
+     59375.1
+    ],
+    [
+     "HST",
+     "ACS/SBC",
+     "F150LP",
+     59375.1
+    ],
+    [
+     "HST",
+     "ACS/SBC",
+     "detection",
+     59489.4
+    ],
+    [
+     "HST",
+     "ACS/SBC",
+     "F150LP",
+     59489.4
+    ],
+    [
+     "HST",
+     "ACS/SBC",
+     "detection",
+     59492.3
+    ],
+    [
+     "HST",
+     "ACS/SBC",
+     "F150LP",
+     59492.3
+    ]
+   ]
+  },
+  "tns_30as": {
+   "status": "ok",
+   "rows": []
+  },
+  "ads": {
+   "full:\"12:39:54.8\"": {
+    "n": 6,
+    "docs": [
+     {
+      "bibcode": "2017EcoFF..26..301R",
+      "year": "2017",
+      "title": "The consequences of diet limitation in juvenile threespine stickleback: growth, lipid storage and the phenomenon of compensatory growth"
+     },
+     {
+      "bibcode": "2016IJSyS..47.3149H",
+      "year": "2016",
+      "title": "A neural-network-based exponential H<SUP>\u221e</SUP> synchronisation for chaotic secure communication via improved genetic algorithm"
+     },
+     {
+      "bibcode": "2019ants.conf...59D",
+      "year": "2019",
+      "title": "Hierarchical Ego based Community Detection in Social Network"
+     },
+     {
+      "bibcode": "2024arXiv241111847D",
+      "year": "2024",
+      "title": "Modelling financial returns with mixtures of generalized normal distributions"
+     },
+     {
+      "bibcode": "2006SoPh..237....1S",
+      "year": "2006",
+      "title": "Power-Spectrum Analysis of Super-Kamiokande Solar Neutrino Data, Taking into Account Asymmetry in the Error Estimates"
+     },
+     {
+      "bibcode": "1887MNRAS..48R..61P",
+      "year": "1887",
+      "title": "1887 IV. (Barnard, May 12), observed at Orwell Park Observatory"
+     }
+    ]
+   },
+   "full:\"123954.8\"": {
+    "n": 4,
+    "docs": [
+     {
+      "bibcode": "2017EcoFF..26..301R",
+      "year": "2017",
+      "title": "The consequences of diet limitation in juvenile threespine stickleback: growth, lipid storage and the phenomenon of compensatory growth"
+     },
+     {
+      "bibcode": "2016IJSyS..47.3149H",
+      "year": "2016",
+      "title": "A neural-network-based exponential H<SUP>\u221e</SUP> synchronisation for chaotic secure communication via improved genetic algorithm"
+     },
+     {
+      "bibcode": "2019ants.conf...59D",
+      "year": "2019",
+      "title": "Hierarchical Ego based Community Detection in Social Network"
+     },
+     {
+      "bibcode": "2024arXiv241111847D",
+      "year": "2024",
+      "title": "Modelling financial returns with mixtures of generalized normal distributions"
+     }
+    ]
+   },
+   "full:\"12 39 54.8\"": {
+    "n": 5,
+    "docs": [
+     {
+      "bibcode": "2006SoPh..237....1S",
+      "year": "2006",
+      "title": "Power-Spectrum Analysis of Super-Kamiokande Solar Neutrino Data, Taking into Account Asymmetry in the Error Estimates"
+     },
+     {
+      "bibcode": "2009ZNatA..64..127G",
+      "year": "2009",
+      "title": "Vibrational Analysis of Trimethylphenyl Ammonium Chloride"
+     },
+     {
+      "bibcode": "2023arXiv230807173L",
+      "year": "2023",
+      "title": "Enhancing State Estimator for Autonomous Racing : Leveraging Multi-modal System and Managing Computing Resources"
+     },
+     {
+      "bibcode": "1887MNRAS..48R..61P",
+      "year": "1887",
+      "title": "1887 IV. (Barnard, May 12), observed at Orwell Park Observatory"
+     },
+     {
+      "bibcode": "2008PhRvB..78w5414K",
+      "year": "2008",
+      "title": "Density functional study of single-wall and double-wall platinum nanotubes"
+     }
+    ]
+   },
+   "full:\"189.978\" full:\"61.613\"": {
+    "n": 0,
+    "docs": []
+   },
+   "full:\"NGC4605\" full:(\"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\" OR \"periodic dust\")": {
+    "n": 3,
+    "docs": [
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     },
+     {
+      "bibcode": "2019arXiv190712738D",
+      "year": "2019",
+      "title": "Gravitational Collapse of Baryonic and Dark matter"
+     },
+     {
+      "bibcode": "1990ApJ...353..494F",
+      "year": "1990",
+      "title": "Galactic Bulge M Giants. II. Content and Structure of the Bulge between B = -3 degrees and -12 degrees"
+     }
+    ]
+   },
+   "full:\"NGC4605\" full:(\"infrared variable\" OR \"mid-infrared variable\" OR SPIRITS) full:(periodic OR \"long-period\")": {
+    "n": 1,
+    "docs": [
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     }
+    ]
+   }
+  },
+  "sexagesimal": "12:39:54.8 +61:36:47"
+ },
+ "NGC2403|1153p651|51": {
+  "galaxy": "NGC2403",
+  "ra": 114.4827209205414,
+  "dec": 65.54621971001052,
+  "gaia_3as": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad_10as": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise_6as": {
+   "status": "ERR ConnectError: [Errno 54] Connection reset by peer",
+   "rows": []
+  },
+  "seip_4as": {
+   "status": "ok",
+   "rows": [
+    {
+     "ra": 114.482312,
+     "dec": 65.546161,
+     "i1_f_ap1": NaN,
+     "i2_f_ap1": 196.0,
+     "i3_f_ap1": 263.6,
+     "i4_f_ap1": 297.8,
+     "m1_f_psf": 464.2
+    }
+   ]
+  },
+  "mast_1as": {
+   "status": "ok",
+   "n": 5,
+   "obs": [
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53234.1
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53234.2
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53642.9
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53642.9
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53643.0
+    ]
+   ]
+  },
+  "tns_30as": {
+   "status": "ok",
+   "rows": []
+  },
+  "ads": {
+   "full:\"07:37:55.9\"": {
+    "n": 1,
+    "docs": [
+     {
+      "bibcode": "2006SoPh..236...59H",
+      "year": "2006",
+      "title": "Comparison of the Energy Spectra and Number Fluxes From a simple Flare Model to Observations"
+     }
+    ]
+   },
+   "full:\"073755.9\"": {
+    "n": 0,
+    "docs": []
+   },
+   "full:\"07 37 55.9\"": {
+    "n": 1,
+    "docs": [
+     {
+      "bibcode": "2006SoPh..236...59H",
+      "year": "2006",
+      "title": "Comparison of the Energy Spectra and Number Fluxes From a simple Flare Model to Observations"
+     }
+    ]
+   },
+   "full:\"114.483\" full:\"65.546\"": {
+    "n": 1,
+    "docs": [
+     {
+      "bibcode": "1973ADNDT..12..311D",
+      "year": "1973",
+      "title": "Relativistic Dirac-Fock Expectation Values for Atoms with Z = 1 to Z = 120"
+     }
+    ]
+   },
+   "full:\"NGC2403\" full:(\"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\" OR \"periodic dust\")": {
+    "n": 102,
+    "docs": [
+     {
+      "bibcode": "2021ApJ...909..113L",
+      "year": "2021",
+      "title": "Revealing Efficient Dust Formation at Low Metallicity in Extragalactic Carbon-rich Wolf-Rayet Binaries"
+     },
+     {
+      "bibcode": "2026arXiv260900477R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2021MNRAS.505.5029W",
+      "year": "2021",
+      "title": "The episodic dust-making Wolf-Rayet star HD 38030 in the Large Magellanic Cloud"
+     },
+     {
+      "bibcode": "2001PASP..113..692S",
+      "year": "2001",
+      "title": "Post-Eruption Detection of Variable 12 in NGC 2403 (SN 1954j): Another \u03b7 Carinae Variable"
+     },
+     {
+      "bibcode": "2017ApJ...848...86H",
+      "year": "2017",
+      "title": "A Tale of Two Impostors: SN2002kg and SN1954J in NGC 2403"
+     },
+     {
+      "bibcode": "2013ApJ...762...64G",
+      "year": "2013",
+      "title": "The Mid-IR Contribution of Dust-enshrouded Stars in Six Nearby Galaxies"
+     },
+     {
+      "bibcode": "1984MNRAS.207..801M",
+      "year": "1984",
+      "title": "H II regions and the extinction of Cepheids in NGC 2403."
+     },
+     {
+      "bibcode": "2006astro.ph..3025V",
+      "year": "2006",
+      "title": "The Type IIn Supernova 2002kg: The Outburst of a Luminous Blue Variable Star in NGC 2403"
+     },
+     {
+      "bibcode": "2020MNRAS.499.2116M",
+      "year": "2020",
+      "title": "The nature of the symbiotic candidate 2MASS J07363415+6538548 in the field of NGC 2403"
+     },
+     {
+      "bibcode": "2021jwst.prop.1863L",
+      "year": "2021",
+      "title": "Confirming the First Low-Metallicity Wolf-Rayet Dust Factory"
+     },
+     {
+      "bibcode": "2011A&A...527A..61S",
+      "year": "2011",
+      "title": "Dust formation in the ejecta of the type II-P supernova 2004dj"
+     },
+     {
+      "bibcode": "2017MNRAS.466..105A",
+      "year": "2017",
+      "title": "Galaxy simulation with dust formation and destruction"
+     },
+     {
+      "bibcode": "2019MNRAS.489.1986P",
+      "year": "2019",
+      "title": "Deep late-time observations of the supernova impostors SN 1954J and SN 1961V"
+     },
+     {
+      "bibcode": "2024ApJ...974...20W",
+      "year": "2024",
+      "title": "The Metallicity Dependence of PAH Emission in Galaxies. I. Insights from Deep Radial Spitzer Spectroscopy"
+     },
+     {
+      "bibcode": "1999PASP..111.1124H",
+      "year": "1999",
+      "title": "\u03b7 Carinae's Second Eruption and the Light Curves of the \u03b7 Carinae Variables"
+     },
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     },
+     {
+      "bibcode": "2011ApJ...732..109M",
+      "year": "2011",
+      "title": "Dust and the Type II-plateau Supernova 2004dj"
+     },
+     {
+      "bibcode": "2026PASP..138j4207R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2012ApJ...758..142K",
+      "year": "2012",
+      "title": "Unmasking the Supernova Impostors"
+     },
+     {
+      "bibcode": "2026arXiv260904320T",
+      "year": "2026",
+      "title": "Resolved Dust-Gas-Metallicity relations in nearby spiral galaxies"
+     },
+     {
+      "bibcode": "2011A&ARv..19...43G",
+      "year": "2011",
+      "title": "Production of dust by massive stars at high redshift"
+     },
+     {
+      "bibcode": "2010AJ....139.1451S",
+      "year": "2010",
+      "title": "Discovery of Precursor Luminous Blue Variable Outbursts in Two Recent Optical Transients: The Fitfully Variable Missing Links UGC 2773-OT an"
+     },
+     {
+      "bibcode": "2013ApJ...767...52K",
+      "year": "2013",
+      "title": "Finding \u03b7 Car Analogs in Nearby Galaxies Using Spitzer. I. Candidate Selection"
+     },
+     {
+      "bibcode": "2009ASPC..418..181S",
+      "year": "2009",
+      "title": "Near to Mid-Infrared Observations of Recent Supernovae with Infrared Camera (IRC) onboard AKARI"
+     },
+     {
+      "bibcode": "2019AAS...23345604P",
+      "year": "2019",
+      "title": "Deep Late-Time Observations of the Supernova Impostors SN 1954J and SN 1961V"
+     },
+     {
+      "bibcode": "2020Galax...8...20W",
+      "year": "2020",
+      "title": "Luminous Blue Variables"
+     },
+     {
+      "bibcode": "2025ApJS..276....2C",
+      "year": "2025",
+      "title": "The Resolved Behavior of Dust Mass, Polycyclic Aromatic Hydrocarbon Fraction, and Radiation Field in \u223c800 Nearby Galaxies"
+     },
+     {
+      "bibcode": "2009RAA.....9..783Z",
+      "year": "2009",
+      "title": "Late-time photometry of two nearby type II-P supernovae: 2004dj and 2004et"
+     },
+     {
+      "bibcode": "2026enap....2..508S",
+      "year": "2026",
+      "title": "Luminous blue variables"
+     },
+     {
+      "bibcode": "2025prim.book..329C",
+      "year": "2025",
+      "title": "Measuring Interstellar Carbon Abundance and Depletion via 158 \u00b5m [CII] Absorption"
+     }
+    ]
+   },
+   "full:\"NGC2403\" full:(\"infrared variable\" OR \"mid-infrared variable\" OR SPIRITS) full:(periodic OR \"long-period\")": {
+    "n": 10,
+    "docs": [
+     {
+      "bibcode": "2026arXiv260900477R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     },
+     {
+      "bibcode": "2021ApJ...909..113L",
+      "year": "2021",
+      "title": "Revealing Efficient Dust Formation at Low Metallicity in Extragalactic Carbon-rich Wolf-Rayet Binaries"
+     },
+     {
+      "bibcode": "2026PASP..138j4207R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2021AJ....162..152D",
+      "year": "2021",
+      "title": "New Blue and Red Variable Stars in NGC 247"
+     },
+     {
+      "bibcode": "2022Univ....8..493C",
+      "year": "2022",
+      "title": "Gap Transients Interacting with Circumstellar Medium"
+     },
+     {
+      "bibcode": "2021MNRAS.505.5029W",
+      "year": "2021",
+      "title": "The episodic dust-making Wolf-Rayet star HD 38030 in the Large Magellanic Cloud"
+     },
+     {
+      "bibcode": "2009ApJ...705.1364T",
+      "year": "2009",
+      "title": "A New Class of Luminous Transients and a First Census of their Massive Stellar Progenitors"
+     },
+     {
+      "bibcode": "2003PASP..115..514T",
+      "year": "2003",
+      "title": "Astrophysics in 2002"
+     },
+     {
+      "bibcode": "2025prim.book.....M",
+      "year": "2025",
+      "title": "PRIMA General Observer Science Book Volume 2"
+     }
+    ]
+   }
+  },
+  "sexagesimal": "07:37:55.9 +65:32:46"
+ },
+ "NGC4490|1880p424|9": {
+  "galaxy": "NGC4490",
+  "ra": 187.61512237641452,
+  "dec": 41.661508745190815,
+  "gaia_3as": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "1534775094000985600",
+     "ra": 187.6157958361444,
+     "dec": 41.66150273116985,
+     "phot_g_mean_mag": 21.255098,
+     "bp_rp": 0.48906136,
+     "parallax_over_error": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.7966405
+    },
+    {
+     "sid": "1534775094001619072",
+     "ra": 187.61504099708193,
+     "dec": 41.661903935702135,
+     "phot_g_mean_mag": 21.209202,
+     "bp_rp": 0.36271477,
+     "parallax_over_error": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.012182356
+    }
+   ]
+  },
+  "simbad_10as": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "CXO J123027.6+413941",
+     "otype": "HXB",
+     "ra": 187.615,
+     "dec": 41.66138888888889,
+     "sep": 0.542683541394686
+    },
+    {
+     "main_id": "SPIRITS16az",
+     "otype": "ev",
+     "ra": 187.61575,
+     "dec": 41.66147222222222,
+     "sep": 1.6931107118920403
+    },
+    {
+     "main_id": "XMMOM J123027.7+413943",
+     "otype": "UV",
+     "ra": 187.61541666666668,
+     "dec": 41.66194444444445,
+     "sep": 1.7569027140185005
+    },
+    {
+     "main_id": "[CA2002] 1",
+     "otype": "Rad",
+     "ra": 187.6170833333333,
+     "dec": 41.66083333333333,
+     "sep": 5.807540478656554
+    },
+    {
+     "main_id": "CasHII PGC 41333 a",
+     "otype": "HII",
+     "ra": 187.6125,
+     "dec": 41.66,
+     "sep": 8.901995047676401
+    }
+   ]
+  },
+  "allwise_6as": {
+   "status": "ok",
+   "rows": []
+  },
+  "seip_4as": {
+   "status": "ok",
+   "rows": []
+  },
+  "mast_1as": {
+   "status": "ok",
+   "n": 10,
+   "obs": [
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F560W",
+     60285.8
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F770W",
+     60285.8
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F150W",
+     60349.2
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F300M",
+     60349.2
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F187N",
+     60352.7
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F444W;F405N",
+     60352.7
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F444W",
+     60352.8
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F115W",
+     60352.8
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F335M",
+     60352.8
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F200W",
+     60352.8
+    ]
+   ]
+  },
+  "tns_30as": {
+   "status": "ok",
+   "rows": []
+  },
+  "ads": {
+   "full:\"12:30:27.6\"": {
+    "n": 10,
+    "docs": [
+     {
+      "bibcode": "2023arXiv231014912L",
+      "year": "2023",
+      "title": "Parabolic frequency monotonicity for two nonlinear equations under Ricci flow"
+     },
+     {
+      "bibcode": "2026arXiv260610354L",
+      "year": "2026",
+      "title": "Long-time existence of some geometric flows with bounded scalar curvature"
+     },
+     {
+      "bibcode": "2022SPIE12302E....E",
+      "year": "2022",
+      "title": "Seventh International Conference on Electromechanical Control Technology and Transportation (ICECTT 2022)"
+     },
+     {
+      "bibcode": "1983PhRvA..28.1446V",
+      "year": "1983",
+      "title": "Analysis of 3d<SUP>7</SUP>4s-3d<SUP>7</SUP>4p transitions in the Zn v spectrum"
+     },
+     {
+      "bibcode": "2025arXiv250408276G",
+      "year": "2025",
+      "title": "Gradient Estimates for the doubly nonlinear diffusion equation on Complete Riemannian Manifolds"
+     },
+     {
+      "bibcode": "2006physics...3229L",
+      "year": "2006",
+      "title": "Graph Evolution: Densification and Shrinking Diameters"
+     },
+     {
+      "bibcode": "2023arXiv231005188L",
+      "year": "2023",
+      "title": "Gradient estimates and parabolic frequency under the Laplacian G_2 flow"
+     },
+     {
+      "bibcode": "1997MNRAS.287..867K",
+      "year": "1997",
+      "title": "The Edinburgh-Cape Blue Object Survey - II. Zone 1 - the North Galactic CAP"
+     },
+     {
+      "bibcode": "2018arXiv181004087C",
+      "year": "2018",
+      "title": "University rankings from the revealed preferences of the applicants"
+     },
+     {
+      "bibcode": "1993ApJS...87..451H",
+      "year": "1993",
+      "title": "A Revised and Updated Catalog of Quasi-stellar Objects"
+     }
+    ]
+   },
+   "full:\"123027.6\"": {
+    "n": 8,
+    "docs": [
+     {
+      "bibcode": "2023arXiv231014912L",
+      "year": "2023",
+      "title": "Parabolic frequency monotonicity for two nonlinear equations under Ricci flow"
+     },
+     {
+      "bibcode": "2026arXiv260610354L",
+      "year": "2026",
+      "title": "Long-time existence of some geometric flows with bounded scalar curvature"
+     },
+     {
+      "bibcode": "2022SPIE12302E....E",
+      "year": "2022",
+      "title": "Seventh International Conference on Electromechanical Control Technology and Transportation (ICECTT 2022)"
+     },
+     {
+      "bibcode": "1983PhRvA..28.1446V",
+      "year": "1983",
+      "title": "Analysis of 3d<SUP>7</SUP>4s-3d<SUP>7</SUP>4p transitions in the Zn v spectrum"
+     },
+     {
+      "bibcode": "2025arXiv250408276G",
+      "year": "2025",
+      "title": "Gradient Estimates for the doubly nonlinear diffusion equation on Complete Riemannian Manifolds"
+     },
+     {
+      "bibcode": "2006physics...3229L",
+      "year": "2006",
+      "title": "Graph Evolution: Densification and Shrinking Diameters"
+     },
+     {
+      "bibcode": "2024arXiv240704407L",
+      "year": "2024",
+      "title": "Trustworthy Classification through Rank-Based Conformal Prediction Sets"
+     },
+     {
+      "bibcode": "2023arXiv231005188L",
+      "year": "2023",
+      "title": "Gradient estimates and parabolic frequency under the Laplacian G_2 flow"
+     }
+    ]
+   },
+   "full:\"12 30 27.6\"": {
+    "n": 8,
+    "docs": [
+     {
+      "bibcode": "2006A&A...455..227Z",
+      "year": "2006",
+      "title": "A new method for the spectroscopic identification of stellar non-radial pulsation modes. I. The method and numerical tests"
+     },
+     {
+      "bibcode": "2015EnPro..81..100N",
+      "year": "2015",
+      "title": "Climate Influence on Seasonal Performances of Air-to-water Heat Pumps for Heating"
+     },
+     {
+      "bibcode": "2004JHEP...10..073D",
+      "year": "2004",
+      "title": "Numerical Stochastic Perturbation Theory for full QCD"
+     },
+     {
+      "bibcode": "2026arXiv261029107L",
+      "year": "2026",
+      "title": "PhyMo: Learning Physical Dynamics with Accurate and Continuous Motion from Multi-View Videos"
+     },
+     {
+      "bibcode": "1997MNRAS.287..867K",
+      "year": "1997",
+      "title": "The Edinburgh-Cape Blue Object Survey - II. Zone 1 - the North Galactic CAP"
+     },
+     {
+      "bibcode": "2018arXiv181004087C",
+      "year": "2018",
+      "title": "University rankings from the revealed preferences of the applicants"
+     },
+     {
+      "bibcode": "2019JPCA..123.2991S",
+      "year": "2019",
+      "title": "Anharmonic Molecular Mechanics: Ab Initio Based Morse Parametrizations for the Popular MM3 Force Field"
+     },
+     {
+      "bibcode": "1993ApJS...87..451H",
+      "year": "1993",
+      "title": "A Revised and Updated Catalog of Quasi-stellar Objects"
+     }
+    ]
+   },
+   "full:\"187.615\" full:\"41.662\"": {
+    "n": 0,
+    "docs": []
+   },
+   "full:\"NGC4490\" full:(\"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\" OR \"periodic dust\")": {
+    "n": 38,
+    "docs": [
+     {
+      "bibcode": "2021ApJ...909..113L",
+      "year": "2021",
+      "title": "Revealing Efficient Dust Formation at Low Metallicity in Extragalactic Carbon-rich Wolf-Rayet Binaries"
+     },
+     {
+      "bibcode": "2016MNRAS.458..950S",
+      "year": "2016",
+      "title": "Massive star mergers and the recent transient in NGC 4490: a more massive cousin of V838 Mon and V1309 Sco"
+     },
+     {
+      "bibcode": "2010ASInC...1...49S",
+      "year": "2010",
+      "title": "Dust formation by massive stars studied by infrared observations with AKARI/IRC and Subaru/COMICS"
+     },
+     {
+      "bibcode": "2019ApJ...878...71L",
+      "year": "2019",
+      "title": "Uncovering Red and Dusty Ultraluminous X-Ray Sources with Spitzer"
+     },
+     {
+      "bibcode": "2022ApJ...937...96M",
+      "year": "2022",
+      "title": "Dusty, Self-obscured Transients from Stellar Coalescence"
+     },
+     {
+      "bibcode": "2019A&A...632L...6C",
+      "year": "2019",
+      "title": "The transitional gap transient AT 2018hso: new insights into the luminous red nova phenomenon"
+     },
+     {
+      "bibcode": "2009ASPC..418..181S",
+      "year": "2009",
+      "title": "Near to Mid-Infrared Observations of Recent Supernovae with Infrared Camera (IRC) onboard AKARI"
+     },
+     {
+      "bibcode": "2025ApJ...980L..14R",
+      "year": "2025",
+      "title": "Investigating the Electron-capture Supernova Candidate AT 2019abn with JWST Spectroscopy"
+     },
+     {
+      "bibcode": "2026A&ARv..34....8K",
+      "year": "2026",
+      "title": "Red novae, their progenitors, and remnants"
+     },
+     {
+      "bibcode": "2011MNRAS.411.2726B",
+      "year": "2011",
+      "title": "The Type Ib SN 1999dn: one year of photometric and spectroscopic monitoring"
+     },
+     {
+      "bibcode": "2012MNRAS.426.1870M",
+      "year": "2012",
+      "title": "X-ray emission from star-forming galaxies - II. Hot interstellarmedium"
+     },
+     {
+      "bibcode": "2026A&A...712A.211S",
+      "year": "2026",
+      "title": "Luminous red novae as shock-powered transients: I. Electron-scattering wings and deviations from Case B"
+     },
+     {
+      "bibcode": "2026A&A...706A.154R",
+      "year": "2026",
+      "title": "The fate of the progenitors of luminous red novae: Infrared detection of LRNe years after the outburst"
+     },
+     {
+      "bibcode": "2026arXiv261029405B",
+      "year": "2026",
+      "title": "FEAST: Spatially Resolved Star Formation History of the NGC 4485/NGC 4490 System and its Tidal Bridge from JWST/NIRCam Color Magnitude Diagr"
+     },
+     {
+      "bibcode": "2019A&A...630A..75P",
+      "year": "2019",
+      "title": "Luminous red novae: Stellar mergers or giant eruptions?"
+     },
+     {
+      "bibcode": "2019ApJ...886...40J",
+      "year": "2019",
+      "title": "The SPIRITS Sample of Luminous Infrared Transients: Uncovering Hidden Supernovae and Dusty Stellar Outbursts in Nearby Galaxies"
+     },
+     {
+      "bibcode": "2020AstBu..75..325G",
+      "year": "2020",
+      "title": "Progenitor and Remnant of the Luminous Red Nova V838 Monocerotis"
+     },
+     {
+      "bibcode": "2017MNRAS.471.3200M",
+      "year": "2017",
+      "title": "Shock-powered light curves of luminous red novae as signatures of pre-dynamical mass-loss in stellar mergers"
+     },
+     {
+      "bibcode": "2016ApJ...830..142L",
+      "year": "2016",
+      "title": "Rising from the Ashes: Mid-infrared Re-brightening of the Impostor SN 2010da in NGC 300"
+     },
+     {
+      "bibcode": "2015MNRAS.446.1399L",
+      "year": "2015",
+      "title": "Chandra and XMM monitoring of the black hole X-ray binary IC 10 X-1"
+     },
+     {
+      "bibcode": "2017MNRAS.468.4968A",
+      "year": "2017",
+      "title": "The search for failed supernovae with the Large Binocular Telescope: confirmation of a disappearing star"
+     },
+     {
+      "bibcode": "2022Univ....8..493C",
+      "year": "2022",
+      "title": "Gap Transients Interacting with Circumstellar Medium"
+     },
+     {
+      "bibcode": "2017ApJ...850...59P",
+      "year": "2017",
+      "title": "Pre-explosion Spiral Mass Loss of a Binary Star Merger"
+     },
+     {
+      "bibcode": "2019ApJ...877...57Q",
+      "year": "2019",
+      "title": "CG X-1: An Eclipsing Wolf-Rayet ULX in the Circinus Galaxy"
+     },
+     {
+      "bibcode": "2021A&A...653A.134B",
+      "year": "2021",
+      "title": "The luminous red nova AT 2018bwo in NGC 45 and its binary yellow supergiant progenitor"
+     },
+     {
+      "bibcode": "2018MNRAS.480.1466S",
+      "year": "2018",
+      "title": "Light echoes from the plateau in Eta Carinae's Great Eruption reveal a two-stage shock-powered event"
+     },
+     {
+      "bibcode": "2022ApJ...938....5M",
+      "year": "2022",
+      "title": "Light-curve Model for Luminous Red Novae and Inferences about the Ejecta of Stellar Mergers"
+     },
+     {
+      "bibcode": "2019IAUS..346..228Q",
+      "year": "2019",
+      "title": "Monitoring of the eclipsing Wolf-Rayet ULX in the Circinus galaxy"
+     },
+     {
+      "bibcode": "2017ApJ...837..167J",
+      "year": "2017",
+      "title": "SPIRITS 15c and SPIRITS 14buu: Two Obscured Supernovae in the Nearby Star-forming Galaxy IC 2163"
+     },
+     {
+      "bibcode": "2010ApJ...709.1343M",
+      "year": "2010",
+      "title": "Doublets and Double Peaks: Late-Time [O I] \u03bb\u03bb6300, 6364 Line Profiles of Stripped-Envelope, Core-Collapse Supernovae"
+     }
+    ]
+   },
+   "full:\"NGC4490\" full:(\"infrared variable\" OR \"mid-infrared variable\" OR SPIRITS) full:(periodic OR \"long-period\")": {
+    "n": 14,
+    "docs": [
+     {
+      "bibcode": "2019ApJ...880L..20J",
+      "year": "2019",
+      "title": "Discovery of an Intermediate-luminosity Red Transient in M51 and Its Likely Dust-obscured, Infrared-variable Progenitor"
+     },
+     {
+      "bibcode": "2019ApJ...886...40J",
+      "year": "2019",
+      "title": "The SPIRITS Sample of Luminous Infrared Transients: Uncovering Hidden Supernovae and Dusty Stellar Outbursts in Nearby Galaxies"
+     },
+     {
+      "bibcode": "2018ApJ...863...20J",
+      "year": "2018",
+      "title": "SPIRITS 16tn in NGC 3556: A Heavily Obscured and Low-luminosity Supernova at 8.8 Mpc"
+     },
+     {
+      "bibcode": "2016MNRAS.458..950S",
+      "year": "2016",
+      "title": "Massive star mergers and the recent transient in NGC 4490: a more massive cousin of V838 Mon and V1309 Sco"
+     },
+     {
+      "bibcode": "2021ApJ...909..113L",
+      "year": "2021",
+      "title": "Revealing Efficient Dust Formation at Low Metallicity in Extragalactic Carbon-rich Wolf-Rayet Binaries"
+     },
+     {
+      "bibcode": "2016ApJ...830..142L",
+      "year": "2016",
+      "title": "Rising from the Ashes: Mid-infrared Re-brightening of the Impostor SN 2010da in NGC 300"
+     },
+     {
+      "bibcode": "2022Univ....8..493C",
+      "year": "2022",
+      "title": "Gap Transients Interacting with Circumstellar Medium"
+     },
+     {
+      "bibcode": "2017ApJ...834..107B",
+      "year": "2017",
+      "title": "Common Envelope Ejection for a Luminous Red Nova in M101"
+     },
+     {
+      "bibcode": "2019ApJ...878...71L",
+      "year": "2019",
+      "title": "Uncovering Red and Dusty Ultraluminous X-Ray Sources with Spitzer"
+     },
+     {
+      "bibcode": "2017MNRAS.471.3200M",
+      "year": "2017",
+      "title": "Shock-powered light curves of luminous red novae as signatures of pre-dynamical mass-loss in stellar mergers"
+     },
+     {
+      "bibcode": "2019A&A...630A..75P",
+      "year": "2019",
+      "title": "Luminous red novae: Stellar mergers or giant eruptions?"
+     },
+     {
+      "bibcode": "2021A&A...653A.134B",
+      "year": "2021",
+      "title": "The luminous red nova AT 2018bwo in NGC 45 and its binary yellow supergiant progenitor"
+     },
+     {
+      "bibcode": "2022ApJ...937...96M",
+      "year": "2022",
+      "title": "Dusty, Self-obscured Transients from Stellar Coalescence"
+     },
+     {
+      "bibcode": "2016SPIE.9908E..AAS",
+      "year": "2016",
+      "title": "A Concept for Seeing-Limited Near-IR Spectroscopy on the Giant Magellan Telescope"
+     }
+    ]
+   }
+  },
+  "sexagesimal": "12:30:27.6 +41:39:41"
+ },
+ "MESSIER033|0243p302|180": {
+  "galaxy": "MESSIER033",
+  "ra": 23.535150911396155,
+  "dec": 30.80133826277141,
+  "gaia_3as": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad_10as": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "LGGS J013408.60+304807.8",
+     "otype": "s?r",
+     "ra": 23.535650455234165,
+     "dec": 30.8021590546725,
+     "sep": 3.3342477488313724
+    },
+    {
+     "main_id": "LGGS J013408.17+304813.6",
+     "otype": "s?r",
+     "ra": 23.53384806476707,
+     "dec": 30.80382070509889,
+     "sep": 9.802861372120844
+    }
+   ]
+  },
+  "allwise_6as": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J013408.43+304805.0",
+     "ra": 23.5351256,
+     "dec": 30.8013934,
+     "w1mpro": 13.887,
+     "w2mpro": 12.327,
+     "w3mpro": 10.41,
+     "w4mpro": 7.432,
+     "cc_flags": 0,
+     "ext_flg": 3
+    }
+   ]
+  },
+  "seip_4as": {
+   "status": "ok",
+   "rows": [
+    {
+     "ra": 23.535154,
+     "dec": 30.801279,
+     "i1_f_ap1": 597.2,
+     "i2_f_ap1": 1083.0,
+     "i3_f_ap1": 1820.0,
+     "i4_f_ap1": 1794.0,
+     "m1_f_psf": NaN
+    },
+    {
+     "ra": 23.535662,
+     "dec": 30.802191,
+     "i1_f_ap1": 201.4,
+     "i2_f_ap1": 146.1,
+     "i3_f_ap1": NaN,
+     "i4_f_ap1": NaN,
+     "m1_f_psf": NaN
+    }
+   ]
+  },
+  "mast_1as": {
+   "status": "ok",
+   "n": 77,
+   "obs": [
+    [
+     "HST",
+     "ACS/WFC",
+     "F475W",
+     53329.8
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F187N;F335M",
+     NaN
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     58115.2
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F187N;F335M",
+     NaN
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F115W;F444W",
+     NaN
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F775W",
+     52519.6
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     52519.7
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F170W",
+     54294.7
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F439W",
+     54294.7
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F814W",
+     54294.8
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F555W",
+     54294.8
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F255W",
+     54294.8
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     57805.4
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     57961.9
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     57962.0
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     57968.9
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F475W",
+     57968.9
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     58116.2
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F200W;F300M",
+     NaN
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F336W",
+     58116.2
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F1000W",
+     NaN
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     57962.0
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F770W",
+     NaN
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F2100W",
+     NaN
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F275W",
+     58116.2
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     58116.4
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F115W;F444W",
+     NaN
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F200W;F300M",
+     NaN
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F200W;F300M",
+     NaN
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F475W",
+     58115.3
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F127M",
+     59056.9
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F2100W",
+     NaN
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F200W;F300M",
+     NaN
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F127M",
+     59039.1
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F115W;F444W",
+     NaN
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F187N;F335M",
+     NaN
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F336W",
+     54294.7
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F200W;F300M",
+     NaN
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F139M",
+     59056.9
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F200W;F300M",
+     NaN
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     57968.9
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F187N;F335M",
+     NaN
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F139M",
+     59039.1
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F1000W",
+     NaN
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     52519.6
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F475W",
+     58116.4
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F1000W",
+     NaN
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     59056.9
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F1000W",
+     NaN
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F336W",
+     57961.9
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F115W;F444W",
+     NaN
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     58115.2
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F2100W",
+     NaN
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F1000W",
+     NaN
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F187N;F335M",
+     NaN
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F115W;F444W",
+     NaN
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F187N;F335M",
+     NaN
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     54294.7
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F2100W",
+     NaN
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F275W",
+     57961.9
+    ]
+   ]
+  },
+  "tns_30as": {
+   "status": "ok",
+   "rows": []
+  },
+  "ads": {
+   "full:\"01:34:08.4\"": {
+    "n": 11,
+    "docs": [
+     {
+      "bibcode": "2003PhRvA..68a3408M",
+      "year": "2003",
+      "title": "Dynamics of strong-field photoionization in two dimensions for short-range binding potentials"
+     },
+     {
+      "bibcode": "2002PhRvA..66a3408G",
+      "year": "2002",
+      "title": "Chaotic dynamics of a single two-level atom in the field of a plane standing electromagnetic wave"
+     },
+     {
+      "bibcode": "2003PhRvA..67a3408H",
+      "year": "2003",
+      "title": "Limiting temperature of sympathetically cooled ions in a radio-frequency trap"
+     },
+     {
+      "bibcode": "2014SPIE.9022E..0GC",
+      "year": "2014",
+      "title": "Correcting high-density hot pixel defects in digital imagers"
+     },
+     {
+      "bibcode": "2001PhRvA..64a3408D",
+      "year": "2001",
+      "title": "Three-level \u039b atom in the field of frequency-chirped bichromatic laser pulses: Writing and storage of optical phase information"
+     },
+     {
+      "bibcode": "2000PhRvA..63a3408L",
+      "year": "2000",
+      "title": "Photodissociation of H<SUP>+</SUP><SUB>2</SUB> in intense chirped laser fields"
+     },
+     {
+      "bibcode": "2004PhRvA..69a3408D",
+      "year": "2004",
+      "title": "Coherent population trapping in ultrashort pulsed excitation of multilevel systems"
+     },
+     {
+      "bibcode": "2022Sust...14.7040C",
+      "year": "2022",
+      "title": "Weighting of Firefighting Turnout Gear Risk Factors According to Expert Opinion"
+     },
+     {
+      "bibcode": "2000PhRvA..62a3408A",
+      "year": "2000",
+      "title": "Single-color photoassociative ionization of ultracold sodium: The region from 0 to -5 GHz"
+     },
+     {
+      "bibcode": "1999PhRvA..61a3408T",
+      "year": "1999",
+      "title": "High-order perturbation expansion of non-Hermitian Floquet theory for multiphoton and above-threshold ionization processes"
+     },
+     {
+      "bibcode": "2026arXiv261027063B",
+      "year": "2026",
+      "title": "Bilocal flows and universality with field-dependent regulators"
+     }
+    ]
+   },
+   "full:\"013408.4\"": {
+    "n": 17,
+    "docs": [
+     {
+      "bibcode": "2003PhRvA..68a3408M",
+      "year": "2003",
+      "title": "Dynamics of strong-field photoionization in two dimensions for short-range binding potentials"
+     },
+     {
+      "bibcode": "2002PhRvA..66a3408G",
+      "year": "2002",
+      "title": "Chaotic dynamics of a single two-level atom in the field of a plane standing electromagnetic wave"
+     },
+     {
+      "bibcode": "2003PhRvA..67a3408H",
+      "year": "2003",
+      "title": "Limiting temperature of sympathetically cooled ions in a radio-frequency trap"
+     },
+     {
+      "bibcode": "2014SPIE.9022E..0GC",
+      "year": "2014",
+      "title": "Correcting high-density hot pixel defects in digital imagers"
+     },
+     {
+      "bibcode": "2012JPhCS.388c2079M",
+      "year": "2012",
+      "title": "Dissociation dynamics of O<SUB>2</SUB><SUP>+</SUP> in intense laser fields"
+     },
+     {
+      "bibcode": "2001PhRvA..64a3408D",
+      "year": "2001",
+      "title": "Three-level \u039b atom in the field of frequency-chirped bichromatic laser pulses: Writing and storage of optical phase information"
+     },
+     {
+      "bibcode": "2000PhRvA..63a3408L",
+      "year": "2000",
+      "title": "Photodissociation of H<SUP>+</SUP><SUB>2</SUB> in intense chirped laser fields"
+     },
+     {
+      "bibcode": "2013ChPhL..30h3701H",
+      "year": "2013",
+      "title": "Weak Electrostatic Field Orientation of Cold KRb Molecules Enhanced by a Shaped Laser Pulse"
+     },
+     {
+      "bibcode": "2004PhRvA..69a3408D",
+      "year": "2004",
+      "title": "Coherent population trapping in ultrashort pulsed excitation of multilevel systems"
+     },
+     {
+      "bibcode": "2022Sust...14.7040C",
+      "year": "2022",
+      "title": "Weighting of Firefighting Turnout Gear Risk Factors According to Expert Opinion"
+     },
+     {
+      "bibcode": "2015JPhCS.635k2080B",
+      "year": "2015",
+      "title": "Mapping ultrafast dynamics of highly excited D<SUB>2</SUB><SUP>+</SUP> by ultrashort XUV pump - IR probe radiation"
+     },
+     {
+      "bibcode": "2000PhRvA..62a3408A",
+      "year": "2000",
+      "title": "Single-color photoassociative ionization of ultracold sodium: The region from 0 to -5 GHz"
+     },
+     {
+      "bibcode": "2012JPhB...45g4019H",
+      "year": "2012",
+      "title": "Attosecond streaking of molecules in the low-energy region studied by a wavefunction splitting scheme"
+     },
+     {
+      "bibcode": "1999PhRvA..61a3408T",
+      "year": "1999",
+      "title": "High-order perturbation expansion of non-Hermitian Floquet theory for multiphoton and above-threshold ionization processes"
+     },
+     {
+      "bibcode": "2013ChPhB..22e3701H",
+      "year": "2013",
+      "title": "Orientation of KRb molecules in a switched electrostatic field"
+     },
+     {
+      "bibcode": "2011CoTPh..56..927T",
+      "year": "2011",
+      "title": "Role of Nuclear Coulomb Attraction in Nonsequential Double Ionization of Argon Atom"
+     },
+     {
+      "bibcode": "2026arXiv261027063B",
+      "year": "2026",
+      "title": "Bilocal flows and universality with field-dependent regulators"
+     }
+    ]
+   },
+   "full:\"01 34 08.4\"": {
+    "n": 1,
+    "docs": [
+     {
+      "bibcode": "2007GeoRL..34.2605K",
+      "year": "2007",
+      "title": "Changes of North Pacific Intermediate Water properties in the subtropical gyre"
+     }
+    ]
+   },
+   "full:\"23.535\" full:\"30.801\"": {
+    "n": 10,
+    "docs": [
+     {
+      "bibcode": "1926ApJ....64....1F",
+      "year": "1926",
+      "title": "Radial velocities of 368 helium stars."
+     },
+     {
+      "bibcode": "1992ADNDT..52..143Z",
+      "year": "1992",
+      "title": "Relativistic Distorted-Wave Collision Strengths and Oscillator Strengths for the 45 \u2206n =0 Transitions with n = 2 in the 85 Be-like Ions with"
+     },
+     {
+      "bibcode": "1991MNRAS.251..316S",
+      "year": "1991",
+      "title": "Theoretical He I line intensities in low-density plasmas"
+     },
+     {
+      "bibcode": "1983ApJS...51...67L",
+      "year": "1983",
+      "title": "5 GHz observations of sources in the Arecibo 611 MHz survey."
+     },
+     {
+      "bibcode": "1983ApJS...53..169D",
+      "year": "1983",
+      "title": "JPL pulsar timing observations. II. Geocentric arrival times."
+     },
+     {
+      "bibcode": "1987MNRAS.224..801H",
+      "year": "1987",
+      "title": "Recombination-line intensities for hydrogenic ions - I. Case B calculations for H I and He II."
+     },
+     {
+      "bibcode": "2013arXiv1312.2004S",
+      "year": "2013",
+      "title": "Optimal Trading Strategies as Measures of Market Disequilibrium"
+     },
+     {
+      "bibcode": "2021arXiv210912023M",
+      "year": "2021",
+      "title": "Indirectly Supervised English Sentence Break Prediction Using Paragraph Break Probability Estimates"
+     },
+     {
+      "bibcode": "1979ApJS...40....1K",
+      "year": "1979",
+      "title": "Model atmospheres for G, F, A, B, and O stars."
+     },
+     {
+      "bibcode": "1914PUSNO...8....1.",
+      "year": "1914",
+      "title": "Observations and reductions."
+     }
+    ]
+   },
+   "full:\"M33\" full:(\"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\" OR \"periodic dust\")": {
+    "n": 423,
+    "docs": [
+     {
+      "bibcode": "2021ApJ...909..113L",
+      "year": "2021",
+      "title": "Revealing Efficient Dust Formation at Low Metallicity in Extragalactic Carbon-rich Wolf-Rayet Binaries"
+     },
+     {
+      "bibcode": "2019ApJ...880....8G",
+      "year": "2019",
+      "title": "The First Candidate Colliding-wind Binary in M33"
+     },
+     {
+      "bibcode": "2026enap....2..584W",
+      "year": "2026",
+      "title": "Wolf-Rayet colliding wind binaries"
+     },
+     {
+      "bibcode": "2021MNRAS.505.5029W",
+      "year": "2021",
+      "title": "The episodic dust-making Wolf-Rayet star HD 38030 in the Large Magellanic Cloud"
+     },
+     {
+      "bibcode": "2022MNRAS.516.3193K",
+      "year": "2022",
+      "title": "Accretion in massive colliding-wind binaries and the effect of the wind momentum ratio"
+     },
+     {
+      "bibcode": "2012ApJ...750...97D",
+      "year": "2012",
+      "title": "The Yellow and Red Supergiants of M33"
+     },
+     {
+      "bibcode": "2023ApJ...952..114L",
+      "year": "2023",
+      "title": "Multiwavelength Characterization of the High-mass X-Ray Binary Population of M33"
+     },
+     {
+      "bibcode": "2014ApJ...789...10N",
+      "year": "2014",
+      "title": "The Close Binary Frequency of Wolf-Rayet Stars as a Function of Metallicity in M31 and M33"
+     },
+     {
+      "bibcode": "2015A&A...578A...8B",
+      "year": "2015",
+      "title": "Measuring star formation with resolved observations: the test case of M 33"
+     },
+     {
+      "bibcode": "2023ApJ...942...69M",
+      "year": "2023",
+      "title": "The Time-averaged Mass-loss Rates of Red Supergiants as Revealed by Their Luminosity Functions in M31 and M33"
+     },
+     {
+      "bibcode": "2011AJ....142..111B",
+      "year": "2011",
+      "title": "Dust Heating Sources in Galaxies: The Case of M33 (HERM33ES)"
+     },
+     {
+      "bibcode": "2007A&A...476.1161V",
+      "year": "2007",
+      "title": "Star formation in M 33: Spitzer photometry of discrete sources"
+     },
+     {
+      "bibcode": "2011MNRAS.414.3394J",
+      "year": "2011",
+      "title": "The UK Infrared Telescope M33 monitoring project - II. The star formation history in the central square kiloparsec"
+     },
+     {
+      "bibcode": "2026arXiv260900477R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2025AJ....170....2L",
+      "year": "2025",
+      "title": "Metallicity Distribution in M31 and M33 Based on the Tip of the Red Giant Branch Near-infrared Color"
+     },
+     {
+      "bibcode": "2013ApJ...773...46H",
+      "year": "2013",
+      "title": "Luminous and Variable Stars in M31 and M33. I. The Warm Hypergiants and Post-red Supergiant Evolution"
+     },
+     {
+      "bibcode": "2006AJ....131.2105H",
+      "year": "2006",
+      "title": "M33's Variable A: A Hypergiant Star More Than 35 YEARS in Eruption"
+     },
+     {
+      "bibcode": "2011MNRAS.411..263J",
+      "year": "2011",
+      "title": "The UK Infrared Telescope M33 monitoring project - I. Variable red giant stars in the central square kiloparsec"
+     },
+     {
+      "bibcode": "2009ApJ...707.1361T",
+      "year": "2009",
+      "title": "Chandra ACIS Survey of M33 (ChASeM33): The Enigmatic X-Ray Emission from IC131"
+     },
+     {
+      "bibcode": "2020ApJ...905L..20R",
+      "year": "2020",
+      "title": "Detections of Dust in the Outskirts of M31 and M33"
+     },
+     {
+      "bibcode": "2017A&A...601A..76K",
+      "year": "2017",
+      "title": "Monitoring luminous yellow massive stars in M 33: new yellow hypergiant candidates"
+     },
+     {
+      "bibcode": "2025ApJ...989..138S",
+      "year": "2025",
+      "title": "A First Look at Spatially Resolved Infrared Supernova Remnants in M33 with JWST"
+     },
+     {
+      "bibcode": "2019ApJS..241...35R",
+      "year": "2019",
+      "title": "The Period-Luminosity Relations of Red Supergiants in M33 and M31"
+     },
+     {
+      "bibcode": "2020A&A...636A..18R",
+      "year": "2020",
+      "title": "Evolution of grain size distribution in galactic discs"
+     },
+     {
+      "bibcode": "2025A&A...699A.102G",
+      "year": "2025",
+      "title": "The spectral energy distributions of very long-period Cepheids in the Milky Way, the Magellanic Clouds, M31, and M33"
+     },
+     {
+      "bibcode": "1987AJ.....94..315H",
+      "year": "1987",
+      "title": "The Enigmatic Object Variable A in M33"
+     },
+     {
+      "bibcode": "2012A&A...541A.146C",
+      "year": "2012",
+      "title": "On the nature of candidate luminous blue variables in M 33"
+     },
+     {
+      "bibcode": "2007ARA&A..45..177C",
+      "year": "2007",
+      "title": "Physical Properties of Wolf-Rayet Stars"
+     },
+     {
+      "bibcode": "2026arXiv260719989J",
+      "year": "2026",
+      "title": "The UK Infrared Telescope M33 monitoring project. VI. Feedback from dusty stellar winds across the galactic disc"
+     },
+     {
+      "bibcode": "2020MNRAS.492.5897S",
+      "year": "2020",
+      "title": "A new and unusual LBV-like outburst from a Wolf-Rayet star in the outskirts of M33"
+     }
+    ]
+   },
+   "full:\"M33\" full:(\"infrared variable\" OR \"mid-infrared variable\" OR SPIRITS) full:(periodic OR \"long-period\")": {
+    "n": 43,
+    "docs": [
+     {
+      "bibcode": "2019ApJ...877..110K",
+      "year": "2019",
+      "title": "SPIRITS Catalog of Infrared Variables: Identification of Extremely Luminous Long Period Variables"
+     },
+     {
+      "bibcode": "2018A&A...616A.175Y",
+      "year": "2018",
+      "title": "Red supergiant stars in the Large Magellanic Cloud. II. Infrared properties and mid-infrared variability"
+     },
+     {
+      "bibcode": "2018ASPC..514..135S",
+      "year": "2018",
+      "title": "3D Stellar Cartography: Mapping the Local Group in the Mid-Infrared using Variable Stars"
+     },
+     {
+      "bibcode": "2017ApJ...838L..17L",
+      "year": "2017",
+      "title": "First Detection of Mid-infrared Variability from an Ultraluminous X-Ray Source Holmberg II X-1"
+     },
+     {
+      "bibcode": "2021MNRAS.504..565J",
+      "year": "2021",
+      "title": "Infrared variable stars in the compact elliptical galaxy M32"
+     },
+     {
+      "bibcode": "2026arXiv260819657A",
+      "year": "2026",
+      "title": "The UKIRT M33 Monitoring Project: A 15-Year Near-Infrared Variable Star Catalogue for the Central Kiloparsec, and Prospects for Star Formati"
+     },
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     },
+     {
+      "bibcode": "2026arXiv260900477R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2026arXiv260719989J",
+      "year": "2026",
+      "title": "The UK Infrared Telescope M33 monitoring project. VI. Feedback from dusty stellar winds across the galactic disc"
+     },
+     {
+      "bibcode": "2021ApJ...909..113L",
+      "year": "2021",
+      "title": "Revealing Efficient Dust Formation at Low Metallicity in Extragalactic Carbon-rich Wolf-Rayet Binaries"
+     },
+     {
+      "bibcode": "2017A&A...601A..76K",
+      "year": "2017",
+      "title": "Monitoring luminous yellow massive stars in M 33: new yellow hypergiant candidates"
+     },
+     {
+      "bibcode": "2023ApJ...952L..30J",
+      "year": "2023",
+      "title": "A Luminous Red Supergiant and Dusty Long-period Variable Progenitor for SN 2023ixf"
+     },
+     {
+      "bibcode": "2024arXiv240109581H",
+      "year": "2024",
+      "title": "The Mira Distance Ladder"
+     },
+     {
+      "bibcode": "2026NatAs..10..702M",
+      "year": "2026",
+      "title": "The dramatic transition of the extreme red supergiant WOH G64 to a yellow hypergiant"
+     },
+     {
+      "bibcode": "2019ApJ...877...49G",
+      "year": "2019",
+      "title": "An Infrared Census of DUST in Nearby Galaxies with Spitzer (DUSTiNGS). V. The Period-Luminosity Relation for Dusty Metal-poor AGB Stars"
+     },
+     {
+      "bibcode": "2026arXiv261037591A",
+      "year": "2026",
+      "title": "The UKIRT M33 Monitoring Project - VII. A 15-year K-band photometric catalogue of long-period variable stars in the central kiloparsec of M3"
+     },
+     {
+      "bibcode": "2022Innov...300224Y",
+      "year": "2022",
+      "title": "Overview of the LAMOST survey in the first decade"
+     },
+     {
+      "bibcode": "2021AJ....162..152D",
+      "year": "2021",
+      "title": "New Blue and Red Variable Stars in NGC 247"
+     },
+     {
+      "bibcode": "2009ApJ...705.1364T",
+      "year": "2009",
+      "title": "A New Class of Luminous Transients and a First Census of their Massive Stellar Progenitors"
+     },
+     {
+      "bibcode": "2026arXiv260619952M",
+      "year": "2026",
+      "title": "Accreting stellar-mass black holes"
+     },
+     {
+      "bibcode": "2021ApJ...922..177M",
+      "year": "2021",
+      "title": "Testing Evolutionary Models with Red Supergiant and Wolf-Rayet Populations"
+     },
+     {
+      "bibcode": "2024SCPMA..6719514X",
+      "year": "2024",
+      "title": "The dusty and extremely red progenitor of the type II supernova 2023ixf in Messier 101"
+     },
+     {
+      "bibcode": "1974MNRAS.169..357P",
+      "year": "1974",
+      "title": "Broadband optical and infrared observations of Seyfert galaxies."
+     },
+     {
+      "bibcode": "2018MNRAS.473..173W",
+      "year": "2018",
+      "title": "A remarkable oxygen-rich asymptotic giant branch variable in the Sagittarius Dwarf Irregular Galaxy"
+     },
+     {
+      "bibcode": "2019IAUS..343..275W",
+      "year": "2019",
+      "title": "Asymptotic Giant Branch Variables in Nearby Galaxies"
+     },
+     {
+      "bibcode": "2022ARep...66S.567C",
+      "year": "2022",
+      "title": "Close Binary Stars. VIII: Close Binary Star Systems in the Late Stages of Evolution"
+     },
+     {
+      "bibcode": "2017ApJ...851..152B",
+      "year": "2017",
+      "title": "An Infrared Census of DUST in Nearby Galaxies with Spitzer (DUSTiNGS). IV. Discovery of High-redshift AGB Analogs"
+     },
+     {
+      "bibcode": "2019arXiv191201620M",
+      "year": "2019",
+      "title": "Submillimetre Transient Science in the Next Decade: EAO Submillimetre Futures White Paper Series, 2019"
+     },
+     {
+      "bibcode": "2021gacv.workE..44D",
+      "year": "2021",
+      "title": "Accrete, Accrete, Accrete\u2026 Bang! (and repeat): The remarkable Recurrent Novae"
+     },
+     {
+      "bibcode": "2010arXiv1010.5770H",
+      "year": "2010",
+      "title": "Multiwavelength Observations of Accretion in Low-Mass X-ray Binary Systems"
+     }
+    ]
+   }
+  },
+  "sexagesimal": "01:34:08.4 +30:48:05"
+ },
+ "MESSIER033|0226p302|378": {
+  "galaxy": "MESSIER033",
+  "ra": 23.331894509690212,
+  "dec": 30.518053567625454,
+  "gaia_3as": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad_10as": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[MSC2015] VC 20",
+     "otype": "V*?",
+     "ra": 23.331666666666667,
+     "dec": 30.518055555555556,
+     "sep": 0.7066433188784096
+    }
+   ]
+  },
+  "allwise_6as": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J013319.64+303105.1",
+     "ra": 23.3318436,
+     "dec": 30.5180916,
+     "w1mpro": 15.086,
+     "w2mpro": 13.655,
+     "w3mpro": 12.115,
+     "w4mpro": 9.198,
+     "cc_flags": 0,
+     "ext_flg": 2
+    }
+   ]
+  },
+  "seip_4as": {
+   "status": "ok",
+   "rows": [
+    {
+     "ra": 23.331831,
+     "dec": 30.518093,
+     "i1_f_ap1": 348.5,
+     "i2_f_ap1": 545.8,
+     "i3_f_ap1": 710.9,
+     "i4_f_ap1": 913.8,
+     "m1_f_psf": 2131.0
+    }
+   ]
+  },
+  "mast_1as": {
+   "status": "ok",
+   "n": 5,
+   "obs": [
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53256.6
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53257.6
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53354.3
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53354.3
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53354.4
+    ]
+   ]
+  },
+  "tns_30as": {
+   "status": "ok",
+   "rows": []
+  },
+  "ads": {
+   "full:\"01:33:19.7\"": {
+    "n": 3,
+    "docs": [
+     {
+      "bibcode": "2017EnPro.109..122C",
+      "year": "2017",
+      "title": "Energetic and Exergetic Investigation of a N<SUB>2</SUB>O Ejector Expansion Transcritical Refrigeration Cycle"
+     },
+     {
+      "bibcode": "2010CBI...184..112W",
+      "year": "2010",
+      "title": "A hospital-based case-control study of acute myeloid leukemia in Shanghai: Analysis of environmental and occupational risk factors by subtyp"
+     },
+     {
+      "bibcode": "2024SpWea..2204013P",
+      "year": "2024",
+      "title": "HESPERIA REleASE+: Improving Solar Proton Event Forecasting by Means of Automated Recognition of Type-III Radio Bursts"
+     }
+    ]
+   },
+   "full:\"013319.7\"": {
+    "n": 3,
+    "docs": [
+     {
+      "bibcode": "2017EnPro.109..122C",
+      "year": "2017",
+      "title": "Energetic and Exergetic Investigation of a N<SUB>2</SUB>O Ejector Expansion Transcritical Refrigeration Cycle"
+     },
+     {
+      "bibcode": "2010CBI...184..112W",
+      "year": "2010",
+      "title": "A hospital-based case-control study of acute myeloid leukemia in Shanghai: Analysis of environmental and occupational risk factors by subtyp"
+     },
+     {
+      "bibcode": "2018JKAS...51...89K",
+      "year": "2018",
+      "title": "Intra-Night Optical Variability of Active Galactic Nuclei in the Cosmos Field with the KMTNet"
+     }
+    ]
+   },
+   "full:\"01 33 19.7\"": {
+    "n": 1,
+    "docs": [
+     {
+      "bibcode": "2024SpWea..2204013P",
+      "year": "2024",
+      "title": "HESPERIA REleASE+: Improving Solar Proton Event Forecasting by Means of Automated Recognition of Type-III Radio Bursts"
+     }
+    ]
+   },
+   "full:\"23.332\" full:\"30.518\"": {
+    "n": 14,
+    "docs": [
+     {
+      "bibcode": "2024GGST...14..829O",
+      "year": "2024",
+      "title": "Validation of cubic EoS mixing rules and multi-fluid helmholtz energy approximation EoS for the phase behaviour modelling of CO<SUB>2</SUB>-"
+     },
+     {
+      "bibcode": "1996ApJS..107..521V",
+      "year": "1996",
+      "title": "Redshift Distribution of Galaxies in the Southern Milky Way Region 210 degrees &lt; L &lt; 360 degrees and B &lt; 15 degrees"
+     },
+     {
+      "bibcode": "2024GGST...14...62O",
+      "year": "2024",
+      "title": "Effects of non-condensable CCUS impurities (CH<SUB>4</SUB>, O<SUB>2</SUB>, Ar and N<SUB>2</SUB>) on the saturation properties (bubble points"
+     },
+     {
+      "bibcode": "1987PASP...99..739H",
+      "year": "1987",
+      "title": "A CCD color-magnitude study of 47 Tucanae."
+     },
+     {
+      "bibcode": "1982ADNDT..27..147J",
+      "year": "1982",
+      "title": "Proton Range-Energy Tables, 1 keV-10 GeV, Energy Loss, Range, Path Length, Time-of-Flight, Straggling, Multiple Scattering, and Nuclear Inte"
+     },
+     {
+      "bibcode": "1979ApJS...40....1K",
+      "year": "1979",
+      "title": "Model atmospheres for G, F, A, B, and O stars."
+     },
+     {
+      "bibcode": "1970ADNDT...7..233N",
+      "year": "1970",
+      "title": "Range and stopping-power tables for heavy ions"
+     },
+     {
+      "bibcode": "1997JAG....37..133Z",
+      "year": "1997",
+      "title": "Methods for modelling electromagnetic fields Results from COMMEMI-the international project on the comparison of modelling methods for elect"
+     },
+     {
+      "bibcode": "1977ApJS...33..269S",
+      "year": "1977",
+      "title": "A catalog of 0.2 \u00c5 resolution far-ultraviolet stellar spectra measured with Copernicus."
+     },
+     {
+      "bibcode": "2006NDS...107.1075J",
+      "year": "2006",
+      "title": "Nuclear Data Sheets for A = 165"
+     },
+     {
+      "bibcode": "1990MNRAS.246..256H",
+      "year": "1990",
+      "title": "The 6C survey of radio sources - III. The zone 48&lt;Dec&lt;68, 05h25&lt;RA&lt;18h17"
+     },
+     {
+      "bibcode": "1911PUSNO...7....1.",
+      "year": "1911",
+      "title": "The catalogue of Washington Zones. 1846-1852."
+     },
+     {
+      "bibcode": "1927PUSNO..11R.107.",
+      "year": "1927",
+      "title": "The catalogue."
+     },
+     {
+      "bibcode": "1920PUSNO...9B...3.",
+      "year": "1920",
+      "title": "Observations and reductions. Data."
+     }
+    ]
+   },
+   "full:\"M33\" full:(\"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\" OR \"periodic dust\")": {
+    "n": 423,
+    "docs": [
+     {
+      "bibcode": "2021ApJ...909..113L",
+      "year": "2021",
+      "title": "Revealing Efficient Dust Formation at Low Metallicity in Extragalactic Carbon-rich Wolf-Rayet Binaries"
+     },
+     {
+      "bibcode": "2019ApJ...880....8G",
+      "year": "2019",
+      "title": "The First Candidate Colliding-wind Binary in M33"
+     },
+     {
+      "bibcode": "2026enap....2..584W",
+      "year": "2026",
+      "title": "Wolf-Rayet colliding wind binaries"
+     },
+     {
+      "bibcode": "2021MNRAS.505.5029W",
+      "year": "2021",
+      "title": "The episodic dust-making Wolf-Rayet star HD 38030 in the Large Magellanic Cloud"
+     },
+     {
+      "bibcode": "2022MNRAS.516.3193K",
+      "year": "2022",
+      "title": "Accretion in massive colliding-wind binaries and the effect of the wind momentum ratio"
+     },
+     {
+      "bibcode": "2012ApJ...750...97D",
+      "year": "2012",
+      "title": "The Yellow and Red Supergiants of M33"
+     },
+     {
+      "bibcode": "2023ApJ...952..114L",
+      "year": "2023",
+      "title": "Multiwavelength Characterization of the High-mass X-Ray Binary Population of M33"
+     },
+     {
+      "bibcode": "2014ApJ...789...10N",
+      "year": "2014",
+      "title": "The Close Binary Frequency of Wolf-Rayet Stars as a Function of Metallicity in M31 and M33"
+     },
+     {
+      "bibcode": "2015A&A...578A...8B",
+      "year": "2015",
+      "title": "Measuring star formation with resolved observations: the test case of M 33"
+     },
+     {
+      "bibcode": "2023ApJ...942...69M",
+      "year": "2023",
+      "title": "The Time-averaged Mass-loss Rates of Red Supergiants as Revealed by Their Luminosity Functions in M31 and M33"
+     },
+     {
+      "bibcode": "2011AJ....142..111B",
+      "year": "2011",
+      "title": "Dust Heating Sources in Galaxies: The Case of M33 (HERM33ES)"
+     },
+     {
+      "bibcode": "2007A&A...476.1161V",
+      "year": "2007",
+      "title": "Star formation in M 33: Spitzer photometry of discrete sources"
+     },
+     {
+      "bibcode": "2011MNRAS.414.3394J",
+      "year": "2011",
+      "title": "The UK Infrared Telescope M33 monitoring project - II. The star formation history in the central square kiloparsec"
+     },
+     {
+      "bibcode": "2026arXiv260900477R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2025AJ....170....2L",
+      "year": "2025",
+      "title": "Metallicity Distribution in M31 and M33 Based on the Tip of the Red Giant Branch Near-infrared Color"
+     },
+     {
+      "bibcode": "2013ApJ...773...46H",
+      "year": "2013",
+      "title": "Luminous and Variable Stars in M31 and M33. I. The Warm Hypergiants and Post-red Supergiant Evolution"
+     },
+     {
+      "bibcode": "2006AJ....131.2105H",
+      "year": "2006",
+      "title": "M33's Variable A: A Hypergiant Star More Than 35 YEARS in Eruption"
+     },
+     {
+      "bibcode": "2011MNRAS.411..263J",
+      "year": "2011",
+      "title": "The UK Infrared Telescope M33 monitoring project - I. Variable red giant stars in the central square kiloparsec"
+     },
+     {
+      "bibcode": "2009ApJ...707.1361T",
+      "year": "2009",
+      "title": "Chandra ACIS Survey of M33 (ChASeM33): The Enigmatic X-Ray Emission from IC131"
+     },
+     {
+      "bibcode": "2020ApJ...905L..20R",
+      "year": "2020",
+      "title": "Detections of Dust in the Outskirts of M31 and M33"
+     },
+     {
+      "bibcode": "2017A&A...601A..76K",
+      "year": "2017",
+      "title": "Monitoring luminous yellow massive stars in M 33: new yellow hypergiant candidates"
+     },
+     {
+      "bibcode": "2025ApJ...989..138S",
+      "year": "2025",
+      "title": "A First Look at Spatially Resolved Infrared Supernova Remnants in M33 with JWST"
+     },
+     {
+      "bibcode": "2019ApJS..241...35R",
+      "year": "2019",
+      "title": "The Period-Luminosity Relations of Red Supergiants in M33 and M31"
+     },
+     {
+      "bibcode": "2020A&A...636A..18R",
+      "year": "2020",
+      "title": "Evolution of grain size distribution in galactic discs"
+     },
+     {
+      "bibcode": "2025A&A...699A.102G",
+      "year": "2025",
+      "title": "The spectral energy distributions of very long-period Cepheids in the Milky Way, the Magellanic Clouds, M31, and M33"
+     },
+     {
+      "bibcode": "1987AJ.....94..315H",
+      "year": "1987",
+      "title": "The Enigmatic Object Variable A in M33"
+     },
+     {
+      "bibcode": "2012A&A...541A.146C",
+      "year": "2012",
+      "title": "On the nature of candidate luminous blue variables in M 33"
+     },
+     {
+      "bibcode": "2007ARA&A..45..177C",
+      "year": "2007",
+      "title": "Physical Properties of Wolf-Rayet Stars"
+     },
+     {
+      "bibcode": "2026arXiv260719989J",
+      "year": "2026",
+      "title": "The UK Infrared Telescope M33 monitoring project. VI. Feedback from dusty stellar winds across the galactic disc"
+     },
+     {
+      "bibcode": "2020MNRAS.492.5897S",
+      "year": "2020",
+      "title": "A new and unusual LBV-like outburst from a Wolf-Rayet star in the outskirts of M33"
+     }
+    ]
+   },
+   "full:\"M33\" full:(\"infrared variable\" OR \"mid-infrared variable\" OR SPIRITS) full:(periodic OR \"long-period\")": {
+    "n": 43,
+    "docs": [
+     {
+      "bibcode": "2019ApJ...877..110K",
+      "year": "2019",
+      "title": "SPIRITS Catalog of Infrared Variables: Identification of Extremely Luminous Long Period Variables"
+     },
+     {
+      "bibcode": "2018A&A...616A.175Y",
+      "year": "2018",
+      "title": "Red supergiant stars in the Large Magellanic Cloud. II. Infrared properties and mid-infrared variability"
+     },
+     {
+      "bibcode": "2018ASPC..514..135S",
+      "year": "2018",
+      "title": "3D Stellar Cartography: Mapping the Local Group in the Mid-Infrared using Variable Stars"
+     },
+     {
+      "bibcode": "2017ApJ...838L..17L",
+      "year": "2017",
+      "title": "First Detection of Mid-infrared Variability from an Ultraluminous X-Ray Source Holmberg II X-1"
+     },
+     {
+      "bibcode": "2021MNRAS.504..565J",
+      "year": "2021",
+      "title": "Infrared variable stars in the compact elliptical galaxy M32"
+     },
+     {
+      "bibcode": "2026arXiv260819657A",
+      "year": "2026",
+      "title": "The UKIRT M33 Monitoring Project: A 15-Year Near-Infrared Variable Star Catalogue for the Central Kiloparsec, and Prospects for Star Formati"
+     },
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     },
+     {
+      "bibcode": "2026arXiv260900477R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2026arXiv260719989J",
+      "year": "2026",
+      "title": "The UK Infrared Telescope M33 monitoring project. VI. Feedback from dusty stellar winds across the galactic disc"
+     },
+     {
+      "bibcode": "2021ApJ...909..113L",
+      "year": "2021",
+      "title": "Revealing Efficient Dust Formation at Low Metallicity in Extragalactic Carbon-rich Wolf-Rayet Binaries"
+     },
+     {
+      "bibcode": "2017A&A...601A..76K",
+      "year": "2017",
+      "title": "Monitoring luminous yellow massive stars in M 33: new yellow hypergiant candidates"
+     },
+     {
+      "bibcode": "2023ApJ...952L..30J",
+      "year": "2023",
+      "title": "A Luminous Red Supergiant and Dusty Long-period Variable Progenitor for SN 2023ixf"
+     },
+     {
+      "bibcode": "2024arXiv240109581H",
+      "year": "2024",
+      "title": "The Mira Distance Ladder"
+     },
+     {
+      "bibcode": "2026NatAs..10..702M",
+      "year": "2026",
+      "title": "The dramatic transition of the extreme red supergiant WOH G64 to a yellow hypergiant"
+     },
+     {
+      "bibcode": "2019ApJ...877...49G",
+      "year": "2019",
+      "title": "An Infrared Census of DUST in Nearby Galaxies with Spitzer (DUSTiNGS). V. The Period-Luminosity Relation for Dusty Metal-poor AGB Stars"
+     },
+     {
+      "bibcode": "2026arXiv261037591A",
+      "year": "2026",
+      "title": "The UKIRT M33 Monitoring Project - VII. A 15-year K-band photometric catalogue of long-period variable stars in the central kiloparsec of M3"
+     },
+     {
+      "bibcode": "2022Innov...300224Y",
+      "year": "2022",
+      "title": "Overview of the LAMOST survey in the first decade"
+     },
+     {
+      "bibcode": "2021AJ....162..152D",
+      "year": "2021",
+      "title": "New Blue and Red Variable Stars in NGC 247"
+     },
+     {
+      "bibcode": "2009ApJ...705.1364T",
+      "year": "2009",
+      "title": "A New Class of Luminous Transients and a First Census of their Massive Stellar Progenitors"
+     },
+     {
+      "bibcode": "2026arXiv260619952M",
+      "year": "2026",
+      "title": "Accreting stellar-mass black holes"
+     },
+     {
+      "bibcode": "2021ApJ...922..177M",
+      "year": "2021",
+      "title": "Testing Evolutionary Models with Red Supergiant and Wolf-Rayet Populations"
+     },
+     {
+      "bibcode": "2024SCPMA..6719514X",
+      "year": "2024",
+      "title": "The dusty and extremely red progenitor of the type II supernova 2023ixf in Messier 101"
+     },
+     {
+      "bibcode": "1974MNRAS.169..357P",
+      "year": "1974",
+      "title": "Broadband optical and infrared observations of Seyfert galaxies."
+     },
+     {
+      "bibcode": "2018MNRAS.473..173W",
+      "year": "2018",
+      "title": "A remarkable oxygen-rich asymptotic giant branch variable in the Sagittarius Dwarf Irregular Galaxy"
+     },
+     {
+      "bibcode": "2019IAUS..343..275W",
+      "year": "2019",
+      "title": "Asymptotic Giant Branch Variables in Nearby Galaxies"
+     },
+     {
+      "bibcode": "2022ARep...66S.567C",
+      "year": "2022",
+      "title": "Close Binary Stars. VIII: Close Binary Star Systems in the Late Stages of Evolution"
+     },
+     {
+      "bibcode": "2017ApJ...851..152B",
+      "year": "2017",
+      "title": "An Infrared Census of DUST in Nearby Galaxies with Spitzer (DUSTiNGS). IV. Discovery of High-redshift AGB Analogs"
+     },
+     {
+      "bibcode": "2019arXiv191201620M",
+      "year": "2019",
+      "title": "Submillimetre Transient Science in the Next Decade: EAO Submillimetre Futures White Paper Series, 2019"
+     },
+     {
+      "bibcode": "2021gacv.workE..44D",
+      "year": "2021",
+      "title": "Accrete, Accrete, Accrete\u2026 Bang! (and repeat): The remarkable Recurrent Novae"
+     },
+     {
+      "bibcode": "2010arXiv1010.5770H",
+      "year": "2010",
+      "title": "Multiwavelength Observations of Accretion in Low-Mass X-ray Binary Systems"
+     }
+    ]
+   }
+  },
+  "sexagesimal": "01:33:19.7 +30:31:05"
+ },
+ "MESSIER031|0121p424|669": {
+  "galaxy": "MESSIER031",
+  "ra": 11.76178488126701,
+  "dec": 42.56348669209261,
+  "gaia_3as": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad_10as": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise_6as": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J004702.81+423348.7",
+     "ra": 11.7617337,
+     "dec": 42.5635311,
+     "w1mpro": 15.755,
+     "w2mpro": 13.381,
+     "w3mpro": 10.135,
+     "w4mpro": 7.669,
+     "cc_flags": 0,
+     "ext_flg": 0
+    }
+   ]
+  },
+  "seip_4as": {
+   "status": "ok",
+   "rows": [
+    {
+     "ra": 11.761726,
+     "dec": 42.563488,
+     "i1_f_ap1": 339.9,
+     "i2_f_ap1": 837.2,
+     "i3_f_ap1": 1663.0,
+     "i4_f_ap1": 2289.0,
+     "m1_f_psf": 3061.0
+    }
+   ]
+  },
+  "mast_1as": {
+   "status": "ok",
+   "n": 0,
+   "obs": []
+  },
+  "tns_30as": {
+   "status": "ok",
+   "rows": []
+  },
+  "ads": {
+   "full:\"00:47:02.8\"": {
+    "n": 13,
+    "docs": [
+     {
+      "bibcode": "2012ApJ...759L..42P",
+      "year": "2012",
+      "title": "The Coupling between the Core/Cusp and Missing Satellite Problems"
+     },
+     {
+      "bibcode": "1976Icar...27..109V",
+      "year": "1976",
+      "title": "The Free Oscillations of Jupiter and Saturn"
+     },
+     {
+      "bibcode": "2026arXiv260122848C",
+      "year": "2026",
+      "title": "Unconditional flow-based time series generation with equivariance-regularised latent spaces"
+     },
+     {
+      "bibcode": "2024arXiv240404282V",
+      "year": "2024",
+      "title": "Analyzing Economic Convergence Across the Americas: A Survival Analysis Approach to GDP per Capita Trajectories"
+     },
+     {
+      "bibcode": "2020ApJ...903...96G",
+      "year": "2020",
+      "title": "The \u03bc Tau Association: A 60 Myr Old Coeval Group at 150 pc from the Sun"
+     },
+     {
+      "bibcode": "1998NuPhB.531..429G",
+      "year": "1998",
+      "title": "Non-perturbative renormalization of quark bilinears"
+     },
+     {
+      "bibcode": "2017arXiv170308733A",
+      "year": "2017",
+      "title": "Algebras and semigroups of locally subexponential growth"
+     },
+     {
+      "bibcode": "2023arXiv231005286P",
+      "year": "2023",
+      "title": "Generalizable Error Modeling for Human Data Annotation: Evidence From an Industry-Scale Search Data Annotation Program"
+     },
+     {
+      "bibcode": "2017arXiv170308734A",
+      "year": "2017",
+      "title": "Matrix wreath products of algebras and embedding theorems"
+     },
+     {
+      "bibcode": "1980EcMod...9..281C",
+      "year": "1980",
+      "title": "A development of the Leslie matrix formulation for restructuring and extending an ecosystem model: The infestation of stored wheat by Sitoph"
+     },
+     {
+      "bibcode": "1997AnNuE..24..515K",
+      "year": "1997",
+      "title": "Spherical harmonics - Finite element treatment of neutron transport in cylindrical geometry"
+     },
+     {
+      "bibcode": "2024EPSE...43E4394A",
+      "year": "2024",
+      "title": "Exploring the multifarious blend ratios of waste fried edible oil biodiesel/diesel/low carbon methanol in an automotive engine: An approach "
+     },
+     {
+      "bibcode": "2020arXiv200708016D",
+      "year": "2020",
+      "title": "Approximate computation of projection depths"
+     }
+    ]
+   },
+   "full:\"004702.8\"": {
+    "n": 13,
+    "docs": [
+     {
+      "bibcode": "2012ApJ...759L..42P",
+      "year": "2012",
+      "title": "The Coupling between the Core/Cusp and Missing Satellite Problems"
+     },
+     {
+      "bibcode": "1976Icar...27..109V",
+      "year": "1976",
+      "title": "The Free Oscillations of Jupiter and Saturn"
+     },
+     {
+      "bibcode": "2026arXiv260122848C",
+      "year": "2026",
+      "title": "Unconditional flow-based time series generation with equivariance-regularised latent spaces"
+     },
+     {
+      "bibcode": "2024arXiv240404282V",
+      "year": "2024",
+      "title": "Analyzing Economic Convergence Across the Americas: A Survival Analysis Approach to GDP per Capita Trajectories"
+     },
+     {
+      "bibcode": "2020ApJ...903...96G",
+      "year": "2020",
+      "title": "The \u03bc Tau Association: A 60 Myr Old Coeval Group at 150 pc from the Sun"
+     },
+     {
+      "bibcode": "1998NuPhB.531..429G",
+      "year": "1998",
+      "title": "Non-perturbative renormalization of quark bilinears"
+     },
+     {
+      "bibcode": "2017arXiv170308733A",
+      "year": "2017",
+      "title": "Algebras and semigroups of locally subexponential growth"
+     },
+     {
+      "bibcode": "2023arXiv231005286P",
+      "year": "2023",
+      "title": "Generalizable Error Modeling for Human Data Annotation: Evidence From an Industry-Scale Search Data Annotation Program"
+     },
+     {
+      "bibcode": "2017arXiv170308734A",
+      "year": "2017",
+      "title": "Matrix wreath products of algebras and embedding theorems"
+     },
+     {
+      "bibcode": "1980EcMod...9..281C",
+      "year": "1980",
+      "title": "A development of the Leslie matrix formulation for restructuring and extending an ecosystem model: The infestation of stored wheat by Sitoph"
+     },
+     {
+      "bibcode": "1997AnNuE..24..515K",
+      "year": "1997",
+      "title": "Spherical harmonics - Finite element treatment of neutron transport in cylindrical geometry"
+     },
+     {
+      "bibcode": "2024EPSE...43E4394A",
+      "year": "2024",
+      "title": "Exploring the multifarious blend ratios of waste fried edible oil biodiesel/diesel/low carbon methanol in an automotive engine: An approach "
+     },
+     {
+      "bibcode": "2020arXiv200708016D",
+      "year": "2020",
+      "title": "Approximate computation of projection depths"
+     }
+    ]
+   },
+   "full:\"00 47 02.8\"": {
+    "n": 0,
+    "docs": []
+   },
+   "full:\"11.762\" full:\"42.563\"": {
+    "n": 14,
+    "docs": [
+     {
+      "bibcode": "1965JMoSp..18..288D",
+      "year": "1965",
+      "title": "Bands of D <SUB>2</SUB> and T <SUB>2</SUB> originating from the lowest excited <SUP>1</SUP>\u03a3 <SUB>g</SUB> states (1 s\u03c3)(2 s\u03c3) <SUP>1</SUP>\u03a3 "
+     },
+     {
+      "bibcode": "2024arXiv240709790Y",
+      "year": "2024",
+      "title": "Team up GBDTs and DNNs: Advancing Efficient and Effective Tabular Prediction with Tree-hybrid MLPs"
+     },
+     {
+      "bibcode": "2024arXiv240110605R",
+      "year": "2024",
+      "title": "The Unconditional Performance of Control Charts for Zero-Inflated Processes with Estimated Parameters"
+     },
+     {
+      "bibcode": "2025arXiv251113946H",
+      "year": "2025",
+      "title": "Ice Giants Pre-Decadal Survey Mission Study Report"
+     },
+     {
+      "bibcode": "1982ADNDT..27..341J",
+      "year": "1982",
+      "title": "Proton Range-Energy Tables, 1 keV-10 GeV, Energy Loss, Range, Path Length, Time-of-Flight, Straggling, Multiple Scattering, and Nuclear Inte"
+     },
+     {
+      "bibcode": "2005PhyS...71..251A",
+      "year": "2005",
+      "title": "Radiative Rates, Collision Strengths and Effective Collision Strengths for Transitions in Mo XXXIV"
+     },
+     {
+      "bibcode": "2013arXiv1312.2004S",
+      "year": "2013",
+      "title": "Optimal Trading Strategies as Measures of Market Disequilibrium"
+     },
+     {
+      "bibcode": "2005PhyS...71..356A",
+      "year": "2005",
+      "title": "Radiative Rates, Collision Strengths and Effective Collision Strengths for Transitions in Gd XXXVII"
+     },
+     {
+      "bibcode": "2015arXiv151108771Y",
+      "year": "2015",
+      "title": "Finite-Dimensional Lie Algebras and Their Representations for Unified Model Building"
+     },
+     {
+      "bibcode": "1970ADNDT...7..233N",
+      "year": "1970",
+      "title": "Range and stopping-power tables for heavy ions"
+     },
+     {
+      "bibcode": "1933PUSNO..13..161M",
+      "year": "1933",
+      "title": "Catalogue of 9,989 standard and intermediary stars."
+     },
+     {
+      "bibcode": "1933PUSNO..13....1M",
+      "year": "1933",
+      "title": "Results of observations with the nine-inch transit circle 1913 - 1926. Cat. of 9989 standard and intermediary stars +90 to -36 degr. declina"
+     },
+     {
+      "bibcode": "2023arXiv230809526B",
+      "year": "2023",
+      "title": "Sustainability-Driven Exploration of Topological Material"
+     },
+     {
+      "bibcode": "2025arXiv250801734B",
+      "year": "2025",
+      "title": "Photoinduced Low Spin to High Spin Transition in a [2x2] Fe(II) Metallogrid: Diode Laser-Pumped Photocrystallography at the P11 Beamline in "
+     }
+    ]
+   },
+   "full:\"M31\" full:(\"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\" OR \"periodic dust\")": {
+    "n": 876,
+    "docs": [
+     {
+      "bibcode": "2011ApJ...727...50S",
+      "year": "2011",
+      "title": "A Spitzer Survey of Novae in M31"
+     },
+     {
+      "bibcode": "2025A&A...699A..23G",
+      "year": "2025",
+      "title": "A study of Andromeda to improve our knowledge of the evolution and dust production by AGB stars"
+     },
+     {
+      "bibcode": "2025MNRAS.541..980C",
+      "year": "2025",
+      "title": "Revisiting the classics: on the statistics of dust formation in novae"
+     },
+     {
+      "bibcode": "2020MNRAS.496.5503B",
+      "year": "2020",
+      "title": "Progenitor, precursor, and evolution of the dusty remnant of the stellar merger M31-LRN-2015"
+     },
+     {
+      "bibcode": "2024ApJS..272...28C",
+      "year": "2024",
+      "title": "Exploring the Maximum Magnitude versus Rate of Decline Relation for Novae in M31"
+     },
+     {
+      "bibcode": "2014MNRAS.444..586M",
+      "year": "2014",
+      "title": "First detection and characterization of symbiotic stars in M31"
+     },
+     {
+      "bibcode": "1993AJ....106.1436L",
+      "year": "1993",
+      "title": "Planetary Camera Observations of the Double Nucleus of M31"
+     },
+     {
+      "bibcode": "2015ApJ...805..183L",
+      "year": "2015",
+      "title": "The Panchromatic Hubble Andromeda Treasury. XI. The Spatially Resolved Recent Star Formation History of M31"
+     },
+     {
+      "bibcode": "2011ApJ...734...12S",
+      "year": "2011",
+      "title": "A Spectroscopic and Photometric Survey of Novae in M31"
+     },
+     {
+      "bibcode": "2026MNRAS.546ag052B",
+      "year": "2026",
+      "title": "The fate of the failed supernova candidate M31-2014-DS1"
+     },
+     {
+      "bibcode": "2015ApJS..216...34S",
+      "year": "2015",
+      "title": "Recurrent Novae in M31"
+     },
+     {
+      "bibcode": "2025AJ....170....2L",
+      "year": "2025",
+      "title": "Metallicity Distribution in M31 and M33 Based on the Tip of the Red Giant Branch Near-infrared Color"
+     },
+     {
+      "bibcode": "2019ApJ...879..109B",
+      "year": "2019",
+      "title": "A Dramatic Decrease in Carbon Star Formation in M31"
+     },
+     {
+      "bibcode": "2010ApJ...710..755G",
+      "year": "2010",
+      "title": "X-ray and Radio Variability of M31*, The Andromeda Galaxy Nuclear Supermassive Black Hole"
+     },
+     {
+      "bibcode": "2026Sci...391..689D",
+      "year": "2026",
+      "title": "Disappearance of a massive star in the Andromeda Galaxy due to formation of a black hole"
+     },
+     {
+      "bibcode": "2022ApJS..259...41G",
+      "year": "2022",
+      "title": "A Census of Thermally Pulsing AGB Stars in the Andromeda Galaxy and a First Estimate of Their Contribution to the Global Dust Budget"
+     },
+     {
+      "bibcode": "2019ApJ...880....8G",
+      "year": "2019",
+      "title": "The First Candidate Colliding-wind Binary in M33"
+     },
+     {
+      "bibcode": "2020ApJ...905L..20R",
+      "year": "2020",
+      "title": "Detections of Dust in the Outskirts of M31 and M33"
+     },
+     {
+      "bibcode": "1999ApJ...515..169J",
+      "year": "1999",
+      "title": "Chemical Abundances of Planetary Nebulae in the Bulge and Disk of M31"
+     },
+     {
+      "bibcode": "2017ApJ...844..155T",
+      "year": "2017",
+      "title": "Attenuation Modified by DIG and Dust as Seen in M31"
+     },
+     {
+      "bibcode": "2025ApJ...980..129B",
+      "year": "2025",
+      "title": "Discovery and Detailed Study of the M31 Classical Nova AT 2023tkw: Evidence for Internal Shocks"
+     },
+     {
+      "bibcode": "1987ApJ...320..266M",
+      "year": "1987",
+      "title": "Wolf-Rayet Stars in the Andromeda Galaxy"
+     },
+     {
+      "bibcode": "2023ApJ...942...69M",
+      "year": "2023",
+      "title": "The Time-averaged Mass-loss Rates of Red Supergiants as Revealed by Their Luminosity Functions in M31 and M33"
+     },
+     {
+      "bibcode": "2018A&A...615A.152S",
+      "year": "2018",
+      "title": "Multiwavelength approach to classifying transient events in the direction of M 31"
+     },
+     {
+      "bibcode": "2014ApJ...789...10N",
+      "year": "2014",
+      "title": "The Close Binary Frequency of Wolf-Rayet Stars as a Function of Metallicity in M31 and M33"
+     },
+     {
+      "bibcode": "2013ApJ...767L..23T",
+      "year": "2013",
+      "title": "R Coronae Borealis Stars in M31 from the Palomar Transient Factory"
+     },
+     {
+      "bibcode": "2026ApJ...999L..25D",
+      "year": "2026",
+      "title": "Fading into Darkness: A Weak Mass Ejection and Low-efficiency Fallback Accompanying Black Hole Formation in M31-2014-DS1"
+     },
+     {
+      "bibcode": "1992ApJS...81..683T",
+      "year": "1992",
+      "title": "The Spectroscopic and Photometric Evolution of Novae in the Bulge of M31"
+     },
+     {
+      "bibcode": "2013ApJ...773...46H",
+      "year": "2013",
+      "title": "Luminous and Variable Stars in M31 and M33. I. The Warm Hypergiants and Post-red Supergiant Evolution"
+     },
+     {
+      "bibcode": "2005A&A...442..879P",
+      "year": "2005",
+      "title": "Optical novae: the major class of supersoft X-ray sources in M 31"
+     }
+    ]
+   },
+   "full:\"M31\" full:(\"infrared variable\" OR \"mid-infrared variable\" OR SPIRITS) full:(periodic OR \"long-period\")": {
+    "n": 76,
+    "docs": [
+     {
+      "bibcode": "2026arXiv260519059P",
+      "year": "2026",
+      "title": "VarWISE: Infrared Variability via NEOWISE Single Exposure Photometry"
+     },
+     {
+      "bibcode": "2026ApJS..284...41P",
+      "year": "2026",
+      "title": "VarWISE: Infrared Variability via NEOWISE Single-exposure Photometry"
+     },
+     {
+      "bibcode": "2017ApJ...838L..17L",
+      "year": "2017",
+      "title": "First Detection of Mid-infrared Variability from an Ultraluminous X-Ray Source Holmberg II X-1"
+     },
+     {
+      "bibcode": "2023ApJ...957...64S",
+      "year": "2023",
+      "title": "The SN 2023ixf Progenitor in M101. I. Infrared Variability"
+     },
+     {
+      "bibcode": "2021MNRAS.504..565J",
+      "year": "2021",
+      "title": "Infrared variable stars in the compact elliptical galaxy M32"
+     },
+     {
+      "bibcode": "2022A&A...661A.114O",
+      "year": "2022",
+      "title": "Detection of periodic flares in 6.7 GHz methanol masers G45.804\u20120.356 and G49.043\u20121.079"
+     },
+     {
+      "bibcode": "2019ApJ...880L..20J",
+      "year": "2019",
+      "title": "Discovery of an Intermediate-luminosity Red Transient in M51 and Its Likely Dust-obscured, Infrared-variable Progenitor"
+     },
+     {
+      "bibcode": "2026arXiv260819657A",
+      "year": "2026",
+      "title": "The UKIRT M33 Monitoring Project: A 15-Year Near-Infrared Variable Star Catalogue for the Central Kiloparsec, and Prospects for Star Formati"
+     },
+     {
+      "bibcode": "2017MNRAS.470.3427D",
+      "year": "2017",
+      "title": "Near-infrared variability study of the central 2.3 arcmin \u00d7 2.3 arcmin of the Galactic Centre - I. Catalogue of variable sources"
+     },
+     {
+      "bibcode": "2017MNRAS.471.3617D",
+      "year": "2017",
+      "title": "Near-infrared variability study of the central 2.3 \u00d7 2.3 arcmin<SUP>2</SUP> of the Galactic Centre - II. Identification of RR Lyrae stars in"
+     },
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     },
+     {
+      "bibcode": "2020MNRAS.496.5503B",
+      "year": "2020",
+      "title": "Progenitor, precursor, and evolution of the dusty remnant of the stellar merger M31-LRN-2015"
+     },
+     {
+      "bibcode": "2026MNRAS.546ag052B",
+      "year": "2026",
+      "title": "The fate of the failed supernova candidate M31-2014-DS1"
+     },
+     {
+      "bibcode": "2023ApJ...952L..30J",
+      "year": "2023",
+      "title": "A Luminous Red Supergiant and Dusty Long-period Variable Progenitor for SN 2023ixf"
+     },
+     {
+      "bibcode": "2006Sci...314..623H",
+      "year": "2006",
+      "title": "The Phase-Dependent Infrared Brightness of the Extrasolar Planet \u03c5 Andromedae b"
+     },
+     {
+      "bibcode": "2019ApJ...877...49G",
+      "year": "2019",
+      "title": "An Infrared Census of DUST in Nearby Galaxies with Spitzer (DUSTiNGS). V. The Period-Luminosity Relation for Dusty Metal-poor AGB Stars"
+     },
+     {
+      "bibcode": "2026NatAs..10..702M",
+      "year": "2026",
+      "title": "The dramatic transition of the extreme red supergiant WOH G64 to a yellow hypergiant"
+     },
+     {
+      "bibcode": "1977ApJ...215..552B",
+      "year": "1977",
+      "title": "SiO masers in variable stars."
+     },
+     {
+      "bibcode": "2022Innov...300224Y",
+      "year": "2022",
+      "title": "Overview of the LAMOST survey in the first decade"
+     },
+     {
+      "bibcode": "2018ApJ...861..102H",
+      "year": "2018",
+      "title": "The Identification of Hydrogen-deficient Cataclysmic Variable Donor Stars"
+     },
+     {
+      "bibcode": "2021ApJ...922..177M",
+      "year": "2021",
+      "title": "Testing Evolutionary Models with Red Supergiant and Wolf-Rayet Populations"
+     },
+     {
+      "bibcode": "2025OJAp....8E.163P",
+      "year": "2025",
+      "title": "The Unhurried Universe: A Continued Search for Long Term Variability in ASAS-SN"
+     },
+     {
+      "bibcode": "2003MmSAI..74...19M",
+      "year": "2003",
+      "title": "My researches at the infrared doors"
+     },
+     {
+      "bibcode": "2019CoSka..49...19S",
+      "year": "2019",
+      "title": "Photometry of Symbiotic Stars - XIV"
+     },
+     {
+      "bibcode": "2021A&A...653A.134B",
+      "year": "2021",
+      "title": "The luminous red nova AT 2018bwo in NGC 45 and its binary yellow supergiant progenitor"
+     },
+     {
+      "bibcode": "2022AJ....163...97D",
+      "year": "2022",
+      "title": "Red Variable Stars in Three M81 Group Dwarf Galaxies"
+     },
+     {
+      "bibcode": "2020AdSpR..66.1147D",
+      "year": "2020",
+      "title": "On a century of extragalactic novae and the rise of the rapid recurrent novae"
+     },
+     {
+      "bibcode": "2006JKAS...39...25L",
+      "year": "2006",
+      "title": "Photometric Study of the Near-Contact Binary CN Andromedae"
+     },
+     {
+      "bibcode": "2026arXiv261037591A",
+      "year": "2026",
+      "title": "The UKIRT M33 Monitoring Project - VII. A 15-year K-band photometric catalogue of long-period variable stars in the central kiloparsec of M3"
+     },
+     {
+      "bibcode": "2026arXiv260719989J",
+      "year": "2026",
+      "title": "The UK Infrared Telescope M33 monitoring project. VI. Feedback from dusty stellar winds across the galactic disc"
+     }
+    ]
+   }
+  },
+  "sexagesimal": "00:47:02.8 +42:33:49"
+ },
+ "NGC2403|1153p651|69": {
+  "galaxy": "NGC2403",
+  "ra": 114.2278391484732,
+  "dec": 65.59804529394863,
+  "gaia_3as": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad_10as": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[RBF2020] NGC 2403 AS431",
+     "otype": "Cl*",
+     "ra": 114.227784,
+     "dec": 65.598889,
+     "sep": 3.038449020704329
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS202",
+     "otype": "Cl*",
+     "ra": 114.224911,
+     "dec": 65.598053,
+     "sep": 4.355087197302712
+    },
+    {
+     "main_id": "CXOU J073654.5+653547",
+     "otype": "X",
+     "ra": 114.22708333333333,
+     "dec": 65.59666666666666,
+     "sep": 5.088776628467617
+    },
+    {
+     "main_id": "Gaia DR3 1089775662765747840",
+     "otype": "RR?",
+     "ra": 114.22654158055002,
+     "dec": 65.59668191114,
+     "sep": 5.273969615808598
+    },
+    {
+     "main_id": "[KSK2013] N 2403  5",
+     "otype": "s?b",
+     "ra": 114.22632,
+     "dec": 65.59669,
+     "sep": 5.376840450405502
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS275",
+     "otype": "Cl*",
+     "ra": 114.22720800000002,
+     "dec": 65.596491,
+     "sep": 5.673655076703312
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS354",
+     "otype": "Cl*",
+     "ra": 114.230228,
+     "dec": 65.596702,
+     "sep": 6.000778657924403
+    },
+    {
+     "main_id": "[DRM99] 4-35",
+     "otype": "*",
+     "ra": 114.2305,
+     "dec": 65.59672222222223,
+     "sep": 6.192652668138489
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS344",
+     "otype": "Cl*",
+     "ra": 114.23066500000002,
+     "dec": 65.599514,
+     "sep": 6.754181732849316
+    },
+    {
+     "main_id": "[DRM99] 4-34",
+     "otype": "*",
+     "ra": 114.22716666666666,
+     "dec": 65.59594444444444,
+     "sep": 7.628910696289475
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS163",
+     "otype": "Cl*",
+     "ra": 114.226337,
+     "dec": 65.595939,
+     "sep": 7.904962613605018
+    },
+    {
+     "main_id": "NAME NGC 2403 Group",
+     "otype": "GrG",
+     "ra": 114.225,
+     "dec": 65.6,
+     "sep": 8.206571772676508
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS113",
+     "otype": "Cl*",
+     "ra": 114.22788400000002,
+     "dec": 65.59572,
+     "sep": 8.371324021870583
+    },
+    {
+     "main_id": "[LBZ2013] NGC 2403  136",
+     "otype": "EmO",
+     "ra": 114.22166666666666,
+     "dec": 65.5983611111111,
+     "sep": 9.25033666815391
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS542",
+     "otype": "Cl*",
+     "ra": 114.222823,
+     "dec": 65.599589,
+     "sep": 9.302642196944396
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS539",
+     "otype": "Cl*",
+     "ra": 114.230816,
+     "dec": 65.595772,
+     "sep": 9.30480681223688
+    }
+   ]
+  },
+  "allwise_6as": {
+   "status": "ok",
+   "rows": []
+  },
+  "seip_4as": {
+   "status": "ok",
+   "rows": []
+  },
+  "mast_1as": {
+   "status": "ok",
+   "n": 30,
+   "obs": [
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     49468.6
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F439W",
+     49468.6
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F469N",
+     49468.7
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F547M",
+     49469.0
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F502N",
+     49469.0
+    ],
+    [
+     "HST",
+     "NICMOS/NIC3",
+     "F187N",
+     50968.9
+    ],
+    [
+     "HST",
+     "NICMOS/NIC3",
+     "F160W",
+     50968.9
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F547M",
+     51992.0
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     51992.0
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F475W",
+     53234.1
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53234.1
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53234.1
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53234.2
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F658N",
+     53234.2
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F658N",
+     53458.3
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53458.3
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53458.3
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     55255.8
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     55255.8
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     55308.3
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     55308.3
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     55308.3
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F127M",
+     55481.2
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     55481.2
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F153M",
+     55481.2
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     58268.6
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     58268.6
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     58268.7
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     58594.9
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     58594.9
+    ]
+   ]
+  },
+  "tns_30as": {
+   "status": "ok",
+   "rows": []
+  },
+  "ads": {
+   "full:\"07:36:54.7\"": {
+    "n": 2,
+    "docs": [
+     {
+      "bibcode": "2024EcInd.15811526H",
+      "year": "2024",
+      "title": "Comparison of model selection and data bias on the prediction performance of purpleback flying squid (Sthenoteuthis oualaniensis) fishing gr"
+     },
+     {
+      "bibcode": "2018A&A...619A...1B",
+      "year": "2018",
+      "title": "The 55 Cancri system reassessed"
+     }
+    ]
+   },
+   "full:\"073654.7\"": {
+    "n": 2,
+    "docs": [
+     {
+      "bibcode": "2024EcInd.15811526H",
+      "year": "2024",
+      "title": "Comparison of model selection and data bias on the prediction performance of purpleback flying squid (Sthenoteuthis oualaniensis) fishing gr"
+     },
+     {
+      "bibcode": "2018A&A...619A...1B",
+      "year": "2018",
+      "title": "The 55 Cancri system reassessed"
+     }
+    ]
+   },
+   "full:\"07 36 54.7\"": {
+    "n": 1,
+    "docs": [
+     {
+      "bibcode": "1976ApJS...30...97D",
+      "year": "1976",
+      "title": "The galactic distribution of interstellar absorption as determined from the Celescope catalog of ultraviolet stellar observations and a new "
+     }
+    ]
+   },
+   "full:\"114.228\" full:\"65.598\"": {
+    "n": 1,
+    "docs": [
+     {
+      "bibcode": "2020arXiv200105594L",
+      "year": "2020",
+      "title": "Thermal Emission Spectroscopy of Single, Isolated Carbon Nanoparticles: Effects of Particle Size, Material, Charge, Excitation Wavelength, a"
+     }
+    ]
+   },
+   "full:\"NGC2403\" full:(\"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\" OR \"periodic dust\")": {
+    "n": 102,
+    "docs": [
+     {
+      "bibcode": "2021ApJ...909..113L",
+      "year": "2021",
+      "title": "Revealing Efficient Dust Formation at Low Metallicity in Extragalactic Carbon-rich Wolf-Rayet Binaries"
+     },
+     {
+      "bibcode": "2026arXiv260900477R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2021MNRAS.505.5029W",
+      "year": "2021",
+      "title": "The episodic dust-making Wolf-Rayet star HD 38030 in the Large Magellanic Cloud"
+     },
+     {
+      "bibcode": "2001PASP..113..692S",
+      "year": "2001",
+      "title": "Post-Eruption Detection of Variable 12 in NGC 2403 (SN 1954j): Another \u03b7 Carinae Variable"
+     },
+     {
+      "bibcode": "2017ApJ...848...86H",
+      "year": "2017",
+      "title": "A Tale of Two Impostors: SN2002kg and SN1954J in NGC 2403"
+     },
+     {
+      "bibcode": "2013ApJ...762...64G",
+      "year": "2013",
+      "title": "The Mid-IR Contribution of Dust-enshrouded Stars in Six Nearby Galaxies"
+     },
+     {
+      "bibcode": "1984MNRAS.207..801M",
+      "year": "1984",
+      "title": "H II regions and the extinction of Cepheids in NGC 2403."
+     },
+     {
+      "bibcode": "2006astro.ph..3025V",
+      "year": "2006",
+      "title": "The Type IIn Supernova 2002kg: The Outburst of a Luminous Blue Variable Star in NGC 2403"
+     },
+     {
+      "bibcode": "2020MNRAS.499.2116M",
+      "year": "2020",
+      "title": "The nature of the symbiotic candidate 2MASS J07363415+6538548 in the field of NGC 2403"
+     },
+     {
+      "bibcode": "2021jwst.prop.1863L",
+      "year": "2021",
+      "title": "Confirming the First Low-Metallicity Wolf-Rayet Dust Factory"
+     },
+     {
+      "bibcode": "2011A&A...527A..61S",
+      "year": "2011",
+      "title": "Dust formation in the ejecta of the type II-P supernova 2004dj"
+     },
+     {
+      "bibcode": "2017MNRAS.466..105A",
+      "year": "2017",
+      "title": "Galaxy simulation with dust formation and destruction"
+     },
+     {
+      "bibcode": "2019MNRAS.489.1986P",
+      "year": "2019",
+      "title": "Deep late-time observations of the supernova impostors SN 1954J and SN 1961V"
+     },
+     {
+      "bibcode": "2024ApJ...974...20W",
+      "year": "2024",
+      "title": "The Metallicity Dependence of PAH Emission in Galaxies. I. Insights from Deep Radial Spitzer Spectroscopy"
+     },
+     {
+      "bibcode": "1999PASP..111.1124H",
+      "year": "1999",
+      "title": "\u03b7 Carinae's Second Eruption and the Light Curves of the \u03b7 Carinae Variables"
+     },
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     },
+     {
+      "bibcode": "2011ApJ...732..109M",
+      "year": "2011",
+      "title": "Dust and the Type II-plateau Supernova 2004dj"
+     },
+     {
+      "bibcode": "2026PASP..138j4207R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2012ApJ...758..142K",
+      "year": "2012",
+      "title": "Unmasking the Supernova Impostors"
+     },
+     {
+      "bibcode": "2026arXiv260904320T",
+      "year": "2026",
+      "title": "Resolved Dust-Gas-Metallicity relations in nearby spiral galaxies"
+     },
+     {
+      "bibcode": "2011A&ARv..19...43G",
+      "year": "2011",
+      "title": "Production of dust by massive stars at high redshift"
+     },
+     {
+      "bibcode": "2010AJ....139.1451S",
+      "year": "2010",
+      "title": "Discovery of Precursor Luminous Blue Variable Outbursts in Two Recent Optical Transients: The Fitfully Variable Missing Links UGC 2773-OT an"
+     },
+     {
+      "bibcode": "2013ApJ...767...52K",
+      "year": "2013",
+      "title": "Finding \u03b7 Car Analogs in Nearby Galaxies Using Spitzer. I. Candidate Selection"
+     },
+     {
+      "bibcode": "2009ASPC..418..181S",
+      "year": "2009",
+      "title": "Near to Mid-Infrared Observations of Recent Supernovae with Infrared Camera (IRC) onboard AKARI"
+     },
+     {
+      "bibcode": "2019AAS...23345604P",
+      "year": "2019",
+      "title": "Deep Late-Time Observations of the Supernova Impostors SN 1954J and SN 1961V"
+     },
+     {
+      "bibcode": "2020Galax...8...20W",
+      "year": "2020",
+      "title": "Luminous Blue Variables"
+     },
+     {
+      "bibcode": "2025ApJS..276....2C",
+      "year": "2025",
+      "title": "The Resolved Behavior of Dust Mass, Polycyclic Aromatic Hydrocarbon Fraction, and Radiation Field in \u223c800 Nearby Galaxies"
+     },
+     {
+      "bibcode": "2009RAA.....9..783Z",
+      "year": "2009",
+      "title": "Late-time photometry of two nearby type II-P supernovae: 2004dj and 2004et"
+     },
+     {
+      "bibcode": "2026enap....2..508S",
+      "year": "2026",
+      "title": "Luminous blue variables"
+     },
+     {
+      "bibcode": "2025prim.book..329C",
+      "year": "2025",
+      "title": "Measuring Interstellar Carbon Abundance and Depletion via 158 \u00b5m [CII] Absorption"
+     }
+    ]
+   },
+   "full:\"NGC2403\" full:(\"infrared variable\" OR \"mid-infrared variable\" OR SPIRITS) full:(periodic OR \"long-period\")": {
+    "n": 10,
+    "docs": [
+     {
+      "bibcode": "2026arXiv260900477R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2022ApJ...928..158B",
+      "year": "2022",
+      "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+     },
+     {
+      "bibcode": "2021ApJ...909..113L",
+      "year": "2021",
+      "title": "Revealing Efficient Dust Formation at Low Metallicity in Extragalactic Carbon-rich Wolf-Rayet Binaries"
+     },
+     {
+      "bibcode": "2026PASP..138j4207R",
+      "year": "2026",
+      "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+     },
+     {
+      "bibcode": "2021AJ....162..152D",
+      "year": "2021",
+      "title": "New Blue and Red Variable Stars in NGC 247"
+     },
+     {
+      "bibcode": "2022Univ....8..493C",
+      "year": "2022",
+      "title": "Gap Transients Interacting with Circumstellar Medium"
+     },
+     {
+      "bibcode": "2021MNRAS.505.5029W",
+      "year": "2021",
+      "title": "The episodic dust-making Wolf-Rayet star HD 38030 in the Large Magellanic Cloud"
+     },
+     {
+      "bibcode": "2009ApJ...705.1364T",
+      "year": "2009",
+      "title": "A New Class of Luminous Transients and a First Census of their Massive Stellar Progenitors"
+     },
+     {
+      "bibcode": "2003PASP..115..514T",
+      "year": "2003",
+      "title": "Astrophysics in 2002"
+     },
+     {
+      "bibcode": "2025prim.book.....M",
+      "year": "2025",
+      "title": "PRIMA General Observer Science Book Volume 2"
+     }
+    ]
+   }
+  },
+  "sexagesimal": "07:36:54.7 +65:35:53"
+ }
+}
