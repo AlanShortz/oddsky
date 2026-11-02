@@ -1,0 +1,18 @@
+== NGC3239_33 156.2910 17.1639
+{"total": null, "page": null, "next": null, "has_next": false, "prev": null, "has_prev": false, "items": []}
+== M81_9 148.7390 69.1468
+{"total": null, "page": null, "next": null, "has_next": false, "prev": null, "has_prev": false, "items": []}
+== NGC2976_5 146.7650 67.9350
+{"total": null, "page": null, "next": null, "has_next": false, "prev": null, "has_prev": false, "items": []}
+== IC342_26 56.5658 68.1491
+{"total": null, "page": null, "next": null, "has_next": false, "prev": null, "has_prev": false, "items": [{"oid": "ZTF20abxovha", "ndethist": "7", "ncovhist": 523, "mjdstarthist": 59046.452673600055, "mjdendhist": 59117.37872690009, "corrected": true, "stellar": false, "ndet": 5, "g_r_max": null, "g_r_max_corr": null, "g_r_mean": null, "g_r_mean_corr": null, "firstmjd": 59090.46327550011, "lastmjd": 59117.37872690009, "deltajd": 26.915451399981976, "meanra": 56.5658758, "meandec": 68.14909329999999, "sigmara": 0.00016959653593144738, "sigmadec": 4.018700038545588e-05, "class": null, "classifier": null, "probability": null, "step_id_corr": "corr_bulk_0.0.1"}]}
+== HolmII_21 124.803 70.7187
+{"total": null, "page": null, "next": null, "has_next": false, "prev": null, "has_prev": false, "items": []}
+== IC342_1 56.2762 68.0725
+{"total": null, "page": null, "next": null, "has_next": false, "prev": null, "has_prev": false, "items": []}
+== UGCA127_30 95.2591 -8.4826
+{"total": null, "page": null, "next": null, "has_next": false, "prev": null, "has_prev": false, "items": []}
+== M101_19 210.729 54.374
+{"total": null, "page": null, "next": null, "has_next": false, "prev": null, "has_prev": false, "items": [{"oid": "ZTF18aajytik", "ndethist": "104", "ncovhist": 1668, "mjdstarthist": 58223.29983799998, "mjdendhist": 59012.205000000075, "corrected": true, "stellar": false, "ndet": 6, "g_r_max": -0.15460014, "g_r_max_corr": 0.21091305, "g_r_mean": -0.08393097, "g_r_mean_corr": 0.28712285, "firstmjd": 58279.22804399999, "lastmjd": 59012.205000000075, "deltajd": 732.9769560000859, "meanra": 210.72917964999996, "meandec": 54.37414520000001, "sigmara": 8.077900098334873e-05, "sigmadec": 0.00010134598166571618, "class": null, "classifier": null, "probability": null, "step_id_corr": "corr_bulk_0.0.1"}]}
+== IC342_59 56.5002 68.0429
+{"total": null, "page": null, "next": null, "has_next": false, "prev": null, "has_prev": false, "items": []}

@@ -1,0 +1,5 @@
+t_mjd,mag,err,band,survey,flag,n_exp,scatter
+57458.5794394,13.721,0.046,W1,NEOWISE,few_exposures,1,0.046
+57458.5794394,13.284,0.088,W2,NEOWISE,few_exposures,1,0.088
+60373.6382413,13.761,0.052,W1,NEOWISE,few_exposures,1,0.052
+60373.6382413,13.216,0.101,W2,NEOWISE,few_exposures,1,0.101

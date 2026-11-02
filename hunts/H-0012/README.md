@@ -489,6 +489,17 @@ rank in the obscured-transient top 31: SN 2023ixf #1, SN 2017eaw #2, AT 2023nzt 
 events in the 2011-13 gap with no NEOWISE coverage, or events near masked nuclei; SN 2011dh (M51) and SN 2014J (M82) have no detection
 within 6" and are under investigation (masking).
 
-**Leads (unchecked; referee pending).** Obscured transients: an unidentified 2019-2023 rise in NGC 4945 (196.4697 −49.4162; peak
+**Referee of the leads ([report](reviews/claude-referee-triage-2026-11-01.md)).** No briefed lead is a credible failed supernova.
+The strongest result is an object outside the brief: **an apparently unreported obscured transient in NGC 3239** (156.2910 +17.1639):
+a W1/W2 transient on 2020 Nov 21 (≈1.6 × 10⁵ L☉) fading over ~1.5 yr, with nothing optical (no TNS or ZTF alert; the galaxy was in
+solar conjunction in August 2020), and an HST point source 0.87" away in an image taken 85 days after the WISE peak (F606W ≈ 25.8 AB),
+absent in 2022 and 2025: probably a dust-buried supernova. An independent check is under way; a manual ATel search is still needed.
+Real infrared-only outbursts worth cases: NGC 4945 (a 2018-24 rise of a dusty star, possibly an obscured red nova), M81 (a 2023-24
+outburst in a compact HII region), NGC 55 (a decade-long brightening, accelerating in 2023-24) and IC 342 rank #26 (a luminous star
+brightening in the optical, then the infrared). IC 342's top fader is most likely cooling dust from an unrecorded pre-2004 event;
+NGC 2976's is probably a background AGN. The masks hide real events in galaxy cores (SN 2014J in M82; 44-92% of W1 light masked in
+the nuclear starbursts); SN 2011dh fell in the 2011-13 gap. A revised score puts DS1 #1 and BH1 #9; tool v2 is in progress.
+
+**Leads before the referee (superseded above).** Obscured transients: an unidentified 2019-2023 rise in NGC 4945 (196.4697 −49.4162; peak
 3.3 × 10⁵ L☉, no Gaia source), and rising sources in M81, NGC 55 and M101. Failed-SN-like: unidentified faders in IC 342 (possibly
 a background AGN) and NGC 2976, and many red faders in M31 and M33 (dusty AGB stars or background AGN are the likely explanations).

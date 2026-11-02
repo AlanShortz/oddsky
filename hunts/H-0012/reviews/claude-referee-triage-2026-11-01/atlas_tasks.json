@@ -1,0 +1,56 @@
+[
+ {
+  "lead": "NGC4945 obs#3",
+  "ra": 196.4697,
+  "dec": -49.4162,
+  "use_reduced": false,
+  "mjd_min": 57200.0,
+  "task_url": "https://fallingstar-data.com/forcedphot/queue/5280888/",
+  "submitted": "2026-11-01T23:33:16+00:00"
+ },
+ {
+  "lead": "M81 obs#9",
+  "ra": 148.739,
+  "dec": 69.1468,
+  "use_reduced": false,
+  "mjd_min": 57200.0,
+  "task_url": "https://fallingstar-data.com/forcedphot/queue/5280889/",
+  "submitted": "2026-11-01T23:33:16+00:00"
+ },
+ {
+  "lead": "NGC55 obs#14",
+  "ra": 3.75575,
+  "dec": -39.2033,
+  "use_reduced": false,
+  "mjd_min": 57200.0,
+  "task_url": "https://fallingstar-data.com/forcedphot/queue/5280890/",
+  "submitted": "2026-11-01T23:33:16+00:00"
+ },
+ {
+  "lead": "NGC3239 obs#33",
+  "ra": 156.291,
+  "dec": 17.1639,
+  "use_reduced": false,
+  "mjd_min": 57200.0,
+  "task_url": "https://fallingstar-data.com/forcedphot/queue/5280891/",
+  "submitted": "2026-11-01T23:33:17+00:00"
+ },
+ {
+  "lead": "UGCA127 obs#30",
+  "ra": 95.2591,
+  "dec": -8.4826,
+  "use_reduced": false,
+  "mjd_min": 57200.0,
+  "task_url": "https://fallingstar-data.com/forcedphot/queue/5280892/",
+  "submitted": "2026-11-01T23:33:17+00:00"
+ },
+ {
+  "lead": "IC342 obs#26",
+  "ra": 56.5658,
+  "dec": 68.1491,
+  "use_reduced": false,
+  "mjd_min": 57200.0,
+  "task_url": "https://fallingstar-data.com/forcedphot/queue/5280893/",
+  "submitted": "2026-11-01T23:33:18+00:00"
+ }
+]

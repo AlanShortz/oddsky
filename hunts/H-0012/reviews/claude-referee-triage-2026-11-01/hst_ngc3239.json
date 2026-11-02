@@ -1,0 +1,10 @@
+{
+ "scale_B_to_A": 8.148215330460851e-20,
+ "net_flux_flam": -0.014305722014424756,
+ "net_snr": -0.34400324835945645,
+ "note": "aperture r=0.15\", difference WFC3 F606W (2021-02-15) minus scaled ACS F606W (2022-12-11)",
+ "mag_AB_5sigma_limit": 27.76573741351181,
+ "max_snr_within_1p2": 8.35194673463523,
+ "frac_control_apertures_above_that": 0.0003414634146341463,
+ "five_sigma_mag_AB_r012": 26.3598975980742
+}

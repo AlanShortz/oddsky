@@ -1,0 +1,348 @@
+{
+ "M31 fsn#4": {
+  "lggs": [],
+  "ps1": [
+   {
+    "objID": 156540100715293285,
+    "raMean": 10.07153215,
+    "decMean": 40.45220829,
+    "gMeanPSFMag": -999.0,
+    "rMeanPSFMag": -999.0,
+    "iMeanPSFMag": -999.0,
+    "zMeanPSFMag": 21.30489921569824,
+    "yMeanPSFMag": -999.0,
+    "iMeanKronMag": -999.0,
+    "nDetections": 1
+   }
+  ],
+  "ztf": "ERR https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves unavailable after 3 attempts: The read operation timed out"
+ },
+ "M33 fsn#10": {
+  "lggs": [
+   "J013330.29+303923.3\t22.326\t 0.345\t-0.258\t 0.498\t 0.814\t0.79",
+   "J013330.33+303925.3\t22.287\t 0.531\t 0.531\t 0.256\t      \t1.93"
+  ],
+  "ps1": [
+   {
+    "objID": 144780233762019152,
+    "raMean": 23.37619673,
+    "decMean": 30.65712551,
+    "gMeanPSFMag": 22.876800537109375,
+    "rMeanPSFMag": -999.0,
+    "iMeanPSFMag": -999.0,
+    "zMeanPSFMag": -999.0,
+    "yMeanPSFMag": -999.0,
+    "iMeanKronMag": -999.0,
+    "nDetections": 1
+   },
+   {
+    "objID": 144780233760928378,
+    "raMean": 23.37609759,
+    "decMean": 30.65649889,
+    "gMeanPSFMag": -999.0,
+    "rMeanPSFMag": -999.0,
+    "iMeanPSFMag": 21.56060028076172,
+    "zMeanPSFMag": -999.0,
+    "yMeanPSFMag": -999.0,
+    "iMeanKronMag": -999.0,
+    "nDetections": 1
+   }
+  ],
+  "ztf": "ERR https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves unavailable after 3 attempts: Client error '400 Bad Request' for url 'https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves?POS=CIRCLE+23.376+30.6566+0.000556&BANDNAME=g%2Cr%2Ci&FORMAT=csv&BAD_CATFLAGS_MASK=32768'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+ },
+ "M33 fsn#12": {
+  "lggs": [],
+  "ps1": [
+   {
+    "objID": 145210238549913565,
+    "raMean": 23.855048143080843,
+    "decMean": 31.01080913092508,
+    "gMeanPSFMag": -999.0,
+    "rMeanPSFMag": 21.464799880981445,
+    "iMeanPSFMag": 21.111299514770508,
+    "zMeanPSFMag": 19.819000244140625,
+    "yMeanPSFMag": 19.84280014038086,
+    "iMeanKronMag": 20.75760078430176,
+    "nDetections": 35
+   }
+  ],
+  "ztf": "ERR https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves unavailable after 3 attempts: Client error '400 Bad Request' for url 'https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves?POS=CIRCLE+23.8551+31.0109+0.000556&BANDNAME=g%2Cr%2Ci&FORMAT=csv&BAD_CATFLAGS_MASK=32768'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+ },
+ "M33 fsn#13": {
+  "lggs": [],
+  "ps1": [
+   {
+    "objID": 144970237018678442,
+    "raMean": 23.701892880733062,
+    "decMean": 30.814826997479173,
+    "gMeanPSFMag": -999.0,
+    "rMeanPSFMag": 21.719499588012695,
+    "iMeanPSFMag": 20.819000244140625,
+    "zMeanPSFMag": 19.936500549316406,
+    "yMeanPSFMag": 19.755399703979492,
+    "iMeanKronMag": 21.234600067138672,
+    "nDetections": 28
+   }
+  ],
+  "ztf": "ERR https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves unavailable after 3 attempts: Client error '400 Bad Request' for url 'https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves?POS=CIRCLE+23.7019+30.8149+0.000556&BANDNAME=g%2Cr%2Ci&FORMAT=csv&BAD_CATFLAGS_MASK=32768'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+ },
+ "M33 fsn#14": {
+  "lggs": [],
+  "ps1": [
+   {
+    "objID": 144760232929670801,
+    "raMean": 23.29303721563798,
+    "decMean": 30.633608343736565,
+    "gMeanPSFMag": -999.0,
+    "rMeanPSFMag": 21.157699584960938,
+    "iMeanPSFMag": 21.18440055847168,
+    "zMeanPSFMag": 20.487300872802734,
+    "yMeanPSFMag": -999.0,
+    "iMeanKronMag": 20.555299758911133,
+    "nDetections": 10
+   }
+  ],
+  "ztf": "ERR https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves unavailable after 3 attempts: Client error '400 Bad Request' for url 'https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves?POS=CIRCLE+23.293+30.6337+0.000556&BANDNAME=g%2Cr%2Ci&FORMAT=csv&BAD_CATFLAGS_MASK=32768'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400"
+ },
+ "M31 fsn#3": {
+  "lggs": [],
+  "ps1": [
+   {
+    "objID": 156100114582153689,
+    "raMean": 11.458198198360352,
+    "decMean": 40.08588811894989,
+    "gMeanPSFMag": 18.52090072631836,
+    "rMeanPSFMag": 17.722200393676758,
+    "iMeanPSFMag": 17.201099395751953,
+    "zMeanPSFMag": 17.028600692749023,
+    "yMeanPSFMag": 16.971900939941406,
+    "iMeanKronMag": 16.445499420166016,
+    "nDetections": 63
+   }
+  ],
+  "ztf": "ERR https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves unavailable after 3 attempts: [Errno 54] Connection reset by peer"
+ },
+ "M31 fsn#7": {
+  "lggs": [],
+  "ps1": [
+   {
+    "objID": 159270112735197772,
+    "raMean": 11.27352092,
+    "decMean": 42.73092758,
+    "gMeanPSFMag": -999.0,
+    "rMeanPSFMag": -999.0,
+    "iMeanPSFMag": 21.700899124145508,
+    "zMeanPSFMag": -999.0,
+    "yMeanPSFMag": -999.0,
+    "iMeanKronMag": -999.0,
+    "nDetections": 1
+   },
+   {
+    "objID": 159270112730217386,
+    "raMean": 11.27304138584002,
+    "decMean": 42.73059343266035,
+    "gMeanPSFMag": 21.251100540161133,
+    "rMeanPSFMag": 20.24930000305176,
+    "iMeanPSFMag": 19.903600692749023,
+    "zMeanPSFMag": 19.52869987487793,
+    "yMeanPSFMag": 19.322399139404297,
+    "iMeanKronMag": 19.532800674438477,
+    "nDetections": 65
+   }
+  ],
+  "ztf": "ERR https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves unavailable after 3 attempts: [Errno 54] Connection reset by peer"
+ },
+ "M31 fsn#9": {
+  "lggs": [],
+  "ps1": [
+   {
+    "objID": 156380097197102999,
+    "raMean": 9.7198316205415,
+    "decMean": 40.31850703266723,
+    "gMeanPSFMag": -999.0,
+    "rMeanPSFMag": 21.840599060058594,
+    "iMeanPSFMag": 21.3169002532959,
+    "zMeanPSFMag": 20.995100021362305,
+    "yMeanPSFMag": -999.0,
+    "iMeanKronMag": 21.03849983215332,
+    "nDetections": 20
+   },
+   {
+    "objID": 156380097196112387,
+    "raMean": 9.71959803,
+    "decMean": 40.31813596,
+    "gMeanPSFMag": -999.0,
+    "rMeanPSFMag": -999.0,
+    "iMeanPSFMag": -999.0,
+    "zMeanPSFMag": 20.993200302124023,
+    "yMeanPSFMag": -999.0,
+    "iMeanKronMag": -999.0,
+    "nDetections": 1
+   }
+  ],
+  "ztf": "ERR https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves unavailable after 3 attempts: 504"
+ },
+ "M31 fsn#11": {
+  "lggs": [],
+  "ps1": [
+   {
+    "objID": 158500119764180686,
+    "raMean": 11.97642139,
+    "decMean": 42.08336071,
+    "gMeanPSFMag": -999.0,
+    "rMeanPSFMag": -999.0,
+    "iMeanPSFMag": 17.92009925842285,
+    "zMeanPSFMag": -999.0,
+    "yMeanPSFMag": -999.0,
+    "iMeanKronMag": 18.390600204467773,
+    "nDetections": 1
+   },
+   {
+    "objID": 158500119763890132,
+    "raMean": 11.976358072117764,
+    "decMean": 42.08292779366503,
+    "gMeanPSFMag": -999.0,
+    "rMeanPSFMag": 21.883800506591797,
+    "iMeanPSFMag": 21.929800033569336,
+    "zMeanPSFMag": -999.0,
+    "yMeanPSFMag": -999.0,
+    "iMeanKronMag": 21.914899826049805,
+    "nDetections": 3
+   }
+  ],
+  "ztf": "ERR https://irsa.ipac.caltech.edu/cgi-bin/ZTF/nph_light_curves unavailable after 3 attempts: The read operation timed out"
+ },
+ "M31 obs#27": {
+  "lggs": [],
+  "ps1": [],
+  "ztf": "empty"
+ },
+ "NGC2976 fsn#5": {
+  "lggs": [],
+  "ps1": [],
+  "ztf": {
+   "ZTF_g": {
+    "n": 43,
+    "slope_mag_per_yr": 0.009,
+    "mag_2019": 19.47,
+    "rms": 0.43
+   },
+   "ZTF_r": {
+    "n": 80,
+    "slope_mag_per_yr": -0.002,
+    "mag_2019": 19.52,
+    "rms": 0.33
+   }
+  }
+ },
+ "IC342 fsn#1": {
+  "lggs": [],
+  "ps1": [
+   {
+    "objID": 189680562774617956,
+    "raMean": 56.27746747,
+    "decMean": 68.07266628,
+    "gMeanPSFMag": -999.0,
+    "rMeanPSFMag": -999.0,
+    "iMeanPSFMag": 21.338300704956055,
+    "zMeanPSFMag": -999.0,
+    "yMeanPSFMag": -999.0,
+    "iMeanKronMag": -999.0,
+    "nDetections": 1
+   }
+  ],
+  "ztf": "empty"
+ },
+ "M101 obs#19": {
+  "lggs": [],
+  "ps1": [
+   {
+    "objID": 173242107288279758,
+    "raMean": 210.72897158,
+    "decMean": 54.37418666,
+    "gMeanPSFMag": -999.0,
+    "rMeanPSFMag": -999.0,
+    "iMeanPSFMag": 19.046899795532227,
+    "zMeanPSFMag": -999.0,
+    "yMeanPSFMag": -999.0,
+    "iMeanKronMag": -999.0,
+    "nDetections": 2
+   },
+   {
+    "objID": 173242107290769242,
+    "raMean": 210.72906132,
+    "decMean": 54.3737427,
+    "gMeanPSFMag": 19.513599395751953,
+    "rMeanPSFMag": 18.962499618530273,
+    "iMeanPSFMag": 20.3794002532959,
+    "zMeanPSFMag": 18.815000534057617,
+    "yMeanPSFMag": 18.249000549316406,
+    "iMeanKronMag": -999.0,
+    "nDetections": 3
+   },
+   {
+    "objID": 173242107293359694,
+    "raMean": 210.72928578337297,
+    "decMean": 54.37412598191585,
+    "gMeanPSFMag": 16.665700912475586,
+    "rMeanPSFMag": 16.388399124145508,
+    "iMeanPSFMag": 17.5487003326416,
+    "zMeanPSFMag": 17.96739959716797,
+    "yMeanPSFMag": 17.816200256347656,
+    "iMeanKronMag": 16.792600631713867,
+    "nDetections": 91
+   }
+  ],
+  "ztf": {
+   "ZTF_g": {
+    "n": 1114,
+    "slope_mag_per_yr": 0.005,
+    "mag_2019": 17.27,
+    "rms": 0.05
+   },
+   "ZTF_i": {
+    "n": 330,
+    "slope_mag_per_yr": 0.018,
+    "mag_2019": 17.6,
+    "rms": 0.07
+   },
+   "ZTF_r": {
+    "n": 1019,
+    "slope_mag_per_yr": 0.006,
+    "mag_2019": 17.04,
+    "rms": 0.07
+   }
+  }
+ },
+ "M81 obs#9": {
+  "lggs": [],
+  "ps1": [
+   {
+    "objID": 190971487391496757,
+    "raMean": 148.7390821611271,
+    "decMean": 69.14663721925092,
+    "gMeanPSFMag": 18.432899475097656,
+    "rMeanPSFMag": 17.960399627685547,
+    "iMeanPSFMag": 18.676000595092773,
+    "zMeanPSFMag": 19.084999084472656,
+    "yMeanPSFMag": 18.550600051879883,
+    "iMeanKronMag": 17.835100173950195,
+    "nDetections": 71
+   }
+  ],
+  "ztf": {
+   "ZTF_g": {
+    "n": 335,
+    "slope_mag_per_yr": 0.008,
+    "mag_2019": 18.17,
+    "rms": 0.15
+   },
+   "ZTF_r": {
+    "n": 120,
+    "slope_mag_per_yr": -0.004,
+    "mag_2019": 17.6,
+    "rms": 0.17
+   }
+  }
+ }
+}

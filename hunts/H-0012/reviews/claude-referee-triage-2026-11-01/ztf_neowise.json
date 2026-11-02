@@ -1,0 +1,315 @@
+{
+ "NGC3239 obs#33": {
+  "ztf": {
+   "status": "ok",
+   "n": 60,
+   "notes": [
+    "5 ZTF object IDs merged (one per field/filter)"
+   ],
+   "ZTF_g": {
+    "n": 12,
+    "mag_med": 20.9063644,
+    "mag_min": 19.5432663,
+    "mag_max": 21.1499271,
+    "t0": 58289.1786806,
+    "t1": 60755.3126273,
+    "t_min": 60755.3126273
+   },
+   "ZTF_i": {
+    "n": 5,
+    "mag_med": 20.1442833,
+    "mag_min": 19.959362,
+    "mag_max": 20.4054718,
+    "t0": 59257.4216551,
+    "t1": 59969.3519792,
+    "t_min": 59257.4216551
+   },
+   "ZTF_r": {
+    "n": 43,
+    "mag_med": 20.4492111,
+    "mag_min": 18.8556213,
+    "mag_max": 20.9462624,
+    "t0": 58217.2026273,
+    "t1": 60759.2019444,
+    "t_min": 60221.5224653
+   }
+  },
+  "neowise": {
+   "status": "ok",
+   "n": 20,
+   "notes": [
+    "rows_kept counts 6-month visits (W1 and W2), not exposures"
+   ]
+  }
+ },
+ "M81 obs#9": {
+  "ztf": {
+   "status": "ok",
+   "n": 2958,
+   "notes": [
+    "12 ZTF object IDs merged (one per field/filter)"
+   ],
+   "ZTF_g": {
+    "n": 609,
+    "mag_med": 18.2781715,
+    "mag_min": 17.4784431,
+    "mag_max": 18.5770779,
+    "t0": 58206.2892245,
+    "t1": 60961.5208102,
+    "t_min": 58505.4291204
+   },
+   "ZTF_r": {
+    "n": 238,
+    "mag_med": 17.7000809,
+    "mag_min": 16.7834511,
+    "mag_max": 19.3169384,
+    "t0": 58439.3467245,
+    "t1": 60772.3235301,
+    "t_min": 58884.1807176
+   }
+  },
+  "neowise": {
+   "status": "ok",
+   "n": 42,
+   "notes": [
+    "rows_kept counts 6-month visits (W1 and W2), not exposures"
+   ]
+  }
+ },
+ "M101 obs#19": {
+  "ztf": {
+   "status": "ok",
+   "n": 2474,
+   "notes": [
+    "4 ZTF object IDs merged (one per field/filter)"
+   ],
+   "ZTF_g": {
+    "n": 1114,
+    "mag_med": 17.28293995,
+    "mag_min": 17.0786819,
+    "mag_max": 17.498024,
+    "t0": 58202.3078125,
+    "t1": 60859.2765625,
+    "t_min": 59914.489537
+   },
+   "ZTF_i": {
+    "n": 330,
+    "mag_med": 17.62703705,
+    "mag_min": 17.4007492,
+    "mag_max": 17.8782787,
+    "t0": 58227.3858102,
+    "t1": 60363.3225231,
+    "t_min": 58905.3650116
+   },
+   "ZTF_r": {
+    "n": 1019,
+    "mag_med": 17.04842,
+    "mag_min": 16.7199059,
+    "mag_max": 17.4221039,
+    "t0": 58198.3699769,
+    "t1": 60859.230162,
+    "t_min": 59180.5529282
+   }
+  },
+  "neowise": {
+   "status": "ok",
+   "n": 44,
+   "notes": [
+    "rows_kept counts 6-month visits (W1 and W2), not exposures"
+   ]
+  }
+ },
+ "IC342 fsn#1": {
+  "ztf": {
+   "status": "empty",
+   "n": 0,
+   "notes": [
+    "no ZTF source (target may be brighter than ZTF saturation, ~12.5 mag)"
+   ]
+  },
+  "neowise": {
+   "status": "ok",
+   "n": 37,
+   "notes": [
+    "rows_kept counts 6-month visits (W1 and W2), not exposures"
+   ]
+  }
+ },
+ "NGC2976 fsn#5": {
+  "ztf": {
+   "status": "ok",
+   "n": 123,
+   "notes": [
+    "2 ZTF object IDs merged (one per field/filter)"
+   ],
+   "ZTF_g": {
+    "n": 43,
+    "mag_med": 19.4806004,
+    "mag_min": 18.3113785,
+    "mag_max": 20.5764236,
+    "t0": 58227.1765162,
+    "t1": 60966.4909722,
+    "t_min": 59894.3609838
+   },
+   "ZTF_r": {
+    "n": 80,
+    "mag_med": 19.5514574,
+    "mag_min": 18.5563869,
+    "mag_max": 20.2672653,
+    "t0": 58305.1813426,
+    "t1": 60968.4565741,
+    "t_min": 60336.3304745
+   }
+  },
+  "neowise": {
+   "status": "ok",
+   "n": 32,
+   "notes": [
+    "rows_kept counts 6-month visits (W1 and W2), not exposures"
+   ]
+  }
+ },
+ "IC342 obs#26": {
+  "ztf": {
+   "status": "ok",
+   "n": 410,
+   "notes": [
+    "4 ZTF object IDs merged (one per field/filter)"
+   ],
+   "ZTF_g": {
+    "n": 5,
+    "mag_med": 21.4395103,
+    "mag_min": 21.2258549,
+    "mag_max": 21.6280098,
+    "t0": 58896.2039931,
+    "t1": 60213.4448495,
+    "t_min": 59114.3455208
+   },
+   "ZTF_r": {
+    "n": 405,
+    "mag_med": 20.3382568,
+    "mag_min": 19.6290722,
+    "mag_max": 21.6500664,
+    "t0": 58216.1465856,
+    "t1": 60923.5185185,
+    "t_min": 59306.1997222
+   }
+  },
+  "neowise": {
+   "status": "ok",
+   "n": 42,
+   "notes": [
+    "rows_kept counts 6-month visits (W1 and W2), not exposures"
+   ]
+  }
+ },
+ "HolmII obs#21": {
+  "ztf": {
+   "status": "ok",
+   "n": 4214,
+   "notes": [
+    "8 ZTF object IDs merged (one per field/filter)"
+   ],
+   "ZTF_g": {
+    "n": 634,
+    "mag_med": 17.745764700000002,
+    "mag_min": 16.7990265,
+    "mag_max": 18.2760792,
+    "t0": 58205.2540278,
+    "t1": 60968.3903935,
+    "t_min": 59967.3308912
+   },
+   "ZTF_i": {
+    "n": 191,
+    "mag_med": 18.7791862,
+    "mag_min": 18.128273,
+    "mag_max": 19.6701908,
+    "t0": 58261.1850694,
+    "t1": 60577.5072569,
+    "t_min": 59530.508044
+   },
+   "ZTF_r": {
+    "n": 3383,
+    "mag_med": 18.180748,
+    "mag_min": 16.9243317,
+    "mag_max": 19.024765,
+    "t0": 58216.2118981,
+    "t1": 60968.4680324,
+    "t_min": 59229.2444792
+   }
+  },
+  "neowise": {
+   "status": "ok",
+   "n": 42,
+   "notes": [
+    "rows_kept counts 6-month visits (W1 and W2), not exposures"
+   ]
+  }
+ },
+ "NGC4945 obs#3": {
+  "ztf": {
+   "status": "empty",
+   "n": 0,
+   "notes": [
+    "south of ZTF's footprint"
+   ]
+  },
+  "neowise": {
+   "status": "ok",
+   "n": 34,
+   "notes": [
+    "rows_kept counts 6-month visits (W1 and W2), not exposures"
+   ]
+  }
+ },
+ "NGC55 obs#14": {
+  "ztf": {
+   "status": "empty",
+   "n": 0,
+   "notes": [
+    "south of ZTF's footprint"
+   ]
+  },
+  "neowise": {
+   "status": "ok",
+   "n": 42,
+   "notes": [
+    "rows_kept counts 6-month visits (W1 and W2), not exposures"
+   ]
+  }
+ },
+ "UGCA127 obs#30": {
+  "ztf": {
+   "status": "ok",
+   "n": 173,
+   "notes": [
+    "6 ZTF object IDs merged (one per field/filter)"
+   ],
+   "ZTF_g": {
+    "n": 39,
+    "mag_med": 20.9521828,
+    "mag_min": 20.202425,
+    "mag_max": 21.4957104,
+    "t0": 58373.5025,
+    "t1": 60648.3945139,
+    "t_min": 59249.2130208
+   },
+   "ZTF_r": {
+    "n": 133,
+    "mag_med": 20.0900841,
+    "mag_min": 19.3688259,
+    "mag_max": 20.6340408,
+    "t0": 58367.5016551,
+    "t1": 60957.5181944,
+    "t_min": 58783.5046065
+   }
+  },
+  "neowise": {
+   "status": "ok",
+   "n": 4,
+   "notes": [
+    "rows_kept counts 6-month visits (W1 and W2), not exposures"
+   ]
+  }
+ }
+}

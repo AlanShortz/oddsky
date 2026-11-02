@@ -1,0 +1,1737 @@
+{
+ "NGC4945 obs#3": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|SSTSL2 J130552.71-492458.3|196.46964 | -49.41621 |IrS||||     |  0.014|0|0|4|1|0|0|0",
+    "2|SSTSL2 J130552.72-492502.9|196.46971 | -49.41747 |IrS||||     |  0.077|0|0|2|1|0|0|0",
+    "3|SSTSL2 J130552.47-492451.9|196.46866 | -49.41442 |IrS||||     |  0.119|0|0|2|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "M81 obs#9": {
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "1070474938732140416",
+     "sep": 3.6336881078292103,
+     "phot_g_mean_mag": 21.119579315185547,
+     "bp_rp": 0.9507770538330078,
+     "parallax": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 0.0,
+     "ipd_frac_multi_peak": 0,
+     "pq": 0.0011782373767346144,
+     "pgal": 0.0016961002256721258,
+     "pstar": 0.9970901012420654,
+     "teff_gspphot": NaN
+    },
+    {
+     "sid": "1070474934439610752",
+     "sep": 0.0952736032869673,
+     "phot_g_mean_mag": 20.252756118774414,
+     "bp_rp": 0.37021446228027344,
+     "parallax": -2.064928074992038,
+     "parallax_over_error": -2.109315872192383,
+     "pmra": 1.2591377061975029,
+     "pmdec": 3.8082805865891647,
+     "pm": 4.011038303375244,
+     "ruwe": 1.8869709968566895,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 7.635009765625,
+     "ipd_frac_multi_peak": 4,
+     "pq": 2.463579340528099e-10,
+     "pgal": 1.0,
+     "pstar": 6.913768196186235e-14,
+     "teff_gspphot": NaN
+    },
+    {
+     "sid": "1070475007451172224",
+     "sep": 3.216811479460878,
+     "phot_g_mean_mag": 20.466699600219727,
+     "bp_rp": 0.2710094451904297,
+     "parallax": -5.002439333024087,
+     "parallax_over_error": -3.165637731552124,
+     "pmra": -2.184714027742094,
+     "pmdec": 3.8775661298136987,
+     "pm": 4.450673580169678,
+     "ruwe": 2.2048654556274414,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 12.730785369873047,
+     "ipd_frac_multi_peak": 12,
+     "pq": 3.8260278278912097e-10,
+     "pgal": 1.0,
+     "pstar": 3.025616053271146e-13,
+     "teff_gspphot": NaN
+    },
+    {
+     "sid": "1070475007451172480",
+     "sep": 3.7503656470783238,
+     "phot_g_mean_mag": 20.38690948486328,
+     "bp_rp": 0.4311256408691406,
+     "parallax": -0.4342790668037292,
+     "parallax_over_error": -0.775092363357544,
+     "pmra": 0.006880859730800756,
+     "pmdec": -0.10923284725725091,
+     "pm": 0.1094493567943573,
+     "ruwe": 0.9730680584907532,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 0.0,
+     "ipd_frac_multi_peak": 0,
+     "pq": 2.4218527183705874e-09,
+     "pgal": 0.9990953207015991,
+     "pstar": 0.0009046554914675653,
+     "teff_gspphot": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J095457.30+690848.1",
+     "ra": 148.7387665,
+     "dec": 69.1466982,
+     "w1mpro": 13.394000053405762,
+     "w1sigmpro": 0.03099999949336052,
+     "w2mpro": 13.027000427246094,
+     "w2sigmpro": 0.03200000151991844,
+     "w3mpro": 8.664999961853027,
+     "w3sigmpro": 0.03400000184774399,
+     "w4mpro": 6.051000118255615,
+     "w4sigmpro": 0.03999999910593033,
+     "cc_flags": "0000",
+     "ext_flg": 3,
+     "var_flg": "4100",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[HAE2008] 7",
+     "otype": "reg",
+     "ra": 148.73934166666666,
+     "dec": 69.14699722222224,
+     "nbref": 1,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 0.8341522809075024
+    },
+    {
+     "main_id": "HK NGC 3031 652",
+     "otype": "HII",
+     "ra": 148.73583333333335,
+     "dec": 69.1463888888889,
+     "nbref": 14,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 4.319605292100521
+    },
+    {
+     "main_id": "[BKC98] C3",
+     "otype": "MoC",
+     "ra": 148.73166666666668,
+     "dec": 69.14722222222223,
+     "nbref": 1,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 9.519774876855667
+    },
+    {
+     "main_id": "[LET2019] NGC 3031  27",
+     "otype": "HXB",
+     "ra": 148.738484,
+     "dec": 69.148575,
+     "nbref": 1,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 6.424120768322279
+    },
+    {
+     "main_id": "[PR95] 50996",
+     "otype": "HII",
+     "ra": 148.736875,
+     "dec": 69.14701666666667,
+     "nbref": 2,
+     "rvz_redshift": 0.0005505322999606044,
+     "sp_type": "",
+     "sep": 2.8326991226355394
+    }
+   ]
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J095457.30+690848.1|148.73877 |  69.14670 |HII||||18.0I|  0.008|1|0|13|2|0|0|0",
+    "2|NSA v1 404332|148.73918 |  69.14661 |G||||     |  0.012|1|0|0|1|0|0|0",
+    "3|SSTSL2 J095457.22+690847.5|148.73844 |  69.14653 |IrS||||     |  0.020|0|0|10|1|0|0|0",
+    "4|MESSIER 081:[NHM2010] 0477|148.73896 |  69.14641 |HII||||18.2I|  0.024|1|0|1|1|0|0|0",
+    "5|NGC 3031:[MKH2012] CLU052|148.73800 |  69.14700 |UvES||||     |  0.024|1|0|0|1|0|0|0",
+    "6|MESSIER 081:[PR95] 50993|148.74013 |  69.14646 |VisS||||18.3V|  0.031|2|0|1|1|0|0|0",
+    "7|MESSIER 081:[NHM2010] 0470|148.73746 |  69.14669 |VisS||||21.9I|  0.034|1|0|1|1|0|0|0",
+    "8|2CXO J095457.5+690850|148.73908 |  69.14754 |VisS||||21.7I|  0.045|1|0|13|2|0|0|0",
+    "9|MESSIER 081:[PR95] 50996|148.73687 |  69.14702 |HII|   165| 0.000550 |UUN |18.5V|  0.047|3|0|1|1|1|0|0",
+    "10|MESSIER 081:[NHM2010] 0467|148.73546 |  69.14644 |VisS||||21.9I|  0.079|1|0|1|1|0|0|0",
+    "11|NGC 3031:[HK83] 652|148.73642 |  69.14583 |HII||||     |  0.080|4|0|0|3|0|0|1",
+    "12|NGC 3031:[LET2019] 027|148.73848 |  69.14857 |XrayS||||     |  0.107|3|0|0|3|0|0|0",
+    "13|CXOGSG J095456.2+690842|148.73417 |  69.14500 |XrayS||||     |  0.149|1|0|1|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "NGC55 obs#14": {
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "4997972873064971392",
+     "sep": 4.128069522816204,
+     "phot_g_mean_mag": 20.77265167236328,
+     "bp_rp": 1.1209793090820312,
+     "parallax": 0.1637225514482496,
+     "parallax_over_error": 0.10244482755661011,
+     "pmra": 0.1310909375182568,
+     "pmdec": 1.9367329978646433,
+     "pm": 1.941164493560791,
+     "ruwe": 1.0516135692596436,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 2.033665657043457,
+     "ipd_frac_multi_peak": 0,
+     "pq": 0.6931505799293518,
+     "pgal": 0.0029579298570752144,
+     "pstar": 0.30389130115509033,
+     "teff_gspphot": NaN
+    },
+    {
+     "sid": "4997972873064171648",
+     "sep": 2.247003760292682,
+     "phot_g_mean_mag": 20.962631225585938,
+     "bp_rp": 1.4101600646972656,
+     "parallax": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 6.068450927734375,
+     "ipd_frac_multi_peak": 0,
+     "pq": 0.0020896296482533216,
+     "pgal": 0.00011372969311196357,
+     "pstar": 0.9967997074127197,
+     "teff_gspphot": NaN
+    },
+    {
+     "sid": "4997972873064171264",
+     "sep": 2.378070872706268,
+     "phot_g_mean_mag": 19.643423080444336,
+     "bp_rp": 2.0556278228759766,
+     "parallax": 0.44022557924313566,
+     "parallax_over_error": 0.8624906539916992,
+     "pmra": -1.269901189988232,
+     "pmdec": -1.8130022023958468,
+     "pm": 2.2135097980499268,
+     "ruwe": 1.447173833847046,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 3.071730852127075,
+     "ipd_frac_multi_peak": 4,
+     "pq": 0.0005426318384706974,
+     "pgal": 0.000632700277492404,
+     "pstar": 0.9988242983818054,
+     "teff_gspphot": NaN
+    },
+    {
+     "sid": "4997972873064170112",
+     "sep": 3.835455995719046,
+     "phot_g_mean_mag": 20.75201416015625,
+     "bp_rp": 0.9124050140380859,
+     "parallax": 1.534372930601494,
+     "parallax_over_error": 0.5289577841758728,
+     "pmra": -1.4462344205919173,
+     "pmdec": 2.0348282419407693,
+     "pm": 2.4964213371276855,
+     "ruwe": 1.1094918251037598,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 3.450915575027466,
+     "ipd_frac_multi_peak": 0,
+     "pq": 0.00910821370780468,
+     "pgal": 0.3320534825325012,
+     "pstar": 0.6588366627693176,
+     "teff_gspphot": NaN
+    },
+    {
+     "sid": "4997972873065292416",
+     "sep": 0.41687722261429433,
+     "phot_g_mean_mag": 21.11509132385254,
+     "bp_rp": NaN,
+     "parallax": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 7.296145915985107,
+     "ipd_frac_multi_peak": 0,
+     "pq": NaN,
+     "pgal": NaN,
+     "pstar": NaN,
+     "teff_gspphot": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[BWE2015] NGC   55  65",
+     "otype": "LXB",
+     "ra": 3.757318,
+     "dec": -39.204846,
+     "nbref": 1,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 7.078779415868857
+    },
+    {
+     "main_id": "[JW2016] T8",
+     "otype": "X",
+     "ra": 3.752583333333334,
+     "dec": -39.20455555555556,
+     "nbref": 1,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 9.923090044901326
+    },
+    {
+     "main_id": "[CHG2008] C2-37",
+     "otype": "*",
+     "ra": 3.7549583333333327,
+     "dec": -39.20561111111111,
+     "nbref": 2,
+     "rvz_redshift": 0.00056054478513623,
+     "sp_type": "A0I",
+     "sep": 8.608115877327949
+    },
+    {
+     "main_id": "SSTSL2 J001501.00-391216.9",
+     "otype": "MIR",
+     "ra": 3.754109999999999,
+     "dec": -39.20403000000001,
+     "nbref": 1,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 5.2761080436548475
+    }
+   ]
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|SSTSL2 J001501.40-391211.9|  3.75585 | -39.20333 |IrS||||     |  0.005|0|0|10|1|0|0|0",
+    "2|SSTSL2 J001501.26-391214.1|  3.75526 | -39.20392 |IrS||||     |  0.044|0|0|10|1|0|0|0",
+    "3|SSTSL2 J001501.49-391207.9|  3.75621 | -39.20221 |IrS||||     |  0.069|0|0|10|1|0|0|0",
+    "4|SSTSL2 J001501.79-391215.2|  3.75750 | -39.20423 |IrS||||     |  0.098|0|0|10|1|0|0|0",
+    "5|SSTSL2 J001501.00-391216.9|  3.75419 | -39.20472 |IrS|   120| 0.000400 |SUN |     |  0.112|1|0|10|2|1|0|0",
+    "6|CXOLV J001501.75-391217.4|  3.75732 | -39.20485 |XrayS||||     |  0.118|1|0|1|1|0|0|0",
+    "7|SSTSL2 J001501.05-391205.3|  3.75441 | -39.20149 |IrS||||     |  0.125|0|0|9|1|0|0|0",
+    "8|CXOLV J001500.86-391206.9|  3.75359 | -39.20193 |XrayS||||     |  0.130|1|0|1|1|0|0|0",
+    "9|SSTSL2 J001501.79-391205.5|  3.75748 | -39.20154 |IrS||||     |  0.133|0|0|8|1|0|0|0",
+    "10|SSTSL2 J001502.07-391213.8|  3.75865 | -39.20384 |IrS||||     |  0.139|0|0|10|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "M101 obs#19": {
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "1609278345497543424",
+     "sep": 0.917519049284036,
+     "phot_g_mean_mag": 18.72634506225586,
+     "bp_rp": 0.13788986206054688,
+     "parallax": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 21.870365142822266,
+     "ipd_frac_multi_peak": 9,
+     "pq": 0.006526042707264423,
+     "pgal": 0.010081784799695015,
+     "pstar": 0.9818135499954224,
+     "teff_gspphot": NaN
+    },
+    {
+     "sid": "1609278345495904640",
+     "sep": 0.6807512942590779,
+     "phot_g_mean_mag": 18.836761474609375,
+     "bp_rp": 0.21283340454101562,
+     "parallax": 0.44553879502757765,
+     "parallax_over_error": 0.6666591763496399,
+     "pmra": -4.503777058566156,
+     "pmdec": 0.0011066529860643754,
+     "pm": 4.503777027130127,
+     "ruwe": 3.3487560749053955,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 6.254089832305908,
+     "ipd_frac_multi_peak": 52,
+     "pq": 1.372453173331678e-08,
+     "pgal": 0.9108846187591553,
+     "pstar": 0.08911541849374771,
+     "teff_gspphot": NaN
+    },
+    {
+     "sid": "1609278345495904000",
+     "sep": 0.550808183923368,
+     "phot_g_mean_mag": 20.71107292175293,
+     "bp_rp": NaN,
+     "parallax": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 10.818034172058105,
+     "ipd_frac_multi_peak": 0,
+     "pq": NaN,
+     "pgal": NaN,
+     "pstar": NaN,
+     "teff_gspphot": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J140255.06+542227.5",
+     "ra": 210.7294374,
+     "dec": 54.374312,
+     "w1mpro": 13.751999855041504,
+     "w1sigmpro": 0.050999999046325684,
+     "w2mpro": 12.892999649047852,
+     "w2sigmpro": 0.03700000047683716,
+     "w3mpro": 8.454000473022461,
+     "w3sigmpro": 0.039000000804662704,
+     "w4mpro": 5.765999794006348,
+     "w4sigmpro": 0.06700000166893005,
+     "cc_flags": "0000",
+     "ext_flg": 2,
+     "var_flg": "nnnn",
+     "nb": 2,
+     "j_m_2mass": 16.791000366210938,
+     "h_m_2mass": 16.05900001525879,
+     "k_m_2mass": 15.449999809265137
+    },
+    {
+     "designation": "J140255.05+542222.3",
+     "ra": 210.7294077,
+     "dec": 54.372862,
+     "w1mpro": 14.354000091552734,
+     "w1sigmpro": 0.07599999755620956,
+     "w2mpro": 13.791999816894531,
+     "w2sigmpro": 0.06700000166893005,
+     "w3mpro": 9.241999626159668,
+     "w3sigmpro": 0.07199999690055847,
+     "w4mpro": 7.88700008392334,
+     "w4sigmpro": 0.42100000381469727,
+     "cc_flags": "0000",
+     "ext_flg": 2,
+     "var_flg": "nnnn",
+     "nb": 2,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[BKD2008] WR 258",
+     "otype": "PoG",
+     "ra": 210.72924999999998,
+     "dec": 54.37413888888889,
+     "nbref": 1,
+     "rvz_redshift": 0.00074,
+     "sp_type": "",
+     "sep": 0.7244511535091094
+    },
+    {
+     "main_id": "2CXO J140254.9+542227",
+     "otype": "HX?",
+     "ra": 210.72877794999997,
+     "dec": 54.37429839,
+     "nbref": 1,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 1.1707801478239726
+    },
+    {
+     "main_id": "HGGK  337",
+     "otype": "HII",
+     "ra": 210.72791666666666,
+     "dec": 54.37166666666667,
+     "nbref": 1,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 8.701781284198566
+    },
+    {
+     "main_id": "HGGK  341",
+     "otype": "HII",
+     "ra": 210.72916666666666,
+     "dec": 54.376111111111115,
+     "nbref": 1,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 7.608031319974695
+    },
+    {
+     "main_id": "2MASS J14025498+5422264",
+     "otype": "UV",
+     "ra": 210.729125,
+     "dec": 54.37402777777778,
+     "nbref": 1,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 0.28054866675169393
+    },
+    {
+     "main_id": "SDH 233",
+     "otype": "HII",
+     "ra": 210.73083333333335,
+     "dec": 54.37416666666667,
+     "nbref": 1,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 3.8909778171654184
+    },
+    {
+     "main_id": "[HBS84] 29",
+     "otype": "HII",
+     "ra": 210.72583333333333,
+     "dec": 54.37376666666667,
+     "nbref": 37,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 6.693344604257125
+    }
+   ]
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|NGC 5457:[MBM2012] Enuc. 02|210.72917 |  54.37389 |RadioS||||     |  0.009|3|0|0|3|0|0|0",
+    "2|2MASS J14025498+5422264|210.72928 |  54.37413 |*Cl|   228| 0.000761 |SLS |     |  0.013|3|0|15|6|1|0|0",
+    "3|2CXO J140254.9+542227|210.72878 |  54.37430 |XrayS||||     |  0.020|1|0|20|2|0|0|0",
+    "4|NGC 5457:[ZEH90] 042|210.72846 |  54.37386 |HII||||     |  0.021|1|0|0|1|0|0|0",
+    "5|WISEA J140255.06+542227.5|210.72944 |  54.37431 |HII||||     |  0.024|2|0|12|3|0|0|1",
+    "6|NGC 5457:[LMD2020] Enuc. 02A  |210.72950 |  54.37429 |RadioS||||     |  0.025|1|0|0|1|0|0|0",
+    "7|CXO J140255.1+542225|210.72989 |  54.37367 |XrayS||||     |  0.037|3|0|0|3|0|0|3",
+    "8|CXO J140254.6+542228|210.72776 |  54.37456 |HII|   222| 0.000740 |UUN |     |  0.055|8|0|0|2|1|0|1",
+    "9|NGC 5457:[DBT2008] 0135|210.73071 |  54.37356 |*Cl||||     |  0.065|1|0|0|1|0|0|1",
+    "10|WISEA J140255.05+542222.3|210.72941 |  54.37286 |IrS||||     |  0.070|0|0|12|1|0|0|0",
+    "11|MESSIER 101:[SCW2015] 196010  |210.73008 |  54.37517 |*Cl||||     |  0.080|1|0|0|1|0|0|0",
+    "12|NGC 5457:[DBT2008] 0131|210.72967 |  54.37192 |*Cl||||     |  0.127|2|0|0|2|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "IC342 fsn#1": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J034506.31+680420.5",
+     "ra": 56.2763178,
+     "dec": 68.0723884,
+     "w1mpro": 13.79699993133545,
+     "w1sigmpro": 0.03200000151991844,
+     "w2mpro": 12.762999534606934,
+     "w2sigmpro": 0.026000000536441803,
+     "w3mpro": 9.73799991607666,
+     "w3sigmpro": 0.0560000017285347,
+     "w4mpro": 7.7820000648498535,
+     "w4sigmpro": 0.18400000035762787,
+     "cc_flags": "0000",
+     "ext_flg": 3,
+     "var_flg": "110n",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J034506.31+680420.5| 56.27632 |  68.07239 |IrS||||     |  0.007|0|0|22|2|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "NGC2976 fsn#5": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|SSTSL2 J094703.63+675606.0|146.76514 |  67.93501 |IrS||||     |  0.003|0|0|10|1|0|0|0",
+    "2|SSTSL2 J094704.51+675605.2|146.76883 |  67.93479 |IrS||||     |  0.087|0|0|8|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "M31 fsn#4": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J004017.08+402708.4",
+     "ra": 10.071172,
+     "dec": 40.4523567,
+     "w1mpro": 14.74899959564209,
+     "w1sigmpro": 0.03999999910593033,
+     "w2mpro": 13.392000198364258,
+     "w2sigmpro": 0.02800000086426735,
+     "w3mpro": 10.87399959564209,
+     "w3sigmpro": 0.08399999886751175,
+     "w4mpro": 8.958000183105469,
+     "w4sigmpro": NaN,
+     "cc_flags": "0000",
+     "ext_flg": 0,
+     "var_flg": "320n",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[MMD2006] 2279",
+     "otype": "PN?",
+     "ra": 10.070416666666667,
+     "dec": 40.453611111111115,
+     "nbref": 1,
+     "rvz_redshift": -0.0014942514463290868,
+     "sp_type": "",
+     "sep": 4.539234444620964
+    }
+   ]
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J004017.08+402708.4| 10.07117 |  40.45236 |IrS||||     |  0.009|0|0|21|2|0|0|0",
+    "2|MESSIER 031:[MMD2006] 2279| 10.07042 |  40.45361 |EmLS|  -448|-0.001495 |S1L |     |  0.076|1|0|0|1|1|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "M33 fsn#10": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J013330.27+303923.4",
+     "ra": 23.376166,
+     "dec": 30.6565018,
+     "w1mpro": 15.319999694824219,
+     "w1sigmpro": 0.14100000262260437,
+     "w2mpro": 14.269000053405762,
+     "w2sigmpro": 0.06400000303983688,
+     "w3mpro": 12.395000457763672,
+     "w3sigmpro": NaN,
+     "w4mpro": 9.277000427246094,
+     "w4sigmpro": NaN,
+     "cc_flags": "000D",
+     "ext_flg": 2,
+     "var_flg": "33nn",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J013330.27+303923.4| 23.37617 |  30.65650 |IrS||||     |  0.010|0|0|22|2|0|0|0",
+    "2|GALEX J013330.23+303926.5| 23.37586 |  30.65743 |UvES||||     |  0.050|1|0|7|1|0|0|0",
+    "3|SSTSL2 J013330.44+303929.3| 23.37687 |  30.65814 |IrS||||     |  0.103|0|0|10|1|0|0|0",
+    "4|SSTSL2 J013330.79+303919.0| 23.37831 |  30.65528 |IrS||||     |  0.143|0|0|10|1|0|0|0",
+    "5|SSTSL2 J013330.38+303932.3| 23.37660 |  30.65898 |IrS||||     |  0.146|0|0|10|1|0|0|0",
+    "6|SSTSL2 J013329.67+303929.0| 23.37366 |  30.65808 |IrS||||     |  0.150|0|0|10|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "M33 fsn#12": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J013525.20+310039.0",
+     "ra": 23.8550371,
+     "dec": 31.010852,
+     "w1mpro": 14.87399959564209,
+     "w1sigmpro": 0.032999999821186066,
+     "w2mpro": 14.279000282287598,
+     "w2sigmpro": 0.04399999976158142,
+     "w3mpro": 12.22700023651123,
+     "w3sigmpro": NaN,
+     "w4mpro": 9.38700008392334,
+     "w4sigmpro": NaN,
+     "cc_flags": "0000",
+     "ext_flg": 0,
+     "var_flg": "11nn",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ERR [Errno 54] Connection reset by peer",
+   "rows": []
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "M33 fsn#13": {
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "303376977759212416",
+     "sep": 0.2723114735185791,
+     "phot_g_mean_mag": 21.121109008789062,
+     "bp_rp": 4.26396369934082,
+     "parallax": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 1.4189683198928833,
+     "ipd_frac_multi_peak": 0,
+     "pq": 6.651299190707505e-05,
+     "pgal": 1.1333954716974404e-05,
+     "pstar": 0.9990567564964294,
+     "teff_gspphot": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J013448.45+304853.2",
+     "ra": 23.7019113,
+     "dec": 30.8147935,
+     "w1mpro": 14.98900032043457,
+     "w1sigmpro": 0.03400000184774399,
+     "w2mpro": 14.550999641418457,
+     "w2sigmpro": 0.052000001072883606,
+     "w3mpro": 12.866000175476074,
+     "w3sigmpro": NaN,
+     "w4mpro": 9.164999961853027,
+     "w4sigmpro": NaN,
+     "cc_flags": "0000",
+     "ext_flg": 2,
+     "var_flg": "22nn",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J013448.45+304853.2| 23.70191 |  30.81479 |IrS||||     |  0.006|0|0|22|2|0|0|0",
+    "2|SSTSL2 J013448.68+304900.0| 23.70287 |  30.81667 |IrS||||     |  0.118|0|0|10|1|0|0|0",
+    "3|SSTSL2 J013448.27+304846.8| 23.70115 |  30.81301 |IrS||||     |  0.120|0|0|9|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "M33 fsn#14": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J013310.33+303801.2",
+     "ra": 23.2930441,
+     "dec": 30.6336699,
+     "w1mpro": 15.071999549865723,
+     "w1sigmpro": 0.04399999976158142,
+     "w2mpro": 14.5600004196167,
+     "w2sigmpro": 0.06199999898672104,
+     "w3mpro": 12.782999992370605,
+     "w3sigmpro": NaN,
+     "w4mpro": 9.187000274658203,
+     "w4sigmpro": NaN,
+     "cc_flags": "0000",
+     "ext_flg": 2,
+     "var_flg": "11nn",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J013310.33+303801.2| 23.29304 |  30.63367 |IrS||||     |  0.003|0|0|22|2|0|0|0",
+    "2|GALEX J013310.42+303807.2| 23.29288 |  30.63576 |UvES||||     |  0.124|1|0|7|1|0|0|0",
+    "3|SSTSL2 J013310.13+303808.8| 23.29221 |  30.63579 |IrS||||     |  0.132|0|0|10|1|0|0|0",
+    "4|SSTSL2 J013310.94+303800.6| 23.29561 |  30.63351 |IrS||||     |  0.135|0|0|10|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "M31 fsn#3": {
+  "gaia": {
+   "status": "ERR DALQueryError: Incorrect ADQL query:  Encountered \"CAST\". Was expecting one of: \"(\" \"+\" \"-\" \"*\" <QUANTIFIER> \"TOP\" \"AVG\" \"MAX\" \"MIN\" \"SUM\" \"COUNT\" \"BOX\" \"CENTROID\" \"",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J004549.98+400509.2",
+     "ra": 11.4582776,
+     "dec": 40.0859052,
+     "w1mpro": 13.020999908447266,
+     "w1sigmpro": 0.023000000044703484,
+     "w2mpro": 12.40999984741211,
+     "w2sigmpro": 0.023000000044703484,
+     "w3mpro": 10.154999732971191,
+     "w3sigmpro": 0.04899999871850014,
+     "w4mpro": 7.809999942779541,
+     "w4sigmpro": 0.1589999943971634,
+     "cc_flags": "0000",
+     "ext_flg": 5,
+     "var_flg": "220n",
+     "nb": 1,
+     "j_m_2mass": 15.29699993133545,
+     "h_m_2mass": 14.600000381469727,
+     "k_m_2mass": 14.055999755859375
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[KLG2007] GC3 193",
+     "otype": "G",
+     "ra": 11.458207399399999,
+     "dec": 40.08587646042,
+     "nbref": 5,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 0.26875852267827427
+    }
+   ]
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J004549.98+400509.2| 11.45828 |  40.08591 |VisS| 42876| 0.143020 |PUN |16.67|  0.001|4|0|32|5|1|2|1",
+    "2|New-ANGELS 53080073230100015  | 11.45781 |  40.08615 |XrayS||||     |  0.027|1|0|0|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "M31 fsn#7": {
+  "gaia": {
+   "status": "ERR DALQueryError: Incorrect ADQL query:  Encountered \"CAST\". Was expecting one of: \"(\" \"+\" \"-\" \"*\" <QUANTIFIER> \"TOP\" \"AVG\" \"MAX\" \"MIN\" \"SUM\" \"COUNT\" \"BOX\" \"CENTROID\" \"",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J004505.51+424350.1",
+     "ra": 11.2729895,
+     "dec": 42.7305835,
+     "w1mpro": 15.081999778747559,
+     "w1sigmpro": 0.03099999949336052,
+     "w2mpro": 14.315999984741211,
+     "w2sigmpro": 0.0430000014603138,
+     "w3mpro": 12.26200008392334,
+     "w3sigmpro": 0.30399999022483826,
+     "w4mpro": 9.069000244140625,
+     "w4sigmpro": NaN,
+     "cc_flags": "0000",
+     "ext_flg": 0,
+     "var_flg": "00nn",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J004505.51+424350.1| 11.27299 |  42.73058 |IrS||||     |  0.001|0|0|12|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "M31 fsn#9": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J003852.68+401905.6",
+     "ra": 9.719523,
+     "dec": 40.3182238,
+     "w1mpro": 14.241000175476074,
+     "w1sigmpro": 0.028999999165534973,
+     "w2mpro": 12.371000289916992,
+     "w2sigmpro": 0.023000000044703484,
+     "w3mpro": 9.440999984741211,
+     "w3sigmpro": 0.03200000151991844,
+     "w4mpro": 7.335999965667725,
+     "w4sigmpro": 0.08900000154972076,
+     "cc_flags": "0000",
+     "ext_flg": 0,
+     "var_flg": "9900",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[DMM2009] J003853.37+401859.5",
+     "otype": "*",
+     "ra": 9.722315221730002,
+     "dec": 40.31650692835001,
+     "nbref": 1,
+     "rvz_redshift": 3.535841919988236e-05,
+     "sp_type": "",
+     "sep": 9.77743090823147
+    }
+   ]
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J003852.68+401905.6|  9.71952 |  40.31822 |IrS||||     |  0.001|0|0|22|2|0|0|0",
+    "2|GALEXASC J003852.95+401900.1  |  9.72064 |  40.31670 |UvS||||     |  0.103|0|0|4|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "M31 fsn#11": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J004754.34+420500.1",
+     "ra": 11.9764242,
+     "dec": 42.0833869,
+     "w1mpro": 15.83899974822998,
+     "w1sigmpro": 0.04699999839067459,
+     "w2mpro": 14.147000312805176,
+     "w2sigmpro": 0.03799999877810478,
+     "w3mpro": 11.850000381469727,
+     "w3sigmpro": 0.1979999989271164,
+     "w4mpro": 9.237000465393066,
+     "w4sigmpro": 0.47200000286102295,
+     "cc_flags": "0000",
+     "ext_flg": 0,
+     "var_flg": "11nn",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ERR [Errno 54] Connection reset by peer",
+   "rows": []
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "NGC4945 obs#22": {
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "6084573245036818304",
+     "sep": 4.634873025766366,
+     "phot_g_mean_mag": 21.253793716430664,
+     "bp_rp": 1.414529800415039,
+     "parallax": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 48.259822845458984,
+     "ipd_frac_multi_peak": 10,
+     "pq": 0.0,
+     "pgal": 1.0,
+     "pstar": 0.0,
+     "teff_gspphot": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|2MASS J13053972-4925123|196.41553 | -49.42009 |IrS||||     |  0.019|0|0|4|1|0|0|0",
+    "2|2MASS J13053923-4925148|196.41347 | -49.42079 |IrS||||     |  0.109|0|0|5|1|0|0|0",
+    "3|2MASS J13053922-4925179|196.41343 | -49.42165 |IrS||||     |  0.141|0|0|4|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "NGC4945 obs#45": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|SSTSL2 J130544.42-492546.1|196.43510 | -49.42949 |IrS||||     |  0.164|0|0|4|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "IC342 obs#26": {
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "493491093772440704",
+     "sep": 0.17800078413285114,
+     "phot_g_mean_mag": 20.134078979492188,
+     "bp_rp": 2.0366458892822266,
+     "parallax": -0.7645462942143103,
+     "parallax_over_error": -1.6467571258544922,
+     "pmra": -0.2058038284858584,
+     "pmdec": -0.6628144621466646,
+     "pm": 0.6940304040908813,
+     "ruwe": 1.0084266662597656,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 0.0,
+     "ipd_frac_multi_peak": 1,
+     "pq": 2.721876612987728e-10,
+     "pgal": 8.603130430273609e-10,
+     "pstar": 0.9999977350234985,
+     "teff_gspphot": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[SCH2002b] 141",
+     "otype": "V*",
+     "ra": 56.56070833333333,
+     "dec": 68.14991666666667,
+     "nbref": 1,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 7.428699339413707
+    }
+   ]
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|SSTSL2 J034615.15+680857.7| 56.56316 |  68.14937 |IrS||||     |  0.061|0|0|10|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "HolmII obs#21": {
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "1097747225147558016",
+     "sep": 2.477997803312109,
+     "phot_g_mean_mag": 20.346532821655273,
+     "bp_rp": 0.1536407470703125,
+     "parallax": -2.7293598866114617,
+     "parallax_over_error": -2.693419933319092,
+     "pmra": 0.1450526885218098,
+     "pmdec": 1.1064697751226527,
+     "pm": 1.1159371137619019,
+     "ruwe": 1.2970540523529053,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 5.479595184326172,
+     "ipd_frac_multi_peak": 9,
+     "pq": 3.7119725071477205e-09,
+     "pgal": 0.9916061758995056,
+     "pstar": 0.008393797092139721,
+     "teff_gspphot": NaN
+    },
+    {
+     "sid": "1097747225146888064",
+     "sep": 3.981190564606902,
+     "phot_g_mean_mag": 21.220991134643555,
+     "bp_rp": 0.018072128295898438,
+     "parallax": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 23.897987365722656,
+     "ipd_frac_multi_peak": 0,
+     "pq": 0.3973608613014221,
+     "pgal": 0.3702952563762665,
+     "pstar": 0.0,
+     "teff_gspphot": NaN
+    },
+    {
+     "sid": "1097747225146065536",
+     "sep": 0.3187372471923612,
+     "phot_g_mean_mag": 19.381229400634766,
+     "bp_rp": -0.20999908447265625,
+     "parallax": 0.21506354634302155,
+     "parallax_over_error": 0.3893221914768219,
+     "pmra": -0.022431923973930012,
+     "pmdec": 1.873301920053077,
+     "pm": 1.8734362125396729,
+     "ruwe": 1.9225101470947266,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 4.384957313537598,
+     "ipd_frac_multi_peak": 4,
+     "pq": 2.3894422156445216e-06,
+     "pgal": 0.18425598740577698,
+     "pstar": 0.8157411813735962,
+     "teff_gspphot": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J081912.69+704307.4",
+     "ra": 124.8029152,
+     "dec": 70.7187416,
+     "w1mpro": 13.005000114440918,
+     "w1sigmpro": 0.024000000208616257,
+     "w2mpro": 11.425000190734863,
+     "w2sigmpro": 0.019999999552965164,
+     "w3mpro": 8.449000358581543,
+     "w3sigmpro": 0.023000000044703484,
+     "w4mpro": 5.919000148773193,
+     "w4sigmpro": 0.05299999937415123,
+     "cc_flags": "hh00",
+     "ext_flg": 3,
+     "var_flg": "0110",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "HK Ho   II  11",
+     "otype": "HII",
+     "ra": 124.80541666666664,
+     "dec": 70.71888888888888,
+     "nbref": 11,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 2.952164337191315
+    },
+    {
+     "main_id": "UZC J081912.7+704306",
+     "otype": "G",
+     "ra": 124.80291666666668,
+     "dec": 70.71833333333333,
+     "nbref": 1,
+     "rvz_redshift": 0.0005236956294610987,
+     "sp_type": "",
+     "sep": 1.3237119928192833
+    },
+    {
+     "main_id": "[CVL2009] UGC 4305-7",
+     "otype": "HII",
+     "ra": 124.80224999999999,
+     "dec": 70.71783333333335,
+     "nbref": 2,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 3.2448895923726937
+    },
+    {
+     "main_id": "[CVL2009] UGC 4305-8",
+     "otype": "HII",
+     "ra": 124.79958333333333,
+     "dec": 70.71966666666667,
+     "nbref": 2,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 5.3484292330226815
+    }
+   ]
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J081912.69+704307.4|124.80292 |  70.71874 |HII||||     |  0.003|2|0|12|2|0|0|0",
+    "2|SSTSL2 J081912.71+704307.6|124.80379 |  70.71875 |HII||||     |  0.016|2|0|10|3|0|0|0",
+    "3|Holmberg II:[LMD2020] A|124.80442 |  70.71889 |RadioS||||     |  0.030|2|0|0|2|0|0|0",
+    "4|Holmberg II:[LMD2020] B|124.80288 |  70.71772 |RadioS||||     |  0.059|1|0|0|1|0|0|0",
+    "5|Holmberg II:[LMD2020] C|124.80288 |  70.71772 |RadioS||||     |  0.059|1|0|0|1|0|0|0",
+    "6|Holmberg II:[HK83] 11|124.80280 |  70.71762 |HII||||     |  0.065|1|0|0|1|0|0|0",
+    "7|Holmberg II:[GCD2013] HII|124.80375 |  70.72000 |HII|   142| 0.000474 |UUN |     |  0.079|1|0|0|1|2|0|0",
+    "8|UGC 04305:[CVL2009] 08|124.79958 |  70.71967 |HII||||     |  0.089|1|0|0|1|0|0|0",
+    "9|GALEXASC J081914.06+704304.3  |124.80862 |  70.71788 |UvS||||     |  0.122|0|0|4|1|0|0|0",
+    "10|Holmberg II:[HK83] 12|124.79609 |  70.71848 |HII||||     |  0.138|1|0|0|1|0|0|0",
+    "11|SSTSL2 J081913.46+704315.3|124.80612 |  70.72094 |IrS||||     |  0.148|0|0|10|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "M31 obs#27": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J004330.46+414431.8",
+     "ra": 10.8769423,
+     "dec": 41.7421899,
+     "w1mpro": 14.317000389099121,
+     "w1sigmpro": 0.04399999976158142,
+     "w2mpro": 12.807000160217285,
+     "w2sigmpro": 0.02800000086426735,
+     "w3mpro": 10.210000038146973,
+     "w3sigmpro": 0.0820000022649765,
+     "w4mpro": 7.531000137329102,
+     "w4sigmpro": 0.1459999978542328,
+     "cc_flags": "0000",
+     "ext_flg": 2,
+     "var_flg": "870n",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J004330.46+414431.8| 10.87694 |  41.74219 |IrS||||     |  0.002|0|0|22|2|0|0|0",
+    "2|SSTSL2 J004330.00+414436.5| 10.87502 |  41.74348 |IrS||||     |  0.114|0|0|10|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "UGCA127 obs#30": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": []
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "NGC3239 obs#33": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J102509.66+170946.6",
+     "ra": 156.290277,
+     "dec": 17.1629688,
+     "w1mpro": 15.718999862670898,
+     "w1sigmpro": 0.04800000041723251,
+     "w2mpro": 16.069000244140625,
+     "w2sigmpro": 0.2029999941587448,
+     "w3mpro": 12.586000442504883,
+     "w3sigmpro": NaN,
+     "w4mpro": 8.786999702453613,
+     "w4sigmpro": NaN,
+     "cc_flags": "0000",
+     "ext_flg": 2,
+     "var_flg": "0nnn",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J102509.66+170946.6|156.29028 |  17.16297 |IrS||||     |  0.070|0|0|12|1|0|0|0",
+    "2|WISEA J102510.24+170955.5|156.29269 |  17.16544 |IrS||||     |  0.134|0|0|12|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "NGC1744 obs#32": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J045959.51-260234.9",
+     "ra": 74.9979712,
+     "dec": -26.0430308,
+     "w1mpro": 15.012999534606934,
+     "w1sigmpro": 0.03099999949336052,
+     "w2mpro": 14.557999610900879,
+     "w2sigmpro": 0.0430000014603138,
+     "w3mpro": 11.960000038146973,
+     "w3sigmpro": 0.26100000739097595,
+     "w4mpro": 9.060999870300293,
+     "w4sigmpro": NaN,
+     "cc_flags": "0000",
+     "ext_flg": 3,
+     "var_flg": "11nn",
+     "nb": 2,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J045959.51-260234.9| 74.99797 | -26.04303 |IrS||||     |  0.018|0|0|22|2|0|0|0",
+    "2|SSTSL2 J045959.04-260237.6| 74.99603 | -26.04378 |IrS||||     |  0.097|0|0|10|1|0|0|0",
+    "3|SSTSL2 J050000.17-260235.8| 75.00072 | -26.04329 |IrS||||     |  0.163|0|0|10|1|0|0|0",
+    "4|SSTSL2 J050000.08-260240.2| 75.00035 | -26.04452 |IrS||||     |  0.163|0|0|10|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "IC342 fsn#59": {
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "493489410146142336",
+     "sep": 2.5567445788317626,
+     "phot_g_mean_mag": 20.978530883789062,
+     "bp_rp": 0.6757793426513672,
+     "parallax": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "astrometric_excess_noise": 4.173429489135742,
+     "ipd_frac_multi_peak": 0,
+     "pq": 0.00032270653173327446,
+     "pgal": 4.364275810075924e-05,
+     "pstar": 0.9993153214454651,
+     "teff_gspphot": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J034600.08+680235.4",
+     "ra": 56.5003499,
+     "dec": 68.043169,
+     "w1mpro": 14.468000411987305,
+     "w1sigmpro": 0.14499999582767487,
+     "w2mpro": 13.29699993133545,
+     "w2sigmpro": 0.054999999701976776,
+     "w3mpro": 9.795999526977539,
+     "w3sigmpro": 0.10100000351667404,
+     "w4mpro": 7.408999919891357,
+     "w4sigmpro": 0.125,
+     "cc_flags": "0000",
+     "ext_flg": 2,
+     "var_flg": "0000",
+     "nb": 1,
+     "j_m_2mass": NaN,
+     "h_m_2mass": NaN,
+     "k_m_2mass": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|WISEA J034600.08+680235.4| 56.50035 |  68.04317 |IrS||||     |  0.016|0|0|22|2|0|0|0",
+    "2|SSTSL2 J034559.43+680236.8| 56.49766 |  68.04358 |IrS||||     |  0.070|0|0|10|1|0|0|0",
+    "3|IC 0342:[HK83] 616| 56.49457 |  68.04364 |HII||||     |  0.134|1|0|0|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "BH1 fsn#65": {
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "NAME N6946-BH1",
+     "otype": "*",
+     "ra": 308.8648333333333,
+     "dec": 60.13563611111111,
+     "nbref": 48,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 0.3770448091775064
+    }
+   ]
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|SSTSL2 J203527.47+600808.4|308.86448 |  60.13567 |IrS||||     |  0.016|4|0|8|2|0|0|0",
+    "2|WISEA J203528.18+600801.9|308.86742 |  60.13388 |IrS||||     |  0.131|0|0|20|2|0|0|0",
+    "3|WISEA J203526.48+600811.1|308.86034 |  60.13644 |IrS||||     |  0.146|0|0|12|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ },
+ "DS1 fsn#2": {
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "369287369785313152",
+     "sep": 0.26083713607049774,
+     "phot_g_mean_mag": 19.056110382080078,
+     "bp_rp": 2.5784454345703125,
+     "parallax": 0.09478359340185374,
+     "parallax_over_error": 0.4093800187110901,
+     "pmra": -0.17096652793559655,
+     "pmdec": -0.10625672733953717,
+     "pm": 0.2012959122657776,
+     "ruwe": 1.1221150159835815,
+     "phot_variable_flag": "VARIABLE",
+     "astrometric_excess_noise": 0.8744300007820129,
+     "ipd_frac_multi_peak": 0,
+     "pq": 1.0238924779640973e-13,
+     "pgal": 5.114291152033545e-13,
+     "pstar": 0.999963641166687,
+     "teff_gspphot": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[DMM2009] J004513.87+413227.2",
+     "otype": "*",
+     "ra": 11.30776319359,
+     "dec": 41.54083484158,
+     "nbref": 1,
+     "rvz_redshift": -6.270808374542192e-05,
+     "sp_type": "",
+     "sep": 7.623762814548137
+    },
+    {
+     "main_id": "2MASS J00451346+4132332",
+     "otype": "*",
+     "ra": 11.30614621365,
+     "dec": 41.54254074536,
+     "nbref": 9,
+     "rvz_redshift": NaN,
+     "sp_type": "",
+     "sep": 0.2578903594313977
+    }
+   ]
+  },
+  "ned": {
+   "status": "ok",
+   "rows": [
+    "1|2MASS J00451346+4132332| 11.30611 |  41.54257 |IrS||||     |  0.005|0|0|16|2|0|0|0",
+    "2|WISEA J004513.80+413227.6| 11.30751 |  41.54100 |IrS||||     |  0.113|0|0|28|3|0|0|0",
+    "3|SSTSL2 J004513.89+413239.2| 11.30789 |  41.54423 |IrS||||     |  0.124|0|0|10|1|0|0|0"
+   ]
+  },
+  "milliquas": {
+   "status": "ok",
+   "rows": []
+  }
+ }
+}
