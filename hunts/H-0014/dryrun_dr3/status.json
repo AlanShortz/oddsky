@@ -1,0 +1,156 @@
+{
+ "probe": {
+  "ok": true,
+  "seconds": 134.1,
+  "probe_ok": true,
+  "fixes": [],
+  "epoch_layout": "dr3",
+  "retrieval_types": [
+   "EPOCH_PHOTOMETRY",
+   "MCMC_GSPPHOT",
+   "MCMC_MSC"
+  ],
+  "finished_utc": "2026-11-02T19:39:15Z"
+ },
+ "readiness": {
+  "ok": true,
+  "seconds": 7.8,
+  "summary": "15 Gaia predictions checked against Gaia DR3; gradable now: 0; waiting for a later release by design: 10; identity doubts: 0; provisional true/false: 0/0; Gaia DR3 request failed: False",
+  "release_failed": false,
+  "finished_utc": "2026-11-02T19:49:30Z"
+ },
+ "idmap": {
+  "ok": true,
+  "seconds": 37.5,
+  "n": 2647,
+  "changed": 2,
+  "unmatched": 408,
+  "finished_utc": "2026-11-02T19:50:07Z"
+ },
+ "ensemble": {
+  "ok": true,
+  "seconds": 5.1,
+  "grade": {
+   "exit": 0,
+   "tail": [
+    "PASS 0 of 47 testable-by-design events (0 resolved; 47 untestable for lack of data)",
+    "forecast (all 47): 8.9 passes expected of 47 (median 8, 80% 5-14, 90% 4-15)",
+    "no event resolved: nothing to grade (check the DR4 fetch, the id map and the column mapping)"
+   ]
+  },
+  "selftest": {
+   "exit": 0,
+   "tail": [
+    "sliding control (fake event every 5 d, >= 180 d from the event): 0 passes in 181 testable trials (227 others had too few transits)",
+    "",
+    "self-test: PASS (all three DR3-confirmed events pass; no control passes)"
+   ]
+  },
+  "status_counts": {
+   "untestable (data)": 47
+  },
+  "finished_utc": "2026-11-02T19:50:12Z"
+ },
+ "catalogue": {
+  "ok": true,
+  "seconds": 174.4,
+  "lens_catalogue": 363,
+  "classifier_only": 254,
+  "target_flags": 2647,
+  "target_classes": 875,
+  "cones": 7,
+  "classifier_only_not_in_catalogue": 67,
+  "h0010_list_reproduced": {
+   "same": 67,
+   "only_h0010": 0,
+   "only_release": 0
+  },
+  "targets_in_release_lens_catalogue": {},
+  "release_lenses_unreported": 0,
+  "release_lenses_with_neowise_event": 25,
+  "finished_utc": "2026-11-02T20:30:29Z"
+ },
+ "epochs": {
+  "ok": true,
+  "seconds": 0.5,
+  "status": [
+   {
+    "tier": 1,
+    "status": "absent",
+    "n": 106
+   },
+   {
+    "tier": 1,
+    "status": "ok",
+    "n": 73
+   },
+   {
+    "tier": 2,
+    "status": "absent",
+    "n": 1740
+   },
+   {
+    "tier": 2,
+    "status": "ok",
+    "n": 817
+   }
+  ],
+  "chunks": 0,
+  "chunks_failed": 0,
+  "requests": 0,
+  "finished_utc": "2026-11-02T20:36:12Z"
+ },
+ "search": {
+  "ok": true,
+  "seconds": 248.3,
+  "n_analysed": 896,
+  "labels": {
+   "cases|lens-like brightening": 3,
+   "cases|dip": 2,
+   "cases|deep decline": 1,
+   "cases|high-scatter variable": 1,
+   "cases|periodic large-amplitude variable": 1,
+   "cases|quiet": 1,
+   "h0010|lens-like brightening": 50,
+   "h0010|chromatic brightening": 8,
+   "h0010|brightening, not lens-shaped": 6,
+   "h0010|one-date brightening (scan-angle artifact possible)": 1,
+   "h0010|quiet": 1,
+   "h0010|repeating brightenings": 1,
+   "rcb|periodic large-amplitude variable": 505,
+   "rcb|high-scatter variable": 158,
+   "rcb|quiet": 67,
+   "rcb|deep decline": 17,
+   "rcb|dip": 16,
+   "rcb|repeating brightenings": 14,
+   "rcb|repeating brightenings; periodic large-amplitude variable": 8,
+   "rcb|brightening, not lens-shaped": 6,
+   "rcb|brightening, not lens-shaped; dip": 4,
+   "rcb|lens-like brightening": 3,
+   "rcb|chromatic brightening": 2,
+   "rcb|one-date brightening (scan-angle artifact possible)": 2,
+   "rcb|one-date brightening (scan-angle artifact possible); deep decline": 2,
+   "rcb|chromatic brightening; dip": 1,
+   "rcb|chromatic brightening; periodic large-amplitude variable": 1,
+   "rcb|lens-like brightening; deep decline": 1,
+   "rcb|repeating brightenings; dip": 1,
+   "strong|lens-like brightening": 3,
+   "unclassified|lens-like brightening": 4,
+   "unclassified|quiet": 4,
+   "unclassified|high-scatter variable": 1
+  },
+  "ranked_unknown": 52,
+  "ensemble_rule_at_neowise_time": {
+   "pass": 7,
+   "untestable (data)": 5
+  },
+  "finished_utc": "2026-11-02T20:51:35Z"
+ },
+ "report": {
+  "ok": true,
+  "seconds": 0.0,
+  "summary": "/Users/alanshortz/oddsky-runs/h0014/dr3/summary.md",
+  "copied_to": "hunts/H-0014/dryrun_dr3",
+  "finished_utc": "2026-11-02T20:44:03Z"
+ }
+}

@@ -1,0 +1,54 @@
+numpy 2.5.4, pandas 2.3.3, python 3.12.16 (sealed with numpy 2.5.4, pandas 2.3.3, Python 3.12.16)
+fetch report: {"releases": [{"release": "Gaia DR3", "ok": true, "n": 0, "error": ""}]}
+        designation           source_id       dr4_source_id  t_event_mjd                                                status alt_status (not counted)
+J172246.71-403331.7 5960257061625105024 5960257061625105024    56913.392 untestable (data): no epoch photometry for the source                      NaN
+J172729.10-323917.2 4054748744344748544 4054748744344748544    56913.723 untestable (data): no epoch photometry for the source                      NaN
+J173525.98-335850.5 4053635939839764608 4053635939839764608    56915.465 untestable (data): no epoch photometry for the source                  no data
+J180744.93-222226.3 4069725604546345472 4069725604546345472    56922.078 untestable (data): no epoch photometry for the source                      NaN
+J211957.84+572625.7 2178980910929234944 2178980910929234944    57012.326 untestable (data): no epoch photometry for the source                      NaN
+J123522.62-622827.0 6053935349230889344 6053935349230889344    57054.538 untestable (data): no epoch photometry for the source                      NaN
+J181035.29-105156.9 4157149599451570944 4157149599451570944    57105.130 untestable (data): no epoch photometry for the source                      NaN
+J131026.53-612259.2 5863586423081438848 5863586423081438848    57235.815 untestable (data): no epoch photometry for the source                      NaN
+J130153.27-655628.5 5858515677297526656 5858515677297526656    57238.667 untestable (data): no epoch photometry for the source                      NaN
+J171723.15-403337.1 5971935666113330048 5971935666113330048    57271.440 untestable (data): no epoch photometry for the source                      NaN
+J172130.29-372518.3 5972880279747996160 5972880279747996160    57272.097 untestable (data): no epoch photometry for the source                      NaN
+J173349.59-264330.5 4061588260756165632 4061588260756165632    57273.673 untestable (data): no epoch photometry for the source                      NaN
+J175844.62-263022.5 4064033505903753728 4064033505903753728    57279.151 untestable (data): no epoch photometry for the source                      NaN
+J192602.96+134138.7 4319553612961496192 4319553612961496192    57305.919 untestable (data): no epoch photometry for the source                      NaN
+J101423.62-603507.1 5254932176492837376 5254932176492837376    57397.273 untestable (data): no epoch photometry for the source                      NaN
+J170153.51-425620.0 5966156701720599680 5966156701720599680    57456.819 untestable (data): no epoch photometry for the source                      NaN
+J182120.84-143232.7 4146309720455045504 4146309720455045504    57471.790 untestable (data): no epoch photometry for the source                      NaN
+J184017.78-134852.3 4103821395764717440 4103821395764717440    57475.984 untestable (data): no epoch photometry for the source                      NaN
+J185846.27+033028.5 4280846616059642368 4280846616059642368    57484.894 untestable (data): no epoch photometry for the source                      NaN
+J201542.68+382806.1 2060942088532024704 2060942088532024704    57520.109 untestable (data): no epoch photometry for the source                      NaN
+J033351.36+561412.5  448377646353031040  448377646353031040    57630.015 untestable (data): no epoch photometry for the source                      NaN
+J075928.63-221055.1 5711343503294249856 5711343503294249856    57692.982 untestable (data): no epoch photometry for the source                      NaN
+J164900.93-433618.0 5967450719527687168 5967450719527687168    57819.059 untestable (data): no epoch photometry for the source                      NaN
+J180255.46-160745.2 4145148086414772864 4145148086414772864    57834.836 untestable (data): no epoch photometry for the source                  no data
+J154239.48-572601.4 5882495205642608896 5882495205642608896    57977.922 untestable (data): no epoch photometry for the source                      NaN
+J163539.69-355208.3 6020322385418675200 6020322385418675200    57982.411 untestable (data): no epoch photometry for the source                      NaN
+J170655.82-373839.7 5976421806697577600 5976421806697577600    57988.466 untestable (data): no epoch photometry for the source                      NaN
+J040025.77+323527.4  170329679884731008  170329679884731008    57993.083 untestable (data): no epoch photometry for the source                      NaN
+J013600.31+612130.4  510002700418972416  510002700418972416    58137.210 untestable (data): no epoch photometry for the source                      NaN
+J161946.51-492721.6 5935607763281500800 5935607763281500800    58179.096 untestable (data): no epoch photometry for the source                      NaN
+J163808.41-414832.7 5968618405199767296 5968618405199767296    58180.862 untestable (data): no epoch photometry for the source                      NaN
+J071033.70-021828.0 3108434511210306048 3108434511210306048    58194.795 untestable (data): no epoch photometry for the source                      NaN
+J075219.97-325515.6 5594032591941367424 5594032591941367424    58216.648 untestable (data): no epoch photometry for the source                      NaN
+J124517.35-630125.0 5862971688685406976 5862971688685406976    58313.432 untestable (data): no epoch photometry for the source                      NaN
+J131433.70-604212.0 5869622806317427072 5869622806317427072    58315.461 untestable (data): no epoch photometry for the source                      NaN
+J173150.73-444549.3 5952322268527918208 5952322268527918208    58357.181 untestable (data): no epoch photometry for the source                      NaN
+J175905.00-174624.2 4143806609213044608 4143806609213044608    58362.061 untestable (data): no epoch photometry for the source                      NaN
+J180010.34-243417.6 4069002813088944128 4069002813088944128    58362.289 untestable (data): no epoch photometry for the source                      NaN
+J185035.91-014014.4 4259246224801979776 4259246224801979776    58374.694 untestable (data): no epoch photometry for the source                      NaN
+J222915.37+560017.4 2006722799327487744 2006722799327487744    58465.723 untestable (data): no epoch photometry for the source                      NaN
+J051237.90-060835.8 3208562675757595904 3208562675757595904    58526.689 untestable (data): no epoch photometry for the source                      NaN
+J161048.56-514754.1 5933460593167064192 5933460593167064192    58545.149 untestable (data): no epoch photometry for the source                      NaN
+J170958.77-413848.6 5965817983469250048 5965817983469250048    58553.587 untestable (data): no epoch photometry for the source                      NaN
+J172247.87-324616.4 5979317993343609600 5979317993343609600    58555.254 untestable (data): no epoch photometry for the source                      NaN
+J172244.98-363407.6 5975194889158606464 5975194889158606464    58555.647 untestable (data): no epoch photometry for the source                      NaN
+J081611.24-335034.8 5546617183791572736 5546617183791572736    58591.289 untestable (data): no epoch photometry for the source                      NaN
+J174350.48-375311.7 5961558745953829504 5961558745953829504    58723.368 untestable (data): no epoch photometry for the source                      NaN
+
+PASS 0 of 47 testable-by-design events (0 resolved; 47 untestable for lack of data)
+forecast (all 47): 8.9 passes expected of 47 (median 8, 80% 5-14, 90% 4-15)
+no event resolved: nothing to grade (check the DR4 fetch, the id map and the column mapping)

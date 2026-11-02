@@ -85,15 +85,42 @@ def _fetch_release(source_ids: list[int], chunk: int, release: str) -> dict[int,
     return out
 
 
+# Column names per band: (time, magnitude, flux_over_error). DR3 prefixes G with "g_transit_"; the DR4 draft data model
+# (2026-06-26) drops "transit_" (g_obs_time, g_mag, g_flux_over_error) and keeps the BP/RP names. DR4's epoch_photometry has
+# no rejected_by_photometry or variability_flag_*_reject columns: rejected BP/RP values are empty (NaN) and variability
+# rejections moved to a separate DataLink product (EPOCH_FLAGS_VARI). Without those columns no transit is flagged here, and
+# non-finite magnitudes are dropped by series.normalize, as they always were. (dr4_ensemble.md section 2.5 item 2.)
+COLUMN_MAPS = {
+    "dr3": {"G": ("g_transit_time", "g_transit_mag", "g_transit_flux_over_error"),
+            "BP": ("bp_obs_time", "bp_mag", "bp_flux_over_error"), "RP": ("rp_obs_time", "rp_mag", "rp_flux_over_error")},
+    "dr4": {"G": ("g_obs_time", "g_mag", "g_flux_over_error"),
+            "BP": ("bp_obs_time", "bp_mag", "bp_flux_over_error"), "RP": ("rp_obs_time", "rp_mag", "rp_flux_over_error")},
+}
+
+
+def column_map(raw: pd.DataFrame) -> tuple[str, dict]:
+    """Which layout a raw epoch-photometry table uses. Raises KeyError naming the missing columns if neither fits."""
+    cols = set(raw.columns)
+    for name, m in COLUMN_MAPS.items():
+        need = {c for v in m.values() for c in v} | {"transit_id"}
+        if need <= cols:
+            return name, m
+    need = {c for v in COLUMN_MAPS["dr3"].values() for c in v} | {"transit_id"}
+    raise KeyError(f"unknown epoch-photometry layout; missing {sorted(need - cols)}; have {sorted(cols)}")
+
+
 def to_series(raw: pd.DataFrame) -> pd.DataFrame:
+    _, cmap = column_map(raw)
+    no = pd.Series(False, index=raw.index)
     parts = []
-    for band, p in (("G", "g_transit"), ("BP", "bp"), ("RP", "rp")):
-        tcol = "g_transit_time" if band == "G" else f"{p}_obs_time"
-        mag = raw[f"{p}_mag"].astype(float)
-        foe = raw[f"{p}_flux_over_error"].astype(float)
+    for band in ("G", "BP", "RP"):
+        tcol, mcol, ecol = cmap[band]
+        mag = raw[mcol].astype(float)
+        foe = raw[ecol].astype(float)
         err = 1.0857 / foe.where(foe > 0)
-        rej = raw["rejected_by_photometry"].astype(str).str.lower().eq("true")
-        vrej = raw[f"variability_flag_{band.lower()}_reject"].astype(str).str.lower().eq("true")
+        rej = raw["rejected_by_photometry"].astype(str).str.lower().eq("true") if "rejected_by_photometry" in raw else no
+        vcol = f"variability_flag_{band.lower()}_reject"
+        vrej = raw[vcol].astype(str).str.lower().eq("true") if vcol in raw else no
         flag = np.where(rej, "rejected_by_photometry", np.where(vrej, "rejected_by_variability", ""))
         parts.append(pd.DataFrame(dict(t_mjd=raw[tcol].astype(float) + GAIA_T0_MJD, mag=mag, err=err.fillna(0.05),
                                        band=band, survey="GAIA", flag=flag,

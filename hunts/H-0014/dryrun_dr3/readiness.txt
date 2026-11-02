@@ -1,0 +1,1 @@
+15 Gaia predictions checked against Gaia DR3; gradable now: 0; waiting for a later release by design: 10; identity doubts: 0; provisional true/false: 0/0; Gaia DR3 request failed: False
