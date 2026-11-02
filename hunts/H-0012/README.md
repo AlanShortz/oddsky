@@ -551,3 +551,12 @@ W1 > 19.92 AB, summary figure attached). A cone search after filing shows only A
 The AT 2020afkm write-up was published as TNS AstroNote 2026-308: https://www.wis-tns.org/astronotes/astronote/2026-308
 (approved by Alan; text in `drafts/astronote_AT2020afkm.md`, PDF `drafts/AstroNote_AT2020afkm.pdf`, Google Doc in the
 alan@oddsky.ai Drive). Attached: the PDF and Figures 1-4 (Figure 2 cropped to the light curves).
+
+## AT 2020afkm: independent detection by K. De et al. (2026-11-02)
+
+K. De (Columbia) replied to Alan that his group flagged this source in 2022 and has a near-infrared image and spectrum from
+ground-based telescopes during the outburst; they favour a very dusty nova eruption, consistent with the faint HST counterpart, and
+the object is in their sample of nearby infrared transients. With his permission this is noted on the TNS page (comment
+"Independent detection by K. De et al. (2022): dusty nova") and in case OS-0030 (claim C12, hypothesis H4, P 0.6). Our TNS report is
+the first public report; De's group found it first. He will send their full source list so overlaps with H-0012/H-0013 can be
+checked before any further novelty claim.

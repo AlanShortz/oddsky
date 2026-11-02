@@ -1,9 +1,11 @@
 id: OS-0030
-title: 'An infrared flare in the galaxy NGC 3239 in 2020 that no optical survey saw: an obscured transient'
-hook: 'Found blind by Oddsky''s mid-infrared difference imaging of 318 nearby galaxies (hunt H-0012):
-  a flare peaking in 2020 November at about 5e5 L_sun, with no optical alert. Hubble caught a faint point
-  source 85 days after the peak that has since vanished, and JWST found cooling dust at the same spot
-  in 2024.'
+title: 'An infrared flare in the galaxy NGC 3239 in 2020 that no optical survey saw: probably a very dusty
+  nova'
+hook: 'Found blind by Oddsky''s mid-infrared difference imaging of 318 nearby galaxies (hunt H-0012) and
+  reported as AT 2020afkm: a flare peaking in 2020 November with no optical alert. Hubble caught a faint
+  point source 85 days later that has since vanished, and JWST found warm dust at the same spot in 2024.
+  K. De''s group, who flagged it independently in 2022, favour a very dusty nova from a near-infrared
+  spectrum taken during the outburst.'
 status: reproduced
 target:
   name: NGC 3239 IR transient 2020
@@ -13,9 +15,10 @@ target:
   - AT 2020afkm
 summary: A mid-infrared flare in the irregular galaxy NGC 3239 (about 8-12 Mpc), peaking in 2020 November
   at roughly 5e5 L_sun from ~960 K dust, that no optical survey reported. Hubble caught a faint, fading
-  point source 85 days after the peak, and JWST found cooling dust at the same spot in 2024. Probably
-  a dust-obscured stellar merger or eruption; a buried low-energy supernova is possible. Found blind by
-  Oddsky hunt H-0012. Reported to the IAU Transient Name Server as AT 2020afkm.
+  point source 85 days after the peak, and JWST found warm dust at the same spot in 2024. Reported to
+  the IAU Transient Name Server as AT 2020afkm and described in AstroNote 2026-308. K. De's group (Columbia),
+  who flagged it independently in 2022, favour a very dusty nova eruption from a near-infrared spectrum
+  taken during the outburst. Found blind by Oddsky hunt H-0012.
 claims:
 - id: C1
   text: 'WISE (unWISE neo11 epochal coadds, difference imaging): flat from 2010 to 2020 May 2; on 2020
@@ -118,6 +121,17 @@ claims:
   calls: []
   author: claude-opus-5.5
   at: '2026-11-02T20:23:40+00:00'
+- id: C12
+  text: 'K. De (Columbia University; email to A. Shortz, 2026-11-02, permission given to note it publicly):
+    his group independently flagged this source in 2022 in WISE data and obtained a near-infrared image
+    and spectrum with ground-based telescopes during the outburst. Based on these they favour a very dusty
+    nova eruption, consistent with the faint 2021 HST counterpart; the object is in their sample of nearby
+    infrared transients. Noted on the TNS page of AT 2020afkm the same day. Oddsky''s TNS report is the
+    first public report, but De''s group found it first.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T23:15:23+00:00'
 hypotheses:
 - id: H1
   klass: eruptive
@@ -132,7 +146,7 @@ hypotheses:
   conflicts: []
   would_falsify: A JWST spectrum showing supernova signatures, or a late radio detection of a normal SN.
   status: live
-  confidence: 0.55
+  confidence: 0.25
   author: claude-opus-5.5
   at: '2026-11-02T01:26:37+00:00'
 - id: H2
@@ -144,8 +158,8 @@ hypotheses:
   - C4
   conflicts: []
   would_falsify: A spectrum of the remnant without supernova features.
-  status: live
-  confidence: 0.35
+  status: disfavored
+  confidence: 0.1
   author: claude-opus-5.5
   at: '2026-11-02T01:26:37+00:00'
 - id: H3
@@ -161,6 +175,20 @@ hypotheses:
   confidence: 0.02
   author: claude-opus-5.5
   at: '2026-11-02T01:26:37+00:00'
+- id: H4
+  klass: eruptive
+  statement: A very dusty classical nova eruption in NGC 3239 (K. De et al., from a near-infrared spectrum
+    during the outburst).
+  supports:
+  - C12
+  - C3
+  conflicts: []
+  would_falsify: 'A published spectrum without nova features; still to be reconciled: the ~5e5 L_sun infrared
+    luminosity at first detection and the ~3.6e4 L_sun dust source still present in 2024.'
+  status: live
+  confidence: 0.6
+  author: claude-opus-5.5
+  at: '2026-11-02T23:15:23+00:00'
 predictions: []
 literature: []
 hunt: H-0012
