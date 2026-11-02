@@ -508,3 +508,12 @@ the nuclear starbursts); SN 2011dh fell in the 2011-13 gap. A revised score puts
 **Leads before the referee (superseded above).** Obscured transients: an unidentified 2019-2023 rise in NGC 4945 (196.4697 −49.4162; peak
 3.3 × 10⁵ L☉, no Gaia source), and rising sources in M81, NGC 55 and M101. Failed-SN-like: unidentified faders in IC 342 (possibly
 a background AGN) and NGC 2976, and many red faders in M31 and M33 (dusty AGB stars or background AGN are the likely explanations).
+
+## OS-0030: TNS pre-filing validation (2026-11-02; `drafts/tns_OS-0030_validation.md`, `drafts/tns_report_OS-0030.md`)
+
+Every assumption behind a TNS AT report was checked; nothing was filed. No blocker: OS-0030 is not in TNS (60" cone, all dates,
+including unreal objects), ALeRCE, Lasair, Gaia alerts, ASAS-SN, ATel or ADS. Fink was unreachable from this machine (network
+error, not a null; it carries the same ZTF stream as ALeRCE and Lasair). Corrections: epoch times are the mean of the
+exposures at the source (discovery 2020-11-23 16:30 UT, MJD 59176.688; last non-detection 2020-04-28 18:15 UT; rise < 209 d),
+recorded as case claim C9. TNS has no WISE instrument: use "Other" with "Instrument=WISE" in the comments. Filing waits for
+Alan's TNS account and his decisions listed at the end of the draft; a written note from A. Meisner is recommended first.

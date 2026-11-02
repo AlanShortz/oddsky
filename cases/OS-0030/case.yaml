@@ -86,6 +86,19 @@ claims:
   calls: []
   author: claude-opus-5.5
   at: '2026-11-02T03:55:18+00:00'
+- id: C9
+  text: 'Timing correction to C1/C2 from the TNS pre-filing check (hunts/H-0012/drafts/tns_OS-0030_validation.md,
+    recompute_numbers.py): epoch times are now the mean of the NEOWISE exposures covering the source,
+    not the tile-wide unWISE header midpoint. Last quiet epoch 2020-04-28 18:15 UT (MJD 58967.760; C1
+    said 2020 May 2); first detection 2020-11-23 16:30 UT (MJD 59176.688; earlier notes used 59176.37);
+    later epochs 2021-04-30 and 2021-11-22. The rise is therefore unresolved within < 209 d (C2 said <
+    205 d). Forced photometry at the HST position gives W1 +231.8 +- 8.3 and W2 +310.0 +- 20.0 uJy at
+    discovery (28 and 15.5 sigma) and 94/129 uJy on 2021-04-30, consistent with C1 within the errors.
+    Published distances to NGC 3239 span 6.95-12.4 Mpc (NED, 12 values), so C2''s luminosity scales accordingly.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T04:31:42+00:00'
 hypotheses:
 - id: H1
   klass: eruptive
