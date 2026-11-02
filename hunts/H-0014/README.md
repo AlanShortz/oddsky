@@ -169,6 +169,13 @@ cannot be tuned after the fact:
   SIMBAD and ADS full-text checks and a referee before it is called unreported;
 - already sealed elsewhere and graded unchanged: the 15 case predictions and the H-0009 ensemble (47f90fa).
 
+**Drafted for sealing before release (2026-11-02):** five numerical forecasts of the searches' outcomes,
+[`predictions/dr4_search_forecast.md`](predictions/dr4_search_forecast.md) (H-0010's 67 in DR4 `vari_microlensing`; whether
+Oddsky's P(lens) ranks those sources as the catalogue does; the single-event test of H-0010's 21 candidates; strong NEOWISE
+events in the catalogue; a controlled test of whether the unclassified NEOWISE brightenings have optical counterparts in
+Gaia), with a grader that has passed its self-test on the DR3 dry run. Refereed 2026-11-02 ("seal after changes"; changes
+applied). They are sealed only when merged to `main` before 2026-12-02.
+
 ## Files
 
 | | |
@@ -177,5 +184,6 @@ cannot be tuned after the fact:
 | `src/oddsky/dr4day/` | `config.py` (the release switch), `archive.py` (polite client), `probe.py`, `readiness.py`, `catalogue.py`, `targets.py`, `lightcurves.py`, `idfix.py`, `pipeline.py` |
 | `tests/test_dr4day.py` | 17 offline tests (plus the 5 in `tests/test_gaia_epoch_release.py`, unchanged and passing) |
 | `data/targets.csv`, `data/h0004_ids.csv` | sealed inputs |
+| `predictions/` | the draft forecasts (`dr4_search_forecast.md`), their sample, grader (`dr4_search_grade.py --self-test`) and Monte Carlo (`work/forecast.py`); tests in `tests/test_dr4_search_grade.py` |
 | `dryrun_dr3/` | the dry run's small outputs (summary, status, probe, readiness, ranked, metrics, cross-matches, ensemble logs) |
 | `~/oddsky-runs/h0014/<release>/` | everything else, including the epoch-photometry cache and quick-look plots (not in git) |

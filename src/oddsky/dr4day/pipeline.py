@@ -345,6 +345,7 @@ class Run:
         for f in ("summary.md", "status.json", "probe.json", "readiness.jsonl", "readiness.txt", "idmap.csv", "epoch_status.csv",
                   "epoch_chunks.csv", "errors.jsonl", "search/ranked.csv", "search/metrics.csv", "catalogue/cones.csv",
                   "catalogue/targets_xmatch.csv", "catalogue/release_lenses_not_ours.csv", "catalogue/classifier_only.csv",
+                  "catalogue/lens_catalogue.csv", "catalogue/target_flags.csv",  # inputs of predictions/dr4_search_grade.py
                   "ensemble/grade.log", "ensemble/selftest.log"):
             src = self.out / f
             if src.exists():
