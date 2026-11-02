@@ -1,9 +1,11 @@
 id: OS-0031
-title: 'A hidden star in NGC 2403 that throws off dust every 5.3 years: four infrared outbursts, 2007-2023'
+title: 'A hidden infrared source in NGC 2403 that has flared every 5.3 years since 2007: a dust maker
+  or an extreme pulsating star'
 hook: 'Found blind by Oddsky''s mid-infrared difference imaging of nearby galaxies (hunt H-0012 v2): a
-  source invisible to Hubble that brightens in the infrared every 5.3 years. Spitzer saw outbursts in
-  2007, 2012 and 2018, WISE in 2017-18 and 2023. Probably a massive binary forming dust at each close
-  approach. The next outburst is due around mid-2028.'
+  source invisible to Hubble whose infrared light rises sharply every 5.3 years and then settles. Spitzer
+  saw outbursts in 2007, 2012 and 2018, WISE in 2017-18 and 2023. Either a massive binary forming dust
+  at each close approach or an extremely luminous dusty pulsating star; an infrared spectrum would tell.
+  The next outburst is due around mid-2028.'
 status: reproduced
 target:
   name: NGC 2403 periodic IR source
@@ -12,9 +14,10 @@ target:
   aliases: []
 summary: 'An optically invisible source in NGC 2403 (3.2 Mpc) whose mid-infrared light rises sharply every
   5.3 years and then settles: Spitzer caught outbursts in 2007, 2012 and 2018, and WISE in 2017-18 and
-  2023. Each outburst is about 1e5 L_sun of ~700 K dust. Most likely a massive binary forming dust at
-  each close approach, like WR 140 but about ten times brighter in the infrared. Next outburst expected
-  around 2028.5. Found blind by Oddsky hunt H-0012.'
+  2023. Each outburst is about 1e5 L_sun of ~700 K dust. The fast-rise, flat-minimum shape favours a massive
+  binary forming dust at each close approach, but an extremely luminous dusty long-period variable of
+  the kind SPIRITS found is also possible; an infrared spectrum would decide. Next outburst expected around
+  2028.5. Found blind by Oddsky hunt H-0012 and recovered blind by H-0013.'
 claims:
 - id: C1
   text: 'WISE (unWISE neo11 epochal coadds, difference imaging): two humps in both bands and both visit
@@ -59,6 +62,21 @@ claims:
   calls: []
   author: claude-opus-5.5
   at: '2026-11-02T19:15:15+00:00'
+- id: C6
+  text: 'Correction (2026-11-02, hunt H-0013): luminous dusty long-period variables reach this regime.
+    Karambelkar et al. 2019 (2019ApJ...877..110K, SPIRITS) catalogue 58 variables brighter than M_[4.5]
+    = -12, most with quasi-periods above 1,000 d and four above 2,000 d (brightest M_[4.5] = -15.5, nu
+    L_nu(4.5 um) of order 5e5 L_sun), interpreted as massive or super-AGB stars, red supergiants with
+    extreme mass loss, or interacting binaries. So the earlier statements that periods above 1,900 d are
+    extremely rare and that 7e4 L_sun in one band exceeds an AGB star''s output do not hold. What still
+    favours outbursts over pulsation is the light-curve shape: H-0013''s template test gives Z = +25 for
+    a flat-minimum outburst train over a sinusoid (a known SPIRITS long-period variable in the same galaxy,
+    SPIRITS 14dd, gives Z = -27), and the joint WISE + Spitzer fit gives P = 5.16 yr over four cycles
+    (hunts/H-0013/README.md).'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:28:13+00:00'
 hypotheses:
 - id: H1
   klass: dust_formation
@@ -73,7 +91,7 @@ hypotheses:
   would_falsify: No mid-infrared brightening between 2027.8 and 2029.3, or an infrared spectrum with silicate
     or SiC features (AGB dust) instead of a featureless carbon-dust continuum.
   status: live
-  confidence: 0.7
+  confidence: 0.5
   author: claude-opus-5.5
   at: '2026-11-02T19:15:15+00:00'
 - id: H2
@@ -87,7 +105,7 @@ hypotheses:
   would_falsify: 'Already strained: periods above 1,900 d are extremely rare, Miras do not show a fast
     rise and flat minimum, and 7e4 L_sun in one band exceeds an AGB star''s total output.'
   status: live
-  confidence: 0.15
+  confidence: 0.4
   author: claude-opus-5.5
   at: '2026-11-02T19:15:15+00:00'
 - id: H3

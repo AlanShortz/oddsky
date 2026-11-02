@@ -15,14 +15,14 @@ import datetime as dt
 import os
 from collections.abc import Callable
 from pathlib import Path
-from typing import Any
+from typing import Any, get_args
 
 import numpy as np
 import pandas as pd
 
 from . import skeptic as _skeptic
 from .analysis import color, excursions, lensing, periodogram, stats
-from .case.model import CLASSES, Check, Claim, Hypothesis, Prediction
+from .case.model import CLASSES, Check, Claim, Hypothesis, HypStatus, Prediction
 from .case.store import CaseStore
 from .paths import cases_dir
 
@@ -546,6 +546,8 @@ class Toolbox:
         h = next((h for h in c.hypotheses if h.id == hypothesis), None)
         if h is None:
             raise ValueError(f"no hypothesis {hypothesis}")
+        if status not in get_args(HypStatus):
+            raise ValueError(f"status must be one of {get_args(HypStatus)}, not {status!r}")
         h.status = status
         if confidence is not None:
             h.confidence = confidence
