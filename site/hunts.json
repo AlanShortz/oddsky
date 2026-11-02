@@ -2,6 +2,22 @@
   "_comment": "Editorial summaries of each hunt for the website. The README in hunts/<ID>/ is the source of truth; these numbers are copied from its funnel table. A hunt whose directory is missing is skipped, so an entry can land before its hunt merges.",
   "hunts": [
     {
+      "id": "H-0013",
+      "title": "Stars that make dust on a schedule",
+      "question": "Some massive binary stars throw off a shell of dust each time their two stars swing close, so they brighten in the infrared on a fixed period. Fewer than a dozen are known outside our galaxy. What does a systematic search of fourteen years of WISE data, extended with Spitzer back to 2004, find in 318 nearby galaxies?",
+      "date": "2026-11-02",
+      "state": "first full run done and refereed; three new repeating sources are cases",
+      "scale": "318 galaxies within 10 Mpc · 25,365 light curves · WISE 2010-2024 + Spitzer 2004-2019 · 1,433 injection tests",
+      "funnel": [[25365, "light curves searched"], [310, "repeating, both bands, both seasons"], [12, "refereed with Spitzer and archives"], [3, "new repeating sources opened as cases (OS-0033, OS-0034, OS-0035)"]],
+      "verdict": "The search recovers the NGC 2403 source (OS-0031) blind, with four cycles from 2007 to 2022. It also shows that very luminous dusty pulsating stars can mimic a dust maker in WISE data alone, so the light-curve shape and a third cycle from Spitzer decide. Two new periodic candidates survive: a source in NGC 4945 with three sharp outbursts every 5.4 years, and one in NGC 3344, next to Wolf-Rayet stars, that flares about every 10 years like the famous dust maker WR 140. A third source in M81 erupted twice, 14 years apart.",
+      "cases": [
+        "OS-0031",
+        "OS-0033",
+        "OS-0034",
+        "OS-0035"
+      ]
+    },
+    {
       "id": "H-0012",
       "title": "Vanishing and appearing stars in nearby galaxies",
       "question": "Stars that collapse into black holes without a bright supernova, and explosions hidden by dust, should still show up in the mid-infrared. What does a difference-imaging search of every star-forming galaxy within 10 Mpc in fourteen years of WISE data find?",

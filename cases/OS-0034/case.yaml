@@ -1,0 +1,101 @@
+id: OS-0034
+title: A source in NGC 3344 next to Wolf-Rayet stars that flares in the infrared about every 10 years,
+  like the dust maker WR 140
+hook: 'Found blind by Oddsky''s search for repeating infrared sources (hunt H-0013): sharp infrared outbursts
+  in 2004, 2014 and 2023, each lasting about a year and a half over a flat minimum, on a young star cluster
+  whose spectrum shows Wolf-Rayet features. Next outburst expected around 2033.'
+status: reproduced
+target:
+  name: NGC 3344 periodic IR source
+  ra: 160.88167
+  dec: 24.9663
+  aliases: []
+summary: An infrared source in the spiral galaxy NGC 3344 (6.9 Mpc) that flares for about a year and a
+  half roughly every 10 years (2004, 2014, 2023), on a young cluster whose spectrum shows Wolf-Rayet stars.
+  It looks like a scaled-up WR 140, a binary that makes dust each time its stars swing close. Next outburst
+  expected around 2033. Found blind by Oddsky hunt H-0013.
+claims:
+- id: C1
+  text: 'Spitzer/IRAC: +80 uJy above quiescence at 2004.32 in both bands; quiescent 2012.5-2013.1; a rise
+    caught at 2013.18 and a peak at 2014.1 (+85 uJy); quiescent again by 2016. WISE: flat 2016-2022, then
+    a new outburst peaking about 2023.3 (hunts/H-0013/README.md).'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: C2
+  text: 'Outbursts spaced 9.8 and about 9.2 yr, each lasting about 1.5 yr (duty cycle about 0.15) with
+    a fast rise: the morphology of WR 140. Peak nu L_nu(W2) about 1e5 L_sun at 6.85 Mpc, about 30x WR
+    140. The Spitzer variable is a point source 0.45" from the WISE position.'
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: C3
+  text: 'It lies 0.4" from [BKD2008] WR 541, an SDSS fibre spectrum with Wolf-Rayet features (Brinchmann,
+    Kunth & Durret 2008), on a blue knot (Gaia G = 21.1, BP-RP about 0, M_G about -8: a young cluster).
+    The WR signature belongs to a 3" (about 100 pc) fibre, not necessarily to this star.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: C4
+  text: 'Caveat: the 2004 outburst rests on a single Spitzer epoch.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: C5
+  text: 'Not reported (2026-11-02): ADS full text for the coordinates and for the host with variability
+    terms finds nothing on this source; nothing in TNS, SIMBAD, Gaia DR3, AllWISE or the Spitzer SEIP
+    catalogue at the position; the SPIRITS catalogue of luminous long-period variables (Karambelkar et
+    al. 2019) does not cover this galaxy.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+hypotheses:
+- id: H1
+  klass: dust_formation
+  statement: A WR 140-like colliding-wind Wolf-Rayet binary forming dust at each periastron, P about 10
+    yr.
+  supports:
+  - C1
+  - C2
+  - C3
+  conflicts: []
+  would_falsify: No infrared outburst in 2031-2035, or an infrared spectrum showing silicate dust.
+  status: live
+  confidence: 0.55
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: H2
+  klass: pulsation
+  statement: An extremely luminous dusty long-period variable.
+  supports:
+  - C1
+  conflicts:
+  - C2
+  would_falsify: A 10-yr period is well beyond the longest known pulsators (about 7 yr), and the flat
+    minimum argues against it.
+  status: live
+  confidence: 0.15
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: H3
+  klass: artifact_blend
+  statement: Two unrelated events, or variability of another source in the cluster.
+  supports:
+  - C4
+  conflicts:
+  - C2
+  would_falsify: A third well-sampled outburst at the predicted time.
+  status: live
+  confidence: 0.15
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+predictions: []
+literature: []
+hunt: H-0013
+featured: false
+created_at: '2026-11-02T21:36:38+00:00'

@@ -1,0 +1,107 @@
+id: OS-0033
+title: 'A hidden source in NGC 4945 that has flared in the infrared every 5.4 years: three outbursts with
+  a sudden rise'
+hook: 'Found blind by Oddsky''s search for repeating infrared sources in nearby galaxies (hunt H-0013):
+  WISE sees cycles peaking in 2011, 2016-17 and 2022, and Spitzer caught the 2016 rise, a jump of 25x
+  in under half a year. Nothing is catalogued at the position. Next peak expected around 2027.5.'
+status: reproduced
+target:
+  name: NGC 4945 periodic IR source
+  ra: 196.41592
+  dec: -49.42001
+  aliases: []
+summary: 'An infrared source in the dusty edge-on starburst galaxy NGC 4945 (3.8 Mpc) that brightens sharply
+  every 5.4 years: WISE saw cycles in 2011, 2016-17 and 2022, and Spitzer caught the 2016 rise. Each swing
+  is about 3e5 L_sun, with no optical counterpart. Most likely a massive binary forming dust at each close
+  approach; an extreme dusty pulsating star is the alternative. Next peak expected around 2027.5. Found
+  blind by Oddsky hunt H-0013.'
+claims:
+- id: C1
+  text: 'WISE (unWISE neo11 difference photometry, H-0012/H-0013): three cycles peaking 2011.27, 2016.71
+    and 2022.14, a period of 5.43 yr (WISE) and 5.37 yr (joint WISE + Spitzer fit), with a sawtooth shape:
+    fast rise (about 8% of the period), slower decline, short minimum (hunts/H-0013/README.md).'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: C2
+  text: 'Spitzer/IRAC warm mission 2012-2019 tracks two cycles: from +22 to +505 (3.6 um) / +748 uJy (4.5
+    um) between 2016.34 and 2016.78, a rise in under 0.45 yr; a single 2007.6 [4.5] epoch fits the decline
+    of a 2005.9 cycle.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: C3
+  text: Peak-to-trough W2 amplitude about 3e5 L_sun at 3.8 Mpc. The light-curve shape test favours a flat-minimum
+    outburst train over a sinusoid (Z_joint = +83). Luminous dusty long-period variables reach P = 1,000-2,500
+    d and nu L_nu(4.5 um) of order 1e5-5e5 L_sun (Karambelkar et al. 2019, SPIRITS), so pulsation is not
+    excluded by luminosity alone.
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: C4
+  text: 'No optical or near-infrared counterpart: nothing in Gaia DR3 or HST at the position, in the dust
+    lane of an edge-on starburst; a Galactic foreground star (b = +13 deg) is implausible with no Gaia
+    source and P = 5.4 yr.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: C5
+  text: 'Not reported (2026-11-02): ADS full text for the coordinates and for the host with variability
+    terms finds nothing on this source; nothing in TNS, SIMBAD, Gaia DR3, AllWISE or the Spitzer SEIP
+    catalogue at the position; the SPIRITS catalogue of luminous long-period variables (Karambelkar et
+    al. 2019) does not cover this galaxy.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+hypotheses:
+- id: H1
+  klass: dust_formation
+  statement: A massive colliding-wind binary forming dust at each periastron every 5.4 yr, deeply embedded
+    in NGC 4945.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  conflicts: []
+  would_falsify: An infrared spectrum with silicate or SiC features (AGB dust), or no brightening in 2026.8-2028.3.
+  status: live
+  confidence: 0.5
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: H2
+  klass: pulsation
+  statement: An extremely luminous dusty long-period variable (super-AGB star or red supergiant with extreme
+    mass loss).
+  supports:
+  - C1
+  - C3
+  conflicts:
+  - C2
+  would_falsify: Already strained by the fast rise and flat minimum, which pulsators do not show.
+  status: live
+  confidence: 0.35
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: A WISE or Spitzer artefact.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  would_falsify: Two observatories see the same cycles at one position.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+predictions: []
+literature: []
+hunt: H-0013
+featured: false
+created_at: '2026-11-02T21:36:38+00:00'

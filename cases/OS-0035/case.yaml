@@ -1,0 +1,89 @@
+id: OS-0035
+title: Two large infrared eruptions 14 years apart in an HII region of M81, the second in 2024
+hook: 'Found by Oddsky''s infrared searches of nearby galaxies (hunts H-0012 and H-0013): an obscured
+  source in M81 erupted by 2009 and again in 2023-24, each time reaching about 3e5 L_sun in the infrared,
+  with nothing seen between.'
+status: reproduced
+target:
+  name: M81 recurrent IR outburst
+  ra: 148.73908
+  dec: 69.14676
+  aliases: []
+summary: An obscured source in an HII region of M81 (3.6 Mpc) that erupted in the infrared by 2009 and
+  again in 2023-24, each time reaching about 3e5 L_sun, with nothing between. Probably recurrent eruptions
+  of a massive star; a long-period dust maker or two unrelated events are possible. Post-2024 infrared
+  data would tell. Found by Oddsky hunts H-0012 and H-0013.
+claims:
+- id: C1
+  text: 'Spitzer: flat 2003.8-2005.0, then +196 uJy at 2009.9 declining to +98 uJy by 2010.4; WISE 2010
+    agrees (hunts/H-0013/README.md).'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: C2
+  text: 'WISE: flat 2014-2023, then a sharp rise in 2023.9-2024.4 to W1 0.75 / W2 1.0 mJy (about 3e5 L_sun
+    at 3.6 Mpc). H-0012 v2 ranks it 8th among obscured transients (hunts/H-0012/work/triage_h0012b.csv).'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: C3
+  text: It sits on a giant molecular cloud / HII region next to a blue Gaia source (G = 20.25, BP-RP =
+    0.37, M_G about -7.5); the nearest TNS object is AT 2026dvq, 22.6" away.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: C4
+  text: 'Not reported (2026-11-02): ADS full text for the coordinates and for the host with variability
+    terms finds nothing on this source; nothing in TNS, SIMBAD, Gaia DR3, AllWISE or the Spitzer SEIP
+    catalogue at the position; nothing within 10" in the SPIRITS catalogue of luminous long-period variables,
+    which covers M81.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+hypotheses:
+- id: H1
+  klass: eruptive
+  statement: Recurrent eruptions of a massive star (LBV-like), each forming or heating dust.
+  supports:
+  - C1
+  - C2
+  - C3
+  conflicts: []
+  would_falsify: A post-2024 infrared decline with a supernova-like spectrum, or a third outburst inconsistent
+    with one star.
+  status: live
+  confidence: 0.5
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: H2
+  klass: dust_formation
+  statement: A long-period (about 16 yr) dust-forming binary.
+  supports:
+  - C1
+  - C2
+  conflicts: []
+  would_falsify: No outburst near 2039-2040.
+  status: live
+  confidence: 0.25
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+- id: H3
+  klass: artifact_blend
+  statement: Two unrelated transients in the same HII region.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: Further outbursts from the same point.
+  status: live
+  confidence: 0.15
+  author: claude-opus-5.5
+  at: '2026-11-02T21:36:38+00:00'
+predictions: []
+literature: []
+hunt: H-0013
+featured: false
+created_at: '2026-11-02T21:36:38+00:00'
