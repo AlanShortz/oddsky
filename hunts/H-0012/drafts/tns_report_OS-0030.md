@@ -27,8 +27,7 @@ validation in `tns_OS-0030_validation.md`; every number below is recomputed ther
 ### Remarks (proposed text, facts only)
 
 > Mid-infrared transient found in archival WISE/NEOWISE data by Oddsky (oddsky.ai): difference imaging of the unWISE
-> time-resolved (epochal) coadds (neo11 build, courtesy A. Meisner; Meisner, Lang & Schlegel 2018; Meisner et al. 2023)
-> against a pre-event reference. Nothing at this position in 15 W1/W2 epochs from 2010 to 2020-04-28. First detected
+> time-resolved coadds (NEO11 version, courtesy A. Meisner; Meisner, Lang & Schlegel 2018) against a pre-event reference. Nothing at this position in 15 W1/W2 epochs from 2010 to 2020-04-28. First detected
 > 2020-11-23 at W1 = 17.99 +- 0.04 and W2 = 17.67 +- 0.07 AB (W1-W2 = 0.95 Vega). Fading: W1 = 18.96 / W2 = 18.63 AB on
 > 2021-04-30, W1 = 19.92 AB on 2021-11-22. Magnitudes are of the difference flux (no quiescent source); the flux-scale
 > systematic is about 0.1 mag. WISE centroid 156.29118 +17.16387 (+-0.3"). The reported position is a point source in
@@ -92,10 +91,9 @@ HST/JWST stamp (`hst_stamps.png`, `jwst_stamps.png`) if the HST/JWST remarks are
 4. **The internal name** (e.g. "Oddsky OS-0030").
 5. **AT type**: "Other - Undefined" (recommended) or "PSN".
 6. **Whether to keep the HST/JWST sentences** in the remarks. If they go, report the WISE centroid with a 0.3" error.
-7. **Written confirmation from A. Meisner (recommended before filing).** The README records verbal permission (by
-   phone, 2026-11-01) and the credit wording; the drafted email was never sent. A short email that confirms the
-   permission, the credit line and that a public TNS report will name the neo11 epochal coadds leaves a written
-   record.
+7. **Written confirmation from A. Meisner: received 2026-11-02.** He replied to Alan's email that a TNS report naming the
+   NEO11 unWISE coadds is fine, and asked for the credit line "unWISE time-resolved coadds (NEO11 version, courtesy A. Meisner;
+   Meisner, Lang & Schlegel 2018)", now used in the remarks. He asked for acknowledgement, not co-reporter status.
 8. In the live form, **check the filter/unit IDs** (3.4-WISE, 4.6-WISE, ABMag) and that "Other" is used for the
    instrument with "Instrument=WISE (NEOWISE-R)" in the comments, as the TNS FAQ asks.
 9. Expect the name to be **AT 2020xxx**: TNS designations follow the discovery date. This is inferred from practice,

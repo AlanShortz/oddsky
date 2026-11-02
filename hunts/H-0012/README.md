@@ -458,8 +458,11 @@ uv run python hunts/H-0012/scripts/targets.py
 ## Provenance
 
 **Permission (2026-11-01).** Aaron Meisner agreed by phone with Alan Shortz on 2026-11-01 to Oddsky using the time-resolved
-unWISE (neo11) epochal coadds for this search, including the scale-up pull. The drafted email (`drafts/email_meisner.md`) was not
-sent. Downloads are throttled (at most 2 connections per task, parallelism lowered to 12, so at most 24 concurrent connections to
+unWISE (neo11) epochal coadds for this search, including the scale-up pull. On 2026-11-02 Alan confirmed the call by email
+(from alan@oddsky.ai), and Meisner replied in writing that a public TNS report naming the NEO11 coadds is fine, with the credit
+line "unWISE time-resolved coadds (NEO11 version, courtesy A. Meisner; Meisner, Lang & Schlegel 2018)". He also noted that
+K. De received a NASA grant for unWISE difference-imaging products (the WISE Transient Pipeline, WTP). WTP names are internal
+and no WTP report of OS-0030 exists on TNS or in ADS (`drafts/tns_OS-0030_validation.md`). Downloads are throttled (at most 2 connections per task, parallelism lowered to 12, so at most 24 concurrent connections to
 NERSC). Credit: Meisner, Lang & Schlegel 2018 (arXiv:1710.02526) and Meisner, Caselden, Schlafly & Kiwy 2023 (unTimely).
 
 
