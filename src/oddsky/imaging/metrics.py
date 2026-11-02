@@ -130,6 +130,8 @@ def band_metrics(mjd, f, e, season=None) -> dict:
     if y.size >= 3:
         win = np.convolve(c2, np.ones(3), mode="valid")
         out["burst_frac"] = float(win.max() / max(c2.sum(), 1e-12))
+        out["burst_i0"] = int(np.argmax(win))  # first epoch of that 3-epoch window
+        out["n_early"] = int(early.sum())
     if season is not None:
         ss = np.asarray(season)[g][o]
         if (ss == 0).sum() >= 2 and (ss == 1).sum() >= 2:
@@ -139,7 +141,7 @@ def band_metrics(mjd, f, e, season=None) -> dict:
     return out
 
 
-def classify_band(m: dict, n_sig_min: int = 3, chi2_min: float = 5.0) -> tuple[str, float]:
+def classify_band(m: dict, n_sig_min: int = 3, chi2_min: float = 5.0, gap_fade: bool = True) -> tuple[str, float]:
     """(class, ds1_score) from ONE band's metrics.
 
     Classes: 'not-variable', 'step-down' / 'step-up' (quiet epoch to epoch but changed between the
@@ -167,6 +169,12 @@ def classify_band(m: dict, n_sig_min: int = 3, chi2_min: float = 5.0) -> tuple[s
     if np.nan_to_num(m.get("season_split", 0)) > 4 and eta > 2.5:
         return "season-locked", score * 0.1
     if m.get("burst_frac", 0) > 0.8:
+        # v2 (gap_fade): a 'burst' that is exactly the 2010-11 epochs, with every NEOWISE epoch below them, is a
+        # star that faded or vanished in the 2011-13 gap, not a transient. Found by injecting BH1-like fades
+        # (merge_triage.py inject): bright ones were classed 'transient' and never scored as failed SNe.
+        if gap_fade and m.get("burst_i0", -1) == 0 and m.get("n_early", 0) >= 2 and \
+                np.nan_to_num(m.get("delta_neo_sig", 0.0)) <= -5 and np.nan_to_num(m.get("delta_late_sig", 0.0)) <= -5:
+            return "step-down", score
         return "transient", score
     if eta > 1.2 and turns >= 4:
         return "lpv-like", score
@@ -180,12 +188,12 @@ def classify_band(m: dict, n_sig_min: int = 3, chi2_min: float = 5.0) -> tuple[s
     return "irregular", score
 
 
-def classify_bands(m1: dict, m2: dict) -> dict:
+def classify_bands(m1: dict, m2: dict, gap_fade: bool = True) -> dict:
     """Per-band classes, and the verdict of the GATE band (the one with the larger chi^2: the band
     that made the source variable). The class and score are never assembled from different bands.
     `band_agree` says whether the other band, if variable, gives the same class."""
-    c1, s1 = classify_band(m1)
-    c2, s2 = classify_band(m2)
+    c1, s1 = classify_band(m1, gap_fade=gap_fade)
+    c2, s2 = classify_band(m2, gap_fade=gap_fade)
     x1 = m1.get("chi2r", -1) if c1 != "no-data" else -1
     x2 = m2.get("chi2r", -1) if c2 != "no-data" else -1
     gate = 1 if x1 >= x2 else 2

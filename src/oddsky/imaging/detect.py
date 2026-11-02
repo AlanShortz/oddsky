@@ -73,11 +73,32 @@ def local_scatter(snr: np.ndarray, mask: np.ndarray | None = None, box: int = 64
     return full[:ny, :nx].astype(np.float32)
 
 
-def snr_map(D, S, psf, mask=None, box: int = 64):
-    """Calibrated S/N map plus (F, E_cal, scatter) for forced photometry."""
+def fine_scatter(snr: np.ndarray, mask: np.ndarray | None, fine: np.ndarray, box: int = 16,
+                 floor: float = 0.8) -> np.ndarray:
+    """local_scatter at a finer box, computed only over the bounding box of `fine` (padded by 2 boxes):
+    the high-surface-brightness parts of a galaxy (bulges, starburst cores, released unWISE 'star'
+    footprints) where subtraction residuals vary on scales far below the 64-px default. NaN outside."""
+    out = np.full(snr.shape, np.nan, np.float32)
+    if not fine.any():
+        return out
+    ys, xs = np.nonzero(fine)
+    y0, y1 = max(0, ys.min() - 2 * box), min(snr.shape[0], ys.max() + 2 * box + 1)
+    x0, x1 = max(0, xs.min() - 2 * box), min(snr.shape[1], xs.max() + 2 * box + 1)
+    sub_mask = None if mask is None else mask[y0:y1, x0:x1]
+    out[y0:y1, x0:x1] = local_scatter(snr[y0:y1, x0:x1], sub_mask, box=box, floor=floor)
+    return out
+
+
+def snr_map(D, S, psf, mask=None, box: int = 64, fine: np.ndarray | None = None, fine_box: int = 16):
+    """Calibrated S/N map plus (F, E_cal, scatter) for forced photometry. Where `fine` is set the noise
+    factor is max(box-scale, fine_box-scale scatter): never smaller than the default, larger where the
+    residuals are structured on small scales."""
     F, E = flux_maps(D, S, psf)
     snr = F / E
     c = local_scatter(snr, mask, box=box)
+    if fine is not None and fine.any():
+        cf = fine_scatter(snr, mask, fine, box=fine_box)
+        c = np.where(fine & np.isfinite(cf), np.fmax(c, cf), c).astype(np.float32)
     return snr / c, F, E * c, c
 
 
@@ -150,3 +171,74 @@ def group(ra: np.ndarray, dec: np.ndarray, radius_arcsec: float = 3.5) -> np.nda
     g = coo_matrix((np.ones(len(pairs)), (pairs[:, 0], pairs[:, 1])), shape=(n, n)) if len(pairs) else coo_matrix((n, n))
     _, labels = connected_components(g, directed=False)
     return labels
+
+
+def dipole_test(stamp: np.ndarray, fwhm_px: float = 2.4, r_fit: float = 6.0, step: float = 0.5, reach: float = 4.0,
+                sigma: float | None = None) -> dict:
+    """Is a late-minus-early difference stamp (candidate at its centre pixel) a moving star's dipole?
+
+    Compares two models fitted within r_fit px, both with a constant: (1) ONE point source of either sign
+    at a free sub-pixel position (grid of `step` px within `reach` px); (2) a positive AND a negative point
+    source at two free grid positions. A proper-motion star leaves a +/- pair of similar amplitude; a real
+    fade or brightening is one PSF, which model 2 cannot improve on much. Returns
+      dchi2   chi2(1) - chi2(2) (noise from the stamp's outer pixels unless `sigma` is given)
+      balance min(|A+|, |A-|) / max(|A+|, |A-|) of model 2 (1 = a pure dipole)
+      sep_px  separation of the two lobes
+      dipole  dchi2 >= 25 and balance >= 0.5 and 1 <= sep_px <= 2.5
+    (calibrated on h0012a: the 10" pair-flagged dipoles have lobes 1-1.6 px apart and balance ~0.95; lobes 3-4
+    px apart are two neighbouring sources, e.g. the nova AT 2023lyd and the LRN AT 2021biy, not a moving star)
+    Gaussian PSF (the test needs the lobes, not the exact profile)."""
+    st = np.asarray(stamp, float)
+    c = st.shape[0] // 2
+    yy, xx = np.mgrid[: st.shape[0], : st.shape[1]] - c
+    rr = np.hypot(xx, yy)
+    fit = (rr <= r_fit) & np.isfinite(st)
+    if sigma is None:
+        out_px = st[(rr > r_fit + 4) & np.isfinite(st)]
+        if out_px.size < 30:
+            return dict(dchi2=np.nan, balance=np.nan, sep_px=np.nan, dipole=False)
+        sigma = 1.4826 * np.median(np.abs(out_px - np.median(out_px)))
+    if not sigma or not np.isfinite(sigma) or fit.sum() < 20:
+        return dict(dchi2=np.nan, balance=np.nan, sep_px=np.nan, dipole=False)
+    d = st[fit] / sigma
+    s2 = (fwhm_px / 2.3548) ** 2
+    g = np.arange(-reach, reach + 1e-9, step)
+    px, py = np.meshgrid(g, g)
+    px, py = px.ravel(), py.ravel()
+    T = np.exp(-0.5 * ((xx[fit][None, :] - px[:, None]) ** 2 + (yy[fit][None, :] - py[:, None]) ** 2) / s2)
+    T /= T.sum(axis=1, keepdims=True)
+    n = d.size
+    # model 1: a*T_k + c
+    tt, t1, td = (T * T).sum(1), T.sum(1), T @ d
+    det = tt * n - t1**2
+    a1 = (td * n - t1 * d.sum()) / det
+    c1 = (tt * d.sum() - t1 * td) / det
+    chi1 = ((d[None, :] - a1[:, None] * T - c1[:, None]) ** 2).sum(1)
+    chi2_1 = float(chi1.min())
+    # model 2: A*T_i + B*T_j + c, all pairs (vectorised 3x3 normal equations)
+    G = T @ T.T
+    m = len(px)
+    M = np.empty((m, m, 3, 3))
+    M[..., 0, 0] = tt[:, None]
+    M[..., 1, 1] = tt[None, :]
+    M[..., 0, 1] = M[..., 1, 0] = G
+    M[..., 0, 2] = M[..., 2, 0] = t1[:, None]
+    M[..., 1, 2] = M[..., 2, 1] = t1[None, :]
+    M[..., 2, 2] = n
+    rhs = np.stack([np.broadcast_to(td[:, None], (m, m)), np.broadcast_to(td[None, :], (m, m)),
+                    np.full((m, m), d.sum())], -1)
+    M[np.eye(m, dtype=bool)] += np.eye(3) * 1e-6  # i == j is degenerate
+    p = np.linalg.solve(M, rhs[..., None])[..., 0]
+    # chi2 = d.d - 2 p.rhs + p.M.p
+    chi2 = (d @ d) - 2 * (p * rhs).sum(-1) + np.einsum("...i,...ij,...j->...", p, M, p)
+    ok = (p[..., 0] > 0) & (p[..., 1] < 0)
+    ok &= ~np.eye(m, dtype=bool)
+    if not ok.any():
+        return dict(dchi2=0.0, balance=0.0, sep_px=0.0, dipole=False)
+    chi2 = np.where(ok, chi2, np.inf)
+    i, j = np.unravel_index(int(np.argmin(chi2)), chi2.shape)
+    A, B = p[i, j, 0], p[i, j, 1]
+    dchi2 = chi2_1 - float(chi2[i, j])
+    bal = float(min(abs(A), abs(B)) / max(abs(A), abs(B)))
+    sep = float(np.hypot(px[i] - px[j], py[i] - py[j]))
+    return dict(dchi2=dchi2, balance=bal, sep_px=sep, dipole=bool(dchi2 >= 25 and bal >= 0.5 and 1.0 <= sep <= 2.5))

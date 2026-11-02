@@ -1,0 +1,97 @@
+{
+ "note": "Roughness error floor (fraction of the light-curve excursion) chosen from {0 (referee), 0.05, 0.10} on injection draw seed 12 (hosts 250/pool, clean cross-match flags); adopted 0.05; validated on an independent draw, seed 13 (work/injection_h0012a_v2.csv). Ranks against the real h0012a failed-SN-like population re-scored with the same floor.",
+ "draws": {
+  "floor 0.0, seed 12": {
+   "v1": {
+    "top10": 0.064,
+    "top30": 0.11,
+    "top100": 0.191,
+    "median_rank_recovered": 77.0
+   },
+   "v2": {
+    "top10": 0.137,
+    "top30": 0.239,
+    "top100": 0.315,
+    "median_rank_recovered": 17.0
+   },
+   "v2_top30_by_distance": {
+    "(0, 2]": 0.42,
+    "(2, 5]": 0.39,
+    "(5, 8]": 0.12,
+    "(8, 11]": 0.06
+   },
+   "rank_M31-2014-DS1": 2,
+   "rank_N6946-BH1": 15,
+   "M31_M33_in_top30": 8
+  },
+  "floor 0.05, seed 12": {
+   "v1": {
+    "top10": 0.064,
+    "top30": 0.11,
+    "top100": 0.191,
+    "median_rank_recovered": 77.0
+   },
+   "v2": {
+    "top10": 0.155,
+    "top30": 0.252,
+    "top100": 0.326,
+    "median_rank_recovered": 17.0
+   },
+   "v2_top30_by_distance": {
+    "(0, 2]": 0.67,
+    "(2, 5]": 0.39,
+    "(5, 8]": 0.11,
+    "(8, 11]": 0.05
+   },
+   "rank_M31-2014-DS1": 2,
+   "rank_N6946-BH1": 19,
+   "M31_M33_in_top30": 11
+  },
+  "floor 0.10, seed 12": {
+   "v1": {
+    "top10": 0.064,
+    "top30": 0.11,
+    "top100": 0.191,
+    "median_rank_recovered": 77.0
+   },
+   "v2": {
+    "top10": 0.129,
+    "top30": 0.225,
+    "top100": 0.323,
+    "median_rank_recovered": 18.0
+   },
+   "v2_top30_by_distance": {
+    "(0, 2]": 0.72,
+    "(2, 5]": 0.36,
+    "(5, 8]": 0.08,
+    "(8, 11]": 0.02
+   },
+   "rank_M31-2014-DS1": 2,
+   "rank_N6946-BH1": 21,
+   "M31_M33_in_top30": 13
+  },
+  "floor 0.05, seed 13 (adopted; validation)": {
+   "v1": {
+    "top10": 0.081,
+    "top30": 0.135,
+    "top100": 0.216,
+    "median_rank_recovered": 71.0
+   },
+   "v2": {
+    "top10": 0.187,
+    "top30": 0.29,
+    "top100": 0.383,
+    "median_rank_recovered": 13.0
+   },
+   "v2_top30_by_distance": {
+    "(0, 2]": 0.72,
+    "(2, 5]": 0.35,
+    "(5, 8]": 0.17,
+    "(8, 11]": 0.02
+   },
+   "rank_M31-2014-DS1": 2,
+   "rank_N6946-BH1": 19,
+   "M31_M33_in_top30": 11
+  }
+ }
+}

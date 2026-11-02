@@ -1,0 +1,71 @@
+name,type,disc,galaxy,dist_mpc,ra,dec,found,sep,uid,cls,cls_w1,cls_w2,triage,var_sig,L_peak,rank_obs,rank_fsn,forced_max_sig,forced_pass,mask_at_position
+AT 2024ccb,Nova,2024-02-10,MESSIER031,0.77,10.7383,41.3177,False,90.3526,,,,,,,,,,0.508323,False,high surface brightness
+AT 2024aoc,Nova,2024-01-20,MESSIER031,0.77,11.7658,41.8874,False,24.7927,,,,,,,,,,2.12273,False,clear
+AT 2023aagf,Nova,2023-12-07,MESSIER031,0.77,10.659,41.1736,False,16.0448,,,,,,,,,,2.84041,False,high surface brightness
+AT 2023yvj,Nova,2023-12-05,MESSIER031,0.77,11.3704,41.9028,False,11.0497,,,,,,,,,,1.43366,False,clear
+AT 2023yqt,Nova,2023-12-03,MESSIER031,0.77,10.6145,41.1856,False,41.2286,,,,,,,,,,0.621276,False,high surface brightness
+AT 2023yoa,Nova,2023-11-27,MESSIER031,0.77,10.7888,41.2616,False,80.1594,,,,,,,,,,1.3146,False,high surface brightness
+AT 2023yij,Nova,2023-11-23,MESSIER031,0.77,10.6906,41.3604,False,20.7483,,,,,,,,,,1.22353,False,high surface brightness
+AT 2023veq,Nova,2023-10-16,MESSIER031,0.77,10.8848,41.6391,False,14.8997,,,,,,,,,,45.1135,False,clear
+AT 2023uri,Nova,2023-10-11,MESSIER031,0.77,10.7527,41.3279,False,48.5649,,,,,,,,,,2.12948,False,high surface brightness
+AT 2023uiq,Nova,2023-10-07,MESSIER031,0.77,10.4529,41.5226,False,32.3536,,,,,,,,,,0.587588,False,clear
+AT 2023ufj,Nova,2023-10-06,MESSIER031,0.77,10.1772,40.9941,True,0.159801,MESSIER031|0098p408|13981,transient,transient,transient,obscured-transient,17.1808,13169.2,5,,75.0649,True,clear
+AT 2023ttu,Nova,2023-09-29,MESSIER031,0.77,10.6507,41.2884,False,138.293,,,,,,,,,,2.94377,False,"nucleus/companion,high surface brightness"
+AT 2023trk,Nova,2023-09-26,MESSIER031,0.77,11.0477,41.3399,False,10.772,,,,,,,,,,0.908004,False,clear
+SN 2023qhq,SN Ia,2023-08-17,MESSIER031,0.77,11.1772,39.7566,False,1274.36,,,,,,,,,,,,
+AT 2023oom,Nova,2023-08-01,MESSIER031,0.77,11.7192,42.0281,False,28.7857,,,,,,,,,,4.56944,False,clear
+AT 2023mxi,Nova,2023-07-12,MESSIER031,0.77,10.9241,40.873,False,51.1886,,,,,,,,,,3.07828,False,clear
+AT 2023lyd,Nova,2023-06-25,MESSIER031,0.77,10.4758,41.1713,True,0.789673,MESSIER031|0098p408|13839,transient,transient,not-variable,obscured-transient,4.56148,4985.87,65,,15.4924,True,high surface brightness
+AT 2023ax,Nova,2023-01-06,MESSIER031,0.77,10.7884,41.284,False,96.2624,,,,,,,,,,1.29098,False,high surface brightness
+AT 2022abzg,Nova,2022-11-01,MESSIER031,0.77,10.6578,41.2136,False,31.2735,,,,,,,,,,2.87946,False,"low-confidence (released galaxy core),high surface brightness"
+AT 2022zzj,Nova,2022-11-11,MESSIER031,0.77,10.3572,40.7398,False,26.8661,,,,,,,,,,83.8902,False,clear
+AT 2022zyr,Nova,2022-11-12,MESSIER031,0.77,10.6966,41.2721,False,133.807,,,,,,,,,,6.48998,False,"nucleus/companion,low-confidence (released galaxy core),high surface brightness"
+SN 2022znd,SN Ia,2022-10-29,MESSIER031,0.77,12.5413,40.0552,False,271.626,,,,,,,,,,,,
+AT 2022waj,Nova,2022-09-25,MESSIER031,0.77,10.3076,41.1011,False,20.5806,,,,,,,,,,1.47239,False,clear
+AT 2022ubf,Nova,2022-09-13,MESSIER031,0.77,10.6252,41.9368,False,92.263,,,,,,,,,,1.45285,False,star/artefact
+AT 2022qzf,Nova,2022-08-09,MESSIER031,0.77,10.5393,41.2587,False,4.94153,,,,,,,,,,3.32536,False,high surface brightness
+AT 2022qug,Nova,2022-08-07,MESSIER031,0.77,10.6964,41.2862,False,85.0296,,,,,,,,,,4.9735,False,"nucleus/companion,high surface brightness"
+AT 2022qpg,Nova,2022-08-04,MESSIER031,0.77,11.0866,41.3864,False,28.1955,,,,,,,,,,2.66106,False,clear
+AT 2022oyb,Nova,2022-07-15,MESSIER031,0.77,10.6226,41.262,False,99.2172,,,,,,,,,,1.51765,False,high surface brightness
+AT 2022ouu,Nova,2022-07-14,MESSIER031,0.77,10.6637,41.2547,False,138.634,,,,,,,,,,6.68007,False,"nucleus/companion,high surface brightness"
+AT 2022ors,Nova,2022-07-11,MESSIER031,0.77,9.47221,40.2131,False,52.4732,,,,,,,,,,25.6316,False,clear
+AT 2022nci,Nova,2022-06-20,MESSIER031,0.77,11.6393,41.7597,True,0.290817,MESSIER031|0121p424|6544,not-variable,not-variable,not-variable,quiet,3.75588,1823.78,,,11.3512,True,clear
+AT 2022cpe,Nova,2022-02-16,MESSIER031,0.77,10.7395,40.9845,False,63.7878,,,,,,,,,,6.2592,False,star/artefact
+SN 2022bqt,SN Ic-BL,2022-02-08,MESSIER031,0.77,12.8613,40.7295,False,94.9118,,,,,,,,,,2.01776,False,clear
+AT 2021acwv,Nova,2021-10-31,MESSIER031,0.77,10.726,41.2807,False,111.8,,,,,,,,,,3.41351,False,"nucleus/companion,high surface brightness"
+AT 2021aceg,Nova,2021-10-25,MESSIER031,0.77,11.8851,39.6362,False,1840.68,,,,,,,,,,,,
+AT 2021acbn,Nova,2021-10-23,MESSIER031,0.77,10.8105,41.3528,False,30.5189,,,,,,,,,,1.20597,False,high surface brightness
+AT 2021yul,Nova,2021-09-13,MESSIER031,0.77,10.1899,41.7556,False,7.27696,,,,,,,,,,2.59466,False,clear
+AT 2021ypo,Nova,2021-09-11,MESSIER031,0.77,10.8442,41.3173,False,12.5016,,,,,,,,,,3.27227,False,high surface brightness
+SN 2021wkf,SN Ia,2021-08-08,MESSIER031,0.77,12.3933,40.0536,False,367.956,,,,,,,,,,,,
+AT 2021urk,Nova,2021-07-26,MESSIER031,0.77,10.689,41.873,False,8.62849,,,,,,,,,,2.15636,False,clear
+AT 2021fbz,Nova,2021-03-08,MESSIER031,0.77,10.9174,41.4535,False,18.5265,,,,,,,,,,1.85683,False,clear
+AT 2021dcd,Nova,2021-02-16,MESSIER031,0.77,10.5176,40.7093,False,26.5895,,,,,,,,,,1.49439,False,star/artefact
+AT 2021boa,Nova,2021-02-03,MESSIER031,0.77,10.9434,41.5612,False,8.9843,,,,,,,,,,2.63867,False,clear
+AT 2021bfs,Nova,2021-01-26,MESSIER031,0.77,10.7174,41.2735,False,128.742,,,,,,,,,,5.13238,False,"nucleus/companion,high surface brightness"
+AT 2020aapw,Nova,2020-11-20,MESSIER031,0.77,10.0823,40.8267,False,12.6193,,,,,,,,,,1.56697,False,clear
+AT 2020aabh,Nova,2020-11-15,MESSIER031,0.77,9.87528,40.5169,True,0.72033,MESSIER031|0098p408|12633,transient,transient,transient,obscured-transient,12.4779,1240.91,207,,56.8145,False,clear
+AT 2020yye,Nova,2020-11-05,MESSIER031,0.77,10.8048,41.4156,False,8.30515,,,,,,,,,,5.84119,False,high surface brightness
+AT 2020ypu,Nova,2020-11-01,MESSIER031,0.77,10.695,41.1175,False,22.9499,,,,,,,,,,1.94065,False,clear
+AT 2020urd,Nova,2020-10-02,MESSIER031,0.77,10.1295,40.5983,False,17.4522,,,,,,,,,,2.89881,False,clear
+AT 2020ulv,Nova,2020-09-29,MESSIER031,0.77,10.7849,41.1472,False,10.1262,,,,,,,,,,6.59909,False,clear
+SN 2020spd,SN Ia,2020-09-03,MESSIER031,0.77,12.1687,41.6552,False,75.5387,,,,,,,,,,2.60051,False,clear
+AT 2020qxo,Nova,2020-08-07,MESSIER031,0.77,10.4983,41.0135,False,25.3832,,,,,,,,,,2.77266,False,clear
+AT 2019wkp,Nova,2019-12-11,MESSIER031,0.77,9.98086,40.767,False,8.52532,,,,,,,,,,1.48703,False,clear
+AT 2019uky,Nova,2019-11-08,MESSIER031,0.77,11.1047,41.555,False,18.8729,,,,,,,,,,1.77497,False,clear
+AT 2019sxc,Nova,2019-10-20,MESSIER031,0.77,10.7565,41.2999,False,85.3122,,,,,,,,,,7.22933,False,high surface brightness
+AT 2019stm,Nova,2019-10-18,MESSIER031,0.77,10.021,39.8992,False,74.5991,,,,,,,,,,3.29184,False,clear
+AT 2019rsi,Nova,2019-10-02,MESSIER031,0.77,10.598,41.1978,False,48.7416,,,,,,,,,,6.76985,False,high surface brightness
+AT 2019pih,Nova,2019-08-29,MESSIER031,0.77,11.0758,41.5464,False,22.005,,,,,,,,,,2.37486,False,clear
+AT 2019agt,Nova,2019-01-28,MESSIER031,0.77,10.6219,41.2334,False,58.3654,,,,,,,,,,1.74567,False,high surface brightness
+AT 2018hld,Nova,2018-10-17,MESSIER031,0.77,10.5131,41.0424,False,38.4204,,,,,,,,,,2.57109,False,clear
+AT 2017gud,Nova,2017-09-17,MESSIER031,0.77,10.6962,41.2668,False,152.952,,,,,,,,,,11.8901,False,"nucleus/companion,low-confidence (released galaxy core),high surface brightness"
+AT 2017gsc,Nova,2017-09-13,MESSIER031,0.77,10.8171,41.3356,False,6.7597,,,,,,,,,,1.59786,False,high surface brightness
+AT 2017ggo,Nova,2017-08-22,MESSIER031,0.77,10.1275,41.648,False,15.5709,,,,,,,,,,2.37688,False,clear
+AT 2017fyp,Nova,2017-08-07,MESSIER031,0.77,11.3562,39.8479,False,994.65,,,,,,,,,,,,
+AT 2016hgb,Nova,2016-10-16,MESSIER031,0.77,10.9025,41.9423,False,24.6606,,,,,,,,,,3.46382,False,clear
+AT 2020cnn,Nova,2020-02-12,MESSIER082,3.53,149.07,69.695,False,52.5918,,,,,,,,,,2.28183,False,high surface brightness
+SN 2014J,SN Ia,2014-01-21,MESSIER082,3.53,148.926,69.6739,False,26.0106,,,,,,,,,,18.7962,False,"low-confidence (released galaxy core),high surface brightness"
+AT 2019abn,ILRT,2019-01-22,NGC5194,8.6,202.427,47.1881,True,0.627399,NGC5194|2029p469|43,transient,transient,transient,obscured-transient,12.1765,712759,3,,37.037,True,clear
+SN 2011dh,SN IIP,2011-06-01,NGC5194,8.6,202.521,47.1697,False,26.0854,,,,,,,,,,3.9317,False,clear
+SN 2017eaw,SN II,2017-05-14,NGC6946,7.72,308.684,60.1933,True,0.297577,NGC6946|3090p605|49,transient,transient,transient,obscured-transient,498.294,4.6546e+06,1,,1789.73,True,clear

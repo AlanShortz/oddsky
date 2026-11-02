@@ -23,6 +23,13 @@ class Galaxy:
     nucleus_mask_arcsec: float = 60.0  # radius masked around the nucleus (PSF-mismatch residuals)
     search_scale: float = 1.2
     extra_masks: tuple = ()  # (ra, dec, radius_arcsec): companion nuclei, very bright clusters
+    # v2 (masks.py): galaxy cores in the window other than this galaxy's centre (neighbouring targets), for the
+    # fallback "is this unWISE bright star really a galaxy core?" rule
+    cores: tuple = ()
+    # v2: the unWISE bright-source list near the galaxy (AllWISE w1 < 9.5 or w2 < 8.3) as (ra, dec, w1mpro,
+    # is_star) with is_star = a Gaia DR3 counterpart with a significant parallax or proper motion
+    # (hunts/H-0012/scripts/targets.py, work/bright_sources_10mpc.csv). Empty: the fallback rule applies.
+    bright_sources: tuple = ()
 
     def ellipse_r(self, ra, dec) -> np.ndarray:
         """Elliptical radius in units of the D25 semi-major axis (1 = on the D25 ellipse)."""
@@ -62,6 +69,10 @@ class Galaxy:
         return ra[keep], dec[keep]
 
 
+# UNGC (Karachentsev+2013) names of the galaxies below, for the full-run target list
+UNGC_NAMES = {"M31": "MESSIER031", "M33": "MESSIER033", "NGC6946": "NGC6946", "M101": "MESSIER101", "M81": "MESSIER081",
+              "M83": "NGC5236", "NGC2403": "NGC2403", "NGC300": "NGC0300", "M51": "NGC5194"}
+
 GALAXIES = {
     g.name: g
     for g in [
@@ -81,3 +92,12 @@ GALAXIES = {
                search_scale=1.5),
     ]
 }
+
+
+def by_ungc_name(name: str) -> Galaxy | None:
+    """The hand-vetted entry above (centre, D25 ellipse, distance, nucleus radius, companion masks) for a
+    UNGC target name, or None."""
+    for k, v in UNGC_NAMES.items():
+        if v == name:
+            return GALAXIES[k]
+    return None

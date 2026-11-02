@@ -10,7 +10,7 @@
  "n_targets_sfr_from_type": 9,
  "n_targets": 318,
  "n_separate_project": 2,
- "n_unique_tiles": 332,
+ "n_unique_tiles": 334,
  "separate_project_tiles": {
   "LMC": 74,
   "SMC": 30
@@ -37,9 +37,9 @@
    "n_tiles": 11
   },
   {
-   "Name": "NGC0024",
-   "Dist": 9.9,
-   "a26": 7.24,
+   "Name": "MESSIER033",
+   "Dist": 0.85,
+   "a26": 69.18,
    "n_tiles": 4
   },
   {
@@ -49,21 +49,21 @@
    "n_tiles": 4
   },
   {
-   "Name": "MESSIER033",
-   "Dist": 0.85,
-   "a26": 69.18,
+   "Name": "NGC0024",
+   "Dist": 9.9,
+   "a26": 7.24,
    "n_tiles": 4
   },
   {
-   "Name": "NGC5128",
-   "Dist": 3.75,
-   "a26": 34.67,
+   "Name": "NGC0628",
+   "Dist": 7.31,
+   "a26": 11.22,
    "n_tiles": 3
   },
   {
-   "Name": "NGC2403",
-   "Dist": 3.18,
-   "a26": 28.18,
+   "Name": "DDO161",
+   "Dist": 7.3,
+   "a26": 7.94,
    "n_tiles": 3
   },
   {
@@ -73,11 +73,352 @@
    "n_tiles": 3
   },
   {
-   "Name": "DDO161",
-   "Dist": 7.3,
-   "a26": 7.94,
+   "Name": "NGC2403",
+   "Dist": 3.18,
+   "a26": 28.18,
    "n_tiles": 3
   }
  ],
- "estimated_input_gb": 332.0
+ "estimated_input_gb": 334.0,
+ "centres": {
+  "n_corrected": 65,
+  "by_source": {
+   "NED": 152,
+   "2MASS": 148,
+   "oddsky.imaging.galaxies": 9,
+   "UNGC": 7
+  },
+  "corrected": [
+   {
+    "Name": "NGC0055",
+    "centre_offset_arcsec": 193.0,
+    "centre_source": "2MASS XSC 00145360-3911478"
+   },
+   {
+    "Name": "NGC5194",
+    "centre_offset_arcsec": 141.1,
+    "centre_source": "oddsky.imaging.galaxies (M51)"
+   },
+   {
+    "Name": "IC0010",
+    "centre_offset_arcsec": 70.1,
+    "centre_source": "2MASS XSC 00201733+5918136"
+   },
+   {
+    "Name": "IC1613",
+    "centre_offset_arcsec": 50.0,
+    "centre_source": "2MASS XSC 01044836+0207107"
+   },
+   {
+    "Name": "UGCA086",
+    "centre_offset_arcsec": 49.4,
+    "centre_source": "2MASS XSC 03594816+6708198"
+   },
+   {
+    "Name": "ESO115-021",
+    "centre_offset_arcsec": 49.2,
+    "centre_source": "NED (ESO 115- G 021)"
+   },
+   {
+    "Name": "Cas1",
+    "centre_offset_arcsec": 47.1,
+    "centre_source": "NED (CAS 1)"
+   },
+   {
+    "Name": "NGC2366",
+    "centre_offset_arcsec": 35.0,
+    "centre_source": "NED (NGC 2366)"
+   },
+   {
+    "Name": "Dw1",
+    "centre_offset_arcsec": 34.4,
+    "centre_source": "2MASS XSC 02565165+5854416"
+   },
+   {
+    "Name": "DDO168",
+    "centre_offset_arcsec": 32.5,
+    "centre_source": "NED (UGC 08320)"
+   },
+   {
+    "Name": "HIZSS012",
+    "centre_offset_arcsec": 31.7,
+    "centre_source": "NED (HIZOA J0730-22)"
+   },
+   {
+    "Name": "UGCA092",
+    "centre_offset_arcsec": 30.7,
+    "centre_source": "NED (UGCA 092)"
+   },
+   {
+    "Name": "HIPASS J0457-42",
+    "centre_offset_arcsec": 30.3,
+    "centre_source": "NED (ESO 252-IG 001)"
+   },
+   {
+    "Name": "HolmI",
+    "centre_offset_arcsec": 28.1,
+    "centre_source": "NED (UGC 05139)"
+   },
+   {
+    "Name": "HIZSS008",
+    "centre_offset_arcsec": 24.0,
+    "centre_source": "2MASS XSC 07252097-2428114"
+   },
+   {
+    "Name": "NGC0784",
+    "centre_offset_arcsec": 22.9,
+    "centre_source": "2MASS XSC 02011693+2850141"
+   },
+   {
+    "Name": "UGC01281",
+    "centre_offset_arcsec": 22.6,
+    "centre_source": "2MASS XSC 01493236+3235104"
+   },
+   {
+    "Name": "HolmII",
+    "centre_offset_arcsec": 21.7,
+    "centre_source": "2MASS XSC 08190497+7043121"
+   },
+   {
+    "Name": "NGC0253",
+    "centre_offset_arcsec": 20.0,
+    "centre_source": "2MASS XSC 00473313-2517196"
+   },
+   {
+    "Name": "IC4662",
+    "centre_offset_arcsec": 19.5,
+    "centre_source": "2MASS XSC 17470919-6438192"
+   },
+   {
+    "Name": "DDO133",
+    "centre_offset_arcsec": 19.4,
+    "centre_source": "NED (UGC 07698)"
+   },
+   {
+    "Name": "IC3104",
+    "centre_offset_arcsec": 18.3,
+    "centre_source": "2MASS XSC 12184412-7943165"
+   },
+   {
+    "Name": "NGC0672",
+    "centre_offset_arcsec": 17.9,
+    "centre_source": "2MASS XSC 01475452+2725580"
+   },
+   {
+    "Name": "ESO383-087",
+    "centre_offset_arcsec": 17.5,
+    "centre_source": "2MASS XSC 13491749-3603483"
+   },
+   {
+    "Name": "NGC2683",
+    "centre_offset_arcsec": 17.4,
+    "centre_source": "2MASS XSC 08524134+3325184"
+   },
+   {
+    "Name": "DDO153",
+    "centre_offset_arcsec": 17.2,
+    "centre_source": "NED (UGCA 307)"
+   },
+   {
+    "Name": "NGC1744",
+    "centre_offset_arcsec": 16.9,
+    "centre_source": "2MASS XSC 04595780-2601199"
+   },
+   {
+    "Name": "NGC4945",
+    "centre_offset_arcsec": 16.3,
+    "centre_source": "2MASS XSC 13052727-4928044"
+   },
+   {
+    "Name": "IC2574",
+    "centre_offset_arcsec": 15.5,
+    "centre_source": "2MASS XSC 10282348+6824437"
+   },
+   {
+    "Name": "IC1959",
+    "centre_offset_arcsec": 15.1,
+    "centre_source": "2MASS XSC 03331257-5024511"
+   },
+   {
+    "Name": "NGC4068",
+    "centre_offset_arcsec": 14.8,
+    "centre_source": "NED (NGC 4068)"
+   },
+   {
+    "Name": "DDO165",
+    "centre_offset_arcsec": 14.7,
+    "centre_source": "NED (UGC 08201)"
+   },
+   {
+    "Name": "NGC1156",
+    "centre_offset_arcsec": 14.6,
+    "centre_source": "2MASS XSC 02594283+2514282"
+   },
+   {
+    "Name": "NGC5128",
+    "centre_offset_arcsec": 14.6,
+    "centre_source": "2MASS XSC 13252775-4301073"
+   },
+   {
+    "Name": "ESO137-018",
+    "centre_offset_arcsec": 14.3,
+    "centre_source": "2MASS XSC 16205835-6029274"
+   },
+   {
+    "Name": "DDO226",
+    "centre_offset_arcsec": 14.1,
+    "centre_source": "NED (IC 1574)"
+   },
+   {
+    "Name": "NGC5236",
+    "centre_offset_arcsec": 13.9,
+    "centre_source": "oddsky.imaging.galaxies (M83)"
+   },
+   {
+    "Name": "NGC3344",
+    "centre_offset_arcsec": 13.9,
+    "centre_source": "2MASS XSC 10433114+2455199"
+   },
+   {
+    "Name": "UGC06456",
+    "centre_offset_arcsec": 13.6,
+    "centre_source": "NED (UGC 06456)"
+   },
+   {
+    "Name": "UGC01056",
+    "centre_offset_arcsec": 13.5,
+    "centre_source": "2MASS XSC 01284771+1641057"
+   },
+   {
+    "Name": "NGC0628",
+    "centre_offset_arcsec": 13.4,
+    "centre_source": "2MASS XSC 01364177+1547004"
+   },
+   {
+    "Name": "FG202",
+    "centre_offset_arcsec": 13.4,
+    "centre_source": "NED (Argo Dwarf Irregular)"
+   },
+   {
+    "Name": "MESSIER082",
+    "centre_offset_arcsec": 12.6,
+    "centre_source": "2MASS XSC 09555243+6940469"
+   },
+   {
+    "Name": "NGC4236",
+    "centre_offset_arcsec": 12.4,
+    "centre_source": "2MASS XSC 12164211+6927452"
+   },
+   {
+    "Name": "DDO053",
+    "centre_offset_arcsec": 12.1,
+    "centre_source": "NED (UGC 04459)"
+   },
+   {
+    "Name": "ESO274-001",
+    "centre_offset_arcsec": 11.9,
+    "centre_source": "2MASS XSC 15141342-4648331"
+   },
+   {
+    "Name": "ESO272-025",
+    "centre_offset_arcsec": 11.9,
+    "centre_source": "2MASS XSC 14432661-4442199"
+   },
+   {
+    "Name": "NGC0925",
+    "centre_offset_arcsec": 11.8,
+    "centre_source": "2MASS XSC 02271691+3334439"
+   },
+   {
+    "Name": "DDO125",
+    "centre_offset_arcsec": 11.5,
+    "centre_source": "NED (UGC 07577)"
+   },
+   {
+    "Name": "NGC5195",
+    "centre_offset_arcsec": 11.4,
+    "centre_source": "2MASS XSC 13295958+4715580"
+   },
+   {
+    "Name": "IC4316",
+    "centre_offset_arcsec": 11.3,
+    "centre_source": "NED (IC 4316)"
+   },
+   {
+    "Name": "KK49",
+    "centre_offset_arcsec": 11.3,
+    "centre_source": "2MASS XSC 05414221+0640502"
+   },
+   {
+    "Name": "NGC4395",
+    "centre_offset_arcsec": 11.2,
+    "centre_source": "2MASS XSC 12254892+3332482"
+   },
+   {
+    "Name": "NGC2403",
+    "centre_offset_arcsec": 11.2,
+    "centre_source": "oddsky.imaging.galaxies (NGC2403)"
+   },
+   {
+    "Name": "UGC03476",
+    "centre_offset_arcsec": 11.2,
+    "centre_source": "NED (UGC 03476)"
+   },
+   {
+    "Name": "UGC07242",
+    "centre_offset_arcsec": 10.9,
+    "centre_source": "NED (UGC 07242)"
+   },
+   {
+    "Name": "UGC02905",
+    "centre_offset_arcsec": 10.8,
+    "centre_source": "NED (UGC 02905)"
+   },
+   {
+    "Name": "HolmIX",
+    "centre_offset_arcsec": 10.7,
+    "centre_source": "NED (UGC 05336)"
+   },
+   {
+    "Name": "IC4182",
+    "centre_offset_arcsec": 10.7,
+    "centre_source": "NED (IC 4182)"
+   },
+   {
+    "Name": "IC5052",
+    "centre_offset_arcsec": 10.7,
+    "centre_source": "NED (IC 5052)"
+   },
+   {
+    "Name": "NGC3077",
+    "centre_offset_arcsec": 10.5,
+    "centre_source": "2MASS XSC 10031907+6844022"
+   },
+   {
+    "Name": "UGCA442",
+    "centre_offset_arcsec": 10.4,
+    "centre_source": "2MASS XSC 23434554-3157243"
+   },
+   {
+    "Name": "NGC4163",
+    "centre_offset_arcsec": 10.3,
+    "centre_source": "2MASS XSC 12120964+3610148"
+   },
+   {
+    "Name": "NGC4826",
+    "centre_offset_arcsec": 10.2,
+    "centre_source": "2MASS XSC 12564369+2140575"
+   },
+   {
+    "Name": "NGC2976",
+    "centre_offset_arcsec": 10.0,
+    "centre_source": "2MASS XSC 09471545+6754589"
+   }
+  ]
+ },
+ "bright_sources": {
+  "n": 2835,
+  "n_galaxy_light": 44,
+  "galaxies_with_released": 29
+ }
 }

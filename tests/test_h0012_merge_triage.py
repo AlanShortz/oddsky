@@ -90,14 +90,16 @@ def _score_frame(n=3, **cols):
 
 
 def test_fsn_score_factors():
+    # the h0012a (v1) score, kept as fsn_score_v1; v2 is tested in test_h0012_v2.py
     df = _score_frame(4, Lbol_pre_est=[1e5, 1e2, 1e5, 1e5], dipole=[False, False, True, False],
                       gaia_foreground=[False, False, False, True])
-    s = mt.fsn_score(df)
+    s = mt.fsn_score_v1(df)
     assert s[0] > 0
     assert s[1] < 0.01 * s[0]  # 1e2 L_sun: far below the RSG window
     assert s[2] == pytest.approx(0.1 * s[0])  # dipole
     assert s[3] == pytest.approx(0.02 * s[0])  # Gaia foreground star
     df = _score_frame(2, triage_class=["failed-SN-like", "demoted"])
+    assert mt.fsn_score_v1(df)[1] == 0
     assert mt.fsn_score(df)[1] == 0
 
 

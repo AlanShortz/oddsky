@@ -39,6 +39,20 @@ Input: a run directory laid out by infra/gcp/imaging_tile.py,
    significance x peak luminosity x redness x no-optical-counterpart bonus x contaminant penalties.
    Known objects are flagged, not penalised, so they show where real events land.
 
+v2 (2026-11-01; referee report reviews/claude-referee-triage-2026-11-01.md, section 4). The failed-SN score
+is fsn_score (v2); the h0012a score is kept as fsn_score_v1 / rank_fsn_v1 for comparison. v2 adds a floor
+on the lost W1 luminosity (a vanishing >= 3e4 L_sun photosphere loses >= ~4e3 L_sun in W1), a roughness
+(zig-zag) penalty, drops the redness bonus and penalises a static AGN / dusty-AGB AllWISE colour anywhere,
+and penalises SIMBAD high-proper-motion stars and a cutout-level moving-star dipole (oddsky.imaging.detect.
+dipole_test). These were designed AFTER seeing BH1 at #65, so `inject` measures them honestly: synthetic
+DS1-like and BH1-like fades injected into real light curves across galaxies, ranked against the real
+failed-SN-like population under both scores. `known-list` writes the forced-photometry position list for
+the runner (--known), and `run` reports the recall of every known transient from those forced light
+curves (work/triage_<run>_recall.csv).
+
+    uv run python hunts/H-0012/scripts/merge_triage.py known-list            # work/known_positions.csv (TNS cache)
+    uv run python hunts/H-0012/scripts/merge_triage.py inject ~/oddsky-runs/h0012a --name h0012a_v2 [--n 400]
+
 Outputs: hunts/H-0012/work/triage_<run>.csv (survivors, ranked), work/triage_<run>_summary.json
 (counts by class, known objects and their ranks), work/triage_<run>_benchmarks.csv (every TNS SN / LRN /
 ILRT / LBV / nova of 2009.5-2024.5 in a searched galaxy: found or not, class, rank), figures/triage_<run>_top.png (top N by each
@@ -62,8 +76,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from oddsky.imaging import F0_JY, crossmatch, metrics
-from oddsky.imaging.galaxies import GALAXIES
+from oddsky.imaging import F0_JY, crossmatch, detect, metrics
+from oddsky.imaging.galaxies import GALAXIES, UNGC_NAMES
 
 log = logging.getLogger("h0012.triage")
 HERE = Path(__file__).resolve().parents[1]
@@ -88,6 +102,17 @@ MPC_M = 3.0856775814913673e22
 # correction (factor ~2), used only to place a source in the RSG luminosity window.
 W1_TO_BOL = 1 / 0.14
 RSG_LBOL = (1e4, 1e6)
+
+# v2 score constants (referee report section 4)
+L_FADE_FLOOR = 4e3  # L_sun: 0.14 x 3e4 L_sun, the least W1 light a vanishing RSG photosphere loses
+L_FADE_DEX = 0.25
+ROUGH_REF = 1.5  # sqrt(chi2_nu) about the 5-point running median; above it the light curve zig-zags (LPV)
+# roughness error floor, as a fraction of the light curve's excursion. Chosen from {0 (the referee's), 0.05, 0.1}
+# on the h0012a injection set (best overall top-30 recovery); validated on an independent draw (seed 13)
+ROUGH_AMP_FLOOR = 0.05
+AGN_STATIC_W1W2 = 0.8
+PM_ARCSEC = 3.0
+SIMBAD_PM_OTYPES = {"PM*", "HPM", "HPM*"}
 
 FSN_CLASSES = ("rise-then-fade", "step-down", "fading")
 OBS_CLASSES = ("transient", "brightening")
@@ -160,23 +185,27 @@ def load_targets(path: Path = TARGETS) -> pd.DataFrame:
     t = t[~t.separate_project.astype(bool)].copy()
     t["dist_mpc"] = t.Dist.astype(float)
     t["dist_source"] = "UNGC " + t.f_Dist.astype(str)
-    for g in GALAXIES.values():  # TRGB/Cepheid distances adopted in the acceptance tests
-        s = sep_arcsec(t.ra, t.dec, g.ra, g.dec)
-        k = np.argmin(s)
-        if s[k] < 180:
-            t.iloc[k, t.columns.get_loc("dist_mpc")] = g.dist_mpc
-            t.iloc[k, t.columns.get_loc("dist_source")] = f"oddsky.imaging.galaxies ({g.name})"
+    for key, g in GALAXIES.items():  # TRGB/Cepheid distances adopted in the acceptance tests
+        k = np.nonzero(t.Name.to_numpy() == UNGC_NAMES.get(key, ""))[0]
+        if not k.size:
+            s = sep_arcsec(t.ra, t.dec, g.ra, g.dec)
+            k = [int(np.argmin(s))] if s.min() < 180 else []
+        for kk in k:
+            t.iloc[kk, t.columns.get_loc("dist_mpc")] = g.dist_mpc
+            t.iloc[kk, t.columns.get_loc("dist_source")] = f"oddsky.imaging.galaxies ({g.name})"
     t["r_arcmin"] = t.a26.astype(float) / 2
     # the radius used for r_norm (galaxy assignment, the 'outside the galaxy' AGN-colour test): UNGC gives no
     # position angle, so a circle of radius a26/2; galaxies in oddsky.imaging.galaxies get their D25 ellipse
     # (M31's circle would otherwise take in a huge area off its b/a = 0.32 disk)
     t["ell_a"], t["ell_ba"], t["ell_pa"] = t.r_arcmin, 1.0, 0.0
-    for g in GALAXIES.values():
-        s = sep_arcsec(t.ra, t.dec, g.ra, g.dec)
-        k = np.argmin(s)
-        if s[k] < 180:
+    for key, g in GALAXIES.items():
+        k = np.nonzero(t.Name.to_numpy() == UNGC_NAMES.get(key, ""))[0]
+        if not k.size:
+            s = sep_arcsec(t.ra, t.dec, g.ra, g.dec)
+            k = [int(np.argmin(s))] if s.min() < 180 else []
+        for kk in k:
             for c, v in (("ell_a", g.d25_arcmin / 2), ("ell_ba", g.ba), ("ell_pa", g.pa_deg)):
-                t.iloc[k, t.columns.get_loc(c)] = v
+                t.iloc[kk, t.columns.get_loc(c)] = v
     t.index = pd.Index(t.Name.to_numpy())
     return t
 
@@ -323,16 +352,27 @@ def lc_features(lc: pd.DataFrame) -> dict:
         pre = (np.mean(ref_vals) if ref_vals else np.nan) + base
         iev = int(np.argmax(np.abs(sm - base)))
         med = float(np.median(f))
-        out[b] = dict(base=base, peak_up=sm[ipk] - base, burst_up=sm[ipk] - med,
+        # roughness: sqrt(chi2_nu) about the light curve's own 5-point running median (an LPV / AGB star
+        # zig-zags about any smooth trend; DS1 and BH1 do not). Needs >= 8 epochs. The error gets a floor of
+        # ROUGH_AMP_FLOOR x the light curve's excursion (range of its 3-point running median): an LPV's
+        # season-to-season swings are a large fraction of its amplitude, a failed SN's wiggles a small one.
+        # Without the floor the statistic grows with S/N: injected DS1-shaped fades at M31 scored 4-20 from
+        # DS1's own ~5% wiggles (found by `inject`; the referee's version had no floor).
+        amp = float(np.max(sm) - np.min(sm))
+        e_r = np.hypot(e, ROUGH_AMP_FLOOR * amp)
+        rough = float(np.sqrt(np.mean(((f - metrics.running_median(f, 5)) / e_r) ** 2))) if f.size >= 8 else np.nan
+        out[b] = dict(base=base, rough=rough, peak_up=sm[ipk] - base, burst_up=sm[ipk] - med,
                       burst_sig=(sm[ipk] - med) / float(np.median(e)), t_peak=t[ipk], fade=fade, t_min=t[ilo], final=final,
                       recovery=(sm[-1] - sm[ilo]) / fade if fade > 0 and ilo < f.size - 1 else 0.0,
                       pre=pre, ev_epoch=int(ep[iev]), med_err=float(np.median(e)))
     return out
 
 
-def add_features(df: pd.DataFrame, run_dir: Path) -> pd.DataFrame:
-    """Light-curve features, amplitudes (uJy) and luminosities (L_sun) for every merged row."""
-    feats = {}
+def add_features(df: pd.DataFrame, run_dir: Path, reclassify: bool = False) -> pd.DataFrame:
+    """Light-curve features, amplitudes (uJy) and luminosities (L_sun) for every merged row. With
+    `reclassify`, the classes are recomputed from the light curves with the current classifier (v2: the
+    2011-13 gap-fade rule), as pipeline.score would; the runner's classes are kept as cls_run."""
+    feats, classes = {}, {}
     for (tile, gal), g in df.groupby(["tile", "phot_galaxy"]):
         p = run_dir / tile / gal / "lightcurves.parquet"
         if not p.exists():
@@ -341,15 +381,39 @@ def add_features(df: pd.DataFrame, run_dir: Path) -> pd.DataFrame:
         lcs = lcs[lcs.group.isin(set(g.group))]
         for gid, lc in lcs.groupby("group"):
             feats[(tile, gal, gid)] = lc_features(lc)
-    cols = {}
-    for i, r in df.iterrows():
-        f = feats.get((r.tile, r.phot_galaxy, r.group), {})
+            if reclassify:
+                rec = rescore_lc(None, lc)
+                classes[(tile, gal, gid)] = {k: rec[k] for k in CLASS_KEYS}
+    if reclassify:
+        df["cls_run"] = df.cls
+        for i, r in df.iterrows():
+            c = classes.get((r.tile, r.phot_galaxy, r.group))
+            if c:
+                for k, v in c.items():
+                    df.at[i, k] = v
+        log.info("reclassified: %d of %d rows changed class", int((df.cls != df.cls_run).sum()), len(df))
+    return amplitudes(assign_lc_features(df, {i: feats.get((r.tile, r.phot_galaxy, r.group), {}) for i, r in df.iterrows()}))
+
+
+LC_KEYS = ("base", "rough", "peak_up", "burst_up", "burst_sig", "fade", "final", "recovery", "pre", "ev_epoch", "t_peak")
+
+
+def assign_lc_features(df: pd.DataFrame, feats: dict) -> pd.DataFrame:
+    """{row index: lc_features(...)} -> lc_w{b}_* columns."""
+    cols = {f"lc_w{b}_{k}": {} for b in (1, 2) for k in LC_KEYS}
+    for i in df.index:
+        f = feats.get(i, {})
         for b in (1, 2):
             fb = f.get(b, {})
-            for k in ("base", "peak_up", "burst_up", "burst_sig", "fade", "final", "recovery", "pre", "ev_epoch", "t_peak"):
-                cols.setdefault(f"lc_w{b}_{k}", {})[i] = fb.get(k, np.nan)
+            for k in LC_KEYS:
+                cols[f"lc_w{b}_{k}"][i] = fb.get(k, np.nan)
     for c, v in cols.items():
-        df[c] = pd.Series(v)
+        df[c] = pd.Series(v, dtype=float)
+    return df
+
+
+def amplitudes(df: pd.DataFrame) -> pd.DataFrame:
+    """Amplitudes (uJy), luminosities (L_sun), depths and colours from the metric and lc_* columns."""
     d = df.dist_mpc.to_numpy()
     for b in (1, 2):
         dl, dn = _col(df, f"w{b}_delta_late"), _col(df, f"w{b}_delta_neo")
@@ -371,6 +435,7 @@ def add_features(df: pd.DataFrame, run_dir: Path) -> pd.DataFrame:
     df["colour_fade"] = vega_colour(df.fade_w1_nmgy, df.fade_w2_nmgy)
     df["colour_up"] = vega_colour(df.up_w1_nmgy, df.up_w2_nmgy)
     df["L_peak"] = np.fmax(df.L_up_w1, df.L_up_w2)
+    df["rough_max"] = np.fmax(df.lc_w1_rough.to_numpy(float), df.lc_w2_rough.to_numpy(float))
     return df
 
 
@@ -434,7 +499,27 @@ def _flag(df: pd.DataFrame, col: str) -> np.ndarray:
     return _to_bool(df[col]).to_numpy(bool)
 
 
-def contaminant_factor(df: pd.DataFrame) -> np.ndarray:
+def simbad_pm_near(df: pd.DataFrame, r_arcsec: float = PM_ARCSEC) -> np.ndarray:
+    """A SIMBAD high-proper-motion star (PM*) within r_arcsec: the nearest object, or any listed in
+    simbad_all ('MAIN_ID [otype] sep"; ...'), so a PM* that is not the nearest SIMBAD entry still counts."""
+    import re
+
+    out = np.zeros(len(df), bool)
+    ot = df.simbad_otype.map(_str).to_numpy() if "simbad_otype" in df else np.full(len(df), "")
+    sep = _col(df, "simbad_sep")
+    allc = df.simbad_all.map(_str).to_numpy() if "simbad_all" in df else np.full(len(df), "")
+    for i in range(len(df)):
+        if ot[i] in SIMBAD_PM_OTYPES and np.nan_to_num(sep[i], nan=99) < r_arcsec:
+            out[i] = True
+            continue
+        for o, d in re.findall(r"\[([^\]]*)\]\s*([0-9.]+)\"", allc[i]):
+            if o in SIMBAD_PM_OTYPES and float(d) < r_arcsec:
+                out[i] = True
+                break
+    return out
+
+
+def contaminant_factor(df: pd.DataFrame, v2: bool = True) -> np.ndarray:
     f = np.ones(len(df))
     f *= np.where(_flag(df, "dipole"), 0.1, 1)
     f *= np.where(_flag(df, "gaia_foreground"), 0.02, 1)
@@ -443,11 +528,32 @@ def contaminant_factor(df: pd.DataFrame) -> np.ndarray:
     f *= np.where(_flag(df, "simbad_agn"), 0.1, 1)
     if "simbad_otype" in df:  # a catalogued AGB/carbon star: dust-cycle fades and brightenings are expected
         f *= np.where(df.simbad_otype.map(_str).isin(SIMBAD_LPV_OTYPES).to_numpy(), 0.3, 1)
+    if v2:
+        f *= np.where(simbad_pm_near(df), 0.02, 1)  # a moving foreground star the 2" Gaia match missed
+        f *= np.where(_flag(df, "dipole_cutout") & ~_flag(df, "dipole"), 0.1, 1)  # the cutout-level dipole test
     return f
 
 
-def fsn_score(df: pd.DataFrame) -> np.ndarray:
-    """Failed-SN score, for failed-SN-like rows (0 otherwise):
+def _fsn_parts(df: pd.DataFrame):
+    sig = []
+    for b in (1, 2):
+        dl = -_col(df, f"w{b}_delta_late_sig")
+        dn = -_col(df, f"w{b}_delta_neo_sig")
+        rtf = np.fmin(_col(df, f"w{b}_rise_sig"), _col(df, f"w{b}_fade_sig"))
+        rtf = np.where(df.cls == "rise-then-fade", rtf, np.nan)
+        sig.append(np.nanmax(np.c_[dl, dn, rtf], axis=1))
+    S = np.clip(np.nan_to_num(np.nanmax(np.c_[sig[0], sig[1]], axis=1)), 0, 50)
+    f_L = _lum_window(df.Lbol_pre_est)
+    depth = np.nan_to_num(np.fmax(df.depth_w1.to_numpy(float), df.depth_w2.to_numpy(float)))
+    f_depth = 0.3 + 0.7 * np.clip(depth / 0.5, 0, 1)
+    both = (np.nan_to_num(sig[0]) >= 3) & (np.nan_to_num(sig[1]) >= 3)
+    f_both = np.where(both, 1.5, 1.0)
+    f_shape = np.where(df.fsn_shape == "fading-recovering", 0.5, 1.0)
+    return S, f_L, f_depth, f_both, f_shape
+
+
+def fsn_score_v1(df: pd.DataFrame) -> np.ndarray:
+    """The h0012a failed-SN score (kept for comparison):
 
     S/5 x f_L x f_depth x f_IR x f_both x f_shape x contaminants, where
       S        largest fade significance in either band: -delta_late_sig, -delta_neo_sig, and for
@@ -463,23 +569,46 @@ def fsn_score(df: pd.DataFrame) -> np.ndarray:
       contaminants: dipole 0.1, Gaia foreground 0.02, Gaia quasar 0.1, AGN colour 0.1, SIMBAD AGN 0.1,
                SIMBAD AGB/LPV/carbon star 0.3
     """
-    sig = []
-    for b in (1, 2):
-        dl = -_col(df, f"w{b}_delta_late_sig")
-        dn = -_col(df, f"w{b}_delta_neo_sig")
-        rtf = np.fmin(_col(df, f"w{b}_rise_sig"), _col(df, f"w{b}_fade_sig"))
-        rtf = np.where(df.cls == "rise-then-fade", rtf, np.nan)
-        sig.append(np.nanmax(np.c_[dl, dn, rtf], axis=1))
-    S = np.clip(np.nan_to_num(np.nanmax(np.c_[sig[0], sig[1]], axis=1)), 0, 50)
-    f_L = _lum_window(df.Lbol_pre_est)
-    depth = np.nan_to_num(np.fmax(df.depth_w1.to_numpy(float), df.depth_w2.to_numpy(float)))
-    f_depth = 0.3 + 0.7 * np.clip(depth / 0.5, 0, 1)
+    S, f_L, f_depth, f_both, f_shape = _fsn_parts(df)
     col = np.where(df.cls == "rise-then-fade", df.colour_up, df.colour_fade)
     f_ir = 1 + np.clip(np.nan_to_num(col) / 0.5, 0, 1)
-    both = (np.nan_to_num(sig[0]) >= 3) & (np.nan_to_num(sig[1]) >= 3)
-    f_both = np.where(both, 1.5, 1.0)
-    f_shape = np.where(df.fsn_shape == "fading-recovering", 0.5, 1.0)
-    s = S / 5 * f_L * f_depth * f_ir * f_both * f_shape * contaminant_factor(df)
+    s = S / 5 * f_L * f_depth * f_ir * f_both * f_shape * contaminant_factor(df, v2=False)
+    return np.where(df.triage_class == "failed-SN-like", s, 0.0)
+
+
+def soft_above(x, thr, dex=L_FADE_DEX):
+    """Logistic in log10 x: 0.5 at thr, ~0.9 at +0.4 dex, ~0.1 at -0.4 dex."""
+    with np.errstate(all="ignore"):
+        z = (np.log10(np.asarray(x, float)) - np.log10(thr)) / dex
+    return np.where(np.isfinite(z), 1 / (1 + np.exp(-2.2 * z)), 0.0)
+
+
+def fsn_factors_v2(df: pd.DataFrame) -> dict:
+    """The v2 factors that differ from v1 (each in [0, 1])."""
+    f_lfade = soft_above(np.fmax(_col(df, "L_fade_w1"), 1e-3), L_FADE_FLOOR)
+    rough = _col(df, "rough_max")
+    f_rough = np.where(np.isfinite(rough), np.clip((ROUGH_REF / np.fmax(rough, 1e-3)) ** 2, 0, 1), 1.0)
+    aw = _col(df, "allwise_w1w2")
+    f_colour = np.where(aw >= AGN_STATIC_W1W2, 0.3, 1.0)
+    return dict(f_lfade=f_lfade, f_rough=f_rough, f_colour=f_colour)
+
+
+def fsn_score(df: pd.DataFrame) -> np.ndarray:
+    """Failed-SN score v2, for failed-SN-like rows (0 otherwise):
+
+    S/5 x f_L x f_depth x f_both x f_shape x f_Lfade x f_rough x f_colour x contaminants(v2), where S, f_L,
+    f_depth, f_both, f_shape are as in fsn_score_v1 (no f_IR redness bonus: AGB stars and AGN are red too) and
+      f_Lfade  logistic(log10 L_fade(W1); 4e3 L_sun, 0.25 dex): the lost W1 light must be what a >= 3e4
+               L_sun photosphere emits there (0.14 x 3e4); at 0.8 Mpc a 2e3 L_sun AGB wobble is a 7 sigma fade
+      f_rough  min(1, (1.5 / roughness)^2), roughness = sqrt(chi2_nu) about the 5-point running median in the
+               rougher band, errors floored at 5% of the light curve's excursion: LPV zig-zag during and
+               after the fade
+      f_colour 0.3 if the static AllWISE W1-W2 >= 0.8 (AGN or dusty AGB colour), anywhere
+      contaminants(v2) = v1's plus SIMBAD PM* within 3" (x 0.02) and the cutout dipole test (x 0.1)
+    """
+    S, f_L, f_depth, f_both, f_shape = _fsn_parts(df)
+    v2 = fsn_factors_v2(df)
+    s = S / 5 * f_L * f_depth * f_both * f_shape * v2["f_lfade"] * v2["f_rough"] * v2["f_colour"] * contaminant_factor(df)
     return np.where(df.triage_class == "failed-SN-like", s, 0.0)
 
 
@@ -864,6 +993,8 @@ def identify(df: pd.DataFrame) -> pd.DataFrame:
                         for a, b, c in zip(df.local_known, df.tns_name, df.simbad_transient, strict=True)]
     df["known"] = df.known_name != ""
     fg, qso, sagn, agn, dip = (_flag(df, c) for c in ("gaia_foreground", "gaia_quasar", "simbad_agn", "agn_colour", "dipole"))
+    dcut = _flag(df, "dipole_cutout")
+    pmn = simbad_pm_near(df)
     local_desc = {n: d for n, _, _, d in LOCAL_KNOWN}
     what = []
     for k, (_, r) in enumerate(df.iterrows()):
@@ -883,6 +1014,10 @@ def identify(df: pd.DataFrame) -> pd.DataFrame:
             w = "AGN / background quasar (" + ", ".join(why) + ")"
         elif dip[k]:
             w = "moving foreground star (dipole)"
+        elif pmn[k]:
+            w = f"moving foreground star (SIMBAD PM* within {PM_ARCSEC:.0f}\")"
+        elif dcut[k]:
+            w = "moving foreground star (cutout dipole test)"
         elif ot in SIMBAD_LPV_OTYPES:
             w = f"known LPV/AGB (SIMBAD {sid} [{ot}])"
         elif r.cls == "lpv-like":
@@ -894,6 +1029,316 @@ def identify(df: pd.DataFrame) -> pd.DataFrame:
         what.append(w)
     df["what"] = what
     return df
+
+
+# ----------------------------------------------------------------------------------------------
+# v2: cutout-level moving-star dipole test
+
+
+def cutout_dipoles(df: pd.DataFrame, run_dir: Path, rows=None) -> pd.DataFrame:
+    """detect.dipole_test on the late-minus-2010 difference cutout (per season, averaged; _event_image
+    'fade') in W1 and W2 for every row with a cutout. Adds dipole_dchi2, dipole_balance, dipole_sep_px
+    (the band with the larger dchi2) and dipole_cutout (either band flagged)."""
+    for c, v in (("dipole_dchi2", np.nan), ("dipole_balance", np.nan), ("dipole_sep_px", np.nan), ("dipole_cutout", False)):
+        df[c] = v
+    idx = df.index if rows is None else rows
+    cache = {}
+    for i in idx:
+        r = df.loc[i]
+        key = (r.tile, r.phot_galaxy)
+        if key not in cache:
+            d = run_dir / r.tile / r.phot_galaxy
+            z = np.load(d / "cutouts.npz") if (d / "cutouts.npz").exists() else None
+            lc = pd.read_parquet(d / "lightcurves.parquet") if (d / "lightcurves.parquet").exists() else pd.DataFrame()
+            cache = {key: (z, lc)}  # one galaxy-tile at a time (rows are processed grouped)
+        z, lcs = cache[key]
+        if z is None or not len(lcs):
+            continue
+        lc = lcs[lcs.group == r.group]
+        best = None
+        for band, fw in ((1, 2.3), (2, 2.6)):
+            k = f"{r.group}_w{band}_diff"
+            if k not in z.files:
+                continue
+            lb = lc[lc.band == band].sort_values("epoch")
+            im = _event_image(np.asarray(z[k]), lb.epoch.tolist(), lb.mjd.tolist(), lb.season.tolist(), "fade", None)
+            if im is None:
+                continue
+            t = detect.dipole_test(im, fwhm_px=fw)
+            if best is None or np.nan_to_num(t["dchi2"], nan=-1) > np.nan_to_num(best["dchi2"], nan=-1):
+                best = t
+            if t["dipole"]:
+                df.loc[i, "dipole_cutout"] = True
+        if best is not None:
+            df.loc[i, ["dipole_dchi2", "dipole_balance", "dipole_sep_px"]] = [best["dchi2"], best["balance"], best["sep_px"]]
+    df["dipole_cutout"] = df.dipole_cutout.astype(bool)
+    return df
+
+
+# ----------------------------------------------------------------------------------------------
+# v2: known positions (the runner's --known list) and the recall report
+
+KNOWN_POSITIONS = HERE / "work" / "known_positions.csv"
+
+
+def known_positions(targets: pd.DataFrame, tns: dict) -> pd.DataFrame:
+    """Every TNS SN / LRN / ILRT / LBV / nova of 2009.5-2024.5 inside a target's search circle (the
+    benchmark selection), plus the local known list, one row per (object, galaxy). The runner force-
+    photometers all of them whatever the masks say."""
+    rows = []
+    for g, (objs, st) in tns.items():
+        if st != "ok" or objs.empty or g not in targets.index:
+            continue
+        tg = targets.loc[g]
+        typ = objs.get("Obj. Type", pd.Series("", index=objs.index)).fillna("").astype(str)
+        disc = pd.to_datetime(objs.get("Discovery Date (UT)", pd.Series("", index=objs.index)), errors="coerce")
+        yr = disc.dt.year + disc.dt.dayofyear / 365.25
+        inside = sep_arcsec(tg.ra, tg.dec, objs.ra, objs.dec) / 60 <= float(tg.search_diam_arcmin) / 2
+        sel = objs[inside & typ.str.startswith(BENCH_TYPES) & (yr >= 2009.5) & (yr <= 2024.5)]
+        for _, o in sel.iterrows():
+            rows.append(dict(name=str(o.Name), type=str(o.get("Obj. Type", "")), disc=str(o.get("Discovery Date (UT)", ""))[:10],
+                             galaxy=g, ra=float(o.ra), dec=float(o.dec), source="TNS"))
+    for n, a, d, desc in LOCAL_KNOWN:
+        s = sep_arcsec(a, d, targets.ra, targets.dec) / 60 / (targets.search_diam_arcmin.astype(float) / 2)
+        g = targets.index[int(np.argmin(s))]
+        rows.append(dict(name=n, type=desc, disc="", galaxy=g, ra=a, dec=d, source="local"))
+    return pd.DataFrame(rows).drop_duplicates(["name", "galaxy"]).reset_index(drop=True)
+
+
+def recall_table(run_dir: Path, bench: pd.DataFrame | None = None, merged: pd.DataFrame | None = None) -> pd.DataFrame:
+    """Per known object: the forced light curve from the tile where it sits furthest from the window
+    edge (forced_known.parquet, written by the v2 runner), summarised by pipeline.recall_summary, the mask
+    at its position, and whether the blind search found it (bench 'found', if given)."""
+    from oddsky.imaging.pipeline import recall_summary
+
+    parts = []
+    for p in sorted(run_dir.glob("*/*/forced_known.parquet")):
+        f = pd.read_parquet(p)
+        f["phot_galaxy"] = p.parent.name
+        parts.append(f)
+    if not parts:
+        return pd.DataFrame()
+    fk = pd.concat(parts, ignore_index=True)
+    rows = []
+    for name, g in fk.groupby("name"):
+        best = g.sort_values("edge_px", ascending=False).iloc[0]
+        lc = g[(g.tile == best.tile) & (g.phot_galaxy == best.phot_galaxy)]
+        disc = pd.to_datetime(str(best.disc), errors="coerce")
+        dm = (disc - pd.Timestamp("1858-11-17")) / pd.Timedelta(days=1) if pd.notna(disc) else None
+        rs = recall_summary(lc, dm)
+        rec = dict(name=name, type=best.type, disc=best.disc, galaxy=best.phot_galaxy, tile=best.tile, mask=best["mask"],
+                   mask_code=int(best.mask_code))
+        for b in (1, 2):
+            for k, v in rs.get(b, {}).items():
+                rec[f"w{b}_{k}"] = v
+        sig = [rs.get(b, {}).get("max_sig", np.nan) for b in (1, 2)]
+        rec["max_sig"] = float(np.nanmax(np.abs(sig))) if np.isfinite(sig).any() else np.nan
+        rec["forced_pass"] = bool(any(rs.get(b, {}).get("n_sig", 0) >= 2 and rs.get(b, {}).get("both_seasons", False) for b in (1, 2)))
+        rows.append(rec)
+    out = pd.DataFrame(rows)
+    if bench is not None and len(bench) and "found" in bench:
+        out = out.merge(bench[["name", "found", "cls", "triage", "rank_obs", "rank_fsn"]].drop_duplicates("name"), on="name", how="left")
+    if merged is not None and len(merged) and "local_known" in merged:  # the local known list is not in the TNS benchmarks
+        lk = merged[merged.local_known.astype(str) != ""].drop_duplicates("local_known").set_index("local_known")
+        for c in ("found", "cls", "triage", "rank_obs", "rank_fsn"):
+            if c not in out:
+                out[c] = np.nan
+        out["found"] = out["found"].astype(object)
+        for i, nm in out.name.items():
+            if nm in lk.index:
+                r = lk.loc[nm]
+                out.loc[i, ["found", "cls", "triage", "rank_obs", "rank_fsn"]] = [True, r.cls, r.triage_class, r.rank_obs, r.rank_fsn]
+    return out
+
+
+# ----------------------------------------------------------------------------------------------
+# v2: injection-recovery of synthetic failed-SN fades into real light curves
+
+YEAR0_MJD = 51544.5  # 2000.0
+# De et al. 2024 (Science 386; github repo photometry.csv): NEOWISE W1/W2 of M31-2014-DS1, mJy
+DS1_YR = np.array([2010.04, 2010.55, 2011.04, 2014.04, 2014.56, 2015.04, 2015.55, 2016.03, 2016.56, 2017.01, 2017.55, 2018.0,
+                   2018.55, 2018.99, 2019.55, 2020.0, 2020.55, 2020.99, 2021.55, 2021.99])
+DS1_W1 = np.array([0.979, 1.034, 0.967, 0.984, 1.095, 1.051, 1.16, 1.1, 1.345, 1.514, 1.435, 0.849, 0.787, 0.568, 0.645, 0.422,
+                   0.442, 0.302, 0.355, 0.221])
+DS1_W2 = np.array([1.014, 1.081, 0.922, 0.943, 0.996, 1.132, 1.064, 1.122, 1.252, 1.441, 1.246, 0.73, 0.613, 0.587, 0.52, 0.502,
+                   0.399, 0.435, 0.371, 0.338])
+# W2/W1 of the progenitor in Vega nanomaggies: DS1 2010-11 (1.006 mJy / 0.993 mJy) -> 1.83; BH1's lost light
+# (W2 -0.06, W1 -0.045 mJy in this pipeline's forced photometry) -> 2.4
+W2_OVER_W1 = {"DS1": 1.83, "BH1": 2.4}
+
+
+def template(kind: str, t_yr: np.ndarray, t0: float) -> dict:
+    """Flux in units of the pre-event level per band. DS1: De et al.'s light curve (smoothed by a 3-point
+    running median), shifted so that its peak (2017.0) falls at t0, the decline continued beyond the last
+    published epoch with the e-folding time of its last two years. BH1: flat, then from t0 an exponential
+    fade (e-folding 1.5 yr) to 10% of the pre-event level (N6946-BH1's ~90% mid-IR loss over 2010-2016)."""
+    out = {}
+    for b in (1, 2):
+        if kind == "DS1":
+            y = metrics.running_median((DS1_W1 if b == 1 else DS1_W2) / np.mean((DS1_W1 if b == 1 else DS1_W2)[:3]), 3)
+            tt = DS1_YR + (t0 - 2017.0)
+            tau = 2.0 / np.log(y[-5] / y[-1]) if y[-1] < y[-5] else 5.0
+            f = np.interp(t_yr, tt, y, left=1.0, right=np.nan)
+            late = t_yr > tt[-1]
+            f[late] = y[-1] * np.exp(-(t_yr[late] - tt[-1]) / tau)
+        else:
+            f = np.where(t_yr < t0, 1.0, 0.1 + 0.9 * np.exp(-(t_yr - t0) / 1.5))
+        out[b] = f
+    return out
+
+
+def inject_lc(lc: pd.DataFrame, kind: str, t0: float, f_pre_w1: float) -> pd.DataFrame:
+    """Add a synthetic star (pre-event W1 flux f_pre_w1 nmgy) to a real long-format light curve: the
+    per-season reference takes the season's median of the star's flux (as diff.references would), the
+    difference fluxes the rest."""
+    lc = lc.copy()
+    t = 2000 + (lc.mjd.to_numpy(float) - YEAR0_MJD) / 365.25
+    shp = template(kind, t, t0)
+    for b in (1, 2):
+        m = (lc.band == b).to_numpy()
+        F = f_pre_w1 * (1.0 if b == 1 else W2_OVER_W1[kind]) * shp[b][m]
+        seas = lc.season.to_numpy()[m]
+        ref = np.zeros_like(F)
+        for s_ in np.unique(seas):
+            k = seas == s_
+            ref[k] = np.median(F[k])
+        lc.loc[m, "flux"] = lc.flux.to_numpy(float)[m] + F - ref
+        lc.loc[m, "ref_flux"] = lc.ref_flux.to_numpy(float)[m] + ref
+    return lc
+
+
+CLASS_KEYS = ("cls", "ds1_score", "cls_w1", "cls_w2", "gate_band", "band_agree", "ds1_score_w1", "ds1_score_w2")
+
+
+def rescore_lc(row: pd.Series, lc: pd.DataFrame, gap_fade: bool = True) -> dict:
+    """pipeline.score's per-band metrics and classes for one light curve (gap_fade=False: the h0012a
+    classifier, without the 2011-13 gap-fade rule), plus the h0012a classes as v1_<key>."""
+    m = {}
+    for b in (1, 2):
+        lb = lc[lc.band == b].sort_values("mjd")
+        rf = lb.groupby("season").ref_flux.first().to_dict()
+        f_al = metrics.align_seasons(lb.flux.to_numpy(), lb.season.to_numpy(), rf)
+        m[b] = metrics.band_metrics(lb.mjd.to_numpy(), f_al, lb.err.to_numpy(), lb.season.to_numpy())
+        m[b]["ref_flux"] = float(np.nanmedian(lb.ref_flux)) if len(lb) else np.nan
+    rec = dict(metrics.classify_bands(m[1], m[2], gap_fade=gap_fade))
+    rec.update({f"v1_{k}": v for k, v in metrics.classify_bands(m[1], m[2], gap_fade=False).items()})
+    for b in (1, 2):
+        for k, v in m[b].items():
+            rec[f"w{b}_{k}"] = v
+    return rec
+
+
+CLEAN_XMATCH = dict(gaia_foreground=False, gaia_quasar=False, agn_colour=False, simbad_agn=False, simbad_otype="",
+                    simbad_all="", simbad_sep=np.nan, allwise_w1w2=np.nan, dipole=False, dipole_cutout=False, known=False)
+
+
+def injection_recovery(merged: pd.DataFrame, run_dir: Path, n_hosts: int = 200, seed: int = 12,
+                       lw1_grid=(4e3, 1e4, 2.5e4, 6e4)) -> pd.DataFrame:
+    """Inject DS1-like and BH1-like fades (pre-event W1 nu L_nu in lw1_grid, i.e. L_bol ~ 3e4-4e5 L_sun with
+    the photospheric correction) into the real light curves of random candidates (galaxies drawn
+    uniformly, then a random candidate) and rank each against the real failed-SN-like population under
+    the v1 and v2 scores. Host pools: 'quiet' (not-variable candidates: real positions, noise and
+    crowding) and 'any' (any candidate with photometry). Cross-match flags: 'clean' (a vanished RSG has
+    no AGN colour, no proper motion) and 'inherit' (the host's, a pessimistic bound). Onset epochs are
+    drawn uniformly: DS1 peak 2012.5-2020, BH1 fade start 2010.8-2019."""
+    rng = np.random.default_rng(seed)
+    pop = merged[merged.triage_class == "failed-SN-like"]
+    P1 = np.sort(pop.fsn_score_v1.to_numpy(float))
+    P2 = np.sort(pop.fsn_score.to_numpy(float))
+    pop_uid = dict(zip(pop.uid, zip(pop.fsn_score_v1, pop.fsn_score, strict=True), strict=True))
+    base = merged[merged.has_lc.astype(bool)]
+    pools = {"quiet": base[(base.triage_class == "quiet") & (base.cls == "not-variable")], "any": base}
+    plan = []
+    for pool, cand in pools.items():
+        gals = cand.galaxy.value_counts()
+        gals = gals[gals >= 3].index.to_numpy()
+        for _ in range(n_hosts):
+            g = rng.choice(gals)
+            plan.append((pool, cand[cand.galaxy == g].sample(1, random_state=int(rng.integers(1 << 31))).index[0]))
+    lc_cache: dict = {}
+    rows = []
+    for pool, idx in plan:
+        host = merged.loc[idx]
+        key = (host.tile, host.phot_galaxy)
+        if key not in lc_cache:
+            lc_cache.clear()
+            lc_cache[key] = pd.read_parquet(run_dir / host.tile / host.phot_galaxy / "lightcurves.parquet")
+        lc0 = lc_cache[key]
+        lc0 = lc0[lc0.group == host.group]
+        if lc0.empty:
+            continue
+        f_unit = nu_lnu_lsun(nmgy_to_ujy(1.0, 1), 1, host.dist_mpc)  # L_sun per nmgy (W1)
+        for kind in ("DS1", "BH1"):
+            t0 = rng.uniform(2012.5, 2020.0) if kind == "DS1" else rng.uniform(2010.8, 2019.0)
+            for lw1 in lw1_grid:
+                lc = inject_lc(lc0, kind, t0, lw1 / f_unit)
+                rec = rescore_lc(host, lc)
+                for xm in ("clean", "inherit"):
+                    r = host.copy()
+                    for k, v in rec.items():
+                        r[k] = v
+                    if xm == "clean":
+                        for k, v in CLEAN_XMATCH.items():
+                            r[k] = v
+                    r["dipole"] = False if xm == "clean" else r.get("dipole", False)
+                    r["_lc_feats"] = lc_features(lc)
+                    r["inj_kind"], r["inj_t0"], r["inj_Lw1"], r["inj_pool"], r["inj_xmatch"] = kind, t0, lw1, pool, xm
+                    r["inj_host_uid"] = host.uid
+                    rows.append(r)
+    inj = pd.DataFrame(rows).reset_index(drop=True)
+    inj = assign_lc_features(inj, dict(zip(inj.index, inj._lc_feats, strict=True))).drop(columns="_lc_feats")
+    inj = amplitudes(inj)
+    # v2 classifier (with the gap-fade rule) + v2 score
+    inj["triage_class"] = inj.apply(triage_class, axis=1)
+    inj["fsn_shape"] = inj.apply(fsn_shape, axis=1)
+    inj["fsn_score"] = fsn_score(inj)
+    # the h0012a pipeline: v1 classifier + v1 score; and v1 classifier + v2 score (the score change alone)
+    v1 = inj.copy()
+    for k in CLASS_KEYS:
+        v1[k] = inj[f"v1_{k}"]
+    v1["triage_class"] = v1.apply(triage_class, axis=1)
+    v1["fsn_shape"] = v1.apply(fsn_shape, axis=1)
+    inj["cls_v1"], inj["triage_class_v1"] = v1.cls, v1.triage_class
+    inj["fsn_score_v1"] = fsn_score_v1(v1)
+    inj["fsn_score_v2_v1cls"] = fsn_score(v1)
+
+    def rank(scores, P, k):
+        out = []
+        for sc, host in zip(scores, inj.inj_host_uid, strict=True):
+            if not sc > 0:
+                out.append(np.inf)
+                continue
+            above = len(P) - np.searchsorted(P, sc, side="right")
+            h = pop_uid.get(host)  # leave the host itself out of the population it is ranked against
+            if h is not None and h[k] > sc:
+                above -= 1
+            out.append(float(above + 1))
+        return out
+
+    inj["inj_rank_v1"] = rank(inj.fsn_score_v1, P1, 0)
+    inj["inj_rank_v2"] = rank(inj.fsn_score, P2, 1)
+    inj["inj_rank_v2score_v1cls"] = rank(inj.fsn_score_v2_v1cls, P2, 1)
+    return inj
+
+
+def injection_summary(inj: pd.DataFrame) -> dict:
+    def stats(g):
+        out = {"n": int(len(g)), "classed_failed_SN_v2": float((g.triage_class == "failed-SN-like").mean()),
+               "classed_failed_SN_v1": float((g.triage_class_v1 == "failed-SN-like").mean())}
+        for v in ("v1", "v2score_v1cls", "v2"):
+            rk = g[f"inj_rank_{v}"].to_numpy(float)
+            out[v] = dict(median_rank=float(np.median(rk)) if np.isfinite(np.median(rk)) else None,
+                          top10=float((rk <= 10).mean()), top30=float((rk <= 30).mean()), top100=float((rk <= 100).mean()))
+        return out
+
+    res = {"all": stats(inj)}
+    for keys in (["inj_xmatch", "inj_pool"], ["inj_xmatch", "inj_kind"], ["inj_xmatch", "inj_kind", "inj_Lw1"]):
+        for k, g in inj.groupby(keys):
+            res[" / ".join(str(x) for x in k)] = stats(g)
+    db = pd.cut(inj.dist_mpc, [0, 2, 5, 8, 11], labels=["<2", "2-5", "5-8", "8-11"])
+    for (xm, d), g in inj.groupby([inj.inj_xmatch, db], observed=True):
+        res[f"{xm} / dist {d} Mpc"] = stats(g)
+    return res
 
 
 # ----------------------------------------------------------------------------------------------
@@ -1055,7 +1500,9 @@ def benchmarks(df: pd.DataFrame, tns: dict, targets: pd.DataFrame, run_galaxies)
 
 
 TABLE_COLS = [
-    "rank_fsn", "rank_obs", "fsn_score", "obs_score", "triage_class", "fsn_shape", "what", "known", "known_name",
+    "rank_fsn", "rank_obs", "rank_fsn_v1", "fsn_score", "obs_score", "fsn_score_v1", "triage_class", "fsn_shape", "what",
+    "known", "known_name", "low_confidence", "mask_code", "rough_max", "lc_w1_rough", "lc_w2_rough", "dipole_cutout",
+    "dipole_dchi2", "dipole_balance",
     "uid", "galaxy", "dist_mpc", "dist_source", "ra", "dec", "r_norm", "tile", "n_tiles", "tiles_all", "also_in", "merged_uids",
     "edge_px", "channel", "cls", "cls_w1", "cls_w2", "gate_band", "band_agree", "var_sig", "ds1_score", "dipole",
     "w1_delta_neo_sig", "w2_delta_neo_sig", "w1_delta_late_sig", "w2_delta_late_sig", "w1_rise_sig", "w2_rise_sig",
@@ -1070,14 +1517,15 @@ TABLE_COLS = [
 ]
 
 
-def run(run_dir: Path, top: int = 8, tns_mode: str = "fetch", use_net: bool = True, name: str | None = None) -> dict:
+def run(run_dir: Path, top: int = 8, tns_mode: str = "fetch", use_net: bool = True, name: str | None = None,
+        reclassify: bool = False) -> dict:
     name = name or run_dir.name
     targets = load_targets()
     raw, reports = load_run(run_dir)
     log.info("%s: %d tiles, %d candidate rows", name, len(reports), len(raw))
     df = merge_candidates(raw, targets)
     log.info("merged: %d -> %d", len(raw), len(df))
-    df = add_features(df, run_dir)
+    df = add_features(df, run_dir, reclassify=reclassify)
     df["triage_class"] = df.apply(triage_class, axis=1)
     df["fsn_shape"] = df.apply(fsn_shape, axis=1)
     surv = df.triage_class.isin(["failed-SN-like", "obscured-transient", "step-up"])
@@ -1088,11 +1536,14 @@ def run(run_dir: Path, top: int = 8, tns_mode: str = "fetch", use_net: bool = Tr
     df = df.join(s[[c for c in s.columns if c not in df.columns]], how="left")
     for c in ("gaia_status", "allwise_status", "simbad_status"):
         df[c] = df[c].fillna("not queried (not a survivor)")
+    surv_idx = df.index[surv]
+    df = cutout_dipoles(df, run_dir, rows=df.loc[surv_idx].sort_values(["tile", "phot_galaxy"]).index)
     df = identify(df)
+    df["fsn_score_v1"] = fsn_score_v1(df)
     df["fsn_score"] = fsn_score(df)
     df["obs_score"] = obs_score(df)
-    for k in ("fsn", "obs"):
-        sc = df[f"{k}_score"]
+    for k in ("fsn", "fsn_v1", "obs"):
+        sc = df[f"{k.replace('_v1', '')}_score_v1" if k == "fsn_v1" else f"{k}_score"]
         df[f"rank_{k}"] = sc.where(sc > 0).rank(ascending=False, method="first")
     CACHE.mkdir(parents=True, exist_ok=True)
     allc = df.copy()
@@ -1111,20 +1562,31 @@ def run(run_dir: Path, top: int = 8, tns_mode: str = "fetch", use_net: bool = Tr
             f"H-0012 triage, run {name}: top {top} by failed-SN score, then top {top} by obscured-transient score")
     known_rows = df[df.known].sort_values(["galaxy", "known_name"])
     bench = benchmarks(df, tns, targets, sorted(set(df.galaxy)))
+    rec = recall_table(run_dir, bench, df)
+    if len(rec):
+        rec.to_csv(HERE / "work" / f"triage_{name}_recall.csv", index=False, float_format="%.6g")
+        bench = bench.merge(rec[["name", "max_sig", "forced_pass", "mask"]].rename(
+            columns={"max_sig": "forced_max_sig", "forced_pass": "forced_pass", "mask": "mask_at_position"}), on="name", how="left")
     bench.to_csv(HERE / "work" / f"triage_{name}_benchmarks.csv", index=False, float_format="%.6g")
     summary = dict(
         run=name, run_dir=str(run_dir), n_tiles=len(reports), n_galaxies=int(df.galaxy.nunique()),
-        n_candidate_rows=len(raw), n_merged=len(df), n_multi_tile=int((df.n_tiles > 1).sum()),
+        n_candidate_rows=len(raw), n_merged=len(df),
+        n_reclassified=int((df.cls != df.cls_run).sum()) if "cls_run" in df else None, n_multi_tile=int((df.n_tiles > 1).sum()),
         n_cross_galaxy=int((df.also_in.astype(str) != "").sum()),
         classes=df.cls.value_counts().to_dict(), triage=df.triage_class.value_counts().to_dict(),
         fsn_shapes=df[df.triage_class == "failed-SN-like"].fsn_shape.value_counts().to_dict(),
         survivors_what=tab.what.str.replace(r"\s*\(.*$", "", regex=True).str.replace(r":.*$", "", regex=True).value_counts().to_dict(),
         status={c: df.loc[surv, c].str.split(":").str[0].value_counts().to_dict()
                 for c in ("tns_status", "gaia_status", "allwise_status", "simbad_status")},
+        recall=dict(n_known=int(len(rec)), n_forced_pass=int(rec.forced_pass.sum()) if len(rec) else 0,
+                    n_found_blind=int(rec.found.fillna(False).astype(bool).sum()) if len(rec) and "found" in rec else 0,
+                    forced_pass_not_found=rec[rec.forced_pass & ~rec.get("found", pd.Series(False, index=rec.index)).fillna(False).astype(bool)][
+                        ["name", "type", "galaxy", "max_sig", "mask"]].to_dict("records") if len(rec) else []),
         known=[dict(name=r.known_name, galaxy=r.galaxy, uid=r.uid, sep=float(np.nanmin([r.tns_sep, 0.0 if r.local_known else np.nan,
                                                                                        r.get("simbad_sep", np.nan)])),
                     cls=r.cls, triage=r.triage_class, rank_fsn=None if pd.isna(r.rank_fsn) else int(r.rank_fsn),
-                    rank_obs=None if pd.isna(r.rank_obs) else int(r.rank_obs), fsn_score=float(r.fsn_score),
+                    rank_obs=None if pd.isna(r.rank_obs) else int(r.rank_obs),
+                    rank_fsn_v1=None if pd.isna(r.rank_fsn_v1) else int(r.rank_fsn_v1), fsn_score=float(r.fsn_score),
                     obs_score=float(r.obs_score)) for _, r in known_rows.iterrows()],
         n_fsn_ranked=int(df.rank_fsn.notna().sum()), n_obs_ranked=int(df.rank_obs.notna().sum()),
         benchmarks=bench.to_dict("records"),
@@ -1148,13 +1610,45 @@ def main():
                    help="fetch: query TNS for galaxies not yet cached (45 s each); cache: use only the cache")
     r.add_argument("--offline", action="store_true", help="no network at all (no TNS/Gaia/AllWISE/SIMBAD)")
     r.add_argument("--name")
+    r.add_argument("--reclassify", action="store_true", help="recompute classes from the light curves (v2 classifier)")
     p = sub.add_parser("tns-prefetch")
     p.add_argument("--galaxies", nargs="*")
+    sub.add_parser("known-list", help="work/known_positions.csv for the runner's --known (TNS cache + local list)")
+    j = sub.add_parser("inject", help="injection-recovery: v1 vs v2 failed-SN score")
+    j.add_argument("run_dir")
+    j.add_argument("--name", required=True, help="merged table <cache>/merged_<name>.parquet from a v2 `run`")
+    j.add_argument("--n", type=int, default=200, help="hosts per pool")
+    j.add_argument("--seed", type=int, default=12)
+    for sp in (r, j):
+        sp.add_argument("--rough-floor", type=float, help=f"roughness error floor (fraction of the excursion; default {ROUGH_AMP_FLOOR})")
     a = ap.parse_args()
+    if getattr(a, "rough_floor", None) is not None:
+        globals()["ROUGH_AMP_FLOOR"] = a.rough_floor
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s %(message)s")
     logging.getLogger("httpx").setLevel(logging.WARNING)
+    if a.cmd == "known-list":
+        t = load_targets()
+        tns = tns_for_galaxies(list(t.index), t, fetch=False)
+        kp = known_positions(t, tns)
+        kp.to_csv(KNOWN_POSITIONS, index=False, float_format="%.7f")
+        print(f"wrote {KNOWN_POSITIONS}: {len(kp)} positions in {kp.galaxy.nunique()} galaxies; "
+              f"TNS not cached for {sum(st != 'ok' for _, st in tns.values())} galaxies")
+        return
+    if a.cmd == "inject":
+        m = pd.read_parquet(CACHE / f"merged_{a.name}.parquet")
+        inj = injection_recovery(m, Path(a.run_dir).expanduser(), n_hosts=a.n, seed=a.seed)
+        cols = ["inj_kind", "inj_t0", "inj_Lw1", "inj_pool", "inj_xmatch", "inj_host_uid", "galaxy", "dist_mpc", "cls", "triage_class",
+                "cls_v1", "triage_class_v1", "fsn_shape", "L_fade_w1", "Lbol_pre_est", "rough_max", "fsn_score_v1", "fsn_score_v2_v1cls",
+                "fsn_score", "inj_rank_v1", "inj_rank_v2score_v1cls", "inj_rank_v2"]
+        inj[cols].to_csv(HERE / "work" / f"injection_{a.name}.csv", index=False, float_format="%.5g")
+        summ = injection_summary(inj)
+        summ["population"] = dict(n_failed_SN_like=int((m.triage_class == "failed-SN-like").sum()),
+                                  n_scored_v1=int((m.fsn_score_v1 > 0).sum()), n_scored_v2=int((m.fsn_score > 0).sum()))
+        (HERE / "work" / f"injection_{a.name}.json").write_text(json.dumps(summ, indent=1, default=str))
+        print(json.dumps({k: v for k, v in summ.items() if k.count("/") <= 1}, indent=1, default=str))
+        return
     if a.cmd == "run":
-        s = run(Path(a.run_dir).expanduser(), a.top, a.tns, not a.offline, a.name)
+        s = run(Path(a.run_dir).expanduser(), a.top, a.tns, not a.offline, a.name, a.reclassify)
         print(json.dumps({k: s[k] for k in ("run", "n_tiles", "n_galaxies", "n_candidate_rows", "n_merged", "classes",
                                             "triage", "status", "known")}, indent=1, default=str))
     else:
