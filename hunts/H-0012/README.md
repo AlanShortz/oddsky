@@ -517,3 +517,21 @@ error, not a null; it carries the same ZTF stream as ALeRCE and Lasair). Correct
 exposures at the source (discovery 2020-11-23 16:30 UT, MJD 59176.688; last non-detection 2020-04-28 18:15 UT; rise < 209 d),
 recorded as case claim C9. TNS has no WISE instrument: use "Other" with "Instrument=WISE" in the comments. Filing waits for
 Alan's TNS account and his decisions listed at the end of the draft; a written note from A. Meisner is recommended first.
+
+## v2 rerun (h0012b, 2026-11-02; `work/triage_h0012b*.csv`, `reviews/claude-referee-h0012b-2026-11-02.md`)
+
+All 334 tiles were processed with code 037660b, with no errors. Relative to h0012a_v2 the rankings are stable: DS1 is failed-SN
+#2, BH1 #20 and OS-0030 obscured #30. The rerun has 37 new survivors (`work/new_in_h0012b.csv`). Benchmarks found: 19/105, up
+from 18; known objects in the obscured top 31: 14, up from 13. The gain is AT 2020nqq (ILRT, NGC 5128 core), recovered for the
+first time; its WISE peak is 11 days after discovery. Recall photometry at the 109 known positions finds 21 blind.
+
+The referee found two real new objects and judged the rest noise, artefacts or ordinary AGB/RSG variables.
+- **NGC 2403 obs#50:** periodic, dust-obscured mid-IR outbursts with P ≈ 5.3 yr. Peaks are in 2007.3 and 2012.4 (Spitzer)
+  and 2017.8 and 2023.2 (WISE). There is no optical counterpart. It is apparently unreported (ADS, SPIRITS and Khan et al.
+  catalogues) and most likely a dust-forming colliding-wind binary. The next peak is due around 2028.5.
+- **NGC 55 fsn#7:** a smooth threefold mid-IR fade from 2010 to 2024 of a luminous, blue star (Gaia G 20.2). HST shows the star
+  unchanged, so it is not a failed SN; it is probably dust clearing around a massive star.
+
+Both came from v2's corrected galaxy centres and nucleus masks, not from releasing the cores. The core release added one known
+transient and no new unknown leads. Next vetoes: a strongly negative reference flux next to saturated nuclei, and a step on
+empty sky (reference flux ≤ 0 in both bands).

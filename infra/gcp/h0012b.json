@@ -2,7 +2,7 @@
  "taskGroups": [
   {
    "taskCount": 167,
-   "parallelism": 25,
+   "parallelism": 12,
    "taskSpec": {
     "runnables": [
      {
@@ -11,7 +11,7 @@
        "entrypoint": "/bin/bash",
        "commands": [
         "-c",
-        "set -euo pipefail; PIP_DISABLE_PIP_VERSION_CHECK=1 pip install -q --root-user-action=ignore --no-cache-dir numpy==2.* scipy==1.* 'astropy>=7' pandas==2.* pyarrow==21.* httpx && export PYTHONPATH=/mnt/disks/oddsky/code/h0012b/src && python -u /mnt/disks/oddsky/code/h0012b/infra/gcp/imaging_tile.py --tiles /mnt/disks/oddsky/code/h0012b/tiles_h0012b.txt --targets /mnt/disks/oddsky/code/h0012b/targets_10mpc.csv --tiles-per-task 2 --bright /mnt/disks/oddsky/code/h0012b/bright_sources_10mpc.csv --known /mnt/disks/oddsky/code/h0012b/known_positions.csv --out /mnt/disks/oddsky/runs/h0012b --code-version 871a846-v2-uncommitted"
+        "set -euo pipefail; PIP_DISABLE_PIP_VERSION_CHECK=1 pip install -q --root-user-action=ignore --no-cache-dir numpy==2.* scipy==1.* 'astropy>=7' pandas==2.* pyarrow==21.* httpx && export PYTHONPATH=/mnt/disks/oddsky/code/h0012b/src && python -u /mnt/disks/oddsky/code/h0012b/infra/gcp/imaging_tile.py --tiles /mnt/disks/oddsky/code/h0012b/tiles_h0012b.txt --targets /mnt/disks/oddsky/code/h0012b/targets_10mpc.csv --tiles-per-task 2 --bright /mnt/disks/oddsky/code/h0012b/bright_sources_10mpc.csv --known /mnt/disks/oddsky/code/h0012b/known_positions.csv --out /mnt/disks/oddsky/runs/h0012b --code-version 037660b"
        ],
        "volumes": [
         "/mnt/disks/oddsky:/mnt/disks/oddsky:rw"

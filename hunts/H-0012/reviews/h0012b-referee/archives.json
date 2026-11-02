@@ -1,0 +1,2984 @@
+{
+ "NGC55_fsn7": {
+  "seip": {
+   "status": "ERR ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J001513.88-391251.4",
+     "ra": 3.8078588,
+     "dec": -39.2142936,
+     "w1mpro": 13.223,
+     "w1sigmpro": 0.045,
+     "w2mpro": 12.137,
+     "w2sigmpro": 0.029,
+     "w3mpro": 8.552,
+     "w4mpro": 4.827,
+     "cc_flags": "000d",
+     "ext_flg": 3,
+     "nb": 1
+    }
+   ]
+  },
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "4997972666905649536",
+     "ra": 3.808254526232023,
+     "dec": -39.21324808036341,
+     "phot_g_mean_mag": 18.505013,
+     "bp_rp": -0.29573822,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.0049959333,
+     "classprob_dsc_combmod_galaxy": 0.011148208,
+     "phot_bp_rp_excess_factor": 7.971665
+    },
+    {
+     "sid": "4997972666905664256",
+     "ra": 3.8061173926829746,
+     "dec": -39.21455566693292,
+     "phot_g_mean_mag": 18.090714,
+     "bp_rp": 0.27221298,
+     "parallax_over_error": 1.164277,
+     "pmra": -0.2868419546032071,
+     "pmdec": -0.0303674554021518,
+     "pm": 0.28844494,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.0138267,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.9999994,
+     "classprob_dsc_combmod_galaxy": 5.7051756e-07,
+     "phot_bp_rp_excess_factor": 1.5103949
+    },
+    {
+     "sid": "4997972666906515072",
+     "ra": 3.808554017959189,
+     "dec": -39.215961950929575,
+     "phot_g_mean_mag": 21.1714,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972666905653376",
+     "ra": 3.8080859970775784,
+     "dec": -39.21339855580273,
+     "phot_g_mean_mag": 19.15467,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972666905655424",
+     "ra": 3.8093991324730654,
+     "dec": -39.21492538719048,
+     "phot_g_mean_mag": 20.38703,
+     "bp_rp": -0.20312881,
+     "parallax_over_error": 0.23061427,
+     "pmra": 0.6212633603024791,
+     "pmdec": -3.995710249520476,
+     "pm": 4.04372,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.354494,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 1.9413223e-05,
+     "classprob_dsc_combmod_galaxy": 0.99990076,
+     "phot_bp_rp_excess_factor": 4.579045
+    },
+    {
+     "sid": "4997972666906515200",
+     "ra": 3.807864977068526,
+     "dec": -39.21609143452564,
+     "phot_g_mean_mag": 21.96479,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972666905655936",
+     "ra": 3.808858624498719,
+     "dec": -39.21566561271341,
+     "phot_g_mean_mag": 20.86297,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972666905662208",
+     "ra": 3.807097704767183,
+     "dec": -39.21520317181273,
+     "phot_g_mean_mag": 20.720062,
+     "bp_rp": 0.38172722,
+     "parallax_over_error": -3.3338306,
+     "pmra": 3.509774685118867,
+     "pmdec": 7.2644092473873165,
+     "pm": 8.067847,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.1848891,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.0002955858,
+     "classprob_dsc_combmod_galaxy": 0.04026768,
+     "phot_bp_rp_excess_factor": 4.370583
+    },
+    {
+     "sid": "4997972666905661824",
+     "ra": 3.80686603661888,
+     "dec": -39.215768915426814,
+     "phot_g_mean_mag": 20.699516,
+     "bp_rp": NaN,
+     "parallax_over_error": 0.20166066,
+     "pmra": 1.9864698997673356,
+     "pmdec": -0.3322460902632592,
+     "pm": 2.0140631,
+     "astrometric_params_solved": 95,
+     "ruwe": 0.9932325,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972666905655552",
+     "ra": 3.8093329833554064,
+     "dec": -39.214143097389254,
+     "phot_g_mean_mag": 20.957043,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972632545923200",
+     "ra": 3.8065537859756025,
+     "dec": -39.216021128290954,
+     "phot_g_mean_mag": 20.698168,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972666905653120",
+     "ra": 3.808027896727269,
+     "dec": -39.21314502855004,
+     "phot_g_mean_mag": 18.218596,
+     "bp_rp": -0.26416016,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.0049675573,
+     "classprob_dsc_combmod_galaxy": 0.018743536,
+     "phot_bp_rp_excess_factor": 7.3649745
+    },
+    {
+     "sid": "4997972666905657856",
+     "ra": 3.808581568240257,
+     "dec": -39.21468010449901,
+     "phot_g_mean_mag": 20.446415,
+     "bp_rp": 0.18393898,
+     "parallax_over_error": -1.8440176,
+     "pmra": -0.7629154762543607,
+     "pmdec": 1.2135821590015068,
+     "pm": 1.4334649,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.1674079,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 1.4512623e-06,
+     "classprob_dsc_combmod_galaxy": 0.057469223,
+     "phot_bp_rp_excess_factor": 5.4143605
+    },
+    {
+     "sid": "4997972632545922944",
+     "ra": 3.805944415995527,
+     "dec": -39.21545941582933,
+     "phot_g_mean_mag": 19.535276,
+     "bp_rp": 0.9423828,
+     "parallax_over_error": -0.7273228,
+     "pmra": 0.1727233596695293,
+     "pmdec": 0.2057512289134714,
+     "pm": 0.26863903,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.065112,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.00089531275,
+     "classprob_dsc_combmod_galaxy": 0.99738723,
+     "phot_bp_rp_excess_factor": 2.956752
+    },
+    {
+     "sid": "4997972666905659392",
+     "ra": 3.8079140468728543,
+     "dec": -39.21484980695769,
+     "phot_g_mean_mag": 20.179657,
+     "bp_rp": 0.14378548,
+     "parallax_over_error": -0.19593704,
+     "pmra": -0.253921713800387,
+     "pmdec": 2.225047970046825,
+     "pm": 2.2394898,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.1073968,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 6.9379194e-06,
+     "classprob_dsc_combmod_galaxy": 0.286557,
+     "phot_bp_rp_excess_factor": 4.2976766
+    },
+    {
+     "sid": "4997972666905651968",
+     "ra": 3.807249160151078,
+     "dec": -39.2133234161052,
+     "phot_g_mean_mag": 19.683779,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972666905662848",
+     "ra": 3.806961336596123,
+     "dec": -39.21419549053871,
+     "phot_g_mean_mag": 20.165277,
+     "bp_rp": -0.20633888,
+     "parallax_over_error": 0.020094091,
+     "pmra": 1.7209707724200691,
+     "pmdec": 1.4270513502558198,
+     "pm": 2.2356691,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.193186,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 3.7120458e-08,
+     "classprob_dsc_combmod_galaxy": 0.005155071,
+     "phot_bp_rp_excess_factor": 5.393323
+    },
+    {
+     "sid": "4997972666906516096",
+     "ra": 3.8081242467721377,
+     "dec": -39.214059388842095,
+     "phot_g_mean_mag": 19.57948,
+     "bp_rp": NaN,
+     "parallax_over_error": 0.39455825,
+     "pmra": 0.7242121376611765,
+     "pmdec": 0.4835060344977593,
+     "pm": 0.870782,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.1527215,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 8.416876e-08,
+     "classprob_dsc_combmod_galaxy": 0.0020832082,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972666905662080",
+     "ra": 3.8070923608926672,
+     "dec": -39.2160607385872,
+     "phot_g_mean_mag": 19.55682,
+     "bp_rp": 0.03058815,
+     "parallax_over_error": -2.693409,
+     "pmra": 1.743629456987166,
+     "pmdec": 0.3351215883020337,
+     "pm": 1.7755423,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.0486917,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 6.871433e-07,
+     "classprob_dsc_combmod_galaxy": 0.5710529,
+     "phot_bp_rp_excess_factor": 3.434736
+    },
+    {
+     "sid": "4997972666905973120",
+     "ra": 3.806857804918542,
+     "dec": -39.214640254198535,
+     "phot_g_mean_mag": 20.958576,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972666905659136",
+     "ra": 3.8080384816474786,
+     "dec": -39.216389798894845,
+     "phot_g_mean_mag": 20.746534,
+     "bp_rp": NaN,
+     "parallax_over_error": 1.5896544,
+     "pmra": 1.1405132453224074,
+     "pmdec": 0.5309611450646456,
+     "pm": 1.2580502,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.2349831,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972666905655808",
+     "ra": 3.808939823504082,
+     "dec": -39.215892118445,
+     "phot_g_mean_mag": 20.923267,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972666905650560",
+     "ra": 3.807059790938249,
+     "dec": -39.21326483492129,
+     "phot_g_mean_mag": 19.64964,
+     "bp_rp": -0.12295914,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.0036904835,
+     "classprob_dsc_combmod_galaxy": 0.01000469,
+     "phot_bp_rp_excess_factor": 14.794175
+    },
+    {
+     "sid": "4997972666905654528",
+     "ra": 3.808835014400055,
+     "dec": -39.21376932438927,
+     "phot_g_mean_mag": 19.51289,
+     "bp_rp": 0.05234909,
+     "parallax_over_error": 1.6789519,
+     "pmra": -0.136537997770761,
+     "pmdec": 0.6327470992405162,
+     "pm": 0.647311,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.05417,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 4.2546304e-08,
+     "classprob_dsc_combmod_galaxy": 0.103358015,
+     "phot_bp_rp_excess_factor": 5.050994
+    },
+    {
+     "sid": "4997972666905655680",
+     "ra": 3.809344368032036,
+     "dec": -39.21549776755089,
+     "phot_g_mean_mag": 20.011793,
+     "bp_rp": 0.019241333,
+     "parallax_over_error": -2.5070465,
+     "pmra": -0.7134099228908058,
+     "pmdec": -0.2792247629962622,
+     "pm": 0.76610714,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.1214395,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 4.627935e-08,
+     "classprob_dsc_combmod_galaxy": 0.36719152,
+     "phot_bp_rp_excess_factor": 4.487544
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[CHG2008] C2-52",
+     "otype": "*",
+     "ra": 3.806291666666666,
+     "dec": -39.21469444444445,
+     "sep": 4.446469613481297
+    },
+    {
+     "main_id": "[CHG2008] B-8",
+     "otype": "*",
+     "ra": 3.80825,
+     "dec": -39.213416666666674,
+     "sep": 5.085809931397144
+    },
+    {
+     "main_id": "[CHG2008] C1-51",
+     "otype": "*",
+     "ra": 3.811249999999999,
+     "dec": -39.21511111111111,
+     "sep": 9.46611564101816
+    }
+   ]
+  },
+  "mast": {
+   "n": 21,
+   "obs": [
+    [
+     "HST",
+     "WFPC2/PC",
+     "F814W",
+     54318.3,
+     "11307"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     54318.3,
+     "11307"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F606W",
+     54318.4,
+     "11307"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     60510.4,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     60510.4,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     60510.4,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     60510.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60510.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     60510.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     60547.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     60547.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     60547.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60547.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     60547.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     60547.6,
+     "17520"
+    ]
+   ]
+  }
+ },
+ "NGC55_fsn13": {
+  "seip": {
+   "status": "ok",
+   "rows": [
+    {
+     "ra": 3.759603,
+     "dec": -39.217844,
+     "i1_f_ap1": 857.3,
+     "i1_df_ap1": 1.376,
+     "i2_f_ap1": 616.9,
+     "i2_df_ap1": 1.021,
+     "i3_f_ap1": 680.2,
+     "i3_df_ap1": 2.922,
+     "i4_f_ap1": 886.6,
+     "i4_df_ap1": 2.814,
+     "m1_f_psf": NaN,
+     "m1_df_psf": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ERR ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))",
+   "rows": []
+  },
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "4997972765690491904",
+     "ra": 3.759629786358643,
+     "dec": -39.21783219240918,
+     "phot_g_mean_mag": 19.245789,
+     "bp_rp": 2.8823051,
+     "parallax_over_error": -0.014749809,
+     "pmra": 0.0750642730621295,
+     "pmdec": -0.2799158880691888,
+     "pm": 0.28980607,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.025512,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 1.1462897e-06,
+     "classprob_dsc_combmod_galaxy": 2.5777037e-11,
+     "phot_bp_rp_excess_factor": 1.3270143
+    },
+    {
+     "sid": "4997972769985465984",
+     "ra": 3.7598905628336694,
+     "dec": -39.21702082971871,
+     "phot_g_mean_mag": 21.091038,
+     "bp_rp": 1.4341564,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.0010844982,
+     "classprob_dsc_combmod_galaxy": 0.00030411893,
+     "phot_bp_rp_excess_factor": 2.4985101
+    },
+    {
+     "sid": "4997972769984925696",
+     "ra": 3.760839546862972,
+     "dec": -39.21650804045489,
+     "phot_g_mean_mag": 21.037083,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972769985204864",
+     "ra": 3.758813206296724,
+     "dec": -39.21696487155321,
+     "phot_g_mean_mag": 20.728191,
+     "bp_rp": 0.20700073,
+     "parallax_over_error": 1.6585215,
+     "pmra": -0.9935532360196434,
+     "pmdec": -3.5222870266071196,
+     "pm": 3.6597342,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.0261123,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.019333322,
+     "classprob_dsc_combmod_galaxy": 3.522318e-08,
+     "phot_bp_rp_excess_factor": 0.80447537
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[CHG2008] C2-41",
+     "otype": "*",
+     "ra": 3.7617499999999993,
+     "dec": -39.21630555555555,
+     "sep": 7.357068628400639
+    }
+   ]
+  },
+  "mast": {
+   "n": 5,
+   "obs": [
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     52905.6,
+     "9765"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     52905.6,
+     "--"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     52905.6,
+     "9765"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     52905.6,
+     "9765"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     52905.6,
+     "--"
+    ]
+   ]
+  }
+ },
+ "NGC55_obs184": {
+  "seip": {
+   "status": "ok",
+   "rows": [
+    {
+     "ra": 3.792795,
+     "dec": -39.21267,
+     "i1_f_ap1": 42.98,
+     "i1_df_ap1": 0.5576,
+     "i2_f_ap1": 189.9,
+     "i2_df_ap1": 0.6526,
+     "i3_f_ap1": 287.6,
+     "i3_df_ap1": 2.54,
+     "i4_f_ap1": 968.6,
+     "i4_df_ap1": 2.934,
+     "m1_f_psf": NaN,
+     "m1_df_psf": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J001510.58-391246.0",
+     "ra": 3.7940881,
+     "dec": -39.2127851,
+     "w1mpro": 14.184,
+     "w1sigmpro": 0.05,
+     "w2mpro": 14.094,
+     "w2sigmpro": 0.061,
+     "w3mpro": 10.552,
+     "w4mpro": 8.143,
+     "cc_flags": "000d",
+     "ext_flg": 3,
+     "nb": 1
+    }
+   ]
+  },
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "4997972701265419648",
+     "ra": 3.792057711834443,
+     "dec": -39.211798507069496,
+     "phot_g_mean_mag": 21.207188,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972701265419136",
+     "ra": 3.7927792110228102,
+     "dec": -39.212624481538775,
+     "phot_g_mean_mag": 20.67971,
+     "bp_rp": 1.5699291,
+     "parallax_over_error": -0.119673625,
+     "pmra": -0.458938404709055,
+     "pmdec": 0.0427177023193185,
+     "pm": 0.46092218,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.0854496,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 1.4395923e-05,
+     "classprob_dsc_combmod_galaxy": 1.2201579e-07,
+     "phot_bp_rp_excess_factor": 1.4223492
+    },
+    {
+     "sid": "4997972701265419776",
+     "ra": 3.792587792131945,
+     "dec": -39.21194879294959,
+     "phot_g_mean_mag": 20.675333,
+     "bp_rp": 0.16065407,
+     "parallax_over_error": -0.42540058,
+     "pmra": -1.1192242470236786,
+     "pmdec": 0.7265490012119946,
+     "pm": 1.3343674,
+     "astrometric_params_solved": 95,
+     "ruwe": 0.90746635,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.8843106,
+     "classprob_dsc_combmod_galaxy": 8.389374e-06,
+     "phot_bp_rp_excess_factor": 1.999551
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[CHG2008] C2-47",
+     "otype": "*",
+     "ra": 3.793541666666665,
+     "dec": -39.21111111111112,
+     "sep": 5.668850175451882
+    },
+    {
+     "main_id": "[D2019] p4-16",
+     "otype": "EmO",
+     "ra": 3.792499999999999,
+     "dec": -39.215,
+     "sep": 8.704770040902059
+    }
+   ]
+  },
+  "mast": {
+   "n": 21,
+   "obs": [
+    [
+     "HST",
+     "WFPC2/PC",
+     "F814W",
+     54318.3,
+     "11307"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     54318.3,
+     "11307"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F606W",
+     54318.4,
+     "11307"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     60510.4,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     60510.4,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     60510.4,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     60510.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60510.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     60510.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     60547.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     60547.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     60547.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60547.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     60547.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     60547.6,
+     "17520"
+    ]
+   ]
+  }
+ },
+ "NGC55_obs299": {
+  "seip": {
+   "status": "ok",
+   "rows": [
+    {
+     "ra": 3.79837,
+     "dec": -39.213213,
+     "i1_f_ap1": NaN,
+     "i1_df_ap1": NaN,
+     "i2_f_ap1": NaN,
+     "i2_df_ap1": NaN,
+     "i3_f_ap1": 311.3,
+     "i3_df_ap1": 2.629,
+     "i4_f_ap1": 610.5,
+     "i4_df_ap1": 2.842,
+     "m1_f_psf": NaN,
+     "m1_df_psf": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J001511.53-391248.3",
+     "ra": 3.7980788,
+     "dec": -39.2134426,
+     "w1mpro": 13.629,
+     "w1sigmpro": 0.039,
+     "w2mpro": 13.566,
+     "w2sigmpro": 0.044,
+     "w3mpro": 10.429,
+     "w4mpro": 7.257,
+     "cc_flags": "000d",
+     "ext_flg": 3,
+     "nb": 1
+    }
+   ]
+  },
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "4997972632546349568",
+     "ra": 3.7983984636673154,
+     "dec": -39.21312278135652,
+     "phot_g_mean_mag": 19.792694,
+     "bp_rp": 1.8483772,
+     "parallax_over_error": -0.97261083,
+     "pmra": -0.3132575794260528,
+     "pmdec": 1.2476705967029378,
+     "pm": 1.2863951,
+     "astrometric_params_solved": 95,
+     "ruwe": 0.98236406,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 5.5834247e-05,
+     "classprob_dsc_combmod_galaxy": 5.939805e-05,
+     "phot_bp_rp_excess_factor": 1.9589262
+    },
+    {
+     "sid": "4997972701265410688",
+     "ra": 3.7990685544054306,
+     "dec": -39.21202380184577,
+     "phot_g_mean_mag": 19.979221,
+     "bp_rp": 0.023298264,
+     "parallax_over_error": -0.3165425,
+     "pmra": -0.683377069475704,
+     "pmdec": -0.8584868240548009,
+     "pm": 1.0972711,
+     "astrometric_params_solved": 95,
+     "ruwe": 0.9965195,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.00020015506,
+     "classprob_dsc_combmod_galaxy": 3.601758e-09,
+     "phot_bp_rp_excess_factor": 1.0559883
+    },
+    {
+     "sid": "4997972632545932672",
+     "ra": 3.799199538014331,
+     "dec": -39.21336961892458,
+     "phot_g_mean_mag": 21.219467,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972632547088768",
+     "ra": 3.7993447777693774,
+     "dec": -39.214070476480686,
+     "phot_g_mean_mag": 21.119123,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.0012242416,
+     "classprob_dsc_combmod_galaxy": 0.000110377434,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972701265414656",
+     "ra": 3.7962059504699863,
+     "dec": -39.21323815051522,
+     "phot_g_mean_mag": 20.642332,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972628251539968",
+     "ra": 3.7997513411399217,
+     "dec": -39.213173879423564,
+     "phot_g_mean_mag": 19.331137,
+     "bp_rp": 1.281477,
+     "parallax_over_error": 0.48530445,
+     "pmra": -0.0042693632017544,
+     "pmdec": 0.5596909986318442,
+     "pm": 0.5597073,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.0036976,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.56257975,
+     "classprob_dsc_combmod_galaxy": 0.4209231,
+     "phot_bp_rp_excess_factor": 2.1253316
+    },
+    {
+     "sid": "4997972701265715200",
+     "ra": 3.7975270112770496,
+     "dec": -39.21382357227217,
+     "phot_g_mean_mag": 20.053154,
+     "bp_rp": 0.7016983,
+     "parallax_over_error": 0.32815227,
+     "pmra": 0.2968619918915228,
+     "pmdec": -0.3627885286558573,
+     "pm": 0.46876708,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.0486805,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": 3.1935384
+    },
+    {
+     "sid": "4997972632545932928",
+     "ra": 3.800076607471356,
+     "dec": -39.21303227747662,
+     "phot_g_mean_mag": 21.249695,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972632545932800",
+     "ra": 3.799056276522117,
+     "dec": -39.21308085862727,
+     "phot_g_mean_mag": 20.61046,
+     "bp_rp": NaN,
+     "parallax_over_error": 0.8332153,
+     "pmra": 0.8546822870501811,
+     "pmdec": 0.2518879645810506,
+     "pm": 0.89102715,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.0781438,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    },
+    {
+     "sid": "4997972701265412992",
+     "ra": 3.796897584910846,
+     "dec": -39.213813706465785,
+     "phot_g_mean_mag": 19.732737,
+     "bp_rp": 0.5018139,
+     "parallax_over_error": 0.5039006,
+     "pmra": -0.2650562130044908,
+     "pmdec": 0.0014111105287498,
+     "pm": 0.26505998,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.1877636,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.27691653,
+     "classprob_dsc_combmod_galaxy": 0.6590229,
+     "phot_bp_rp_excess_factor": 2.1220098
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[CHG2008] C2-49",
+     "otype": "*",
+     "ra": 3.79925,
+     "dec": -39.21219444444444,
+     "sep": 4.4212170214752256
+    },
+    {
+     "main_id": "[CHG2008] C1-45",
+     "otype": "*",
+     "ra": 3.797125,
+     "dec": -39.214,
+     "sep": 4.447402413715973
+    },
+    {
+     "main_id": "[PGS2006] cep036",
+     "otype": "Ce*",
+     "ra": 3.7991666666666664,
+     "dec": -39.21455555555555,
+     "sep": 5.397315765971038
+    },
+    {
+     "main_id": "[CHG2008] C2-50",
+     "otype": "*",
+     "ra": 3.80075,
+     "dec": -39.214611111111104,
+     "sep": 8.425725987496136
+    },
+    {
+     "main_id": "[CHG2008] B-5",
+     "otype": "*",
+     "ra": 3.7961250000000017,
+     "dec": -39.21519444444445,
+     "sep": 9.472171910471268
+    }
+   ]
+  },
+  "mast": {
+   "n": 21,
+   "obs": [
+    [
+     "HST",
+     "WFPC2/PC",
+     "F814W",
+     54318.3,
+     "11307"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     54318.3,
+     "11307"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F606W",
+     54318.4,
+     "11307"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     60510.4,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     60510.4,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     60510.4,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     60510.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60510.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     60510.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     60520.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     60547.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     60547.5,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     60547.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60547.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     60547.6,
+     "17520"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     60547.6,
+     "17520"
+    ]
+   ]
+  }
+ },
+ "M81_fsn24": {
+  "seip": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J095541.72+690051.0",
+     "ra": 148.9238579,
+     "dec": 69.0141916,
+     "w1mpro": 14.162,
+     "w1sigmpro": 0.172,
+     "w2mpro": 14.535,
+     "w2sigmpro": 0.165,
+     "w3mpro": 12.61,
+     "w4mpro": 9.164,
+     "cc_flags": "dd00",
+     "ext_flg": 2,
+     "nb": 1
+    }
+   ]
+  },
+  "gaia": {
+   "status": "ok",
+   "rows": []
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "mast": {
+   "n": 17,
+   "obs": [
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     49460.5,
+     "5602"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F218W",
+     49460.5,
+     "5602"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F170W",
+     49460.5,
+     "5602"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     52422.3,
+     "--"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     52422.4,
+     "--"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53263.3,
+     "10250"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53263.3,
+     "10250"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53263.6,
+     "10250"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     53709.3,
+     "10584"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F435W",
+     53709.3,
+     "--"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F300W",
+     53709.3,
+     "10584"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53816.0,
+     "10584"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53816.0,
+     "10584"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F435W",
+     53816.0,
+     "10584"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53821.2,
+     "10584"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F435W",
+     53821.2,
+     "10584"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53821.2,
+     "10584"
+    ]
+   ]
+  }
+ },
+ "NGC925_obs37": {
+  "seip": {
+   "status": "ok",
+   "rows": [
+    {
+     "ra": 36.755008,
+     "dec": 33.574841,
+     "i1_f_ap1": 127.1,
+     "i1_df_ap1": 0.6297,
+     "i2_f_ap1": 176.9,
+     "i2_df_ap1": 0.9543,
+     "i3_f_ap1": 467.3,
+     "i3_df_ap1": 3.61,
+     "i4_f_ap1": 1089.0,
+     "i4_df_ap1": 5.393,
+     "m1_f_psf": NaN,
+     "m1_df_psf": NaN
+    }
+   ]
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": []
+  },
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "326570797585211776",
+     "ra": 36.75705753562253,
+     "dec": 33.57418957926656,
+     "phot_g_mean_mag": 21.133953,
+     "bp_rp": 3.4119377,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.0013372155,
+     "classprob_dsc_combmod_galaxy": 7.1386075e-06,
+     "phot_bp_rp_excess_factor": 1.3916539
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[VSH98] NGC  925 -192-018",
+     "otype": "HII",
+     "ra": 36.75598708333334,
+     "dec": 33.574444444444445,
+     "sep": 2.6854545766328775
+    },
+    {
+     "main_id": "[VSH98] NGC  925 -198-013",
+     "otype": "HII",
+     "ra": 36.75398583333334,
+     "dec": 33.575833333333335,
+     "sep": 5.205830735485867
+    },
+    {
+     "main_id": "[VSH98] NGC  925 -200-020",
+     "otype": "HII",
+     "ra": 36.75332041666667,
+     "dec": 33.573888888888895,
+     "sep": 6.522373720576971
+    },
+    {
+     "main_id": "[VSH98] NGC  925 -187-017",
+     "otype": "HII",
+     "ra": 36.75765416666667,
+     "dec": 33.57472222222223,
+     "sep": 7.366335584419549
+    }
+   ]
+  },
+  "mast": {
+   "n": 4,
+   "obs": [
+    [
+     "HST",
+     "WFPC/WFC",
+     "F555W",
+     48119.7,
+     "3010"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F336W",
+     55504.3,
+     "12229"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F336W",
+     55504.3,
+     "--"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     55504.3,
+     "12229"
+    ]
+   ]
+  }
+ },
+ "NGC2403_obs50": {
+  "seip": {
+   "status": "ERR ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": []
+  },
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "1089775662767699328",
+     "ra": 114.22562654739676,
+     "dec": 65.59884557305185,
+     "phot_g_mean_mag": 20.988539,
+     "bp_rp": 1.0976353,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.00033401517,
+     "classprob_dsc_combmod_galaxy": 0.019717637,
+     "phot_bp_rp_excess_factor": 8.2795105
+    },
+    {
+     "sid": "1089775662765747840",
+     "ra": 114.22653545174806,
+     "dec": 65.59667497336928,
+     "phot_g_mean_mag": 20.17282,
+     "bp_rp": 0.49089622,
+     "parallax_over_error": 0.9498813,
+     "pmra": -0.5697359501333803,
+     "pmdec": -1.5609987986815097,
+     "pm": 1.6617209,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.3048328,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 1.3320333e-05,
+     "classprob_dsc_combmod_galaxy": 0.99972826,
+     "phot_bp_rp_excess_factor": 4.1313515
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[RBF2020] NGC 2403 AS431",
+     "otype": "Cl*",
+     "ra": 114.227784,
+     "dec": 65.598889,
+     "sep": 3.216482741695235
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS202",
+     "otype": "Cl*",
+     "ra": 114.224911,
+     "dec": 65.598053,
+     "sep": 4.59819560338941
+    },
+    {
+     "main_id": "CXOU J073654.5+653547",
+     "otype": "X",
+     "ra": 114.22708333333333,
+     "dec": 65.59666666666666,
+     "sep": 4.989871467341042
+    },
+    {
+     "main_id": "Gaia DR3 1089775662765747840",
+     "otype": "RR?",
+     "ra": 114.22654158055002,
+     "dec": 65.59668191114,
+     "sep": 5.217409974422089
+    },
+    {
+     "main_id": "[KSK2013] N 2403  5",
+     "otype": "s?b",
+     "ra": 114.22632,
+     "dec": 65.59669,
+     "sep": 5.337060213374399
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS275",
+     "otype": "Cl*",
+     "ra": 114.22720800000002,
+     "dec": 65.596491,
+     "sep": 5.558649007344476
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS354",
+     "otype": "Cl*",
+     "ra": 114.230228,
+     "dec": 65.596702,
+     "sep": 5.728534111240003
+    },
+    {
+     "main_id": "[DRM99] 4-35",
+     "otype": "*",
+     "ra": 114.2305,
+     "dec": 65.59672222222223,
+     "sep": 5.914886639425246
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS344",
+     "otype": "Cl*",
+     "ra": 114.23066500000002,
+     "dec": 65.599514,
+     "sep": 6.739161592876657
+    },
+    {
+     "main_id": "[DRM99] 4-34",
+     "otype": "*",
+     "ra": 114.22716666666666,
+     "dec": 65.59594444444444,
+     "sep": 7.503083052543291
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS163",
+     "otype": "Cl*",
+     "ra": 114.226337,
+     "dec": 65.595939,
+     "sep": 7.821027954451813
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS113",
+     "otype": "Cl*",
+     "ra": 114.22788400000002,
+     "dec": 65.59572,
+     "sep": 8.209813135662303
+    },
+    {
+     "main_id": "NAME NGC 2403 Group",
+     "otype": "GrG",
+     "ra": 114.225,
+     "dec": 65.6,
+     "sep": 8.470346061640795
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS539",
+     "otype": "Cl*",
+     "ra": 114.230816,
+     "dec": 65.595772,
+     "sep": 9.048526780617092
+    },
+    {
+     "main_id": "[LBZ2013] NGC 2403  136",
+     "otype": "EmO",
+     "ra": 114.22166666666666,
+     "dec": 65.5983611111111,
+     "sep": 9.508725277919346
+    },
+    {
+     "main_id": "[RBF2020] NGC 2403 AS542",
+     "otype": "Cl*",
+     "ra": 114.222823,
+     "dec": 65.599589,
+     "sep": 9.591911584603276
+    }
+   ]
+  },
+  "mast": {
+   "n": 38,
+   "obs": [
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     49468.6,
+     "5383"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F439W",
+     49468.6,
+     "5383"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F469N",
+     49468.7,
+     "5383"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F547M",
+     49469.0,
+     "5383"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F502N",
+     49469.0,
+     "5383"
+    ],
+    [
+     "HST",
+     "NICMOS/NIC3",
+     "F187N",
+     50968.9,
+     "7919"
+    ],
+    [
+     "HST",
+     "NICMOS/NIC3",
+     "F160W",
+     50968.9,
+     "7919"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F547M",
+     51992.0,
+     "8591"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     51992.0,
+     "8591"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53234.1,
+     "--"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53234.1,
+     "10182"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F475W",
+     53234.1,
+     "10182"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F475W",
+     53234.1,
+     "--"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53234.1,
+     "10182"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53234.2,
+     "10182"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53234.2,
+     "--"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F658N",
+     53234.2,
+     "10182"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F658N",
+     53234.2,
+     "--"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53458.3,
+     "10402"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53458.3,
+     "10402"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F658N",
+     53458.3,
+     "10402"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     55255.8,
+     "--"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     55255.8,
+     "--"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F110W",
+     55308.3,
+     "11719"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     55308.3,
+     "11719"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F160W",
+     55308.3,
+     "11719"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F153M",
+     55481.2,
+     "--"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F127M",
+     55481.2,
+     "12163"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "detection",
+     55481.2,
+     "12163"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F153M",
+     55481.2,
+     "12163"
+    ],
+    [
+     "HST",
+     "WFC3/IR",
+     "F127M",
+     55481.2,
+     "--"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     58268.6,
+     "15166"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     58268.6,
+     "15166"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     58268.6,
+     "--"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     58268.7,
+     "15166"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     58268.7,
+     "--"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     58594.9,
+     "15645"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     58594.9,
+     "15645"
+    ]
+   ]
+  }
+ },
+ "NGC2903_obs75": {
+  "seip": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": [
+    {
+     "designation": "J093212.18+212929.8",
+     "ra": 143.0507509,
+     "dec": 21.4916211,
+     "w1mpro": 11.854,
+     "w1sigmpro": 0.029,
+     "w2mpro": 12.59,
+     "w2sigmpro": 0.028,
+     "w3mpro": 8.384,
+     "w4mpro": 6.517,
+     "cc_flags": "hhhH",
+     "ext_flg": 3,
+     "nb": 3
+    }
+   ]
+  },
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "634965186197523200",
+     "ra": 143.05191553042428,
+     "dec": 21.49127211837708,
+     "phot_g_mean_mag": 20.921408,
+     "bp_rp": 0.79522705,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 0.0009822632,
+     "classprob_dsc_combmod_galaxy": 0.00017164115,
+     "phot_bp_rp_excess_factor": 2.219094
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "[PCE2010] XMM-NGC2903 X-5",
+     "otype": "X",
+     "ra": 143.05137916666666,
+     "dec": 21.489541666666668,
+     "sep": 8.584477649185684
+    },
+    {
+     "main_id": "CXOU J093212.3+212922",
+     "otype": "X",
+     "ra": 143.05124999999998,
+     "dec": 21.489444444444445,
+     "sep": 8.879577026387263
+    }
+   ]
+  },
+  "mast": {
+   "n": 66,
+   "obs": [
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     49665.6,
+     "5211"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F160BW",
+     49665.6,
+     "5211"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F555W",
+     49665.7,
+     "5211"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F336W",
+     49665.7,
+     "5211"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F814W",
+     49665.8,
+     "5211"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F658N",
+     53065.7,
+     "9788"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53065.7,
+     "--"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F658N",
+     53065.7,
+     "--"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F814W",
+     53065.7,
+     "9788"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53065.7,
+     "9788"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     57531.2,
+     "--"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     58875.6,
+     "--"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F438W",
+     58875.6,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     58875.6,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     58875.6,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F275W",
+     58875.6,
+     "--"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F336W",
+     58875.6,
+     "--"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F438W",
+     58875.6,
+     "--"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F275W",
+     58875.6,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F336W",
+     58875.6,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     58875.7,
+     "--"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     58875.7,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     58876.5,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     58876.5,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F275W",
+     58876.5,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     58876.5,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F336W",
+     58876.5,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F438W",
+     58876.5,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     59223.7,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     59223.7,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F275W",
+     59223.7,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F336W",
+     59223.7,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     59223.7,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F438W",
+     59223.7,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F275W",
+     59224.6,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F555W",
+     59224.6,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F336W",
+     59224.6,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F438W",
+     59224.6,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F814W",
+     59224.6,
+     "15654"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     59224.6,
+     "15654"
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F2100W",
+     60430.8,
+     "3707"
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F770W",
+     60430.8,
+     "3707"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F335M",
+     60431.0,
+     "3707"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F150W",
+     60431.0,
+     "3707"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F187N",
+     60431.0,
+     "3707"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F300M",
+     60431.0,
+     "3707"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F360M",
+     60662.7,
+     "4793"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F444W;F405N",
+     60662.7,
+     "4793"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F212N",
+     60662.7,
+     "4793"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F150W2;F164N",
+     60662.7,
+     "4793"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F335M",
+     60662.7,
+     "4793"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F187N",
+     60662.7,
+     "4793"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F444W",
+     60662.8,
+     "4793"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F150W",
+     60662.8,
+     "4793"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F200W",
+     60662.8,
+     "4793"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F277W",
+     60662.8,
+     "4793"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60681.5,
+     "17502"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F657N",
+     60681.5,
+     "17502"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60681.6,
+     "17502"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F657N",
+     60681.6,
+     "17502"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F657N",
+     60691.6,
+     "17457"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60691.6,
+     "17457"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F657N",
+     60691.7,
+     "17457"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60691.7,
+     "17457"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F657N",
+     61055.4,
+     "17502"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     61055.4,
+     "17502"
+    ]
+   ]
+  }
+ },
+ "NGC5128_obs22_AT2020nqq": {
+  "seip": {
+   "status": "ERR ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ok",
+   "rows": []
+  },
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "6088703216874008192",
+     "ra": 201.43430915513335,
+     "dec": -43.00330462538756,
+     "phot_g_mean_mag": 17.649843,
+     "bp_rp": 1.1505375,
+     "parallax_over_error": 4.995375,
+     "pmra": -0.8382890170913415,
+     "pmdec": 3.8397650848208382,
+     "pm": 3.9302068,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.0082585,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 1.0411765e-13,
+     "classprob_dsc_combmod_galaxy": 2.3492604e-11,
+     "phot_bp_rp_excess_factor": 1.2878157
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": [
+    {
+     "main_id": "AT 2020nqq",
+     "otype": "ev",
+     "ra": 201.4352083333333,
+     "dec": -43.003561111111104,
+     "sep": 0.5660688487754562
+    },
+    {
+     "main_id": "[CFW90] Star 39",
+     "otype": "*",
+     "ra": 201.4343142497,
+     "dec": -43.00332169101,
+     "sep": 2.0647684029313877
+    }
+   ]
+  },
+  "mast": {
+   "n": 12,
+   "obs": [
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53227.5,
+     "--"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "F606W",
+     53790.2,
+     "10597"
+    ],
+    [
+     "HST",
+     "ACS/WFC",
+     "detection",
+     53790.2,
+     "10597"
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F1000W",
+     61062.6,
+     "12496"
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F770W",
+     61062.6,
+     "12496"
+    ],
+    [
+     "JWST",
+     "MIRI/IMAGE",
+     "F560W",
+     61062.6,
+     "12496"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F335M",
+     61075.2,
+     "12496"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F090W",
+     61075.2,
+     "12496"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F444W",
+     61075.2,
+     "12496"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F187N",
+     61075.2,
+     "12496"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F277W",
+     61075.2,
+     "12496"
+    ],
+    [
+     "JWST",
+     "NIRCAM/IMAGE",
+     "F200W",
+     61075.2,
+     "12496"
+    ]
+   ]
+  }
+ },
+ "Circinus_fsn72": {
+  "seip": {
+   "status": "ok",
+   "rows": []
+  },
+  "allwise": {
+   "status": "ERR ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))",
+   "rows": []
+  },
+  "gaia": {
+   "status": "ok",
+   "rows": [
+    {
+     "sid": "5852721392751928960",
+     "ra": 213.3092617357138,
+     "dec": -65.33792672303076,
+     "phot_g_mean_mag": 20.4248,
+     "bp_rp": 2.786171,
+     "parallax_over_error": 0.01205359,
+     "pmra": -7.950604916699252,
+     "pmdec": -6.093967968436403,
+     "pm": 10.017413,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.068222,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 6.4317573e-10,
+     "classprob_dsc_combmod_galaxy": 4.3867196e-10,
+     "phot_bp_rp_excess_factor": 1.0797484
+    },
+    {
+     "sid": "5852721392753954304",
+     "ra": 213.3151221244801,
+     "dec": -65.33588282115473,
+     "phot_g_mean_mag": 20.135235,
+     "bp_rp": 2.0556183,
+     "parallax_over_error": 1.6309272,
+     "pmra": -7.1106965244901135,
+     "pmdec": -2.933391139690722,
+     "pm": 7.691995,
+     "astrometric_params_solved": 95,
+     "ruwe": 1.0699081,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": 4.5794032e-10,
+     "classprob_dsc_combmod_galaxy": 4.831874e-10,
+     "phot_bp_rp_excess_factor": 1.3431983
+    },
+    {
+     "sid": "5852721392755511296",
+     "ra": 213.3114309553779,
+     "dec": -65.33688334774116,
+     "phot_g_mean_mag": 21.073895,
+     "bp_rp": NaN,
+     "parallax_over_error": NaN,
+     "pmra": NaN,
+     "pmdec": NaN,
+     "pm": NaN,
+     "astrometric_params_solved": 3,
+     "ruwe": NaN,
+     "phot_variable_flag": "NOT_AVAILABLE",
+     "classprob_dsc_combmod_quasar": NaN,
+     "classprob_dsc_combmod_galaxy": NaN,
+     "phot_bp_rp_excess_factor": NaN
+    }
+   ]
+  },
+  "simbad": {
+   "status": "ok",
+   "rows": []
+  },
+  "mast": {
+   "n": 10,
+   "obs": [
+    [
+     "HST",
+     "NICMOS/NIC3",
+     "F212N",
+     51102.0,
+     "7172"
+    ],
+    [
+     "HST",
+     "NICMOS/NIC3",
+     "F215N",
+     51102.0,
+     "7172"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "detection",
+     51278.5,
+     "7273"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F502N",
+     51278.5,
+     "7273"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F814W",
+     51278.6,
+     "7273"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F547M",
+     51278.6,
+     "7273"
+    ],
+    [
+     "HST",
+     "WFPC2/PC",
+     "F656N",
+     51278.6,
+     "7273"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F625W",
+     60882.2,
+     "17731"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "F475W",
+     60882.2,
+     "17731"
+    ],
+    [
+     "HST",
+     "WFC3/UVIS",
+     "detection",
+     60882.2,
+     "17731"
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "NGC55_fsn7": {
+  "error": "502 Server Error: Bad Gateway for url: https://vizier.idia.ac.za/viz-bin/votable"
+ },
+ "NGC2403_obs50": {
+  "error": "502 Server Error: Bad Gateway for url: https://vizier.idia.ac.za/viz-bin/votable"
+ },
+ "NGC925_obs37": {
+  "error": "502 Server Error: Bad Gateway for url: https://vizier.idia.ac.za/viz-bin/votable"
+ },
+ "NGC55_fsn13": {
+  "error": "502 Server Error: Bad Gateway for url: https://vizier.idia.ac.za/viz-bin/votable"
+ },
+ "M81_fsn24": {
+  "error": "502 Server Error: Bad Gateway for url: https://vizier.idia.ac.za/viz-bin/votable"
+ }
+}

@@ -1,0 +1,3080 @@
+{
+ "NGC 2403 obs#50": {
+  "full:\"07:36:54.7\"": {
+   "n": 2,
+   "docs": [
+    {
+     "bibcode": "2024EcInd.15811526H",
+     "year": "2024",
+     "title": "Comparison of model selection and data bias on the prediction performance of purpleback flying squid (Sthenoteuthis oualaniensis) fishing gr"
+    },
+    {
+     "bibcode": "2018A&A...619A...1B",
+     "year": "2018",
+     "title": "The 55 Cancri system reassessed"
+    }
+   ]
+  },
+  "full:\"073654.7\"": {
+   "n": 2,
+   "docs": [
+    {
+     "bibcode": "2024EcInd.15811526H",
+     "year": "2024",
+     "title": "Comparison of model selection and data bias on the prediction performance of purpleback flying squid (Sthenoteuthis oualaniensis) fishing gr"
+    },
+    {
+     "bibcode": "2018A&A...619A...1B",
+     "year": "2018",
+     "title": "The 55 Cancri system reassessed"
+    }
+   ]
+  },
+  "full:\"07 36 54.7\"": {
+   "n": 1,
+   "docs": [
+    {
+     "bibcode": "1976ApJS...30...97D",
+     "year": "1976",
+     "title": "The galactic distribution of interstellar absorption as determined from the Celescope catalog of ultraviolet stellar observations and a new "
+    }
+   ]
+  },
+  "full:\"114.228\"": {
+   "n": 459,
+   "docs": [
+    {
+     "bibcode": "2005CrPro..24..375A",
+     "year": "2005",
+     "title": "Efficacy of imidazolinone herbicides applied to imidazolinone-resistant maize and their carryover effect on rotational crops"
+    },
+    {
+     "bibcode": "2023Chmsp.33939679A",
+     "year": "2023",
+     "title": "Characteristics of organic matter released from drinking water treatment sludge under different storage conditions: Evaluation based on acti"
+    },
+    {
+     "bibcode": "2024NatSR..1414486H",
+     "year": "2024",
+     "title": "Circulating C-reactive protein levels as a prognostic biomarker in breast cancer across body mass index groups"
+    },
+    {
+     "bibcode": "1995FCrRe..44..119F",
+     "year": "1995",
+     "title": "Efficiency of biomass accumulation by sunflower as affected by glucose requirement of biosynthesis and leaf nitrogen content"
+    },
+    {
+     "bibcode": "2000ccdc.data12075F",
+     "year": "2000",
+     "title": "CCDC 114228: Experimental Crystal Structure Determination"
+    },
+    {
+     "bibcode": "2016JGRC..121..998Y",
+     "year": "2016",
+     "title": "Seasonal variations of seawater pCO<SUB>2</SUB> and sea-air CO<SUB>2</SUB> fluxes in a fringing coral reef, northern South China Sea"
+    },
+    {
+     "bibcode": "2023GCN.34368....1H",
+     "year": "2023",
+     "title": "GRB 230805B : MITSuME Akeno optical upper limits"
+    },
+    {
+     "bibcode": "1997AAS...19112404B",
+     "year": "1997",
+     "title": "Dynamical Properties of Counter Rotating Cores Formed by Sinking Satelitte Galaxies"
+    },
+    {
+     "bibcode": "2020Toxgy.42952327H",
+     "year": "2020",
+     "title": "Gestational and perinatal exposure to diazinon causes long-lasting neurobehavioral consequences in the rat"
+    },
+    {
+     "bibcode": "2022SMat...18.8175H",
+     "year": "2022",
+     "title": "Polymer solution structure and dynamics within pores of hexagonally close-packed nanoparticles"
+    },
+    {
+     "bibcode": "1998APS..APR..N904B",
+     "year": "1998",
+     "title": "Dynamical Properties of Counter Rotating Cores Formed by Sinking Satellite Galaxies ^."
+    },
+    {
+     "bibcode": "2023PLoSO..1887422F",
+     "year": "2023",
+     "title": "Assessing geochemical and natural radioactivity impacts of Hamadat phosphatic mine through radiological indices"
+    },
+    {
+     "bibcode": "2023NatSR..1322362W",
+     "year": "2023",
+     "title": "Comparative analysis of neutrophil-to-lymphocyte ratio and remnant cholesterol in predicting cardiovascular events and mortality in general "
+    },
+    {
+     "bibcode": "2021JPhCS1969a2022N",
+     "year": "2021",
+     "title": "Generative Design Optimization and Analysis of Connecting Rod for Weight Reduction and Performance Enhancement"
+    },
+    {
+     "bibcode": "2024arXiv240612095W",
+     "year": "2024",
+     "title": "DistillNeRF: Perceiving 3D Scenes from Single-Glance Images by Distilling Neural Fields and Foundation Model Features"
+    },
+    {
+     "bibcode": "2026arXiv261032497T",
+     "year": "2026",
+     "title": "Star clusters at cosmic dawn I: the emergence of the initial cluster mass function"
+    },
+    {
+     "bibcode": "2011MNRAS.418.2283I",
+     "year": "2011",
+     "title": "Hercules X-1's light-curve dips as seen by the RXTE/PCA: a study of the entire 1996 February-2005 August light curve"
+    },
+    {
+     "bibcode": "2004A&A...425.1075A",
+     "year": "2004",
+     "title": "Measuring mass and angular momentum of black holes with high-frequency quasi-periodic oscillations"
+    },
+    {
+     "bibcode": "1972PhRvC...6..591S",
+     "year": "1972",
+     "title": "Superheavy Hartree-Fock Calculations"
+    },
+    {
+     "bibcode": "2025arXiv250613176I",
+     "year": "2025",
+     "title": "An advanced heat transfer model for Eulerian-Lagrangian simulations of industrial gas-solid flow systems"
+    },
+    {
+     "bibcode": "1993JATP...55..601K",
+     "year": "1993",
+     "title": "Introduction to ionospheric heating experiments at Troms\u00f8\u2014II. Scientific problems"
+    },
+    {
+     "bibcode": "1989NuPhS...9..463U",
+     "year": "1989",
+     "title": "Hybrid Monte Carlo algorithm as applied to dynamical Wilson fermion"
+    },
+    {
+     "bibcode": "1973MarCh...1..199E",
+     "year": "1973",
+     "title": "\u03b4 <SUP>13</SUP>C analyses of oceanic particulate organic matter"
+    },
+    {
+     "bibcode": "2016SPIE.9914E..1OT",
+     "year": "2016",
+     "title": "A 2 THz Schottky solid-state heterodyne receiver for atmospheric studies"
+    },
+    {
+     "bibcode": "1987ApJ...321..645B",
+     "year": "1987",
+     "title": "Far-Infrared Properties of Cluster Galaxies"
+    },
+    {
+     "bibcode": "2023A&A...675A..85M",
+     "year": "2023",
+     "title": "The ALMA Frontier Fields Survey. VI. Lensing-corrected 1.1 mm number counts in Abell 2744, MACSJ0416.1-2403, MACSJ1149.5+2223, Abell 370, an"
+    },
+    {
+     "bibcode": "2026SEMSC.29914228K",
+     "year": "2026",
+     "title": "Low-filled electrically conductive adhesives based on silver-coated glass and copper particles"
+    },
+    {
+     "bibcode": "2025JGRD..13043812K",
+     "year": "2025",
+     "title": "Time-Resolved Leader Spectra of Downward Terrestrial Gamma-Ray Flashes Observed at the Telescope Array Surface Detector"
+    },
+    {
+     "bibcode": "2023CPBio..3500304X",
+     "year": "2023",
+     "title": "Potential use of Rorippa sylvestris (L.) Besser. as a cadmium hyperaccumulator for phytoremediation"
+    },
+    {
+     "bibcode": "2013JPhA...46z5003B",
+     "year": "2013",
+     "title": "Numerical simulation of a lattice polymer model at its integrable point"
+    },
+    {
+     "bibcode": "2018arXiv181111991M",
+     "year": "2018",
+     "title": "Shape-conditioned Image Generation by Learning Latent Appearance Representation from Unpaired Data"
+    },
+    {
+     "bibcode": "1971FEBSL..12..253L",
+     "year": "1971",
+     "title": "Preferential binding of E. coli RNA-polymerase to A\u2014T rich sequences of bacteriophage lambda DNA"
+    },
+    {
+     "bibcode": "2021arXiv210901350A",
+     "year": "2021",
+     "title": "Spatially varying white balancing for mixed and non-uniform illuminants"
+    },
+    {
+     "bibcode": "2021Icar..35714228C",
+     "year": "2021",
+     "title": "Modeling transmission windows in Titan's lower troposphere: Implications for infrared spectrometers aboard future aerial and surface mission"
+    },
+    {
+     "bibcode": "2022Geote..56..791A",
+     "year": "2022",
+     "title": "Golpayegan Metamorphic Complex (Sanandaj-Sirjan Zone, Iran) as Evidence for Cadomian Back-Arc Magmatism: Structure, Geochemistry and Isotopi"
+    },
+    {
+     "bibcode": "1994AnBeh..47.1401C",
+     "year": "1994",
+     "title": "Pheromone detection by an amphisbaen\u0131\u0301an"
+    },
+    {
+     "bibcode": "2010Biotr..42..429L",
+     "year": "2010",
+     "title": "Unanticipated Effects of Stand Dynamism on Amazonian Tree Diversity"
+    },
+    {
+     "bibcode": "1990PhRvA..42.4008F",
+     "year": "1990",
+     "title": "Different approach to the Stark effect: Application to the hydrogen ground state"
+    },
+    {
+     "bibcode": "1986IJHMT..29.1103F",
+     "year": "1986",
+     "title": "Thermal conductance at solid interfaces: an application of the Fenech-Rohsenow model"
+    },
+    {
+     "bibcode": "2014IPhoJ...631240P",
+     "year": "2014",
+     "title": "Flexible Nyquist Pulse Sequence Generation With Variable Bandwidth and Repetition Rate"
+    },
+    {
+     "bibcode": "2023SeAcA.35314228Y",
+     "year": "2023",
+     "title": "An IoT-based smart optical platform for colorimetric analyzing multiple samples of biomarkers"
+    },
+    {
+     "bibcode": "2023NatSR..13.8787T",
+     "year": "2023",
+     "title": "Bulk and single-cell transcriptome profiling reveal the metabolic heterogeneity in gastric cancer"
+    },
+    {
+     "bibcode": "2011AcCrE..67m1705H",
+     "year": "2011",
+     "title": "catena-Poly[[bis(2,4-dichlorobenzoato)bis(methanol-\u03baO)cobalt(II)]-\u03bc-4,4'-bipyridine-\u03ba<SUP>2</SUP> N:N']"
+    },
+    {
+     "bibcode": "2026SoEn..30514228G",
+     "year": "2026",
+     "title": "Perovskite film passivation with amino and fluorine containing small molecule for enhanced solar cell performance"
+    },
+    {
+     "bibcode": "2015EcoEc.118..262S",
+     "year": "2015",
+     "title": "The growth paradigm: History, hegemony, and the contested making of economic growthmanship"
+    },
+    {
+     "bibcode": "2012Optik.123..726M",
+     "year": "2012",
+     "title": "Exact relations between wave aberration and the sagitta difference, and between ray aberration and the slope difference"
+    },
+    {
+     "bibcode": "2024EESD...53.1787K",
+     "year": "2024",
+     "title": "Cumulative power spectral density-based damping estimation"
+    },
+    {
+     "bibcode": "2016ITSE....7..471C",
+     "year": "2016",
+     "title": "Impact of Active Power Curtailment of Wind Turbines Connected to Residential Feeders for Overvoltage Prevention"
+    },
+    {
+     "bibcode": "2026MicMM.41114228C",
+     "year": "2026",
+     "title": "Low-temperature liquid-phase dehydration of glycerol to acrolein based on Fe-modified ZSM-5"
+    },
+    {
+     "bibcode": "2020EPoll.26114228Z",
+     "year": "2020",
+     "title": "Impact of different environmental particles on degradation of dibutyl phthalate in coastal sediments with and without Cylindrotheca closteri"
+    },
+    {
+     "bibcode": "2024arXiv241107611N",
+     "year": "2024",
+     "title": "Knowledge-Augmented Multimodal Clinical Rationale Generation for Disease Diagnosis with Small Language Models"
+    },
+    {
+     "bibcode": "2025arXiv251107804S",
+     "year": "2025",
+     "title": "Short-range order influences H distribution in Fe-Ni-Cr austenitic stainless steels"
+    },
+    {
+     "bibcode": "2008A&A...488..191O",
+     "year": "2008",
+     "title": "Encounters in the ONC - observing imprints of star-disc interactions"
+    },
+    {
+     "bibcode": "2021Icar..35714310.",
+     "year": "2021",
+     "title": "Ed. Board"
+    },
+    {
+     "bibcode": "2026arXiv260825909P",
+     "year": "2026",
+     "title": "A spinal circuit for collective coordination"
+    },
+    {
+     "bibcode": "2025RJPCA..99.1509P",
+     "year": "2025",
+     "title": "Sol\u2500Gel Synthesis of a Lead Zirconate Titanate Ceramic Precursor: Evolution of the Macroscopic Properties of the System"
+    },
+    {
+     "bibcode": "2025arXiv250718532A",
+     "year": "2025",
+     "title": "COT-AD: Cotton Analysis Dataset"
+    },
+    {
+     "bibcode": "2000PhRvA..62e2501M",
+     "year": "2000",
+     "title": "Evaluation of two-photon exchange graphs for excited states of highly charged heliumlike ions"
+    },
+    {
+     "bibcode": "2013ChEnJ.219..200B",
+     "year": "2013",
+     "title": "The microemulsion preparation and high catalytic performance of mesoporous NiO nanorods and nanocubes for toluene combustion"
+    },
+    {
+     "bibcode": "2022JSSCh.31223211C",
+     "year": "2022",
+     "title": "Design and syntheses of two luminescent metal-organic frameworks for detecting nitro-antibiotic, Fe<SUP>3+</SUP> and Cr<SUB>2</SUB>O<SUB>7</"
+    }
+   ]
+  },
+  "full:\"J073654\"": {
+   "n": 0,
+   "docs": []
+  },
+  "full:\"7:36:54.7\"": {
+   "n": 11,
+   "docs": [
+    {
+     "bibcode": "2024EcInd.15811526H",
+     "year": "2024",
+     "title": "Comparison of model selection and data bias on the prediction performance of purpleback flying squid (Sthenoteuthis oualaniensis) fishing gr"
+    },
+    {
+     "bibcode": "2018A&A...619A...1B",
+     "year": "2018",
+     "title": "The 55 Cancri system reassessed"
+    },
+    {
+     "bibcode": "2013SPIE.8673E..0HA",
+     "year": "2013",
+     "title": "Integration of spatio-temporal contrast sensitivity with a multi-slice channelized Hotelling observer"
+    },
+    {
+     "bibcode": "2009arXiv0912.3681M",
+     "year": "2009",
+     "title": "Properties from relativistic coupled-cluster without truncation: hyperfine constants of $^{25}{\\rm Mg}^+$, $^{43}{\\rm Ca}^+ $, $^{87}{\\rm Sr"
+    },
+    {
+     "bibcode": "1924MNRAS..84..629B",
+     "year": "1924",
+     "title": "Baxendell's observations of \u03b2 Lyr\u00e6"
+    },
+    {
+     "bibcode": "2022arXiv220813269A",
+     "year": "2022",
+     "title": "Ultrathin Broadband Metasurface Superabsorbers from a van der Waals Semimetal"
+    },
+    {
+     "bibcode": "1966AnBeh..14....1L",
+     "year": "1966",
+     "title": "Mating behaviour of two inbred strains of mice"
+    },
+    {
+     "bibcode": "2026arXiv260309933K",
+     "year": "2026",
+     "title": "A Voronoi Cell Formulation for Principled Token Pruning in Late-Interaction Retrieval Models"
+    },
+    {
+     "bibcode": "2008A&A...478..285A",
+     "year": "2008",
+     "title": "Predictions of the mutual events of the Galilean satellites of Jupiter occurring in 2009-2010"
+    },
+    {
+     "bibcode": "1924phae.proj.1116P",
+     "year": "1924",
+     "title": "C-Stars"
+    },
+    {
+     "bibcode": "2021arXiv210402760F",
+     "year": "2021",
+     "title": "Generalized pentagonal geometries"
+    }
+   ]
+  },
+  "full:\"NGC 2403\" full:(periodic OR \"colliding wind\" OR \"dust-forming\" OR \"WC binary\" OR \"episodic dust\")": {
+   "n": 1308,
+   "docs": [
+    {
+     "bibcode": "1988ApJ...332L..63F",
+     "year": "1988",
+     "title": "Distances to the Galaxies M81 and NGC 2403 from CCD I Band Photometry of Cepheids"
+    },
+    {
+     "bibcode": "2025Univ...11..280W",
+     "year": "2025",
+     "title": "Spectroscopic Observations and Emission-Line Diagnoses for H II Regions in the Late-Type Spiral Galaxy NGC 2403"
+    },
+    {
+     "bibcode": "2022MNRAS.512..802F",
+     "year": "2022",
+     "title": "Low-metallicity globular clusters in the low-mass isolated spiral galaxy NGC 2403"
+    },
+    {
+     "bibcode": "2012MNRAS.419.1833B",
+     "year": "2012",
+     "title": "Investigations of dust heating in M81, M83 and NGC 2403 with the Herschel Space Observatory"
+    },
+    {
+     "bibcode": "2015AJ....150...94B",
+     "year": "2015",
+     "title": "The Chandra Local Volume Survey. I. The X-Ray Point Source Populations of NGC 55, NGC 2403, and NGC 4214"
+    },
+    {
+     "bibcode": "2012ApJ...760...13F",
+     "year": "2012",
+     "title": "The Nova Rate in NGC 2403"
+    },
+    {
+     "bibcode": "2018ApJ...853..151M",
+     "year": "2018",
+     "title": "Internal Variations in Empirical Oxygen Abundances for Giant H II Regions in the Galaxy NGC 2403"
+    },
+    {
+     "bibcode": "2002AJ....123.1438D",
+     "year": "2002",
+     "title": "Near-Infrared Adaptive Optics Imaging of the Central Regions of Nearby Sc Galaxies. II. NGC 247 and NGC 2403"
+    },
+    {
+     "bibcode": "2010AJ....139.1066Y",
+     "year": "2010",
+     "title": "An X-Ray View of Star Formation in the Central 3 kpc of NGC 2403"
+    },
+    {
+     "bibcode": "2007ApJ...663..487T",
+     "year": "2007",
+     "title": "Chandra and XMM-Newton Discovery of Transient X-Ray Pulsar in the Nearby Spiral Galaxy NGC 2403"
+    },
+    {
+     "bibcode": "2006MNRAS.369..390M",
+     "year": "2006",
+     "title": "Faint supernovae and supernova impostors: case studies of SN 2002kg/NGC 2403-V37 and SN 2003gm"
+    },
+    {
+     "bibcode": "2009PASJ...61S.279I",
+     "year": "2009",
+     "title": "Spectral Transitions of an Ultraluminous X-Ray Source, NGC 2403 Source 3"
+    },
+    {
+     "bibcode": "2010MNRAS.402.1409B",
+     "year": "2010",
+     "title": "The JCMT Nearby Galaxies Legacy Survey - III. Comparisons of cold dust, polycyclic aromatic hydrocarbons, molecular gas and atomic gas in NG"
+    },
+    {
+     "bibcode": "1968ApJ...151..825T",
+     "year": "1968",
+     "title": "The Stellar Content and Distance of the Galaxy NGC 2403 IN the M81 Group"
+    },
+    {
+     "bibcode": "2026arXiv260900477R",
+     "year": "2026",
+     "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+    },
+    {
+     "bibcode": "2007ApJ...664..277Y",
+     "year": "2007",
+     "title": "Discovery of a Transient X-Ray Source in the Compact Stellar Nucleus of NGC 2403"
+    },
+    {
+     "bibcode": "1999AJ....117.1249D",
+     "year": "1999",
+     "title": "The Ionizing Star Clusters of Giant H II Regions in NGC 2403"
+    },
+    {
+     "bibcode": "1998A&A...332..429T",
+     "year": "1998",
+     "title": "Expanding H I shells in NGC 2403. First results from an automated object recognition package"
+    },
+    {
+     "bibcode": "2001PASP..113..692S",
+     "year": "2001",
+     "title": "Post-Eruption Detection of Variable 12 in NGC 2403 (SN 1954j): Another \u03b7 Carinae Variable"
+    },
+    {
+     "bibcode": "2023NewA..10001992S",
+     "year": "2023",
+     "title": "Star formation histories of dwarf and giant galaxies with different supernovae-driven outflows: NGC 2403, NGC 628"
+    },
+    {
+     "bibcode": "2022ApJ...940...32B",
+     "year": "2022",
+     "title": "The Metallicity and Distance of NGC 2403 from Blue Supergiants"
+    },
+    {
+     "bibcode": "2024MNRAS.528..418L",
+     "year": "2024",
+     "title": "NGC 2403 XMM4: evidence for a super-Eddington neutron star with a possible transient pulsation"
+    },
+    {
+     "bibcode": "1976MNRAS.177..157M",
+     "year": "1976",
+     "title": "The distance to NGC 2403"
+    },
+    {
+     "bibcode": "1984ApJ...282..101M",
+     "year": "1984",
+     "title": "The distance to NGC 2403 based on near-infrared observations of cepheids."
+    },
+    {
+     "bibcode": "1986AJ.....91..808H",
+     "year": "1986",
+     "title": "The luminosities of M supergiants and the distances to M 101, NGC 2403, and M 81."
+    },
+    {
+     "bibcode": "1984AJ.....89..630S",
+     "year": "1984",
+     "title": "The brightest stars in nearby galaxies. IV. The color-magnitude diagram for the brightest red and blue stars in NGC 2403."
+    },
+    {
+     "bibcode": "2017ApJ...848...86H",
+     "year": "2017",
+     "title": "A Tale of Two Impostors: SN2002kg and SN1954J in NGC 2403"
+    },
+    {
+     "bibcode": "2020MNRAS.499.2116M",
+     "year": "2020",
+     "title": "The nature of the symbiotic candidate 2MASS J07363415+6538548 in the field of NGC 2403"
+    },
+    {
+     "bibcode": "2006AJ....131.2245Z",
+     "year": "2006",
+     "title": "Optical Photometry of the Type II-P Supernova 2004dj in NGC 2403"
+    },
+    {
+     "bibcode": "2005ApJ...623L..21B",
+     "year": "2005",
+     "title": "Monitoring of the Prompt Radio Emission from the Unusual Supernova SN 2004dj in NGC 2403"
+    },
+    {
+     "bibcode": "2005A&A...429L..13W",
+     "year": "2005",
+     "title": "SN 2002kg - the brightening of LBV V37 in NGC 2403"
+    },
+    {
+     "bibcode": "1984A&A...130..162B",
+     "year": "1984",
+     "title": "Globular cluster candidates in the spiral galaxy NGC 2403."
+    },
+    {
+     "bibcode": "1971ApJ...166..265B",
+     "year": "1971",
+     "title": "The Neutral-Hydrogen Distribution and Rotation Parameters of the Spiral Galaxy NGC 2403"
+    },
+    {
+     "bibcode": "1984MNRAS.207..801M",
+     "year": "1984",
+     "title": "H II regions and the extinction of Cepheids in NGC 2403."
+    },
+    {
+     "bibcode": "2006astro.ph..3025V",
+     "year": "2006",
+     "title": "The Type IIn Supernova 2002kg: The Outburst of a Luminous Blue Variable Star in NGC 2403"
+    },
+    {
+     "bibcode": "2023A&A...679A..83K",
+     "year": "2023",
+     "title": "The growth history of local M 33-mass bulgeless spiral galaxies"
+    },
+    {
+     "bibcode": "2006MNRAS.366..449F",
+     "year": "2006",
+     "title": "A dynamical model for the extraplanar gas in spiral galaxies"
+    },
+    {
+     "bibcode": "2009ApJ...700..654E",
+     "year": "2009",
+     "title": "Keck HIRES Spectroscopy of Extragalactic H II Regions: C and O Abundances from Recombination Lines"
+    },
+    {
+     "bibcode": "2023HEAD...2016108A",
+     "year": "2023",
+     "title": "NGC 2403: A hard X-ray look of a nearby low metallicity bulgeless spiral galaxy"
+    },
+    {
+     "bibcode": "2010ApJ...725..842L",
+     "year": "2010",
+     "title": "A Multiwavelength Study of Supernova Remnants in Six Nearby Galaxies. I. Detection of New X-ray-selected Supernova Remnants with Chandra"
+    },
+    {
+     "bibcode": "2013ApJ...762...64G",
+     "year": "2013",
+     "title": "The Mid-IR Contribution of Dust-enshrouded Stars in Six Nearby Galaxies"
+    },
+    {
+     "bibcode": "1966AJ.....71Q.400T",
+     "year": "1966",
+     "title": "Variable Stars in the Nearby Galaxy NGC 2403."
+    },
+    {
+     "bibcode": "2014AJ....147...60S",
+     "year": "2014",
+     "title": "Extra-nuclear Starbursts: Young Luminous Hinge Clumps in Interacting Galaxies"
+    },
+    {
+     "bibcode": "2007AAS...210.4106T",
+     "year": "2007",
+     "title": "Chandra And XMM-Newton Observations Of NGC 2403: Discovery Of The Transient X-ray Pulsar CXOU J073709.1+653544 And An 18-hour Periodic Modul"
+    },
+    {
+     "bibcode": "1998AAS...193.2104J",
+     "year": "1998",
+     "title": "Distances to M101, NGC 2403, and NGC 2366 via Long Period Variables"
+    },
+    {
+     "bibcode": "2025A&A...697A...9H",
+     "year": "2025",
+     "title": "Euclid: Early Release Observations \u2500 Deep anatomy of nearby galaxies"
+    },
+    {
+     "bibcode": "2024ApJ...974...20W",
+     "year": "2024",
+     "title": "The Metallicity Dependence of PAH Emission in Galaxies. I. Insights from Deep Radial Spitzer Spectroscopy"
+    },
+    {
+     "bibcode": "1974ApJ...191..603S",
+     "year": "1974",
+     "title": "Steps toward the Hubble constant. II. The brightest stars in late-type spiral galaxies."
+    },
+    {
+     "bibcode": "2026PASP..138j4207R",
+     "year": "2026",
+     "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+    },
+    {
+     "bibcode": "1984AJ.....89..621S",
+     "year": "1984",
+     "title": "The brightest stars in nearby galaxies. III. The color-magnitude diagram for the brightest red and blue stars in M 81  and Holmberg IX."
+    },
+    {
+     "bibcode": "1980ApJ...242..528E",
+     "year": "1980",
+     "title": "Properties of spurs in spiral galaxies"
+    },
+    {
+     "bibcode": "2002ApJ...577...31C",
+     "year": "2002",
+     "title": "Planetary Nebulae as Standard Candles. XII. Connecting the Population I and Population II Distance Scales"
+    },
+    {
+     "bibcode": "2016MNRAS.457.2642S",
+     "year": "2016",
+     "title": "Radial gas motions in The H I Nearby Galaxy Survey (THINGS)"
+    },
+    {
+     "bibcode": "2019MNRAS.489.1986P",
+     "year": "2019",
+     "title": "Deep late-time observations of the supernova impostors SN 1954J and SN 1961V"
+    },
+    {
+     "bibcode": "2002A&A...393..453B",
+     "year": "2002",
+     "title": "MOND rotation curves for spiral galaxies with Cepheid-based distances"
+    },
+    {
+     "bibcode": "2010AJ....139.1451S",
+     "year": "2010",
+     "title": "Discovery of Precursor Luminous Blue Variable Outbursts in Two Recent Optical Transients: The Fitfully Variable Missing Links UGC 2773-OT an"
+    },
+    {
+     "bibcode": "2011ApJ...737...81T",
+     "year": "2011",
+     "title": "Compact Optical Counterparts of Ultraluminous X-Ray Sources"
+    },
+    {
+     "bibcode": "1999PASP..111.1124H",
+     "year": "1999",
+     "title": "\u03b7 Carinae's Second Eruption and the Light Curves of the \u03b7 Carinae Variables"
+    },
+    {
+     "bibcode": "2006ApJ...638..157M",
+     "year": "2006",
+     "title": "An Initial Look at the Far-Infrared-Radio Correlation within Nearby Star-forming Galaxies Using the Spitzer Space Telescope"
+    },
+    {
+     "bibcode": "2018ApJ...862...28L",
+     "year": "2018",
+     "title": "Young Accreting Compact Objects in M31: The Combined Power of NuSTAR, Chandra, and Hubble"
+    }
+   ]
+  },
+  "full:\"NGC 2403\" full:(\"mid-infrared variable\" OR \"infrared variable\" OR SPIRITS OR \"dust-obscured\")": {
+   "n": 130,
+   "docs": [
+    {
+     "bibcode": "2018ApJ...853..151M",
+     "year": "2018",
+     "title": "Internal Variations in Empirical Oxygen Abundances for Giant H II Regions in the Galaxy NGC 2403"
+    },
+    {
+     "bibcode": "2026arXiv260900477R",
+     "year": "2026",
+     "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+    },
+    {
+     "bibcode": "1990AJ.....99.1108Z",
+     "year": "1990",
+     "title": "Kinematics and Composition of H II Regions in Spiral Galaxies. II. M51, M101, aND NGC 2403"
+    },
+    {
+     "bibcode": "2013ApJ...762...64G",
+     "year": "2013",
+     "title": "The Mid-IR Contribution of Dust-enshrouded Stars in Six Nearby Galaxies"
+    },
+    {
+     "bibcode": "2026PASP..138j4207R",
+     "year": "2026",
+     "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+    },
+    {
+     "bibcode": "2010AJ....139.1451S",
+     "year": "2010",
+     "title": "Discovery of Precursor Luminous Blue Variable Outbursts in Two Recent Optical Transients: The Fitfully Variable Missing Links UGC 2773-OT an"
+    },
+    {
+     "bibcode": "2001ApJ...555..301M",
+     "year": "2001",
+     "title": "Star Formation Thresholds in Galactic Disks"
+    },
+    {
+     "bibcode": "2019MNRAS.489.1986P",
+     "year": "2019",
+     "title": "Deep late-time observations of the supernova impostors SN 1954J and SN 1961V"
+    },
+    {
+     "bibcode": "2013ApJ...767...52K",
+     "year": "2013",
+     "title": "Finding \u03b7 Car Analogs in Nearby Galaxies Using Spitzer. I. Candidate Selection"
+    },
+    {
+     "bibcode": "2021jwst.prop.1863L",
+     "year": "2021",
+     "title": "Confirming the First Low-Metallicity Wolf-Rayet Dust Factory"
+    },
+    {
+     "bibcode": "2017ApJ...839...88K",
+     "year": "2017",
+     "title": "SPIRITS: Uncovering Unusual Infrared Transients with Spitzer"
+    },
+    {
+     "bibcode": "2022ApJ...928..158B",
+     "year": "2022",
+     "title": "Hubble Space Telescope Imaging of Luminous Extragalactic Infrared Transients and Variables from the Spitzer Infrared Intensive Transients Su"
+    },
+    {
+     "bibcode": "2021ApJ...909..113L",
+     "year": "2021",
+     "title": "Revealing Efficient Dust Formation at Low Metallicity in Extragalactic Carbon-rich Wolf-Rayet Binaries"
+    },
+    {
+     "bibcode": "2002ApJ...574..114L",
+     "year": "2002",
+     "title": "Ultraviolet Spectra of Star-forming Galaxies with Time-dependent Dust Obscuration"
+    },
+    {
+     "bibcode": "2000ApJ...544..218A",
+     "year": "2000",
+     "title": "Multiwavelength Observations of Dusty Star Formation at Low and High Redshift"
+    },
+    {
+     "bibcode": "2002ApJS..140..303L",
+     "year": "2002",
+     "title": "Global Far-Ultraviolet (912-1800 \u00c5) Properties of Star-forming Galaxies"
+    },
+    {
+     "bibcode": "2022Univ....8..493C",
+     "year": "2022",
+     "title": "Gap Transients Interacting with Circumstellar Medium"
+    },
+    {
+     "bibcode": "2024MNRAS.531...61B",
+     "year": "2024",
+     "title": "KAOSS: turbulent, but disc-like kinematics in dust-obscured star-forming galaxies at z   1.3-2.6"
+    },
+    {
+     "bibcode": "2009ApJ...705.1364T",
+     "year": "2009",
+     "title": "A New Class of Luminous Transients and a First Census of their Massive Stellar Progenitors"
+    },
+    {
+     "bibcode": "2005MmSAI..76..565A",
+     "year": "2005",
+     "title": "MERLIN monitoring of recent core-collapse supernovae"
+    },
+    {
+     "bibcode": "2008AJ....136.2846B",
+     "year": "2008",
+     "title": "The Star Formation Law in Nearby Galaxies on Sub-Kpc Scales"
+    },
+    {
+     "bibcode": "2006ApJ...638.1045S",
+     "year": "2006",
+     "title": "Infrared [Fe II] Emission from P Cygni's Nebula: Atomic Data, Mass, Kinematics, and the 1600 AD Outburst"
+    },
+    {
+     "bibcode": "2002ARA&A..40..263S",
+     "year": "2002",
+     "title": "Modified Newtonian Dynamics as an Alternative to Dark Matter"
+    },
+    {
+     "bibcode": "2015ApJ...799..187K",
+     "year": "2015",
+     "title": "Finding \u03b7 Car Analogs in Nearby Galaxies Using Spitzer. II. Identification of An Emerging Class of Extragalactic Self-Obscured Stars"
+    },
+    {
+     "bibcode": "2021MNRAS.505.5029W",
+     "year": "2021",
+     "title": "The episodic dust-making Wolf-Rayet star HD 38030 in the Large Magellanic Cloud"
+    },
+    {
+     "bibcode": "1981ApJS...47..229E",
+     "year": "1981",
+     "title": "A near-infrared atlas of spiral galaxies."
+    },
+    {
+     "bibcode": "2011AJ....141...37L",
+     "year": "2011",
+     "title": "An Ultraviolet Spectroscopic Atlas of Local Starbursts and Star-forming Galaxies: The Legacy of FOS and GHRS"
+    },
+    {
+     "bibcode": "2003PASP..115..928K",
+     "year": "2003",
+     "title": "SINGS: The SIRTF Nearby Galaxies Survey"
+    },
+    {
+     "bibcode": "2009MNRAS.395.1409S",
+     "year": "2009",
+     "title": "The death of massive stars - I. Observational constraints on the progenitors of Type II-P supernovae"
+    },
+    {
+     "bibcode": "2014ApJS..212...18B",
+     "year": "2014",
+     "title": "An Atlas of Galaxy Spectral Energy Distributions from the Ultraviolet to the Mid-infrared"
+    },
+    {
+     "bibcode": "2013AJ....145....6J",
+     "year": "2013",
+     "title": "Extending the Nearby Galaxy Heritage with WISE: First Results from the WISE Enhanced Resolution Galaxy Atlas"
+    },
+    {
+     "bibcode": "2019A&A...622A..64B",
+     "year": "2019",
+     "title": "Volumetric star formation laws of disc galaxies"
+    },
+    {
+     "bibcode": "2017ApJ...847..136B",
+     "year": "2017",
+     "title": "Calibration of Ultraviolet, Mid-infrared, and Radio Star Formation Rate Indicators"
+    },
+    {
+     "bibcode": "2020A&A...644A.125B",
+     "year": "2020",
+     "title": "The volumetric star formation law for nearby galaxies. Extension to dwarf galaxies and low-density regions"
+    },
+    {
+     "bibcode": "1992PASP..104..599J",
+     "year": "1992",
+     "title": "A Critical Review of Selected Techniques for Measuring Extragalactic Distances"
+    },
+    {
+     "bibcode": "2026Univ...12..229H",
+     "year": "2026",
+     "title": "The Complex Upper HR Diagram-Redux: The Low-Metallicity Galaxies"
+    },
+    {
+     "bibcode": "2012ApJ...761...54E",
+     "year": "2012",
+     "title": "On the Origin of the High Column Density Turnover in the H I Column Density Distribution"
+    },
+    {
+     "bibcode": "2011MNRAS.415..773S",
+     "year": "2011",
+     "title": "Luminous blue variable eruptions and related transients: diversity of progenitors and outburst properties"
+    },
+    {
+     "bibcode": "2012ApJ...748...47M",
+     "year": "2012",
+     "title": "The Contribution of TP-AGB and RHeB Stars to the Near-IR Luminosity of Local Galaxies: Implications for Stellar Mass Measurements of High-re"
+    },
+    {
+     "bibcode": "2013lcdu.confE..49D",
+     "year": "2013",
+     "title": "Digging up the Dirt on Galaxies with Herschel"
+    },
+    {
+     "bibcode": "2021AJ....162..152D",
+     "year": "2021",
+     "title": "New Blue and Red Variable Stars in NGC 247"
+    },
+    {
+     "bibcode": "2012ApJ...758..142K",
+     "year": "2012",
+     "title": "Unmasking the Supernova Impostors"
+    },
+    {
+     "bibcode": "1993ApJS...86....5K",
+     "year": "1993",
+     "title": "An Atlas of Ultraviolet Spectra of Star-forming Galaxies"
+    },
+    {
+     "bibcode": "2021A&A...646A..35M",
+     "year": "2021",
+     "title": "MIGHTEE-HI: The H I emission project of the MeerKAT MIGHTEE survey"
+    },
+    {
+     "bibcode": "2024A&A...686A..77B",
+     "year": "2024",
+     "title": "Investigating episodic mass loss in evolved massive stars. I. Spectroscopy of dusty massive stars in ten southern galaxies"
+    },
+    {
+     "bibcode": "2021MNRAS.506.4715R",
+     "year": "2021",
+     "title": "A systematic reclassification of Type IIn supernovae"
+    },
+    {
+     "bibcode": "2014ApJ...790..118M",
+     "year": "2014",
+     "title": "The Shock-induced Star Formation Sequence Resulting from a Constant Spiral Pattern Speed"
+    },
+    {
+     "bibcode": "2020A&A...641A.147K",
+     "year": "2020",
+     "title": "\u03b3-ray/infrared luminosity correlation of star-forming galaxies"
+    },
+    {
+     "bibcode": "2015MNRAS.448..135B",
+     "year": "2015",
+     "title": "The identification of dust heating mechanisms in nearby galaxies using Herschel 160/250 and 250/350 \u03bcm surface brightness ratios"
+    },
+    {
+     "bibcode": "2015MNRAS.450.3935L",
+     "year": "2015",
+     "title": "H I observations of the nearest starburst galaxy NGC 253 with the SKA precursor KAT-7"
+    },
+    {
+     "bibcode": "2020MNRAS.491.3844A",
+     "year": "2020",
+     "title": "Galaxy simulation with the evolution of grain size distribution"
+    },
+    {
+     "bibcode": "2010ApJS..190..233M",
+     "year": "2010",
+     "title": "Optical Spectroscopy and Nebular Oxygen Abundances of the Spitzer/SINGS Galaxies"
+    },
+    {
+     "bibcode": "2011MNRAS.416.2401H",
+     "year": "2011",
+     "title": "Quantified H I morphology - I. Multi-wavelength analysis of the THINGS galaxies"
+    },
+    {
+     "bibcode": "2010ARA&A..48..673F",
+     "year": "2010",
+     "title": "The Hubble Constant"
+    },
+    {
+     "bibcode": "2012MNRAS.421.2917F",
+     "year": "2012",
+     "title": "The dust and gas properties of M83"
+    },
+    {
+     "bibcode": "2012MNRAS.427.2797D",
+     "year": "2012",
+     "title": "The dust energy balance in the edge-on spiral galaxy NGC 4565"
+    },
+    {
+     "bibcode": "2026arXiv260120808L",
+     "year": "2026",
+     "title": "How well is the local Large Scale Structure of the Universe known? CosmicFlows vs. Biteau's Galaxy Catalog with Cloning"
+    },
+    {
+     "bibcode": "2021AJ....161...93D",
+     "year": "2021",
+     "title": "The Lop-sided Spiral Galaxy NGC 247: Clues to a Possible Interaction with NGC 253"
+    },
+    {
+     "bibcode": "2011PhRvD..83l3008K",
+     "year": "2011",
+     "title": "Core-collapse astrophysics with a five-megaton neutrino detector"
+    },
+    {
+     "bibcode": "2016A&A...587A..45H",
+     "year": "2016",
+     "title": "The spatially resolved correlation between [NII] 205 \u03bcm line emission and the 24 \u03bcm continuum in nearby galaxies"
+    }
+   ]
+  },
+  "full:\"NGC 2403\" full:(WISE OR NEOWISE) full:(variable OR outburst)": {
+   "n": 94,
+   "docs": [
+    {
+     "bibcode": "2026arXiv260900477R",
+     "year": "2026",
+     "title": "SPIRITS 19q: Dust Production by a Subsolar-metallicity Carbon-rich Wolf-Rayet Star in NGC 2403"
+    },
+    {
+     "bibcode": "2021ApJ...915...21R",
+     "year": "2021",
+     "title": "CHAOS. VI. Direct Abundances in NGC 2403"
+    },
+    {
+     "bibcode": "2020MNRAS.499.2116M",
+     "year": "2020",
+     "title": "The nature of the symbiotic candidate 2MASS J07363415+6538548 in the field of NGC 2403"
+    },
+    {
+     "bibcode": "2025A&A...697A...9H",
+     "year": "2025",
+     "title": "Euclid: Early Release Observations \u2500 Deep anatomy of nearby galaxies"
+    },
+    {
+     "bibcode": "2011A&A...526A.118H",
+     "year": "2011",
+     "title": "The Westerbork Hydrogen Accretion in LOcal GAlaxieS (HALOGAS) survey. I. Survey description and pilot observations"
+    },
+    {
+     "bibcode": "2014ChA&A..38..427K",
+     "year": "2014",
+     "title": "Spectroscopic Observations of the Star Formation Regions in Nearby Galaxies"
+    },
+    {
+     "bibcode": "2013AJ....145....6J",
+     "year": "2013",
+     "title": "Extending the Nearby Galaxy Heritage with WISE: First Results from the WISE Enhanced Resolution Galaxy Atlas"
+    },
+    {
+     "bibcode": "2021MNRAS.505.5029W",
+     "year": "2021",
+     "title": "The episodic dust-making Wolf-Rayet star HD 38030 in the Large Magellanic Cloud"
+    },
+    {
+     "bibcode": "2018MNRAS.478...50K",
+     "year": "2018",
+     "title": "GHASP: an H \u03b1 kinematical survey of spiral galaxies - XI. Distribution of luminous and dark matter in spiral and irregular nearby galaxies u"
+    },
+    {
+     "bibcode": "2025arXiv250904666D",
+     "year": "2025",
+     "title": "Kete: Predicting Known Minor Bodies in Images"
+    },
+    {
+     "bibcode": "2025ApJS..276....2C",
+     "year": "2025",
+     "title": "The Resolved Behavior of Dust Mass, Polycyclic Aromatic Hydrocarbon Fraction, and Radiation Field in \u223c800 Nearby Galaxies"
+    },
+    {
+     "bibcode": "2023PASP..135j5002H",
+     "year": "2023",
+     "title": "Rubin Observatory LSST Transients and Variable Stars Roadmap"
+    },
+    {
+     "bibcode": "2021ApJ...909..113L",
+     "year": "2021",
+     "title": "Revealing Efficient Dust Formation at Low Metallicity in Extragalactic Carbon-rich Wolf-Rayet Binaries"
+    },
+    {
+     "bibcode": "2023ApJS..269....3M",
+     "year": "2023",
+     "title": "Siena Galaxy Atlas 2020"
+    },
+    {
+     "bibcode": "2019Galax...7...83K",
+     "year": "2019",
+     "title": "A Census of B[e] Supergiants"
+    },
+    {
+     "bibcode": "2015MNRAS.450.3935L",
+     "year": "2015",
+     "title": "H I observations of the nearest starburst galaxy NGC 253 with the SKA precursor KAT-7"
+    },
+    {
+     "bibcode": "2015MNRAS.448..135B",
+     "year": "2015",
+     "title": "The identification of dust heating mechanisms in nearby galaxies using Herschel 160/250 and 250/350 \u03bcm surface brightness ratios"
+    },
+    {
+     "bibcode": "2025Galax..13...66B",
+     "year": "2025",
+     "title": "Red Supergiants in the Milky Way and Nearby Galaxies"
+    },
+    {
+     "bibcode": "2020A&A...638A...4G",
+     "year": "2020",
+     "title": "Scaling relations and baryonic cycling in local star-forming galaxies. I. The sample"
+    },
+    {
+     "bibcode": "2024A&A...688A.109D",
+     "year": "2024",
+     "title": "MHONGOOSE: A MeerKAT nearby galaxy H I survey"
+    },
+    {
+     "bibcode": "2012A&A...548A..99W",
+     "year": "2012",
+     "title": "The XMM-Newton slew survey in the 2-10 keV band"
+    },
+    {
+     "bibcode": "2024ApJ...969...97B",
+     "year": "2024",
+     "title": "A Panchromatic Study of the X-Ray Binary Population in NGC 300 on Subgalactic Scales"
+    },
+    {
+     "bibcode": "2015ApJ...799..187K",
+     "year": "2015",
+     "title": "Finding \u03b7 Car Analogs in Nearby Galaxies Using Spitzer. II. Identification of An Emerging Class of Extragalactic Self-Obscured Stars"
+    },
+    {
+     "bibcode": "2015arXiv150404082L",
+     "year": "2015",
+     "title": "HI observations of the nearest starburst galaxy NGC 253 with the SKA precursor KAT-7"
+    },
+    {
+     "bibcode": "2017ApJ...847..136B",
+     "year": "2017",
+     "title": "Calibration of Ultraviolet, Mid-infrared, and Radio Star Formation Rate Indicators"
+    },
+    {
+     "bibcode": "2024ApJ...971..180Y",
+     "year": "2024",
+     "title": "A Multiwavelength Machine-learning Approach to Classifying X-Ray Sources in the Fields of Unidentified 4FGL-DR4 Sources"
+    },
+    {
+     "bibcode": "2012MNRAS.427.2797D",
+     "year": "2012",
+     "title": "The dust energy balance in the edge-on spiral galaxy NGC 4565"
+    },
+    {
+     "bibcode": "2024ApJ...964...18C",
+     "year": "2024",
+     "title": "Resolved Measurements of the CO-to-H<SUB>2</SUB> Conversion Factor in 37 Nearby Galaxies"
+    },
+    {
+     "bibcode": "2026A&A...712A.242H",
+     "year": "2026",
+     "title": "Nearby galaxies in the LOFAR Two-metre Sky Survey: IV. A fundamental plane of the radio-star formation rate relation"
+    },
+    {
+     "bibcode": "2023ApJ...957....3S",
+     "year": "2023",
+     "title": "The Panchromatic Hubble Andromeda Treasury: Triangulum Extended Region (PHATTER). V. The Structure of M33 in Resolved Stellar Populations"
+    },
+    {
+     "bibcode": "2019ApJ...874...79Z",
+     "year": "2019",
+     "title": "Variation of the Mid-infrared versus H\u03b1 Luminosity Correlation with Increasing Redshift for Galaxies in the Local Universe"
+    },
+    {
+     "bibcode": "2026ApJ..1001...42M",
+     "year": "2026",
+     "title": "Constraining the Subgalactic Relationship between Star Formation and the Hot Interstellar Medium in NGC 4254"
+    },
+    {
+     "bibcode": "2024arXiv240303815W",
+     "year": "2024",
+     "title": "GMRT observations of OHM candidates from the ALFALFA survey"
+    },
+    {
+     "bibcode": "2026ApJ..1002...75L",
+     "year": "2026",
+     "title": "ELVES-Dwarf. I. Satellite Systems of Eight Isolated Dwarf Galaxies in the Local Volume"
+    },
+    {
+     "bibcode": "2019MNRAS.486..504S",
+     "year": "2019",
+     "title": "A 5<SUP>deg</SUP> x 5<SUP>deg</SUP> deep H I survey of the M81 group"
+    },
+    {
+     "bibcode": "2025A&A...699A..43K",
+     "year": "2025",
+     "title": "Hunting star forming galaxies in the gamma-ray domain"
+    },
+    {
+     "bibcode": "2023ApJ...943...60Z",
+     "year": "2023",
+     "title": "The Contribution of Evolved Stars to Polycyclic Aromatic Hydrocarbon Heating and Implications for Estimating Star Formation Rates"
+    },
+    {
+     "bibcode": "2025MNRAS.543.2463M",
+     "year": "2025",
+     "title": "Probing the infrared\u2500radio correlation of the full IRAS revised bright galaxy sample with MeerKAT and the VLA"
+    },
+    {
+     "bibcode": "2020ApJ...902...23S",
+     "year": "2020",
+     "title": "Identifying the 3FHL Catalog. IV. Swift Observations of Unassociated Fermi-LAT 3FHL Sources"
+    },
+    {
+     "bibcode": "2015MNRAS.446..943V",
+     "year": "2015",
+     "title": "Optical supernova remnants in nearby galaxies and their influence on star formation rates derived from H\u03b1 emission"
+    },
+    {
+     "bibcode": "2025JCAP...02..045K",
+     "year": "2025",
+     "title": "Measuring \u03c3 <SUB>8</SUB> using DESI Legacy Imaging Surveys Emission-Line galaxies and Planck CMB lensing, and the impact of dust on paramete"
+    },
+    {
+     "bibcode": "2022ApJ...939...44R",
+     "year": "2022",
+     "title": "CHAOS. VII. A Large-scale Direct Abundance Study in M33"
+    },
+    {
+     "bibcode": "2015AJ....150...91P",
+     "year": "2015",
+     "title": "Chandra and Very Large Array Observations of the Nearby Sd Galaxy NGC 45"
+    },
+    {
+     "bibcode": "2022ApJ...927..149L",
+     "year": "2022",
+     "title": "Low-J CO Line Ratios from Single-dish CO Mapping Surveys and PHANGS-ALMA"
+    },
+    {
+     "bibcode": "2018PASP..130g2001G",
+     "year": "2018",
+     "title": "Unbound Young Stellar Systems: Star Formation on the Loose"
+    },
+    {
+     "bibcode": "2026arXiv260318973C",
+     "year": "2026",
+     "title": "ID-MAGE II: The Star Forming Satellites of Low-Mass Hosts"
+    },
+    {
+     "bibcode": "2021AJ....161...93D",
+     "year": "2021",
+     "title": "The Lop-sided Spiral Galaxy NGC 247: Clues to a Possible Interaction with NGC 253"
+    },
+    {
+     "bibcode": "2026arXiv261036040W",
+     "year": "2026",
+     "title": "The Stellar Populations of Resolved Galaxies"
+    },
+    {
+     "bibcode": "2013MNRAS.434.3389Z",
+     "year": "2013",
+     "title": "Equilibrium star formation in a constant Q disc: model optimization and initial tests"
+    },
+    {
+     "bibcode": "2024arXiv240912554B",
+     "year": "2024",
+     "title": "DIISC Survey: Deciphering the Interplay Between the Interstellar Medium, Stars, and the Circumgalactic Medium Survey"
+    },
+    {
+     "bibcode": "2025PASJ...77..219U",
+     "year": "2025",
+     "title": "Smart Kanata: A framework for autonomous decision-making in rapid follow-up observations of cataclysmic variables"
+    },
+    {
+     "bibcode": "2026arXiv260805286K",
+     "year": "2026",
+     "title": "Variations in the 3.3 $\u03bc$m Polycyclic Aromatic Hydrocarbon Feature Across Nearby Galaxies Driven by Metallicity and Radiation Field Spectrum"
+    },
+    {
+     "bibcode": "2015ApJ...815...48Z",
+     "year": "2015",
+     "title": "Near-ultraviolet Spectroscopy of Star-forming Galaxies from eBOSS: Signatures of Ubiquitous Galactic-scale Outflows"
+    },
+    {
+     "bibcode": "2022ApJ...928..120G",
+     "year": "2022",
+     "title": "Mid- and Far-infrared Color-Color Relations within Local Galaxies"
+    },
+    {
+     "bibcode": "2023arXiv230804891B",
+     "year": "2023",
+     "title": "Introducing the ASSESS project: Episodic Mass Loss in Evolved Massive Stars -- Key to Understanding the Explosive Early Universe"
+    },
+    {
+     "bibcode": "2012ApJ...753...94C",
+     "year": "2012",
+     "title": "The Contribution of TP-AGB Stars to the Mid-infrared Colors of Nearby Galaxies"
+    },
+    {
+     "bibcode": "2020AJ....159..186D",
+     "year": "2020",
+     "title": "Intermediate-mass Early-type Disk Galaxies in the Virgo Cluster. II. Near-Infrared Spectra and Evidence for Differences in Evolution"
+    },
+    {
+     "bibcode": "2007A&G....48c..27L",
+     "year": "2007",
+     "title": "Wide-field surveys and astronomical discovery space"
+    },
+    {
+     "bibcode": "2025prim.book.....M",
+     "year": "2025",
+     "title": "PRIMA General Observer Science Book Volume 2"
+    },
+    {
+     "bibcode": "2017MNRAS.466..213A",
+     "year": "2017",
+     "title": "New ATCA, ALMA and VISIR observations of the candidate LBV SK -67 266 (S61): the nebular mass from modelling 3D density distributions"
+    }
+   ]
+  }
+ },
+ "NGC 55 fsn#7": {
+  "full:\"00:15:13.9\"": {
+   "n": 17,
+   "docs": [
+    {
+     "bibcode": "1992CPL...189..199Y",
+     "year": "1992",
+     "title": "Non-Arrhenius temperature dependence of the rate constant for the H + H <SUB>2</SUB>S reaction"
+    },
+    {
+     "bibcode": "1984Cryo...24..363R",
+     "year": "1984",
+     "title": "Inverted forms of the new helium vapour pressure equations"
+    },
+    {
+     "bibcode": "2013arXiv1312.1760F",
+     "year": "2013",
+     "title": "Towards Normalizing the Edit Distance Using a Genetic Algorithms Based Scheme"
+    },
+    {
+     "bibcode": "2023EcoEv..1310232H",
+     "year": "2023",
+     "title": "Which demographic processes control competitive equilibria? Bayesian calibration of a size-structured forest population model"
+    },
+    {
+     "bibcode": "2010JGRD..115.4203H",
+     "year": "2010",
+     "title": "Global increase in UV irradiance during the past 30 years (1979-2008) estimated from satellite data"
+    },
+    {
+     "bibcode": "2022SPIE12169E..7FC",
+     "year": "2022",
+     "title": "Design of an ultra-compact 5-piece high-ratio MWIR zoom optical system"
+    },
+    {
+     "bibcode": "2026arXiv260300364R",
+     "year": "2026",
+     "title": "Distribution-Aware Companding Quantization of Large Language Models"
+    },
+    {
+     "bibcode": "2003JASTP..65..457K",
+     "year": "2003",
+     "title": "Effects of clouds on the surface erythemal UV-B irradiance at northern midlatitudes: estimation from the observations taken at Belsk, Poland"
+    },
+    {
+     "bibcode": "2003JEnvQ..32.2054P",
+     "year": "2003",
+     "title": "Prediction of Trace Element Mobility in Contaminated Soils by Sequential Extraction"
+    },
+    {
+     "bibcode": "2023arXiv231111413K",
+     "year": "2023",
+     "title": "Large Pre-trained time series models for cross-domain Time series analysis tasks"
+    },
+    {
+     "bibcode": "2005JOC....26..268G",
+     "year": "2005",
+     "title": "A Novel Dynamic Routing Algorithm in WDM Transport Network with Wavelength Conversion"
+    },
+    {
+     "bibcode": "2026arXiv260106722H",
+     "year": "2026",
+     "title": "Mobility Inequity and Risk Response After Hurricane Helene: Evidence from Real-Time Travel and Social Sentiment Data"
+    },
+    {
+     "bibcode": "2025arXiv251224954C",
+     "year": "2025",
+     "title": "Numerical study of solitary waves in Dirac--Klein--Gordon system"
+    },
+    {
+     "bibcode": "2023JHEP...03..247B",
+     "year": "2023",
+     "title": "Study of the b \u2192 d\u2113\u2113 transitions in the Standard Model and test of New Physics sensitivities"
+    },
+    {
+     "bibcode": "2021arXiv210605081W",
+     "year": "2021",
+     "title": "Global Context Enhanced Graph Neural Networks for Session-based Recommendation"
+    },
+    {
+     "bibcode": "2003A&A...401..959P",
+     "year": "2003",
+     "title": "New neighbours. V. 35 DENIS late-M dwarfs between 10 and 30 parsecs"
+    },
+    {
+     "bibcode": "1982Litho..15..137P",
+     "year": "1982",
+     "title": "A cummingtonite-porphyritic dacite with amphibole-rich xenoliths from the tertiary central volcano at Kr\u00f3ksfj\u00f6rdur, NW Iceland"
+    }
+   ]
+  },
+  "full:\"001513.9\"": {
+   "n": 14,
+   "docs": [
+    {
+     "bibcode": "1992CPL...189..199Y",
+     "year": "1992",
+     "title": "Non-Arrhenius temperature dependence of the rate constant for the H + H <SUB>2</SUB>S reaction"
+    },
+    {
+     "bibcode": "1984Cryo...24..363R",
+     "year": "1984",
+     "title": "Inverted forms of the new helium vapour pressure equations"
+    },
+    {
+     "bibcode": "2013arXiv1312.1760F",
+     "year": "2013",
+     "title": "Towards Normalizing the Edit Distance Using a Genetic Algorithms Based Scheme"
+    },
+    {
+     "bibcode": "2023EcoEv..1310232H",
+     "year": "2023",
+     "title": "Which demographic processes control competitive equilibria? Bayesian calibration of a size-structured forest population model"
+    },
+    {
+     "bibcode": "2010JGRD..115.4203H",
+     "year": "2010",
+     "title": "Global increase in UV irradiance during the past 30 years (1979-2008) estimated from satellite data"
+    },
+    {
+     "bibcode": "2022SPIE12169E..7FC",
+     "year": "2022",
+     "title": "Design of an ultra-compact 5-piece high-ratio MWIR zoom optical system"
+    },
+    {
+     "bibcode": "2026arXiv260300364R",
+     "year": "2026",
+     "title": "Distribution-Aware Companding Quantization of Large Language Models"
+    },
+    {
+     "bibcode": "2003JASTP..65..457K",
+     "year": "2003",
+     "title": "Effects of clouds on the surface erythemal UV-B irradiance at northern midlatitudes: estimation from the observations taken at Belsk, Poland"
+    },
+    {
+     "bibcode": "2003JEnvQ..32.2054P",
+     "year": "2003",
+     "title": "Prediction of Trace Element Mobility in Contaminated Soils by Sequential Extraction"
+    },
+    {
+     "bibcode": "2023arXiv231111413K",
+     "year": "2023",
+     "title": "Large Pre-trained time series models for cross-domain Time series analysis tasks"
+    },
+    {
+     "bibcode": "2005JOC....26..268G",
+     "year": "2005",
+     "title": "A Novel Dynamic Routing Algorithm in WDM Transport Network with Wavelength Conversion"
+    },
+    {
+     "bibcode": "2026arXiv260106722H",
+     "year": "2026",
+     "title": "Mobility Inequity and Risk Response After Hurricane Helene: Evidence from Real-Time Travel and Social Sentiment Data"
+    },
+    {
+     "bibcode": "2025arXiv251224954C",
+     "year": "2025",
+     "title": "Numerical study of solitary waves in Dirac--Klein--Gordon system"
+    },
+    {
+     "bibcode": "2023JHEP...03..247B",
+     "year": "2023",
+     "title": "Study of the b \u2192 d\u2113\u2113 transitions in the Standard Model and test of New Physics sensitivities"
+    }
+   ]
+  },
+  "full:\"00 15 13.9\"": {
+   "n": 7,
+   "docs": [
+    {
+     "bibcode": "1985Aquac..45..237H",
+     "year": "1985",
+     "title": "Downstream migration of hatchery-reared smolts of Atlantic salmon (Salmo salar L.) in the River Imsa, Norway"
+    },
+    {
+     "bibcode": "2021arXiv210605081W",
+     "year": "2021",
+     "title": "Global Context Enhanced Graph Neural Networks for Session-based Recommendation"
+    },
+    {
+     "bibcode": "2003A&A...401..959P",
+     "year": "2003",
+     "title": "New neighbours. V. 35 DENIS late-M dwarfs between 10 and 30 parsecs"
+    },
+    {
+     "bibcode": "1982Litho..15..137P",
+     "year": "1982",
+     "title": "A cummingtonite-porphyritic dacite with amphibole-rich xenoliths from the tertiary central volcano at Kr\u00f3ksfj\u00f6rdur, NW Iceland"
+    },
+    {
+     "bibcode": "1984JLTP...54..361D",
+     "year": "1984",
+     "title": "An improved experimental equation of state of solid hydrogen and deuterium"
+    },
+    {
+     "bibcode": "2025JGRA..13034042G",
+     "year": "2025",
+     "title": "Fine Scale Structure in Plasmaspheric Plumes From GEO to the Magnetopause: Observations by Magnetospheric Multiscale"
+    },
+    {
+     "bibcode": "2011NDS...112.2129A",
+     "year": "2011",
+     "title": "Nuclear Data Sheets for A = 249"
+    }
+   ]
+  },
+  "full:\"3.8079\"": {
+   "n": 455,
+   "docs": [
+    {
+     "bibcode": "2020CBET.4795....1B",
+     "year": "2020",
+     "title": "(38079) 1999 HF"
+    },
+    {
+     "bibcode": "2026GrEE...11..736Z",
+     "year": "2026",
+     "title": "Enhancing high volumetric energy density of supercapacitors through diatomic reconstruction of layered double hydroxides"
+    },
+    {
+     "bibcode": "2026Senso..26.4820Y",
+     "year": "2026",
+     "title": "AS-UNet: A Lightweight U-Net with Asymmetric Strip Attention and Joint Gating for RGB Optical Landslide Segmentation"
+    },
+    {
+     "bibcode": "2008AcCrE..64m1468L",
+     "year": "2008",
+     "title": "Dichlorido[2,2'-(oxydimethylene)dipyridine]zinc(II)"
+    },
+    {
+     "bibcode": "2020JMEP...29.3253M",
+     "year": "2020",
+     "title": "Effect of TiC Content on Tensile Properties, Bend Strength, and Thermal Conductivity of Al-Li-Cu-Mg-Zr Alloy/TiC Composites Produced by Accu"
+    },
+    {
+     "bibcode": "2019Vacuu.159..414K",
+     "year": "2019",
+     "title": "Synthesis and optical studies of KCaVO<SUB>4</SUB>:Sm<SUP>3+</SUP>/PMMA nanocomposites"
+    },
+    {
+     "bibcode": "2010CBET.2257....1S",
+     "year": "2010",
+     "title": "Comet C/2010 H4 (Scotti)"
+    },
+    {
+     "bibcode": "2018PhyB..535..184K",
+     "year": "2018",
+     "title": "Optical properties of Sr<SUB>3</SUB>B<SUB>2</SUB>O<SUB>6</SUB>:Dy<SUP>3+</SUP>/PMMA polymer nanocomposites"
+    },
+    {
+     "bibcode": "2005IAUC.8560....2L",
+     "year": "2005",
+     "title": "Comet C/2005 N3 (Larson)"
+    },
+    {
+     "bibcode": "2004agec.data..835S",
+     "year": "2004",
+     "title": "Financial Characteristics of North Dakota Farms 2001-2003"
+    },
+    {
+     "bibcode": "2003agec.data..111S",
+     "year": "2003",
+     "title": "Financial Characteristics of North Dakota Farms 2000-2002"
+    },
+    {
+     "bibcode": "1981IAUC.3600....1S",
+     "year": "1981",
+     "title": "Comet Elias (1981c)"
+    },
+    {
+     "bibcode": "2021SoftX..1600865L",
+     "year": "2021",
+     "title": "edgar: An R package for the U.S. SEC EDGAR retrieval and parsing of corporate filings"
+    },
+    {
+     "bibcode": "2003BBRC..312.1147N",
+     "year": "2003",
+     "title": "Increased atypical PKC activity in endurance-trained human skeletal muscle"
+    },
+    {
+     "bibcode": "1975PhRvA..12..959C",
+     "year": "1975",
+     "title": "Auger and radiative deexcitation of multiply ionized Ne"
+    },
+    {
+     "bibcode": "2009JCPro..17..541D",
+     "year": "2009",
+     "title": "EKC analysis for studying economic growth and environmental quality: a case study in China"
+    },
+    {
+     "bibcode": "1978ZNatA..33..610B",
+     "year": "1978",
+     "title": "The Structure of the Other Rotamer of Formic Acid, cis-HCOOH<SUP>1,2</SUP>"
+    },
+    {
+     "bibcode": "2004PPath..53..154K",
+     "year": "2004",
+     "title": "A controlled environment test for resistance to Soil-borne cereal mosaic virus (SBCMV) and its use to determine the mode of inheritance of r"
+    },
+    {
+     "bibcode": "1977DSR....24..937G",
+     "year": "1977",
+     "title": "The solubility of molecular hydrogen in seawater"
+    },
+    {
+     "bibcode": "2019ApJ...883..163B",
+     "year": "2019",
+     "title": "The Evolution of O I over 3.2 &lt; z &lt; 6.5: Reionization of the Circumgalactic Medium"
+    },
+    {
+     "bibcode": "2015PlST...17..991J",
+     "year": "2015",
+     "title": "A Tangentially Visible Fast Imaging System on EAST"
+    },
+    {
+     "bibcode": "2021ApPhA.127..218K",
+     "year": "2021",
+     "title": "Study of luminescence from terbium doped strontium borate nanophosphors in PMMA"
+    },
+    {
+     "bibcode": "2025ITMTT..73..606V",
+     "year": "2025",
+     "title": "Dual-Reject-Band Filters With Resonant Apertures in Rectangular Waveguide"
+    },
+    {
+     "bibcode": "1975CPL....36..569C",
+     "year": "1975",
+     "title": "Molecular properties of Li <SUB>2</SUB><SUP>+</SUP> from model potential calculations"
+    },
+    {
+     "bibcode": "2012bshe.confE..87K",
+     "year": "2012",
+     "title": "Irradiation history and resulting isotope decay scheme influence on yttrium gamma activity"
+    },
+    {
+     "bibcode": "2025RJPCA..99.2360N",
+     "year": "2025",
+     "title": "Metal Complexes of 3-(Quinolin-2-ylmethylene)isoindolin-1-one: Synthesis, Study of Spectral Characteristics by Experimental and Theoretical "
+    },
+    {
+     "bibcode": "2019JRNC..321..765J",
+     "year": "2019",
+     "title": "Measurement of half-lives for <SUP>87m,g</SUP>Y and <SUP>196m,g,194</SUP>Au produced from the photon and neutron induced reactions of <SUP>8"
+    },
+    {
+     "bibcode": "2025EneSA..47.9569G",
+     "year": "2025",
+     "title": "Wind farm integrated restructured electricity market analysis using Ant Lion optimizer algorithm"
+    },
+    {
+     "bibcode": "2023SPIE12601E..06Y",
+     "year": "2023",
+     "title": "SVM-based classification on AFM images of prostate cancer cells"
+    },
+    {
+     "bibcode": "2021RaSc...5607032T",
+     "year": "2021",
+     "title": "C/NOFS, COSMIC and GNSS Observations of Plasma Irregularity During the Evening and Nighttimes in East African Sector"
+    },
+    {
+     "bibcode": "2010CrRes..31..274L",
+     "year": "2010",
+     "title": "Texacephale langstoni, a new genus of pachycephalosaurid (Dinosauria: Ornithischia) from the upper Campanian Aguja Formation, southern Texas"
+    },
+    {
+     "bibcode": "2025NMEne..4201852C",
+     "year": "2025",
+     "title": "Wall conditions on HL-2A and HL-3 tokamaks"
+    },
+    {
+     "bibcode": "2026arXiv260321303B",
+     "year": "2026",
+     "title": "The phase boundary of the random site Ising model"
+    },
+    {
+     "bibcode": "1992JPCM....4.2439M",
+     "year": "1992",
+     "title": "Ab initio pair potentials for FCC metals: an application of the method of Mobius transformation"
+    },
+    {
+     "bibcode": "2024MNRAS.52711288R",
+     "year": "2024",
+     "title": "Mitigating astrometric bias in barycentric correction with PEXO"
+    },
+    {
+     "bibcode": "1983Icar...53..348L",
+     "year": "1983",
+     "title": "The atmosphere of Titan: An analysis of the Voyager 1 radio occultation measurements"
+    },
+    {
+     "bibcode": "2025arXiv250507915Z",
+     "year": "2025",
+     "title": "On-Device Crack Segmentation for Edge Structural Health Monitoring"
+    },
+    {
+     "bibcode": "1942PhRv...62..422N",
+     "year": "1942",
+     "title": "The Near Infra-Red Spectrum of Water Vapor Part II. The Parallel Bands \u03bd<SUB>3</SUB>, \u03bd<SUB>1</SUB>+\u03bd<SUB>3</SUB>.\u03bd<SUB>2</SUB>+\u03bd<SUB>3</SUB"
+    },
+    {
+     "bibcode": "2005NewPh.165..875W",
+     "year": "2005",
+     "title": "The use of conventional and quantitative real-time PCR assays for Polymyxa graminis to examine host plant resistance, inoculum levels and in"
+    },
+    {
+     "bibcode": "2014JPhCS.533a2052W",
+     "year": "2014",
+     "title": "Cross-section studies of important neutron and relativistic deuteron reactions"
+    },
+    {
+     "bibcode": "2026arXiv260325542X",
+     "year": "2026",
+     "title": "Migration of Voters in Florida, 2017-2022"
+    },
+    {
+     "bibcode": "1994NuPhB.421..456B",
+     "year": "1994",
+     "title": "On the numerical evaluation of scalar two-loop self-energy diagrams"
+    },
+    {
+     "bibcode": "1982Metro..18....1E",
+     "year": "1982",
+     "title": "A Viewpoint on the Quantity \"Plane Angle\""
+    },
+    {
+     "bibcode": "2012JPhCS.366a2047W",
+     "year": "2012",
+     "title": "Measurement of Neutrons in Different Pb/U Setups Irradiated by Relativistic Protons and Deuterons by means of Activation Samples"
+    },
+    {
+     "bibcode": "2021CBio...31.R215G",
+     "year": "2021",
+     "title": "Cetaceans balancing on the brink"
+    },
+    {
+     "bibcode": "2014InAgr..28..479R",
+     "year": "2014",
+     "title": "Time and temperature dependent sorption behaviour of dimethoate pesticide in various Indian soils"
+    },
+    {
+     "bibcode": "1976JMoSt..34..161V",
+     "year": "1976",
+     "title": "The microwave spectrum of chloroacetyl chloride"
+    },
+    {
+     "bibcode": "2001PhRvC..64f5803G",
+     "year": "2001",
+     "title": "Proton capture cross section of Sr isotopes and their importance for nucleosynthesis of proton-rich nuclides"
+    },
+    {
+     "bibcode": "2025arXiv250523367D",
+     "year": "2025",
+     "title": "PAN-Crafter: Learning Modality-Consistent Alignment for PAN-Sharpening"
+    },
+    {
+     "bibcode": "1984PhRvB..29.3470C",
+     "year": "1984",
+     "title": "First-principles linear combination of atomic orbitals method for the cohesive and structural properties of solids: Application to diamond"
+    },
+    {
+     "bibcode": "1969DSRA...16..197G",
+     "year": "1969",
+     "title": "Precise temperature measurements in the Cayman Trench"
+    },
+    {
+     "bibcode": "2013arXiv1310.1127T",
+     "year": "2013",
+     "title": "Bayesian sparse graphical models and their mixtures using lasso selection priors"
+    },
+    {
+     "bibcode": "2002A&A...396..337S",
+     "year": "2002",
+     "title": "Energy levels and structural properties of compressed hydrogen atom under Debye screening"
+    },
+    {
+     "bibcode": "2014Senso..14.7711C",
+     "year": "2014",
+     "title": "Muecas: A Multi-Sensor Robotic Head for Affective Human Robot Interaction and Imitation"
+    },
+    {
+     "bibcode": "2018NuPhA.970..411N",
+     "year": "2018",
+     "title": "Measurement of isomeric yield ratios of <SUP>86m,g</SUP>Y and <SUP>87m,g</SUP>Y in the quasi-monoenergetic neutron induced reactions of <SUP"
+    },
+    {
+     "bibcode": "1931PhRv...37.1493P",
+     "year": "1931",
+     "title": "Further Study of the Absorption of Infrared Radiation by Water Vapor"
+    },
+    {
+     "bibcode": "1983Metro..19...67D",
+     "year": "1983",
+     "title": "Helium Vapour Pressure Equations on the EPT-76"
+    },
+    {
+     "bibcode": "1980JMoSp..83..343M",
+     "year": "1980",
+     "title": "Far infrared pure rotational spectrum of methylacetylene"
+    },
+    {
+     "bibcode": "2023arXiv230316438Z",
+     "year": "2023",
+     "title": "Random Weights Networks Work as Loss Prior Constraint for Image Restoration"
+    },
+    {
+     "bibcode": "1994CPL...228..363J",
+     "year": "1994",
+     "title": "The D\u2192X transition in <SUP>136</SUP>Xe <SUP>19</SUP>F"
+    }
+   ]
+  },
+  "full:\"J001513\"": {
+   "n": 3,
+   "docs": [
+    {
+     "bibcode": "2022MNRAS.512.5358R",
+     "year": "2022",
+     "title": "Wide-band spectral variability of peaked spectrum sources"
+    },
+    {
+     "bibcode": "2019MNRAS.485.2447M",
+     "year": "2019",
+     "title": "GMRT observations of extragalactic radio sources with steeply inverted spectra"
+    },
+    {
+     "bibcode": "2017ApJ...836..174C",
+     "year": "2017",
+     "title": "Extragalactic Peaked-spectrum Radio Sources at Low Frequencies"
+    }
+   ]
+  },
+  "full:\"0:15:13.9\"": {
+   "n": 164,
+   "docs": [
+    {
+     "bibcode": "2023Obs...143...71S",
+     "year": "2023",
+     "title": "Re-parameterization of Four Limb-Darkening Laws and their Implementation into the JKTEBOP Code"
+    },
+    {
+     "bibcode": "1987CoPhC..47..207T",
+     "year": "1987",
+     "title": "The generation of continuum orbitals for molecular r-matrix calculations using lagrange orthogonalisation"
+    },
+    {
+     "bibcode": "2013SoPh..284..315Z",
+     "year": "2013",
+     "title": "Properties of the 15 February 2011 Flare Seismic Sources"
+    },
+    {
+     "bibcode": "1992CPL...189..199Y",
+     "year": "1992",
+     "title": "Non-Arrhenius temperature dependence of the rate constant for the H + H <SUB>2</SUB>S reaction"
+    },
+    {
+     "bibcode": "2025NatWa...3..927L",
+     "year": "2025",
+     "title": "Diffusion-driven selective crystallization of high-purity salt through simple and sustainable one-step evaporation"
+    },
+    {
+     "bibcode": "1984Cryo...24..363R",
+     "year": "1984",
+     "title": "Inverted forms of the new helium vapour pressure equations"
+    },
+    {
+     "bibcode": "1990JMoSp.143...18M",
+     "year": "1990",
+     "title": "Intensities in the \u03bd<SUB>4</SUB> band of <SUP>15</SUP>NH <SUB>3</SUB>"
+    },
+    {
+     "bibcode": "2016NatCo...713390G",
+     "year": "2016",
+     "title": "The pangenome of an agronomically important crop plant Brassica oleracea"
+    },
+    {
+     "bibcode": "1982PhyA..110..518S",
+     "year": "1982",
+     "title": "Exact solutions for heterophase ferromagnets"
+    },
+    {
+     "bibcode": "2019MRFMM.81611673L",
+     "year": "2019",
+     "title": "The multi-faceted high order polymorphic synergistic interactions among nucleotide excision repair genes increase the risk of lung cancer in"
+    },
+    {
+     "bibcode": "1995CSR....15.1115C",
+     "year": "1995",
+     "title": "Nutrient and organic carbon exchanges between the Black and Marmara Seas through the Bosphorus Strait"
+    },
+    {
+     "bibcode": "2005MarPG..22..403W",
+     "year": "2005",
+     "title": "Gas hydrate occurrence on the continental slope of the northern South China Sea"
+    },
+    {
+     "bibcode": "2004A&A...417..293A",
+     "year": "2004",
+     "title": "Chemical composition of UV-bright star ZNG 4 in the globular cluster M 13"
+    },
+    {
+     "bibcode": "1974NuPhB..82..130D",
+     "year": "1974",
+     "title": "Amplitude analysis of Kaon-nucleon scattering data"
+    },
+    {
+     "bibcode": "2008JESHA..43..329A",
+     "year": "2008",
+     "title": "Trace element composition of plasma and breast milk of well-nourished women"
+    },
+    {
+     "bibcode": "2023EcoEv..1310232H",
+     "year": "2023",
+     "title": "Which demographic processes control competitive equilibria? Bayesian calibration of a size-structured forest population model"
+    },
+    {
+     "bibcode": "1992HydMe..28..135C",
+     "year": "1992",
+     "title": "Study of ammonium uranyl carbonate re-extraction-crystallization process by ammonium carbonate"
+    },
+    {
+     "bibcode": "2023ScTEn.86260764L",
+     "year": "2023",
+     "title": "Relationship between meteorological variations, seasonal influenza, and hip fractures in the elderly: A modelling investigation using 22-yea"
+    },
+    {
+     "bibcode": "2025CMPh...2833702B",
+     "year": "2025",
+     "title": "Beyond conventional half-metals: gapless states and spin gapless semiconducting behavior in X<SUB>2</SUB>MnGa (X =Ti, Ir) Heusler compounds"
+    },
+    {
+     "bibcode": "2015PlJ....82..621B",
+     "year": "2015",
+     "title": "Evolutionary dynamics of retrotransposons following autopolyploidy in the Buckler Mustard species complex"
+    },
+    {
+     "bibcode": "2025arXiv250113373P",
+     "year": "2025",
+     "title": "Advancing Carbon Capture using AI: Design of permeable membrane and estimation of parameters for Carbon Capture using linear regression and "
+    },
+    {
+     "bibcode": "2024arXiv240419166H",
+     "year": "2024",
+     "title": "Large CP violation in charmed baryon decays"
+    },
+    {
+     "bibcode": "2025arXiv250505740H",
+     "year": "2025",
+     "title": "Deep-ICE: the first globally optimal algorithm for minimizing 0-1 loss in two-layer ReLU and maxout networks"
+    },
+    {
+     "bibcode": "2020ARep...64..281R",
+     "year": "2020",
+     "title": "Dynamic Dark Energy Equation of State (EoS) and Hubble Constant Analysis Using Type Ia Supernovae from Union 2.1 Dataset"
+    },
+    {
+     "bibcode": "2022SPIE12169E..7FC",
+     "year": "2022",
+     "title": "Design of an ultra-compact 5-piece high-ratio MWIR zoom optical system"
+    },
+    {
+     "bibcode": "1970ZNatA..25..827D",
+     "year": "1970",
+     "title": "Untersuchungen \u00fcber das Verhalten der chemischen Bindung im elektrischen Feld. II. Das Methylchloridmolek\u00fcl CH<SUB>3</SUB>Cl"
+    },
+    {
+     "bibcode": "2024ApSS..66960458J",
+     "year": "2024",
+     "title": "Impact of polyglycidol block architecture in polystyrene-b-polyglycidol copolymers on the properties of thin films and protein adsorption"
+    },
+    {
+     "bibcode": "2026arXiv260300364R",
+     "year": "2026",
+     "title": "Distribution-Aware Companding Quantization of Large Language Models"
+    },
+    {
+     "bibcode": "2022JGRA..12730915L",
+     "year": "2022",
+     "title": "Energetic Magnetospheric Particle Fluxes Onto Callisto's Atmosphere"
+    },
+    {
+     "bibcode": "2011MNRAS.417.2166S",
+     "year": "2011",
+     "title": "Homogeneous studies of transiting extrasolar planets - IV. Thirty systems with space-based light curves"
+    },
+    {
+     "bibcode": "1988NIMPB..35..118I",
+     "year": "1988",
+     "title": "Stopping powers of Al and Cu for protons from 3 TO 9 MeV"
+    },
+    {
+     "bibcode": "2017JGRG..122.1107X",
+     "year": "2017",
+     "title": "Altitude-dependent influence of snow cover on alpine land surface phenology"
+    },
+    {
+     "bibcode": "2013FuEco..27..766B",
+     "year": "2013",
+     "title": "Trapped between popular fruit and preferred nest location \u2500 cafeterias are poor places to raise a family"
+    },
+    {
+     "bibcode": "2024arXiv240406432C",
+     "year": "2024",
+     "title": "Missing Pieces: How Do Designs that Expose Uncertainty Longitudinally Impact Trust in AI Decision Aids? An In Situ Study of Gig Drivers"
+    },
+    {
+     "bibcode": "2024NatSR..14.9552S",
+     "year": "2024",
+     "title": "A real-world pharmacovigilance study of amivantamab-related cardiovascular adverse events based on the FDA adverse event reporting system (F"
+    },
+    {
+     "bibcode": "1992PhyS...45..309C",
+     "year": "1992",
+     "title": "Electron impact excitation rates for transitions in carbon-like F IV, Na VI, AI VIII, P X, S XI, CI XII, Ar XIII and K XIV"
+    },
+    {
+     "bibcode": "2021MRE.....8c5508H",
+     "year": "2021",
+     "title": "Effects of roasting and NH<SUB>4</SUB>Cl catalysis on the direct electrotransformation products from an AlCl<SUB>3</SUB> solution"
+    },
+    {
+     "bibcode": "2001JESHA..36..623P",
+     "year": "2001",
+     "title": "Adsorption and Desorption of Mercury by Bangpakong River Sediments as Influenced by Salinities"
+    },
+    {
+     "bibcode": "2017Tectp.702...29L",
+     "year": "2017",
+     "title": "Early Jurassic tectonism occurred within the Basu metamorphic complex, eastern central Tibet: Implications for an archipelago-accretion orog"
+    },
+    {
+     "bibcode": "2019arXiv190903836C",
+     "year": "2019",
+     "title": "MRSNet: Metabolite Quantification from Edited Magnetic Resonance Spectra With Convolutional Neural Networks"
+    },
+    {
+     "bibcode": "2025arXiv250106587U",
+     "year": "2025",
+     "title": "Optimizing Financial Data Analysis: A Comparative Study of Preprocessing Techniques for Regression Modeling of Apple Inc.'s Net Income and S"
+    },
+    {
+     "bibcode": "2022GeoFr..1301344S",
+     "year": "2022",
+     "title": "Age and petrogenesis of late Mesozoic intrusions in the Huoluotai porphyry Cu-(Mo) deposit, northeast China: Implications for regional tecto"
+    },
+    {
+     "bibcode": "2024arXiv240116139O",
+     "year": "2024",
+     "title": "Improving device-aware Web services and their mobile clients through an aspect-oriented, model-driven approach"
+    },
+    {
+     "bibcode": "1980MNRAS.191..607P",
+     "year": "1980",
+     "title": "Radio positions and optical identifications for radio sources selected at 966MHz - II"
+    },
+    {
+     "bibcode": "1994CEPPI..33..171L",
+     "year": "1994",
+     "title": "High-pressure phase equilibria and densities of the binary mixtures carbon dioxide-oleic acid, carbon dioxide-methyl myristate, and carbon d"
+    },
+    {
+     "bibcode": "2021GeoFr..12..265C",
+     "year": "2021",
+     "title": "Geology, geochronology and geochemistry of large Duobaoshan Cu\u2500Mo\u2500Au orefield in NE China: Magma genesis and regional tectonic implications"
+    },
+    {
+     "bibcode": "2022PNAS..11903533G",
+     "year": "2022",
+     "title": "Reliably assessing the electronic structure of cytochrome P450 on today's classical computers and tomorrow's quantum computers"
+    },
+    {
+     "bibcode": "2023arXiv231111413K",
+     "year": "2023",
+     "title": "Large Pre-trained time series models for cross-domain Time series analysis tasks"
+    },
+    {
+     "bibcode": "2024EnInt.19409165C",
+     "year": "2024",
+     "title": "Occupational exposure to traditional and emerging organophosphate esters: A comparison of levels across different sources and blood distribu"
+    },
+    {
+     "bibcode": "2005JOC....26..268G",
+     "year": "2005",
+     "title": "A Novel Dynamic Routing Algorithm in WDM Transport Network with Wavelength Conversion"
+    },
+    {
+     "bibcode": "2026arXiv260106722H",
+     "year": "2026",
+     "title": "Mobility Inequity and Risk Response After Hurricane Helene: Evidence from Real-Time Travel and Social Sentiment Data"
+    },
+    {
+     "bibcode": "2016IJMPD..2550002L",
+     "year": "2016",
+     "title": "Numerically fitting the electron Fermi energy and the electron fraction in a neutron star"
+    },
+    {
+     "bibcode": "2012JAnEc..81..174S",
+     "year": "2012",
+     "title": "A meta-analysis of the traits affecting dispersal ability in butterflies: can wingspan be used as a proxy?"
+    },
+    {
+     "bibcode": "2007JPCM...19r6213O",
+     "year": "2007",
+     "title": "Modulated and unmodulated structures, and the transport mechanisms in the triangular lattice system NaxCoO2 with 0.48, 0.58 and 0.65"
+    },
+    {
+     "bibcode": "2026arXiv260213130H",
+     "year": "2026",
+     "title": "An Always-Accepting Algorithm for Transition Path Sampling"
+    },
+    {
+     "bibcode": "2001hep.ph....7195N",
+     "year": "2001",
+     "title": "Evidence for a two scale Infrared NPQCD dynamics from Pade couplant structures"
+    },
+    {
+     "bibcode": "2020CompM..66.1237B",
+     "year": "2020",
+     "title": "Multiscale crack band model for eigenstrain based reduced order homogenization"
+    },
+    {
+     "bibcode": "2013PhRvD..87k4513A",
+     "year": "2013",
+     "title": "Determination of the \u2206(1232) axial and pseudoscalar form factors from lattice QCD"
+    },
+    {
+     "bibcode": "2026IJPPW..3001233M",
+     "year": "2026",
+     "title": "Taxonomic revision of Rhabdochona (Rhabdochona) esseniae Mashego, 1990 and Rhabdochona (Rhabdochona) gendrei Campana-Rouget, 1961 in Labeoba"
+    },
+    {
+     "bibcode": "2003JGLR...29..332R",
+     "year": "2003",
+     "title": "Assessing Trends in Organochlorine Concentrations in Lake Winnipeg Fish Following the 1997 Red River Flood"
+    }
+   ]
+  },
+  "full:\"NGC 55\" full:(\"B[e]\" OR LBV OR \"luminous blue variable\" OR \"Wolf-Rayet\" OR \"dusty massive\")": {
+   "n": 251,
+   "docs": [
+    {
+     "bibcode": "2015AJ....150...94B",
+     "year": "2015",
+     "title": "The Chandra Local Volume Survey. I. The X-Ray Point Source Populations of NGC 55, NGC 2403, and NGC 4214"
+    },
+    {
+     "bibcode": "2008A&A...485...41C",
+     "year": "2008",
+     "title": "The Araucaria Project: VLT-spectroscopy of blue massive stars in NGC 55"
+    },
+    {
+     "bibcode": "2004A&A...416..243T",
+     "year": "2004",
+     "title": "An unusual high-ionization nebula in <ASTROBJ>NGC 55</ASTROBJ>"
+    },
+    {
+     "bibcode": "2023ApJ...955...61Z",
+     "year": "2023",
+     "title": "Identification of Bubble Nebulae around NGC 55 ULX-1 with MUSE Observations"
+    },
+    {
+     "bibcode": "2020MNRAS.493.5369P",
+     "year": "2020",
+     "title": "Vertical distribution of HMXBs in NGC 55: constraining their centre-of-mass velocity"
+    },
+    {
+     "bibcode": "2024A&A...686A..77B",
+     "year": "2024",
+     "title": "Investigating episodic mass loss in evolved massive stars. I. Spectroscopy of dusty massive stars in ten southern galaxies"
+    },
+    {
+     "bibcode": "2012MNRAS.422..367H",
+     "year": "2012",
+     "title": "First Very Large Telescope/X-shooter spectroscopy of early-type stars outside the Local Group"
+    },
+    {
+     "bibcode": "1987BAAA...32..242M",
+     "year": "1987",
+     "title": "Masa de HI en galaxias cercanas: NGC 55"
+    },
+    {
+     "bibcode": "2023Galax..11...79M",
+     "year": "2023",
+     "title": "Discovering New B[e] Supergiants and Candidate Luminous Blue Variables in Nearby Galaxies"
+    },
+    {
+     "bibcode": "1987BAAA...32..239C",
+     "year": "1987",
+     "title": "Estudio cinem\u00e1tico de NGC 55"
+    },
+    {
+     "bibcode": "1983MNRAS.204..743W",
+     "year": "1983",
+     "title": "Abundance gradients in galaxies in the Sculptor and Centaurus groups."
+    },
+    {
+     "bibcode": "2016A&A...587A.121W",
+     "year": "2016",
+     "title": "Spitzer mid-infrared point sources in the fields of nearby galaxies"
+    },
+    {
+     "bibcode": "2019ApJ...883...44W",
+     "year": "2019",
+     "title": "A Sparkler in the Fireworks Galaxy: Discovery of an Ultraluminous X-Ray Transient with a Strong Oxygen Line in NGC 6946"
+    },
+    {
+     "bibcode": "2000A&AS..145...83A",
+     "year": "2000",
+     "title": "Dust outflows from quiescent spiral disks."
+    },
+    {
+     "bibcode": "2020MNRAS.493.2410W",
+     "year": "2020",
+     "title": "Candidate LBV stars in galaxy NGC 7793 found via HST photometry + MUSE spectroscopy"
+    },
+    {
+     "bibcode": "2026A&A...707A.116S",
+     "year": "2026",
+     "title": "A constant upper luminosity limit of cool supergiant stars down to the extremely low metallicity of I Zw 18"
+    },
+    {
+     "bibcode": "2025A&A...698A.279D",
+     "year": "2025",
+     "title": "Investigating episodic mass loss in evolved massive stars: III. Spectroscopy of dusty massive stars in three northern galaxies"
+    },
+    {
+     "bibcode": "1999A&AS..136...35S",
+     "year": "1999",
+     "title": "New catalogue of Wolf-Rayet galaxies and high-excitation extra-galactic HII regions"
+    },
+    {
+     "bibcode": "2000ApJ...531..776G",
+     "year": "2000",
+     "title": "A Spectroscopic Study of a Large Sample Of Wolf-Rayet Galaxies"
+    },
+    {
+     "bibcode": "2010A&A...516A.104L",
+     "year": "2010",
+     "title": "Massive star formation in Wolf-Rayet galaxies. III. Analysis of the O and WR populations"
+    },
+    {
+     "bibcode": "2010eso..pres...37.",
+     "year": "2010",
+     "title": "A Nearby Galactic Exemplar"
+    },
+    {
+     "bibcode": "2023MNRAS.522.2655G",
+     "year": "2023",
+     "title": "A MUSE view of the multiple interacting system HCG 31"
+    },
+    {
+     "bibcode": "2024ApJ...971...87B",
+     "year": "2024",
+     "title": "CHAOS. VIII. Far-ultraviolet Spectra of M101 and the Impact of Wolf\u2500Rayet Stars"
+    },
+    {
+     "bibcode": "2019PhyU...62.1162F",
+     "year": "2019",
+     "title": "On the nature of ultraluminous X-ray sources"
+    },
+    {
+     "bibcode": "2020MNRAS.495.1209R",
+     "year": "2020",
+     "title": "Unlocking Galactic Wolf-Rayet stars with Gaia DR2 - II. Cluster and association membership"
+    },
+    {
+     "bibcode": "2020A&A...635A.134D",
+     "year": "2020",
+     "title": "Studying the ISM at \u223c10 pc scale in NGC 7793 with MUSE. I. Data description and properties of the ionised gas"
+    },
+    {
+     "bibcode": "2021AJ....162..152D",
+     "year": "2021",
+     "title": "New Blue and Red Variable Stars in NGC 247"
+    },
+    {
+     "bibcode": "2026A&A...709A.218M",
+     "year": "2026",
+     "title": "A machine-learning photometric classifier for massive stars in nearby galaxies: II. The catalog"
+    },
+    {
+     "bibcode": "2026A&A...711A.206O",
+     "year": "2026",
+     "title": "Physical characterization of the local system NGC 1313: A flattening in its chemical abundance by past interactions"
+    },
+    {
+     "bibcode": "2026Univ...12..229H",
+     "year": "2026",
+     "title": "The Complex Upper HR Diagram-Redux: The Low-Metallicity Galaxies"
+    },
+    {
+     "bibcode": "2025arXiv250706970P",
+     "year": "2025",
+     "title": "Giants, Supergiants and Hypergiants"
+    },
+    {
+     "bibcode": "2024ApJ...977..217K",
+     "year": "2024",
+     "title": "The Hubble Constant Anchor Galaxy NGC 4258: Metallicity and Distance from Blue Supergiants"
+    },
+    {
+     "bibcode": "2023arXiv230804891B",
+     "year": "2023",
+     "title": "Introducing the ASSESS project: Episodic Mass Loss in Evolved Massive Stars -- Key to Understanding the Explosive Early Universe"
+    },
+    {
+     "bibcode": "2012RvMP...84...25M",
+     "year": "2012",
+     "title": "Rotating massive stars: From first stars to gamma ray bursts"
+    },
+    {
+     "bibcode": "2021AstBu..76....6F",
+     "year": "2021",
+     "title": "Ultraluminous X-Ray Sources"
+    },
+    {
+     "bibcode": "2010MNRAS.404...42B",
+     "year": "2010",
+     "title": "In-depth studies of the NGC253 ULXs with XMM-Newton: remarkable variability in ULX1, and evidence for extended coronae"
+    },
+    {
+     "bibcode": "2009A&A...502.1015G",
+     "year": "2009",
+     "title": "The young stellar population of IC 1613. I. A new catalogue of OB associations"
+    },
+    {
+     "bibcode": "2025A&A...695A.226T",
+     "year": "2025",
+     "title": "Hertzsprung gap stars in nearby galaxies and the quest for luminous red nova progenitors"
+    },
+    {
+     "bibcode": "1988MNRAS.234..703W",
+     "year": "1988",
+     "title": "An investigation into the properties of a subgroup of southern galaxies detected by the IRAS survey."
+    },
+    {
+     "bibcode": "2024A&A...689A..46D",
+     "year": "2024",
+     "title": "Investigating episodic mass loss in evolved massive stars: II. Physical properties of red supergiants at subsolar metallicity"
+    },
+    {
+     "bibcode": "1998ARA&A..36..435M",
+     "year": "1998",
+     "title": "Dwarf Galaxies of the Local Group"
+    },
+    {
+     "bibcode": "2026arXiv260501022T",
+     "year": "2026",
+     "title": "Millimeter-wave Detections of Symbiotic Stars in SPT and ACT Data"
+    },
+    {
+     "bibcode": "2005A&A...442..443H",
+     "year": "2005",
+     "title": "Physical conditions in the dwarf local irregular galaxy IC 10. I. Diffuse ionized gas"
+    },
+    {
+     "bibcode": "2019arXiv190601657R",
+     "year": "2019",
+     "title": "BlueMUSE: Project Overview and Science Cases"
+    },
+    {
+     "bibcode": "2022ApJ...932...29L",
+     "year": "2022",
+     "title": "A Spectroscopic Study of Blue Supergiant Stars in Local Group Spiral Galaxies: Andromeda and Triangulum"
+    },
+    {
+     "bibcode": "2009IAUS..256..373C",
+     "year": "2009",
+     "title": "Pulsating variable stars in the Magellanic Clouds"
+    },
+    {
+     "bibcode": "2003AJ....125..593S",
+     "year": "2003",
+     "title": "Star Formation in Sculptor Group Dwarf Irregular Galaxies and the Nature of ``Transition'' Galaxies"
+    },
+    {
+     "bibcode": "1990ApJ...363..142G",
+     "year": "1990",
+     "title": "Nitrogen in Irregular Galaxies"
+    },
+    {
+     "bibcode": "1986AJ.....92...48C",
+     "year": "1986",
+     "title": "Studies of massive stars in the Magellanic Clouds. I. New spectral classifications of OB types in the LMC."
+    },
+    {
+     "bibcode": "1997ARA&A..35..217W",
+     "year": "1997",
+     "title": "High-Velocity Clouds"
+    },
+    {
+     "bibcode": "2024A&A...682A..94B",
+     "year": "2024",
+     "title": "Examining the nature of the ultraluminous X-ray source Holmberg II X-1"
+    },
+    {
+     "bibcode": "1970AJ.....75.1155T",
+     "year": "1970",
+     "title": "Radio Emission from Small Galactic Nebulae"
+    },
+    {
+     "bibcode": "2009MNRAS.397.1836G",
+     "year": "2009",
+     "title": "The ultraluminous state"
+    },
+    {
+     "bibcode": "2020ARA&A..58..257G",
+     "year": "2020",
+     "title": "Intermediate-Mass Black Holes"
+    },
+    {
+     "bibcode": "2025Galax..13...66B",
+     "year": "2025",
+     "title": "Red Supergiants in the Milky Way and Nearby Galaxies"
+    },
+    {
+     "bibcode": "2017PASP..129h2001P",
+     "year": "2017",
+     "title": "Nebular Spectroscopy: A Guide on Hii Regions and Planetary Nebulae"
+    },
+    {
+     "bibcode": "2018acps.confE..38A",
+     "year": "2018",
+     "title": "Ultraluminous X-ray Sources"
+    },
+    {
+     "bibcode": "2024SPIE13096E..22R",
+     "year": "2024",
+     "title": "The Blue Multi Unit Spectroscopic Explorer (BlueMUSE) on the VLT: science drivers and overview of instrument design"
+    },
+    {
+     "bibcode": "1983ApJ...275..578M",
+     "year": "1983",
+     "title": "IUE observations of the exciting stars of giant HII regions in M 33 :supermassive stars ?"
+    },
+    {
+     "bibcode": "1997ApJ...483..666G",
+     "year": "1997",
+     "title": "Optical Spectroscopy of Diffuse Ionized Gas in M31"
+    }
+   ]
+  },
+  "full:\"NGC 55\" full:(\"mid-infrared variable\" OR \"infrared variable\" OR SPIRITS OR fading)": {
+   "n": 463,
+   "docs": [
+    {
+     "bibcode": "2014MNRAS.443.1281K",
+     "year": "2014",
+     "title": "KK258, a new transition dwarf galaxy neighbouring the Local Group"
+    },
+    {
+     "bibcode": "1974MNRAS.169..357P",
+     "year": "1974",
+     "title": "Broadband optical and infrared observations of Seyfert galaxies."
+    },
+    {
+     "bibcode": "1998ARA&A..36..435M",
+     "year": "1998",
+     "title": "Dwarf Galaxies of the Local Group"
+    },
+    {
+     "bibcode": "2007AJ....133.2020A",
+     "year": "2007",
+     "title": "The 2004-2006 Outburst and Environment of V1647 Ori"
+    },
+    {
+     "bibcode": "2000A&A...358..471F",
+     "year": "2000",
+     "title": "The elliptical galaxy formerly known as the Local Group: merging the globular cluster systems"
+    },
+    {
+     "bibcode": "2021AJ....162..152D",
+     "year": "2021",
+     "title": "New Blue and Red Variable Stars in NGC 247"
+    },
+    {
+     "bibcode": "2005ApJ...618..569M",
+     "year": "2005",
+     "title": "On the Maximum Luminosity of Galaxies and Their Central Black Holes: Feedback from Momentum-driven Winds"
+    },
+    {
+     "bibcode": "2023NewAR..9601672K",
+     "year": "2023",
+     "title": "Ultraluminous X-ray sources"
+    },
+    {
+     "bibcode": "2023arXiv230200006P",
+     "year": "2023",
+     "title": "Ultra-luminous X-ray sources: extreme accretion and feedback"
+    },
+    {
+     "bibcode": "1992PrOce..29..283M",
+     "year": "1992",
+     "title": "Recirculating components to the deep boundary current of the northern North Atlantic"
+    },
+    {
+     "bibcode": "2020JCAP...12..046N",
+     "year": "2020",
+     "title": "The Atacama Cosmology Telescope: arcminute-resolution maps of 18 000 square degrees of the microwave sky from ACT 2008-2018 data combined wi"
+    },
+    {
+     "bibcode": "2026MNRAS.549ag936K",
+     "year": "2026",
+     "title": "Significant or not? The impact of randomization during data reduction on confirming a new pulsating ultraluminous X-ray source candidate in "
+    },
+    {
+     "bibcode": "1990AJ....100.1523S",
+     "year": "1990",
+     "title": "CO Deficiency in LSB Galaxies. Clues to Their Star-Formation History"
+    },
+    {
+     "bibcode": "2004astro.ph..8432A",
+     "year": "2004",
+     "title": "The 2004--2006 outburst and environment of V1647 Ori"
+    },
+    {
+     "bibcode": "1986JATP...48..131H",
+     "year": "1986",
+     "title": "Absolute reflectivities and aspect sensitivities of VHF radio wave scatterers measured with the SOUSY radar"
+    },
+    {
+     "bibcode": "2020ARA&A..58..257G",
+     "year": "2020",
+     "title": "Intermediate-Mass Black Holes"
+    },
+    {
+     "bibcode": "2006AJ....132.2539S",
+     "year": "2006",
+     "title": "Clues to Nuclear Star Cluster Formation from Edge-on Spirals"
+    },
+    {
+     "bibcode": "2016MNRAS.456.1859U",
+     "year": "2016",
+     "title": "Optically thick outflows in ultraluminous supersoft sources"
+    },
+    {
+     "bibcode": "2017MNRAS.472.4832W",
+     "year": "2017",
+     "title": "A deep Parkes H I survey of the Sculptor group and filament: H I mass function and environment"
+    },
+    {
+     "bibcode": "2013milc.conf..211L",
+     "year": "2013",
+     "title": "Predictive ACM Margin for DVB-S2 Modems and EPM IP Modem 21e for the Ka and EHF Bands"
+    },
+    {
+     "bibcode": "2017MNRAS.467.3751B",
+     "year": "2017",
+     "title": "Redshift, metallicity and size of two extended dwarf Irregular galaxies: a link between dwarf Irregulars and ultra diffuse galaxies?"
+    },
+    {
+     "bibcode": "2022arXiv220902097A",
+     "year": "2022",
+     "title": "On the thermal properties of knotted block copolymer rings"
+    },
+    {
+     "bibcode": "1936ApJ....84..517H",
+     "year": "1936",
+     "title": "Effects of Red Shifts on the Distribution of Nebulae"
+    },
+    {
+     "bibcode": "2016ApJ...831...56U",
+     "year": "2016",
+     "title": "Two Eclipsing Ultraluminous X-Ray Sources in M51"
+    },
+    {
+     "bibcode": "1990ApJ...363..142G",
+     "year": "1990",
+     "title": "Nitrogen in Irregular Galaxies"
+    },
+    {
+     "bibcode": "2007ApJ...671..310G",
+     "year": "2007",
+     "title": "The Nature of Nearby Counterparts to Intermediate-Redshift Luminous Compact Blue Galaxies. III. Interferometric Observations of Neutral Atom"
+    },
+    {
+     "bibcode": "2010AJ....139.1178N",
+     "year": "2010",
+     "title": "Nearby Spiral Galaxy Globular Cluster Systems. II. Globular Cluster Metallicities in NGC 300"
+    },
+    {
+     "bibcode": "2022MNRAS.511..572O",
+     "year": "2022",
+     "title": "Ultraluminous high-redshift quasars from SkyMapper - II. New quasars and the bright end of the luminosity function"
+    },
+    {
+     "bibcode": "2005ApJ...621..227M",
+     "year": "2005",
+     "title": "Mapping Large-Scale Gaseous Outflows in Ultraluminous Galaxies with Keck II ESI Spectra: Variations in Outflow Velocity with Galactic Mass"
+    },
+    {
+     "bibcode": "2015ApJS..217...32B",
+     "year": "2015",
+     "title": "A Classical Morphological Analysis of Galaxies in the Spitzer Survey of Stellar Structure in Galaxies (S4G)"
+    },
+    {
+     "bibcode": "2016arXiv160802830P",
+     "year": "2016",
+     "title": "Hybrid Beamforming for Large Antenna Arrays with Phase Shifter Selection"
+    },
+    {
+     "bibcode": "2005AJ....130.2058B",
+     "year": "2005",
+     "title": "Detection of Neutral Hydrogen in Early-Type Dwarf Galaxies of the Sculptor Group"
+    },
+    {
+     "bibcode": "2002MNRAS.330..772O",
+     "year": "2002",
+     "title": "A search for radio emission from Galactic supersoft X-ray sources"
+    },
+    {
+     "bibcode": "1996MNRAS.283...18D",
+     "year": "1996",
+     "title": "HI observations of low surface brightness galaxies: probing low-density galaxies"
+    },
+    {
+     "bibcode": "2007ApJS..173..538T",
+     "year": "2007",
+     "title": "A Search for Extended Ultraviolet Disk (XUV-Disk) Galaxies in the Local Universe"
+    },
+    {
+     "bibcode": "1994E&PSL.121...81P",
+     "year": "1994",
+     "title": "Magnetostratigraphic, lithostratigraphic and tephrostratigraphic constraints on Lower and Middle Pleistocene sea-level changes, Wanganui Bas"
+    },
+    {
+     "bibcode": "2001A&A...369..339P",
+     "year": "2001",
+     "title": "GAIA: Composition, formation and evolution of the Galaxy"
+    },
+    {
+     "bibcode": "2008JGRC..113.5027J",
+     "year": "2008",
+     "title": "Quantifying Antarctic Bottom Water and North Atlantic Deep Water volumes"
+    },
+    {
+     "bibcode": "2010Ap&SS.330..123D",
+     "year": "2010",
+     "title": "Supernova remnants, planetary nebulae and the distance to NGC 4214"
+    },
+    {
+     "bibcode": "2003AJ....125.2455U",
+     "year": "2003",
+     "title": "H I Imaging Observations of Superthin Galaxies. I. UGC 7321"
+    },
+    {
+     "bibcode": "2017ASSL..434...31C",
+     "year": "2017",
+     "title": "Resolved Stellar Populations as Tracers of Outskirts"
+    },
+    {
+     "bibcode": "2021GeoRL..4893611K",
+     "year": "2021",
+     "title": "On the Generation of Pi2 Pulsations due to Plasma Flow Patterns Around Magnetosheath Jets"
+    },
+    {
+     "bibcode": "1989ApJ...338..789C",
+     "year": "1989",
+     "title": "Star Formation in NGC 5253"
+    },
+    {
+     "bibcode": "1990Tectp.178...29V",
+     "year": "1990",
+     "title": "The Horn Graben, and its relationship to the Oslo Graben and the Danish Basin"
+    },
+    {
+     "bibcode": "2016arXiv161006892W",
+     "year": "2016",
+     "title": "The Deep and Transient Universe in the SVOM Era: New Challenges and Opportunities - Scientific prospects of the SVOM mission"
+    },
+    {
+     "bibcode": "2002Ap&SS.280..165T",
+     "year": "2002",
+     "title": "GAIA and the Extragalactic Distance Scale"
+    },
+    {
+     "bibcode": "2014arXiv1401.4791L",
+     "year": "2014",
+     "title": "Studies of Radio Galaxies and Starburst Galaxies using Wide-field, High Spatial Resolution Radio Imaging"
+    },
+    {
+     "bibcode": "2000PASP..112.1300L",
+     "year": "2000",
+     "title": "Detecting Dark Matter in High-Velocity Clouds"
+    },
+    {
+     "bibcode": "1990E&PSL.101..332D",
+     "year": "1990",
+     "title": "Paleomagnetism of Middle Proterozoic (1.01 to 1.08 Ga) mafic dykes in southeastern Bahia State\u2014S\u00e3o Francisco Craton, Brazil"
+    },
+    {
+     "bibcode": "2015A&A...575A.126B",
+     "year": "2015",
+     "title": "The StEllar Counterparts of COmpact high velocity clouds (SECCO) survey. I. Photos of ghosts"
+    },
+    {
+     "bibcode": "1993RPPh...56..173S",
+     "year": "1993",
+     "title": "Dynamics of barred galaxies"
+    },
+    {
+     "bibcode": "2026arXiv260501022T",
+     "year": "2026",
+     "title": "Millimeter-wave Detections of Symbiotic Stars in SPT and ACT Data"
+    },
+    {
+     "bibcode": "2025GmGe...20..261A",
+     "year": "2025",
+     "title": "Geotechnical performance of X-section cast-in-place concrete piles under torsion loads in clay soil \u2500 numerical study"
+    },
+    {
+     "bibcode": "1998PhRvA..57.1338L",
+     "year": "1998",
+     "title": "Electromagnetically induced grating: Homogeneously broadened medium"
+    },
+    {
+     "bibcode": "2025arXiv250714019L",
+     "year": "2025",
+     "title": "On the importance of tail assumptions in climate extreme event attribution"
+    },
+    {
+     "bibcode": "1989Tectp.157..149K",
+     "year": "1989",
+     "title": "K-Ar geochronology of different tectonic units at the northwestern margin of the Bohemian Massif"
+    },
+    {
+     "bibcode": "2019arXiv191003797M",
+     "year": "2019",
+     "title": "Predicting the next local supernova"
+    },
+    {
+     "bibcode": "2016arXiv160205548P",
+     "year": "2016",
+     "title": "Energy-Efficient Resource Allocation Optimization for Multimedia Heterogeneous Cloud Radio Access Networks"
+    },
+    {
+     "bibcode": "1996Litho..38..233D",
+     "year": "1996",
+     "title": "Mixing between granitic and dioritic crystal mushes, Guernsey, Channel Islands, UK"
+    },
+    {
+     "bibcode": "1990RPPh...53..837K",
+     "year": "1990",
+     "title": "REVIEW: Physics of white dwarf stars"
+    }
+   ]
+  },
+  "full:\"NGC 55\" full:(WISE OR NEOWISE OR Spitzer) full:(variable OR dimming)": {
+   "n": 515,
+   "docs": [
+    {
+     "bibcode": "1996AJ....112.2567F",
+     "year": "1996",
+     "title": "The Spectacular Ionized Interstellar Medium of NGC 55"
+    },
+    {
+     "bibcode": "2019AJ....158...90D",
+     "year": "2019",
+     "title": "Changes: The Past, Present, and Future of the Nearby Dwarf Galaxy NGC 55"
+    },
+    {
+     "bibcode": "2016ApJ...829...70K",
+     "year": "2016",
+     "title": "A Spectroscopic Study of Blue Supergiant Stars in the Sculptor Galaxy NGC 55: Chemical Evolution and Distance"
+    },
+    {
+     "bibcode": "2006MNRAS.370...25S",
+     "year": "2006",
+     "title": "The X-ray properties of the dwarf Magellanic-type galaxy NGC 55"
+    },
+    {
+     "bibcode": "2005ApJ...622..279D",
+     "year": "2005",
+     "title": "The Disk and Extraplanar Regions of NGC 55"
+    },
+    {
+     "bibcode": "2020MNRAS.493.5369P",
+     "year": "2020",
+     "title": "Vertical distribution of HMXBs in NGC 55: constraining their centre-of-mass velocity"
+    },
+    {
+     "bibcode": "2010ApJ...724..215H",
+     "year": "2010",
+     "title": "Spatially Resolved Polycyclic Aromatic Hydrocarbon Emission Features in Nearby, Low Metallicity, Star-forming Galaxies"
+    },
+    {
+     "bibcode": "2016A&A...587A.121W",
+     "year": "2016",
+     "title": "Spitzer mid-infrared point sources in the fields of nearby galaxies"
+    },
+    {
+     "bibcode": "2024A&A...686A..77B",
+     "year": "2024",
+     "title": "Investigating episodic mass loss in evolved massive stars. I. Spectroscopy of dusty massive stars in ten southern galaxies"
+    },
+    {
+     "bibcode": "2006ApJ...646..192J",
+     "year": "2006",
+     "title": "Hot Dust and Polycyclic Aromatic Hydrocarbon Emission at Low Metallicity: A Spitzer Survey of Local Group and Other Nearby Dwarf Galaxies"
+    },
+    {
+     "bibcode": "2024ApJ...967...22L",
+     "year": "2024",
+     "title": "Resolved Near-infrared Stellar Photometry from the Magellan Telescope for 13 Nearby Galaxies: J-region Asymptotic Giant Branch Method Distan"
+    },
+    {
+     "bibcode": "2023Galax..11...79M",
+     "year": "2023",
+     "title": "Discovering New B[e] Supergiants and Candidate Luminous Blue Variables in Nearby Galaxies"
+    },
+    {
+     "bibcode": "2005AJ....130.1574S",
+     "year": "2005",
+     "title": "A Study of Edge-On Galaxies with the Hubble Space Telescope Advanced Camera for Surveys. II. Vertical Distribution of the Resolved Stellar P"
+    },
+    {
+     "bibcode": "2017JGRC..122.2441M",
+     "year": "2017",
+     "title": "Temperature flux carried by individual eddies across 47\u00b0N in the Atlantic Ocean"
+    },
+    {
+     "bibcode": "2024FrEaS..1227783M",
+     "year": "2024",
+     "title": "Recent progress in atmospheric modeling over the Andes - part I: review of atmospheric processes"
+    },
+    {
+     "bibcode": "2019JGRC..124.5565M",
+     "year": "2019",
+     "title": "Heat and Freshwater Transport by Mesoscale Eddies in the Southern Subpolar North Atlantic"
+    },
+    {
+     "bibcode": "2020JHydX...800061M",
+     "year": "2020",
+     "title": "Spatiotemporal variability of summer precipitation and precipitation extremes and associated large-scale mechanisms in Central Asia during 1"
+    },
+    {
+     "bibcode": "2018MNRAS.478...50K",
+     "year": "2018",
+     "title": "GHASP: an H \u03b1 kinematical survey of spiral galaxies - XI. Distribution of luminous and dark matter in spiral and irregular nearby galaxies u"
+    },
+    {
+     "bibcode": "2006ApJ...652..283B",
+     "year": "2006",
+     "title": "The Spectral Energy Distribution of Dust Emission in the Edge-on Spiral Galaxy NGC 4631 as Seen with Spitzer and the James Clerk Maxwell Tel"
+    },
+    {
+     "bibcode": "2013EGUGA..15.6848T",
+     "year": "2013",
+     "title": "Improvement of climatic mean state and variability over the western North Pacific by better representing oceanic fronts in a nested regional"
+    },
+    {
+     "bibcode": "2025Galax..13...66B",
+     "year": "2025",
+     "title": "Red Supergiants in the Milky Way and Nearby Galaxies"
+    },
+    {
+     "bibcode": "2010ApJS..190..147B",
+     "year": "2010",
+     "title": "Mid-infrared Galaxy Morphology from the Spitzer Survey of Stellar Structure in Galaxies (S<SUP>4</SUP>G): The Imprint of the De Vaucouleurs "
+    },
+    {
+     "bibcode": "2015ApJS..217...32B",
+     "year": "2015",
+     "title": "A Classical Morphological Analysis of Galaxies in the Spitzer Survey of Stellar Structure in Galaxies (S4G)"
+    },
+    {
+     "bibcode": "2024A&A...689A..46D",
+     "year": "2024",
+     "title": "Investigating episodic mass loss in evolved massive stars: II. Physical properties of red supergiants at subsolar metallicity"
+    },
+    {
+     "bibcode": "2006ApJ...652.1170C",
+     "year": "2006",
+     "title": "The Nature of Infrared Emission in the Local Group Dwarf Galaxy NGC 6822 as Revealed by Spitzer"
+    },
+    {
+     "bibcode": "2024ApJ...965L..17S",
+     "year": "2024",
+     "title": "Discovery of the Longest-period Classical Cepheid in the Milky Way"
+    },
+    {
+     "bibcode": "2013ApJ...774..126M",
+     "year": "2013",
+     "title": "Dusty Winds: Extraplanar Polycyclic Aromatic Hydrocarbon Features of Nearby Galaxies"
+    },
+    {
+     "bibcode": "2018PASA...35...15Y",
+     "year": "2018",
+     "title": "A Multi-Frequency Study of the Milky Way-Like Spiral Galaxy NGC 6744"
+    },
+    {
+     "bibcode": "2007ApJ...661..102W",
+     "year": "2007",
+     "title": "Dust and Atomic Gas in Dwarf Irregular Galaxies of the M81 Group: The SINGS and THINGS View"
+    },
+    {
+     "bibcode": "2023MNRAS.521.3384E",
+     "year": "2023",
+     "title": "The VST ATLAS quasar survey I: Catalogue of photometrically selected quasar candidates"
+    },
+    {
+     "bibcode": "2007AJ....134.2226H",
+     "year": "2007",
+     "title": "The Opacity of Spiral Galaxy Disks. VIII. Structure of the Cold ISM"
+    },
+    {
+     "bibcode": "2007AJ....134.1655H",
+     "year": "2007",
+     "title": "Gaps in the Cloud Cover? Comparing Extinction Measures in Spiral Disks"
+    },
+    {
+     "bibcode": "2015MNRAS.450.3935L",
+     "year": "2015",
+     "title": "H I observations of the nearest starburst galaxy NGC 253 with the SKA precursor KAT-7"
+    },
+    {
+     "bibcode": "2026A&A...709A.218M",
+     "year": "2026",
+     "title": "A machine-learning photometric classifier for massive stars in nearby galaxies: II. The catalog"
+    },
+    {
+     "bibcode": "2026arXiv260501022T",
+     "year": "2026",
+     "title": "Millimeter-wave Detections of Symbiotic Stars in SPT and ACT Data"
+    },
+    {
+     "bibcode": "2025ApJ...990...16S",
+     "year": "2025",
+     "title": "The Complex Multiwavelength Morphology of the Peculiar Compact Galaxy Group IC 2431"
+    },
+    {
+     "bibcode": "2020ApJS..247...25B",
+     "year": "2020",
+     "title": "The SPTpol Extended Cluster Survey"
+    },
+    {
+     "bibcode": "2025A&A...698A.279D",
+     "year": "2025",
+     "title": "Investigating episodic mass loss in evolved massive stars: III. Spectroscopy of dusty massive stars in three northern galaxies"
+    },
+    {
+     "bibcode": "2021AJ....162..152D",
+     "year": "2021",
+     "title": "New Blue and Red Variable Stars in NGC 247"
+    },
+    {
+     "bibcode": "2025arXiv250301117Y",
+     "year": "2025",
+     "title": "Gulf Stream contribution to recent North Pacific warming"
+    },
+    {
+     "bibcode": "2015arXiv150404082L",
+     "year": "2015",
+     "title": "HI observations of the nearest starburst galaxy NGC 253 with the SKA precursor KAT-7"
+    },
+    {
+     "bibcode": "2024ClDy...6210247F",
+     "year": "2024",
+     "title": "Antarctic warming induced South Atlantic warming effect on the heatwaves in East Asia in 2022"
+    },
+    {
+     "bibcode": "2007AJ....133.2020A",
+     "year": "2007",
+     "title": "The 2004-2006 Outburst and Environment of V1647 Ori"
+    },
+    {
+     "bibcode": "2022MNRAS.511..572O",
+     "year": "2022",
+     "title": "Ultraluminous high-redshift quasars from SkyMapper - II. New quasars and the bright end of the luminosity function"
+    },
+    {
+     "bibcode": "2020JCAP...12..046N",
+     "year": "2020",
+     "title": "The Atacama Cosmology Telescope: arcminute-resolution maps of 18 000 square degrees of the microwave sky from ACT 2008-2018 data combined wi"
+    },
+    {
+     "bibcode": "2013arXiv1307.6216M",
+     "year": "2013",
+     "title": "Dusty Winds: Extraplanar PAH Features of Nearby Galaxies"
+    },
+    {
+     "bibcode": "2011MNRAS.410.2217W",
+     "year": "2011",
+     "title": "Gas and dark matter in the Sculptor group: NGC 300"
+    },
+    {
+     "bibcode": "2025Galax..13...49M",
+     "year": "2025",
+     "title": "Symbiotic Stars in the Era of Modern Ground- and Space-Based Surveys"
+    },
+    {
+     "bibcode": "2025ApJ...984....3Z",
+     "year": "2025",
+     "title": "Upper Limits on the Gamma-Ray Emission from the Microquasar V4641 Sgr"
+    },
+    {
+     "bibcode": "1994sitf.rept......",
+     "year": "1994",
+     "title": "On the Space Infrared Telescope Facility and the Stratospheric Observatory for Infrared Astronomy: Letter Report"
+    },
+    {
+     "bibcode": "1991JMS.....1..229B",
+     "year": "1991",
+     "title": "A note on Bjerkne's hypothesis for North Atlantic variability"
+    },
+    {
+     "bibcode": "2009IAUS..256..373C",
+     "year": "2009",
+     "title": "Pulsating variable stars in the Magellanic Clouds"
+    },
+    {
+     "bibcode": "2026A&A...707A.116S",
+     "year": "2026",
+     "title": "A constant upper luminosity limit of cool supergiant stars down to the extremely low metallicity of I Zw 18"
+    },
+    {
+     "bibcode": "2022A&A...668A..92W",
+     "year": "2022",
+     "title": "Quantitative spectroscopy of B-type supergiants"
+    },
+    {
+     "bibcode": "2023MNRAS.522.1377S",
+     "year": "2023",
+     "title": "The largest bright ULX population in a galaxy: X-ray variability and luminosity function in the Cartwheel ring galaxy"
+    },
+    {
+     "bibcode": "1994GeCoA..58.1303W",
+     "year": "1994",
+     "title": "Oxygen isotope compositions of sinistral Neogloboquadrina pachyderma tests in surface sediments: North Atlantic Ocean"
+    },
+    {
+     "bibcode": "2012AJ....144....4M",
+     "year": "2012",
+     "title": "The Observed Properties of Dwarf Galaxies in and around the Local Group"
+    },
+    {
+     "bibcode": "2024ClDy...62.8169W",
+     "year": "2024",
+     "title": "A new dipole index for the North Pacific Victoria mode"
+    },
+    {
+     "bibcode": "2013arXiv1301.2718M",
+     "year": "2013",
+     "title": "ICORE: Image Co-addition with Optional Resolution Enhancement"
+    },
+    {
+     "bibcode": "2019NatSR...916493Y",
+     "year": "2019",
+     "title": "Impacts of Physical and Biological Processes on Spatial and Temporal Variability of Particulate Organic Carbon in the North Pacific Ocean du"
+    }
+   ]
+  }
+ }
+}
