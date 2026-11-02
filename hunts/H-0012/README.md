@@ -545,3 +545,9 @@ Filed by Alan Shortz (Oddsky) through the TNS web form from the validated draft 
 https://www.wis-tns.org/object/2020afkm (TNS ID 224693, internal name "Oddsky OS-0030", AT type Other - Undefined, HST position
 10:25:09.894 +17:09:49.60 +- 0.1", discovery 2020-11-23 16:30:29 UT, W1 17.99 / W2 17.67 AB, last non-detection 2020-04-28
 W1 > 19.92 AB, summary figure attached). A cone search after filing shows only AT 2020afkm and SN 2012A within 60".
+
+## AstroNote 2026-308 (2026-11-02)
+
+The AT 2020afkm write-up was published as TNS AstroNote 2026-308: https://www.wis-tns.org/astronotes/astronote/2026-308
+(approved by Alan; text in `drafts/astronote_AT2020afkm.md`, PDF `drafts/AstroNote_AT2020afkm.pdf`, Google Doc in the
+alan@oddsky.ai Drive). Attached: the PDF and Figures 1-4 (Figure 2 cropped to the light curves).

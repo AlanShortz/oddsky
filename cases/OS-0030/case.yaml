@@ -109,6 +109,15 @@ claims:
   calls: []
   author: claude-opus-5.5
   at: '2026-11-02T19:57:10+00:00'
+- id: C11
+  text: 'Published as TNS AstroNote 2026-308 on 2026-11-02 (https://www.wis-tns.org/astronotes/astronote/2026-308):
+    ''AT 2020afkm: a dust-obscured infrared transient in NGC 3239 found in archival WISE data, with a
+    fading Hubble counterpart and a JWST dust remnant'', A. Shortz (Oddsky), with the full note as a PDF
+    and Figures 1-4 attached.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T20:23:40+00:00'
 hypotheses:
 - id: H1
   klass: eruptive
