@@ -76,6 +76,16 @@ claims:
   calls: []
   author: claude-opus-5.5
   at: '2026-11-02T01:26:37+00:00'
+- id: C8
+  text: 'ADS full text (2026-11-01, hunts/H-0012/work/ads_novelty.json): none of the 67 WISE/NEOWISE transient
+    papers by De et al. and the SPIRITS papers mentions NGC 3239; the 59 papers mentioning NGC 3239 (or
+    Arp 263, UGC 5637) with transient/infrared terms since 2020 are galaxy, ISM and morphology studies
+    and the SN 2012A progenitor-disappearance study, none reporting a 2020 transient; coordinate searches
+    find only unrelated papers. Apparently unreported.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T03:55:18+00:00'
 hypotheses:
 - id: H1
   klass: eruptive

@@ -1,0 +1,952 @@
+{
+ "OS-0030 NGC 3239": {
+  "NGC 3239": {
+   "numFound": 45,
+   "docs": [
+    {
+     "bibcode": "2026ApJ..1008...35P",
+     "title": [
+      "Mid-infrared Colors Vary with Galactic Environment: Contrasting Star-forming Disks, Young Centers, and Quiescent Star-formation Deserts"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026A&A...713A.155E",
+     "title": [
+      "A steep mass transition for bar-driven interstellar medium structuring revealed by PHANGS-JWST"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260722404K",
+     "title": [
+      "4th TDAMM Workshop White Paper"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260704916M",
+     "title": [
+      "HRMOS: A High-Resolution Multi-Object Spectrograph for the VLT"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026OJAp....960562S",
+     "title": [
+      "statmorph-lsst: Quantifying and correcting morphological biases in galaxy surveys"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260329584K",
+     "title": [
+      "StarHash: unique, memorable, and deterministic names for astronomical objects"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026OJAp....955863A",
+     "title": [
+      "The Atacama Cosmology Telescope: DR6 Sunyaev-Zel'dovich Selected Galaxy Clusters Catalog"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2025arXiv251224350D",
+     "title": [
+      "Self-Gravitating Scalar Field Configurations, Ultra Light Dark Matter and Galactic Scale Observations"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025ApJ...992L...7S",
+     "title": [
+      "Characterization of Two Cool Galaxy Outflow Candidates Using Mid-infrared Emission from Polycyclic Aromatic Hydrocarbons"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025arXiv250702162F",
+     "title": [
+      "Dangerous Questions in Astronomy Education"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025PhDT........53G",
+     "title": [
+      "Multiplicity of stellar systems in the solar neighbourhood, wide binaries, and planet-hosting stars"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025AJ....169..247F",
+     "title": [
+      "I-band Asymptotic Giant Branch (IAGB) Stars. II. A First Estimate of Their Precision and a Differential Zero Point"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025PASJ...77..288Y",
+     "title": [
+      "Quantitative analysis of the molecular gas morphology in nearby disk galaxies"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025PASJ...77..219U",
+     "title": [
+      "Smart Kanata: A framework for autonomous decision-making in rapid follow-up observations of cataclysmic variables"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025arXiv250321120J",
+     "title": [
+      "Comparison of Different Methods to Determine the Distance to LMC"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025AJ....169..150C",
+     "title": [
+      "The PHANGS-HST-H\u03b1 Survey: Warm Ionized Gas Physics at High Angular Resolution in Nearby Galaxies with the Hubble Space Telescope"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025IJSEB..15....1C",
+     "title": [
+      "3D printing for teaching and exploration in astronomy for individuals with blindness/visual impairment: textured representations of imagery"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2024NewAR..9901696C",
+     "title": [
+      "How Gaia sheds light on the Milky Way star cluster population"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2024Bioch...6...53L",
+     "title": [
+      "Biochar soil addition alters ant functional traits as exemplified with three species"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2024arXiv241206412W",
+     "title": [
+      "StarWhisper Telescope: An AI framework for automating end-to-end astronomical observations"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2024arXiv241204386H",
+     "title": [
+      "The Red Supergiant Problem: As Seen from the Local Group's Red Supergiant Populations"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2024arXiv241104793A",
+     "title": [
+      "Rubin ToO 2024: Envisioning the Vera C. Rubin Observatory LSST Target of Opportunity program"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2024ApJ...971...87B",
+     "title": [
+      "CHAOS. VIII. Far-ultraviolet Spectra of M101 and the Impact of Wolf\u2500Rayet Stars"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2024MNRAS.531..230G",
+     "title": [
+      "Repainting the colour-mass diagrams by unearthing the green mountain: dust-rich S0 galaxies in the colour-(galaxy stellar mass) diagram, and the colour-(black hole mass) relations for dust-poor versus dust-rich galaxies"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2024arXiv240517989B",
+     "title": [
+      "Extraction of Physical Properties of Interstellar Medium from the Observed Line Profiles"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2024PASP..136c3001C",
+     "title": [
+      "TONGS: A Treasury of Nearby Galaxy Surveys"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2024MNRAS.528..294Z",
+     "title": [
+      "Long-slit spectral study of the unusual post-interacting galaxy Arp 263"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2024Ciel...86..103M",
+     "title": [
+      "L'astronomie dans le monde"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2023ApJS..269....3M",
+     "title": [
+      "Siena Galaxy Atlas 2020"
+     ],
+     "year": "2023"
+    },
+    {
+     "bibcode": "2023arXiv231110617P",
+     "title": [
+      "Astronomical Images Quality Assessment with Automated Machine Learning"
+     ],
+     "year": "2023"
+    },
+    {
+     "bibcode": "2023ApJS..268...63M",
+     "title": [
+      "The New Swift/UVOT+MaNGA (SwiM) Value-added Catalog"
+     ],
+     "year": "2023"
+    },
+    {
+     "bibcode": "2023PhDT.........1C",
+     "title": [
+      "Astrophysical parameters of M dwarfs with exoplanets"
+     ],
+     "year": "2023"
+    },
+    {
+     "bibcode": "2023ApJ...944..110M",
+     "title": [
+      "Comparing the Locations of Supernovae to CO (2-1) Emission in Their Host Galaxies"
+     ],
+     "year": "2023"
+    },
+    {
+     "bibcode": "2023MNRAS.519..471V",
+     "title": [
+      "The disappearances of six supernova progenitors"
+     ],
+     "year": "2023"
+    },
+    {
+     "bibcode": "2022Univ....8..649F",
+     "title": [
+      "Probing the Low-Mass End of the Black Hole Mass Function via a Study of Faint Local Spiral Galaxies"
+     ],
+     "year": "2022"
+    },
+    {
+     "bibcode": "2022arXiv220805756S",
+     "title": [
+      "Physics And Chemistry Of Star Forming Region And Protoplanetary Disk"
+     ],
+     "year": "2022"
+    },
+    {
+     "bibcode": "2022Ap&SS.367...62P",
+     "title": [
+      "The <inline-formula id=\"IEq1\"><mml:math><mml:mi>\u03ba</mml:mi></mml:math></inline-formula>-model, a minimal model alternative to dark matter: application to the galactic rotation problem"
+     ],
+     "year": "2022"
+    },
+    {
+     "bibcode": "2022ilrn.conf...35C",
+     "title": [
+      "A Serious Game in Fully Immersive Virtual Reality for Teaching Astronomy Based on the Messier Catalog"
+     ],
+     "year": "2022"
+    },
+    {
+     "bibcode": "2021ApJS..257...43L",
+     "title": [
+      "PHANGS-ALMA: Arcsecond CO(2-1) Imaging of Nearby Star-forming Galaxies"
+     ],
+     "year": "2021"
+    },
+    {
+     "bibcode": "2021AJ....161..185W",
+     "title": [
+      "Applying the Tremaine-Weinberg Method to Nearby Galaxies: Stellar-mass-based Pattern Speeds and Comparisons with ISM Kinematics"
+     ],
+     "year": "2021"
+    },
+    {
+     "bibcode": "2021A&A...648A.122V",
+     "title": [
+      "Machine learning technique for morphological classification of galaxies from the SDSS. I. Photometry-based approach"
+     ],
+     "year": "2021"
+    },
+    {
+     "bibcode": "2021ApJS..252...18T",
+     "title": [
+      "Shadows in the Dark: Low-surface-brightness Galaxies Discovered in the Dark Energy Survey"
+     ],
+     "year": "2021"
+    },
+    {
+     "bibcode": "2020ApJS..251....9B",
+     "title": [
+      "FIRST Winged Radio Galaxies with X and Z Symmetry"
+     ],
+     "year": "2020"
+    },
+    {
+     "bibcode": "2020arXiv200702347V",
+     "title": [
+      "VLBI20-30: a scientific roadmap for the next decade -- The future of the European VLBI Network"
+     ],
+     "year": "2020"
+    },
+    {
+     "bibcode": "2020A&A...633A..99C",
+     "title": [
+      "Clusters and mirages: cataloguing stellar aggregates in the Milky Way"
+     ],
+     "year": "2020"
+    }
+   ]
+  },
+  "NGC3239": {
+   "numFound": 11,
+   "docs": [
+    {
+     "bibcode": "2026ApJ..1008...35P",
+     "title": [
+      "Mid-infrared Colors Vary with Galactic Environment: Contrasting Star-forming Disks, Young Centers, and Quiescent Star-formation Deserts"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026A&A...713A.155E",
+     "title": [
+      "A steep mass transition for bar-driven interstellar medium structuring revealed by PHANGS-JWST"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2025ApJ...992L...7S",
+     "title": [
+      "Characterization of Two Cool Galaxy Outflow Candidates Using Mid-infrared Emission from Polycyclic Aromatic Hydrocarbons"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025PASJ...77..288Y",
+     "title": [
+      "Quantitative analysis of the molecular gas morphology in nearby disk galaxies"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025AJ....169..150C",
+     "title": [
+      "The PHANGS-HST-H\u03b1 Survey: Warm Ionized Gas Physics at High Angular Resolution in Nearby Galaxies with the Hubble Space Telescope"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2024arXiv241204386H",
+     "title": [
+      "The Red Supergiant Problem: As Seen from the Local Group's Red Supergiant Populations"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2024MNRAS.528..294Z",
+     "title": [
+      "Long-slit spectral study of the unusual post-interacting galaxy Arp 263"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2023ApJ...944..110M",
+     "title": [
+      "Comparing the Locations of Supernovae to CO (2-1) Emission in Their Host Galaxies"
+     ],
+     "year": "2023"
+    },
+    {
+     "bibcode": "2023MNRAS.519..471V",
+     "title": [
+      "The disappearances of six supernova progenitors"
+     ],
+     "year": "2023"
+    },
+    {
+     "bibcode": "2021ApJS..257...43L",
+     "title": [
+      "PHANGS-ALMA: Arcsecond CO(2-1) Imaging of Nearby Star-forming Galaxies"
+     ],
+     "year": "2021"
+    },
+    {
+     "bibcode": "2021AJ....161..185W",
+     "title": [
+      "Applying the Tremaine-Weinberg Method to Nearby Galaxies: Stellar-mass-based Pattern Speeds and Comparisons with ISM Kinematics"
+     ],
+     "year": "2021"
+    }
+   ]
+  },
+  "Arp 263": {
+   "numFound": 2,
+   "docs": [
+    {
+     "bibcode": "2026ApJS..283...25D",
+     "title": [
+      "The Hubble Arp Galaxy Survey"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2024MNRAS.528..294Z",
+     "title": [
+      "Long-slit spectral study of the unusual post-interacting galaxy Arp 263"
+     ],
+     "year": "2024"
+    }
+   ]
+  },
+  "UGC 5637": {
+   "numFound": 14,
+   "docs": [
+    {
+     "bibcode": "2026arXiv261026571W",
+     "title": [
+      "Extending the M33 Extinction Map with Radio and Far-Infrared Gas Observations"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026A&A...711A.193S",
+     "title": [
+      "Atomic gas properties at the positions of Type Ia, II, and Ib/c supernovae"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026RNAAS..10..216O",
+     "title": [
+      "Searching in H I for Massive Low Surface Brightness Galaxies. II. Completing the UGC Sample"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026PASP..138f1001Z",
+     "title": [
+      "A Review of Machine Learning in Astronomical Plate Digitization and Survey Data"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2025A&A...702A.258D",
+     "title": [
+      "Discovery of the polar ring galaxies with deep learning"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025ApJ...990...16S",
+     "title": [
+      "The Complex Multiwavelength Morphology of the Peculiar Compact Galaxy Group IC 2431"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025arXiv250614873J",
+     "title": [
+      "The ASAS-SN Low Surface Brightness Survey I: Proof-of-Concept and Potential Applications"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2024PASP..136c3001C",
+     "title": [
+      "TONGS: A Treasury of Nearby Galaxy Surveys"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2024MNRAS.528.3613E",
+     "title": [
+      "The frequency and sizes of inner bars and nuclear rings in barred galaxies and their dependence on galaxy properties"
+     ],
+     "year": "2024"
+    },
+    {
+     "bibcode": "2023MNRAS.523.4381D",
+     "title": [
+      "Galaxy and mass assembly (GAMA): comparing visually and spectroscopically identified galaxy merger samples"
+     ],
+     "year": "2023"
+    },
+    {
+     "bibcode": "2023AJ....165..263O",
+     "title": [
+      "Searching in H I for Massive Low Surface Brightness Galaxies: Samples from HyperLeda and the UGC"
+     ],
+     "year": "2023"
+    },
+    {
+     "bibcode": "2023ApJ...943..177M",
+     "title": [
+      "HETDEX Public Source Catalog 1: 220 K Sources Including Over 50 K Ly\u03b1 Emitters from an Untargeted Wide-area Spectroscopic Survey"
+     ],
+     "year": "2023"
+    },
+    {
+     "bibcode": "2020MNRAS.496.2516M",
+     "title": [
+      "The influence of angular momentum and environment on the H I gas of late-type galaxies"
+     ],
+     "year": "2020"
+    },
+    {
+     "bibcode": "2020arXiv200702347V",
+     "title": [
+      "VLBI20-30: a scientific roadmap for the next decade -- The future of the European VLBI Network"
+     ],
+     "year": "2020"
+    }
+   ]
+  }
+ },
+ "NGC 4945 lead": {
+  "NGC 4945": {
+   "numFound": 197,
+   "docs": [
+    {
+     "bibcode": "2026MNRAS.551g1566A",
+     "title": [
+      "A multiwavelength study of ULXs in NGC 1792: a new transient ULX and candidate optical/NIR counterparts"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv261023393M",
+     "title": [
+      "Exploring Cosmic Rays from Gravity-Limited Acceleration at Supermassive Black Holes"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv261036040W",
+     "title": [
+      "The Stellar Populations of Resolved Galaxies"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv261008918F",
+     "title": [
+      "A Newly Identified Transient Ultraluminous X-ray Source in M31"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026ApJ..1009..184A",
+     "title": [
+      "A Cross-band (X-Ray \u00d7 Optical) Periodicity Search for Supermassive Black Hole Binaries: A Null Result and the First Completeness-corrected Constraint"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv261021212S",
+     "title": [
+      "The Birth and Early Feedback of Massive Star Clusters Across the Local Universe"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv261021687B",
+     "title": [
+      "Molecular atlas of nearby galaxies through sensitive high-resolution multi-band molecular line surveys"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv261018285F",
+     "title": [
+      "EMU detection of mysterious multiple component radio-continuum emission from nearby spiral Seyfert I type galaxy 'Sand-timer' (NGC 7213)"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv261012577Z",
+     "title": [
+      "The road to $H_0$, $\u03a9_m$, and $w$ with a global neutrino-telescope network"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026ApJ..1008...77G",
+     "title": [
+      "The Hidden Variability of the Torus in Local Active Galactic Nuclei: 20 yr of Chandra, XMM-Newton, and NuSTAR Observations"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260932324M",
+     "title": [
+      "15-Year X-ray Study Links Variable Mass Accretion to Changing Look Behavior in AGN NGC 7582"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026Ap....tmp...36V",
+     "title": [
+      "A multi-wavelength study of nearby starburst galaxy M 82"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260823107S",
+     "title": [
+      "Reconstructing the Auger UHECR Dipole: A Hybrid Analysis of 4LAC AGNs and Nearby Starburst Galaxies"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260827078Z",
+     "title": [
+      "Source models of ultrahigh-energy cosmic rays"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260802294B",
+     "title": [
+      "XRISM Resolves the Circum-nuclear Environment of NGC 4945"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260816787A",
+     "title": [
+      "A Cross-Band (X-ray $\\times$ Optical) Periodicity Search for Supermassive Black Hole Binaries: A Null Result and the First Completeness-Corrected Constraint"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260825423C",
+     "title": [
+      "Is the mysterious {\\it Punctum} a primordial black hole?"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260722404K",
+     "title": [
+      "4th TDAMM Workshop White Paper"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026ApJ..1005..127P",
+     "title": [
+      "Hard X-Ray Sources in Fermi UFOs"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260704916M",
+     "title": [
+      "HRMOS: A High-Resolution Multi-Object Spectrograph for the VLT"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260721587P",
+     "title": [
+      "XMM-Newton and Swift Unveil Another X-Ray Transient in NGC 4945, XMM J130514.64-493311.27"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026ApJ..1005..185O",
+     "title": [
+      "Decoupled Kinematics and Excitation in the Compton-thick AGN NGC 6552: Spatially Resolved KOOLS-IFU Observations"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260717375R",
+     "title": [
+      "Imaging X-ray Polarimetry Explorer"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260726149S",
+     "title": [
+      "The Twentieth Data Release of the Sloan Digital Sky Survey: First All-Sky BOSS Spectra, eROSITA-SDSS-V Mapper Coordinated Observations, and a Preview of the Local Volume Mapper"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026JCAP...07..001A",
+     "title": [
+      "POEMMA-Balloon with Radio: A multi-messenger, multi-detector balloon payload"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026Univ...12..190S",
+     "title": [
+      "Fast Radio Bursts as Sources of Ultra-High-Energy Cosmic Rays: A Multi-Messenger Review"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026MNRAS.549ag782G",
+     "title": [
+      "Clash of the Trident and tuning fork: insights from bar and spiral strength in the (massive black hole)\u2500stellar mass diagrams, and the 'Triangal' galaxy evolution schema"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026ApJ..1002L..33C",
+     "title": [
+      "The 36 GHz Class I Methanol Maser in NGC 4945: A Tracer of Active Galactic Nucleus-driven Outflow\u2500Interstellar Medium Interaction"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026A&A...709A.100J",
+     "title": [
+      "The star formation factory revisited: I. The impact of metallicity on collapsing star-forming clouds"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260522336N",
+     "title": [
+      "Seyfert galaxy targets for KM3NeT neutrino telescope"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026ApJ..1002..123L",
+     "title": [
+      "Probing the \u03b3-Ray Emission Origin of Two Star-forming Galaxies NGC 2403 and NGC 3424 with the Fermi-LAT"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026A&A...709A.138H",
+     "title": [
+      "H.E.S.S. observations of composite Seyfert\u2500starburst galaxies"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026PASJ...78..572M",
+     "title": [
+      "Possible time-variable iron-K\u03b1 emission in the circumnuclear region of the Circinus galaxy"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026MNRAS.547ag175P",
+     "title": [
+      "Bars in low-density environments rotate faster than bars in dense regions"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026ApJ..1001...42M",
+     "title": [
+      "Constraining the Subgalactic Relationship between Star Formation and the Hot Interstellar Medium in NGC 4254"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026OJAp....960562S",
+     "title": [
+      "statmorph-lsst: Quantifying and correcting morphological biases in galaxy surveys"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260414546H",
+     "title": [
+      "The GECKOS survey: Resolving the molecular and ionised gas in the galactic outflow of ESO~484-036"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026ApJ...999L..20C",
+     "title": [
+      "Bar-driven Shocks in NGC 1365 Revealed by the Most Luminous Extragalactic Class I Methanol Maser"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260329584K",
+     "title": [
+      "StarHash: unique, memorable, and deterministic names for astronomical objects"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026AAS...24727703R",
+     "title": [
+      "When the Dust Settles: Late-Time MIRI Imaging of SN 2011ja"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026MNRAS.545f2203A",
+     "title": [
+      "Constraining the extragalactic magnetic field: Auger data meet UHECR propagation modelling"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026APh...17503190B",
+     "title": [
+      "The source of the cosmic-ray excess in the Centaurus region\u2014Constraints on possible candidates, mass composition and cosmic magnetic fields"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026ApJS..282...68G",
+     "title": [
+      "BASS. L. Near-infrared Data Release 3: A Spectral Atlas and Characterization of Active Galactic Nuclei"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260220145M",
+     "title": [
+      "IceCube's convex all-sky neutrino spectrum consistent with the magnetically powered corona scenario for active galactic nuclei"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026arXiv260107259A",
+     "title": [
+      "What can be learnt from UHECR anisotropies observations Paper III: Update with new data and Galactic magnetic fields models"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026JCAP...01..027K",
+     "title": [
+      "Observational strategies for ultrahigh-energy neutrinos: the importance of deep sensitivity for detection and astronomy"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2026OJAp....955863A",
+     "title": [
+      "The Atacama Cosmology Telescope: DR6 Sunyaev-Zel'dovich Selected Galaxy Clusters Catalog"
+     ],
+     "year": "2026"
+    },
+    {
+     "bibcode": "2025arXiv251224350D",
+     "title": [
+      "Self-Gravitating Scalar Field Configurations, Ultra Light Dark Matter and Galactic Scale Observations"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025NewA..12102433C",
+     "title": [
+      "Star formation rate estimations of a mid-infrared sample of X-ray selected nearby Active Galactic Nuclei"
+     ],
+     "year": "2025"
+    },
+    {
+     "bibcode": "2025prim.book.....M",
+     "title": [
+      "PRIMA General Observer Science Book Volume 2"
+     ],
+     "year": "2025"
+    }
+   ]
+  }
+ },
+ "M81 lead": {
+  "M81 infrared transient": {
+   "numFound": 0,
+   "docs": []
+  },
+  "NGC 3031 infrared transient": {
+   "numFound": 0,
+   "docs": []
+  }
+ },
+ "NGC 55 lead": {
+  "NGC 55 infrared": {
+   "numFound": 0,
+   "docs": []
+  }
+ },
+ "IC 342 lead": {
+  "IC 342 transient": {
+   "numFound": 1,
+   "docs": [
+    {
+     "bibcode": "2023AAS...24134103J",
+     "title": [
+      "Demystifying Unusual Infrared Transients with JWST Spectroscopy"
+     ],
+     "year": "2023"
+    }
+   ]
+  }
+ },
+ "OS-0030 coordinates": {
+  "\"10:25:09.9\" \"+17:09:49\"": {
+   "numFound": 0,
+   "docs": []
+  },
+  "\"102509.89+170949.6\"": {
+   "numFound": 0,
+   "docs": []
+  },
+  "\"156.2912 17.1638\"": {
+   "numFound": 0,
+   "docs": []
+  },
+  "\"J102509\"": {
+   "numFound": 2,
+   "docs": [
+    {
+     "bibcode": "2015ApJS..221....2P",
+     "title": [
+      "The Keck + Magellan Survey for Lyman Limit Absorption. III. Sample Definition and Column Density Measurements"
+     ],
+     "year": "2015"
+    },
+    {
+     "bibcode": "2012MNRAS.421.2737O",
+     "title": [
+      "Recoiled star clusters in the Milky Way halo: N-body simulations and a candidate search through the SDSS"
+     ],
+     "year": "2012"
+    }
+   ]
+  }
+ },
+ "survey papers mentioning NGC 3239": {
+  "n_survey_papers_checked": 67,
+  "hits": []
+ }
+}
