@@ -9,12 +9,13 @@ target:
   name: NGC 3239 IR transient 2020
   ra: 156.291224
   dec: 17.163778
-  aliases: []
+  aliases:
+  - AT 2020afkm
 summary: A mid-infrared flare in the irregular galaxy NGC 3239 (about 8-12 Mpc), peaking in 2020 November
   at roughly 5e5 L_sun from ~960 K dust, that no optical survey reported. Hubble caught a faint, fading
   point source 85 days after the peak, and JWST found cooling dust at the same spot in 2024. Probably
   a dust-obscured stellar merger or eruption; a buried low-energy supernova is possible. Found blind by
-  Oddsky hunt H-0012.
+  Oddsky hunt H-0012. Reported to the IAU Transient Name Server as AT 2020afkm.
 claims:
 - id: C1
   text: 'WISE (unWISE neo11 epochal coadds, difference imaging): flat from 2010 to 2020 May 2; on 2020
@@ -99,6 +100,15 @@ claims:
   calls: []
   author: claude-opus-5.5
   at: '2026-11-02T04:31:42+00:00'
+- id: C10
+  text: Reported to the IAU Transient Name Server on 2026-11-02 by Alan Shortz (Oddsky) as AT 2020afkm
+    (https://www.wis-tns.org/object/2020afkm; TNS ID 224693; internal name Oddsky OS-0030; AT type Other
+    - Undefined), with the unWISE NEO11 credit line agreed in writing by A. Meisner. It was the only TNS
+    object within 60" besides SN 2012A immediately before and after filing.
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T19:57:10+00:00'
 hypotheses:
 - id: H1
   klass: eruptive

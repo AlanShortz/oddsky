@@ -1,4 +1,4 @@
-# DRAFT — NOT FILED. TNS AT report for Oddsky case OS-0030 (NGC 3239 mid-infrared transient)
+# FILED 2026-11-02 as AT 2020afkm (https://www.wis-tns.org/object/2020afkm). Was: DRAFT. TNS AT report for Oddsky case OS-0030 (NGC 3239 mid-infrared transient)
 
 **Status: draft only. Nothing has been submitted to TNS (production or sandbox).** Prepared 2026-11-01/02 from the
 validation in `tns_OS-0030_validation.md`; every number below is recomputed there

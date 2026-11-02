@@ -538,3 +538,10 @@ The referee found two real new objects and judged the rest noise, artefacts or o
 Both came from v2's corrected galaxy centres and nucleus masks, not from releasing the cores. The core release added one known
 transient and no new unknown leads. Next vetoes: a strongly negative reference flux next to saturated nuclei, and a step on
 empty sky (reference flux ≤ 0 in both bands).
+
+## OS-0030 reported to TNS: AT 2020afkm (2026-11-02)
+
+Filed by Alan Shortz (Oddsky) through the TNS web form from the validated draft (`drafts/tns_report_OS-0030.md`):
+https://www.wis-tns.org/object/2020afkm (TNS ID 224693, internal name "Oddsky OS-0030", AT type Other - Undefined, HST position
+10:25:09.894 +17:09:49.60 +- 0.1", discovery 2020-11-23 16:30:29 UT, W1 17.99 / W2 17.67 AB, last non-detection 2020-04-28
+W1 > 19.92 AB, summary figure attached). A cone search after filing shows only AT 2020afkm and SN 2012A within 60".
