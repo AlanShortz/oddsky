@@ -1,0 +1,110 @@
+id: OS-0031
+title: 'A hidden star in NGC 2403 that throws off dust every 5.3 years: four infrared outbursts, 2007-2023'
+hook: 'Found blind by Oddsky''s mid-infrared difference imaging of nearby galaxies (hunt H-0012 v2): a
+  source invisible to Hubble that brightens in the infrared every 5.3 years. Spitzer saw outbursts in
+  2007, 2012 and 2018, WISE in 2017-18 and 2023. Probably a massive binary forming dust at each close
+  approach. The next outburst is due around mid-2028.'
+status: reproduced
+target:
+  name: NGC 2403 periodic IR source
+  ra: 114.22807
+  dec: 65.59806
+  aliases: []
+summary: 'An optically invisible source in NGC 2403 (3.2 Mpc) whose mid-infrared light rises sharply every
+  5.3 years and then settles: Spitzer caught outbursts in 2007, 2012 and 2018, and WISE in 2017-18 and
+  2023. Each outburst is about 1e5 L_sun of ~700 K dust. Most likely a massive binary forming dust at
+  each close approach, like WR 140 but about ten times brighter in the infrared. Next outburst expected
+  around 2028.5. Found blind by Oddsky hunt H-0012.'
+claims:
+- id: C1
+  text: 'WISE (unWISE neo11 epochal coadds, difference imaging): two humps in both bands and both visit
+    seasons, peaking 2017.8 (W1 +170, W2 +355 uJy) and 2023.2 (W2 +300 uJy), with a flat minimum between;
+    compact PSF at 8-9 sigma in the per-epoch difference stamps. 21" from the nucleus of NGC 2403 (hunts/H-0012/reviews/claude-referee-h0012b-2026-11-02.md,
+    section 1).'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T19:15:15+00:00'
+- id: C2
+  text: 'Spitzer/IRAC (about 40 epochs, 2004-2019; aperture photometry on resampled mosaics): [4.5] peaks
+    of +235, +232 and +243 uJy at 2007.25, 2012.45 and 2018.03, with flat minima between; fast rise (2006.2
+    to 2006.8), slower 1-1.5 yr decline; [3.6] tracks at about 60% of the amplitude. The Spitzer variable
+    is 0.23-0.25" from the WISE position.'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T19:15:15+00:00'
+- id: C3
+  text: Four peaks (2007.25, 2012.45, 2017.5-2018.0, 2023.2) give a period of 5.3 +- 0.1 yr (about 1,940
+    d); the ephemeris predicts the next peak at about 2028.5. Hump light W1-W2 ~ 1.4 (about 700 K dust),
+    peak nu L_nu about 5-7e4 L_sun per band at 3.2 Mpc.
+  tag: computed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T19:15:15+00:00'
+- id: C4
+  text: 'No optical counterpart: HST (ACS 2004/2005/2019, WFC3 2018, WFC3/IR 2010) shows a dust lane,
+    with the nearest faint sources 0.68" and 0.96" away (M_I fainter than about -4.5); no Gaia source
+    within 4.6"; no ZTF alert object within 5".'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T19:15:15+00:00'
+- id: C5
+  text: 'Not reported (2026-11-02): ADS full text for the coordinates; not SPIRITS 19q (2.7'' away) or
+    SPIRITS 16df (1.5'' away), the known dust-forming WC binaries in NGC 2403; not [KSK2013] N 2403 5
+    (5.6" away); nothing within 3" in the SPIRITS, Khan et al. 2013/2015, Gaia DR3 or AllWISE catalogues;
+    nothing in TNS within 50" or in the SPIRITS long-period-variable catalogue within 10".'
+  tag: observed
+  calls: []
+  author: claude-opus-5.5
+  at: '2026-11-02T19:15:15+00:00'
+hypotheses:
+- id: H1
+  klass: dust_formation
+  statement: A colliding-wind massive binary (WC + O, or an LBV binary) forming dust at each periastron
+    every 5.3 yr, about 10x more luminous in the infrared than WR 140.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  conflicts: []
+  would_falsify: No mid-infrared brightening between 2027.8 and 2029.3, or an infrared spectrum with silicate
+    or SiC features (AGB dust) instead of a featureless carbon-dust continuum.
+  status: live
+  confidence: 0.7
+  author: claude-opus-5.5
+  at: '2026-11-02T19:15:15+00:00'
+- id: H2
+  klass: pulsation
+  statement: An extreme AGB / OH-IR star with a 1,940-day pulsation.
+  supports:
+  - C1
+  conflicts:
+  - C2
+  - C3
+  would_falsify: 'Already strained: periods above 1,900 d are extremely rare, Miras do not show a fast
+    rise and flat minimum, and 7e4 L_sun in one band exceeds an AGB star''s total output.'
+  status: live
+  confidence: 0.15
+  author: claude-opus-5.5
+  at: '2026-11-02T19:15:15+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: A WISE or Spitzer artefact.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  would_falsify: Two observatories see the same periodic source at one position, and the 2017-18 peak
+    is seen by both.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-02T19:15:15+00:00'
+predictions: []
+literature: []
+hunt: H-0012
+featured: false
+created_at: '2026-11-02T19:15:15+00:00'

@@ -6,12 +6,14 @@
       "title": "Vanishing and appearing stars in nearby galaxies",
       "question": "Stars that collapse into black holes without a bright supernova, and explosions hidden by dust, should still show up in the mid-infrared. What does a difference-imaging search of every star-forming galaxy within 10 Mpc in fourteen years of WISE data find?",
       "date": "2026-11-01",
-      "state": "full run done; first discovery a case; tool v2 in progress",
-      "scale": "318 galaxies within 10 Mpc · 332 unWISE tiles · 25 epochs 2010-2024 · 25,696 variable sources",
-      "funnel": [[25696, "variable sources in 178 galaxies"], [1752, "not ordinary pulsating or irregular variables"], [944, "not foreground stars, quasars or known objects"], [1, "confirmed unreported transient (OS-0030)"]],
-      "verdict": "Run blind, the new tool recovers the known failed-supernova candidates M31-2014-DS1 and N6946-BH1 and a dozen known supernovae, red novae and dust-enshrouded transients. Its first discovery is an infrared flare in NGC 3239 in 2020 that no optical survey saw: Hubble caught a faint point source 85 days later that has since vanished, and JWST found cooling dust at the same spot in 2024. It looks like a dust-hidden stellar merger or eruption. Four more infrared-only outbursts (NGC 4945, M81, NGC 55, IC 342) are being followed.",
+      "state": "v2 rerun done and refereed; three discoveries are cases",
+      "scale": "318 galaxies within 10 Mpc · 334 unWISE tiles · 25 epochs 2010-2024 · 25,454 variable sources (v2)",
+      "funnel": [[25454, "variable sources in 178 galaxies (v2)"], [1721, "not ordinary pulsating or irregular variables"], [833, "not foreground stars, quasars or known objects"], [3, "confirmed unreported objects (OS-0030, OS-0031, OS-0032)"]],
+      "verdict": "Run blind, the new tool recovers the known failed-supernova candidates M31-2014-DS1 and N6946-BH1 and over a dozen known supernovae, red novae and dust-enshrouded transients. Its first discovery is an infrared flare in NGC 3239 in 2020 that no optical survey saw: Hubble caught a faint point source 85 days later that has since vanished, and JWST found cooling dust at the same spot in 2024. The improved second run found a hidden star in NGC 2403 that throws off dust every 5.3 years (next outburst due around 2028.5) and a luminous star in NGC 55 whose dust is clearing. Four more infrared-only outbursts (NGC 4945, M81, NGC 55, IC 342) are being followed.",
       "cases": [
-        "OS-0030"
+        "OS-0030",
+        "OS-0031",
+        "OS-0032"
       ]
     },
     {
