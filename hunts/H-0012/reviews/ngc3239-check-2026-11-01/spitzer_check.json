@@ -1,0 +1,74 @@
+{
+ "jwst_bb": {
+  "T_K": 581.0,
+  "Lbol_Lsun_7p9Mpc": 36317.17706501633,
+  "R_bb_au": 87.47051559992043,
+  "F300M": 3.408080586641331,
+  "F335M": 5.901273890654438,
+  "note": "F335M contains the 3.3um PAH band; if part of F335M is PAH, T is lower than this"
+ },
+ "predicted_2008_uJy": {
+  "irac1": 7.522409279788827,
+  "irac2": 16.05978837726793,
+  "irac3": 25.72151968146957,
+  "irac4": 33.14182140373543,
+  "mips24": 14.648913977251663
+ },
+ "measured": {
+  "irac1": {
+   "pixscale": 0.749988,
+   "flux_uJy": 0.9095080594895073,
+   "err_conf_uJy": 0.9311953411226273,
+   "snr": 0.9767102769146436,
+   "frac_random_brighter": 0.16455696202531644,
+   "free_fit_flux": 1.3828672313353003,
+   "free_fit_shift_arcsec": 0.3590861653972498,
+   "predicted_if_present": 7.522409279788827,
+   "predicted_over_err": 8.07822907567384
+  },
+  "irac2": {
+   "pixscale": 0.749988,
+   "flux_uJy": 1.1818533796287483,
+   "err_conf_uJy": 1.0732426722578963,
+   "snr": 1.1011986479650087,
+   "frac_random_brighter": 0.12244897959183673,
+   "free_fit_flux": 1.4736980884482893,
+   "free_fit_shift_arcsec": 0.25375242476875204,
+   "predicted_if_present": 16.05978837726793,
+   "predicted_over_err": 14.963799700100653
+  },
+  "irac3": {
+   "pixscale": 0.749988,
+   "flux_uJy": 0.1089677641243405,
+   "err_conf_uJy": 4.209130372801307,
+   "snr": 0.025888426936944476,
+   "frac_random_brighter": 0.4529262086513995,
+   "free_fit_flux": 12.16756895133036,
+   "free_fit_shift_arcsec": 1.8277690355820717,
+   "predicted_if_present": 25.72151968146957,
+   "predicted_over_err": 6.110886906159454
+  },
+  "irac4": {
+   "pixscale": 0.749988,
+   "flux_uJy": 15.361323386018682,
+   "err_conf_uJy": 5.509949505488007,
+   "snr": 2.7879245301102187,
+   "frac_random_brighter": 0.0025380710659898475,
+   "free_fit_flux": 15.551035703977806,
+   "free_fit_shift_arcsec": 0.03556752541524386,
+   "predicted_if_present": 33.14182140373543,
+   "predicted_over_err": 6.014904741091654
+  },
+  "mips24": {
+   "pixscale": 1.5000000000012002,
+   "flux_uJy": 15.133788467294153,
+   "err_conf_uJy": 87.99360781323739,
+   "snr": 0.17198736184808971,
+   "frac_random_brighter": 0.16624040920716113,
+   "free_fit_flux": 19.51016818730875,
+   "free_fit_shift_arcsec": 0.3696033804503551,
+   "predicted_if_present": 14.648913977251663,
+   "predicted_over_err": 0.16647702419865937
+  }
+ }
+}

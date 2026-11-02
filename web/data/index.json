@@ -717,6 +717,19 @@
    "n_predictions": 0,
    "featured": false,
    "hunt": "H-0009"
+  },
+  {
+   "id": "OS-0030",
+   "title": "An infrared flare in the galaxy NGC 3239 in 2020 that no optical survey saw: an obscured transient",
+   "hook": "Found blind by Oddsky's mid-infrared difference imaging of 318 nearby galaxies (hunt H-0012): a flare peaking in 2020 November at about 5e5 L_sun, with no optical alert. Hubble caught a faint point source 85 days after the peak that has since vanished, and JWST found cooling dust at the same spot in 2024.",
+   "status": "reproduced",
+   "target": "NGC 3239 IR transient 2020",
+   "series": [],
+   "n_claims": 7,
+   "n_hypotheses": 3,
+   "n_predictions": 0,
+   "featured": false,
+   "hunt": "H-0012"
   }
  ],
  "scorecards": [

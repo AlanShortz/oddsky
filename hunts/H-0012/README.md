@@ -493,7 +493,12 @@ within 6" and are under investigation (masking).
 The strongest result is an object outside the brief: **an apparently unreported obscured transient in NGC 3239** (156.2910 +17.1639):
 a W1/W2 transient on 2020 Nov 21 (≈1.6 × 10⁵ L☉) fading over ~1.5 yr, with nothing optical (no TNS or ZTF alert; the galaxy was in
 solar conjunction in August 2020), and an HST point source 0.87" away in an image taken 85 days after the WISE peak (F606W ≈ 25.8 AB),
-absent in 2022 and 2025: probably a dust-buried supernova. An independent check is under way; a manual ATel search is still needed.
+absent in 2022 and 2025. **An independent check confirms it as a real, unreported transient and adds JWST**
+([check](reviews/ngc3239-check-2026-11-01.md)): peak 2020 Nov 23, ~5.6 × 10⁵ L☉ from ~960 K dust; the HST source lies 0.37" from the
+WISE centroid (chance coincidence ~0.2%) and vanished by 2022; JWST found cooling ~580 K dust 0.01" from it in 2024; Spitzer saw
+nothing in 2008; no radio or X-ray. It is probably not a simply buried normal supernova (the HST colour allows little extinction,
+and the infrared is 30-100× fainter than an enshrouded SN II): an obscured stellar merger or eruption fits better. Now case
+**[OS-0030](../../cases/OS-0030)**.
 Real infrared-only outbursts worth cases: NGC 4945 (a 2018-24 rise of a dusty star, possibly an obscured red nova), M81 (a 2023-24
 outburst in a compact HII region), NGC 55 (a decade-long brightening, accelerating in 2023-24) and IC 342 rank #26 (a luminous star
 brightening in the optical, then the infrared). IC 342's top fader is most likely cooling dust from an unrecorded pre-2004 event;
