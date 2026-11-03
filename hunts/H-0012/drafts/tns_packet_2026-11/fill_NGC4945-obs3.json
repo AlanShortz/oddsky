@@ -1,0 +1,205 @@
+{
+ "status": "DRAFT - NOT SUBMITTED. Do not click #edit-submit without Alan's explicit go-ahead.",
+ "form_url": "https://www.wis-tns.org/reports/at",
+ "precedent": "OS-0030 form ids; discovery switched to Spitzer/IRAC per coordinator decision 2026-11-03",
+ "candidate": "NGC4945_obs3",
+ "report_md": "tns_report_NGC4945-obs3.md",
+ "select_rule": "set selects by option value; dispatch input+change events (as done for OS-0030). If 193/40 are absent from the live lists, use instrument Other - Other [0] and filter Other with the band in comments.",
+ "expected_select_display": {
+  "edit-ra-units": "arcsec",
+  "edit-decl-units": "arcsec",
+  "edit-reporting-groupid": "None [0]",
+  "edit-data-source-groupid": "None [0]",
+  "edit-at-type": "Other - Undefined [0]",
+  "edit-non-detection-flux-units": "ABMag [1]",
+  "edit-non-detection-filter-value": "3.6-Spitzer IRAC [40] (mirror value; verify in the live list)",
+  "edit-non-detection-instrument-value": "SST - IRAC [193] (mirror value; verify in the live list)",
+  "edit-photometry-photometry-group-0-filter-value": "3.6-Spitzer IRAC [40] (verify)",
+  "edit-photometry-photometry-group-0-instrument-value": "SST - IRAC [193] (verify)"
+ },
+ "expected_designation": "AT 2018xxx (inferred: TNS names follow the discovery date)",
+ "remarks_length": 1344,
+ "fields": [
+  {
+   "id": "edit-ra-value",
+   "type": "text",
+   "value": "13:05:52.700"
+  },
+  {
+   "id": "edit-ra-error",
+   "type": "text",
+   "value": "0.3"
+  },
+  {
+   "id": "edit-ra-units",
+   "type": "select",
+   "value": "arcsec",
+   "label": "arcsec"
+  },
+  {
+   "id": "edit-decl-value",
+   "type": "text",
+   "value": "-49:24:58.23"
+  },
+  {
+   "id": "edit-decl-error",
+   "type": "text",
+   "value": "0.3"
+  },
+  {
+   "id": "edit-decl-units",
+   "type": "select",
+   "value": "arcsec",
+   "label": "arcsec"
+  },
+  {
+   "id": "edit-reporting-groupid",
+   "type": "select",
+   "value": "0",
+   "label": "None"
+  },
+  {
+   "id": "edit-data-source-groupid",
+   "type": "select",
+   "value": "0",
+   "label": "None"
+  },
+  {
+   "id": "edit-reporter",
+   "type": "text",
+   "value": "Alan Shortz (Oddsky)"
+  },
+  {
+   "id": "edit-discovery-datetime",
+   "type": "text",
+   "value": "2018-06-02 05:10:43"
+  },
+  {
+   "id": "edit-at-type",
+   "type": "select",
+   "value": "0",
+   "label": "Other - Undefined"
+  },
+  {
+   "id": "edit-host-name",
+   "type": "text",
+   "value": "NGC 4945"
+  },
+  {
+   "id": "edit-host-redshift",
+   "type": "text",
+   "value": "0.001878"
+  },
+  {
+   "id": "edit-internal-name",
+   "type": "text",
+   "value": "Oddsky H0012-NGC4945-1"
+  },
+  {
+   "id": "edit-remarks",
+   "type": "text",
+   "value": "Mid-infrared transient found by Oddsky (oddsky.ai) in archival WISE/NEOWISE data, by difference imaging of the unWISE time-resolved coadds (NEO11 version, courtesy A. Meisner; Meisner, Lang & Schlegel 2018), and measured in public Spitzer/IRAC images from IRSA (SPIRITS programmes 13053 and 14089, PI M. Kasliwal). The discovery point is the earliest >= 5 sigma detection: IRAC [3.6] = 20.09 +- 0.10 AB (+33 +- 3 uJy) on 2018-06-02, against the median of 12 flat 2013-2016 epochs; [3.6] was +17 +- 4 uJy (3.9 sigma) on 2017-10-03. Later IRAC: [4.5] = 19.65 +- 0.11 AB on 2018-11-23; [3.6] = 18.13 +- 0.02 AB on 2019-07-02. WISE (difference flux, AB): flat in 11 epochs from 2010 to 2017-07; first >= 5 sigma on 2019-01-27 at W1 = 18.97 +- 0.10, W2 = 18.80 +- 0.22; peak on 2022-07-07 at W1 = 16.52 +- 0.02, W2 = 16.71 +- 0.04; fading to W1 = 18.20 +- 0.09 by 2024-07-06, the last NEOWISE epoch; flux-scale systematic about 0.1 mag. The position is the IRAC centroid of the brightening, 0.8\" from the WISE centroid and 0.2\" from a 4.5 um source of 41 uJy with no 3.6 um detection in the cryogenic-era Spitzer SEIP catalogue (SSTSL2 J130552.71-492458.3). No Gaia DR3 source within 6\". ATLAS forced photometry shows no optical counterpart at the infrared peak (3-sigma limits c > 22.0, o > 21.0 AB). 309\" NE of the centre of NGC 4945. No spectrum."
+  },
+  {
+   "id": "edit-non-detection-obsdate",
+   "type": "text",
+   "value": "2017-10-03 09:08:01"
+  },
+  {
+   "id": "edit-non-detection-limiting-flux",
+   "type": "text",
+   "value": "20.55"
+  },
+  {
+   "id": "edit-non-detection-flux-units",
+   "type": "select",
+   "value": "1",
+   "label": "ABMag"
+  },
+  {
+   "id": "edit-non-detection-filter-value",
+   "type": "select",
+   "value": "40",
+   "label": "3.6-Spitzer IRAC"
+  },
+  {
+   "id": "edit-non-detection-instrument-value",
+   "type": "select",
+   "value": "193",
+   "label": "SST - IRAC"
+  },
+  {
+   "id": "edit-non-detection-exptime",
+   "type": "text",
+   "value": "666.0"
+  },
+  {
+   "id": "edit-non-detection-observer",
+   "type": "text",
+   "value": "Spitzer Space Telescope (NASA/JPL-Caltech); SPIRITS, PI M. Kasliwal; data from IRSA"
+  },
+  {
+   "id": "edit-non-detection-comments",
+   "type": "text",
+   "value": "Instrument=Spitzer/IRAC (warm mission), [3.6], SPIRITS programme 13053 (PI M. Kasliwal), AOR 60808704; 9 BCD frames at the source, 2017-10-03 09:02 to 09:15 UT; public post-BCD mosaic from IRSA; difference-aperture photometry (2.4\" radius, aperture-corrected) at the reported position against the median of 12 flat 2013-2016 epochs (leave-one-out). Measured +17.2 +- 4.4 uJy (3.9 sigma, below the 5-sigma threshold; the rise may already have begun). Limit is 5 sigma, AB. Same AOR [4.5]: +7.8 +- 4.6 uJy (1.7 sigma), 5-sigma limit 20.50 AB."
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-obsdate",
+   "type": "text",
+   "value": "2018-06-02 05:10:43"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-flux",
+   "type": "text",
+   "value": "20.09"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-flux-error",
+   "type": "text",
+   "value": "0.10"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-flux-units",
+   "type": "select",
+   "value": "1",
+   "label": "ABMag"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-filter-value",
+   "type": "select",
+   "value": "40",
+   "label": "3.6-Spitzer IRAC"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-instrument-value",
+   "type": "select",
+   "value": "193",
+   "label": "SST - IRAC"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-exptime",
+   "type": "text",
+   "value": "655.2"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-observer",
+   "type": "text",
+   "value": "Spitzer Space Telescope (NASA/JPL-Caltech); SPIRITS, PI M. Kasliwal; data from IRSA"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-comments",
+   "type": "text",
+   "value": "Instrument=Spitzer/IRAC (warm mission), [3.6], SPIRITS programme 13053 (PI M. Kasliwal), AOR 60808960; 7 BCD frames at the source, 2018-06-02 05:04 to 05:16 UT ([4.5] did not cover the position in this AOR); public post-BCD mosaic from IRSA; difference-aperture photometry (2.4\" radius, aperture-corrected) at the reported position against the median of 12 flat 2013-2016 epochs (leave-one-out). Difference flux 33.3 +- 3.1 uJy (10.7 sigma). IRAC calibration/aperture systematic ~10%."
+  },
+  {
+   "id": "edit-related-file-0",
+   "type": "file",
+   "value": "NGC4945_obs3_summary.png"
+  },
+  {
+   "id": "edit-related-files-related-files-group-0-related-file-comments",
+   "type": "text",
+   "value": "Discovery summary: Spitzer/IRAC (SPIRITS) and unWISE W1/W2 difference light curves 2007-2024 (IRAC discovery 2018-06-02 marked), and WISE W1/W2 difference stamps at the WISE last non-detection, first WISE detection and W1 peak (Oddsky H0012-NGC4945-1)."
+  }
+ ]
+}

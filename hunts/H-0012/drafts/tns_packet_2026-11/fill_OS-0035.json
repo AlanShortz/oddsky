@@ -1,0 +1,254 @@
+{
+ "status": "DRAFT - NOT SUBMITTED. Do not click #edit-submit without Alan's explicit go-ahead.",
+ "form_url": "https://www.wis-tns.org/reports/at",
+ "precedent": "OS-0030, filled 2026-11-02 and filed as AT 2020afkm (same ids, same option values)",
+ "candidate": "M81_OS-0035",
+ "report_md": "tns_report_OS-0035.md",
+ "select_rule": "set selects by option value; dispatch input+change events (as done for OS-0030)",
+ "expected_select_display": {
+  "edit-ra-units": "arcsec",
+  "edit-decl-units": "arcsec",
+  "edit-reporting-groupid": "None [0]",
+  "edit-data-source-groupid": "None [0]",
+  "edit-at-type": "Other - Undefined [0]",
+  "edit-non-detection-flux-units": "ABMag [1]",
+  "edit-non-detection-filter-value": "3.4-WISE [45]",
+  "edit-non-detection-instrument-value": "Other - Other [0]"
+ },
+ "remarks_length": 1092,
+ "fields": [
+  {
+   "id": "edit-ra-value",
+   "type": "text",
+   "value": "09:54:57.378"
+  },
+  {
+   "id": "edit-ra-error",
+   "type": "text",
+   "value": "0.5"
+  },
+  {
+   "id": "edit-ra-units",
+   "type": "select",
+   "value": "arcsec",
+   "label": "arcsec"
+  },
+  {
+   "id": "edit-decl-value",
+   "type": "text",
+   "value": "+69:08:48.75"
+  },
+  {
+   "id": "edit-decl-error",
+   "type": "text",
+   "value": "0.5"
+  },
+  {
+   "id": "edit-decl-units",
+   "type": "select",
+   "value": "arcsec",
+   "label": "arcsec"
+  },
+  {
+   "id": "edit-reporting-groupid",
+   "type": "select",
+   "value": "0",
+   "label": "None"
+  },
+  {
+   "id": "edit-data-source-groupid",
+   "type": "select",
+   "value": "0",
+   "label": "None"
+  },
+  {
+   "id": "edit-reporter",
+   "type": "text",
+   "value": "Alan Shortz (Oddsky)"
+  },
+  {
+   "id": "edit-discovery-datetime",
+   "type": "text",
+   "value": "2023-10-23 05:41:33"
+  },
+  {
+   "id": "edit-at-type",
+   "type": "select",
+   "value": "0",
+   "label": "Other - Undefined"
+  },
+  {
+   "id": "edit-host-name",
+   "type": "text",
+   "value": "NGC 3031"
+  },
+  {
+   "id": "edit-host-redshift",
+   "type": "text",
+   "value": ""
+  },
+  {
+   "id": "edit-internal-name",
+   "type": "text",
+   "value": "Oddsky OS-0035"
+  },
+  {
+   "id": "edit-remarks",
+   "type": "text",
+   "value": "Mid-infrared eruption found in archival WISE/NEOWISE data by Oddsky (oddsky.ai): difference imaging of the unWISE time-resolved coadds (NEO11 version, courtesy A. Meisner; Meisner, Lang & Schlegel 2018) against a 2014.8-2023.2 reference. Nothing at this position in 18 W1/W2 epochs from 2014-10 to 2023-03-27. First detected 2023-10-23 at W1 = 18.18 +- 0.07 and W2 = 18.05 +- 0.12 AB; on 2024-03-28, the last NEOWISE epoch here, W1 = 16.71 +- 0.02 and W2 = 16.36 +- 0.02 AB, still rising. Magnitudes are of the difference flux; the flux-scale systematic is about 0.1 mag. An earlier infrared event at the same position: public Spitzer/IRAC 3.6 um images show +0.22 mJy on 2009-11-25, declining to +0.13 mJy by 2010-04/06, after a flat 2003-2005, and WISE 2010 was still above the 2014-2023 level. The source lies in the HII region [HAE2008] 7; Gaia DR3 1070474934439610752 (G = 20.25, BP-RP = 0.37) is 0.28\" away. No ZTF alert object within 35\". ATLAS forced photometry shows no brightening at the WISE epochs (3-sigma limits c > 21.3, o > 21.2 AB). 351\" NW of the centre of M81. No spectrum."
+  },
+  {
+   "id": "edit-non-detection-obsdate",
+   "type": "text",
+   "value": "2023-03-27 18:12:04"
+  },
+  {
+   "id": "edit-non-detection-limiting-flux",
+   "type": "text",
+   "value": "19.57"
+  },
+  {
+   "id": "edit-non-detection-flux-units",
+   "type": "select",
+   "value": "1",
+   "label": "ABMag"
+  },
+  {
+   "id": "edit-non-detection-filter-value",
+   "type": "select",
+   "value": "45",
+   "label": "3.4-WISE"
+  },
+  {
+   "id": "edit-non-detection-instrument-value",
+   "type": "select",
+   "value": "0",
+   "label": "Other - Other"
+  },
+  {
+   "id": "edit-non-detection-exptime",
+   "type": "text",
+   "value": "161.7"
+  },
+  {
+   "id": "edit-non-detection-observer",
+   "type": "text",
+   "value": "WISE/NEOWISE (NASA/JPL/IPAC)"
+  },
+  {
+   "id": "edit-non-detection-comments",
+   "type": "text",
+   "value": "Instrument=WISE (NEOWISE-R reactivation), unWISE neo11 epochal coadd (epoch 20), forced PSF photometry on a difference image at the source, measured flux +18.9 +- 10.8 uJy (1.7 sigma). Limit is 5 sigma, AB. W2 +5.6 +- 22.3 uJy, 5-sigma limit 18.78 AB."
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-obsdate",
+   "type": "text",
+   "value": "2023-10-23 05:41:33"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-flux",
+   "type": "text",
+   "value": "18.18"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-flux-error",
+   "type": "text",
+   "value": "0.07"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-flux-units",
+   "type": "select",
+   "value": "1",
+   "label": "ABMag"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-filter-value",
+   "type": "select",
+   "value": "45",
+   "label": "3.4-WISE"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-instrument-value",
+   "type": "select",
+   "value": "0",
+   "label": "Other - Other"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-exptime",
+   "type": "text",
+   "value": "130.9"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-observer",
+   "type": "text",
+   "value": "WISE/NEOWISE (NASA/JPL/IPAC)"
+  },
+  {
+   "id": "edit-photometry-photometry-group-0-comments",
+   "type": "text",
+   "value": "Instrument=WISE (NEOWISE-R), unWISE neo11 epochal coadd (epoch 21; exposures 2023-10-22.68 to 10-23.91). Difference flux 194.0 +- 12.6 uJy (15 sigma) vs 2014.8-2023.2 reference. Vega 15.51. Flux-scale systematic ~0.1 mag."
+  },
+  {
+   "click": "#photometry-add-more",
+   "wait_for": "#edit-photometry-photometry-group-1-obsdate"
+  },
+  {
+   "id": "edit-photometry-photometry-group-1-obsdate",
+   "type": "text",
+   "value": "2023-10-23 05:41:33"
+  },
+  {
+   "id": "edit-photometry-photometry-group-1-flux",
+   "type": "text",
+   "value": "18.05"
+  },
+  {
+   "id": "edit-photometry-photometry-group-1-flux-error",
+   "type": "text",
+   "value": "0.12"
+  },
+  {
+   "id": "edit-photometry-photometry-group-1-flux-units",
+   "type": "select",
+   "value": "1",
+   "label": "ABMag"
+  },
+  {
+   "id": "edit-photometry-photometry-group-1-filter-value",
+   "type": "select",
+   "value": "46",
+   "label": "4.6-WISE"
+  },
+  {
+   "id": "edit-photometry-photometry-group-1-instrument-value",
+   "type": "select",
+   "value": "0",
+   "label": "Other - Other"
+  },
+  {
+   "id": "edit-photometry-photometry-group-1-exptime",
+   "type": "text",
+   "value": "123.2"
+  },
+  {
+   "id": "edit-photometry-photometry-group-1-observer",
+   "type": "text",
+   "value": "WISE/NEOWISE (NASA/JPL/IPAC)"
+  },
+  {
+   "id": "edit-photometry-photometry-group-1-comments",
+   "type": "text",
+   "value": "Instrument=WISE (NEOWISE-R), unWISE neo11 epoch 21. Difference flux 218.1 +- 23.4 uJy (9.3 sigma). Vega 14.74."
+  },
+  {
+   "id": "edit-related-file-0",
+   "type": "file",
+   "value": "M81_OS-0035_summary.png"
+  },
+  {
+   "id": "edit-related-files-related-files-group-0-related-file-comments",
+   "type": "text",
+   "value": "Discovery summary: unWISE W1/W2 difference light curve 2010-2024 with Spitzer/IRAC 2003-2019, and W1/W2 difference stamps at the last non-detection, discovery and latest epoch (Oddsky case OS-0035)."
+  }
+ ]
+}
