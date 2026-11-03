@@ -1,0 +1,202 @@
+{
+  "generated_at": "2026-11-03T16:36:55+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "2 fail, 4 warn, 9 pass, 0 skipped",
+  "counts": {
+    "fail": 2,
+    "warn": 4,
+    "pass": 9,
+    "skip": 0
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "pass",
+      "finding": "6 Gaia source(s) within 6.1\"; brightest contributes 0.3% of the target's G flux at 2.5\"",
+      "numbers": {
+        "radius_arcsec": 6.1,
+        "n_inside": 6,
+        "total_flux_ratio_G": 0.0057,
+        "brightest_flux_ratio": 0.0026,
+        "brightest_sep": 2.4563
+      }
+    },
+    {
+      "id": "blend_ztf",
+      "title": "Neighbours inside the ZTF beam (2.0\")",
+      "status": "pass",
+      "finding": "no Gaia source within 2.0\"",
+      "numbers": {
+        "radius_arcsec": 2.0
+      }
+    },
+    {
+      "id": "blend_aavso",
+      "title": "Neighbours inside the AAVSO beam (5.0\")",
+      "status": "pass",
+      "finding": "4 Gaia source(s) within 5.0\"; brightest contributes 0.3% of the target's G flux at 2.5\"",
+      "numbers": {
+        "radius_arcsec": 5.0,
+        "n_inside": 4,
+        "total_flux_ratio_G": 0.0039,
+        "brightest_flux_ratio": 0.0026,
+        "brightest_sep": 2.4563
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "fail",
+      "finding": "5 of 5 visits are at or brighter than saturation (W1<8, W2<7)",
+      "numbers": {
+        "saturated_visits": 5
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "no exposures",
+      "numbers": {
+        "exposures": 0,
+        "removed_per_band": {},
+        "thin_visits": 5
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "pass",
+      "finding": "optical data from 89 independent source(s): AAVSO observer DFS (2572), AAVSO observer GZN (1695), AAVSO observer PYG (1412), AAVSO observer BRJ (1195), AAVSO observer RFDA (706), and 84 more",
+      "numbers": {
+        "n_sources": 239,
+        "top_sources": {
+          "AAVSO observer DFS": 2572,
+          "AAVSO observer GZN": 1695,
+          "AAVSO observer PYG": 1412,
+          "AAVSO observer BRJ": 1195,
+          "AAVSO observer RFDA": 706,
+          "AAVSO observer VED": 617,
+          "AAVSO observer OJR": 568,
+          "AAVSO observer OAAA": 557,
+          "AAVSO observer GSAD": 498,
+          "ZTF": 454,
+          "AAVSO observer HUR": 376,
+          "AAVSO observer BVS": 366,
+          "AAVSO observer GCO": 360,
+          "AAVSO observer MTH": 342,
+          "AAVSO observer PPS": 306,
+          "AAVSO observer GRL": 268,
+          "AAVSO observer MMI": 244,
+          "AAVSO observer MUY": 243,
+          "AAVSO observer WER": 227,
+          "AAVSO observer SCZ": 220
+        }
+      }
+    },
+    {
+      "id": "baseline_aavso",
+      "title": "Does AAVSO start at the star's normal brightness?",
+      "status": "warn",
+      "finding": "first 60 days of V: median 11.50; Gaia DR3 (2014-17 mean) implies V = 12.26; difference -0.76 mag. The series begins mid-event: its own median is not the star's normal state.",
+      "numbers": {
+        "v_first": 11.5,
+        "v_gaia": 12.26,
+        "delta": -0.76
+      }
+    },
+    {
+      "id": "chromatic",
+      "title": "Colour of the variability (all simultaneous AAVSO data)",
+      "status": "pass",
+      "finding": "dB/dV = 1.03 (ISM dust 1.32, r = 0.96), dR/dV = 1.72 (ISM dust 0.81, r = 0.98), dI/dV = 2.28 (ISM dust 0.59, r = 0.78). All bands move together, as real dimming or brightening must.",
+      "numbers": {
+        "slopes": {
+          "B": 1.033,
+          "R": 1.72,
+          "I": 2.284
+        },
+        "pearson_r": {
+          "B": 0.965,
+          "R": 0.985,
+          "I": 0.778
+        },
+        "ism": {
+          "B": 1.32,
+          "R": 0.81,
+          "I": 0.59
+        }
+      }
+    },
+    {
+      "id": "onset_aavso_B",
+      "title": "Was the start seen? (AAVSO B)",
+      "status": "pass",
+      "finding": "the 3 deepest dip(s) (> 0.1 mag vs a 600-day baseline) all have an observed ingress",
+      "numbers": {
+        "n_events": 3
+      }
+    },
+    {
+      "id": "onset_aavso_Vis.",
+      "title": "Was the start seen? (AAVSO Vis.)",
+      "status": "pass",
+      "finding": "the 1 deepest dip(s) (> 0.1 mag vs a 600-day baseline) all have an observed ingress",
+      "numbers": {
+        "n_events": 1
+      }
+    },
+    {
+      "id": "alias_aavso_Vis.",
+      "title": "Periodicity vs survey rhythms (AAVSO Vis.)",
+      "status": "warn",
+      "finding": "strongest period 1.00 d coincides with: matches spectral-window peak at 1.00 d; sidereal day; solar day; best period above 2 d: 359.0 d (matches spectral-window peak at 364.82 d; year (seasonal gaps))",
+      "numbers": {
+        "top_period_days": 1.0000332931747082,
+        "power": 0.36925337522495233
+      }
+    },
+    {
+      "id": "alias_gaia_epoch_G",
+      "title": "Periodicity vs survey rhythms (GAIA_EPOCH G)",
+      "status": "pass",
+      "finding": "strongest period 27.49 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 27.488277303062386,
+        "power": 0.4428845817124806
+      }
+    },
+    {
+      "id": "alias_ztf_ZTF_g",
+      "title": "Periodicity vs survey rhythms (ZTF ZTF_g)",
+      "status": "warn",
+      "finding": "strongest period 1.00 d coincides with: matches spectral-window peak at 1.00 d; sidereal day; solar day; best period above 2 d: 336.1 d",
+      "numbers": {
+        "top_period_days": 0.9975285532656161,
+        "power": 0.720526952892295
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "warn",
+      "finding": "RUWE = 5.74 > 1.4: likely an unresolved companion, or a photocentre shifted by variability",
+      "numbers": {
+        "ruwe": 5.740146
+      }
+    },
+    {
+      "id": "allwise_fit",
+      "title": "AllWISE profile-fit photometry",
+      "status": "fail",
+      "finding": "aperture - profile W1 = +5.92; detected in 20% of frames; AllWISE - Gaia offset = 0.19\" : the H-0016 profile-fit failure; the AllWISE w1mpro/w2mpro are not measurements of this star",
+      "numbers": {
+        "aperture_minus_profile_w1": 5.915000000000001,
+        "frame_detection_fraction": 0.2,
+        "offset_from_gaia_arcsec": 0.18504081958595192,
+        "tests_failed": 2
+      }
+    }
+  ]
+}

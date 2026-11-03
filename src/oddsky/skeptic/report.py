@@ -284,9 +284,39 @@ def astrometry(store: CaseStore) -> list[Check]:
                                             if status == "warn" else " (single-star-like astrometry)"), ruwe=ruwe)]
 
 
+def allwise_photometry(store: CaseStore) -> list[Check]:
+    """H-0016: the AllWISE profile-fit magnitude of a clean star can be wrong by 0.4-1.7 mag with no flag set. The failures
+    show a low profile-fit SNR for the magnitude, an aperture-minus-profile difference > 0.3 mag, and a position off Gaia."""
+    from ..data.allwise import diagnose
+
+    ctx = store.context()
+    aw = ctx.get("allwise")
+    if not aw:
+        return [_check("allwise_fit", "AllWISE profile-fit photometry", "skip", "no AllWISE catalogue row in the context")]
+    d = diagnose(aw, ctx.get("gaia"))
+    if d["verdict"] == "saturated":
+        return [_check("allwise_fit", "AllWISE profile-fit photometry", "skip",
+                       f"W1 = {d['w1mpro']:.1f}: saturated in AllWISE, the profile-fit test does not apply", **d)]
+    parts = []
+    if "aperture_minus_profile_w1" in d:
+        parts.append(f"aperture - profile W1 = {d['aperture_minus_profile_w1']:+.2f}")
+    if "w1snr" in d:
+        parts.append(f"w1snr = {d['w1snr']:.0f} (expected ~{d['w1snr_expected']:.0f} at W1 = {aw.get('w1mpro'):.1f})")
+    if "frame_detection_fraction" in d:
+        parts.append(f"detected in {100 * d['frame_detection_fraction']:.0f}% of frames")
+    if "offset_from_gaia_arcsec" in d:
+        parts.append(f"AllWISE - Gaia offset = {d['offset_from_gaia_arcsec']:.2f}\"")
+    status = {"ok": "pass", "suspect": "warn", "bad": "fail"}[d["verdict"]]
+    tail = {"pass": "(the 2010-11 catalogue magnitudes look trustworthy)",
+            "warn": ": one sign of the H-0016 profile-fit failure; use w1mag/w2mag or the images, not w1mpro, for 2010",
+            "fail": ": the H-0016 profile-fit failure; the AllWISE w1mpro/w2mpro are not measurements of this star"}[status]
+    return [_check("allwise_fit", "AllWISE profile-fit photometry", status, "; ".join(parts) + " " + tail,
+                   **{k: v for k, v in d.items() if k != "verdict"})]
+
+
 BATTERY: list[Callable[[CaseStore], list[Check]]] = [
     blending, neowise_quality, independent_confirmation, gaia_baseline, chromaticity, onset_coverage, aliases, tess_systematics,
-    astrometry,
+    astrometry, allwise_photometry,
 ]
 
 

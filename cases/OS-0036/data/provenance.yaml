@@ -1,0 +1,42 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  query:
+    adql: SELECT source_id, ra, dec, parallax, parallax_over_error, pmra, pmdec, ruwe, phot_g_mean_mag,
+      phot_bp_mean_mag, phot_rp_mean_mag, bp_rp, phot_variable_flag, teff_gspphot, distance_gspphot, non_single_star,
+      DISTANCE(POINT(295.4878654,16.7443556), POINT(ra,dec))*3600 AS sep_arcsec FROM gaiadr3.gaia_source
+      WHERE 1=CONTAINS(POINT(ra,dec), CIRCLE(295.4878654,16.7443556,0.008333333333333333)) ORDER BY sep_arcsec
+  retrieved_at: '2026-11-03T16:35:34+00:00'
+  rows_raw: 122
+  rows_kept: 122
+  cuts: []
+  notes: []
+  status: ok
+allwise:
+  archive: IRSA AllWISE (allwise_p3as_psd)
+  query:
+    ra: 295.4878654
+    dec: 16.7443556
+    radius_arcsec: 3.0
+  retrieved_at: '2026-11-03T16:35:37+00:00'
+  rows_raw: 1
+  rows_kept: 1
+  cuts: []
+  notes: []
+  status: ok
+tess:
+  archive: MAST TESS light curves via lightkurve
+  query:
+    ra: 295.4878654
+    dec: 16.7443556
+    authors:
+    - SPOC
+    - TESS-SPOC
+    - QLP
+  retrieved_at: '2026-11-03T18:13:10+00:00'
+  rows_raw: 448222
+  rows_kept: 15066
+  cuts:
+  - binned to 10-min medians per sector (good and flagged cadences kept apart)
+  notes:
+  - 'TESS magnitudes are relative (delta-mag vs each sector''s median); sectors: 14, 40, 41, 54, 81'
+  status: ok
