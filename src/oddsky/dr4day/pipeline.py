@@ -7,6 +7,8 @@
   catalogue   release lens catalogue, classifier-only lenses, flags/classes of our targets, cones, xmatch   ~5 min
   epochs      epoch photometry for every target (tier 1 first), cached per source                          tier 1 ~5 min
   search      blind light-curve analysis of every target, ranked; quick-look plots of the top               ~10 min
+  astrolens   H-0015: DR4 epoch astrometry of the ranked lens targets, fitted for a deflection (theta_E, M)  ~10 min
+              (a release without epoch astrometry, e.g. the DR3 stand-in, says so and runs on simulated tables)
   report      summary.md + small tables copied into hunts/H-0014/<release>/
 
 Timings are for the DR3 dry run (anonymous, 50 ids per DataLink request); DR4 day will be slower while the archive is busy.
@@ -25,12 +27,12 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from . import catalogue, lightcurves, probe, readiness, targets
+from . import astrometry, catalogue, lightcurves, probe, readiness, targets
 from .archive import Archive
 from .config import Release, run_dir
 
 log = logging.getLogger("oddsky.dr4day")
-STAGES = ("probe", "readiness", "idmap", "ensemble", "catalogue", "epochs", "search", "report")
+STAGES = ("probe", "readiness", "idmap", "ensemble", "catalogue", "epochs", "search", "astrolens", "report")
 ENSEMBLE_DIR = Path("hunts/H-0009/predictions")
 HUNT = Path("hunts/H-0014")
 
@@ -288,6 +290,22 @@ class Run:
                 {f"{k[0]}|{k[1]}": int(v) for k, v in m.groupby("set").label.value_counts().items()},
                 "ranked_unknown": len(rank),
                 "ensemble_rule_at_neowise_time": m.get("ev_status", pd.Series(dtype=str)).value_counts().to_dict()}
+
+    def do_astrolens(self):
+        """H-0015's stage (oddsky.dr4day.astrometry). Small outputs are copied to hunts/H-0015/<dryrun_dr3|dr4>/, the input
+        of hunts/H-0015/predictions/dr4_astrometric_grade.py."""
+        info = astrometry.stage(self)
+        dest = self.root / "hunts/H-0015" / ("dryrun_dr3" if self.rel.stand_in else self.rel.key)
+        dest.mkdir(parents=True, exist_ok=True)
+        for f in ("results.csv", "status.csv", "summary.json"):
+            src = self.out / "astrolens" / f
+            if src.exists():
+                shutil.copy2(src, dest / f"astrolens_{f}")
+        # the grader's identity check needs the id map beside the results (it refuses to grade without it)
+        if (self.out / "astrolens" / "idmap.csv").exists():
+            shutil.copy2(self.out / "astrolens" / "idmap.csv", dest / "idmap.csv")
+        info["copied_to"] = str(dest)
+        return info
 
     def quicklooks(self, sel: pd.DataFrame):
         import matplotlib

@@ -173,6 +173,28 @@ class Archive:
                     out.append(raw)
         return out
 
+    def epoch_astrometry_raw(self, ids: list[str]) -> list[pd.DataFrame]:
+        """One DataLink EPOCH_ASTROMETRY request (H-0015); the raw per-source tables as served. The per-CCD columns of
+        DR4's draft data model are 10-element arrays; `oddsky.dr4day.astrometry.normalise` reads them."""
+        r = self._send("POST", self.rel.datalink, data=dict(
+            RETRIEVAL_TYPE=self.rel.retrieval_epoch_astrometry, ID=",".join(str(i) for i in ids), FORMAT="csv",
+            DATA_STRUCTURE=self.rel.data_structure, RELEASE=self.rel.name, VALID_DATA="false"))
+        if not r.content:
+            return []
+        texts = []
+        if zipfile.is_zipfile(io.BytesIO(r.content)):
+            with zipfile.ZipFile(io.BytesIO(r.content)) as z:
+                texts = [z.read(n).decode() for n in z.namelist()]
+        else:
+            texts = [r.text]
+        out = []
+        for txt in texts:
+            raw = pd.read_csv(io.StringIO(txt), comment="#", dtype={"source_id": str})
+            if "source_id" not in raw:
+                raise ArchiveError(f"epoch astrometry response is not a table: {txt[:200]!r}")
+            out += [g for _, g in raw.groupby("source_id")] if len(raw) else []
+        return out
+
     def epoch(self, ids: list[str], cache: Path | None = None, on_chunk=None) -> tuple[dict[str, pd.DataFrame], list[dict]]:
         """Epoch photometry for many sources, chunked, cached per source, with one record per chunk.
 

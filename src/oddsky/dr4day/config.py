@@ -49,6 +49,10 @@ class Release:
     datalink: str = DATALINK
     links: str = LINKS
     retrieval_epoch: str = "EPOCH_PHOTOMETRY"
+    # epoch astrometry (H-0015): DR4 publishes per-FoV-transit along-scan positions for every source with an AGIS solution,
+    # by DataLink only (retrieval type EPOCH_ASTROMETRY; the 49 brightest stars in EPOCH_ASTROMETRY_BRIGHT). DR3 has none.
+    has_epoch_astrometry: bool = False
+    retrieval_epoch_astrometry: str = "EPOCH_ASTROMETRY"
     data_structure: str = "DATAMODEL_STANDARD"
     chunk: int = 50               # ids per DataLink request (50 anonymous; 5,000 with a logged-in session)
     chunk_logged_in: int = 5000
@@ -88,7 +92,8 @@ PRESETS: dict[str, Release] = {
                    neighbourhood=("gaiadr4.dr3_neighbourhood", "dr3_source_id", "source_id", "angular_distance",
                                   "magnitude_difference"),
                    flags_table="gaiadr4.all_source_flags",
-                   classifier_cols=("classifier_best_class_name", "classifier_best_class_prob")),
+                   classifier_cols=("classifier_best_class_name", "classifier_best_class_prob"),
+                   has_epoch_astrometry=True),
 }
 
 DR4_SPAN_END_MJD = PRESETS["dr4"].epoch_end_mjd

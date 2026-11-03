@@ -1,0 +1,13 @@
+{
+ "n_targets": 120,
+ "n_ok": 120,
+ "expected_detections_pop": 3.411431063097079,
+ "expected_bh_detections": 0.5091562602357095,
+ "score_ge_0p5": 5,
+ "pdet5_ge_0p5": 39,
+ "pdet10_ge_0p5": 41,
+ "pdet1_ge_0p5": 15,
+ "fit_targets": 14,
+ "fit_seconds": 1559,
+ "note": "Asimov part from the final --no-fits run (larger population draws); per-target fits (data/rank_fits.csv) from the run before it, same targets"
+}

@@ -3,7 +3,7 @@
     uv run python scripts/dr4_day.py --release dr4                 # release day: every stage, tier 1 then tier 2
     uv run python scripts/dr4_day.py --release dr3                 # dry run against Gaia DR3, the stand-in release
     uv run python scripts/dr4_day.py --release dr4 --stages probe  # one stage (probe, readiness, idmap, ensemble,
-                                                                    # catalogue, epochs, search, report)
+                                                                    # catalogue, epochs, search, astrolens, report)
     uv run python scripts/dr4_day.py --release dr4 --tiers 1       # tier 1 only (the first hour)
     uv run python scripts/dr4_day.py --release dr4 --set tables.vari_microlensing=gaiadr4.vari_microlensing_x
 

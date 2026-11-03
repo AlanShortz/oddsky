@@ -1,0 +1,56 @@
+{
+ "targets": 120,
+ "controls": 325,
+ "epoch_astrometry": "epoch astrometry not available in dr3 (Gaia DR3 has no EPOCH_ASTROMETRY product)",
+ "datalink_retrieval_types": [
+  "MCMC_GSPPHOT"
+ ],
+ "datalink_offers_epoch_astrometry": false,
+ "simulated_sources": 16,
+ "positive_control": "6020322385418675200",
+ "status_counts": {
+  "fitted": 16
+ },
+ "significant_deflections_dchi2_ge_25": {
+  "control": 0,
+  "target": 1
+ },
+ "top": [
+  {
+   "name": "J163539.69-355208.3",
+   "dchi2": 35.089203835559005,
+   "theta_e": 5.428229863328599,
+   "M_best": 1.7282884079606222,
+   "M_ul95": 2.417134300270355
+  },
+  {
+   "name": "J040025.77+323527.4",
+   "dchi2": 6.011294385403744,
+   "theta_e": 20.65044124243687,
+   "M_best": 1.8092828962105612,
+   "M_ul95": 3.037218622424786
+  },
+  {
+   "name": "J072830.43-204112.5",
+   "dchi2": 4.146652998510831,
+   "theta_e": 1.6989803819365306,
+   "M_best": 988.8324152015284,
+   "M_ul95": Infinity
+  },
+  {
+   "name": "CTRL-6020321114108326528",
+   "dchi2": 3.3256952799510344,
+   "theta_e": 25.34057262134352,
+   "M_best": 0.8287421891968689,
+   "M_ul95": Infinity
+  },
+  {
+   "name": "J175343.19-325527.6",
+   "dchi2": 3.0688930018986866,
+   "theta_e": 0.7284422223893438,
+   "M_best": 0.01728288407960622,
+   "M_ul95": 0.054064246711208686
+  }
+ ],
+ "seconds": 50.0
+}

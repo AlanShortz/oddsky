@@ -87,6 +87,8 @@ DataLink requests' worth (about 100 MB), not the 7.2 TB table.
 Not planned for the day: epoch astrometry (62 TB) for astrometric microlensing of our best events (worth a targeted request
 later for OS-0016 and the strongest new candidates); generic eclipses of giants (`vari_eclipsing_binary` long-period
 selection: a follow-up hunt); whole-catalogue searches, which need bulk files that do not exist yet.
+*Added by H-0015 (2026-11-02):* epoch astrometry for 120 ranked lens targets is now a release-day stage, `astrolens`
+(between `search` and `report`; [H-0015](../H-0015/README.md)).
 
 **Per light curve** (`dr4day/lightcurves.py`; H-0010's refereed method, release-agnostic): clean, drop BP/RP window
 contamination, take an iterative quiet baseline, find brightening and fading episodes (≥ 2 transits beyond max(4σ, 0.08 mag)),
