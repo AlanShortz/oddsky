@@ -795,6 +795,63 @@
    "n_predictions": 0,
    "featured": false,
    "hunt": "H-0013"
+  },
+  {
+   "id": "OS-0036",
+   "title": "HM Sagittae: the symbiotic nova of 1975, fifty years on",
+   "hook": "A Mira and a white dwarf that erupted in 1975 and never quite came back; its I band fell 1.5 mag in 2021-22 (Goldman et al. 2022) and the archives now hold four more years.",
+   "status": "observation",
+   "target": "HM Sge",
+   "series": [
+    "AAVSO:B",
+    "AAVSO:CR",
+    "AAVSO:CV",
+    "AAVSO:I",
+    "AAVSO:N/A",
+    "AAVSO:R",
+    "AAVSO:SG",
+    "AAVSO:SI",
+    "AAVSO:SR",
+    "AAVSO:TG",
+    "AAVSO:U",
+    "AAVSO:V",
+    "AAVSO:Vis.",
+    "ATLAS:ATLAS_H",
+    "ATLAS:ATLAS_c",
+    "ATLAS:ATLAS_o",
+    "ATLAS:ATLAS_t",
+    "GAIA:BP",
+    "GAIA:G",
+    "GAIA:RP",
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "NEOWISE_EXP:W1",
+    "NEOWISE_EXP:W2",
+    "TESS:TESS",
+    "ZTF:ZTF_g"
+   ],
+   "n_claims": 8,
+   "n_hypotheses": 3,
+   "n_predictions": 3,
+   "featured": false,
+   "hunt": null
+  },
+  {
+   "id": "OS-0037",
+   "title": "BD+28 4177: the B giant whose infrared excess vanished across the WISE gap",
+   "hook": "In 2010-11 WISE saw this B0.5 giant 2.3x brighter at 3.4 microns and 14x at 22; since 2014 it is a bare photosphere. Found by hunt H-0016.",
+   "status": "observation",
+   "target": "Gaia DR3 1801411783339764608",
+   "series": [
+    "NEOWISE:W1",
+    "NEOWISE:W2",
+    "TESS:TESS"
+   ],
+   "n_claims": 5,
+   "n_hypotheses": 3,
+   "n_predictions": 1,
+   "featured": false,
+   "hunt": "H-0016"
   }
  ],
  "scorecards": [

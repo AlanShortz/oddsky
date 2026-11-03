@@ -12,7 +12,7 @@ target:
   - HM Sagittae
   - AFGL 2439
   - IRAS 19396+1637
-  - Gaia DR3 1820929728207466368
+  - Gaia DR3 4318934003785783680
   gaia_source_id: 4318934003785783680
   otype: symbiotic nova (D-type, Mira + WD)
 summary: ''
@@ -168,6 +168,19 @@ claims:
   - K44
   author: unknown-agent
   at: '2026-11-03T18:22:16+00:00'
+- id: C14
+  text: 'ATLAS forced photometry (2015-2026; 5,541 epochs of which only 104 survive the quality flags
+    because the star saturates the orange band near 11.4): the unflagged o-band points fall from a median
+    11.44 (2019.0-2021.5, 9 points) to 12.86 (2024.9-2026.9, 26 points), +1.42 mag at 34 sigma, with a
+    changepoint in 2023 Jun (+1.1 mag step) and a slope of 0.16 mag/yr over the full span. ATLAS o straddles
+    V and R, and its fade sits between the AAVSO V (+0.95) and R (+1.65) values: an independent instrument
+    and pipeline see the same decline.'
+  tag: computed
+  calls:
+  - K55
+  - K56
+  author: unknown-agent
+  at: '2026-11-03T23:33:35+00:00'
 hypotheses:
 - id: H1
   klass: dust_formation

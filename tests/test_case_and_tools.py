@@ -107,3 +107,24 @@ def test_referee_reports_are_exported(dusty_case):
     payload = json.loads((out / "cases" / "OS-0001.json").read_text())
     assert payload["reviews"][0]["file"] == "claude-referee-2026-10-27.md"
     assert "Survives." in payload["reviews"][0]["markdown"]
+
+
+def test_fetch_does_not_overwrite_claims_recorded_during_a_long_fetch(dusty_case, monkeypatch):
+    """fetch() reloads the case before saving: a claim added while an archive was queued must survive."""
+    from oddsky import fetch as fetch_mod
+    from oddsky.case.model import Claim
+
+    store = dusty_case
+
+    def slow_lightcurve(ra, dec):
+        c = store.load()
+        c.claims.append(Claim(id="C1", text="recorded mid-fetch", tag="observed", calls=[]))
+        store.save(c)
+        import pandas as pd
+
+        from oddsky.data.provenance import Provenance
+        return pd.DataFrame(), Provenance(archive="fake", status="empty")
+
+    monkeypatch.setattr(fetch_mod.neowise, "lightcurve", slow_lightcurve)
+    fetch_mod.fetch(store, ("neowise",))
+    assert [c.id for c in store.load().claims] == ["C1"]

@@ -40,3 +40,13 @@ tess:
   notes:
   - 'TESS magnitudes are relative (delta-mag vs each sector''s median); sectors: 14, 40, 41, 54, 81'
   status: ok
+atlas:
+  archive: ATLAS forced photometry (fallingstar-data.com), reduced images
+  status: ok
+  rows_raw: 5541
+  rows_kept: 104
+  cuts: []
+  query:
+    task: https://fallingstar-data.com/forcedphot/queue/5287188/
+  notes:
+  - cite Tonry+2018, Heinze+2018, Smith+2020, Shingles+2021

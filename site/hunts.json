@@ -2,13 +2,54 @@
   "_comment": "Editorial summaries of each hunt for the website. The README in hunts/<ID>/ is the source of truth; these numbers are copied from its funnel table. A hunt whose directory is missing is skipped, so an entry can land before its hunt merges.",
   "hunts": [
     {
+      "id": "H-0016",
+      "title": "The WISE gap",
+      "question": "Nothing watched the mid-infrared sky between February 2011 and December 2013. Which stars and galaxies changed for good across that gap, and were quiet afterwards? The AllWISE 2010 catalogue and the NEOWISE 2014-2024 baseline sit side by side for 49 million quiet stars; asking costs one query.",
+      "date": "2026-11-03",
+      "state": "pilot done and refereed; catalogue diagnostic built into the Skeptic",
+      "scale": "49 M quiet stars · 19,818 steps · 110 unflagged · every clean step tested in the images",
+      "funnel": [
+        [
+          19818,
+          "stars that stepped by more than 0.4 mag in both bands"
+        ],
+        [
+          110,
+          "with no AllWISE artifact or blend flag"
+        ],
+        [
+          48,
+          "stars with a Gaia parallax"
+        ],
+        [
+          2,
+          "real in the 2010 images"
+        ]
+      ],
+      "verdict": "Forty-six of the forty-eight clean stellar steps are not in the sky: the AllWISE profile-fit magnitude of a clean, isolated star can be wrong by up to 1.7 magnitudes with no flag set, while the catalogue's own aperture magnitude is right. The failure leaves a four-column signature that is now a Skeptic check. The two real steps, and five more from a wider pull, are B stars whose 2010 circumstellar emission had vanished by 2014. Fifty-eight galaxy nuclei changed state across the gap; eight lost a hot-dust component and wait for a spectrum.",
+      "cases": []
+    },
+    {
       "id": "H-0015",
       "title": "Weighing dark lenses with Gaia",
       "question": "Only one isolated stellar-mass black hole is known. When a dark object passes in front of a star it brightens the star and also shifts its position by a fraction of a milliarcsecond, and the shift reveals the lens mass. Can Gaia DR4's first per-transit positions weigh the lenses of Oddsky's own long microlensing events?",
       "date": "2026-11-02",
       "state": "engine built and refereed; forecasts sealed; runs on Gaia DR4 day",
       "scale": "109 lens targets in DR4's span · 325 matched control stars · 2,900 simulated lenses for the acceptance test",
-      "funnel": [[109, "lens targets inside Gaia DR4's span"], [25, "known OGLE/KMTNet events kept as controls"], [5, "forecasts sealed before release"]],
+      "funnel": [
+        [
+          109,
+          "lens targets inside Gaia DR4's span"
+        ],
+        [
+          25,
+          "known OGLE/KMTNet events kept as controls"
+        ],
+        [
+          5,
+          "forecasts sealed before release"
+        ]
+      ],
       "verdict": "A joint brightening-and-position fitter, tested on thousands of simulated lenses at the real target positions: a 10 solar-mass lens is detected 77% of the time for a bright star and 23% for a faint one, and no lighter lens was ever mistaken for a black hole. The honest chance of a black-hole claim from DR4 is about one in ten; any deflection goes to a referee first. Five forecasts are sealed.",
       "cases": [
         "OS-0016",
@@ -24,7 +65,20 @@
       "date": "2026-11-02",
       "state": "pipeline built and rehearsed on DR3; forecasts sealed",
       "scale": "one command · 26 sealed predictions · rehearsal on DR3 found nothing new and four bugs",
-      "funnel": [[26, "predictions sealed before release"], [67, "Gaia classifier lenses absent from DR3's catalogue, re-tested"], [61, "strong NEOWISE events in DR4's span"]],
+      "funnel": [
+        [
+          26,
+          "predictions sealed before release"
+        ],
+        [
+          67,
+          "Gaia classifier lenses absent from DR3's catalogue, re-tested"
+        ],
+        [
+          61,
+          "strong NEOWISE events in DR4's span"
+        ]
+      ],
       "verdict": "A one-command release-day pipeline: it confirms what ESA released, grades every sealed prediction, and runs targeted searches on Oddsky's candidate lists. The DR3 rehearsal reproduced earlier results exactly and caught a format change that would have broken every DR4 light curve, fixed in advance. Five search forecasts are sealed.",
       "cases": [
         "OS-0020",
@@ -42,7 +96,24 @@
       "date": "2026-11-02",
       "state": "first full run done and refereed; three new repeating sources are cases",
       "scale": "318 galaxies within 10 Mpc · 25,365 light curves · WISE 2010-2024 + Spitzer 2004-2019 · 1,433 injection tests",
-      "funnel": [[25365, "light curves searched"], [310, "repeating, both bands, both seasons"], [12, "refereed with Spitzer and archives"], [3, "new repeating sources opened as cases (OS-0033, OS-0034, OS-0035)"]],
+      "funnel": [
+        [
+          25365,
+          "light curves searched"
+        ],
+        [
+          310,
+          "repeating, both bands, both seasons"
+        ],
+        [
+          12,
+          "refereed with Spitzer and archives"
+        ],
+        [
+          3,
+          "new repeating sources opened as cases (OS-0033, OS-0034, OS-0035)"
+        ]
+      ],
       "verdict": "The search recovers the NGC 2403 source (OS-0031) blind, with four cycles from 2007 to 2022. It also shows that very luminous dusty pulsating stars can mimic a dust maker in WISE data alone, so the light-curve shape and a third cycle from Spitzer decide. Two new periodic candidates survive: a source in NGC 4945 with three sharp outbursts every 5.4 years, and one in NGC 3344, next to Wolf-Rayet stars, that flares about every 10 years like the famous dust maker WR 140. A third source in M81 erupted twice, 14 years apart.",
       "cases": [
         "OS-0031",
@@ -58,7 +129,24 @@
       "date": "2026-11-01",
       "state": "v2 rerun done and refereed; three discoveries are cases",
       "scale": "318 galaxies within 10 Mpc · 334 unWISE tiles · 25 epochs 2010-2024 · 25,454 variable sources (v2)",
-      "funnel": [[25454, "variable sources in 178 galaxies (v2)"], [1721, "not ordinary pulsating or irregular variables"], [833, "not foreground stars, quasars or known objects"], [3, "confirmed unreported objects (OS-0030, OS-0031, OS-0032)"]],
+      "funnel": [
+        [
+          25454,
+          "variable sources in 178 galaxies (v2)"
+        ],
+        [
+          1721,
+          "not ordinary pulsating or irregular variables"
+        ],
+        [
+          833,
+          "not foreground stars, quasars or known objects"
+        ],
+        [
+          3,
+          "confirmed unreported objects (OS-0030, OS-0031, OS-0032)"
+        ]
+      ],
       "verdict": "Run blind, the new tool recovers the known failed-supernova candidates M31-2014-DS1 and N6946-BH1 and over a dozen known supernovae, red novae and dust-enshrouded transients. Its first discovery is an infrared flare in NGC 3239 in 2020 that no optical survey saw, now registered with the IAU as AT 2020afkm and described in TNS AstroNote 2026-308: Hubble caught a faint point source 85 days later that has since vanished, and JWST found cooling dust at the same spot in 2024. K. De's group, who flagged it independently in 2022, favour a very dusty nova from a near-infrared spectrum. The improved second run found a hidden infrared source in NGC 2403 that has flared every 5.3 years since 2007 (a dust-making binary or an extreme pulsating star; next outburst due around 2028.5) and a luminous star in NGC 55 whose dust is clearing. Four more infrared-only outbursts (NGC 4945, M81, NGC 55, IC 342) are being followed.",
       "cases": [
         "OS-0030",
@@ -73,7 +161,24 @@
       "date": "2026-11-01",
       "state": "done, refereed; ATLAS follow-up queued",
       "scale": "67 Gaia DR3 sources · Gaia DR3 epoch photometry · NEOWISE · OGLE, KMTNet, Gaia alerts, TNS, SIMBAD as references",
-      "funnel": [[67, "classifier MICROLENSING, not in Gaia's catalogue"], [28, "already catalogued lenses (OGLE, KMTNet, Gaia16aye)"], [3, "Oddsky cases found blind (OS-0026, OS-0027, OS-0029)"], [9, "apparently unreported lens candidates after the referee (3 strong)"]],
+      "funnel": [
+        [
+          67,
+          "classifier MICROLENSING, not in Gaia's catalogue"
+        ],
+        [
+          28,
+          "already catalogued lenses (OGLE, KMTNet, Gaia16aye)"
+        ],
+        [
+          3,
+          "Oddsky cases found blind (OS-0026, OS-0027, OS-0029)"
+        ],
+        [
+          9,
+          "apparently unreported lens candidates after the referee (3 strong)"
+        ]
+      ],
       "verdict": "The list was known (Rimoldini et al. 2023 counted the 67) but nobody had vetted it. Nine look like microlensing events nobody has reported, three of them strong, and about 5 to 10 are expected to be real. They fell where nobody was watching: outside OGLE's alert fields, or in the months when the bulge is too close to the Sun for ground telescopes while Gaia kept scanning. Gaia's catalogue also left out 28 lenses other surveys knew, including the famous binary lens Gaia16aye.",
       "cases": [
         "OS-0026",
@@ -88,9 +193,40 @@
       "date": "2026-10-30",
       "state": "survey done; six Gaia DR4 predictions sealed",
       "scale": "211.7 million stars · 108.3 billion NEOWISE detections · the whole sky",
-      "funnel": [[211675962, "stars with 10+ NEOWISE visits"], [3757, "single-peaked brightenings, one to six visits"], [1308, "clean, not at the first or last visit"], [118, "known microlensing events, found blind"], [122, "strong and unexplained, not yet followed up"]],
+      "funnel": [
+        [
+          211675962,
+          "stars with 10+ NEOWISE visits"
+        ],
+        [
+          3757,
+          "single-peaked brightenings, one to six visits"
+        ],
+        [
+          1308,
+          "clean, not at the first or last visit"
+        ],
+        [
+          118,
+          "known microlensing events, found blind"
+        ],
+        [
+          122,
+          "strong and unexplained, not yet followed up"
+        ]
+      ],
       "verdict": "Searching the stars the first pass skipped, those beside bright neighbours and those blended with others, matters more than the new rule for long events. The search now finds 118 known microlensing events instead of 64, and 43 of 353 catchable ones instead of 18, with the biggest gain in the crowded bulge. Its 122 strong unexplained brightenings, many of them long and colour-neutral, are where a black-hole lens would be; Six events that no optical survey caught, or that ATLAS confirmed, now carry sealed predictions for Gaia DR4, due 2 December 2026.",
-      "cases": ["OS-0020", "OS-0021", "OS-0022", "OS-0023", "OS-0024", "OS-0025", "OS-0026", "OS-0027", "OS-0029"]
+      "cases": [
+        "OS-0020",
+        "OS-0021",
+        "OS-0022",
+        "OS-0023",
+        "OS-0024",
+        "OS-0025",
+        "OS-0026",
+        "OS-0027",
+        "OS-0029"
+      ]
     },
     {
       "id": "H-0008",
@@ -99,11 +235,36 @@
       "date": "2026-10-30",
       "state": "survey done, refereed; one new event reproduced",
       "scale": "194.7 million stars · 106.7 billion NEOWISE detections · the whole sky including the Galactic plane · KMTNet, OGLE, Gaia and ZTF as references",
-      "funnel": [[194712036, "stars with 10+ NEOWISE visits"], [2465, "one-visit events in both bands"], [666, "clean, isolated brightenings"], [64, "known microlensing events, found blind"], [2, "apparently unreported: one microlensing event (OS-0018), one candidate (OS-0019)"]],
+      "funnel": [
+        [
+          194712036,
+          "stars with 10+ NEOWISE visits"
+        ],
+        [
+          2465,
+          "one-visit events in both bands"
+        ],
+        [
+          666,
+          "clean, isolated brightenings"
+        ],
+        [
+          64,
+          "known microlensing events, found blind"
+        ],
+        [
+          2,
+          "apparently unreported: one microlensing event (OS-0018), one candidate (OS-0019)"
+        ]
+      ],
       "verdict": "Without being told where to look, the search recovered 64 microlensing events that KMTNet, OGLE, Gaia and ZTF had already found, and none of the matches is a coincidence. It also found one nobody seems to have reported: OS-0018, a giant that brightened 5.4 times in September 2022 over about four months. ATLAS caught the whole event, and a point lens fits it from the optical to 4.6 microns. A second, OS-0019, brightened once by 60% but no simple lens fits it, so it stays a candidate. ATLAS follow-up of the southern events adds four more candidates, two of them unclassified Gaia alerts. NEOWISE is a real but partial lens detector: good for bright stars in the Galactic disk, nearly blind in the crowded bulge, and unable to see saturated peaks.",
       "figure": "figures/lensing_sky.png",
       "figure_caption": "Every HEALPix pixel searched (grey, by number of stars) and every clean one-night brightening, coloured by what it turned out to be. Stars: microlensing events, known (orange) and new or unreported (red: OS-0016 to OS-0019).",
-      "cases": ["OS-0018", "OS-0019", "OS-0028"]
+      "cases": [
+        "OS-0018",
+        "OS-0019",
+        "OS-0028"
+      ]
     },
     {
       "id": "H-0007",
@@ -112,9 +273,33 @@
       "date": "2026-10-29",
       "state": "two events reproduced, refereed",
       "scale": "79,191 NEOWISE light curves (W1 < 13, |b| ≥ 10°) · IRSA single exposures, Gaia DR3, ZTF, ATLAS, TESS",
-      "funnel": [[79191, "stars with 10+ NEOWISE visits"], [194, "one-visit events, equal in W1 and W2"], [99, "stellar colours, not at the first or last visit"], [41, "not already in VSX"], [1, "unexplained after vetting"]],
+      "funnel": [
+        [
+          79191,
+          "stars with 10+ NEOWISE visits"
+        ],
+        [
+          194,
+          "one-visit events, equal in W1 and W2"
+        ],
+        [
+          99,
+          "stellar colours, not at the first or last visit"
+        ],
+        [
+          41,
+          "not already in VSX"
+        ],
+        [
+          1,
+          "unexplained after vetting"
+        ]
+      ],
       "verdict": "The method works: blind, it found OS-0014, a dozen dwarf novae in outburst and two microlensing events Gaia had already caught. What nobody had reported: a red giant toward the Galactic anticentre that brightened sevenfold for a few weeks in 2017, seen by NEOWISE and ATLAS on the same night. It is a microlensing event. The lens mass is not measured; Gaia DR4 should settle it. A pass over 7,804 fainter stars turned up a second event: a halo giant that brightened at least 2.4 times in March 2020, seen by NEOWISE, ATLAS and ZTF.",
-      "cases": ["OS-0016", "OS-0017"]
+      "cases": [
+        "OS-0016",
+        "OS-0017"
+      ]
     },
     {
       "id": "H-0005",
@@ -123,7 +308,28 @@
       "date": "2026-10-28",
       "state": "candidates refereed",
       "scale": "27,076 Gaia alerts · Pan-STARRS, WISE, ZTF, ATLAS, TESS, CRTS, 2MASS and Palomar plates 1954-2026",
-      "funnel": [[27076, "Gaia Science Alerts, 2016-2025"], [173, "fading, bright, never classified"], [79, "not a known class or a young star"], [12, "dwarfs with a good parallax"], [4, "worth a dossier"]],
+      "funnel": [
+        [
+          27076,
+          "Gaia Science Alerts, 2016-2025"
+        ],
+        [
+          173,
+          "fading, bright, never classified"
+        ],
+        [
+          79,
+          "not a known class or a young star"
+        ],
+        [
+          12,
+          "dwarfs with a good parallax"
+        ],
+        [
+          4,
+          "worth a dossier"
+        ]
+      ],
       "verdict": "Every survivor was already a catalogued variable; what is new is what they are. One star has spent most of the last 35 years 3-5 magnitudes fainter. Another, catalogued as a nova-like, is an old dusty dwarf that keeps going dark.",
       "cases": []
     },
@@ -135,16 +341,39 @@
       "state": "north done, south queued",
       "scale": "2,401 candidates · ZTF and ATLAS 2015-2026 · calibrated on 48 known R CrB and dLHdC stars",
       "funnel": [
-        [2401, "R CrB candidates from WISE colours and Gaia"],
-        [1954, "not already classified"],
-        [887, "north of −30°, where ZTF looks"],
-        [473, "a usable ZTF light curve"],
-        [63, "a fast, unscheduled fade of ≥ 1 mag"],
-        [16, "not a catalogued variable"],
-        [2, "worth a case after a human looked"]
+        [
+          2401,
+          "R CrB candidates from WISE colours and Gaia"
+        ],
+        [
+          1954,
+          "not already classified"
+        ],
+        [
+          887,
+          "north of −30°, where ZTF looks"
+        ],
+        [
+          473,
+          "a usable ZTF light curve"
+        ],
+        [
+          63,
+          "a fast, unscheduled fade of ≥ 1 mag"
+        ],
+        [
+          16,
+          "not a catalogued variable"
+        ],
+        [
+          2,
+          "worth a case after a human looked"
+        ]
       ],
       "verdict": "No new R CrB star yet: every northern fader was already in a catalogue. The survivor is stranger: a dust-shrouded star eclipsed year after year on a 385.7-day clock, confirmed independently by ATLAS.",
-      "cases": ["OS-0015"]
+      "cases": [
+        "OS-0015"
+      ]
     },
     {
       "id": "H-0002",
@@ -154,17 +383,44 @@
       "state": "done",
       "scale": "146.6 billion NEOWISE detections · 164.7 million stars · 1 h 53 min on 24 spot VMs · a few dollars",
       "funnel": [
-        [164700000, "stars read, every NEOWISE visit 2014-2024"],
-        [18100000, "steady, testable photospheres"],
-        [224, "infrared afterglow flags"],
-        [80, "real stars with a Gaia parallax"],
-        [43, "no blend, no paired neighbour"],
-        [26, "the glow sits on the star"],
-        [6, "main sequence, no dust before"],
-        [2, "not in any catalogue"]
+        [
+          164700000,
+          "stars read, every NEOWISE visit 2014-2024"
+        ],
+        [
+          18100000,
+          "steady, testable photospheres"
+        ],
+        [
+          224,
+          "infrared afterglow flags"
+        ],
+        [
+          80,
+          "real stars with a Gaia parallax"
+        ],
+        [
+          43,
+          "no blend, no paired neighbour"
+        ],
+        [
+          26,
+          "the glow sits on the star"
+        ],
+        [
+          6,
+          "main sequence, no dust before"
+        ],
+        [
+          2,
+          "not in any catalogue"
+        ]
       ],
       "verdict": "ASASSN-21qj recovered blind at 46σ. One survivor vanished for 95 days in 2017. A re-run with a bug fixed tested 24.5 million photospheres instead of 18.1 million and found no new survivor.",
-      "cases": ["OS-0014", "OS-0013"]
+      "cases": [
+        "OS-0014",
+        "OS-0013"
+      ]
     },
     {
       "id": "H-0001",
@@ -174,13 +430,29 @@
       "state": "done",
       "scale": "Gaia DR3 variability catalogue · ZTF · TESS",
       "funnel": [
-        [22125, "Sun-like stars Gaia saw fade"],
-        [2020, "not already eclipsing binaries"],
-        [18, "a deep dip, confirmed twice"],
-        [3, "not explained by any catalogue"]
+        [
+          22125,
+          "Sun-like stars Gaia saw fade"
+        ],
+        [
+          2020,
+          "not already eclipsing binaries"
+        ],
+        [
+          18,
+          "a deep dip, confirmed twice"
+        ],
+        [
+          3,
+          "not explained by any catalogue"
+        ]
       ],
       "verdict": "Two new eclipsing binaries, which Gaia's pipeline had given periods of 53 and 36 minutes instead of 2.5 and 11.9 days. And one 'invisible companion' that our own referee proved was a folding alias before anyone announced it.",
-      "cases": ["OS-0011", "OS-0012", "OS-0010"]
+      "cases": [
+        "OS-0011",
+        "OS-0012",
+        "OS-0010"
+      ]
     },
     {
       "id": "H-0003",

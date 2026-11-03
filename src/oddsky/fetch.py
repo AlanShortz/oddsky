@@ -131,5 +131,11 @@ def fetch(store: CaseStore, surveys: tuple[str, ...] | list[str] = SURVEYS) -> d
 
     store.write_provenance(prov)
     store.write_context(ctx)
-    store.save(case)
+    # Archive fetches can take an hour (ATLAS queues); claims, hypotheses and predictions may have been recorded meanwhile.
+    # Never write back the Case loaded at the start: reload it and carry over only what this function changed (OS-0036 lost
+    # five claims and a prediction to a stale save on 2026-11-03).
+    fresh = store.load()
+    if case.target is not None and fresh.target is not None:
+        fresh.target.gaia_source_id = case.target.gaia_source_id
+    store.save(fresh)
     return report

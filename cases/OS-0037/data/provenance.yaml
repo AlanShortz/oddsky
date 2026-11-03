@@ -1,0 +1,83 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  query:
+    adql: SELECT source_id, ra, dec, parallax, parallax_over_error, pmra, pmdec, ruwe, phot_g_mean_mag,
+      phot_bp_mean_mag, phot_rp_mean_mag, bp_rp, phot_variable_flag, teff_gspphot, distance_gspphot, non_single_star,
+      DISTANCE(POINT(326.25563338677,29.56164291393), POINT(ra,dec))*3600 AS sep_arcsec FROM gaiadr3.gaia_source
+      WHERE 1=CONTAINS(POINT(ra,dec), CIRCLE(326.25563338677,29.56164291393,0.008333333333333333)) ORDER
+      BY sep_arcsec
+  retrieved_at: '2026-11-03T22:49:10+00:00'
+  rows_raw: 4
+  rows_kept: 4
+  cuts: []
+  notes: []
+  status: ok
+allwise:
+  archive: IRSA AllWISE (allwise_p3as_psd)
+  status: ok
+  rows_kept: 1
+  query:
+    cntr: 3269130201351010497
+  notes:
+  - row fetched 2026-11-02 by hunts/H-0016 (fetch_allwise.py), copied 2026-11-03
+gaia_epoch:
+  archive: ESA Gaia epoch photometry (datalink; DR4 if published, else DR3)
+  query:
+    source_id: 1801411783339764608
+    release_used: null
+  retrieved_at: '2026-11-03T22:52:25+00:00'
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  notes:
+  - 'Gaia DR4 request failed (RuntimeError: https://gea.esac.esa.int/data-server/data unavailable after
+    1 attempts: 500); fell back to the next release'
+  - no Gaia epoch photometry (DR3 published it only for sources Gaia flagged as variable)
+  status: empty
+neowise_exp:
+  archive: IRSA Gator neowiser_p1bs_psd (single exposures)
+  query:
+    catalog: neowiser_p1bs_psd
+    spatial: cone
+    radius: 3.0
+    radunits: arcsec
+    objstr: 326.25563338677 29.56164291393
+    outfmt: 1
+    selcols: mjd,w1mpro,w1sigmpro,w2mpro,w2sigmpro,qual_frame,qi_fact,saa_sep,moon_masked,cc_flags,ph_qual,w1sat,w2sat,nb,na,w1snr,w2snr,w1rchi2,w2rchi2
+  retrieved_at: '2026-11-03T23:17:07+00:00'
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  notes:
+  - '[struct stat="ERROR", msg="12170: HY000 :[unixODBC][Oracle][ODBC][Ora]ORA-12170: TNS:Connect timeout
+    occurred . SQLConnect failed. "]'
+  status: unavailable
+tess:
+  archive: MAST TESS light curves via lightkurve
+  query:
+    ra: 326.25563338677
+    dec: 29.56164291393
+    authors:
+    - SPOC
+    - TESS-SPOC
+    - QLP
+  retrieved_at: '2026-11-03T23:17:08+00:00'
+  rows_raw: 75413
+  rows_kept: 15084
+  cuts:
+  - binned to 10-min medians per sector (good and flagged cadences kept apart)
+  notes:
+  - 'TESS magnitudes are relative (delta-mag vs each sector''s median); sectors: 15, 55, 56, 82, 83'
+  status: ok
+neowise:
+  archive: IRSA NEOWISE-R single exposures (Oddsky quality cuts, visit medians)
+  status: ok
+  rows_raw: 589
+  rows_kept: 42
+  cuts: []
+  query:
+    ra: 326.255641
+    dec: 29.561656
+  notes:
+  - fetched 2026-11-02 by hunts/H-0016/scripts/neowise_lc.py (oddsky.data.neowise.lightcurve) and copied
+    here on 2026-11-03 because IRSA returned 504s
