@@ -1,0 +1,297 @@
+id: OS-0036
+title: 'HM Sagittae: the symbiotic nova of 1975, fifty years on'
+hook: A Mira and a white dwarf that erupted in 1975 and never quite came back; its I band fell 1.5 mag
+  in 2021-22 (Goldman et al. 2022) and the archives now hold four more years.
+status: observation
+target:
+  name: HM Sge
+  ra: 295.4878654
+  dec: 16.7443556
+  aliases:
+  - V* HM Sge
+  - HM Sagittae
+  - AFGL 2439
+  - IRAS 19396+1637
+  - Gaia DR3 1820929728207466368
+  gaia_source_id: 4318934003785783680
+  otype: symbiotic nova (D-type, Mira + WD)
+summary: ''
+claims:
+- id: C1
+  text: 'Between 2019.0-2021.5 and 2026.0-2026.9 HM Sge faded in every AAVSO band: V by 0.95 mag (12.22
+    to 13.18, 324 and 250 points), B by 0.90, R by 1.65, I by 0.84 at a random pulsation phase, visual
+    by 0.9.'
+  tag: computed
+  calls:
+  - K12
+  - K13
+  - K14
+  - K15
+  - K16
+  author: unknown-agent
+  at: '2026-11-03T16:36:26+00:00'
+- id: C2
+  text: 'The fade grows with wavelength from B and V (0.9 mag) to R (1.65 mag): V-R went from 1.3 (2018-2021
+    yearly medians) to 0.53 (2026), while B-V stayed at 0.45-0.5. The component that dominates R and I,
+    the Mira, lost more light than the nebular continuum that dominates B and V.'
+  tag: computed
+  calls:
+  - K12
+  - K13
+  - K14
+  author: unknown-agent
+  at: '2026-11-03T16:36:27+00:00'
+- id: C3
+  text: The V-band changepoint detector puts the onset of the fade at MJD 59972 (2023 Jan 27), with a
+    0.54 mag step between the medians before and after; the yearly medians show the decline running at
+    about 0.2-0.3 mag/yr from 2022 through November 2026 with no sign of flattening.
+  tag: computed
+  calls:
+  - K20
+  author: unknown-agent
+  at: '2026-11-03T16:36:27+00:00'
+- id: C4
+  text: In November 2026 HM Sge is 2.5 mag fainter visually than in 1977-1985 (10.6 to 13.1) and fainter
+    than at any time since the 1975 outburst; the 1977-2021 record is a smooth decline to 12.2 with no
+    earlier fade of this kind.
+  tag: computed
+  calls:
+  - K21
+  - K16
+  author: unknown-agent
+  at: '2026-11-03T16:36:28+00:00'
+- id: C5
+  text: 'The Mira pulsation is unchanged by the fade: AAVSO I 2008-2021.5 gives P = 530 d (Lomb-Scargle;
+    540 d from a sinusoid-plus-trend fit; literature 527-534 d), and the 2022.5-2026.9 I data detrended
+    with a quadratic still pulsate at 540 d with a 0.9 mag amplitude. The I band sits about 1.8 mag below
+    the extrapolation of its 2008-2021 trend (-0.076 mag/yr brightening plus pulsation) by 2025-2026.'
+  tag: computed
+  calls:
+  - K17
+  - K18
+  retracted: The 1.8 mag I-band shortfall came from a trend fitted across observers whose I zero points
+    differ by up to 1 mag (GSAD 11.57 vs MMIP 12.73 in 2026, no observer spans 2019-2021 and 2026). Replaced
+    by the maximum-to-maximum statement in C10, which rests on the pulsation maxima each observed by at
+    least one observer with many points.
+  author: unknown-agent
+  at: '2026-11-03T16:36:29+00:00'
+- id: C6
+  text: 'V was 0.24 mag brighter in 2019.0-2021.5 than in 2014-2017 (12.22 vs 12.47): the 2018-2021 high-activity
+    episode of Ikonnikova et al. (2026) is in the AAVSO V record.'
+  tag: computed
+  calls:
+  - K22
+  author: unknown-agent
+  at: '2026-11-03T16:36:30+00:00'
+- id: C7
+  text: 'NEOWISE cannot follow this star: all five visits are saturated (W1 about 1.8, W2 about 0.4),
+    so the mid-infrared behaviour through the fade is not measurable from WISE.'
+  tag: observed
+  calls:
+  - K23
+  author: unknown-agent
+  at: '2026-11-03T16:36:31+00:00'
+- id: C8
+  text: The 2022-2025 decline to a five-decade minimum is already reported (Ikonnikova et al. 2026, Astron.
+    Rep. 70, 561, arXiv:2603.11777, UBV + JHKLM to 2025; Goldman et al. 2022 RNAAS 6, 159 caught its start
+    in I). An HST proposal (Hack et al. 2025, GO 18051) reads the dimming as a new mass ejection with
+    dust formation beside a jet found in 2021 HST images. What is new here is the record through November
+    2026, the wavelength dependence of the fade, and the unchanged pulsation.
+  tag: inferred
+  calls:
+  - K12
+  - K14
+  - K18
+  author: unknown-agent
+  at: '2026-11-03T16:36:32+00:00'
+- id: C9
+  text: 'TESS (sectors 14, 40, 41, 54, 81: 2019 Jul, 2021 Jul-Aug at the onset of the fade, 2022 Jul,
+    2024 Jul; 15,066 points, 25-33% contaminated per SPOC) shows no flickering and no periodicity: robust
+    scatter 2.1 mmag over all sectors, sub-day scatter 1.0-1.9 mmag after a one-day running median, day-to-day
+    range 6-27 mmag, strongest periodogram peaks 1-7 mmag at 0.07-0.28 c/d (sector trends). The accreting
+    white dwarf leaves no hours-scale optical signature at the 2 mmag level before or during the fade.'
+  tag: computed
+  calls:
+  - K40
+  author: unknown-agent
+  at: '2026-11-03T18:15:30+00:00'
+- id: C10
+  text: 'Observer check. V: the 2019-2021 level (12.17-12.29 from OAAA, RFDA, CCT, BVS, MGIC, DFS) and
+    the 2026 level (13.15-13.23 from DFS, CDZ, SFOA, MJOE, BPO) are each set by five or more observers
+    who agree to 0.1 mag, so the 0.95 mag V fade is not one observer. R: 2021 at 11.0-11.2 (five observers)
+    and 2026 at 12.4-12.9 (DFS 12.62, CDZ 12.73, GSAD 12.41, MMIP 12.85, MJOE 12.75): a fade of 1.6 +-
+    0.2 mag. B: DFS 13.60 against CDZ 14.05 in 2026, so B carries a 0.45 mag observer offset and its fade
+    is quoted from DFS alone (0.96). I: no observer spans both epochs and 2026 levels differ by 1.2 mag
+    between observers; I is used only through its pulsation maxima.'
+  tag: computed
+  calls:
+  - K42
+  - K43
+  - K12
+  - K14
+  author: unknown-agent
+  at: '2026-11-03T18:20:51+00:00'
+- id: C11
+  text: 'The I-band pulsation maxima, each from an observer with dozens of points, fell from 10.19 (2021.51;
+    BVS, MGIC) to 10.69 (2023.15; RFDA) to 11.50 (2026.11; GSAD, DKS): 1.3 mag in 4.6 years at the same
+    pulsation phase, against 0.95 in V over the same span. The maxima are 1.64 and 2 x 1.48 yr apart,
+    consistent with the 530-540 d period with the cycle-to-cycle jitter Miras show; the next maximum is
+    expected around 2027 Jul-Aug.'
+  tag: computed
+  calls:
+  - K17
+  - K18
+  - K15
+  author: unknown-agent
+  at: '2026-11-03T18:20:52+00:00'
+- id: C12
+  text: 'Same-night pairs: R moves 1.73 times as much as V (1,528 pairs, r = 0.986) and B 1.04 times V
+    (1,576 pairs, r = 0.967) over 2019-2026, almost all from one observer (DFS) so free of cross-observer
+    offsets. For dust in front of a single source the slopes would be 0.81 and 1.32; the opposite ordering
+    means the fading light is redder than the light that remains: the Mira is being lost from the sum
+    faster than the nebula.'
+  tag: computed
+  calls:
+  - K44
+  - K45
+  author: unknown-agent
+  at: '2026-11-03T18:20:53+00:00'
+- id: C13
+  text: Ikonnikova et al. (2026) report, from UBV and JHKLM photometry to 2025 with no AAVSO or R/I data,
+    that the near-infrared brightness fell to early-1990s levels, that J-H became bluer and K-L, L-M did
+    not change, that the expected reddening of a dust-formation episode was not observed, and that the
+    Raman O VI and H-beta behaviour point to the hot component; they derive P = 532 +- 5 d from J (1978-2025)
+    with peak-to-peak amplitudes of 1.4 (J) to 0.7 (M) mag, and do not mention the 2021 HST jet. The optical
+    R-versus-V behaviour reported here (C12) is in neither paper.
+  tag: observed
+  calls:
+  - K44
+  author: unknown-agent
+  at: '2026-11-03T18:22:16+00:00'
+hypotheses:
+- id: H1
+  klass: dust_formation
+  statement: 'New dust formed in the system after the 2018-2021 high-activity episode (a mass ejection,
+    as the 2021 HST jet and the HST GO 18051 proposal suggest) and is thickening in front of the Mira:
+    that is why R and I fell 1.6-2 mag while the nebular B and V fell 0.9, why the pulsation is untouched,
+    and why the decline has run for four years without flattening.'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C5
+  conflicts: []
+  would_falsify: A rapid recovery in R and I without a change in B and V (dust clearing would look like
+    that, so recovery alone does not falsify); falsified if JHK photometry shows the Mira photosphere
+    itself fading with the near-infrared colours unchanged, or if the fade is grey from B to I over the
+    next two years.
+  status: live
+  confidence: 0.4
+  author: unknown-agent
+  at: '2026-11-03T16:37:27+00:00'
+- id: H2
+  klass: eruptive
+  statement: 'The 1975 symbiotic-nova outburst is finally ending: the hot component and the nebula it
+    ionizes are declining (the B and V fade at 0.2-0.3 mag/yr is the nebular continuum and lines going
+    down), and the Mira-dominated bands follow because the nebular contribution to R and I was larger
+    than assumed.'
+  supports:
+  - C3
+  - C4
+  - C6
+  conflicts:
+  - C2
+  would_falsify: Emission-line fluxes (H I, He II, [Fe X], Raman O VI) holding steady while B and V fade;
+    or the I band recovering while B and V keep falling.
+  status: live
+  confidence: 0.35
+  author: unknown-agent
+  at: '2026-11-03T16:37:28+00:00'
+- id: H3
+  klass: dust_occultation
+  statement: A long-period change in the optical depth of the existing circumstellar dust shell (Ikonnikova
+    et al. 2026 see such changes in JHKLM) is obscuring the Mira, unrelated to a new ejection; the B/V
+    decline is the separate post-1975 trend accelerating.
+  supports:
+  - C2
+  - C5
+  conflicts: []
+  would_falsify: Mid-infrared dust emission unchanged while the optical fades would favour this over new
+    dust; a brightening recovery timed with the 46-yr orbital hypothesis would favour new ejecta.
+  status: live
+  confidence: 0.2
+  author: unknown-agent
+  at: '2026-11-03T16:37:28+00:00'
+predictions:
+- id: P1
+  statement: 'The fade continues: the AAVSO V median over 2027 Jun 1 - Dec 31 will be fainter than 13.35
+    (the 2026 Oct-Nov level is 13.18, falling 0.2-0.3 mag/yr).'
+  check:
+    series: AAVSO:V
+    start: 61558.0
+    end: 61771.0
+    statistic: median
+    op: '>'
+    value: 13.35
+  probability: 0.7
+  resolve_by: '2028-02-01'
+  author: unknown-agent
+  registered_at: '2026-11-03T16:36:51+00:00'
+- id: P2
+  statement: 'Gaia DR4 (2 Dec 2026) will show the 2018-2021 high-activity episode: the median G over 2019
+    Jan 1 - 2020 Jan 20 will be brighter than the 2014.6-2017.5 median by more than 0.1 mag (AAVSO V rose
+    0.24 mag between those windows).'
+  check:
+    series: GAIA:G
+    start: 58484.0
+    end: 58868.0
+    statistic: median
+    baseline:
+    - 56863.0
+    - 57922.0
+    op: <
+    value: -0.1
+  probability: 0.6
+  resolve_by: '2027-03-01'
+  author: unknown-agent
+  registered_at: '2026-11-03T16:36:52+00:00'
+- id: P3
+  statement: 'The Mira keeps its clock through the fade: the next I-band pulsation maximum falls near
+    2027 Jun 19 (2021 Jul 20 + 4 x 540 d), so the AAVSO I median over 2027 May 1 - Aug 15 will be brighter
+    than the 2026 Oct 1 - Dec 31 median by more than 0.3 mag despite the continuing decline.'
+  check:
+    series: AAVSO:I
+    start: 61526.0
+    end: 61632.0
+    statistic: median
+    baseline:
+    - 61314.0
+    - 61405.0
+    op: <
+    value: -0.3
+  probability: 0.6
+  resolve_by: '2027-10-01'
+  author: unknown-agent
+  registered_at: '2026-11-03T16:36:53+00:00'
+- id: P4
+  statement: 'Corrected timing of P3 from the observed 2023.15 and 2026.11 maxima (P3 used 2021 Jul 20
+    + 4 x 540 d and lands too early): the next I-band pulsation maximum falls in 2027 Jun-Sep, so the
+    AAVSO I median over 2027 Jun 1 - Oct 1 will be brighter than the 2026 Oct 1 - Dec 31 median (near
+    pulsation minimum) by more than 0.3 mag, fade or no fade.'
+  check:
+    series: AAVSO:I
+    start: 61557.0
+    end: 61679.0
+    statistic: median
+    baseline:
+    - 61314.0
+    - 61405.0
+    op: <
+    value: -0.3
+  probability: 0.65
+  resolve_by: '2027-11-15'
+  author: unknown-agent
+  registered_at: '2026-11-03T18:20:54+00:00'
+literature: []
+featured: false
+created_at: '2026-11-03T16:26:44+00:00'

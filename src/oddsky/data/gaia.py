@@ -107,6 +107,10 @@ def context(target: pd.Series) -> dict:
         "teff_gspphot": _f(target.get("teff_gspphot")),
         "non_single_star": int(target.get("non_single_star", 0) or 0),
         "phot_variable_flag": str(target.get("phot_variable_flag", "")),
+        "ra": _f(target.get("ra")),
+        "dec": _f(target.get("dec")),
+        "pmra": _f(target.get("pmra")),
+        "pmdec": _f(target.get("pmdec")),
     }
     if np.isfinite(plx) and plx > 0 and np.isfinite(poe) and poe > 5:
         dist_pc = 1000.0 / plx

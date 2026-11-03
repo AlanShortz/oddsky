@@ -8,12 +8,12 @@ import pandas as pd
 
 from .case.model import Case, Target
 from .case.store import CaseStore
-from .data import aavso, asassn, atlas, gaia, gaia_epoch, neowise, simbad, tess, ztf
+from .data import aavso, allwise, asassn, atlas, gaia, gaia_epoch, neowise, simbad, tess, ztf
 from .paths import cases_dir
 
 log = logging.getLogger("oddsky")
 
-SURVEYS = ("gaia", "gaia_epoch", "neowise", "aavso", "ztf", "atlas", "asassn", "tess")
+SURVEYS = ("gaia", "allwise", "gaia_epoch", "neowise", "aavso", "ztf", "atlas", "asassn", "tess")
 
 
 def open_case(name: str, title: str | None = None, hook: str = "", ra: float | None = None,
@@ -86,6 +86,15 @@ def fetch(store: CaseStore, surveys: tuple[str, ...] | list[str] = SURVEYS) -> d
             nb = gaia.neighbors(cone, int(tgt.source_id))
             ctx["neighbors"] = nb.round(4).to_dict(orient="records")
         report["gaia"] = {"status": p.status, "rows": p.rows_kept}
+
+    if "allwise" in surveys:
+        # The AllWISE (2010-11) catalogue row: the Skeptic tests its profile-fit photometry (H-0016), and it is the only
+        # mid-infrared measurement of the star before NEOWISE.
+        row, p = allwise.catalog(t.ra, t.dec, 3.0)
+        prov["allwise"] = p.model_dump()
+        if row is not None:
+            ctx["allwise"] = row
+        report["allwise"] = {"status": p.status, "rows": p.rows_kept}
 
     if "gaia_epoch" in surveys and case.target.gaia_source_id:
         record("gaia_epoch", *gaia_epoch.lightcurve(case.target.gaia_source_id))
