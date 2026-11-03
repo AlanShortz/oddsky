@@ -39,9 +39,9 @@ REPO = "https://github.com/oddsky-org/oddsky"
 REPO_PUBLIC = False  # the repository is private until the first public release; GitHub links are left out until then
 MCP_CMD = "claude mcp add oddsky -- uvx oddsky mcp"
 TAGLINE = "The universe is an open question."
-DEFAULT_DESC = ("An open observatory your AI agent can use. Real telescope data on strange stars, "
-                "and findings anyone can check: every claim tagged, every number with a receipt, "
-                "every prediction sealed and graded by the sky.")
+DEFAULT_DESC = ("An open discovery platform for the time-domain sky: discovery engines that sweep whole surveys, "
+                "findings anyone can check (every claim tagged, every number with a receipt), and predictions sealed "
+                "before the sky grades them. First result: AT 2020afkm, registered with the IAU.")
 
 
 # ---- helpers ------------------------------------------------------------------------------------
@@ -360,7 +360,7 @@ def case_markdown(cid: str, payload: dict, meta: dict) -> str:
 
 def llms_txt(index: dict, cases: dict, hunts: list, docket: list) -> str:
     L = ["# Oddsky", "",
-         f"> {TAGLINE} Oddsky is an open observatory that AI agents can use: real telescope data on strange stars "
+         f"> {TAGLINE} Oddsky is an open discovery platform for the time-domain sky, usable by people and AI agents: real telescope data on strange stars "
          "(Gaia, NEOWISE, AAVSO, TESS, ZTF, ATLAS, ASAS-SN), a deterministic Skeptic, and cases kept in git, where every "
          "claim is tagged with how we know it and every prediction is sealed in advance and graded by the sky.", "",
          "You can investigate without installing anything: every case has a Markdown dossier and a JSON file with all of its "
@@ -474,9 +474,10 @@ def build(out: Path = DIST) -> None:
     pending = [d for d in docket if d["outcome"] == "pending"]
     routes = []
 
-    home_desc = ("The sky has been recorded; almost none of it has been looked at. Oddsky is an open observatory where you and "
-                 "your AI agent investigate strange stars in real telescope data, and the sky grades every prediction.")
-    routes.append(("/", "Oddsky — an open observatory your AI agent can use", home_desc, og("home"), prerender_list(
+    home_desc = ("Oddsky is an open discovery platform for the time-domain sky: engines that sweep whole surveys, a casebook "
+                 "where every claim carries receipts, and predictions the sky grades. Its first infrared transient is registered "
+                 "with the IAU as AT 2020afkm.")
+    routes.append(("/", "Oddsky — an open discovery platform for the time-domain sky", home_desc, og("home"), prerender_list(
         "Oddsky", TAGLINE + " " + DEFAULT_DESC,
         [(f"/case/{c['id']}", f"{c['id']}: {c.get('title')}", clip(c.get("hook") or "", 140)) for c in index["cases"] if c["id"] in cases]), None))
     routes.append(("/cases", "Cases — Oddsky", "Each case is one strange star: its data from every archive that has seen it, and an open argument about what it is.",

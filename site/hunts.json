@@ -2,6 +2,40 @@
   "_comment": "Editorial summaries of each hunt for the website. The README in hunts/<ID>/ is the source of truth; these numbers are copied from its funnel table. A hunt whose directory is missing is skipped, so an entry can land before its hunt merges.",
   "hunts": [
     {
+      "id": "H-0015",
+      "title": "Weighing dark lenses with Gaia",
+      "question": "Only one isolated stellar-mass black hole is known. When a dark object passes in front of a star it brightens the star and also shifts its position by a fraction of a milliarcsecond, and the shift reveals the lens mass. Can Gaia DR4's first per-transit positions weigh the lenses of Oddsky's own long microlensing events?",
+      "date": "2026-11-02",
+      "state": "engine built and refereed; forecasts sealed; runs on Gaia DR4 day",
+      "scale": "109 lens targets in DR4's span · 325 matched control stars · 2,900 simulated lenses for the acceptance test",
+      "funnel": [[109, "lens targets inside Gaia DR4's span"], [25, "known OGLE/KMTNet events kept as controls"], [5, "forecasts sealed before release"]],
+      "verdict": "A joint brightening-and-position fitter, tested on thousands of simulated lenses at the real target positions: a 10 solar-mass lens is detected 77% of the time for a bright star and 23% for a faint one, and no lighter lens was ever mistaken for a black hole. The honest chance of a black-hole claim from DR4 is about one in ten; any deflection goes to a referee first. Five forecasts are sealed.",
+      "cases": [
+        "OS-0016",
+        "OS-0020",
+        "OS-0021",
+        "OS-0026"
+      ]
+    },
+    {
+      "id": "H-0014",
+      "title": "Gaia DR4 day",
+      "question": "Gaia DR4 (2 December 2026) publishes 5.5 years of measurements for some 2.8 billion sources, the largest time-domain release yet. What can be tested, and found, within hours of release?",
+      "date": "2026-11-02",
+      "state": "pipeline built and rehearsed on DR3; forecasts sealed",
+      "scale": "one command · 26 sealed predictions · rehearsal on DR3 found nothing new and four bugs",
+      "funnel": [[26, "predictions sealed before release"], [67, "Gaia classifier lenses absent from DR3's catalogue, re-tested"], [61, "strong NEOWISE events in DR4's span"]],
+      "verdict": "A one-command release-day pipeline: it confirms what ESA released, grades every sealed prediction, and runs targeted searches on Oddsky's candidate lists. The DR3 rehearsal reproduced earlier results exactly and caught a format change that would have broken every DR4 light curve, fixed in advance. Five search forecasts are sealed.",
+      "cases": [
+        "OS-0020",
+        "OS-0021",
+        "OS-0022",
+        "OS-0023",
+        "OS-0024",
+        "OS-0025"
+      ]
+    },
+    {
       "id": "H-0013",
       "title": "Stars that make dust on a schedule",
       "question": "Some massive binary stars throw off a shell of dust each time their two stars swing close, so they brighten in the infrared on a fixed period. Fewer than a dozen are known outside our galaxy. What does a systematic search of fourteen years of WISE data, extended with Spitzer back to 2004, find in 318 nearby galaxies?",

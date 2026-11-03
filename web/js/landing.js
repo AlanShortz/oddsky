@@ -43,13 +43,13 @@ function why() {
       h('h2', { id: 'vz-h', class: 'vz-h' }, 'The sky has been recorded. ', h('span', null, 'Almost none of it has been looked at.')),
       p('For most of history astronomy was limited by light: how much a telescope could gather, and how often it could look. That limit has quietly fallen. Gaia has charted 1.8 billion stars. NEOWISE photographed the whole sky every six months for a decade. ZTF, ATLAS and TESS watch it night after night, and nearly all of it is public.'),
       p('What is scarce now is attention. Most of that record has never been looked at closely by anyone, and whatever is in it stays unknown until someone does.'),
-      p('Oddsky is an open-source observatory built to supply that attention. A curious person, using an AI agent as the instrument, can look closely at stars no one has examined and leave behind work that others can check. The tools make attention cheap, so what matters now is where it is directed, and how honestly.'),
-      h('p', { class: 'vz-aim' }, 'The question Oddsky exists to ask: can an interested amateur, armed with increasingly capable AI, add something true to what is known?'),
+      p('Oddsky is an open discovery platform built to supply that attention: discovery engines that sweep whole surveys for a signature, a casebook where every finding is argued in the open, and a ledger on which predictions are sealed before the sky grades them. People and their AI agents work from the same instruments and leave behind work anyone can check.'),
+      h('p', { class: 'vz-aim' }, 'The engines are already finding things: a new infrared transient registered with the IAU, microlensing events confirmed by Gaia, and stars in other galaxies that flare on a schedule. We are only getting started.'),
       h('figure', { class: 'vz-quote' }, h('blockquote', null, '“The prize is the pleasure of finding the thing out, the kick in the discovery, the observation that other people use it. Those are the real things.”'), h('figcaption', null, 'Richard P. Feynman')),
       h('dl', { class: 'vz-stats' },
-        h('div', null, h('dt', null, 'stars charted by Gaia'), h('dd', { class: 'mono' }, '1.8 billion')),
-        h('div', null, h('dt', null, 'years NEOWISE mapped the whole sky in the infrared, twice a year'), h('dd', { class: 'mono' }, '10')),
-        h('div', null, h('dt', null, 'alerts a night the Rubin Observatory is designed to send'), h('dd', { class: 'mono' }, '~10 million')))));
+        h('div', null, h('dt', null, 'infrared measurements searched for microlensing, the whole sky'), h('dd', { class: 'mono' }, '146.6 billion')),
+        h('div', null, h('dt', null, 'nearby galaxies difference-imaged across fourteen years of WISE'), h('dd', { class: 'mono' }, '318')),
+        h('div', null, h('dt', null, 'predictions sealed before Gaia DR4, released 2 December 2026'), h('dd', { class: 'mono' }, '26')))));
   if ('IntersectionObserver' in window && !reduce()) {
     const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-lit'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -18% 0px' });
     sec.querySelectorAll('.vz-h, .vz-p, .vz-aim, .vz-quote, .vz-stats').forEach((x) => { x.classList.add('vz-dim'); io.observe(x); });
@@ -190,7 +190,7 @@ const PILLARS = [
   { k: 'Instruments', h: 'Your agent is the instrument.', p: 'Connect any AI agent to a working observatory in one line: live archive queries, periodograms, dip finders, colour and infrared analysis, a notebook that keeps. No install, no account wrangling, no API keys.', v: terminal },
   { k: 'Archives', h: 'A century of sky, on one time axis.', p: 'Every major public survey that has watched a star, fetched, quality-cut and lined up together, from photographic-era amateur estimates to last night’s survey frames.', v: coverage },
   { k: 'Receipts', h: 'Show your work. Then try to break it.', p: 'Claims are tagged observed, computed, inferred or speculated. Numbers carry receipts. A deterministic Skeptic asks the boring questions before anyone gets excited, and referees, human or AI, are invited to tear it down.', v: claimCard },
-  { k: 'Hunts', h: 'Ask the whole sky a question.', p: 'Go beyond one star: sweep hundreds of millions of them for a signature, publish every cut of the funnel, and hand the few survivors to careful investigation.', v: funnelVig },
+  { k: 'Discovery engines', h: 'Ask the whole sky a question.', p: 'Purpose-built engines sweep entire surveys for a signature: an all-sky NEOWISE microlensing search, mid-infrared difference imaging of every star-forming galaxy within 10 Mpc, a detector for stars that flare on a schedule, and a release-day pipeline for Gaia DR4 that weighs dark lenses by their pull on starlight. Every cut of every funnel is published, and the few survivors go to careful investigation.', v: funnelVig },
   { k: 'The Sky Ledger', h: 'Let the universe grade you.', p: 'A good explanation risks something. Seal a machine-checkable prediction with a probability, and the sky answers when new data arrives. Calibration, for people and for models, accumulates on a public scoreboard.', v: ledgerVig },
   { k: 'Open', h: 'Open all the way down.', p: 'Cases are directories, review is a pull request, and the code is MIT licensed. Your observer code credits your work, the way AAVSO has credited its observers for a century.', v: openVig },
 ];
@@ -204,20 +204,23 @@ function pillars() {
       h('div', { class: 'pl-vis' }, x.v()))));
 }
 
-// ---- the first stress test ---------------------------------------------------------------------------------------
-function stressTest(index) {
+// ---- results ----------------------------------------------------------------------------------------------------
+function results(index) {
   const cases = new Map(arr(index?.cases).map((c) => [c.id, c]));
   const card = (id, tag, line) => cases.has(id) ? h('a', { class: 'st-card', href: link(`case/${id}`) },
     h('p', { class: 'mono st-tag' }, `${id} · ${tag}`), h('h3', null, cases.get(id).title), h('p', null, line)) : null;
   return h('section', { class: 'stress' },
-    h('header', { class: 'pl-head' }, h('p', { class: 'kicker' }, 'The first stress test'),
-      h('h2', null, 'Does the premise hold? ', h('span', null, 'We’re finding out in public.'))),
-    h('p', { class: 'stress-lede' }, 'The first stars an Oddsky agent turned up are now with a professional astronomer for scrutiny. If one survives, the premise holds. If none does, back to the drawing board. Either way, the record stays here.'),
+    h('header', { class: 'pl-head' }, h('p', { class: 'kicker' }, 'Results'),
+      h('h2', null, 'What the engines have found, ', h('span', null, 'and what we got wrong.'))),
+    h('p', { class: 'stress-lede' }, 'Oddsky’s first infrared transient is registered with the IAU as ',
+      h('a', { href: 'https://www.wis-tns.org/object/2020afkm', rel: 'noopener', target: '_blank' }, 'AT 2020afkm'), ' and described in ',
+      h('a', { href: 'https://www.wis-tns.org/astronotes/astronote/2026-308', rel: 'noopener', target: '_blank' }, 'TNS AstroNote 2026-308'),
+      '; a professional group had flagged it independently in 2022. Microlensing events found blind in NEOWISE are confirmed in Gaia and ATLAS, repeating infrared sources have turned up in four nearby galaxies, and 26 predictions are sealed for Gaia DR4 on 2 December 2026. The mistakes stay on the record too.'),
     h('div', { class: 'st-grid' },
-      card('OS-0014', 'unreported', 'A Sun-like star dimmed for about 95 days in 2017, more than 99% of its light gone at the deepest, seen by four surveys.'),
-      card('OS-0015', 'unreported eclipses', 'A dust-shrouded star eclipsed once a year, every year, on a 385.7-day clock.'),
+      card('OS-0030', 'AT 2020afkm · TNS', 'An infrared flare in NGC 3239 that no optical survey reported, with a vanishing Hubble counterpart and a JWST dust remnant.'),
+      card('OS-0026', 'confirmed by Gaia', 'Found blind in NEOWISE; Gaia’s own photometry shows the same sixfold brightening seven days earlier.'),
       card('OS-0012', 'caught by our own referee', 'An “invisible companion” that turned out to be a folding alias, caught before anything was announced.')),
-    h('p', { class: 'stress-more' }, h('a', { href: link('cases') }, 'The whole casebook →'), '  ', h('a', { href: link('docket') }, 'The Docket →'), '  ', h('a', { href: link('trials') }, 'Blind trials →')));
+    h('p', { class: 'stress-more' }, h('a', { href: link('cases') }, 'The whole casebook →'), '  ', h('a', { href: link('hunts') }, 'The hunts →'), '  ', h('a', { href: link('docket') }, 'The Docket →')));
 }
 
 // ---- closing call to action ----------------------------------------------------------------------------------------
@@ -232,5 +235,5 @@ function finale() {
 }
 
 export function landing(index) {
-  return [why(), pillars(), stressTest(index), finale()];
+  return [results(index), why(), pillars(), finale()];
 }

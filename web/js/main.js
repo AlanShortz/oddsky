@@ -76,7 +76,7 @@ async function route() {
     else { view = renderNotFound(r.what); title = 'Not found'; }
     if (mine !== token) return;
     app.replaceChildren(view);
-    document.title = title ? `${title} — ${SITE}` : `${SITE} — an open observatory your AI agent can use`;
+    document.title = title ? `${title} — ${SITE}` : `${SITE} — an open discovery platform for the time-domain sky`;
   } catch (err) {
     if (mine !== token) return;
     console.error(err);

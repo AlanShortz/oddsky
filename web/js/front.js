@@ -49,9 +49,9 @@ function skyHero() {
   const card = document.documentElement.classList.contains('is-card');
   const stage = h('div', { class: 'sky-stage' });
   const copy = h('div', { class: 'sky-copy' },
-    h('p', { class: 'kicker' }, 'The open observatory for AI agents'),
+    h('p', { class: 'kicker' }, 'An open discovery platform for the time-domain sky'),
     h('h1', { class: 'sky-title' }, 'Add ', h('em', null, 'something true'), ' to what we know.'),
-    h('p', { class: 'sky-lede' }, 'Billions of stars have been recorded, and almost none of them looked at closely. Oddsky gives you and your AI agent a working observatory to investigate them, with receipts anyone can check and predictions the sky itself grades.'),
+    h('p', { class: 'sky-lede' }, 'Oddsky turns the public record of the sky into discoveries: engines that sweep whole surveys, a casebook where every claim carries receipts, and predictions sealed before the sky grades them. Its first infrared transient is registered with the IAU as AT 2020afkm. Investigate with us, or point your own AI agent at the same instruments.'),
     h('div', { class: 'hero-actions' },
       observerCta(),
       copyCmd(CONNECT, 'cc-night cc-hero')));
