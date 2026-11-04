@@ -144,6 +144,20 @@ const G_ICON = [['#4285F4', 'M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.4h6.5a5.6 5.6 0 
 const providerIcon = (id) => s('svg', { viewBox: '0 0 24 24', class: 'pv-icon', 'aria-hidden': 'true' },
   id === 'github' ? s('path', { d: GH_ICON, fill: 'currentColor' }) : G_ICON.map(([f, d]) => s('path', { d, fill: f })));
 
+/** A real link to the server's OAuth start (never routed in-page). The provider can take a second or
+ *  two to answer, so the button says it is going at once; coming Back (bfcache) puts it right again. */
+function providerButton(p, next) {
+  const label = h('span', null, `Continue with ${p.label}`);
+  const a = h('a', { class: 'pv-btn', href: `/api/oauth/${p.id}/start?next=${encodeURIComponent(next)}` }, providerIcon(p.id), label);
+  a.addEventListener('click', (e) => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    a.classList.add('is-going'); a.setAttribute('aria-busy', 'true'); label.textContent = `Opening ${p.label}…`;
+  });
+  a.reset = () => { a.classList.remove('is-going'); a.removeAttribute('aria-busy'); label.textContent = `Continue with ${p.label}`; };
+  return a;
+}
+addEventListener('pageshow', (e) => { if (e.persisted) document.querySelectorAll('.pv-btn.is-going').forEach((a) => a.reset?.()); });
+
 /** The sign-in panel: GitHub, Google, passkey. `next` is where to land afterwards. */
 function signInPanel(providers, next, rerender, { title = 'Sign in or join', lede, foot } = {}) {
   const status = h('p', { class: 'obs-status', role: 'status' });
@@ -156,7 +170,7 @@ function signInPanel(providers, next, rerender, { title = 'Sign in or join', led
     h('p', { class: 'door-k mono' }, title),
     lede ? h('p', { class: 'door-note' }, lede) : null,
     h('div', { class: 'pv-list' },
-      providers.map((p) => h('a', { class: 'pv-btn', href: `/api/oauth/${p.id}/start?next=${encodeURIComponent(next)}` }, providerIcon(p.id), `Continue with ${p.label}`)),
+      providers.map((p) => providerButton(p, next)),
       pk),
     status,
     foot ?? (providers.length ? h('p', { class: 'door-note small' }, `New with ${providers.map((p) => p.label).join(' or ')}? You choose your observer code next. Your email is never shown or shared.`) : null));
