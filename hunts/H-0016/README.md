@@ -159,6 +159,9 @@ star's; the clean H-0016 class (isolated to 6", aperture = image = K, profile of
 sources (1.5-4 × 10⁻⁵ of clean sources), and the displaced-fit population as a whole is ~8,000 (4 × 10⁻⁴). For any use of
 AllWISE profile-fit magnitudes at W1 < 14.5 the Skeptic's four tests catch both.
 
+A research-note draft on the catalogue failure is at [docs/papers/RNAAS_AllWISE_profile_fit_draft.md](../../docs/papers/RNAAS_AllWISE_profile_fit_draft.md);
+the catalogue-wide tiered list (`scripts/allwise_product.py`, IRSA async job 27150356, both hemispheres) is section 4c when it lands.
+
 ## 5. Real changes across the gap
 
 ### 5.1 Two B stars whose 2010-11 mid-infrared excess vanished (stellar, strict pull)
@@ -212,6 +215,13 @@ mid-infrared excess was large in 2010-11 and smaller or absent after 2014**. Dis
 timescales is how Be stars behave; what the gap census adds is a uniform mid-infrared view of which disks were lost in
 2011-2014, including two stars nobody had flagged as emission-line objects. The catalogued ones are not new objects; the events
 are unreported.
+
+### 5.2b BD+28 4177 is now a case: [OS-0037](../../cases/OS-0037)
+
+Six claims, three hypotheses (Be decretion disk 0.50, transient dust 0.30, not on the star 0.03), a Gaia DR4 prediction
+(G flat 2014-2020, p 0.8), and the AllWISE row passing all four Skeptic tests. A wider sweep for more B stars whose
+excess vanished (`scripts/be_sweep.py`, 1,107 "fainter now" steps with NEOWISE variability allowed) is queued behind an
+IRSA outage; its result goes in section 5.4.
 
 ### 5.3 Galaxy nuclei that changed state in the gap (58 image-confirmed)
 
