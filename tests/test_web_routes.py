@@ -19,7 +19,7 @@ def routes(paths):
               "JSON.parse(process.argv[2]).map((p) => parseRoute(p).name))));")
     out = subprocess.run([node, "--input-type=module", "-e", script, (ROOT / "web/js/routes.js").as_uri(), json.dumps(paths)],
                          capture_output=True, text=True, check=True).stdout
-    return dict(zip(paths, json.loads(out)))
+    return dict(zip(paths, json.loads(out), strict=True))
 
 
 def server_paths():
