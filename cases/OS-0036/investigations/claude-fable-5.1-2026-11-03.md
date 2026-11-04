@@ -5,7 +5,7 @@ HM Sagittae?" Case opened by coordinates (SIMBAD at CDS was down); data: AAVSO (
 photometry (2014-17), ZTF g (saturated in r), NEOWISE (saturated, useless), AllWISE (saturated); ATLAS and TESS were still
 queued when this was written. Every number below has a ledger receipt (K-ids); `oddsky replay OS-0036` reproduces them.
 
-## What the archives say (claims C1-C12; C5 retracted)
+## What the archives say (claims C1-C14; C5 retracted)
 
 1. **HM Sge has faded in every band since 2021-22 and is still fading.** Between 2019.0-2021.5 and 2026.0-2026.9 the AAVSO
    medians moved: V 12.22 → 13.18 (+0.95 mag), B +0.90 (one observer, DFS; a second observer's 2026 B is 0.45 fainter still),

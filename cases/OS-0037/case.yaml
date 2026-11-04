@@ -1,0 +1,163 @@
+id: OS-0037
+title: 'BD+28 4177: the B giant whose infrared excess vanished across the WISE gap'
+hook: In 2010-11 WISE saw this B0.5 giant 2.3x brighter at 3.4 microns and 14x at 22; since 2014 it is
+  a bare photosphere. Found by hunt H-0016.
+status: observation
+target:
+  name: Gaia DR3 1801411783339764608
+  ra: 326.25563338677
+  dec: 29.56164291393
+  aliases:
+  - BD+28 4177
+  - HIP 107387
+  - TIC 452720691
+  - AllWISE J214501.35+293341.9
+  - 2MASS J21450134+2933418
+  gaia_source_id: 1801411783339764608
+  otype: B0.5III-B1IV star, Hipparcos unsolved variable
+summary: ''
+claims:
+- id: C1
+  text: 'AllWISE 2010-11 (catalogue row in the case context; profile fit and aperture agree to 0.02 mag,
+    SNR 47, detected in all 29 frames, position 0.02 arcsec from Gaia): W1 8.91, W2 8.68, W3 8.05, W4
+    7.40. The two 2010 epochs (Jun and Dec) give W1 8.90 and 8.91 (hunt H-0016, work/steps_mep_epochs.csv).
+    NEOWISE 2014-2024: W1 10.23 and W2 10.28, flat to 0.009 and 0.014 mag robust scatter over 21 visits,
+    no step larger than 0.03 mag; 2MASS K = 10.25. The star was 3.4x brighter at 3.4 microns and 4.4x
+    at 4.6 microns throughout 2010-11 than at any time since 2014.'
+  tag: computed
+  calls:
+  - K3
+  - K4
+  - K5
+  - K7
+  author: unknown-agent
+  at: '2026-11-03T23:30:06+00:00'
+- id: C2
+  text: 'The 2010-11 excess is real in the images: unWISE coadds of the 2010-11 frames alone give 2.68x
+    (W1) and 2.78x (W2) the flux of the 2010-2020 coadd, against 2.48x predicted from the catalogue step
+    and 1.00x for a catalogue error; the referee of H-0016 reproduced 2.68-2.69 and 2.78 with independent
+    aperture code (hunts/H-0016/work/steps_unwise_verdict.csv, reviews/claude-referee-2026-11-03.md).
+    Relative to the Rayleigh-Jeans photosphere set by K = 10.25 the excess was 2.3x, 3.1x, 6.9x and 14x
+    at 3.4, 4.6, 12 and 22 microns (F_nu rising as nu^+1.0).'
+  tag: computed
+  calls:
+  - K7
+  author: unknown-agent
+  at: '2026-11-03T23:30:07+00:00'
+- id: C3
+  text: 'Gaia DR3 1801411783339764608: G 9.85, BP-RP -0.16, Teff 22,400 K (GSP-Phot), parallax 0.19 +-
+    0.05 mas (4-7 kpc, 1.3-2.1 kpc below the plane at b = -17.9 deg), RUWE 1.09, no neighbour within 6
+    arcsec. SIMBAD: B0.5IIIk (Morgan 1951, a peculiar O star at high galactic latitude); Hipparcos HIP
+    107387, B1IV, HvarType U (unsolved variable, scatter 0.031 mag, 1989-93); NSV, VSX, Gaia DR3 vari,
+    ASAS-SN: no entry. Gaia DR3 ESP-ELS (XP spectra 2014-17, after the event): EW(H-alpha) = +0.036 +-
+    0.018 nm, weak absorption, no Be-star class probability assigned; a normal B0.5-B1 photosphere has
+    EW ~ +0.2-0.3 nm.'
+  tag: observed
+  calls:
+  - K7
+  author: unknown-agent
+  at: '2026-11-03T23:30:08+00:00'
+- id: C4
+  text: 'TESS (QLP S15 2019; SPOC 120 s S55-S56 2022, S82-S83 2024; 15,084 points; crowding 0.94): a 0.89
+    d (1.12 c/d) signal dominates the whole-series periodogram, with per-sector frequencies drifting between
+    1.08 and 1.13 c/d and amplitudes between 11 and 20 mmag; rms 9-13 mmag; no outbursts (hunt H-0016,
+    ~/oddsky-runs/h0016/tess_BD284177.csv). Frequency groups near 1 c/d with drifting amplitude are what
+    Be stars show; a single coherent SPB mode would keep its frequency.'
+  tag: computed
+  calls:
+  - K6
+  author: unknown-agent
+  at: '2026-11-03T23:30:09+00:00'
+- id: C5
+  text: 'Optical history: KELT-North field N12 holds 1,400 points from 2007 Jun to 2008 Nov with 0.03-0.05
+    mag scatter and no trend; the public KELT release does not cover 2010 for this field. ASAS-3 does
+    not reach Dec +29.6. No 2010-11 optical photometry or spectrum of this star exists in a public archive
+    we could reach (LAMOST DR5-DR8, SIMBAD bibliography, BeSS was down).'
+  tag: observed
+  calls:
+  - K7
+  author: unknown-agent
+  at: '2026-11-03T23:30:10+00:00'
+- id: C6
+  text: One NEOWISE visit, 2021 May (MJD ~59350), is 0.08 mag brighter than the 10.23/10.28 baseline in
+    both W1 and W2 (the brightest visit of 21; the next most deviant is 0.03 mag); the W1-W2 colour returns
+    to zero at that visit. Too small and too isolated to interpret; noted because a Be star rebuilding
+    a disk would start this way. No TESS sector covers 2021.
+  tag: observed
+  calls:
+  - K3
+  - K4
+  author: unknown-agent
+  at: '2026-11-03T23:35:37+00:00'
+hypotheses:
+- id: H1
+  klass: eruptive
+  statement: 'A Be-star decretion disk: free-free and bound-free emission from a dense gaseous disk (spectral
+    index ~0.6-1 fits F_nu ~ nu^1.0 across W1-W4) that was present through 2010-11 and dissipated before
+    2014. Supported by the Hipparcos variability flag, the drifting ~1.1 c/d TESS signal, and five other
+    Be stars found with the same signature in H-0016. Not supported by any emission-line observation:
+    Gaia 2014-17 sees weak H-alpha absorption after the event.'
+  supports:
+  - C1
+  - C2
+  - C4
+  conflicts: []
+  would_falsify: An H-alpha spectrum now showing no emission would not falsify (the disk is gone); a 2010-11
+    spectrum without emission would. A 2010 optical light curve showing no brightening of 0.1-0.5 mag
+    would weaken it.
+  status: live
+  confidence: 0.5
+  author: unknown-agent
+  at: '2026-11-03T23:30:11+00:00'
+- id: H2
+  klass: dust_formation
+  statement: 'A transient dust episode: a ~1,300-1,500 K blackbody also reproduces the W1-W4 excess ratios
+    (predicted F_nu(22)/F_nu(3.4) = 0.11 versus 0.14 observed), as in B[e] stars or dust condensing in
+    ejecta from a companion. Would have to form and clear within about four years.'
+  supports:
+  - C1
+  - C2
+  conflicts: []
+  would_falsify: A 2010-11 spectrum with strong Balmer emission and no dust features; or a near-infrared
+    colour (J-K) unchanged in 2010-11 while W1-W4 rose.
+  status: live
+  confidence: 0.3
+  author: unknown-agent
+  at: '2026-11-03T23:30:12+00:00'
+- id: H3
+  klass: artifact_blend
+  statement: 'The excess was not on this star: a blend, latent or moving object in the 2010-11 frames.'
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  would_falsify: 'Already excluded: two epochs six months apart, four bands, position 0.02 arcsec from
+    Gaia, no neighbour to 6 arcsec, aperture and profile photometry agree, and the unWISE images reproduce
+    the excess.'
+  status: live
+  confidence: 0.03
+  author: unknown-agent
+  at: '2026-11-03T23:30:13+00:00'
+predictions:
+- id: P1
+  statement: 'Gaia DR4 epoch photometry (2 Dec 2026) will show BD+28 4177 constant in G to better than
+    0.05 mag peak-to-peak over 2014.6-2020.1 (the photosphere NEOWISE saw), with no outburst: the median
+    over 2014.6-2017.5 and over 2017.5-2020.1 differ by less than 0.03 mag.'
+  check:
+    series: GAIA:G
+    start: 57922.0
+    end: 58868.0
+    statistic: median
+    baseline:
+    - 56863.0
+    - 57922.0
+    op: <
+    value: 0.03
+  probability: 0.8
+  resolve_by: '2027-03-01'
+  author: unknown-agent
+  registered_at: '2026-11-03T23:30:14+00:00'
+literature: []
+hunt: H-0016
+featured: false
+created_at: '2026-11-03T22:35:57+00:00'
