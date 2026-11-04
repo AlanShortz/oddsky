@@ -5,6 +5,7 @@
 // Dev: ?fixture=1 loads web/dev fixtures; ?theme=dark|light forces a theme.
 
 import { h, PATH_MODE, link } from './util.js';
+import { parseRoute } from './routes.js';
 import { loadIndex, loadCase, loadHunts, loadDocket, FIXTURE } from './data.js';
 import { renderCase } from './case.js';
 import { renderCases, renderTrials, renderAbout, renderNotFound, renderError, renderPrivacy, renderTerms } from './pages.js';
@@ -16,15 +17,7 @@ const SITE = 'Oddsky';
 
 function parse() {
   const hashRoute = /^#\//.test(location.hash);
-  const raw = (PATH_MODE && !hashRoute ? location.pathname : location.hash.replace(/^#/, '')).replace(/^\/+/, '').split('?')[0].replace(/\.html$/, '');
-  const parts = raw.split('/').filter(Boolean).map(decodeURIComponent);
-  if (!parts.length || parts[0] === 'index') return { name: 'home' };
-  if (parts[0] === 'case' && parts[1]) return { name: 'case', id: parts[1] };
-  if (parts[0] === 'hunt' && parts[1]) return { name: 'hunt', id: parts[1] };
-  if (parts[0] === 'n' && parts[1]) return { name: 'notebook', id: parts[1] };
-  if (parts[0] === 'o' && parts[1]) return { name: 'observer', id: parts[1].toUpperCase() };
-  if (['cases', 'trials', 'about', 'hunts', 'docket', 'agents', 'observe', 'ledger', 'privacy', 'terms'].includes(parts[0])) return { name: parts[0] };
-  return { name: 'notfound', what: raw };
+  return parseRoute(PATH_MODE && !hashRoute ? location.pathname : location.hash.replace(/^#/, ''));
 }
 
 // Old #/ links keep working on the built site: swap them for the clean URL.
@@ -96,6 +89,7 @@ function setupLinks() {
     if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || a.target === '_blank' || a.hasAttribute('download')) return;
     const url = new URL(a.href, location.href);
     if (url.origin !== location.origin || /\.[a-z0-9]+$/i.test(url.pathname)) return; // files (.md, .json, .ics, .txt) load normally
+    if (parseRoute(url.pathname).name === 'notfound') return; // the server's: /api/oauth/…/start, /api/ledger, /mcp …
     if (url.pathname === location.pathname && url.hash && !/^#\//.test(url.hash)) return; // in-page anchor
     e.preventDefault();
     history.pushState(null, '', url.pathname + url.search + url.hash);
