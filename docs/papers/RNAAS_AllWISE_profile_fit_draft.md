@@ -43,10 +43,11 @@ neighbour inside the 8.25" aperture (the profile fit is right; 58% at |b| < 20°
 the failure described here (the aperture is right; 71% at |b| > 20°; detected in a median 47% of frames; AllWISE
 position a median 1.31" from its own 2MASS association). A random 300 of the 10,995 through the image test gave 292 with
 no real change between 2010-11 and 2014-2020 and a median AllWISE − Gaia offset of 1.67" for those whose image flux
-matched the aperture. We estimate 300-900 clean sources above |b| = 10° carry a profile-fit magnitude that is not a
-measurement of the star (1.5-4 × 10⁻⁵), and of order 8,000 are fits displaced inside blends where neither magnitude is the
-star's. [Catalogue-wide counts for both hemispheres and a tiered list, `hunts/H-0016/work/allwise_profile_fit_failures.csv`,
-are being produced: TIER A = __ (K agrees with the aperture, ≥ 2 tests fail), TIER B = __.]
+matched the aperture. In that hemisphere of order 8,000 more are fits displaced inside blends where neither magnitude is the star's. Over both hemispheres at |b| > 10° the same tests applied to all 506,437 clean sources with |w1mag − w1mpro| > 0.4 or
+w1snr < 20 give 631 sources whose K magnitude agrees with the aperture and not the profile fit and that fail at least two of
+the catalogue tests (323 north, 308 south): 3 × 10⁻⁵ of clean sources. In a random 40 of them the 2010-11 unWISE image
+magnitude matches the aperture magnitude in 36 and the profile fit in none, and the median AllWISE − Gaia offset is 0.86".
+The list is released with this note (`hunts/H-0016/work/allwise_profile_fit_failures.csv`, tier A).
 
 **The test.** For an AllWISE source at 8 ≤ W1 ≤ 16: (1) |w1mag − w1mpro| > 0.3; (2) w1snr below half the median SNR
 for its magnitude (47.5 to W1 = 12.5, 45.6 at 13.0, 44.0 at 13.5, 41.5 at 14.0, 38.9 at 14.5); (3) detected in fewer than

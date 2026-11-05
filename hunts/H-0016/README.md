@@ -159,6 +159,29 @@ star's; the clean H-0016 class (isolated to 6", aperture = image = K, profile of
 sources (1.5-4 × 10⁻⁵ of clean sources), and the displaced-fit population as a whole is ~8,000 (4 × 10⁻⁴). For any use of
 AllWISE profile-fit magnitudes at W1 < 14.5 the Skeptic's four tests catch both.
 
+## 4c. The failure list as a product (2026-11-05, `scripts/allwise_product.py`, `scripts/product_validate.py`)
+
+IRSA async job 27176498: every clean AllWISE source (8 ≤ W1 ≤ 14.5, cc_flags 0000, nb 1, ext_flg 0) at |b| > 10° in **both
+hemispheres** with |w1mag − w1mpro| > 0.4 or w1snr < 20: 506,437 rows. Three catalogue tests (aperture − profile, SNR for the
+magnitude, frame-detection fraction) and 2MASS K as arbiter give:
+
+| tier | definition | n | north / south |
+|---|---|---|---|
+| **A** | K within 0.4 mag of the aperture magnitude and not of the profile fit, ≥ 2 tests fail | **631** | 323 / 308 |
+| B | no 2MASS or ambiguous K, all 3 tests fail | 5,653 | 2,736 / 2,917 |
+
+The list is `work/allwise_profile_fit_failures.csv` (designation, both magnitudes, SNR, frames, K, position errors, tier).
+**Image validation of 40 random sources per tier** (W1 magnitude in the unWISE 2010-11 coadd against both catalogue
+magnitudes; `work/allwise_product_validation.csv`):
+
+- **Tier A: 36 of 40 match the aperture magnitude, none matches the profile fit, 4 match neither.** Median AllWISE − Gaia
+  offset 0.86", the same as the 46 artifacts of section 4. Tier A is the H-0016 failure: about 630 sources above |b| = 10°,
+  i.e. 3 × 10⁻⁵ of clean sources, evenly split between the hemispheres.
+- Tier B: 33 of 40 match the aperture and none the profile, but the profile fit is a median 2.5 mag fainter than the image
+  and there is no Gaia source within 5". These are not stars with a bad fit: they are faint catalogue entries on the wings of
+  something bright that the aperture picks up. A different problem (likely spurious sources), listed for completeness and not
+  counted in the failure rate.
+
 A research-note draft on the catalogue failure is at [docs/papers/RNAAS_AllWISE_profile_fit_draft.md](../../docs/papers/RNAAS_AllWISE_profile_fit_draft.md);
 the catalogue-wide tiered list (`scripts/allwise_product.py`, IRSA async job 27150356, both hemispheres) is section 4c when it lands.
 
@@ -250,6 +273,29 @@ of luminous nuclear flares that peaked around 2008-2010, before the surveys that
 searches (Masterson et al. 2024; MIRONG) look for flares that *rise* after 2014. Before "tidal disruption" is used: a nuclear
 spectrum (r = 16.5 makes it cheap), CRTS 2005-2013 photometry of the nucleus (the data exist; the public endpoints tried were
 down), the fading-AGN literature (Sheng 2017, Stern 2018, Yang 2018, Wang 2018, Jiang 2021), and an energy budget.
+
+### 5.5 Nuclei that cooled: a pre-pilot over the whole table (2026-11-04, `scripts/nuclei_cooled.py`)
+
+The eight red faders of 5.3 came from the 110 clean steps. Asking the question directly of the whole sky2 table (AllWISE
+W1 − W2 ≥ 0.4 in 2010-11; by 2014-15 fainter by > 0.3 mag in W1 and > 0.5 in W2 with the colour bluer by ≥ 0.25; quiet
+afterwards, ptp < 0.4; 9 ≤ W1 ≤ 15) returns 116 sources. 92 pass the catalogue test (aperture = profile, nb = 1), and
+**88 of the 92 are real in the 2010-only versus 2010-2020 unWISE images** (3 artifacts, 1 partial). Three are stars (an
+emission-line star, a cataclysmic variable, one unclassified); **85 are galaxy nuclei that lost a hot-dust-coloured component
+between 2010-11 and 2014 and have been quiet for ten years** (`work/nuclei_cooled_real.csv`).
+
+| | |
+|---|---|
+| W2 fade (10% / median / 90%) | 0.61 / 0.74 / 1.09 mag |
+| W1 − W2 change, 2010 → 2014-24 | 0.26 / 0.31 / 0.48 mag bluer |
+| SIMBAD | 10 catalogued active nuclei (6 Sy1, 3 Sy2, 1 LINER); 13 plain galaxies; **61 with no SIMBAD entry** |
+| Gaia DR3 | 35 classified as galaxies, 1 as a quasar, 26 with no Gaia source |
+
+This is the population behind LEDA 1815030. For the ten known Seyferts the natural reading is a turn-off (changing-state)
+event caught between two WISE eras. For the 74 that no catalogue calls active, either they are unrecognised AGN that faded,
+or the 2010 excess was a transient dust echo. The data in hand cannot separate the two; what the pre-pilot establishes is
+that the class is real in the images, an order of magnitude larger than the eight first found, and mostly uncatalogued.
+A full hunt would add host redshifts and luminosities (the excess luminosity against host mass is the first discriminant),
+CRTS/Pan-STARRS optical photometry for 2008-2012, and the fading-AGN literature cross-match.
 
 ## 6. The dark sky: H-0008's one-visit fades (companion track)
 

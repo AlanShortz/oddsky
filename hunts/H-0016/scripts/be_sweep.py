@@ -1,6 +1,6 @@
 """H-0016 section 5.4: a sweep for more B stars whose 2010-11 excess vanished. Input: every sky2 source that is fainter now by > 0.4 mag
 in both bands with NEOWISE ptp < 1.5 (BigQuery pull be_sweep_raw.csv) joined to its AllWISE row. Steps: flags (steps_triage logic),
-Gaia DR3 via IRSA (one cone each) for the unflagged, keep Teff_gspphot > 9,000 K or BP-RP < 0.3, then the unWISE image test.
+Gaia DR3 via the ESA archive (one cone each; IRSA's copy was timing out on 2026-11-04) for the unflagged, keep Teff_gspphot > 9,000 K or BP-RP < 0.3, then the unWISE image test.
 usage: be_sweep.py RAW_CSV ALLWISE_CSV OUT_PREFIX"""
 import io
 import sys
@@ -26,14 +26,20 @@ for i, r in enumerate(c.itertuples()):
     rec = dict(cntr=r.cntr)
     for k in range(4):
         try:
-            t = requests.post("https://irsa.ipac.caltech.edu/TAP/sync", data={"QUERY": f"SELECT {GC} FROM gaia_dr3_source WHERE CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',{r.ra},{r.dec},0.000833))=1", "FORMAT": "csv"}, timeout=120).text.strip()
+            cone = f"CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',{r.ra},{r.dec},0.000833))=1"
+            if k % 2 == 0:  # IRSA's copy first, ESA on the retry: each was down for hours on 2026-11-03/05
+                t = requests.post("https://irsa.ipac.caltech.edu/TAP/sync", data={"QUERY": f"SELECT {GC} FROM gaia_dr3_source WHERE {cone}", "FORMAT": "csv"}, timeout=60).text.strip()
+            else:
+                t = requests.post("https://gea.esac.esa.int/tap-server/tap/sync", data=dict(REQUEST="doQuery", LANG="ADQL", FORMAT="csv", QUERY=f"SELECT {GC} FROM gaiadr3.gaia_source WHERE {cone}"), timeout=60).text.strip()
+            if not t.startswith("source_id"):
+                raise RuntimeError("not a CSV answer")
             g = pd.read_csv(io.StringIO(t)) if "\n" in t else pd.DataFrame()
             if len(g):
                 g = g.sort_values("phot_g_mean_mag").iloc[0]
                 rec.update(g_id=str(int(g.source_id)), G=float(g.phot_g_mean_mag), bp_rp=float(g.bp_rp), plx=float(g.parallax), poe=float(g.parallax_over_error), teff=float(g.teff_gspphot) if pd.notna(g.teff_gspphot) else np.nan)
             break
         except Exception:  # noqa: BLE001
-            time.sleep(10 * (k + 1))
+            time.sleep(3 * (k + 1))
     rows.append(rec)
     if i % 50 == 0:
         print("gaia", i, len(c), flush=True)
