@@ -205,6 +205,8 @@ def build(c):
     for text in ("(1) |w1mag − w1mpro| > 0.3", "(2) w1snr", "(3) w1nm/w1m < 0.6", "(4) for a source",
                  "more than 0.35″", "Two failures reject", "fail at least two of tests (1)–(3)", "agrees within 0.3 mag", "Skrutskie et al. 2006", "tests (1) and (2)", "R = 1"):
         c.ignore(text, "definition of the test")
-    for text in ("## 1.", "## 2.", "## 3.", "## 4.", "Figure 1", "DRAFT v6", "the two epochs"):
+    for text in ("## 1.", "## 2.", "## 3.", "## 4.", "Figure 1", "DRAFT v7", "the two epochs"):
         c.ignore(text, "section, figure or version label; AllWISE and NEOWISE")
+    for text in ("doi:10.26131/IRSA1", "doi:10.26131/IRSA136", "doi:10.26131/IRSA134", "doi:10.26131/IRSA144"):
+        c.ignore(text, "IPAC dataset DOI, read on ipac.caltech.edu/doi/irsa and ipac.caltech.edu/dois/irsa, 2026-11-05")
     c.review("reviews/referee.md")

@@ -117,3 +117,26 @@ document-sha256: e6bd00f23f0db48c3ced598086a3e08b170d7e41c58b9e817f14873a560b980
 - The same-star check listed under "Not completed" is now done. ESA and VizieR were unavailable (503 and timeout), so it ran on IRSA's copy of Gaia DR3.
 - Prior art is still limited to the Explanatory Supplement pages, one ADS full-text query and one web search. The CatWISE and unWISE papers and the known-anomalies pages were not read.
 - 42,759,991, 4.9 × 10⁷ and 19,818 were not re-queried. The RNAAS limits are those given in the brief.
+
+## Re-check of v7
+
+**Verdict: SUBMIT.** Nothing in the text must change.
+
+document-sha256: 2c8572128956937376639c7266b7568373a405d4f7531d3ac10da6096c81ebb9
+
+### What I checked
+
+- **Scope of the change.** HEAD holds v6 (hash e6bd00f2…, confirmed). `git diff HEAD` shows two changes only: the DRAFT label on line 1 and the first sentence of the Acknowledgments. The body, abstract, caption and references are identical to v6.
+- **DOIs.** Each was read on its IPAC landing page and in its DataCite record; the two agree in all four cases.
+  - 10.26131/IRSA1: "AllWISE Source Catalog".
+  - 10.26131/IRSA136: "AllWISE Reject Table".
+  - 10.26131/IRSA134: "AllWISE Multiepoch Photometry Table".
+  - 10.26131/IRSA144: "NEOWISE-R Single Exposure (L1b) Source Table". The note omits "(L1b)"; that is acceptable.
+- **NEOWISE product.** It is the right one for "median of the first three NEOWISE visits". `hunts/H-0016/README.md` states the visit medians were built from the NEOWISE single-exposure table, and the step table carries that table's AllWISE-association columns (`allwise_cntr`, `w1mpro_allwise`, …).
+- **Words.** Abstract 141 (limit 150). Everything else in the file, counting the draft label, title, author, headers, caption, acknowledgments and references, is 1,307 (limit 1,350). Whole file 1,448.
+- **paper-check.** 95 statements, 0 failures on this hash.
+
+### Limits of this sign-off
+
+- The code that built the visit medians (`infra/gcp/neowise_pixel_v2.py`) is not in this checkout. The NEOWISE product was confirmed from the README and the column names, not from the code.
+- The limits listed under "Re-check of v6" still apply.

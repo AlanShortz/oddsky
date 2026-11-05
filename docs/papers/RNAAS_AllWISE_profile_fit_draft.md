@@ -1,4 +1,4 @@
-# DRAFT v6, not submitted. Research Notes of the AAS
+# DRAFT v7, not submitted. Research Notes of the AAS
 
 **Unflagged AllWISE Sources with Profile-fit Magnitudes Wrong by 0.4–1.7 mag, and Their Correct Duplicates in the Reject Table**
 
@@ -88,8 +88,9 @@ the 46 errors, and the 631 listed sources. The data behind the figure include th
 
 ## Acknowledgments
 
-This work used the AllWISE and NEOWISE data products of the Wide-field Infrared Survey Explorer, the unWISE coadds, Gaia
-DR3, and 2MASS, served by IRSA, unwise.me, and ESA. The analysis and a first draft of the text were produced with the help
+This work used the AllWISE Source Catalog (doi:10.26131/IRSA1), Reject Table (doi:10.26131/IRSA136) and Multiepoch
+Photometry Table (doi:10.26131/IRSA134), the NEOWISE-R Single Exposure Source Table (doi:10.26131/IRSA144), the unWISE
+coadds, Gaia DR3, and 2MASS, served by IRSA, unwise.me, and ESA. The analysis and a first draft of the text were produced with the help
 of AI tools (Claude AI models and the Oddsky tooling, oddsky.ai) under my direction. I reviewed the analysis and the text
 and take full responsibility for the content.
 
