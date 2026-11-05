@@ -242,9 +242,7 @@ are unreported.
 ### 5.2b BD+28 4177 is now a case: [OS-0037](../../cases/OS-0037)
 
 Six claims, three hypotheses (Be decretion disk 0.50, transient dust 0.30, not on the star 0.03), a Gaia DR4 prediction
-(G flat 2014-2020, p 0.8), and the AllWISE row passing all four Skeptic tests. A wider sweep for more B stars whose
-excess vanished (`scripts/be_sweep.py`, 1,107 "fainter now" steps with NEOWISE variability allowed) is queued behind an
-IRSA outage; its result goes in section 5.4.
+(G flat 2014-2020, p 0.8), and the AllWISE row passing all four Skeptic tests. The wider sweep for more B stars whose excess vanished is section 5.4.
 
 ### 5.3 Galaxy nuclei that changed state in the gap (58 image-confirmed)
 
@@ -273,6 +271,31 @@ of luminous nuclear flares that peaked around 2008-2010, before the surveys that
 searches (Masterson et al. 2024; MIRONG) look for flares that *rise* after 2014. Before "tidal disruption" is used: a nuclear
 spectrum (r = 16.5 makes it cheap), CRTS 2005-2013 photometry of the nucleus (the data exist; the public endpoints tried were
 down), the fading-AGN literature (Sheng 2017, Stern 2018, Yang 2018, Wang 2018, Jiang 2021), and an energy budget.
+
+### 5.4 The Be sweep (2026-11-05, `scripts/be_sweep.py`, `work/be_sweep_hot.csv`)
+
+Every sky2 source fainter now by > 0.4 mag in both bands with NEOWISE ptp < 1.5 (1,107), cleaned with the AllWISE flags and
+the aperture = profile test (369), identified in Gaia DR3 (349), and cut to hot stars (Teff > 9,000 K or BP − RP < 0.3): 11.
+Ten are real in the images and one is partial; the partial one is the blazar PKS 2009-489, not a star.
+
+| AllWISE | identity | d1, d2 (mag) | status |
+|---|---|---|---|
+| J214501.35+293341.9 | BD+28 4177, B0.5IIIk | 1.29, 1.53 | no emission-line record ([OS-0037](../../cases/OS-0037)) |
+| J134445.70-392900.7 | **CD-38 8771**, Em*, Be; Teff 25,000 K, G 10.2 | 1.21, 1.46 | catalogued Be star; quiet since 2014 (ptp 0.28): a twin of BD+28 4177 |
+| J220545.25+424219.5 | TYC 3206-797-1; Teff 16,300 K, abs G −1.0 | 0.80, 0.96 | **no emission-line record, no references**; variable since (ptp 1.0) |
+| J162523.85+791552.8 | BD+79 499, B5 Em* | 0.79, 0.85 | catalogued |
+| J084706.89-621729.2 | no SIMBAD entry; Teff 15,000 K, abs G −3.3 | 0.59, 0.76 | **uncatalogued** |
+| J051838.95-690833.1 | OGLE J051838.97-690833.4 (LMC), Be? | 0.54, 0.73 | candidate Be in OGLE |
+| J011045.04-724309.0 | SK 142 (SMC), O8.5III | 0.50, 0.58 | catalogued |
+| J080723.29-124706.7 | [M81] I-203, Em* | 0.47, 0.40 | catalogued emission-line star |
+| J190057.50+374346.6 | TYC 3120-376-1, B3V:p, Em* | 0.47, 0.75 | catalogued |
+| J204743.17-752401.4 | JL 62, B4e | 0.43, 0.54 | catalogued |
+
+With the two LMC stars of 5.2 that carry an AllWISE flag (UCAC4 102-014876, HV 2312), **twelve O/B stars had a circumstellar
+mid-infrared excess in 2010-11 that was smaller or gone after 2014; three of them (BD+28 4177, TYC 3206-797-1,
+J084706.89-621729.2) have no emission-line record at all.** Nine of the twelve being known emission-line stars is the
+population-level argument that the mechanism is disk loss in Be stars, and it raises the prior for BD+28 4177. The sweep is
+complete for hot stars with a Gaia Teff at |b| ≥ 10°, 8 ≤ W1 ≤ 13.5; it does not see stars whose excess was below 0.4 mag.
 
 ### 5.5 Nuclei that cooled: a pre-pilot over the whole table (2026-11-04, `scripts/nuclei_cooled.py`)
 
