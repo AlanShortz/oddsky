@@ -95,6 +95,20 @@ def fetch(store: CaseStore, surveys: tuple[str, ...] | list[str] = SURVEYS) -> d
         if row is not None:
             ctx["allwise"] = row
         report["allwise"] = {"status": p.status, "rows": p.rows_kept}
+        if row is not None and allwise.diagnose(row, ctx.get("gaia"))["verdict"] in ("suspect", "bad"):
+            # H-0016 section 4d: the Reject Table may hold a second, correct extraction of the same star. Only asked for a
+            # suspect entry (IRSA is slow). The status is stored with the entries so that a failed query is never read as
+            # "no duplicate".
+            entries, p = allwise.reject_entries(row["ra"], row["dec"], 3.0)
+            prov["allwise_reject"] = p.model_dump()
+            earlier = ctx.get("allwise_reject")
+            if p.status != "unavailable" or not earlier or earlier.get("status") == "unavailable":
+                # (a failed re-query does not replace an earlier answer: the catalogue does not change)
+                ctx["allwise_reject"] = {"status": p.status, "entries": entries,
+                                         "duplicate": allwise.best_duplicate(row, entries)}
+            report["allwise_reject"] = {"status": p.status, "rows": p.rows_kept}
+        elif row is not None:
+            ctx.pop("allwise_reject", None)
 
     if "gaia_epoch" in surveys and case.target.gaia_source_id:
         record("gaia_epoch", *gaia_epoch.lightcurve(case.target.gaia_source_id))

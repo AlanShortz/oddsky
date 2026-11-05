@@ -310,8 +310,29 @@ def allwise_photometry(store: CaseStore) -> list[Check]:
     tail = {"pass": "(the 2010-11 catalogue magnitudes look trustworthy)",
             "warn": ": one sign of the H-0016 profile-fit failure; use w1mag/w2mag or the images, not w1mpro, for 2010",
             "fail": ": the H-0016 profile-fit failure; the AllWISE w1mpro/w2mpro are not measurements of this star"}[status]
-    return [_check("allwise_fit", "AllWISE profile-fit photometry", status, "; ".join(parts) + " " + tail,
+    return [_check("allwise_fit", "AllWISE profile-fit photometry", status,
+                   "; ".join(parts) + " " + tail + _reject_sentence(ctx.get("allwise_reject"), aw),
                    **{k: v for k, v in d.items() if k != "verdict"})]
+
+
+def _reject_sentence(rej: dict | None, aw: dict) -> str:
+    """What the AllWISE Reject Table lookup (fetch, for a suspect entry) found, as one sentence to append; '' if not looked up.
+    A lookup that failed says so: it is not evidence that there is no duplicate."""
+    if not rej:
+        return ""
+    dup = rej.get("duplicate")
+    if dup:
+        mags = f"W1 = {dup['w1mpro']:.3f}" + (f", W2 = {dup['w2mpro']:.3f}" if dup.get("w2mpro") is not None else "")
+        s = (f". The AllWISE Reject Table holds a second extraction of this star, {dup.get('designation')}, "
+             f"{dup['sep_arcsec']:.2f}\" away with w1snr = {dup['w1snr']:.1f}: {mags}")
+        if dup.get("w1_correction") is not None and aw.get("w1mpro") is not None:
+            s += (f"; use that W1 in place of the catalogue w1mpro = {aw['w1mpro']:.3f} "
+                  f"(a correction of {dup['w1_correction']:+.3f} mag)")
+        return s + "."
+    if rej.get("status") == "unavailable":
+        return (". The AllWISE Reject Table could not be queried, so it is not known whether it holds a correct second "
+                "extraction of this star.")
+    return ". No clean second extraction of this star was found in the AllWISE Reject Table within 3\"."
 
 
 BATTERY: list[Callable[[CaseStore], list[Check]]] = [

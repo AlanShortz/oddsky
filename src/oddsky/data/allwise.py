@@ -4,7 +4,13 @@ H-0016 found that the AllWISE profile-fit magnitudes (w1mpro, w2mpro) of a few c
 0.4-1.7 mag in both bands while the aperture magnitudes (w1mag), 2MASS, the unWISE images and NEOWISE all agree. Every such
 failure has an anomalously low profile-fit SNR for its magnitude, an aperture-minus-profile difference above 0.4 mag, and an
 AllWISE position off Gaia by 0.35-2.6" (hunts/H-0016/README.md, section 4; referee report, finding 5). The catalogue columns
-below are what the Skeptic needs to warn about it; nothing here calls the network except `catalog()`.
+below are what the Skeptic needs to warn about it.
+
+For some of them the AllWISE Reject Table (allwise_p3as_psr) holds a second extraction of the same star from the same Atlas
+Tile, 0.5-2.3" away, at full SNR and with the right magnitude, marked `use_src = 0`: a duplicate not selected for the Catalog
+(section 4d). `reject_entries()` fetches the Reject entries around a position and `best_duplicate()` picks that extraction.
+
+Nothing here calls the network except `catalog()` and `reject_entries()`.
 """
 
 from __future__ import annotations
@@ -22,6 +28,16 @@ COLS = ("cntr, designation, ra, dec, sigra, sigdec, w1mpro, w1sigmpro, w1snr, w1
         "w2mpro, w2sigmpro, w2snr, w2rchi2, w2mag, w2sigm, w3mpro, w3sigmpro, w4mpro, w4sigmpro, nb, na, cc_flags, ext_flg, "
         "var_flg, ph_qual, pmra, pmdec, sigpmra, sigpmdec, w1mjdmean, j_m_2mass, h_m_2mass, k_m_2mass, r_2mass")
 ALLWISE_EPOCH = 2010.5  # mean epoch of the 2010-11 frames, roughly; the catalogue has w1mjdmean per source
+REJECT_COLS = ("designation, ra, dec, cntr, coadd_id, w1mpro, w1snr, w1mag, w2mpro, w2snr, w1nm, w1m, nb, cc_flags, rel, "
+               "use_src, best_use_cntr")
+# Read as text: cntr and best_use_cntr are 19-digit integers (a float corrupts them, and best_use_cntr can be null, which
+# makes pandas read the column as float); cc_flags is a four-character code ("0000" must not become 0).
+_REJECT_STR = ("designation", "cntr", "coadd_id", "cc_flags", "rel", "best_use_cntr")
+# A clean duplicate (H-0016 section 4d: the 19 found had w1snr 44.5-49.0 at 0.46-2.25", all with use_src = 0)
+DUP_MAX_SEP_ARCSEC = 3.0
+DUP_MIN_W1SNR = 25.0
+DUP_MIN_SNR_RATIO = 3.0
+DUP_MIN_FRAME_FRACTION = 0.9
 
 # Median profile-fit W1 SNR of clean AllWISE sources against W1 (3,069 sources in a 1.5-deg cone at |b| = 80, 2026-11-03,
 # hunts/H-0016/reviews): flat at ~47.5 to W1 = 12.5 (a calibration floor caps the SNR), then 45.6 at 13.0, 44.0 at 13.5,
@@ -62,6 +78,64 @@ def catalog(ra: float, dec: float, radius_arcsec: float = 3.0) -> tuple[dict | N
     prov.rows_kept = 1
     return {k: (None if (isinstance(v, float) and np.isnan(v)) else (v.item() if hasattr(v, "item") else v))
             for k, v in row.items()}, prov
+
+
+def reject_entries(ra: float, dec: float, radius_arcsec: float = 3.0) -> tuple[list[dict], Provenance]:
+    """The AllWISE Reject Table entries within the radius of (ra, dec), nearest first, each with `sep_arcsec`. The
+    identifiers (cntr, best_use_cntr) are strings. `prov.status` is 'ok' (entries returned), 'empty' (IRSA answered and
+    there are none) or 'unavailable' (the query failed or the answer was not the table): an empty list with 'unavailable'
+    says nothing about whether an entry exists."""
+    prov = Provenance(archive="IRSA AllWISE Reject Table (allwise_p3as_psr)",
+                      query={"ra": ra, "dec": dec, "radius_arcsec": radius_arcsec})
+    q = (f"SELECT {REJECT_COLS} FROM allwise_p3as_psr WHERE CONTAINS(POINT('ICRS',ra,dec),"
+         f"CIRCLE('ICRS',{ra},{dec},{radius_arcsec / 3600:.7f}))=1")
+    try:
+        r = request("POST", TAP, retries=2, timeout=300, data={"QUERY": q, "FORMAT": "csv"})
+        text = r.text.strip()
+        if not text.startswith("designation"):
+            # IRSA can answer 200 with an error document; that is not "no entries"
+            raise ValueError(f"not a CSV table: {text[:120]!r}")
+        df = pd.read_csv(io.StringIO(text), dtype=dict.fromkeys(_REJECT_STR, str))
+    except Exception as e:  # noqa: BLE001
+        prov.status = "unavailable"
+        prov.notes.append(str(e)[:200])
+        return [], prov
+    prov.rows_raw = len(df)
+    if df.empty:
+        prov.status = "empty"
+        return [], prov
+    df["sep_arcsec"] = 3600 * np.hypot((df.ra - ra) * np.cos(np.radians(dec)), df.dec - dec)
+    df = df.sort_values("sep_arcsec")
+    prov.rows_kept = len(df)
+    return [{k: (None if pd.isna(v) else (v.item() if hasattr(v, "item") else v)) for k, v in row.items()}
+            for row in df.to_dict(orient="records")], prov
+
+
+def best_duplicate(aw: dict, rejects: list[dict]) -> dict | None:
+    """The Reject Table entry that is a clean second extraction of the star behind the catalogue row `aw`, or None. No
+    network. It must lie within 3", be a single-component fit (nb = 1), be a duplicate not selected for the Catalog
+    (use_src = 0), have w1snr >= 25 and at least three times the catalogue entry's, and be detected in at least 90% of
+    the W1 frames. Of several, one whose best_use_cntr is the catalogue entry's cntr comes first, then the nearest.
+    `w1_correction` is what to add to the catalogue w1mpro to get the duplicate's."""
+    cat_cntr = None if aw.get("cntr") is None else str(aw["cntr"])
+    cat_snr = aw.get("w1snr") or 0.0
+    good = []
+    for e in rejects:
+        sep, snr, w1, nm, m = e.get("sep_arcsec"), e.get("w1snr"), e.get("w1mpro"), e.get("w1nm"), e.get("w1m")
+        if sep is None or snr is None or w1 is None or nm is None or not m:
+            continue
+        if (sep <= DUP_MAX_SEP_ARCSEC and e.get("nb") == 1 and e.get("use_src") == 0 and snr >= DUP_MIN_W1SNR
+                and snr >= DUP_MIN_SNR_RATIO * cat_snr and nm / m >= DUP_MIN_FRAME_FRACTION):
+            names = cat_cntr is not None and e.get("best_use_cntr") is not None and str(e["best_use_cntr"]) == cat_cntr
+            good.append((not names, sep, e))
+    if not good:
+        return None
+    not_named, _, e = min(good, key=lambda x: x[:2])
+    return {"designation": e.get("designation"), "cntr": None if e.get("cntr") is None else str(e["cntr"]),
+            "sep_arcsec": float(e["sep_arcsec"]), "w1mpro": float(e["w1mpro"]),
+            "w2mpro": None if e.get("w2mpro") is None else float(e["w2mpro"]), "w1snr": float(e["w1snr"]),
+            "w1mag": None if e.get("w1mag") is None else float(e["w1mag"]), "names_catalog_entry": not not_named,
+            "w1_correction": None if aw.get("w1mpro") is None else float(e["w1mpro"] - aw["w1mpro"])}
 
 
 def diagnose(aw: dict, gaia: dict | None = None) -> dict:
