@@ -6,8 +6,10 @@ NEOWISE year from 2014 to 2024: a nucleus that was radiating warm dust in 2010 a
 whether that is a one-way street. If nuclei simply wander between states, as many should have heated across the gap as
 cooled.
 
-**Status: first census done, both directions, with the same image test on every source. 96 nuclei cooled and 13 heated.
-The imbalance is real in the data and is not yet interpretable as a rate, for the reason in section 3.**
+**Status (2026-11-05): two results, neither refereed as a claim yet.** (1) After the same image test on every source,
+96 nuclei cooled and 13 heated. (2) The cooled nuclei were caught on the way down: between their two AllWISE visits in
+2010-11, about 190 days apart, they faded by a median 0.10 mag in W2 more than an unchanged control sample, 45 of 96
+significantly, against 3 that brightened. The 2010 state was a decaying episode, not a steady state that ended later.
 
 ## 1. Selection
 
@@ -65,15 +67,65 @@ Of the 13 heated, 12 have no SIMBAD entry. Tables: `work/cooled_id.csv`, `work/h
 - A fair count of state changes needs no quiet cut, and then the image test used here no longer works, because it
   assumes the later state is steady. The tool to build is a time-resolved one on the yearly unWISE coadds.
 
-## 4. Not done
+## 4. They were already fading in 2010 (`scripts/epochs_2010.py`)
+
+AllWISE visited each position two or three times between January 2010 and February 2011. The AllWISE Multiepoch
+Photometry Table gives every frame; frames are grouped into visits (gaps over 60 days, at least 5 frames, `qi_fact > 0`,
+`saa_sep > 0`), and the change is last visit minus first.
+
+**Control** (`work/sql/control.sql`): 131 AGN-coloured, quiet sources in the same magnitude window whose AllWISE and
+NEOWISE magnitudes agree within 0.1 mag in both bands; 128 have two visits. They show a systematic offset between the
+visits of +0.049 mag in W2 and +0.045 in W1 (later visit fainter; instrument or calibration, not sky), with a scatter of
+0.053 mag. Everything below is after subtracting that offset.
+
+| | n | median W2 change in 2010-11 | fading > 0.1 mag and > 3σ | brightening likewise | vs control (Mann-Whitney p) |
+|---|---|---|---|---|---|
+| control | 128 | 0 (by construction) | 2 | 4 | |
+| **cooled** | 96 | **+0.100 mag** (W1 +0.096) | **45** | 3 | 1.6 × 10⁻¹² |
+| heated | 13 | −0.072 mag (W1 −0.053) | 0 | 0 | 0.005 |
+
+- 33 of the 96 faded by more than 0.2 mag in half a year and 11 by more than 0.3.
+- The median rate, 0.18 mag/yr in W2, carried across the 3.4-year gap gives 0.6 mag; the observed median drop across the
+  gap is 0.74 mag. A steady decline that began before or during 2010 accounts for the sample without a later switch-off.
+- The 2010 fade and the drop across the gap are weakly correlated (Spearman ρ = 0.24, p = 0.017).
+- The heated nuclei were already rising in 2010 (by 0.07 mag relative to control).
+- The supernova host (PTF 10fgz) faded 0.47 mag in W2 between its two visits, as a 2010 transient should.
+- The selection has no arrow of time inside 2010: it uses the AllWISE mean against the 2014-15 baseline. A source that
+  flickered at random would be as likely to brighten between the two visits as to fade.
+
+**Reading.** At least half of the cooled nuclei were mid-infrared transients in decline when WISE first looked: events
+that peaked before or during 2010. Searches for nuclear mid-infrared flares in NEOWISE data need a rise after 2014 and
+cannot see these. What they are (dust echoes of tidal disruptions, obscured supernovae, AGN that were shutting down) is
+not settled by the fade alone.
+
+## 5. What they were before 2010 (`scripts/sdss_spectra.py`)
+
+16 of the 96 have an SDSS spectrum; 13 of those were taken before 2010 (all queries answered):
+
+| pre-2010 SDSS class | n | examples |
+|---|---|---|
+| narrow-line AGN (GALAXY/AGN) | 5 | J130819.11+434525.6 (fading 0.64 mag in W2 within 2010), J100933.13+232255.7 |
+| broad-line QSO | 3 | J090902.36+133019.5 |
+| star-forming or starburst galaxy | 3 | **J142401.66+295028.4** |
+| galaxy, no subclass | 2 | J150831.61+062924.6 |
+
+So the sample is mixed: 8 of 13 already hosted an AGN, 5 did not. The strongest non-AGN case is J142401.66+295028.4
+(z = 0.086, a star-forming spectrum in 2006): W2 = 11.92 in AllWISE, fading 0.51 mag between its two 2010 visits, 1.31 mag
+fainter and 0.74 mag bluer by 2014, flat since. A flare of that size in a galaxy with no AGN lines is a candidate tidal
+disruption echo or an obscured luminous transient, and the first object here that deserves a case of its own.
+
+## 6. Not done
 
 - Literature cross-match (Sheng et al. 2017, Stern et al. 2018, Yang et al. 2018 changing-look samples; the MIRONG
   outbursts of Jiang et al. 2021 start in 2013 and should not overlap).
-- Pre-2010 state per object: 2MASS K against the 2010 W1, and archival optical spectra. A nucleus with no AGN lines
-  before 2010 was a flare; one with broad lines turned off.
+- Pre-2010 state for the 80 without an SDSS spectrum (6dF, 2dF, LAMOST, NED), and 2MASS K against the 2010 W1.
+- The light-curve shape after 2014 from the single exposures (the feature table says flat to 0.05 mag in W2).
+- A rate: how many such decaying events per galaxy per year this implies, against published tidal-disruption and
+  changing-look rates.
 - No referee has seen this. Nothing here is a claim.
 
-## 5. Files
+## 7. Files
 
-`scripts/nuclei_state.py`, `scripts/identify.py`; `work/nuclei_cooled_all.csv`, `work/nuclei_heated_all.csv` (image
+`scripts/nuclei_state.py`, `scripts/identify.py`, `scripts/epochs_2010.py`, `scripts/sdss_spectra.py`;
+`work/epochs_2010.csv`, `work/epochs_2010_control.csv`, `work/sdss_spectra.csv`, `work/mep_*.csv`; `work/nuclei_cooled_all.csv`, `work/nuclei_heated_all.csv` (image
 verdicts for every selected source), `work/cooled_id.csv`, `work/heated_id.csv`, `work/sql/`.
