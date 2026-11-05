@@ -34,6 +34,30 @@ consistent across bands, whether a period is just the day/month/year/TESS orbit 
 alias, whether an event's onset fell in a gap, TESS dips near momentum dumps and sector edges,
 and astrometric wobble (RUWE). It cannot be argued with. That is the point.
 
+## Texts that leave the repo
+
+A case has a ledger; a paper, an email to an astronomer or a hunt write-up did not, and that is where
+errors got through. The first draft of the H-0016 research note (2026-11-05) carried a rate with the
+wrong denominator, "isolated" where the data said 33 of 46, and a count nobody could trace: each was
+typed from a working summary, not recomputed. The rules since:
+
+- **Every number has a receipt.** A claims file next to the document recomputes each number from the
+  data tables, and `oddsky paper-check <claims.py>` fails on a value that does not round to what the
+  text prints, on a numeral nobody declared, and on a declared phrase the text no longer contains.
+  A number that cannot be recomputed from files (a remote count) is declared `external` with its
+  source and is listed in every report.
+- **"All", "none" and "every" are tested on every row**, not on the examples that suggested them
+  (`Claims.every`).
+- **The referee reads the final text.** A review binds to the document's sha256;
+  `paper-check --final` fails if the text changed after the review. Reviewing the hunt and then
+  writing the paper does not count.
+- **A comparison is reported after both sides have had the same checks.** The first H-0017 count
+  (186 nuclei heated against 116 cooled) compared a validated list with an unvalidated one; most of
+  the 186 were sources AllWISE had split in two. Until then a number is called provisional, in
+  those words.
+- **A fetch that failed is `untested`**, never a class of result, and a script whose inputs mostly
+  failed exits non-zero. (An image service outage once labelled thirteen sources "partial".)
+
 ## Trials
 
 **Blind**: identity, coordinates and dates scrubbed, observers pseudonymised; the investigator
