@@ -140,3 +140,28 @@ document-sha256: 2c8572128956937376639c7266b7568373a405d4f7531d3ac10da6096c81ebb
 
 - The code that built the visit medians (`infra/gcp/neowise_pixel_v2.py`) is not in this checkout. The NEOWISE product was confirmed from the README and the column names, not from the code.
 - The limits listed under "Re-check of v6" still apply.
+
+## Re-check of v8
+
+**Verdict: SUBMIT, with one condition the author owns.** Nothing in the text must change. The word "open" is accurate about the licence and not yet accurate about availability.
+
+document-sha256: 200d3f385e34f2698264995001c1ad120cbf0dcd04a63bab31ca27788c360855
+
+### What I checked
+
+- **Scope of the change.** HEAD holds v7 (hash 2c857212…, confirmed). `git diff HEAD` shows two changes only: the DRAFT label on line 1 and, in the AI statement, "(Claude AI models and the Oddsky tooling, oddsky.ai)" → "(Claude AI models and the open tooling from Oddsky.ai)". Everything else is identical to v7.
+- **Words.** Abstract 141 (limit 150). Everything else in the file is 1,308 (limit 1,350). Whole file 1,449.
+- **paper-check.** 95 statements, 0 failures on this hash.
+
+### "open tooling"
+
+- The repository AlanShortz/oddsky is private today (`gh repo view`: PRIVATE; its public GitHub page returns 404). There is no `oddsky` package on PyPI.
+- The repository carries an MIT LICENSE, and oddsky.ai says publicly: "Oddsky is open source under the MIT licence; the code opens with the first public release."
+- So the phrase matches the project's stated licence and public position, but a reader cannot obtain the tooling today. It is premature, not false, and it becomes plainly true once the repository is public.
+- Condition: make the repository public by the time the note is published. If that will not happen, replace the phrase with "(Claude AI models and the Oddsky tooling, oddsky.ai)", the v7 wording, which is true today.
+
+### Limits of this sign-off
+
+- I did not verify that the author accepted this concern. His recorded note on the wording says the question was raised and his answer was not yet recorded; the statement that he has accepted it comes from the coordinator.
+- The AI statement also says the author reviewed the analysis and the text. Only he can make that true.
+- The limits listed under "Re-check of v6" and "Re-check of v7" still apply.
