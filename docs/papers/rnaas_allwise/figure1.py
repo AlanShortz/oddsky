@@ -22,12 +22,14 @@ neo = rej.target.map(stars.set_index("designation").w1_neowise)
 dup = set(rej[(rej.w1snr > 25) & ((rej.w1mpro - neo).abs() < 0.25) & (rej.sep < 5) & (rej.coadd_id == rej.target.map(cat.coadd_id))].target)
 stars["dup"] = stars.designation.isin(dup)
 
+LABEL = {"catalog error, close pair": "catalog error, second Gaia star within 8.5″", "catalog error, isolated": "catalog error, none within 8.5″",
+         "real change": "real change"}
 fig, (a, b) = plt.subplots(1, 2, figsize=(11, 4.4))
 x, y = stars.w1_neowise_minus_allwise, stars.w1mag - stars.w1mpro
 style = {"catalog error, close pair": ("s", "tab:orange"), "catalog error, isolated": ("o", "tab:blue"), "real change": ("*", "tab:red")}
 for k, (mk, col) in style.items():
     m = stars.klass == k
-    a.scatter(x[m], y[m], marker=mk, c=col, s=110 if mk == "*" else 38, zorder=3, label=f"{k} ({m.sum()})")
+    a.scatter(x[m], y[m], marker=mk, c=col, s=110 if mk == "*" else 38, zorder=3, label=f"{LABEL[k]} ({m.sum()})")
 m = stars.dup
 a.scatter(x[m], y[m], marker="o", facecolors="none", edgecolors="k", s=120, linewidths=0.9, zorder=4,
           label=f"correct duplicate in the Reject Table ({m.sum()})")

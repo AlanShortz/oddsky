@@ -193,7 +193,7 @@ Reviewing the research note before submission, every number in it was recomputed
 - **Not all "isolated".** 13 of the 46 have a second Gaia star within 8.5" that is no more than 2.5 mag fainter (median 6");
   33 do not (28 have none within 15").
 - **The frame-detection test does not apply to the 46** (they were selected with w1nm/w1m ≥ 0.7); all 46 fail the SNR test
-  and 45 the Gaia-offset test. 436 of the 631 fail the frame test. No control source (697) fails two tests.
+  and all 33 without a close neighbour fail the Gaia-offset test. 436 of the 631 fail the frame test. No control source (697) fails two tests.
 - **44 of the 46 have a correct aperture magnitude.** The other two (J112058.90+045045.5, J211414.99-401348.9) are too
   bright by 0.5-0.7 mag in both AllWISE magnitudes, each with a star about 2 mag brighter 12" away.
 - The control sample on disk is 697 sources (median w1snr 47.2 to W1 = 12.5); the 3,069-source cone behind the Skeptic's
@@ -201,13 +201,21 @@ Reviewing the research note before submission, every number in it was recomputed
 
 **Mechanism, for 19 of the 46** (`scripts/reject_table.py`; every cone query verified, none failed). The AllWISE Reject Table
 (`allwise_p3as_psr`) holds a second extraction of the same star **from the same Atlas Tile**, 0.46-2.25" away (median 0.97"),
-with w1snr 44.5-49.0, the right magnitude (within 0.08 mag of NEOWISE), detected in every frame in 18. All 19 have
+with w1snr 44.5-49.0, the right magnitude (within 0.08 mag of NEOWISE), detected in every frame in 18. 18 of the 19 lie within
+0.5" of the star's Gaia position (median 0.06"), so they are the star. All 19 have
 `use_src = 0` (a duplicate not selected for the Catalog) and in 17 `best_use_cntr` is the cntr of the bad Catalog entry.
-The Explanatory Supplement (V.4.b) says same-Tile small-separation duplicates are marked `rel = 'r'` and Tile-overlap
-duplicates are resolved by keeping the apparition farthest from its Tile edge whatever its quality. 16 of the 19 good
-extractions have `rel` null; the Catalog entry is the later extraction (higher `src`) in 17 and the one farther from the
-Tile edge in 17, by at most 1.6 pixels. Reading: a displaced second extraction of the star was resolved against the good
-one by the geometric rule. In the list, 14 of the 40 image-validated sources have such a duplicate.
+The Explanatory Supplements describe two steps: same-Tile groups within 3.9" are classified first (the spurious member
+gets `rel = 'r'`; AllWISE V.4.b), and remaining groups within 2.5", which may hold several detections from one Tile, are
+resolved by keeping the detection farthest from its Tile edge (All-Sky V.3.c). Two of the 19 good extractions were rejected
+by the first step (`rel = 'r'`, the bad Catalog entry marked 's'). The other 17 carry no same-Tile mark although they lie
+within 3.9"; why is not established. For 16 of them `best_use_cntr` is the bad Catalog entry, and in all 16 that entry is
+the one farther from the Tile edge, by 0.01-1.2 pixels: the edge rule kept the displaced extraction. In the list, 14 of
+the 40 image-validated sources have such a duplicate. (An independent referee re-pulled both tables for all 48 and
+confirmed this; `docs/papers/rnaas_allwise/reviews/referee.md`.)
+
+**The 631 are a lower limit.** 31,549 clean sources fail two of the three catalogue tests; where 2MASS K decides, it favours
+the profile magnitude for 16,749 and the aperture for 631, and 14,169 have no decisive K. The list recovers 31 of the 46.
+A two-test failure says the entry is bad, not which magnitude is wrong.
 
 **The errors cluster by Tile**: 204 of the 631 lie in 10 Tiles (2719m561 has 51, 2267m334 34, 2047m485 30, 1103p393 24,
 2458m182 23, 0317p181 13, 3298m500 12). For the 27 of 46 without a full-SNR duplicate the cause is still open.

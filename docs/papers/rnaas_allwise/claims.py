@@ -88,7 +88,7 @@ def build(c):
     pe, pr = per[per.index.isin(err.designation)], per[per.index.isin(real.designation)]
     c.every("In the Multiepoch Photometry Table their per-frame fits", [len(pe) == len(err)])
     c.span("0.09–0.27 mag", pe.sig)
-    c.every("0.02 mag for the real stars", pr.sig.round(2) == 0.02)
+    c.every("0.024 and 0.025 mag for the real stars", [sorted(pr.sig.round(3)) == [0.024, 0.025]])
     c.number("a median 15% null uncertainties", pe.null.median(), scale=100)
     c.number("5% negative fluxes", pe.neg.median(), scale=100)
     c.number("median reduced χ² of 3.2", pe.chi.median())
@@ -96,30 +96,42 @@ def build(c):
             (ce.cc_flags == "0000") & (ce.nb == 1) & (ce.na == 0) & (ce.ext_flg == 0) & (ce.w1rchi2 < 3))
 
     # --- cause: duplicates in the Reject Table
-    rej = c.table("data/reject_entries_48.csv", dtype={"best_use_cntr": str, "cc_flags": str})
+    rej = c.table("data/reject_entries_48.csv", dtype={"best_use_cntr": str, "cntr": str, "cc_flags": str})
     cat = c.table("data/catalog_tiles_48.csv", dtype={"cntr": str}).set_index("designation")
     status = c.table("data/reject_query_status_48.csv")
     c.every("For 19 of the 46 the AllWISE Reject Table holds a second extraction of the same star from the same Atlas Tile",
             list(status.status == "ok") + [set(status.target) == set(stars.designation)])  # every cone query answered
-    neo = rej.target.map(stars.set_index("designation").w1_neowise)
-    full = rej[(rej.w1snr > 25) & ((rej.w1mpro - neo).abs() < 0.25) & (rej.sep < 5) & rej.target.isin(err.designation)
-               & (rej.coadd_id == rej.target.map(cat.coadd_id))]
+    w1_neo = stars.set_index("designation").w1_neowise
+    full = rej[(rej.w1snr > 25) & ((rej.w1mpro - rej.target.map(w1_neo)).abs() < 0.25) & (rej.sep < 5)
+               & rej.target.isin(err.designation) & (rej.coadd_id == rej.target.map(cat.coadd_id))]
     dup = full.sort_values("sep").drop_duplicates("target")
     c.number("For 19 of the 46", len(dup))
     c.span("0.46–2.25″", dup.sep)
     c.number("median 0.97″", dup.sep.median())
     c.span("w1snr = 44.5–49.0", dup.w1snr)
-    c.every("w1mpro within 0.08 mag of NEOWISE", (dup.w1mpro - dup.target.map(stars.set_index("designation").w1_neowise)).abs() <= 0.085)
+    c.every("w1mpro within 0.08 mag of NEOWISE", (dup.w1mpro - dup.target.map(w1_neo)).abs() <= 0.085)
     c.number("18 are detected in every frame", (dup.w1nm == dup.w1m).sum())
+    c.number("18 lie within 0.5″ of the Gaia position", (dup.gaia_sep < 0.5).sum())
+    c.number("median 0.06″", dup.gaia_sep.median())
     c.every("All 19 are marked as duplicates not selected for the Catalog (use_src = 0)", dup.use_src == 0)
-    c.number("for 17 of them best_use_cntr", (dup.best_use_cntr == dup.target.map(cat.cntr)).sum())
-    c.number("16 of the 19 good extractions carry no same-Tile mark", dup.rel.isna().sum())
-    c.number("later extraction in 17 cases", (dup.target.map(cat.src) > dup.src).sum())
-    edge = lambda x, y: np.minimum.reduce([x, y, 4096 - x, 4096 - y])  # noqa: E731
-    e_cat, e_rej = edge(dup.target.map(cat.wx), dup.target.map(cat.wy)), edge(dup.wx, dup.wy)
-    c.number("farther from the Tile edge in 17", (e_cat > e_rej).sum())
-    c.every("by at most 1.6 pixels", np.abs(e_cat - e_rej) <= 1.65)
+    first = dup[dup.rel == "r"]   # rejected as the spurious member of a small-separation same-Tile group
+    second = dup[dup.rel.isna()]  # not classified as a same-Tile group
+    c.number("Two of the 19 good extractions were rejected by the first step", len(first))
+    c.every("Two of the 19 good extractions were rejected by the first step", first.target.map(cat.rel) == "s")
+    c.number("The other 17 pairs carry no same-Tile mark", len(second))
+    c.every("although they lie within 3.9″", second.sep < 3.9)
+    c.every("Remaining groups within 2.5″", second.sep < 2.5)
+    named = second[second.best_use_cntr == second.target.map(cat.cntr)]
+    c.number("For 16 of them best_use_cntr names the catalog entry", len(named))
+
+    def edge(x, y):  # distance to the nearest edge of a 4095-pixel Tile
+        return np.minimum.reduce([x, y, 4095 - x, 4095 - y])
+
+    margin = edge(named.target.map(cat.wx), named.target.map(cat.wy)) - edge(named.wx, named.wy)
+    c.every("in all 16 is the one farther from the Tile edge", margin > 0)
+    c.span("by 0.01–1.2 pixels", margin)
     c.every("A Reject Table entry within 3″ with use_src = 0", (dup.sep < 3) & (dup.use_src == 0))
+    c.every("several times the w1snr", dup.w1snr > 3 * dup.target.map(stars.set_index("designation").w1snr))
     fails = c.table(WORK + "allwise_profile_fit_failures.csv", dtype={"cntr": str})
     tiles = fails[fails.tier == "A"].cntr.str.zfill(19).str[:8].value_counts()  # the first eight digits of cntr are the Tile
     c.number("204 of the 631 listed sources", tiles.head(10).sum())
@@ -133,14 +145,18 @@ def build(c):
     c.number("four of these are among the 19", dup.target.isin(pairs.designation).sum())
     c.number("For the 27 with no full signal-to-noise Reject Table entry", len(err) - len(dup))
     l40 = c.table("data/reject_entries_listed40.csv")
-    c.every("For 14 of the 40 the Reject Table holds", [l40.target_cntr.nunique() == 40])
+    c.every("for 14 the Reject Table holds a full signal-to-noise duplicate", [l40.target_cntr.nunique() == 40])
     l40 = l40[l40.designation.notna()]
     sep = 3600 * np.hypot((l40.ra - l40.t_ra) * np.cos(np.radians(l40.t_dec)), l40.dec - l40.t_dec)
-    c.number("For 14 of the 40", l40[(l40.w1snr > 25) & ((l40.w1mpro - l40.t_w1mag).abs() < 0.25) & (sep < 4)].target_cntr.nunique())
-    c.ignore("section V.4.b", "section of the Explanatory Supplement")
+    c.number("for 14 the Reject Table", l40[(l40.w1snr > 25) & ((l40.w1mpro - l40.t_w1mag).abs() < 0.25) & (sep < 4)].target_cntr.nunique())
+    c.ignore("Same-Tile groups within 3.9″", "radius quoted from the AllWISE Explanatory Supplement, section V.4.b")
     c.ignore("(Section 4)", "cross-reference")
-    c.ignore("two kinds of duplicate", "the Supplement's classification")
+    c.ignore("describe two steps", "the Supplements' procedure")
     c.ignore("rel = 'r'", "flag value")
+    c.ignore("Cutri et al. 2012", "citation")
+    ecat = cat.loc[err.designation]
+    c.number("39 have W1 ph_qual = 'B'", (ecat.ph_qual.str[0] == "B").sum())
+    c.number("seven have rel = 's'", (ecat.rel == "s").sum())
 
     # --- frequency
     c.external("42,759,991", "IRSA TAP COUNT(*) on allwise_p3as_psd with the stated cuts, north 20,560,072 + south 22,199,919 "
@@ -151,37 +167,44 @@ def build(c):
     c.number("323 north", (listed.glat > 0).sum())
     c.number("308 south", (listed.glat < 0).sum())
     c.number("1.5 × 10⁻⁵", len(listed) / n_clean)
-    c.number("for 591 of them", ((listed.w1mag - listed.w1mpro).abs() > 0.4).sum())
+    c.number("For 591 of them", ((listed.w1mag - listed.w1mpro).abs() > 0.4).sum())
     va = valid[valid.tier == "A"]
     c.number("a random 40", len(va))
-    c.number("matches w1mag in 36", (va.img_says == "aperture").sum())
-    c.every("w1mpro in none", va.img_says != "profile")
-    c.number("23,492", counts["discrepant_and_snr_below_15"])
+    c.number("in 36 and with w1mpro alone in none", ((va.img_minus_ap.abs() < 0.3) & (va.img_minus_pro.abs() > 0.3)).sum())
+    c.every("with w1mpro alone in none", ~((va.img_minus_pro.abs() < 0.3) & (va.img_minus_ap.abs() > 0.3)))
+    c.number("recovers only 31 of the 46", err.designation.isin(listed.designation).sum())
+    c.number("31,549 of the 506,437", counts["fail_two_of_three_tests"])
+    c.number("16,749", counts["two_fail_k_favors_profile"])
+    c.every("w1mag for 631", [counts["two_fail_k_favors_aperture"] == len(listed)])
+    from astropy.coordinates import SkyCoord
+    b = SkyCoord(control.ra.values, control.dec.values, unit="deg").galactic.b.deg
+    c.every("in one field at b > +80°", b > 80)
 
     # --- the test applied to the samples
     t2 = err.w1snr < 0.5 * err.w1mpro.apply(expected_w1snr)
     c.every("The 46 were selected with w1nm/w1m ≥ 0.7", err.w1nm / err.w1m >= 0.7)
     c.every("all fail (2)", t2)
-    c.number("45 fail (4)", (err.allwise_gaia_offset_arcsec > 0.35).sum())
+    lone = err[err.klass == "catalog error, isolated"]
+    c.number("all 33 with no close neighbor fail (4)", len(lone))
+    c.every("all 33 with no close neighbor fail (4)", lone.allwise_gaia_offset_arcsec > 0.35)
     k1 = (control.w1mag - control.w1mpro).abs() > 0.3
     k2 = control.w1snr < 0.5 * control.w1mpro.apply(expected_w1snr)
     k3 = control.w1nm / control.w1m < 0.6
-    c.every("none of the 697 control sources fails two tests", (k1.astype(int) + k2 + k3) < 2)
+    c.every("None of the 697 control sources fails two tests", (k1.astype(int) + k2 + k3) < 2)
     c.number("436 of the 631 fail (3)", (listed.w1nm / listed.w1m < 0.6).sum())
 
     # --- numerals that are not results
     for text in ("2010–11", "2014–2024", "2010–2020", "2011–2013", "by 2014"):
         c.ignore(text, "dates of the surveys")
-    for text in ("Cutri et al. 2013", "al. 2014", "Lang 2014", "Meisner et al. 2018", "Gaia Collaboration 2023"):
+    for text in ("Cutri et al. 2013", "al. 2014", "Lang 2014", "Meisner et al. 2022", "Gaia Collaboration 2023"):
         c.ignore(text, "citation")
     for text in ("|b| > 10°", "8 ≤ W1 ≤ 14.5", "at least 12 NEOWISE visits", "first three NEOWISE visits", "below 0.3 mag",
                  "more than 0.4 mag", "fewer than 70%", "cc_flags = 0000, nb = 1 and ext_flg = 0",
-                 "|w1mag − w1mpro| > 0.4 or w1snr < 20", "at least two of three", "within 0.4 mag of w1mag",
-                 "|w1mag − w1mpro| > 0.4 and w1snr < 15"):
+                 "|w1mag − w1mpro| > 0.4 or w1snr < 20", "at least two of three", "within 0.4 mag of w1mag"):
         c.ignore(text, "selection cut chosen by the author")
-    for text in ("above 0.3 mag", "(1) |w1mag − w1mpro| > 0.3", "(2) w1snr", "(3) w1nm/w1m < 0.6", "(4) for a source",
-                 "more than 0.35″", "two a rejection", "tests (1) and (2)", "R = 1"):
+    for text in ("(1) |w1mag − w1mpro| > 0.3", "(2) w1snr", "(3) w1nm/w1m < 0.6", "(4) for a source",
+                 "more than 0.35″", "Two failures reject", "fail at least two of tests (1)–(3)", "agrees within 0.3 mag", "Skrutskie et al. 2006", "tests (1) and (2)", "R = 1"):
         c.ignore(text, "definition of the test")
-    for text in ("## 1.", "## 2.", "## 3.", "## 4.", "Figure 1", "DRAFT v4", "the two epochs"):
+    for text in ("## 1.", "## 2.", "## 3.", "## 4.", "Figure 1", "DRAFT v6", "the two epochs"):
         c.ignore(text, "section, figure or version label; AllWISE and NEOWISE")
     c.review("reviews/referee.md")
