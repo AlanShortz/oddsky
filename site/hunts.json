@@ -5,9 +5,9 @@
       "id": "H-0016",
       "title": "The WISE gap",
       "question": "Nothing watched the mid-infrared sky between February 2011 and December 2013. Which stars and galaxies changed for good across that gap, and were quiet afterwards? The AllWISE 2010 catalogue and the NEOWISE 2014-2024 baseline sit side by side for 49 million quiet stars; asking costs one query.",
-      "date": "2026-11-03",
-      "state": "pilot done and refereed; catalogue diagnostic built into the Skeptic",
-      "scale": "49 M quiet stars · 19,818 steps · 110 unflagged · every clean step tested in the images",
+      "date": "2026-11-05",
+      "state": "done and refereed; catalogue diagnostic built into the Skeptic; failure list published",
+      "scale": "49 M quiet stars · 19,818 steps · 110 unflagged · every clean step tested in the images · 506,437 catalogue sources checked",
       "funnel": [
         [
           19818,
@@ -24,10 +24,16 @@
         [
           2,
           "real in the 2010 images"
+        ],
+        [
+          631,
+          "AllWISE sources with a bad profile fit, both hemispheres"
         ]
       ],
-      "verdict": "Forty-six of the forty-eight clean stellar steps are not in the sky: the AllWISE profile-fit magnitude of a clean, isolated star can be wrong by up to 1.7 magnitudes with no flag set, while the catalogue's own aperture magnitude is right. The failure leaves a four-column signature that is now a Skeptic check. The two real steps, and five more from a wider pull, are B stars whose 2010 circumstellar emission had vanished by 2014. Fifty-eight galaxy nuclei changed state across the gap; eight lost a hot-dust component and wait for a spectrum.",
-      "cases": []
+      "verdict": "Forty-six of the forty-eight clean stellar steps are not in the sky: the AllWISE profile-fit magnitude of a clean, isolated star can be wrong by up to 1.7 magnitudes with no flag set, while the catalogue's own aperture magnitude is right. The failure leaves a four-column signature that is now a Skeptic check, and a list of 631 affected sources is published. The real changes are a class: twelve O and B stars whose circumstellar emission of 2010 had shrunk or vanished by 2014, three of them never recorded as emission-line stars. And 85 galaxy nuclei lost a hot-dust component across the gap and have been quiet since; whether they switched off or echoed a flare is the next hunt.",
+      "cases": [
+        "OS-0037"
+      ]
     },
     {
       "id": "H-0015",
