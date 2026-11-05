@@ -136,6 +136,24 @@ def check_cmd(case: str):
             typer.echo(f"{p.id} [{r['outcome']}] p={p.probability:.2f} {p.statement}  ({r['note']})")
 
 
+@app.command("paper-check")
+def paper_check_cmd(claims: Path, final: bool = False):
+    """Recompute every number in a document from the data (the claims file next to it declares how) and fail on
+    a wrong value, an exception to a universal statement, or a numeral nobody declared. --final also requires a
+    referee review of exactly this text."""
+    from .paper import run
+
+    r = run(claims, final=final)
+    for f in r["failures"]:
+        typer.echo(" ✗ " + f)
+    for text, source in r["external"]:
+        typer.echo(f" ~ external, not recomputed: {text!r}  ({source})")
+    typer.echo(f"{r['checked']} statements recomputed, {len(r['external'])} external, {len(r['failures'])} failures; "
+               f"reviewed: {r['reviewed']}; sha256 {r['sha256']}")
+    if not r["ok"]:
+        raise typer.Exit(1)
+
+
 @app.command("export-web")
 def export_cmd(out: Annotated[Path | None, typer.Option()] = None):
     """Write web/data/*.json for the static viewer."""

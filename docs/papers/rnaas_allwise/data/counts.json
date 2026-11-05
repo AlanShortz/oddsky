@@ -1,0 +1,10 @@
+{
+ "steps_all": 19818,
+ "steps_unflagged": 110,
+ "discrepant_or_low_snr": 506437,
+ "discrepant_rows": 506437,
+ "discrepant_and_snr_below_15": 23492,
+ "fail_two_of_three_tests": 31549,
+ "two_fail_k_favors_profile": 16749,
+ "two_fail_k_favors_aperture": 631
+}

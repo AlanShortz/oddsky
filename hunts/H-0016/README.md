@@ -176,11 +176,49 @@ magnitudes; `work/allwise_product_validation.csv`):
 
 - **Tier A: 36 of 40 match the aperture magnitude, none matches the profile fit, 4 match neither.** Median AllWISE − Gaia
   offset 0.86", the same as the 46 artifacts of section 4. Tier A is the H-0016 failure: about 630 sources above |b| = 10°,
-  i.e. 3 × 10⁻⁵ of clean sources, evenly split between the hemispheres.
+  i.e. 1.5 × 10⁻⁵ of the 42,759,991 clean sources in both hemispheres, evenly split. (This line first said 3 × 10⁻⁵: the
+  631 had been divided by the northern count alone. Corrected 2026-11-05; see section 4d.)
 - Tier B: 33 of 40 match the aperture and none the profile, but the profile fit is a median 2.5 mag fainter than the image
   and there is no Gaia source within 5". These are not stars with a bad fit: they are faint catalogue entries on the wings of
   something bright that the aperture picks up. A different problem (likely spurious sources), listed for completeness and not
   counted in the failure rate.
+
+### 4d. Corrections and the mechanism (note review, 2026-11-05)
+
+Reviewing the research note before submission, every number in it was recomputed from the tables
+(`docs/papers/rnaas_allwise/claims.py`, run by `oddsky paper-check`). What changed:
+
+- **Rate: 1.5 × 10⁻⁵** (631 of 42,759,991), not 3 × 10⁻⁵. 591 of the 631 differ by more than 0.4 mag between aperture and
+  profile; 40 are marginal (K sits 0.4 mag from both).
+- **Not all "isolated".** 13 of the 46 have a second Gaia star within 8.5" that is no more than 2.5 mag fainter (median 6");
+  33 do not (28 have none within 15").
+- **The frame-detection test does not apply to the 46** (they were selected with w1nm/w1m ≥ 0.7); all 46 fail the SNR test
+  and all 33 without a close neighbour fail the Gaia-offset test. 436 of the 631 fail the frame test. No control source (697) fails two tests.
+- **44 of the 46 have a correct aperture magnitude.** The other two (J112058.90+045045.5, J211414.99-401348.9) are too
+  bright by 0.5-0.7 mag in both AllWISE magnitudes, each with a star about 2 mag brighter 12" away.
+- The control sample on disk is 697 sources (median w1snr 47.2 to W1 = 12.5); the 3,069-source cone behind the Skeptic's
+  curve was not saved. The two agree to 0.3.
+
+**Mechanism, for 19 of the 46** (`scripts/reject_table.py`; every cone query verified, none failed). The AllWISE Reject Table
+(`allwise_p3as_psr`) holds a second extraction of the same star **from the same Atlas Tile**, 0.46-2.25" away (median 0.97"),
+with w1snr 44.5-49.0, the right magnitude (within 0.08 mag of NEOWISE), detected in every frame in 18. 18 of the 19 lie within
+0.5" of the star's Gaia position (median 0.06"), so they are the star. All 19 have
+`use_src = 0` (a duplicate not selected for the Catalog) and in 17 `best_use_cntr` is the cntr of the bad Catalog entry.
+The Explanatory Supplements describe two steps: same-Tile groups within 3.9" are classified first (the spurious member
+gets `rel = 'r'`; AllWISE V.4.b), and remaining groups within 2.5", which may hold several detections from one Tile, are
+resolved by keeping the detection farthest from its Tile edge (All-Sky V.3.c). Two of the 19 good extractions were rejected
+by the first step (`rel = 'r'`, the bad Catalog entry marked 's'). The other 17 carry no same-Tile mark although they lie
+within 3.9"; why is not established. For 16 of them `best_use_cntr` is the bad Catalog entry, and in all 16 that entry is
+the one farther from the Tile edge, by 0.01-1.2 pixels: the edge rule kept the displaced extraction. In the list, 14 of
+the 40 image-validated sources have such a duplicate. (An independent referee re-pulled both tables for all 48 and
+confirmed this; `docs/papers/rnaas_allwise/reviews/referee.md`.)
+
+**The 631 are a lower limit.** 31,549 clean sources fail two of the three catalogue tests; where 2MASS K decides, it favours
+the profile magnitude for 16,749 and the aperture for 631, and 14,169 have no decisive K. The list recovers 31 of the 46.
+A two-test failure says the entry is bad, not which magnitude is wrong.
+
+**The errors cluster by Tile**: 204 of the 631 lie in 10 Tiles (2719m561 has 51, 2267m334 34, 2047m485 30, 1103p393 24,
+2458m182 23, 0317p181 13, 3298m500 12). For the 27 of 46 without a full-SNR duplicate the cause is still open.
 
 A research-note draft on the catalogue failure is at [docs/papers/RNAAS_AllWISE_profile_fit_draft.md](../../docs/papers/RNAAS_AllWISE_profile_fit_draft.md);
 the catalogue-wide tiered list (`scripts/allwise_product.py`, IRSA async job 27150356, both hemispheres) is section 4c when it lands.
@@ -298,6 +336,9 @@ population-level argument that the mechanism is disk loss in Be stars, and it ra
 complete for hot stars with a Gaia Teff at |b| ≥ 10°, 8 ≤ W1 ≤ 13.5; it does not see stars whose excess was below 0.4 mag.
 
 ### 5.5 Nuclei that cooled: a pre-pilot over the whole table (2026-11-04, `scripts/nuclei_cooled.py`)
+
+**Continued as [H-0017](../H-0017/README.md)**, which runs the mirror selection (nuclei that heated) through the same image
+test: 96 cooled against 13 heated.
 
 The eight red faders of 5.3 came from the 110 clean steps. Asking the question directly of the whole sky2 table (AllWISE
 W1 − W2 ≥ 0.4 in 2010-11; by 2014-15 fainter by > 0.3 mag in W1 and > 0.5 in W2 with the colour bluer by ≥ 0.25; quiet
