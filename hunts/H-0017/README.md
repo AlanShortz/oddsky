@@ -12,7 +12,10 @@ and quiet afterwards were already declining during 2010-11 (37 faded by more tha
 against 2 that brightened). That population is Wang et al. 2018 (MNRAS 477, 2943): mid-infrared-declining galaxies read
 as dust echoes of tidal disruption flares; four of their 19 are in this sample, including the object this write-up first
 called its best candidate. What this selection adds is reach: it needs no spectrum and covers the whole sky at
-|b| > 10°, so about 90 of the 96 are not in their sample. They are candidates to vet, not results. The 96 : 13 ratio of
+|b| > 10°. After vetting (section 6), 13 of the 96 are already studied or catalogued as variables, and 28 were declining in
+2010-11 with no transient literature found by the Librarian or by a referee's independent search; 24 of the 28 are
+resolved galaxies in optical surveys and most are AGN candidates by colour. They are candidates, not results: not
+shown to be nuclear, and probably obscured active nuclei that were fading in 2010. The 96 : 13 ratio of
 cooled to heated is set by the quiet cut and means nothing about rates.
 
 ## 1. Selection
@@ -131,7 +134,53 @@ Wang et al. 2018, a candidate tidal-disruption dust echo. It fades 0.46 mag in W
 visits spanning 363 days and is 1.31 mag fainter and 0.74 mag bluer by 2014. An earlier version of this section called it
 a star-forming galaxy with no AGN lines and the first object deserving a case; both were wrong.
 
-## 6. Not done
+## 6. Vetting the 96 (`scripts/vet.py`, `scripts/catwise_pos.py`, `scripts/candidates.py`; table `work/candidates.csv`)
+
+**Is it already published?** The Librarian (`oddsky librarian`, built for this after the referee's finding) was run on all
+96 with the topic "transient": SIMBAD, NED through ADS, and four shelves (Wang et al. 2018; MIRONG, Jiang et al. 2021;
+MacLeod et al. 2019; Graham et al. 2020). Every lookup answered, but for 69 of the 96 emptily: SIMBAD has no object, NED's
+object is the AllWISE entry itself, and ADS knows no paper under that name.
+
+The table below is from the Librarian after its own referee's fixes (catalogue membership, proper motion, four
+verdicts), run with epoch 2010.5:
+
+| | n | |
+|---|---|---|
+| already studied, or a catalogued variable | 13 | 4 on the Wang et al. 2018 shelf; 2 published changing-look AGN (J090902.36+133019.5, J120816.21+300738.3); PTF 10fgz; the variable Sy1 J095858.53+021459.2 (also named in Wang et al. 2018, outside their Table 1); 5 listed as NEOWISE variables in VarWISE (Paz & Kirkpatrick 2026; type "agn" from a classifier, not a spectrum) |
+| **declining in 2010-11, no transient literature found** | **28** | faded by more than 0.15 mag in W2 between AllWISE visits (control-corrected) |
+| no change seen within 2010-11 | 55 | cooled across the gap only |
+
+(The first run, before the fixes, gave 8 / 31 / 57; the three that moved out of the 31 are the VarWISE variables
+J110629.07-443500.9, J231443.35+274048.1 and J031930.03+773451.7. Six of the 13 heated sources are VarWISE variables too.)
+
+The 28: 22 have no paper in SIMBAD or ADS; 17 are NED type G; 24 are in the Secrest et al. 2015 AGN-candidate catalogue
+and 19 in Assef et al. 2018, so most are AGN candidates by colour; none has an SDSS spectrum; 2 have a NED redshift, and
+a third value, z = 3.875 for J104606.10+052919.7, is a photometric quasar-candidate estimate (Richards et al. 2009) that
+NED flags uncertain. They dropped 0.63-1.71 mag in W2 by 2014. The referee re-searched the original 31 independently
+(SIMBAD and NED to 15", ADS full text, VarWISE, Milliquas, VSX, and the Transient Name Server for 28 of them) and found
+none published as a tidal disruption event, supernova, nova or changing-look AGN. "No literature found" is not "new".
+SIMBAD does link Wang et al.'s table (all 14); the earlier miss was not looking. The Librarian still cannot see the
+Transient Name Server, and the shelves do not yet hold Dou et al. 2016, Yang et al. 2018, Stern et al. 2018 or Masterson
+et al. 2024.
+
+**Is it at the galaxy's centre? The test built for this does not work.** The AllWISE position (2010-11) was compared with
+the CatWISE2020 position (dominated by the later years): an off-nuclear transient should move the centroid. PTF 10fgz
+does (2.72"). But 22 of 131 unchanged control galaxies also shift by more than 1" (CatWISE splits galaxies into several
+components), against 11 of the 96; the two are indistinguishable (Mann-Whitney p = 0.95): every shift above 1" in either sample is a
+multi-component CatWISE match. Among single-component matches (32 here, 44 control) the control never exceeds 0.16" and 9
+of the 32 do (p = 0.013, a cut chosen after seeing the data). Only PTF 10fgz lies beyond
+the largest control shift (1.92"). An earlier status note that called ten sources "probably off-centre" is withdrawn.
+Whether the 28 are nuclear is still untested; it needs optical images of the hosts.
+
+**Are they galaxies?** Mostly yes (referee, on the original 31): 25 are in Legacy Survey DR10 and all are resolved (21
+Sérsic or de Vaucouleurs, 4 round-exponential), and J060052.59-172416.0 is an edge-on galaxy in PS1. Of the 28 that
+remain, 24 are therefore resolved galaxies and four at |b| < 19° are open: J070453.55-425303.0, J153714.70-413353.8,
+J175925.99+005955.1, J000646.30+434554.8. Their colours (W1 − W2 0.5-1.4, W2 − W3 2.1-3.8) are those of dusty
+galaxies and AGN, and they are spread over the sky (median |b| 33°, 9 below 20°), which a Galactic population of dusty
+stellar transients would not be. But Gaia sees most of them only as G ≈ 20-21 points or not at all, and a dust-forming
+nova fading in the infrared (like KT Eri in H-0016) would pass every cut here; that caveat now applies to those four.
+
+## 7. Not done
 
 - Literature cross-match (Sheng et al. 2017, Stern et al. 2018, Yang et al. 2018 changing-look samples; the MIRONG
   outbursts of Jiang et al. 2021 start in 2013 and should not overlap).
@@ -139,14 +188,13 @@ a star-forming galaxy with no AGN lines and the first object deserving a case; b
 - The light-curve shape after 2014 from the single exposures (the feature table says flat to 0.05 mag in W2).
 - A rate: how many such decaying events per galaxy per year this implies, against published tidal-disruption and
   changing-look rates.
-- Vetting the ~90 not in Wang et al. 2018: offset from the galaxy centre (is it nuclear?), a proper BPT class where a
-  spectrum exists, and coordinates against the tables of Dou et al. 2016, Assef et al. 2018, Yang et al. 2018, Stern et al.
-  2018 and Masterson et al. 2024, none of which the referee could obtain in machine-readable form.
+- For the 28: optical images of each host (is there a galaxy, and is the source at its centre?), a redshift, and shelves
+  for Dou et al. 2016, Yang et al. 2018, Stern et al. 2018 and Masterson et al. 2024; a Transient Name Server source.
 - The same-frame neighbour control covers 50 of the 96 (IRSA timed out on the rest).
 - Nothing here is a claim. The referee's verdicts: section 4 holds with caveats, section 5's candidate did not hold,
   the population is not new, sections 2-3 hold with the quiet-cut correction.
 
-## 7. Files
+## 8. Files
 
 `scripts/nuclei_state.py`, `scripts/identify.py`, `scripts/epochs_2010.py`, `scripts/sdss_spectra.py`;
 `work/epochs_2010.csv`, `work/epochs_2010_control.csv`, `work/sdss_spectra.csv`, `work/mep_*.csv`; `work/nuclei_cooled_all.csv`, `work/nuclei_heated_all.csv` (image

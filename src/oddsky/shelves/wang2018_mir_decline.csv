@@ -1,0 +1,20 @@
+# title: Long-term decline of the mid-infrared emission of normal galaxies: dust echo of tidal disruption flare?
+# bibcode: 2018MNRAS.477.2943W
+# topics: transient
+# source: Table 1 of the paper (the final sample of 14), transcribed 2026-11-05 from academic.oup.com/mnras/article/477/3/2943/4992877; positions computed from the printed IAU names
+# note: this shelf holds Table 1 only. The paper names at least one more object outside Table 1, SDSS J095858.5+021459, which is not on this shelf
+name,ra,dec
+SDSS J030257.14-082942.9,45.73808,-8.49525
+SDSS J091225.01+061014.8,138.10421,6.17078
+SDSS J100933.14+232255.8,152.38808,23.38217
+SDSS J113527.29+392810.7,173.86371,39.46964
+SDSS J121116.47+001345.3,182.81863,0.22925
+SDSS J123715.10+601207.0,189.31292,60.20194
+SDSS J130819.12+434525.6,197.07967,43.75711
+SDSS J133737.13+202351.7,204.40471,20.39769
+SDSS J133837.60+573113.2,204.65667,57.52033
+SDSS J134244.41+053056.2,205.68504,5.51561
+SDSS J141036.81+265425.0,212.65337,26.90694
+SDSS J142401.66+295028.4,216.00692,29.84122
+SDSS J145851.65+175057.9,224.71521,17.84942
+SDSS J155223.29+323455.1,238.09704,32.58197

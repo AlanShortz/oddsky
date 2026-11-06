@@ -335,9 +335,99 @@ def _reject_sentence(rej: dict | None, aw: dict) -> str:
     return ". No clean second extraction of this star was found in the AllWISE Reject Table within 3\"."
 
 
+def prior_art(store: CaseStore) -> list[Check]:
+    """The Librarian's answer (oddsky.librarian, stored by fetch): is it new? H-0017 called a galaxy its best candidate when
+    it was object 12 of Wang et al. 2018. "studied" is a warning: there is something to read first. "mentioned" (topical
+    titles only in papers that list hundreds of objects), "catalogued" and "unlisted" pass; none of them is evidence that
+    nothing is published. A source that could not be queried is named, and the verdict is then not final."""
+    from ..librarian import ABOUT_MAX_OBJECTS, incomplete_reasons, unavailable_names
+
+    title = "Prior art (the Librarian)"
+    pa = store.context().get("prior_art")
+    if not pa:
+        t = store.load().target
+        if t is None or t.ra is None:
+            return []  # a blind packet: no position, and the literature is out of bounds
+        return [_check("prior_art", title, "skip",
+                       "the literature has not been checked for this position: run `oddsky fetch <case> --surveys librarian` "
+                       "before anything here is called new")]
+    n, top, shelves = pa.get("n_papers", 0), pa.get("topical_papers") or [], pa.get("shelf_hits") or []
+    n_top = pa.get("n_topical", len(top))
+    about = [p for p in top if not p.get("big_list")]
+    n_about = pa.get("n_about", n_top)
+    otypes, cat_hits = pa.get("otype_hits") or [], pa.get("catalogue_hits") or []
+    variables, agn = [h for h in cat_hits if h.get("kind") == "variable"], [h for h in cat_hits if h.get("kind") == "agn"]
+    topics = ", ".join(pa.get("topics") or [])
+    name = (pa.get("simbad") or {}).get("main_id") or (pa.get("ned") or {}).get("prefname")
+    down = unavailable_names(pa)
+    why = incomplete_reasons(pa)
+    verdict = pa.get("verdict")
+    papers = "paper" if n == 1 else "papers"
+
+    def newest(rows):
+        return "; ".join(f"{p['bibcode']} \"{str(p.get('title') or '').rstrip('.')}\"" for p in rows[:3])
+
+    if verdict == "studied":
+        status = "warn"
+        parts = []
+        if about:
+            lists = n_top - n_about
+            parts.append(f"{n_about} of {n} {papers} on {name or 'this position'} {'matches' if n_about == 1 else 'match'} the "
+                         f"topics ({topics})"
+                         + (f", not counting {lists} {'list' if lists == 1 else 'lists'} of more than {ABOUT_MAX_OBJECTS} objects"
+                            if lists > 0 else "") + f"; newest: {newest(about)}")
+        if shelves:
+            parts.append("on the shelves of published samples: "
+                         + "; ".join(f"{h['bibcode']} \"{str(h.get('title') or '').rstrip('.')}\" (as {h['name']})"
+                                     for h in shelves[:3]))
+        if otypes:
+            parts.append("SIMBAD has a transient-type object here: "
+                         + "; ".join(f"{o['main_id']} ({o['otype']}, {o['label']})" for o in otypes[:3]))
+        if variables:
+            parts.append("catalogued as a variable: "
+                         + "; ".join(f"{h['name']} has {h['object']}" + (f" (type {h['class']})" if h.get("class") else "")
+                                     + f", {h['bibcode']}" for h in variables))
+        finding = ". ".join(parts) + ". These must be read before anything here is called new."
+    elif verdict == "mentioned":
+        # not a warning: the topical titles belong to surveys that list this object among hundreds, not to papers about it
+        status = "pass"
+        finding = (f"{n_top} of {n} {papers} on {name or 'this position'} {'matches' if n_top == 1 else 'match'} the topics "
+                   f"({topics}), but only in lists of more than {ABOUT_MAX_OBJECTS} objects: it is in their tables, and "
+                   f"no paper is about it; newest: {newest(top)}")
+    elif verdict == "catalogued":
+        status = "pass"
+        finding = (f"{n} {papers} {'lists' if n == 1 else 'list'} {name or 'the object at this position'}; no title matches "
+                   f"the topics ({topics}) and no shelf holds it")
+        if ((pa.get("sources") or {}).get("ads") or {}).get("status") == "unresolved":
+            finding += "; ADS did not recognise the name, so only the text of its abstracts was searched"
+    else:
+        status = "pass"
+        finding = (("no object and no shelf entry" if down else "no SIMBAD object, no NED object and no shelf entry")
+                   + f" within {pa.get('radius_arcsec', 5.0):g}\"")
+        if near := pa.get("nearby"):
+            finding += f"; the nearest is {near['name']} ({near['source']}), {near['sep_arcsec']:.1f}\" away"
+    if agn:
+        finding += ("." if verdict == "studied" else ";") + " listed as an AGN or AGN candidate in " + " and ".join(
+            h["name"] for h in agn)
+    if why or not pa.get("complete", True):
+        who = " and ".join(down) or "a source"
+        reason = "; ".join(why) or f"{who} could not be queried"
+        if verdict == "studied":
+            finding += (" " if finding.endswith(".") else ". ") + f"The list is incomplete: {reason}."
+        else:
+            # not a pass: what was read holds nothing on the topics, and something was not read
+            status = "warn"
+            finding = (f"not final: {reason}. From the sources that answered: {finding}. Re-run "
+                       "`oddsky fetch <case> --surveys librarian` before anything here is called new.")
+    return [_check("prior_art", title, status, finding, verdict=verdict, complete=bool(pa.get("complete", True)) and not why,
+                   n_papers=n, n_topical=n_top, n_about=n_about, unavailable=down, newest=[p["bibcode"] for p in (about or top)[:3]],
+                   shelves=[h["shelf"] for h in shelves], otypes=[o["otype"] for o in otypes],
+                   catalogues=[h["catalogue"] for h in cat_hits], checked_at=pa.get("checked_at"))]
+
+
 BATTERY: list[Callable[[CaseStore], list[Check]]] = [
     blending, neowise_quality, independent_confirmation, gaia_baseline, chromaticity, onset_coverage, aliases, tess_systematics,
-    astrometry, allwise_photometry,
+    astrometry, allwise_photometry, prior_art,
 ]
 
 
