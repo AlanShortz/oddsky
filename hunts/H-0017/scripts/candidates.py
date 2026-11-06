@@ -21,13 +21,17 @@ x["fade_2010"] = x.dw2_2010 - ctl.dw2_2010.median()  # W2, last minus first AllW
 x["shift_sigma"] = np.hypot(x.dra / np.hypot(x.sigra, x.cw_sigra), x.ddec / np.hypot(x.sigdec, x.cw_sigdec))
 x["known"] = x.verdict == "studied"
 x["declining"] = x.fade_2010 > 0.15
-x["moved"] = x.cw_sep > 1.0
-x["klass"] = np.select([x.known, x.moved, x.declining], ["already studied", "position moved", "declining, at the same position"],
+# The position test does not discriminate: 22 of 131 unchanged control galaxies shift by more than 1 arcsec between AllWISE
+# and CatWISE (deblending), against 11 of these 96. Only a shift beyond anything in the control is flagged.
+kc = pd.read_csv(W + "catwise_control.csv")
+x["moved"] = x.cw_sep > kc.cw_sep.max()
+x["klass"] = np.select([x.known, x.declining], ["already studied", "declining in 2010, no transient literature found"],
                        "no change seen within 2010")
 cols = ["designation", "klass", "ra", "dec", "z", "ned_type", "simbad", "simbad_otype", "w2mpro_allwise", "d2", "dcolor", "fade_2010", "n_ep",
-        "cw_sep", "shift_sigma", "n_catwise", "ext_flg", "spec_class", "subclass", "verdict", "n_papers", "n_topical", "newest_topical", "shelves"]
+        "cw_sep", "moved", "n_catwise", "ext_flg", "spec_class", "subclass", "verdict", "n_papers", "n_topical", "newest_topical", "shelves"]
 x.sort_values(["klass", "fade_2010"], ascending=[True, False])[cols].round(4).to_csv(W + "candidates.csv", index=False)
 print(x.klass.value_counts().to_string())
-print("declining and not studied:", int((x.declining & ~x.known).sum()), "| of those moved > 1 arcsec:", int((x.declining & ~x.known & x.moved).sum()))
-p = x[x.klass == "declining, at the same position"].sort_values("fade_2010", ascending=False)
-print(p[["designation", "z", "ned_type", "w2mpro_allwise", "d2", "fade_2010", "cw_sep", "spec_class", "subclass", "n_papers"]].head(40).round(2).to_string())
+print("control: shifts > 1 arcsec in", int((kc.cw_sep > 1).sum()), "of", len(kc), "; maximum", round(kc.cw_sep.max(), 2), "| here > 1 arcsec:",
+      int((x.cw_sep > 1).sum()), "of", len(x), "; beyond the control maximum:", x[x.moved].designation.tolist())
+p = x[x.klass == "declining in 2010, no transient literature found"].sort_values("fade_2010", ascending=False)
+print(p[["designation", "z", "ned_type", "w2mpro_allwise", "d2", "fade_2010", "cw_sep", "spec_class", "subclass", "n_papers"]].head(8).round(2).to_string())
