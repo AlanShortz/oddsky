@@ -74,6 +74,14 @@ def simulate(args):
         p = pd.read_csv(f"{hd.RUNS}/data/nss/field_parent.csv").rename(columns={"phot_g_mean_mag": "G"})
     p = p.sample(args.stars, random_state=args.seed, replace=len(p) < args.stars)
     scan = Scan()
+    if args.standin_test:
+        # Test of the DR4 stand-in on DR3 itself: the first year of the real law, repeated at +1 and +2 yr, in place of the truth
+        t0 = scan.t.min()
+        keep = scan.t < t0 + 365.25
+        parts = [(scan.t[keep] + k * 365.25, scan.ra[keep], scan.dec[keep], scan.psi[keep], scan.fov[keep]) for k in range(3)]
+        scan.t, scan.ra, scan.dec, scan.psi, scan.fov = [np.concatenate(x) for x in zip(*parts)]
+        scan.tree = cKDTree(unit(scan.ra, scan.dec))
+        args.tmax = t0 + 1038
     if args.dr4:
         # DR4 spans 66 months and its commanded scan law is not public. Stand-in: repeat the real law three years later, which
         # keeps the solar phase; the spin-axis phase is then not the true one.
@@ -95,6 +103,9 @@ def simulate(args):
             t, psi = t[m], psi[m]
         if len(t) < 12:
             continue
+        if args.thin:  # drop transits at random: the model has 1.21 times the matched transits of real sources
+            m = rng.random(len(t)) > args.thin
+            t, psi = t[m], psi[m]
         ncount.append(len(t))
         sp, cp = np.sin(np.radians(psi)), np.cos(np.radians(psi))
         e_pos = get_body_barycentric("earth", Time(t + T0_JD, format="jd", scale="tdb")).xyz.to_value("au")
@@ -110,11 +121,11 @@ def simulate(args):
         sb = float(SkyCoord(ra=s.ra * u.deg, dec=s.dec * u.deg).transform_to(BarycentricMeanEcliptic()).lat.deg)
         M = args.draws
         P = 10 ** rng.uniform(np.log10(30), np.log10(3000), M)
-        ecc = rng.uniform(0, 0.9, M)
+        ecc = rng.uniform(0, 0.9, M) if args.ecc == "uniform" else (np.sqrt(rng.uniform(0, 0.81, M)) if args.ecc == "thermal" else rng.beta(1.2, 3, M) * 0.9)
         phase0 = rng.uniform(0, 2 * np.pi, M)
-        q = rng.uniform(0.05, 1, M)
+        q = rng.uniform(0.05, 1, M) if args.q == "flat" else np.clip(rng.lognormal(np.log(0.3), 0.7, M), 0.02, 1)
         l_ = q**3.5
-        a_rel = (1 + q) ** (1 / 3) * (P / 365.25) ** (2 / 3)
+        a_rel = (args.m1 + q * args.m1) ** (1 / 3) * (P / 365.25) ** (2 / 3)
         a0 = a_rel * np.abs(q / (1 + q) - l_ / (1 + l_)) * s.parallax
         cosi = rng.uniform(-1, 1, M)
         sini = np.sqrt(1 - cosi**2)
@@ -218,6 +229,11 @@ if __name__ == "__main__":
     ap.add_argument("--seed", type=int, default=18)
     ap.add_argument("--tmax", type=float, default=None)
     ap.add_argument("--dr4", action="store_true")
+    ap.add_argument("--standin-test", action="store_true")
+    ap.add_argument("--thin", type=float, default=0.0)
+    ap.add_argument("--ecc", default="uniform", help="uniform, thermal or low")
+    ap.add_argument("--q", default="flat", help="flat or low")
+    ap.add_argument("--m1", type=float, default=1.0)
     ap.add_argument("--fix", default="", help="comma list of T,P,e to hold fixed in the Fisher matrix")
     ap.add_argument("--out", default=f"{hd.RUNS}/sim_nss.parquet")
     d = simulate(ap.parse_args())

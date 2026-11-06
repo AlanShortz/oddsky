@@ -2,21 +2,23 @@
 
 Opened 2026-11-06 from a clean-slate brief: ignore Oddsky's agenda, find a question worth testing, run the experiment.
 
-**Status.** Three results, none of them a discovery of new astrophysics. Refereed and independently reproduced the same day.
+**Status.** Three results, none of them a discovery of new astrophysics. Refereed and independently reproduced the same day; every
+assumption is listed and tested in `ASSUMPTIONS.md`.
 
 1. **Tightest test found of Galactic handedness in binaries:** no detection. Wide pairs give D_Z = −1.56 ± 0.69% (−2.3σ) on
    sealed data, below the 4σ threshold. 95% limit: |⟨L̂_Z⟩| < 1.9%. D = 0 is not rejected (p = 0.115), and dev gives −0.41 ± 1.05%.
 2. **Gaia DR3's astrometric orbits have a handedness, and it comes from Gaia, not from the sky.** Orbits turning the way the
    Earth does are missing: 77,470 against 90,595 of the opposite sense (A = −0.0781). At 340–390 d, A = −0.25 on held-out data.
-3. **Largely explained below about 1100 d; not above.** Letting P, T and e float in the orbit fit makes parallax errors depend on
-   orbital sense, and the parallax cut `ϖ/σ_ϖ > 20000/P` turns that into missing orbits. A model with no fit to orbit data, built
-   while dev was in view, matches the pattern on held-out data. Gaia's own solutions with e and T held fixed show the effect
-   vanish (post hoc). Applied to the observed margins, the model reproduces 70–77% of the deficit above 300 d (exploratory, by the
-   referee), but about 10% above 1100 d, where the cut does not bind and A is still about −0.08.
+3. **Largely explained, not completely.** Letting P, T and e float in the orbit fit makes parallax errors depend on orbital sense, and
+   several selection steps then remove more Earth-sense orbits. A blind run of `gaiamock`'s full pipeline on the real scan law gets the
+   same sign and shape from nothing but simulated orbits, at 35–75% of the observed amplitude. Near one year the parallax cut
+   `ϖ/σ_ϖ > 20000/P` does most of the removing. At 600–900 d it adds to an asymmetry already present before it, and above 1100 d it plays
+   no part: there the choice between orbit and acceleration solutions gives about half the observed effect.
 
-Butkevich 2018 published the sense dependence of orbit-parallax correlation near one year, for a parallax-only fit. The error
-inflation through free P, T and e reported here is a different route. Neither the referee's search nor mine found an earlier
-measurement of the sense asymmetry in Gaia data. That is a search result, not proof that nobody has done it.
+The geometry is in Butkevich 2018 (his Eqs. 22, 25–26 imply the hemisphere mapping, without stating or testing it), and the one- and two-year
+deficits and the cut's one-year hole are published without reference to sense (Makarov 2025; Andrews+ 2019; El-Badry+ 2024; Lam+ 2025). Neither the
+referee's search, a dedicated literature read nor mine found an earlier measurement of the sense asymmetry in Gaia data. That is a search
+result, not proof that nobody has done it.
 
 Files: `PREREGISTRATION.md` (hashes and times in `~/oddsky-runs/h0018/prereg.sha256`), `scripts/`, `work/`, `figures/`,
 `predictions/dr4_handedness.md` (draft, not sealed), `reviews/`.
@@ -72,6 +74,9 @@ uv run python -I hunts/H-0018/scripts/freeze_prediction.py
 uv run python -I hunts/H-0018/scripts/controls.py
 uv run python -I hunts/H-0018/scripts/final.py --heldout
 uv run python -I hunts/H-0018/scripts/post_referee.py
+uv run python -I hunts/H-0018/scripts/assumptions.py
+# gaiamock's source compiled against GSL in ~/oddsky-runs/h0018/gaiamock_src; see scripts/gm_run.py
+uv run --with healpy --with joblib python -I hunts/H-0018/scripts/gm_run.py --stars 12000 --draws 60 --seed 41 --out ~/oddsky-runs/h0018/gm_dr3.parquet
 ```
 
 ### Does the method work? Controls
@@ -82,6 +87,7 @@ uv run python -I hunts/H-0018/scripts/post_referee.py
 | Injection on dev | 5% along +Z returned +5.29%, along the ecliptic pole +5.09% (se 1.05%): a linearity check. The registered 0.5% is below dev noise |
 | Kepler mock | Referee's, with real pairs, real errors and thermal e: gain D/⟨L̂_Z⟩ of 1.87–1.90, effectively about 1.5–1.75 allowing for pairs that are not Kepler. So the registered (2/3)D is about right. My first mock was not a Kepler mock |
 | Shift catalogue | **no power:** only 435 held-out pairs survive the cut, D_Z = +1 ± 15%. Not counted as a pass |
+| Unrelated stars 1–10′ apart, same statistic (added later, because the shift control had no power) | D_Z = −0.15 ± 0.36%, N ≈ 690,000; 10–30′ apart +0.77 ± 0.36% (2.1σ). Errors naive: stars recur. So the instrument adds no Galactic dipole above about 0.8% |
 | Sign convention | Sixth Orbit Catalog visual orbits with periods differing from Gaia's by over 1%: **61 of 63 agree** (referee). Gaia BH1 and BH2 also agree (reproducer) |
 
 ## The result
@@ -111,7 +117,8 @@ Pairs wider than 10⁵ au: only 23 survive, so the tidal prediction, which appli
 
 *Exploratory.* With dev included: D_Z = −1.22 ± 0.58% (−2.1σ), limit 1.6%. The negative sign would be prograde. The sign of mean y
 fits that in five of six latitude bands, but the pattern looks more like a step than sin b, and D_Z does not grow with `|z|/σ`. Plain
-shear is far too small (B·s is about 6×10⁻⁴ km/s at 10⁴ au, against pair velocities of order 0.5 km/s). Nothing here is evidence of a signal.
+shear is far too small (B·s is about 6×10⁻⁴ km/s at 10⁴ au, against pair velocities of order 0.5 km/s). Stricter separations give −1.06 ± 0.86% (over 5″) and −0.95 ± 1.21% (over 10″), and across all sample cuts D_Z runs −0.72 to −1.63%.
+Nothing here is evidence of a signal.
 
 Orbits (T4): D_Z = −0.11 ± 0.83% with a step-function ecliptic term removed, but that term does not remove the pattern: the same fit
 leaves D_Y = −5.97 ± 1.03%. With period × |sin β| terms the referee gets −1.2 ± 3.4%, and with period, margin, |sin β| and |b| terms −0.5
@@ -145,11 +152,36 @@ and the model's one-year ratio is 1.226 against 1.154 ± 0.060 observed; the "1.
 In T3 the amplitudes behave alike: RV amplitude / 2K_pred is 1.361 and 1.355 for the two senses. At these bright magnitudes the stars
 are RV-variable at the same rate in both senses. This does not confirm individual orbits.
 
-*Exploratory, after opening.* Four further tests of the mechanism (`work/post_referee.txt`, `work/knockout.txt`):
+*Exploratory, after opening.* Further tests of the mechanism (`work/gm_dr3.txt`, `work/gm_long.txt`, `work/gm_channel.txt`,
+`work/post_referee.txt`, `work/knockout.txt`):
 
-**Gaia's own knockout, found by the referee, is the strongest evidence.** Halbwachs+ 2023 §5.2 fix e and T for solutions with
-e < 0.0005 and recompute the covariance. So their published errors contain the experiment. It is post hoc and selected on a fit
-outcome, but neither the model nor I used it. `Orbital`, parallax-error ratio:
+**A real, blind pipeline.** `gaiamock`'s cascade (El-Badry+ 2024: single star, acceleration models, period search, 12-parameter fit) was given only
+simulated epochs of 1.44 M orbits, in mirror pairs, on the real scan law, then the published cuts. It recovers the true sense 98.9% of the time.
+
+| period (d) | A, cascade | A, held-out data | ratio, cascade | ratio, held-out data |
+|---|---|---|---|---|
+| 150–200 | +0.043 ± 0.031 | +0.059 ± 0.016 | 0.916 | 0.931 |
+| 340–390 | −0.191 ± 0.055 | −0.252 ± 0.033 | 1.116 | 1.154 |
+| 390–450 | −0.099 ± 0.027 | −0.134 ± 0.013 | 1.130 | 1.099 |
+| 500–600 | −0.021 ± 0.018 | −0.060 ± 0.007 | 1.071 | 1.070 |
+| 700–800 | −0.055 ± 0.029 | −0.150 ± 0.009 | 1.192 | 1.301 |
+| all | −0.032 ± 0.007 | −0.080 ± 0.003 | | |
+
+It gets the sign and shape, and the fall of the two-year ratio with e (1.34, 1.32, 1.12, 0.99, data 1.52, 1.37, 1.16, 1.11). Against held-out data by period:
+Spearman 0.77 for A, median ratio difference 0.034 (r = 0.62, noisy bins). It does not get the amplitude. One likely reason: 10% of real orbits are at
+ϖ < 0.7 mas, where A = −0.37, against 0.7% in the simulation, because a 1 M☉ primary cannot make such large orbits. This was not tested directly.
+
+**The channel is more than one cut.** Removing the parallax cut from the cascade takes 340–390 d from −0.19 to −0.07, so near one year it dominates. At
+600–900 d it is sense-dependent (at ϖ 1–1.5 mas it removes 15.9% against 8.0%) but only adds to an asymmetry already there: −0.095 without the cut, −0.139 with it.
+T5's fade with margin does not by itself prove the cut is the whole cause, which is what I first wrote.
+
+**Above 1100 d.** A deep run of 1.8 M orbits in mirror pairs gives A = −0.035 ± 0.010 at the step that decides between an orbit and an acceleration solution, with
+7- and 9-parameter solutions themselves symmetric (−0.006 ± 0.003). That is about half the observed −0.07: a supported route, with half still missing.
+
+**Gaia's own knockout, found by the referee.** Halbwachs+ 2023 §5.2 fix e and T for solutions with e < 0.0005 and recompute the covariance. So their
+published errors contain the experiment. It is post hoc and selected on a fit outcome. These are the same fits with e and T conditioned out, so it tests
+the structure of Gaia's covariance, not fresh data; they also skip the σ_e filter, so A's disappearance cannot be separated from that selection.
+`Orbital`, parallax-error ratio:
 
 | period (d) | e < 5×10⁻⁴ (e, T fixed) | 0.006 ≤ e < 0.05 (free) |
 |---|---|---|
@@ -159,14 +191,16 @@ outcome, but neither the model nor I used it. `Orbital`, parallax-error ratio:
 | 800–900 | 1.020 ± 0.077 | 1.397 ± 0.074 |
 | 900–1100 | 0.917 ± 0.072 | 1.256 ± 0.043 |
 
-A follows at 600–900 d: −0.020 ± 0.036 (N = 782) against −0.308 ± 0.026 (N = 1309). The model's knockout predicted the control row.
+A follows at 600–900 d: −0.020 ± 0.036 (N = 782) against −0.308 ± 0.026 (N = 1309). The model with e and T fixed gives 1.05 for the control row and 1.03, 1.01, 1.01
+above it, computed after seeing these numbers. Andrews+ 2019 report a two-year dip for orbits with true e = 0.01 and e free in the fit, which also points to the
+floating parameter rather than to large true eccentricity.
 
 ![Which element](figures/which_element.png)
 
 **The model, element by element.** With all three fixed the ratio is 1, but that is an identity: the linear columns do not contain the
 sign. At the **one-year** peak P, T and e all contribute, and P carries the shoulders. The **two-year** peak needs e and T: a second
 harmonic of a two-year orbit has a one-year period, with the orbit's sense. This replaces my earlier reading of it as a sidelobe of the
-observing window. The **half-year** reversal needs all three in part, and I have no simple account of it. The ratio at 700–800 d falls
+observing window; Butkevich's Eq. 29 does have a finite-baseline sense term at two years, but it is small (about 2% in error). The **half-year** reversal needs all three in part, and I have no simple account of it. The ratio at 700–800 d falls
 with e in the data: 1.518, 1.372, 1.158, 1.106 from e < 0.2 up to e ≥ 0.6; the model gives the same shape with a higher first bin (1.92).
 
 **A real non-linear fit** on simulated epochs (a₀ = 0.8 mas, e = 0.15, G about 14, started at the truth): the *scatter* of fitted parallax
@@ -177,19 +211,18 @@ differs by sense, not only the formal error. +NEP over −NEP: 0.92 ± 0.09 at 2
 d: scatter ratio +NEP/−NEP = 1.18 ± 0.14. Consistent with the 1.2–1.3 expected, but also with 1. Underpowered.
 
 **Positive findings.** Sense-dependent parallax errors (ratio 1.30 ± 0.01 at 700–800 d, 1.00 at 200–250 d); a sense deficit tied to Earth's
-orbit; the parallax cut as the main channel below about 1000 d; radial velocities showing the excess is not fake for bright stars.
+orbit; the parallax cut as the main channel near one year and one of several elsewhere; radial velocities showing the excess is not fake for bright stars.
 
 **Negative.** No Galactic handedness above the wide-pair limits. No sign in any proxy that the excess orbits are spurious.
 
 **Inconclusive.** Whether faint orbits (G > 13) near the cut are real. The tide prediction.
 
 **Unexplained.**
-- **P > 1100 d:** A ≈ −0.08 where the parallax cut does not bind and A does not fade with margin. Likely a pipeline step the model lacks,
-  such as the acceleration-orbit cascade. Untested.
-- **450–600 d:** the channel reproduces about half the deficit.
-- **The model's own amplitude** is about half at 600–900 d: −0.068 against −0.122 after re-weighting to the data's margins. Residual A −
-  A_model for P ≥ 450 d is −0.072.
-- **50–100 d:** A = +0.164 ± 0.037 against a model +0.006 ± 0.08. Post hoc zoom: +0.21 at 72–100 d, N = 707. `AstroSpectroSB1` shows it too.
+- **The amplitude.** The cascade reaches 35–75% of the observed A. Population is the leading suspect, but no run has matched the data's low-parallax orbits.
+- **P > 1100 d:** A ≈ −0.08 in `Orbital`, where the parallax cut does not bind. The orbit-or-acceleration step gives about half.
+- **450–600 d:** the channel estimate reproduces about half the deficit, and the cascade gives −0.02 against −0.06.
+- **50–100 d:** A = +0.164 ± 0.037 against +0.02 ± 0.06 in the cascade. Post hoc zoom: +0.21 at 72–100 d, N = 707. `AstroSpectroSB1` shows it too.
+- **Half-year reversal:** the data, the Fisher model and the cascade agree in sign (the cascade only at 1.4σ). I have no mechanism for it, and the literature read found no support.
 - **Small residuals** at margin 5–10 (−0.037 ± 0.014), and at 600–900 d, e 0.7–0.8, where A is +0.11 ± 0.03.
 
 ## Adversarial review
@@ -207,26 +240,29 @@ both agents are the same kind of model as me, so that is a check on arithmetic a
 | RV variability only shows a binary, not this orbit | Not resolved. Needs epoch RVs folded on the Gaia orbit |
 | Margin is itself sense-dependent | Yes, which is why T5 uses a sense-blind error. With the raw margin the trend reverses. A at low margin vanishes at 200–300 d (−0.001 ± 0.014), so it is not low parallax as such |
 | Tuned model | No fit to orbit data, but the linear version failed on dev, and that prompted the non-linear one. Dev and held-out are splits of one catalogue, so replication shows the pattern is not noise, not that the model is predictive in a strong sense |
-| Parent population | q uniform, M₁ = 1 M☉. The model has 9.5% of orbits at margin < 1.5 and the data 20.8%. This accounts for its low amplitude, and the observed-margin estimate avoids it, though that estimator cannot exclude a false pile-up at the cut |
-| Fisher matrix, not the pipeline | A real fit backs the Fisher errors at five periods. The real cascade has not been run |
+| Parent population | q uniform, M₁ = 1 M☉. q, M₁ and transit count barely matter; the eccentricity distribution moves the 700–800 d ratio from 1.21 to 1.52. The model has 9.5% of orbits at margin < 1.5 and the data 20.8%, and the observed-margin estimate (which avoids this) cannot exclude a false pile-up at the cut |
+| Fisher matrix, not the pipeline | Replaced by a blind cascade (above). That is `gaiamock`, a model of DPAC's pipeline, not DPAC's pipeline |
 | Wide pairs: frame spin | Detected at about 13σ, up to (16.7, 31.2)% for pairs straddling G = 13 (referee). It leaves D_Z unchanged (−1.56 to −1.55): it dilutes the statistic but does not fake a dipole |
 | Preregistration has no git commit | True. The hash file is local and the times are this machine's. No commit was made because none was asked for |
 
 ## Novelty
 
-ADS title, abstract and full-text searches and citation trees, by me and separately by the referee (about 45 queries), with web searches
-and full-text reads of eight Gaia papers (`reviews/prior_art_note.md`).
+About 75 ADS queries and citation trees, by me, the referee and a dedicated reader, with web searches (`reviews/literature_read_2026-11-06.md`, `reviews/prior_art_note.md`).
+Perryman 2026 (271 pp, grepped, key sections read), Lammers & Winn 2026 and Yahalomi+ 2026 say nothing on it.
 
-- **Closest:** Butkevich 2018 (MNRAS 476, 5658): "the host star and Earth revolve in the same direction, if iE < π/2"; "for iE > 90° the
-  correlation decreases since the star and Earth revolve in opposite directions." Its statistic is a parallax-only fit, closer to this
-  model's RUWE channel than to the free-element route. Its abstract finds no effect on detectability for e ≳ 0.5, whereas the data at
-  340–390 d give A = −0.15 at e ≥ 0.6 (referee). Penoyre+ 2022 mention orbits that mimic the parallax ellipse. Halbwachs+ 2023, Arenou+ 2023 and
-  El-Badry+ 2024 note the one-year degeneracy, without sense. Signed cos i appears all-sky only.
-- **Not found:** a measurement of A in Gaia data; sense-dependent published parallax errors; the two-year feature's link to e and T; the
-  pseudo-circular step; the parallax cut as the channel; a direct percent-level Galactic dipole.
-- **Not read:** Perryman 2026 (Phys. Rep. 1150) and Lammers+ 2026 matched queries and should be read. Hipparcos papers. Yahalomi+ 2026:
-  abstract only.
-- `gaiamock` (El-Badry+ 2024) keeps the sense and should reproduce this if split by hemisphere; nobody is known to have done that.
+| | verdict | nearest |
+|---|---|---|
+| hemisphere asymmetry measured in Gaia data | not found | Butkevich 2018 Eqs. 22, 25–26, theory; signed cos i only all-sky (Arenou+ 2023; El-Badry+ 2024; Makarov 2025) |
+| sense-dependent published parallax errors | not found | El-Badry+ 2024, Lam+ 2025: errors without sense. Butkevich 2018: bias without errors |
+| two-year feature's link to e | partly | two-year deficit: Makarov 2025, Andrews+ 2019. Link to e and sense: not found |
+| pseudo-circular comparison | not found | Halbwachs+ 2023 define them; no one uses them as a test |
+| cut as selection channel | partly | El-Badry+ 2024, Lam+ 2025 for the one-year hole; not by sense |
+| Galactic dipole of binaries | not found | Glebocki 2000; Agati+ 2015. Makarov 2026 reports "no asymmetry in the sense of rotation" in 103,169 pairs all-sky, which is our m, not D |
+
+Butkevich 2018 reads "the host star and Earth revolve in the same direction, if iE < π/2", and his abstract says no effect on detectability for e ≳ 0.5, whereas the data at
+340–390 d give A = −0.15 at e ≥ 0.6 (referee). His statistic is a parallax-only fit, closer to the RUWE step than to the free-element route. `gaiamock` keeps the sense, and has now been split by it here.
+
+**Not read:** Holl 2011 (server unavailable), the Exoplanet Handbook, the DR4 NSS paper (unpublished), most Hipparcos work. ADS phrase queries are blunt.
 
 So the new contribution, if it stands, is a measurement and a diagnosis. A specialist may recognise much of it at once.
 
@@ -250,7 +286,7 @@ If it survives:
    DR4's `epoch_astrometry` then gives the real scan law including reversed precession, so the model can be rerun on it.
 2. **Faint RV.** LAMOST, APOGEE or GALAH epochs for G > 13, P 600–900 d, margin < 1.5, by sense, folded on the Gaia orbit. The one direct test left
    of the spurious reading.
-3. **`gaiamock` by sense, with the cascade.** For the amplitude, the pseudo-circular step and the P > 1100 d residual.
+3. **A cascade with a realistic population:** masses and luminosities that reach the data's low-parallax orbits, to close the amplitude.
 4. **DR4 wide pairs,** with a spin term in the fit. Proper-motion errors should shrink by about 2.7 (T^1.5, my scaling, not a published figure).
    The Galactic limit should tighten to well under 1%.
 
@@ -265,6 +301,5 @@ If it survives:
 ## Limits of this session
 
 No commit, push, site change or ledger entry. `oddsky paper-check` has not been run on this text; it is owed before anything here leaves the
-repo, and this dossier is not ready to leave. The referee reviewed an earlier version; the corrections above follow its report but it has not
-re-read them. Downloaded data and simulation outputs are in `~/oddsky-runs/h0018`, not the repo. The referee's scripts are in
+repo, and this dossier is not ready to leave. The first referee reviewed an earlier version; see `reviews/` for the read of this one. Downloaded data and simulation outputs are in `~/oddsky-runs/h0018`, not the repo. The referee's scripts are in
 `reviews/referee_scripts/` as run; they expect a copy of the hunt's scripts at `/tmp/ref_h18/repl/`.
