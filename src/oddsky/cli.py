@@ -61,30 +61,72 @@ def skeptic_cmd(case: str):
 @app.command("librarian", context_settings={"ignore_unknown_options": True})
 def librarian_cmd(ra: Annotated[float, typer.Argument(help="degrees")], dec: Annotated[float, typer.Argument(help="degrees")],
                   radius: Annotated[float, typer.Option(help="arcsec")] = 5.0,
-                  topic: Annotated[list[str] | None, typer.Option(help="repeatable; default: every topic")] = None):
-    """Ask the Librarian whether a sky position is new: SIMBAD, NED, ADS and the shelves of published samples."""
-    from .librarian import TOPICS, prior_art
+                  topic: Annotated[list[str] | None, typer.Option(help="repeatable; default: every topic")] = None,
+                  epoch: Annotated[float | None, typer.Option(help="date of the position as a decimal year (2010.5 for "
+                                                              "AllWISE): SIMBAD's stars are moved to it by their proper "
+                                                              "motion; default: no motion")] = None):
+    """Ask the Librarian whether a sky position is new: SIMBAD, NED, ADS, the big catalogues and the shelves of published
+    samples. Verdicts: unlisted | catalogued (an object, nothing on the topics: not proof that nothing is published) |
+    mentioned (topical titles only in papers that list more than 500 objects) | studied (read those first)."""
+    from .librarian import ABOUT_MAX_OBJECTS, TOPICS, prior_art
 
     unknown = [t for t in topic or [] if t not in TOPICS]
     if unknown:
         typer.echo(f"unknown topic(s) {unknown}; topics are {list(TOPICS)}", err=True)
         raise typer.Exit(2)
-    r = prior_art(ra, dec, radius, topic)
+    r = prior_art(ra, dec, radius, topic, epoch=epoch)
     typer.echo(r["summary"])
-    sim, ned = r["simbad"], r["ned"]
-    typer.echo("  SIMBAD: " + (f"{sim['main_id']} ({sim['otype']}), {sim['sep_arcsec']:.1f}\" away" if sim else
-                               f"no object [{r['sources']['simbad']['status']}]"))
-    typer.echo("  NED:    " + (f"{ned['prefname']} ({ned['type']}" + (f", z = {ned['z']:.4f}" if ned["z"] is not None else "")
-                               + f"), {ned['sep_arcsec']:.1f}\" away" if ned else f"no object [{r['sources']['ned']['status']}]"))
-    for k, v in r["sources"].items():
-        if v["status"] == "unavailable":
-            typer.echo(f"  {k} could not be queried: {'; '.join(v['notes']) or 'no reason given'}")
+    sim, ned, src = r["simbad"], r["ned"], r["sources"]
+    if sim:
+        near = sim["nearest"]
+        typer.echo(f"  SIMBAD: {sim['main_id']} ({sim['otype']}), {sim['sep_arcsec']:.1f}\" away"
+                   + (f" at {epoch:g}" if epoch is not None else "")
+                   + (f"; {sim['n_objects']} objects in the cone, this one has the most references ({sim['n_refs']}); the nearest "
+                      f"is {near['main_id']} ({near['otype']}) at {near['sep_arcsec']:.1f}\"" if near["main_id"] != sim["main_id"]
+                      else f"; {sim['n_objects']} objects in the cone" if sim["n_objects"] > 1 else ""))
+    else:
+        typer.echo(f"  SIMBAD: no object [{src['simbad']['status']}]")
+    if ned:
+        typer.echo(f"  NED:    {ned['prefname']} ({ned['type'] or 'no type'}" + (f", z = {ned['z']:.4f}" if ned["z"] is not None else "")
+                   + f"), {ned['sep_arcsec']:.1f}\" away" + (f"; {ned['n_objects']} objects in the cone" if ned["n_objects"] > 1 else ""))
+    else:
+        typer.echo(f"  NED:    no object [{src['ned']['status']}]")
+    if r["nearby"]:
+        typer.echo(f"  nearest object outside the radius: {r['nearby']['name']} ({r['nearby']['source']}"
+                   + (f", {r['nearby']['type']}" if r["nearby"]["type"] else "") + f"), {r['nearby']['sep_arcsec']:.1f}\" away")
+    ads = src["ads"]
+    asked = ", ".join(ads.get("asked") or [])
+    typer.echo("  ADS:    " + {"ok": f"asked about {asked}", "empty": f"no paper on {asked}",
+                               "unresolved": f"did not recognise {asked}: not an answer",
+                               "not_asked": "not asked (no object name to look up)",
+                               "unavailable": "could not be queried"}.get(ads["status"], ads["status"]))
+    for note in ads["notes"] if ads["status"] != "not_asked" else []:
+        typer.echo(f"          {note}")
+    for o in r["otype_hits"]:
+        typer.echo(f"  SIMBAD type: {o['main_id']} is a {o['label']} ({o['otype']}), {o['sep_arcsec']:.1f}\" away")
+    for c in r["catalogues"]:
+        if c["status"] == "ok":
+            h = c["hits"][0]
+            what = "published as variable" if c["kind"] == "variable" else "listed as an AGN or AGN candidate; does not change the verdict"
+            typer.echo(f"  {c['name']}: {h['object']}" + (f" (type {h['class']})" if h.get("class") else "")
+                       + (f", {h['sep_arcsec']:.1f}\" away" if h.get("sep_arcsec") is not None else "") + f", {c['bibcode']} [{what}]")
+        elif c["status"] == "unavailable":
+            typer.echo(f"  {c['name']} could not be queried: {'; '.join(c['notes']) or 'no reason given'}")
+    quiet = [c["name"] for c in r["catalogues"] if c["status"] == "empty"]
+    if quiet:
+        typer.echo(f"  no entry in: {', '.join(quiet)}")
+    for k in ("simbad", "ned", "ads"):
+        if src[k]["status"] == "unavailable":
+            typer.echo(f"  {k} could not be queried: {'; '.join(src[k]['notes']) or 'no reason given'}")
     for h in r["shelf_hits"]:
         typer.echo(f"  shelf {h['shelf']}: {h['name']} at {h['sep_arcsec']:.1f}\", {h['bibcode']} {h['title']}")
+    lists = r["n_topical"] - r["n_about"]
     typer.echo(f"  {r['n_papers']} paper(s), {r['n_topical']} on the topics ({', '.join(r['topics'])})"
+               + (f", {lists} of them in lists of more than {ABOUT_MAX_OBJECTS} objects" if lists else "")
                + (", newest first:" if r["topical_papers"] else ""))
     for p in r["topical_papers"][:10]:
-        typer.echo(f"    {p['bibcode']}  {p['year'] or '----'}  {p['title']}")
+        typer.echo(f"    {p['bibcode']}  {p['year'] or '----'}  {p['title']}"
+                   + (f"  [a list of {p['n_objects']} objects]" if p["big_list"] else ""))
     if r["n_topical"] > 10:
         typer.echo(f"    ... and {r['n_topical'] - 10} more")
 

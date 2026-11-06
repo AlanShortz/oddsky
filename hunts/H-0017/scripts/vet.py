@@ -15,7 +15,7 @@ rows = [r for r in rows if r["designation"] in seen]
 for r in x.itertuples():
     if r.designation in seen:
         continue
-    pa = prior_art(r.ra, r.dec, 5.0, "transient")
+    pa = prior_art(r.ra, r.dec, 5.0, "transient", epoch=2010.5)  # AllWISE positions: stars are where they were in 2010
     top = pa.get("topical") or pa.get("topical_papers") or []
     sim, ned = pa.get("simbad") or {}, pa.get("ned") or {}
     rows.append(dict(designation=r.designation, side=r.side, verdict=pa["verdict"], complete=pa["complete"],
@@ -24,7 +24,9 @@ for r in x.itertuples():
                      ned_type=ned.get("type"), z=ned.get("z"), n_papers=pa.get("n_papers"), n_topical=len(top),
                      newest_topical=(top[0]["bibcode"] if top else None), newest_title=(top[0]["title"][:140] if top else None),
                      topical_bibcodes=";".join(p["bibcode"] for p in top[:8]),
-                     shelves=";".join(h["shelf"] for h in pa.get("shelf_hits", []))))
+                     shelves=";".join(h["shelf"] for h in pa.get("shelf_hits", [])),
+                     catalogues=";".join(f"{h.get('catalogue') or h.get('name')}" for h in pa.get("catalogue_hits", [])),
+                     summary=pa["summary"][:400]))
     pd.DataFrame(rows).to_csv(out, index=False)
     print(r.designation, rows[-1]["verdict"], rows[-1]["complete"], rows[-1]["n_papers"], rows[-1]["n_topical"], rows[-1]["shelves"], flush=True)
 o = pd.DataFrame(rows)

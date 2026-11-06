@@ -637,13 +637,19 @@ class Toolbox:
         return self._log(s, "literature", dict(case=case), {"references": refs})
 
     def prior_art(self, ra: float | None = None, dec: float | None = None, radius_arcsec: float = 5.0,
-                  topics: list[str] | None = None, case: str | None = None, max_papers: int = 25) -> dict:
+                  topics: list[str] | None = None, case: str | None = None, max_papers: int = 25,
+                  epoch: float | None = None) -> dict:
         """Run the Librarian: is it new? For a sky position (ra, dec in degrees; or give a case to use its target), look up
-        the object in SIMBAD and NED, merge the papers SIMBAD and ADS attach to it, and check the shelves of published
-        samples. verdict: unlisted (no object anywhere) | catalogued (an object, but no paper title matches the topics) |
-        studied (a title matches, or a shelf holds it: read those before calling anything new). complete = false means a
-        source could not be queried and the verdict is not final. topics: transient, dimming, infrared_excess, binary
-        (default all). Open mode only. Logged to the ledger when a case is given."""
+        the objects in SIMBAD and NED, merge the papers SIMBAD and ADS attach to them, ask the big catalogues (VSX, VarWISE,
+        Milliquas, WISE AGN) and check the shelves of published samples. verdict: unlisted (no object anywhere) |
+        catalogued (an object, but no paper title matches the topics; not evidence that nothing is published) | mentioned
+        (titles match, but only in papers that list more than 500 objects) | studied (a title matches in a paper about the
+        object, a shelf holds it, SIMBAD types it as a transient, or a catalogue of variables lists it: read those before
+        calling anything new). An AGN-catalogue entry is reported and does not change the verdict. complete = false means a
+        source could not be queried, or ADS held more papers than were read, and the verdict is not final. topics:
+        transient, dimming, infrared_excess, binary (default all). epoch: the date of the position as a decimal year
+        (2010.5 for AllWISE); give it for anything that may be a nearby star, so that SIMBAD's stars are moved to that date
+        by their proper motion (default: no motion). Open mode only. Logged to the ledger when a case is given."""
         self._open_only()
         from . import librarian
 
@@ -655,12 +661,12 @@ class Toolbox:
             if t is None or t.ra is None or t.dec is None:
                 raise ValueError("case has no target coordinates")
             ra, dec = t.ra, t.dec
-        out = librarian.prior_art(ra, dec, radius_arcsec, topics)
+        out = librarian.prior_art(ra, dec, radius_arcsec, topics, epoch=epoch)
         out["topical_papers"] = out["topical_papers"][:max_papers]  # n_topical keeps the full count
         if s is None:
             return out
         return self._log(s, "prior_art", dict(case=case, ra=ra, dec=dec, radius_arcsec=radius_arcsec, topics=topics,
-                                              max_papers=max_papers), out)
+                                              max_papers=max_papers, epoch=epoch), out)
 
     def _open_only(self):
         if self.mode != "open":

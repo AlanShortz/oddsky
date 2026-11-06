@@ -148,16 +148,17 @@ def fetch(store: CaseStore, surveys: tuple[str, ...] | list[str] = SURVEYS) -> d
             ctx["tess"] = meta
 
     if "librarian" in surveys:
-        # Is it new? SIMBAD, NED, ADS and the shelves at the case position. Each source's status is stored with the answer,
-        # so a source that could not be queried is never read as "nothing published".
+        # Is it new? SIMBAD, NED, ADS, the catalogues and the shelves at the case position. Each source's status is stored
+        # with the answer, so a source that could not be queried is never read as "nothing published".
         pa = librarian.prior_art(t.ra, t.dec)
         down = librarian.unavailable_names(pa)
-        p = Provenance(archive="The Librarian (SIMBAD, NED, ADS, shelves)",
+        p = Provenance(archive="The Librarian (SIMBAD, NED, ADS, catalogues, shelves)",
                        query={"ra": t.ra, "dec": t.dec, "radius_arcsec": pa["radius_arcsec"]},
                        rows_raw=pa["n_papers"], rows_kept=pa["n_topical"],
                        status="unavailable" if down else "empty" if pa["verdict"] == "unlisted" else "ok",
                        notes=[f"{k}: {v['status']}" + (f" ({'; '.join(v['notes'])})" if v["notes"] else "")
-                              for k, v in pa["sources"].items() if v["status"] == "unavailable"])
+                              for k, v in pa["sources"].items() if v["status"] == "unavailable"]
+                       + [w for w in librarian.incomplete_reasons(pa) if w.startswith("ADS holds")])
         prov["librarian"] = p.model_dump()
         earlier = ctx.get("prior_art")
         if pa["complete"] or not earlier or not earlier.get("complete"):

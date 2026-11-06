@@ -37,20 +37,48 @@ and astrometric wobble (RUWE). It cannot be argued with. That is the point.
 ## The Librarian
 
 Also deterministic code, not an agent. The Skeptic asks "is it real?". The Librarian asks "is it
-new?". For a sky position it looks up the object in SIMBAD and NED, merges the papers that SIMBAD
-and ADS attach to it, and matches their titles against topic keywords (transient, dimming,
-infrared excess, binary). It gives one of three verdicts:
+new?". For a sky position it looks up the objects in SIMBAD and NED, merges the papers that SIMBAD
+and ADS attach to them, and matches their titles against topic keywords (transient, dimming,
+infrared excess, binary). It also asks five large catalogues by cone (VSX, VarWISE, Milliquas,
+and the WISE AGN catalogues of Secrest et al. 2015 and Assef et al. 2018) and the shelves. It
+gives one of four verdicts:
 
-- **unlisted**: no SIMBAD object, no NED object, no shelf entry.
+- **unlisted**: no SIMBAD object, no NED object, no shelf entry. If something lies within 30",
+  the answer names it.
 - **catalogued**: an object exists, but no paper title matches the topics.
-- **studied**: at least one title matches, or a shelf holds the position. Those papers must be
-  read before anything is called new.
+- **mentioned**: titles match the topics, but only in papers that list more than 500 objects
+  (surveys, catalogues, rate papers). The object is in their tables; they are not about it.
+- **studied**: a title matches in a paper about at most 500 objects, or a shelf holds the
+  position, or SIMBAD types an object there as a transient (supernova, nova, transient event
+  and the like), or a catalogue of variables (VSX, VarWISE) lists it. These must be read before
+  anything is called new.
+
+"Catalogued" is not evidence that nothing is published. It means the bibliographies the
+Librarian can read hold nothing on the topics under this object. At a survey position that is
+often very little: SIMBAD has no object, NED's object is the survey's own entry, and ADS knows
+no paper under that name. Papers whose titles the keywords miss, objects published under a
+position instead of a name, and lists nobody shelved all read "catalogued". The same holds
+for "unlisted" and "mentioned". Only "studied" is a finding; the other three say what was not
+found, and where.
+
+Membership of an AGN catalogue (Milliquas, Secrest, Assef) is reported in the answer and does
+not change the verdict: it says what the object probably is, not that its behaviour has been
+published. A paper that only ADS lists has no object count and is taken to be about the object.
+
+SIMBAD's positions are for J2000, so a star with a large proper motion is not where a later
+survey saw it: give the epoch of the position (`--epoch 2010.5` for AllWISE) and SIMBAD's stars
+are moved to that date before matching; NED, the catalogues and the shelves are matched as
+catalogued.
 
 A source that could not be queried is reported as unavailable. It is never read as "nothing
-found", and the verdict is then not final. The shelves (`src/oddsky/shelves/`) hold published
-samples that the archives do not index by object: a table in a paper that nobody linked to its
-sources. `oddsky librarian RA DEC` asks for one position; `oddsky fetch` stores the answer with
-the case, and the Skeptic reports it as the `prior_art` check.
+found", and the verdict is then not final. The same goes for an ADS list longer than the 1000
+papers that are read. ADS has two more answers that are not "nothing found": "not asked" (there
+was no object name to look up) and "unresolved" (ADS did not recognise the name as an object,
+and only the text of its abstracts was searched). The shelves (`src/oddsky/shelves/`) hold
+published samples that the archives do not index by object: a table in a paper that nobody
+linked to its sources. `oddsky librarian RA DEC` asks for one position; `oddsky fetch` stores
+the answer with the case, and the Skeptic reports it as the `prior_art` check ("studied" is a
+warning; the other three pass when every source answered).
 
 It exists because H-0017 called a galaxy its "best candidate" when it was object 12 of Wang et
 al. 2018. The bibliography of that position would have said so in ten seconds. A title match is
