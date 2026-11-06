@@ -1,0 +1,43 @@
+gm_long fits 1800000 stars 15000 {-1: 1498021, -7: 171751, -9: 110548, 12: 19680}
+orbit fits 19680, accepted 9938; fitted sense = true sense 0.994; period within 10% 0.726
+  lo   hi    N      A  A_se  A_no_plx_cut  ratio
+  50  100    0    NaN   NaN         1.000    NaN
+ 100  150    0    NaN   NaN         1.000    NaN
+ 150  200    0    NaN   NaN           NaN    NaN
+ 200  250    1  1.000 0.000         1.000    NaN
+ 250  300    0    NaN   NaN        -0.400    NaN
+ 300  340    0    NaN   NaN           NaN    NaN
+ 340  390    0    NaN   NaN           NaN    NaN
+ 390  450    0    NaN   NaN           NaN    NaN
+ 450  500    0    NaN   NaN           NaN    NaN
+ 500  600    0    NaN   NaN           NaN    NaN
+ 600  700    9  0.111 0.331         0.111    NaN
+ 700  800   85 -0.200 0.106        -0.215  0.869
+ 800  900  297  0.003 0.058         0.006  1.019
+ 900 1000  884 -0.063 0.034        -0.064  1.062
+1000 1100 2085 -0.061 0.022        -0.062  1.067
+1100 1300 2779 -0.039 0.019        -0.038  1.085
+1300 1600 1939 -0.019 0.023        -0.019  1.100
+1600 3000 1815 -0.031 0.023        -0.031  1.110
+
+by TRUE period, what becomes of mirror pairs: share of each outcome by true sense, and A at each stage (all draws)
+  100-300: past RUWE N=0 A=+nan±nan; 7/9-par N=0 A=+nan±nan; orbit fit N=0 A=+nan±nan
+  300-450: past RUWE N=0 A=+nan±nan; 7/9-par N=0 A=+nan±nan; orbit fit N=0 A=+nan±nan
+  450-600: past RUWE N=0 A=+nan±nan; 7/9-par N=0 A=+nan±nan; orbit fit N=0 A=+nan±nan
+  600-900: past RUWE N=0 A=+nan±nan; 7/9-par N=0 A=+nan±nan; orbit fit N=0 A=+nan±nan
+  900-1100: past RUWE N=38451 A=-0.011±0.005; 7/9-par N=34179 A=-0.006±0.005; orbit fit N=4272 A=-0.051±0.015
+  1100-1600: past RUWE N=131032 A=-0.008±0.003; 7/9-par N=121113 A=-0.006±0.003; orbit fit N=9919 A=-0.035±0.010
+  1600-3000: past RUWE N=132496 A=-0.005±0.003; 7/9-par N=127007 A=-0.004±0.003; orbit fit N=5489 A=-0.037±0.013
+
+fitted orbits by TRUE period, accepted: A with true sense, and share with fitted period wrong by over 10%
+  100-300: N=0 A(true)=+nan wrong P nan
+  300-450: N=0 A(true)=+nan wrong P nan
+  450-600: N=0 A(true)=+nan wrong P nan
+  600-900: N=0 A(true)=+nan wrong P nan
+  900-1100: N=2547 A(true)=-0.054 wrong P 0.147
+  1100-1600: N=5192 A(true)=-0.043 wrong P 0.257
+  1600-3000: N=2199 A(true)=-0.017 wrong P 0.461
+
+by eccentricity, fitted, 700-800 d; and by margin, 600-900 d, sense-blind
+  ratio e<0.2, 0.2-0.4, 0.4-0.6, >=0.6: [nan, nan, nan, nan]
+  A by margin: [(0, np.float64(-0.059), 153), (1.5, np.float64(-0.141), 156), (2.5, np.float64(0.152), 66), (5, np.float64(0.4), 10), (10, np.float64(-1.0), 2)]

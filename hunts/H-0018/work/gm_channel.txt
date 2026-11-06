@@ -1,0 +1,28 @@
+P 300-450
+   parallax 0.3-0.7: no parallax cut A = -1.000±0.000 (N=1); with it A = -1.000±0.000 (N=1); share cut +NEP nan, -NEP 0.000
+   parallax 0.7-1: no parallax cut A = -0.018±0.135 (N=55); with it A = -0.222±0.230 (N=18); share cut +NEP 0.741, -NEP 0.607
+   parallax 1-1.5: no parallax cut A = -0.124±0.042 (N=566); with it A = -0.242±0.069 (N=198); share cut +NEP 0.698, -NEP 0.613
+   parallax 1.5-2.5: no parallax cut A = -0.048±0.027 (N=1412); with it A = -0.114±0.037 (N=740); share cut +NEP 0.512, -NEP 0.443
+   parallax 2.5-1000: no parallax cut A = -0.026±0.020 (N=2400); with it A = -0.084±0.024 (N=1679); share cut +NEP 0.342, -NEP 0.261
+P 450-600
+   parallax 0.3-0.7: no parallax cut A = -0.091±0.212 (N=22); with it A = -0.077±0.277 (N=13); share cut +NEP 0.400, -NEP 0.417
+   parallax 0.7-1: no parallax cut A = -0.079±0.064 (N=241); with it A = -0.137±0.073 (N=183); share cut +NEP 0.288, -NEP 0.200
+   parallax 1-1.5: no parallax cut A = +0.029±0.031 (N=1009); with it A = +0.014±0.035 (N=830); share cut +NEP 0.189, -NEP 0.165
+   parallax 1.5-2.5: no parallax cut A = -0.030±0.023 (N=1854); with it A = -0.033±0.024 (N=1734); share cut +NEP 0.068, -NEP 0.062
+   parallax 2.5-1000: no parallax cut A = +0.002±0.021 (N=2202); with it A = +0.001±0.022 (N=2141); share cut +NEP 0.028, -NEP 0.027
+P 600-900
+   parallax 0.3-0.7: no parallax cut A = -0.065±0.127 (N=62); with it A = -0.071±0.188 (N=28); share cut +NEP 0.552, -NEP 0.545
+   parallax 0.7-1: no parallax cut A = -0.073±0.054 (N=343); with it A = -0.105±0.062 (N=257); share cut +NEP 0.277, -NEP 0.228
+   parallax 1-1.5: no parallax cut A = -0.095±0.037 (N=707); with it A = -0.139±0.040 (N=625); share cut +NEP 0.159, -NEP 0.080
+   parallax 1.5-2.5: no parallax cut A = -0.074±0.031 (N=1045); with it A = -0.082±0.032 (N=991); share cut +NEP 0.060, -NEP 0.045
+   parallax 2.5-1000: no parallax cut A = -0.024±0.022 (N=2020); with it A = -0.028±0.022 (N=2002); share cut +NEP 0.013, -NEP 0.005
+P 900-1100
+   parallax 0.3-0.7: no parallax cut A = -1.000±0.000 (N=1); with it A = +nan±nan (N=0); share cut +NEP nan, -NEP 1.000
+   parallax 0.7-1: no parallax cut A = +0.056±0.166 (N=36); with it A = -0.030±0.174 (N=33); share cut +NEP 0.158, -NEP 0.000
+   parallax 1-1.5: no parallax cut A = -0.013±0.115 (N=75); with it A = -0.057±0.119 (N=70); share cut +NEP 0.108, -NEP 0.026
+   parallax 1.5-2.5: no parallax cut A = -0.016±0.091 (N=122); with it A = -0.017±0.091 (N=120); share cut +NEP 0.017, -NEP 0.016
+   parallax 2.5-1000: no parallax cut A = -0.067±0.046 (N=461); with it A = -0.067±0.046 (N=461); share cut +NEP 0.000, -NEP 0.000
+300 450 [(0.3, np.float64(-0.143), 7), (0.7, np.float64(-0.264), 307), (1, np.float64(-0.212), 2250), (1.5, np.float64(-0.182), 4886), (2.5, np.float64(-0.11), 7358)]
+450 600 [(0.3, np.float64(-0.21), 1377), (0.7, np.float64(-0.104), 6400), (1, np.float64(-0.071), 11757), (1.5, np.float64(-0.061), 12276), (2.5, np.float64(-0.021), 10624)]
+600 900 [(0.3, np.float64(-0.372), 5291), (0.7, np.float64(-0.188), 10543), (1, np.float64(-0.106), 14028), (1.5, np.float64(-0.057), 13308), (2.5, np.float64(-0.04), 11390)]
+900 1100 [(0.3, np.float64(-0.211), 3055), (0.7, np.float64(-0.119), 3792), (1, np.float64(-0.054), 4046), (1.5, np.float64(-0.042), 3350), (2.5, np.float64(-0.034), 3308)]
