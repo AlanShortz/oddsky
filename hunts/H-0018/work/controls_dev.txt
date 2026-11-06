@@ -1,0 +1,31 @@
+dev baseline                       N=  36710  m= +0.40±0.52  Dx= +0.25±0.88  Dy= -0.88±0.82  Dz= -0.41±1.05 ( -0.4s)  Dnep= -0.99 ( -1.1s)
+
+1. Injection, amplitude 5% (0.5% is below the dev noise; see note in README)
+  +Z inject 0.005: recovered change along axis = +0.0037 (se 0.0105)
+  +Z inject 0.050: recovered change along axis = +0.0529 (se 0.0105)
+  +NEP inject 0.005: recovered change along axis = +0.0055 (se 0.0105)
+  +NEP inject 0.050: recovered change along axis = +0.0509 (se 0.0105)
+
+2. Kepler mock
+  <Lz> = +0.000  expect Dz = +0.000  got -0.0172 ± 0.0101
+  <Lz> = +0.020  expect Dz = +0.030  got +0.0352 ± 0.0101
+  <Lz> = +0.050  expect Dz = +0.075  got +0.1040 ± 0.0101
+  <Lz> = -0.050  expect Dz = -0.075  got -0.1009 ± 0.0100
+
+3. Oort field pairs
+  stars 86154, median d 317 pc
+  r 30-60 pc: N=   9863 <rperp>=   44 sigma_t= 35.8  m=-0.0037±0.0101  Dz=-0.0060±0.0200  Dx=-0.0124 Dy=-0.0128  -> B=-6.2±20.5 km/s/kpc
+  r 60-100 pc: N=  39338 <rperp>=   75 sigma_t= 35.6  m=+0.0035±0.0050  Dz=-0.0189±0.0100  Dx=+0.0039 Dy=-0.0222  -> B=-11.2±5.9 km/s/kpc
+  r 100-150 pc: N= 111154 <rperp>=  116 sigma_t= 35.8  m=+0.0012±0.0030  Dz=-0.0221±0.0060  Dx=+0.0017 Dy=-0.0114  -> B=-8.6±2.3 km/s/kpc
+  r 150-220 pc: N= 296427 <rperp>=  171 sigma_t= 35.7  m=-0.0004±0.0018  Dz=-0.0413±0.0036  Dx=+0.0029 Dy=-0.0121  -> B=-10.8±1.0 km/s/kpc
+  r 220-320 pc: N= 698017 <rperp>=  248 sigma_t= 36.0  m=+0.0012±0.0012  Dz=-0.0590±0.0023  Dx=+0.0031 Dy=-0.0114  -> B=-10.8±0.4 km/s/kpc
+  Weighted B = -10.7 ± 0.4 km/s/kpc (naive error, stars reused across pairs)
+
+5. Shift catalogue
+  stored-position separation vs pairdistance (arcsec): median stored 1810.6  median pairdistance 212.5
+  dev rows 155291
+shift, stored positions            N=   1587  m=+27.72±3.01  Dx=+23.48±6.96  Dy=-51.36±4.96  Dz=+101.92±9.09 (+11.2s)  Dnep= +4.12 ( +0.8s)
+shift [1e+03,1.0e+04)              N=     66  m=+46.86±11.20  Dx= +6.93±17.89  Dy=-28.07±14.05  Dz=+35.26±40.70 ( +0.9s)  Dnep= -7.35 ( -0.3s)
+shift [1e+04,3.0e+04)              N=    107  m=+25.82±9.85  Dx=+26.48±17.98  Dy=-13.90±13.93  Dz=+68.26±31.13 ( +2.2s)  Dnep=+19.39 ( +1.1s)
+shift [3e+04,1.0e+05)              N=    416  m=+27.90±5.88  Dx=+19.94±12.87  Dy=-57.56±9.15  Dz=+110.71±17.91 ( +6.2s)  Dnep= +3.48 ( +0.4s)
+shift [1e+05,2.1e+05)              N=    998  m=+24.11±4.02  Dx=+23.00±10.70  Dy=-61.92±7.56  Dz=+116.83±11.69 (+10.0s)  Dnep= +2.47 ( +0.4s)

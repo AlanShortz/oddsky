@@ -1,0 +1,34 @@
+1. Gaia's own knockout: pseudo-circular solutions (e and T fixed, Halbwachs+ 2023 sec 5.2) vs low-e free solutions
+   450-600 d: e<5e-4 1.079 ± 0.048 (N=481, A=+0.059); 0.006<=e<0.05 1.072 ± 0.035 (N=744, A=-0.084)
+   600-700 d: e<5e-4 1.034 ± 0.037 (N=307, A=+0.140); 0.006<=e<0.05 1.336 ± 0.053 (N=464, A=-0.268)
+   700-800 d: e<5e-4 1.008 ± 0.041 (N=252, A=-0.122); 0.006<=e<0.05 1.652 ± 0.100 (N=338, A=-0.395)
+   800-900 d: e<5e-4 1.020 ± 0.077 (N=123, A=-0.192); 0.006<=e<0.05 1.397 ± 0.074 (N=311, A=-0.276)
+   900-1100 d: e<5e-4 0.917 ± 0.072 (N=95, A=-0.050); 0.006<=e<0.05 1.256 ± 0.043 (N=378, A=-0.155)
+   600-900 d: A = -0.020 ± 0.036 (N=782) vs -0.308 ± 0.026 (N=1309)
+
+2. Ratio at 700-800 d by eccentricity (registered definition)
+   e 0-0.2: 1.518 ± 0.022 (N=3661)
+   e 0.2-0.4: 1.372 ± 0.018 (N=4457)
+   e 0.4-0.6: 1.158 ± 0.017 (N=2885)
+   e 0.6-1: 1.106 ± 0.028 (N=1122)
+
+3. AstroSpectroSB1 3D mean L-hat, with C and H (au) converted to mas
+   median |cos(P,Q)| 0.057
+   all AstroSpectroSB1: [ 0.16 -1.36 -0.4 ] ± [0.32 0.31 0.32] N 33467
+   Z expected from an ecliptic-pole mean with this Y: -0.79%
+   held-out: [ 0.11 -1.5  -0.51] ± [0.38 0.37 0.38] N 23537
+
+4. Independent parallaxes: orbit star against its wide companion
+   pairs with a clean companion: 2713
+   100-300 d: N 350, 313; scatter of parallax difference (mas) 0.0880 vs 0.0730, ratio 1.205 ± 0.147; normalised 1.340 vs 1.235, ratio 1.085 ± 0.130; median orbit-star err 0.0158 vs 0.0164
+   300-450 d: N 89, 200; scatter of parallax difference (mas) 0.1107 vs 0.1289, ratio 0.859 ± 0.130; normalised 1.177 vs 1.318, ratio 0.893 ± 0.148; median orbit-star err 0.0300 vs 0.0259
+   450-600 d: N 355, 411; scatter of parallax difference (mas) 0.0946 vs 0.0836, ratio 1.131 ± 0.118; normalised 1.280 vs 1.182, ratio 1.083 ± 0.099; median orbit-star err 0.0223 vs 0.0210
+   600-900 d: N 362, 474; scatter of parallax difference (mas) 0.1034 vs 0.0877, ratio 1.180 ± 0.139; normalised 1.420 vs 1.218, ratio 1.166 ± 0.113; median orbit-star err 0.0279 vs 0.0228
+   900-3000 d: N 60, 86; scatter of parallax difference (mas) 0.1416 vs 0.1094, ratio 1.295 ± 0.327; normalised 1.411 vs 1.241, ratio 1.137 ± 0.224; median orbit-star err 0.0258 vs 0.0240
+
+5. A real non-linear fit: 12 parameters with least squares on simulated epochs, both senses, same noise
+   P=  250.0 d: scatter of fitted parallax, +NEP 0.0121 (N=153), -NEP 0.0131 (N=153), ratio 0.922 ± 0.089; formal-error ratio 0.994
+   P=  365.2 d: scatter of fitted parallax, +NEP 0.6362 (N=153), -NEP 0.1521 (N=153), ratio 4.181 ± 0.406; formal-error ratio 4.236
+   P=  550.0 d: scatter of fitted parallax, +NEP 0.0182 (N=153), -NEP 0.0144 (N=153), ratio 1.269 ± 0.123; formal-error ratio 1.185
+   P=  730.5 d: scatter of fitted parallax, +NEP 0.0324 (N=153), -NEP 0.0144 (N=153), ratio 2.259 ± 0.219; formal-error ratio 2.600
+   P= 1500.0 d: scatter of fitted parallax, +NEP 0.0141 (N=153), -NEP 0.0140 (N=153), ratio 1.008 ± 0.098; formal-error ratio 1.134
