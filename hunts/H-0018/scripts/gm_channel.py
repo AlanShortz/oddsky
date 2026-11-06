@@ -7,6 +7,9 @@ import pandas as pd
 sys.path.insert(0, __file__.rsplit("/", 1)[0])
 import handedness as hd  # noqa: E402
 
+sys.path.insert(0, __file__.rsplit("/", 1)[0])
+from nss_rv_test import load  # noqa: E402
+
 d = pd.read_parquet(f"{hd.RUNS}/gm_dr3.parquet")
 o = d[d.kind == 12].copy()
 o["c_plx"] = o.plx / o.s_plx > 20000 / o.P_fit
@@ -24,3 +27,10 @@ for lo, hi in [(300, 450), (450, 600), (600, 900), (900, 1100)]:
     for pl, ph in [(0.3, 0.7), (0.7, 1), (1, 1.5), (1.5, 2.5), (2.5, 1000)]:
         x = z[(z.plx_true >= pl) & (z.plx_true < ph)]
         print(f"   parallax {pl}-{ph}: no parallax cut A = {a(x.sense_fit)}; with it A = {a(x[x.c_plx].sense_fit)}; share cut +NEP {1 - x[x.sense_fit > 0].c_plx.mean():.3f}, -NEP {1 - x[x.sense_fit < 0].c_plx.mean():.3f}")
+
+print("\nObserved A, same bins, all orbits: (parallax low edge, A, N)")
+real = pd.concat([load(False), load(True)])
+real = real[real.nss_solution_type.isin(["Orbital", "AstroSpectroSB1"])]
+for lo, hi in [(300, 450), (450, 600), (600, 900), (900, 1100)]:
+    z = real[real.period.between(lo, hi)]
+    print(lo, hi, [(pl, round(z[z.parallax.between(pl, ph)].sense.mean(), 3), int(z.parallax.between(pl, ph).sum())) for pl, ph in [(0.3, 0.7), (0.7, 1), (1, 1.5), (1.5, 2.5), (2.5, 1000)]])

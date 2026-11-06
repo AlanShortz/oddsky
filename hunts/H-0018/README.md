@@ -2,8 +2,8 @@
 
 Opened 2026-11-06 from a clean-slate brief: ignore Oddsky's agenda, find a question worth testing, run the experiment.
 
-**Status.** Three results, none of them a discovery of new astrophysics. Refereed and independently reproduced the same day; every
-assumption is listed and tested in `ASSUMPTIONS.md`.
+**Status.** Three results, none of them a discovery of new astrophysics. Refereed and independently reproduced the same day; assumptions are
+listed, and tested where marked, in `ASSUMPTIONS.md`.
 
 1. **Tightest test found of Galactic handedness in binaries:** no detection. Wide pairs give D_Z = −1.56 ± 0.69% (−2.3σ) on
    sealed data, below the 4σ threshold. 95% limit: |⟨L̂_Z⟩| < 1.9%. D = 0 is not rejected (p = 0.115), and dev gives −0.41 ± 1.05%.
@@ -11,7 +11,7 @@ assumption is listed and tested in `ASSUMPTIONS.md`.
    Earth does are missing: 77,470 against 90,595 of the opposite sense (A = −0.0781). At 340–390 d, A = −0.25 on held-out data.
 3. **Largely explained, not completely.** Letting P, T and e float in the orbit fit makes parallax errors depend on orbital sense, and
    several selection steps then remove more Earth-sense orbits. A blind run of `gaiamock`'s full pipeline on the real scan law gets the
-   same sign and shape from nothing but simulated orbits, at 35–75% of the observed amplitude. Near one year the parallax cut
+   same sign and shape from nothing but simulated orbits, at about 40% of the observed amplitude overall and 35–75% in the bins tabulated below; other bins run from about 0 (450–500 d) to 120% (800–900 d), and the main run detects none above 1100 d. Near one year the parallax cut
    `ϖ/σ_ϖ > 20000/P` does most of the removing. At 600–900 d it adds to an asymmetry already present before it, and above 1100 d it plays
    no part: there the choice between orbit and acceleration solutions gives about half the observed effect.
 
@@ -21,7 +21,7 @@ referee's search, a dedicated literature read nor mine found an earlier measurem
 result, not proof that nobody has done it.
 
 Files: `PREREGISTRATION.md` (hashes and times in `~/oddsky-runs/h0018/prereg.sha256`), `scripts/`, `work/`, `figures/`,
-`predictions/dr4_handedness.md` (draft, not sealed), `reviews/`.
+`predictions/dr4_handedness.md` (sealed by the merge that brings it into `main`), `reviews/`.
 
 ## The unasked question
 
@@ -168,15 +168,16 @@ simulated epochs of 1.44 M orbits, in mirror pairs, on the real scan law, then t
 | all | −0.032 ± 0.007 | −0.080 ± 0.003 | | |
 
 It gets the sign and shape, and the fall of the two-year ratio with e (1.34, 1.32, 1.12, 0.99, data 1.52, 1.37, 1.16, 1.11). Against held-out data by period:
-Spearman 0.77 for A, median ratio difference 0.034 (r = 0.62, noisy bins). It does not get the amplitude. One likely reason: 10% of real orbits are at
+Spearman 0.77 for A, median ratio difference 0.034 (r = 0.62, noisy bins). It does not get the amplitude. One likely reason, at 600–900 d: 10% of real orbits are at
 ϖ < 0.7 mas, where A = −0.37, against 0.7% in the simulation, because a 1 M☉ primary cannot make such large orbits. This was not tested directly.
 
 **The channel is more than one cut.** Removing the parallax cut from the cascade takes 340–390 d from −0.19 to −0.07, so near one year it dominates. At
-600–900 d it is sense-dependent (at ϖ 1–1.5 mas it removes 15.9% against 8.0%) but only adds to an asymmetry already there: −0.095 without the cut, −0.139 with it.
+600–900 d it is sense-dependent (at ϖ 1–1.5 mas it removes 15.9% against 8.0%) but adds to an asymmetry already there. At ϖ 1–1.5 mas, −0.095 without the cut, −0.139 with it; over all 600–900 d, −0.053 and −0.065. The first referee's
+observed-margin estimate gives the cut 80–90% of this zone (70–77% of the deficit above 300 d); the cascade, with half the data's near-cut share, about 20%. Unresolved.
 T5's fade with margin does not by itself prove the cut is the whole cause, which is what I first wrote.
 
 **Above 1100 d.** A deep run of 1.8 M orbits in mirror pairs gives A = −0.035 ± 0.010 at the step that decides between an orbit and an acceleration solution, with
-7- and 9-parameter solutions themselves symmetric (−0.006 ± 0.003). That is about half the observed −0.07: a supported route, with half still missing.
+7- and 9-parameter solutions themselves nearly symmetric (−0.0059 ± 0.0012 by star bootstrap; −0.0080 ± 0.0010 past RUWE). Accepted orbits above 1100 d give −0.031 ± 0.007 against −0.064 observed: a supported route, with half still missing.
 
 **Gaia's own knockout, found by the referee.** Halbwachs+ 2023 §5.2 fix e and T for solutions with e < 0.0005 and recompute the covariance. So their
 published errors contain the experiment. It is post hoc and selected on a fit outcome. These are the same fits with e and T conditioned out, so it tests
@@ -218,7 +219,7 @@ orbit; the parallax cut as the main channel near one year and one of several els
 **Inconclusive.** Whether faint orbits (G > 13) near the cut are real. The tide prediction.
 
 **Unexplained.**
-- **The amplitude.** The cascade reaches 35–75% of the observed A. Population is the leading suspect, but no run has matched the data's low-parallax orbits.
+- **The amplitude.** The cascade reaches about 40% of the observed A overall. Population is the leading suspect, but no run has matched the data's low-parallax orbits.
 - **P > 1100 d:** A ≈ −0.08 in `Orbital`, where the parallax cut does not bind. The orbit-or-acceleration step gives about half.
 - **450–600 d:** the channel estimate reproduces about half the deficit, and the cascade gives −0.02 against −0.06.
 - **50–100 d:** A = +0.164 ± 0.037 against +0.02 ± 0.06 in the cascade. Post hoc zoom: +0.21 at 72–100 d, N = 707. `AstroSpectroSB1` shows it too.
@@ -243,7 +244,7 @@ both agents are the same kind of model as me, so that is a check on arithmetic a
 | Parent population | q uniform, M₁ = 1 M☉. q, M₁ and transit count barely matter; the eccentricity distribution moves the 700–800 d ratio from 1.21 to 1.52. The model has 9.5% of orbits at margin < 1.5 and the data 20.8%, and the observed-margin estimate (which avoids this) cannot exclude a false pile-up at the cut |
 | Fisher matrix, not the pipeline | Replaced by a blind cascade (above). That is `gaiamock`, a model of DPAC's pipeline, not DPAC's pipeline |
 | Wide pairs: frame spin | Detected at about 13σ, up to (16.7, 31.2)% for pairs straddling G = 13 (referee). It leaves D_Z unchanged (−1.56 to −1.55): it dilutes the statistic but does not fake a dipole |
-| Preregistration has no git commit | True. The hash file is local and the times are this machine's. No commit was made because none was asked for |
+| Preregistration was not in git when opened | True. The hash file is local, the times are this machine's, and the first commit (e162015) came after the held-out run. A public hash before DR4 would give the forecast a third-party date |
 
 ## Novelty
 
@@ -281,8 +282,8 @@ If it survives:
 
 ## Next decisive experiment
 
-1. **Gaia DR4, 2026-12-02 (26 days away).** The draft forecast predicts the shoulders and long-period ratio collapse with the longer baseline,
-   while the two-year peak stays and still vanishes with e and T fixed. It needs a final read, then a merge to seal.
+1. **Gaia DR4, 2026-12-02 (26 days away).** The forecast predicts the shoulders and long-period ratio collapse with the longer baseline,
+   while the two-year peak stays and still vanishes with e and T fixed.
    DR4's `epoch_astrometry` then gives the real scan law including reversed precession, so the model can be rerun on it.
 2. **Faint RV.** LAMOST, APOGEE or GALAH epochs for G > 13, P 600–900 d, margin < 1.5, by sense, folded on the Gaia orbit. The one direct test left
    of the spurious reading.
@@ -300,6 +301,6 @@ If it survives:
 
 ## Limits of this session
 
-No commit, push, site change or ledger entry. `oddsky paper-check` has not been run on this text; it is owed before anything here leaves the
-repo, and this dossier is not ready to leave. The first referee reviewed an earlier version; see `reviews/` for the read of this one. Downloaded data and simulation outputs are in `~/oddsky-runs/h0018`, not the repo. The referee's scripts are in
+Committed and merged to the private repo, with no site change or ledger entry. `oddsky paper-check` has not been run on this text; it is owed before anything here leaves the
+repo, and this dossier is not ready to leave. A final referee read the near-final text and its required changes are applied; it did not re-read the result, and neither referee read the primary papers for every credit. Downloaded data and simulation outputs are in `~/oddsky-runs/h0018`, not the repo. The referee's scripts are in
 `reviews/referee_scripts/` as run; they expect a copy of the hunt's scripts at `/tmp/ref_h18/repl/`.

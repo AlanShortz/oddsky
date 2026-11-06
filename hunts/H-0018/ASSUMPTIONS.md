@@ -18,7 +18,7 @@ and `reviews/independent_reproduction/REPORT.md`. Literature: `reviews/literatur
 | 4 | `ecl_lat` is right | recomputed from ra, dec (reproducer) | ≤ 0.03″, no sign mismatch | holds |
 | 5 | C and H are in mas | P·Q orthogonality (referee) | **Wrong: they are in au.** Median \|cos\| 0.227 raw, 0.057 corrected. 3D ⟨L̂⟩ corrected; no registered decision used it | fails, fixed |
 | 6 | the split is independent of everything else | χ² of the dev flag against ecliptic latitude, G, period; declination for pairs | p = 0.64, 0.87, 0.70, 0.79 | holds |
-| 7 | the preregistration was fixed before the data | sha256 of the text through Addendum A matches the hash recorded before opening. Only a local record until commit e162015 | matches | partly |
+| 7 | the preregistration was fixed before the data | sha256 of the text through Addendum A matches the hash recorded before opening. A local record only, until commit e162015, after the held-out run | matches | partly |
 
 ## Wide pairs and the Galactic limit
 
@@ -54,13 +54,13 @@ and `reviews/independent_reproduction/REPORT.md`. Literature: `reviews/literatur
 
 | # | assumption | test | result | status |
 |---|---|---|---|---|
-| 28 | a Fisher matrix stands in for a real fit | gaiamock's full blind cascade, with period search and acceleration models, 12,000 stars × 60 mirror pairs (`work/gm_dr3.txt`) | same sign and shape: A −0.032 ± 0.007 overall (data −0.078), −0.19 at 340–390 d (−0.25), +0.04 ± 0.03 at 150–200 d (+0.06). Amplitude 35–75% of data | holds in shape |
+| 28 | a Fisher matrix stands in for a real fit | gaiamock's full blind cascade, with period search and acceleration models, 12,000 stars × 60 mirror pairs (`work/gm_dr3.txt`) | same sign and shape: A −0.032 ± 0.007 overall (data −0.078), −0.19 at 340–390 d (−0.25), +0.04 ± 0.03 at 150–200 d (+0.06). About 40% of data overall, 35–75% in the bins tabulated in the README, from about 0 (450–500 d) to 120% (800–900 d) elsewhere; none detected above 1100 d in this run | holds in shape |
 | 29 | errors differ in fact, not only formally | scatter of fitted parallax in real fits; companion parallaxes | scatter ratio 4.2 at 365 d, 2.26 at 730 d, matching formal errors. Companions at 600–900 d: 1.18 ± 0.14, underpowered | partly |
 | 30 | free e and T carry the two-year term | model with e, T fixed: 1.026, 1.010, 1.011 at 600–900 d. Gaia pseudo-circular: 1.034, 1.008, 1.020 | agree. But pseudo-circular errors are the same fit conditioned, so this tests Gaia's covariance, not new data. They also skip the σ_e filter, so A's vanishing can't be separated from selection | partly |
-| 31 | **the parallax cut is the main channel** | blind cascade with and without the cut, by parallax (`work/gm_channel.txt`) | Near 1 yr yes: 340–390 d −0.19 with, −0.07 without. At 600–900 d the cut is sense-dependent (at ϖ 1–1.5: 15.9% vs 8.0% removed) but A exists before it: −0.095 without, −0.139 with. **Text changed: one channel of several** | fails as stated |
-| 32 | P > 1100 d needs something outside the cut | deep cascade, 15,000 stars (`work/gm_long.txt`) | A = −0.035 ± 0.010 at the step that decides orbit against acceleration solution, where 7/9-parameter solutions are symmetric. About half the observed −0.07. So the referee's guess is supported; half is still missing | partly |
+| 31 | **the parallax cut is the main channel** | blind cascade with and without the cut, by parallax (`work/gm_channel.txt`) | Near 1 yr yes: 340–390 d −0.19 with, −0.07 without. At 600–900 d the cut is sense-dependent (at ϖ 1–1.5: 15.9% vs 8.0% removed) but A exists before it: −0.095 without, −0.139 with at that parallax; −0.053, −0.065 over all 600–900 d. The first referee's observed-margin estimate gives the cut 80–90% of this zone, the cascade about 20%. **Unresolved. Text changed: one channel of several** | fails as stated |
+| 32 | P > 1100 d needs something outside the cut | deep cascade, 15,000 stars (`work/gm_long.txt`) | A = −0.035 ± 0.010 at the step that decides orbit against acceleration solution, where 7/9-parameter solutions are nearly symmetric (−0.0059 ± 0.0012). Accepted orbits −0.031 ± 0.007 against −0.064 observed: about half. So the referee's guess is supported; half is still missing | partly |
 | 33 | the parent population does not matter | variants: q, M₁, thinning. Eccentricity distribution | ratio barely moves, but 700–800 d goes 1.21 (thermal), 1.35 (uniform), 1.52 (low e) | partly |
-| 34 | parents cover the data | parallax distribution | data 10% at ϖ < 0.7, where A = −0.37; cascade 0.7% (M₁ = 1 M☉ can't make their large orbits). Likely the main reason for the low amplitude; untested directly | partly |
+| 34 | parents cover the data | parallax distribution | at 600–900 d, data 10% at ϖ < 0.7, where A = −0.37; cascade 0.7% (M₁ = 1 M☉ can't make their large orbits). Likely the main reason for the low amplitude; untested directly | partly |
 | 35 | `field_parent` is a random sample | second `random_index` slice | \|b\| < 10 fraction 0.505 vs 0.527 (KS p < 0.001). TOP without ORDER BY isn't strictly random. Small, and affects amplitude only | partly |
 | 36 | transit counts and noise are realistic | against `astrometric_matched_transits`, catalogue σ_ϖ at fixed G, and thinning | model has 1.21× the transits; catalogue/model σ_ϖ 1.00–1.25; thinning 18% changes ratios by up to 0.08, mostly under 0.03 | holds |
 | 37 | half-year reversal is understood | data, Fisher, cascade agree in sign | no mechanism identified, no literature support | untested |
@@ -80,3 +80,6 @@ and `reviews/independent_reproduction/REPORT.md`. Literature: `reviews/literatur
 |---|---|---|---|---|
 | 42 | nobody has measured this | Perryman 2026, Lammers & Winn 2026, Yahalomi+ 2026, Makarov 2025 and others read or grepped; about 75 ADS queries in all | not found. Unread: Holl 2011, Exoplanet Handbook, Hipparcos papers mostly, DR4 NSS paper. ADS phrase search is blunt | partly |
 | 43 | the mechanism is ours | Butkevich 2018 Eqs. 22, 25–26, 29 imply the hemisphere mapping and a finite-baseline sense term; Makarov 2025 and Andrews+ 2019 report a two-year dip; El-Badry+ 2024 and Lam+ 2025 report the cut's one-year hole; Makarov 2026 finds no all-sky asymmetry in 103,169 pairs | credit given in the dossier | fails, fixed |
+
+Small omissions, found by the final referee (`reviews/claude-referee-final-2026-11-06.md`): the cascade driver leaves out `gaiamock`'s 10% transit rejection and its extra noise at G < 13, the
+DR4 stand-in has a 58 d gap, and `skip_acceleration=True` was not tried. None was tested for its effect.
