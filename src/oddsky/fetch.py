@@ -6,14 +6,18 @@ import logging
 
 import pandas as pd
 
+from . import librarian
 from .case.model import Case, Target
 from .case.store import CaseStore
 from .data import aavso, allwise, asassn, atlas, gaia, gaia_epoch, neowise, simbad, tess, ztf
+from .data.provenance import Provenance
 from .paths import cases_dir
 
 log = logging.getLogger("oddsky")
 
-SURVEYS = ("gaia", "allwise", "gaia_epoch", "neowise", "aavso", "ztf", "atlas", "asassn", "tess")
+# "librarian" is not a survey: it is the literature check (oddsky.librarian) the Skeptic's prior_art check reads. It is in
+# the default set, like every other network source here, so that a case is never opened without it.
+SURVEYS = ("gaia", "allwise", "gaia_epoch", "neowise", "aavso", "ztf", "atlas", "asassn", "tess", "librarian")
 
 
 def open_case(name: str, title: str | None = None, hook: str = "", ra: float | None = None,
@@ -142,6 +146,25 @@ def fetch(store: CaseStore, surveys: tuple[str, ...] | list[str] = SURVEYS) -> d
         record("tess", df, p)
         if meta.get("sectors"):
             ctx["tess"] = meta
+
+    if "librarian" in surveys:
+        # Is it new? SIMBAD, NED, ADS and the shelves at the case position. Each source's status is stored with the answer,
+        # so a source that could not be queried is never read as "nothing published".
+        pa = librarian.prior_art(t.ra, t.dec)
+        down = librarian.unavailable_names(pa)
+        p = Provenance(archive="The Librarian (SIMBAD, NED, ADS, shelves)",
+                       query={"ra": t.ra, "dec": t.dec, "radius_arcsec": pa["radius_arcsec"]},
+                       rows_raw=pa["n_papers"], rows_kept=pa["n_topical"],
+                       status="unavailable" if down else "empty" if pa["verdict"] == "unlisted" else "ok",
+                       notes=[f"{k}: {v['status']}" + (f" ({'; '.join(v['notes'])})" if v["notes"] else "")
+                              for k, v in pa["sources"].items() if v["status"] == "unavailable"])
+        prov["librarian"] = p.model_dump()
+        earlier = ctx.get("prior_art")
+        if pa["complete"] or not earlier or not earlier.get("complete"):
+            # (an incomplete re-check does not replace an earlier complete one; the report says it was incomplete)
+            ctx["prior_art"] = pa
+        report["librarian"] = {"status": p.status, "rows": pa["n_papers"], "verdict": pa["verdict"],
+                               **({"unavailable": down} if down else {})}
 
     store.write_provenance(prov)
     store.write_context(ctx)

@@ -24,7 +24,7 @@ def _echo(obj) -> None:
 @app.command("open")
 def open_cmd(name: str, title: Annotated[str | None, typer.Option()] = None,
              hook: Annotated[str, typer.Option()] = "", fetch: bool = True,
-             surveys: Annotated[str, typer.Option(help="comma list")] = "gaia,neowise,aavso,ztf,atlas,asassn,tess"):
+             surveys: Annotated[str, typer.Option(help="comma list")] = "gaia,neowise,aavso,ztf,atlas,asassn,tess,librarian"):
     """Open a case on a real star by name and fetch its data."""
     from .fetch import fetch as do_fetch
     from .fetch import open_case
@@ -36,7 +36,7 @@ def open_cmd(name: str, title: Annotated[str | None, typer.Option()] = None,
 
 
 @app.command("fetch")
-def fetch_cmd(case: str, surveys: Annotated[str, typer.Option()] = "gaia,neowise,aavso,ztf,atlas,asassn,tess"):
+def fetch_cmd(case: str, surveys: Annotated[str, typer.Option()] = "gaia,neowise,aavso,ztf,atlas,asassn,tess,librarian"):
     """(Re)fetch archive data for a case."""
     from .case.store import CaseStore
     from .fetch import fetch
@@ -55,6 +55,38 @@ def skeptic_cmd(case: str):
     for c in r["checks"]:
         typer.echo(f" {mark[c['status']]} {c['title']}\n     {c['finding']}")
     typer.echo(f"\n{r['summary']}")
+
+
+# ignore_unknown_options: a negative declination (-42.8842) is an argument, not an option
+@app.command("librarian", context_settings={"ignore_unknown_options": True})
+def librarian_cmd(ra: Annotated[float, typer.Argument(help="degrees")], dec: Annotated[float, typer.Argument(help="degrees")],
+                  radius: Annotated[float, typer.Option(help="arcsec")] = 5.0,
+                  topic: Annotated[list[str] | None, typer.Option(help="repeatable; default: every topic")] = None):
+    """Ask the Librarian whether a sky position is new: SIMBAD, NED, ADS and the shelves of published samples."""
+    from .librarian import TOPICS, prior_art
+
+    unknown = [t for t in topic or [] if t not in TOPICS]
+    if unknown:
+        typer.echo(f"unknown topic(s) {unknown}; topics are {list(TOPICS)}", err=True)
+        raise typer.Exit(2)
+    r = prior_art(ra, dec, radius, topic)
+    typer.echo(r["summary"])
+    sim, ned = r["simbad"], r["ned"]
+    typer.echo("  SIMBAD: " + (f"{sim['main_id']} ({sim['otype']}), {sim['sep_arcsec']:.1f}\" away" if sim else
+                               f"no object [{r['sources']['simbad']['status']}]"))
+    typer.echo("  NED:    " + (f"{ned['prefname']} ({ned['type']}" + (f", z = {ned['z']:.4f}" if ned["z"] is not None else "")
+                               + f"), {ned['sep_arcsec']:.1f}\" away" if ned else f"no object [{r['sources']['ned']['status']}]"))
+    for k, v in r["sources"].items():
+        if v["status"] == "unavailable":
+            typer.echo(f"  {k} could not be queried: {'; '.join(v['notes']) or 'no reason given'}")
+    for h in r["shelf_hits"]:
+        typer.echo(f"  shelf {h['shelf']}: {h['name']} at {h['sep_arcsec']:.1f}\", {h['bibcode']} {h['title']}")
+    typer.echo(f"  {r['n_papers']} paper(s), {r['n_topical']} on the topics ({', '.join(r['topics'])})"
+               + (", newest first:" if r["topical_papers"] else ""))
+    for p in r["topical_papers"][:10]:
+        typer.echo(f"    {p['bibcode']}  {p['year'] or '----'}  {p['title']}")
+    if r["n_topical"] > 10:
+        typer.echo(f"    ... and {r['n_topical'] - 10} more")
 
 
 @app.command("tools")

@@ -1,7 +1,7 @@
 """The Oddsky toolbox: one set of functions behind both the MCP server and `oddsky call`.
 
 Every tool takes a `case` (an id like OS-0001, or a path to a case/trial directory) and returns
-plain JSON. Analysis and recording calls are written to the case's ledger.jsonl with a digest of
+plain JSON (`prior_art` also works on a bare sky position, with no case). Analysis and recording calls are written to the case's ledger.jsonl with a digest of
 their result, so any claim can cite the exact computation it rests on, and `oddsky replay` can
 re-run it.
 
@@ -636,6 +636,32 @@ class Toolbox:
                     break
         return self._log(s, "literature", dict(case=case), {"references": refs})
 
+    def prior_art(self, ra: float | None = None, dec: float | None = None, radius_arcsec: float = 5.0,
+                  topics: list[str] | None = None, case: str | None = None, max_papers: int = 25) -> dict:
+        """Run the Librarian: is it new? For a sky position (ra, dec in degrees; or give a case to use its target), look up
+        the object in SIMBAD and NED, merge the papers SIMBAD and ADS attach to it, and check the shelves of published
+        samples. verdict: unlisted (no object anywhere) | catalogued (an object, but no paper title matches the topics) |
+        studied (a title matches, or a shelf holds it: read those before calling anything new). complete = false means a
+        source could not be queried and the verdict is not final. topics: transient, dimming, infrared_excess, binary
+        (default all). Open mode only. Logged to the ledger when a case is given."""
+        self._open_only()
+        from . import librarian
+
+        s = self.store(case) if case else None
+        if ra is None or dec is None:
+            if s is None:
+                raise ValueError("give ra and dec in degrees, or a case to use its target position")
+            t = s.load().target
+            if t is None or t.ra is None or t.dec is None:
+                raise ValueError("case has no target coordinates")
+            ra, dec = t.ra, t.dec
+        out = librarian.prior_art(ra, dec, radius_arcsec, topics)
+        out["topical_papers"] = out["topical_papers"][:max_papers]  # n_topical keeps the full count
+        if s is None:
+            return out
+        return self._log(s, "prior_art", dict(case=case, ra=ra, dec=dec, radius_arcsec=radius_arcsec, topics=topics,
+                                              max_papers=max_papers), out)
+
     def _open_only(self):
         if self.mode != "open":
             raise PermissionError("not available in blind mode")
@@ -671,8 +697,8 @@ def evaluate(check: Check, frame: Callable[[str], pd.DataFrame]):
 OPEN_TOOLS = ["list_cases", "list_classes", "case_overview", "get_lightcurve", "describe_series", "compare_windows",
               "observer_agreement", "eclipse_period", "fold", "lens_fit", "periodogram", "find_excursions", "cross_band", "wise_color", "ir_excess", "neighbors",
               "skeptic_report", "add_claim", "retract_claim", "add_hypothesis", "update_hypothesis", "register_prediction", "check_prediction",
-              "open_case", "literature"]
-BLIND_TOOLS = [t for t in OPEN_TOOLS if t not in ("check_prediction", "open_case", "literature")]
+              "open_case", "literature", "prior_art"]
+BLIND_TOOLS = [t for t in OPEN_TOOLS if t not in ("check_prediction", "open_case", "literature", "prior_art")]
 
 
 def available(mode: str) -> list[str]:

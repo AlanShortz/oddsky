@@ -335,9 +335,64 @@ def _reject_sentence(rej: dict | None, aw: dict) -> str:
     return ". No clean second extraction of this star was found in the AllWISE Reject Table within 3\"."
 
 
+def prior_art(store: CaseStore) -> list[Check]:
+    """The Librarian's answer (oddsky.librarian, stored by fetch): is it new? H-0017 called a galaxy its best candidate when
+    it was object 12 of Wang et al. 2018. A source that could not be queried is named, and the verdict is then not final."""
+    from ..librarian import unavailable_names
+
+    title = "Prior art (the Librarian)"
+    pa = store.context().get("prior_art")
+    if not pa:
+        t = store.load().target
+        if t is None or t.ra is None:
+            return []  # a blind packet: no position, and the literature is out of bounds
+        return [_check("prior_art", title, "skip",
+                       "the literature has not been checked for this position: run `oddsky fetch <case> --surveys librarian` "
+                       "before anything here is called new")]
+    n, top, shelves = pa.get("n_papers", 0), pa.get("topical_papers") or [], pa.get("shelf_hits") or []
+    n_top = pa.get("n_topical", len(top))
+    topics = ", ".join(pa.get("topics") or [])
+    name = (pa.get("simbad") or {}).get("main_id") or (pa.get("ned") or {}).get("prefname")
+    down = unavailable_names(pa)
+    verdict = pa.get("verdict")
+    papers = "paper" if n == 1 else "papers"
+    if verdict == "studied":
+        status = "warn"
+        parts = []
+        if top:
+            parts.append(f"{n_top} of {n} {papers} on {name or 'this position'} {'matches' if n_top == 1 else 'match'} the "
+                         f"topics ({topics}); newest: "
+                         + "; ".join(f"{p['bibcode']} \"{str(p.get('title') or '').rstrip('.')}\"" for p in top[:3]))
+        if shelves:
+            parts.append("on the shelves of published samples: "
+                         + "; ".join(f"{h['bibcode']} \"{str(h.get('title') or '').rstrip('.')}\" (as {h['name']})"
+                                     for h in shelves[:3]))
+        finding = ". ".join(parts) + ". These must be read before anything here is called new."
+    elif verdict == "catalogued":
+        status = "pass"
+        finding = (f"{n} {papers} {'lists' if n == 1 else 'list'} {name or 'the object at this position'}; no title matches "
+                   f"the topics ({topics}) and no shelf holds it")
+    else:
+        status = "pass"
+        finding = (("no object and no shelf entry" if down else "no SIMBAD object, no NED object and no shelf entry")
+                   + f" within {pa.get('radius_arcsec', 5.0):g}\"")
+    if down or not pa.get("complete", True):
+        who = " and ".join(down) or "a source"
+        if verdict == "studied":
+            finding += f" The list is incomplete: {who} could not be queried."
+        else:
+            # not a pass: the sources that answered found nothing on the topics, and one did not answer
+            status = "warn"
+            finding = (f"not final: {who} could not be queried. From the sources that answered: {finding}. Re-run "
+                       "`oddsky fetch <case> --surveys librarian` before anything here is called new.")
+    return [_check("prior_art", title, status, finding, verdict=verdict, complete=bool(pa.get("complete", True)) and not down,
+                   n_papers=n, n_topical=n_top, unavailable=down, newest=[p["bibcode"] for p in top[:3]],
+                   shelves=[h["shelf"] for h in shelves], checked_at=pa.get("checked_at"))]
+
+
 BATTERY: list[Callable[[CaseStore], list[Check]]] = [
     blending, neowise_quality, independent_confirmation, gaia_baseline, chromaticity, onset_coverage, aliases, tess_systematics,
-    astrometry, allwise_photometry,
+    astrometry, allwise_photometry, prior_art,
 ]
 
 

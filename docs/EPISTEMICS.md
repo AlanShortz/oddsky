@@ -34,6 +34,28 @@ consistent across bands, whether a period is just the day/month/year/TESS orbit 
 alias, whether an event's onset fell in a gap, TESS dips near momentum dumps and sector edges,
 and astrometric wobble (RUWE). It cannot be argued with. That is the point.
 
+## The Librarian
+
+Also deterministic code, not an agent. The Skeptic asks "is it real?". The Librarian asks "is it
+new?". For a sky position it looks up the object in SIMBAD and NED, merges the papers that SIMBAD
+and ADS attach to it, and matches their titles against topic keywords (transient, dimming,
+infrared excess, binary). It gives one of three verdicts:
+
+- **unlisted**: no SIMBAD object, no NED object, no shelf entry.
+- **catalogued**: an object exists, but no paper title matches the topics.
+- **studied**: at least one title matches, or a shelf holds the position. Those papers must be
+  read before anything is called new.
+
+A source that could not be queried is reported as unavailable. It is never read as "nothing
+found", and the verdict is then not final. The shelves (`src/oddsky/shelves/`) hold published
+samples that the archives do not index by object: a table in a paper that nobody linked to its
+sources. `oddsky librarian RA DEC` asks for one position; `oddsky fetch` stores the answer with
+the case, and the Skeptic reports it as the `prior_art` check.
+
+It exists because H-0017 called a galaxy its "best candidate" when it was object 12 of Wang et
+al. 2018. The bibliography of that position would have said so in ten seconds. A title match is
+a reason to read a paper, not a reading of it.
+
 ## Texts that leave the repo
 
 A case has a ledger; a paper, an email to an astronomer or a hunt write-up did not, and that is where
