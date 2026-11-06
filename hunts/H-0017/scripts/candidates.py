@@ -8,7 +8,7 @@ W = "hunts/H-0017/work/"
 ids = pd.read_csv(W + "cooled_id.csv")
 ids = ids[~ids.star][["designation", "ra", "dec", "sigra", "sigdec", "w1mpro_allwise", "w2mpro_allwise", "d1", "d2", "dcolor", "ext_flg"]]
 lib = pd.read_csv(W + "librarian_109.csv")[["designation", "verdict", "complete", "simbad", "simbad_otype", "ned", "ned_type", "z", "n_papers",
-                                             "n_topical", "newest_topical", "newest_title", "shelves"]]
+                                             "n_topical", "newest_topical", "newest_title", "shelves", "catalogues"]]
 ep = pd.read_csv(W + "epochs_2010.csv")[["designation", "n_ep", "dt_days", "dw2_2010", "dw1_2010"]]
 ctl = pd.read_csv(W + "epochs_2010_control.csv")
 ctl = ctl[ctl.n_ep >= 2]
@@ -25,10 +25,10 @@ x["declining"] = x.fade_2010 > 0.15
 # and CatWISE (deblending), against 11 of these 96. Only a shift beyond anything in the control is flagged.
 kc = pd.read_csv(W + "catwise_control.csv")
 x["moved"] = x.cw_sep > kc.cw_sep.max()
-x["klass"] = np.select([x.known, x.declining], ["already studied", "declining in 2010, no transient literature found"],
+x["klass"] = np.select([x.known, x.declining], ["already studied or a catalogued variable", "declining in 2010, no transient literature found"],
                        "no change seen within 2010")
 cols = ["designation", "klass", "ra", "dec", "z", "ned_type", "simbad", "simbad_otype", "w2mpro_allwise", "d2", "dcolor", "fade_2010", "n_ep",
-        "cw_sep", "moved", "n_catwise", "ext_flg", "spec_class", "subclass", "verdict", "n_papers", "n_topical", "newest_topical", "shelves"]
+        "cw_sep", "moved", "n_catwise", "ext_flg", "spec_class", "subclass", "verdict", "n_papers", "n_topical", "newest_topical", "shelves", "catalogues"]
 x.sort_values(["klass", "fade_2010"], ascending=[True, False])[cols].round(4).to_csv(W + "candidates.csv", index=False)
 print(x.klass.value_counts().to_string())
 print("control: shifts > 1 arcsec in", int((kc.cw_sep > 1).sum()), "of", len(kc), "; maximum", round(kc.cw_sep.max(), 2), "| here > 1 arcsec:",
