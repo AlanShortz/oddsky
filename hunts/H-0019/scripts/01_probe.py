@@ -39,9 +39,9 @@ def probe(g):
     params = {"ra": g["ra"], "dec": g["dec"], "radius": rad, "NumVisits.gte": 2, "columns": "[" + ",".join(cols) + "]",
               "pagesize": CAP}
     out = dict(g, radius=round(rad, 4), n2=-1)
-    for attempt in range(3):
+    for attempt in range(2):
         try:
-            r = requests.get(API, params=params, timeout=240)
+            r = requests.get(API, params=params, timeout=150)
             if r.status_code == 200:
                 rows = list(csv.DictReader(io.StringIO(r.text)))
                 out["n2"] = len(rows)
@@ -57,13 +57,17 @@ def probe(g):
 
 if __name__ == "__main__":
     gs = galaxies()
+    K, N = (int(sys.argv[2]), int(sys.argv[3])) if len(sys.argv) > 3 else (0, 1)   # worker K of N
     done = set()
-    if OUT.exists() and OUT.stat().st_size:
-        done = {r["name"] for r in csv.DictReader(OUT.open())}
+    for part in OUT.parent.glob("probe*.csv"):
+        if part.stat().st_size:
+            done |= {r["name"] for r in csv.DictReader(part.open())}
+    gs = [g for i, g in enumerate(gs) if i % N == K]
+    OUT = OUT.with_name(f"probe_{K}.csv") if N > 1 else OUT
     fields = ["name", "ra", "dec", "a26", "dist", "f_dist", "BMag", "logLK", "T", "radius", "n2", "span"] + BANDS
     f = OUT.open("a", newline="")
     w = csv.DictWriter(f, fieldnames=fields)
-    if not done:
+    if not OUT.stat().st_size:
         w.writeheader()
     print(len(gs), "galaxies within", DMAX, "Mpc;", len(done), "done", flush=True)
     for g in gs:

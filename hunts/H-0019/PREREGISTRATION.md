@@ -57,3 +57,16 @@ published variable lists, per-star candidates.
 A positive T5 is a difference between galaxies, not yet a metallicity effect: age mix, crowding, and the tip placement all
 change who sits in the box. Before any physical reading: repeat with the tip shifted by +-0.1 mag, with the colour cut moved,
 with galaxies split by distance and by stellar density instead of luminosity.
+
+## Addendum (2026-11-09, after the run)
+
+The text above is as committed in `3cc2f73` (sha256 `c962ca46…670ac3`, `~/oddsky-runs/h0019/prereg.sha256`). Departures:
+
+- `04_measure.py` changed in one place after registration: it reads the probe from three worker files instead of one
+  (`probe_rows()`). Cuts, boxes, pairs and statistics are as registered (`git diff 3cc2f73 -- hunts/H-0019/scripts/04_measure.py`).
+- Ten large galaxies whose single-cone query timed out were fetched as 0.05° tiles out to 0.2° from the centre
+  (`03b_fetch_tiled.py`), not as the registered cone of radius a26/2. Written after registration and after the first ten
+  galaxies' results were seen, before any of the tiled galaxies' results. M33, NGC 300 and NGC 7793 entered the sample this way.
+- M31 was not attempted and M81 was stopped unfinished.
+- The tests were first evaluated on ten galaxies, then on thirteen. The README reports the thirteen and says how T2 and T3 moved.
+- The reference values quoted in the registration (0.028, 0.014) were a first pass; `05_compare.py` gives 0.0272 and 0.0138.

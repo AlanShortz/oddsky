@@ -32,12 +32,21 @@ def galaxies():
             except ValueError:
                 pass
     out = []
-    for g in csv.DictReader((HERE / "work/probe.csv").open()):
+    for g in probe_rows():
         key = g["name"].replace(" ", "_")
         if (RUN / f"hsc/{key}_det.parquet").exists():
             g["AB"] = ab.get(g["name"], 0.0); g["key"] = key
             out.append(g)
     return out
+
+
+def probe_rows():
+    seen = {}
+    for part in sorted((HERE / "work").glob("probe*.csv")):
+        for r in csv.DictReader(part.open()):
+            if r["name"] not in seen or int(r["n2"]) > int(seen[r["name"]]["n2"]):
+                seen[r["name"]] = r
+    return list(seen.values())
 
 
 def tip_pred(g):

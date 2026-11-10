@@ -16,6 +16,15 @@ COLOUR = ["A_F814W", "A_F606W", "A_F555W", "A_F475W", "A_F435W", "W3_F814W", "W3
           "W3_F160W", "W2_F814W", "W2_F606W", "W2_F555W"]
 
 
+def probe_rows():
+    seen = {}
+    for part in sorted((HERE / "work").glob("probe*.csv")):
+        for r in csv.DictReader(part.open()):
+            if r["name"] not in seen or int(r["n2"]) > int(seen[r["name"]]["n2"]):
+                seen[r["name"]] = r
+    return list(seen.values())
+
+
 def tip_pred(dist_mpc: float, ab_gal: float) -> float:
     import math
     return 5 * math.log10(dist_mpc * 1e5) + M_TIP + 0.42 * ab_gal + AB_VEGA + APCOR
@@ -32,7 +41,7 @@ def main():
                 ab[p[0]] = float(p[9])
             except ValueError:
                 pass
-    for g in csv.DictReader((HERE / "work/probe.csv").open()):
+    for g in probe_rows():
         name = g["name"]; key = name.replace(" ", "_")
         if only and name not in only:
             continue

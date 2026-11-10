@@ -25,3 +25,6 @@ dist/
 hunts/H-0007/data/*/tess/
 hunts/H-0007/data/quiet_ptp_lc.csv
 hunts/H-0007/work/lc.parquet
+
+# H-0019: per-galaxy pair tables (15 MB; rebuilt by hunts/H-0019/scripts/04_measure.py from ~/oddsky-runs/h0019)
+hunts/H-0019/work/pairs/

@@ -1,0 +1,4 @@
+name,dist,BMag,logLK,n_det,colour,tip_pred,tip_edge,tip_sig,tip,n_short_agb,sd_short_agb,k02_short_agb,k03_short_agb,k05_short_agb,n_short_agb_bright,sd_short_agb_bright,k02_short_agb_bright,k03_short_agb_bright,k05_short_agb_bright,n_short_rgb,sd_short_rgb,k02_short_rgb,k03_short_rgb,k05_short_rgb,n_short_blue,sd_short_blue,k02_short_blue,k03_short_blue,k05_short_blue,medlag_short,n_long_rgb,n_long_blue,medlag_long
+WLM,0.97,-14.1,7.69,22307,A_F475W,21.63,21.66,3.7,21.63,80,0.0183,0,0,0,13,0.0221,0,0,0,181,0.0249,0,0,0,25,0.0212,0.0,0.0,0.0,0.1,0,0,
+ESO410-005,1.92,-11.6,6.88,13061,A_F606W,23.07,23.05,4.6,23.05,74,0.0256,0,0,0,9,0.0159,0,0,0,232,0.0304,0,0,0,0,,,,,0.1,0,0,
+Sc22,4.21,-10.5,7.14,7549,A_F606W,24.78,24.81,3.7,24.78,56,0.0311,0,0,0,3,0.036,0,0,0,191,0.0451,0,0,0,1,0.008,0.0,0.0,0.0,0.3,0,0,
