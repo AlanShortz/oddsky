@@ -11,7 +11,8 @@ pooled measurement exactly, found the first M33 test invalid (a 0.48" offset bet
 that the comparisons between galaxies and with the Magellanic Clouds do not yet support any statement about galaxies. This
 page is the version after that report and after the experiment it asked for (the reference rebuilt from real OGLE light
 curves, section 3), which a second referee pass reproduced (`reviews/claude-referee-note-2026-11-09.md`) while showing
-that "the pooled value matches the LMC" was not a like-for-like comparison. Nothing here has been sent anywhere.
+that "the pooled value matches the LMC" was not a like-for-like comparison. Section 6 (PSF photometry, M81,
+M31, the Librarian check) was added on 2026-11-10 and has not been refereed. Nothing here has been sent anywhere.
 
 ## Abstract
 
@@ -230,6 +231,45 @@ matches. "Same stars" are the Hubble Source Catalog stars of sections 2 and 3, w
 - M81's tip edge landed 0.28 mag from the prediction, at the edge of the search window; 164 stars.
 - **Not done:** NGC 2403, NGC 1313, NGC 4244 and NGC 7793, the four most crowded discs. ANGST has only one of their two
   visits. They need DOLPHOT run on the images, which was not attempted here.
+
+### M31 (`17_m31.py`, `work/m31.json`)
+
+The MAST observation list gives 189 fields where ACS F814W came back more than 100 days later (before the catalogue's
+2017 end). All were fetched (9.3 million detections, 489 images) and measured with the registered code, unchanged. M31
+is not added to the registered tests.
+
+- 55,598 red stars 0 to 1 mag above the tip have a long pair: 9.6% change by more than 0.3 mag, against 2.8% just below
+  the tip. E₀.₃ = 0.068 ± 0.001. 2,658 dimmed and 2,681 brightened.
+- Short pairs: 67 of 91,747 above the tip exceed 0.3 mag (0.07%).
+- **The tip is soft.** The edge lands at 21.65, 0.47 mag fainter than the catalogue distance predicts and at the limit
+  of the search window (metal-rich giants have a fainter tip in I, so the direction is expected, but it was not checked
+  against published M31 values). Placing it anywhere from the prediction to the edge gives 0.068 to 0.094. None of those
+  is near the LMC's 0.037.
+- With lag: 0.054 at 100 to 250 days, then 0.078, 0.071, 0.072 out to 6,000 days.
+- With distance from the centre: 0.075 ± 0.002 inside 0.25°, 0.069, 0.059, and 0.058 ± 0.005 beyond 1°. Crowding would
+  push the inner fields down, not up.
+- By colour: the bluest third of the red stars 0.023, the middle 0.035, the reddest 0.105.
+- Field to field it scatters more than binomial: 112 image pairs, χ² = 164.9, from 0.007 to 0.159.
+
+**What the follow-ups add up to (my reading, exploratory, not refereed).** Where the photometry is clean or PSF-based,
+the values now line up: SMC 0.024, NGC 4163 0.025, LMC 0.037, M33 0.044, IC 2574 0.046, NGC 300 0.049 to 0.064, M31 0.068,
+with Garland, KKH 37 and M81's one field higher and uncertain. That is the direction the failed registered test
+predicted, and inside M31 the value falls outward as metallicity does. It is not yet evidence for a metallicity effect:
+the statistic follows giant-branch colour, redder giants are both more metal-rich and (in star-forming discs) mixed with
+different ages, the tips of M31, M81 and IC 10 are soft, the ordering was noticed after the fact, and Garland and KKH 37
+do not fit it. A fair test needs measured metallicities and boxes drawn at matched intrinsic colour.
+
+### The 282 single-star candidates (`15_librarian.py`, `work/candidates_librarian.csv`)
+
+The Librarian at 1" on each: 173 unlisted, 75 catalogued, 30 mentioned, 4 studied. For 115 (70 in NGC 300) VSX could
+not be reached on two passes, so those verdicts rest on SIMBAD, NED, ADS and the shelves.
+
+- Known variables re-found: 31 of M33's 87 (30 in published Mira lists, 28 of them matched to Yuan et al. 2017
+  directly), and the one Sagittarius dIrr candidate (a long-period variable of the INT monitoring survey).
+- Contaminants: one catalogued Cepheid in M33 and one in NGC 300 sit in the box above the tip.
+- The NGC 2403 "studied" is the Librarian matching the galaxy, not the star.
+- For the other 245 or so, no variability literature was found. That is a search result. At I of 22 to 24 the general
+  catalogues would not hold them, and none should be called new without the galaxy-specific variable lists being read.
 
 ## What the advisor said, and what was done with it
 
