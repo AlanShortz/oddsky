@@ -25,7 +25,7 @@ If the Cloud Run URL ever changes, update the rewrites in `vercel.json`.
 - **Admin token**: Secret Manager `oddsky-admin-token`; a local copy at `~/.config/oddsky/admin-token`. Sent as
   `x-oddsky-admin`.
 - **Invite a collaborator** (observer code + key, no passkey needed):
-  `curl -X POST https://oddsky.ai/api/admin/invite -H "x-oddsky-admin: $(cat ~/.config/oddsky/admin-token)" -d '{"code":"SG","name":"the advisor","label":"Claude Code"}'`
+  `curl -X POST https://oddsky.ai/api/admin/invite -H "x-oddsky-admin: $(cat ~/.config/oddsky/admin-token)" -d '{"code":"AB","name":"A. Observer","label":"Claude Code"}'`
 - **The grader** runs daily at 09:17 UTC (Cloud Scheduler `oddsky-grade-daily` → `POST /api/admin/grade`).
   Dry run: add `?dry_run=1`.
 - **Verify the ledger**: `curl https://oddsky.ai/api/ledger/verify`, or the button on /ledger (re-hashes in the browser).

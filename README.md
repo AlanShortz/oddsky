@@ -149,7 +149,7 @@ What's worth knowing, including the parts that don't flatter anyone:
 - **Opus recognised 8 of the 10 stars** (self-reported, tagged as speculation): R CrB, SS Cyg,
   EE Cep, ASASSN-21qj and others. Blinding hides names, not physics. On the two packets it did not
   recognise (the ordinary star and the salted one) it went 2/2. Trial 002 needs stars nobody has
-  written about, and that's where the advisor comes in.
+  written about, chosen by a professional astronomer.
 - **EE Cep, from data cut a year before its 2025 eclipse:** Opus timed the next eclipse from the
   previous six (period 2048 d) and registered four forecasts. All four came true, including the one
   it had rated at 45%. Haiku called the star a pulsator.
@@ -214,7 +214,7 @@ honest](docs/EPISTEMICS.md).
 
 ## Credits
 
-Built by Alan Shortz and the advisor, with Claude. The data come from ESA Gaia, NASA/IPAC
+Built by Alan Shortz, with Claude. The data come from ESA Gaia, NASA/IPAC
 NEOWISE, the AAVSO International Database and its observers worldwide, NASA TESS via MAST, ZTF,
 and ASAS-SN. MIT licensed. See [CONTRIBUTING](CONTRIBUTING.md) and, for the scientific defaults
 that are still open questions, [docs/OPEN_QUESTIONS.md](docs/OPEN_QUESTIONS.md).

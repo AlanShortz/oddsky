@@ -1,0 +1,41 @@
+{
+ "n_miras_published": 1847,
+ "offset_arcsec": [
+  -0.454,
+  -0.136
+ ],
+ "match_radius_arcsec": 0.15,
+ "chance_matches_per_trial": 3.0,
+ "chance_big_per_trial": 0.04,
+ "n_used": 107,
+ "median_lag": 4592.092469949275,
+ "median_amp": 1.53,
+ "n_control": 13573,
+ "x0.3": {
+  "observed": 76,
+  "frac": 0.71,
+  "expected_frac": 0.62,
+  "expected_sd": 0.035,
+  "control_frac": 0.0283
+ },
+ "x0.5": {
+  "observed": 61,
+  "frac": 0.57,
+  "expected_frac": 0.465,
+  "expected_sd": 0.036,
+  "control_frac": 0.0108
+ },
+ "x1.0": {
+  "observed": 25,
+  "frac": 0.234,
+  "expected_frac": 0.207,
+  "expected_sd": 0.029,
+  "control_frac": 0.0026
+ },
+ "rms_observed": 0.828,
+ "rms_expected": 0.803,
+ "dimmed_vs_brightened": [
+  58,
+  49
+ ]
+}

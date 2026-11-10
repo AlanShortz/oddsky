@@ -1,0 +1,65 @@
+galaxy,truth,hsc,crowding,range,n,completeness,offset,scatter,gross,displaced,zero_point,tie_rms_mas
+NGC0300,10915-ngc0300-wide1,all sources,all,above tip,1314,0.992,-0.002,0.036,0.0069,0.0,0.69,18.4
+NGC0300,10915-ngc0300-wide1,all sources,all,0-1 below tip,4340,0.986,-0.021,0.046,0.0079,0.003,0.69,18.4
+NGC0300,10915-ngc0300-wide1,all sources,isolated,above tip,1236,0.992,-0.002,0.036,0.0065,0.0,0.69,18.4
+NGC0300,10915-ngc0300-wide1,all sources,isolated,0-1 below tip,3530,0.987,-0.018,0.046,0.0066,0.002,0.69,18.4
+NGC0300,10915-ngc0300-wide1,all sources,crowded,above tip,58,0.982,-0.012,0.044,0.0172,0.0,0.69,18.4
+NGC0300,10915-ngc0300-wide1,all sources,crowded,0-1 below tip,810,0.98,-0.032,0.048,0.0139,0.011,0.69,18.4
+NGC0300,10915-ngc0300-wide1,point-like (CI 0.85-1.30),all,above tip,1319,0.939,-0.002,0.036,0.0073,0.002,0.691,11.2
+NGC0300,10915-ngc0300-wide1,point-like (CI 0.85-1.30),all,0-1 below tip,4352,0.887,-0.018,0.043,0.0023,0.004,0.691,11.2
+NGC0300,10915-ngc0300-wide1,point-like (CI 0.85-1.30),isolated,above tip,1241,0.946,-0.002,0.036,0.0068,0.001,0.691,11.2
+NGC0300,10915-ngc0300-wide1,point-like (CI 0.85-1.30),isolated,0-1 below tip,3541,0.913,-0.016,0.043,0.0018,0.002,0.691,11.2
+NGC0300,10915-ngc0300-wide1,point-like (CI 0.85-1.30),crowded,above tip,58,0.804,-0.011,0.036,0.0204,0.017,0.691,11.2
+NGC0300,10915-ngc0300-wide1,point-like (CI 0.85-1.30),crowded,0-1 below tip,811,0.77,-0.027,0.043,0.0049,0.011,0.691,11.2
+NGC0300,10915-ngc0300-wide2,point-like (CI 0.85-1.30),all,above tip,2816,0.809,-0.002,0.043,0.0055,0.004,0.7,14.4
+NGC0300,10915-ngc0300-wide2,point-like (CI 0.85-1.30),all,0-1 below tip,11108,0.712,-0.022,0.057,0.002,0.007,0.7,14.4
+NGC0300,10915-ngc0300-wide2,point-like (CI 0.85-1.30),isolated,above tip,2415,0.834,-0.001,0.042,0.0064,0.001,0.7,14.4
+NGC0300,10915-ngc0300-wide2,point-like (CI 0.85-1.30),isolated,0-1 below tip,6769,0.771,-0.018,0.054,0.0027,0.001,0.7,14.4
+NGC0300,10915-ngc0300-wide2,point-like (CI 0.85-1.30),crowded,above tip,374,0.648,-0.005,0.053,0.0,0.019,0.7,14.4
+NGC0300,10915-ngc0300-wide2,point-like (CI 0.85-1.30),crowded,0-1 below tip,4339,0.621,-0.032,0.062,0.0008,0.016,0.7,14.4
+GARLAND,9381-ngc3077-phoenix,all sources,all,above tip,689,0.985,-0.002,0.043,0.0249,0.003,0.713,26.0
+GARLAND,9381-ngc3077-phoenix,all sources,all,0-1 below tip,5750,0.968,-0.022,0.078,0.0578,0.019,0.713,26.0
+GARLAND,9381-ngc3077-phoenix,all sources,isolated,above tip,579,0.993,0.002,0.036,0.0156,0.002,0.713,26.0
+GARLAND,9381-ngc3077-phoenix,all sources,isolated,0-1 below tip,3614,0.991,-0.003,0.056,0.0243,0.002,0.713,26.0
+GARLAND,9381-ngc3077-phoenix,all sources,crowded,above tip,91,0.954,-0.059,0.095,0.0919,0.011,0.713,26.0
+GARLAND,9381-ngc3077-phoenix,all sources,crowded,0-1 below tip,2136,0.927,-0.077,0.118,0.1185,0.046,0.713,26.0
+GARLAND,9381-ngc3077-phoenix,point-like (CI 0.85-1.30),all,above tip,689,0.914,-0.002,0.038,0.0063,0.0,0.715,16.0
+GARLAND,9381-ngc3077-phoenix,point-like (CI 0.85-1.30),all,0-1 below tip,5748,0.839,-0.014,0.065,0.0106,0.007,0.715,16.0
+GARLAND,9381-ngc3077-phoenix,point-like (CI 0.85-1.30),isolated,above tip,579,0.932,0.001,0.034,0.0056,0.0,0.715,16.0
+GARLAND,9381-ngc3077-phoenix,point-like (CI 0.85-1.30),isolated,0-1 below tip,3613,0.915,-0.002,0.052,0.007,0.001,0.715,16.0
+GARLAND,9381-ngc3077-phoenix,point-like (CI 0.85-1.30),crowded,above tip,91,0.798,-0.037,0.065,0.0134,0.0,0.715,16.0
+GARLAND,9381-ngc3077-phoenix,point-like (CI 0.85-1.30),crowded,0-1 below tip,2135,0.709,-0.053,0.084,0.0182,0.019,0.715,16.0
+NGC4163,10915-ngc4163,all sources,all,above tip,779,0.978,-0.01,0.083,0.0316,0.021,0.699,34.7
+NGC4163,10915-ngc4163,all sources,all,0-1 below tip,4130,0.949,-0.023,0.086,0.0739,0.045,0.699,34.7
+NGC4163,10915-ngc4163,all sources,isolated,above tip,540,0.984,-0.004,0.067,0.0263,0.015,0.699,34.7
+NGC4163,10915-ngc4163,all sources,isolated,0-1 below tip,2006,0.996,-0.004,0.059,0.0165,0.002,0.699,34.7
+NGC4163,10915-ngc4163,all sources,crowded,above tip,195,0.953,-0.038,0.117,0.0539,0.041,0.699,34.7
+NGC4163,10915-ngc4163,all sources,crowded,0-1 below tip,2124,0.904,-0.06,0.127,0.1331,0.085,0.699,34.7
+NGC4163,10915-ngc4163,point-like (CI 0.85-1.30),all,above tip,779,0.688,-0.004,0.061,0.0127,0.01,0.7,20.1
+NGC4163,10915-ngc4163,point-like (CI 0.85-1.30),all,0-1 below tip,4120,0.673,-0.007,0.061,0.0076,0.019,0.7,20.1
+NGC4163,10915-ngc4163,point-like (CI 0.85-1.30),isolated,above tip,540,0.781,-0.003,0.06,0.011,0.006,0.7,20.1
+NGC4163,10915-ngc4163,point-like (CI 0.85-1.30),isolated,0-1 below tip,1997,0.863,0.0,0.051,0.0023,0.001,0.7,20.1
+NGC4163,10915-ngc4163,point-like (CI 0.85-1.30),crowded,above tip,195,0.44,-0.014,0.073,0.0226,0.021,0.7,20.1
+NGC4163,10915-ngc4163,point-like (CI 0.85-1.30),crowded,0-1 below tip,2123,0.492,-0.021,0.078,0.0157,0.037,0.7,20.1
+KKH37,10915-kkh37,all sources,all,above tip,128,1.0,-0.006,0.058,0.0078,0.0,0.711,29.6
+KKH37,10915-kkh37,all sources,all,0-1 below tip,868,0.978,-0.019,0.065,0.0353,0.022,0.711,29.6
+KKH37,10915-kkh37,all sources,isolated,above tip,111,1.0,-0.004,0.059,0.009,0.0,0.711,29.6
+KKH37,10915-kkh37,all sources,isolated,0-1 below tip,577,0.995,-0.009,0.055,0.0157,0.005,0.711,29.6
+KKH37,10915-kkh37,all sources,crowded,0-1 below tip,291,0.943,-0.051,0.094,0.0767,0.055,0.711,29.6
+KKH37,10915-kkh37,point-like (CI 0.85-1.30),all,above tip,126,0.808,-0.002,0.049,0.0,0.008,0.717,15.9
+KKH37,10915-kkh37,point-like (CI 0.85-1.30),all,0-1 below tip,851,0.749,-0.014,0.055,0.0078,0.013,0.717,15.9
+KKH37,10915-kkh37,point-like (CI 0.85-1.30),isolated,above tip,109,0.833,0.001,0.049,0.0,0.0,0.717,15.9
+KKH37,10915-kkh37,point-like (CI 0.85-1.30),isolated,0-1 below tip,560,0.862,-0.009,0.047,0.0065,0.002,0.717,15.9
+KKH37,10915-kkh37,point-like (CI 0.85-1.30),crowded,0-1 below tip,291,0.529,-0.034,0.068,0.0125,0.034,0.717,15.9
+IC2574,9755-ic2574-sgs,all sources,all,above tip,5695,0.989,-0.007,0.044,0.0169,0.007,0.692,34.2
+IC2574,9755-ic2574-sgs,all sources,all,0-1 below tip,15504,0.941,-0.036,0.096,0.0651,0.042,0.692,34.2
+IC2574,9755-ic2574-sgs,all sources,isolated,above tip,4509,0.994,-0.003,0.041,0.0114,0.002,0.692,34.2
+IC2574,9755-ic2574-sgs,all sources,isolated,0-1 below tip,6714,0.978,-0.013,0.078,0.0271,0.011,0.692,34.2
+IC2574,9755-ic2574-sgs,all sources,crowded,above tip,1163,0.968,-0.022,0.057,0.0392,0.026,0.692,34.2
+IC2574,9755-ic2574-sgs,all sources,crowded,0-1 below tip,8790,0.913,-0.058,0.11,0.0958,0.066,0.692,34.2
+IC2574,9755-ic2574-sgs,point-like (CI 0.85-1.30),all,above tip,5676,0.829,-0.005,0.039,0.0042,0.005,0.695,20.1
+IC2574,9755-ic2574-sgs,point-like (CI 0.85-1.30),all,0-1 below tip,15446,0.666,-0.019,0.074,0.0104,0.02,0.695,20.1
+IC2574,9755-ic2574-sgs,point-like (CI 0.85-1.30),isolated,above tip,4490,0.866,-0.002,0.036,0.0036,0.002,0.695,20.1
+IC2574,9755-ic2574-sgs,point-like (CI 0.85-1.30),isolated,0-1 below tip,6673,0.776,-0.006,0.065,0.0067,0.003,0.695,20.1
+IC2574,9755-ic2574-sgs,point-like (CI 0.85-1.30),crowded,above tip,1163,0.691,-0.015,0.047,0.0075,0.015,0.695,20.1
+IC2574,9755-ic2574-sgs,point-like (CI 0.85-1.30),crowded,0-1 below tip,8773,0.582,-0.032,0.08,0.0138,0.033,0.695,20.1

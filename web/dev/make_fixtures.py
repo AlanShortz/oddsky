@@ -130,7 +130,7 @@ def build_case(real: dict) -> dict:
     p_res = window(V, mjd("2026-01-01"), mjd("2026-06-30"))
     obs = st.median(p_res) - medV25
     c["predictions"] = [
-        {"id": "P1", "hypothesis": "H1", "author": "the advisor (sample)", "registered_at": "2025-06-01T12:00:00+00:00", "resolve_by": "2026-07-31",
+        {"id": "P1", "hypothesis": "H1", "author": "A. Astronomer (sample)", "registered_at": "2025-06-01T12:00:00+00:00", "resolve_by": "2026-07-31",
          "statement": "The debris has cleared: in early 2026 the star will be no more than 0.1 mag fainter than in 2025.",
          "probability": 0.75,
          "check": {"series": "AAVSO:V", "start": mjd("2026-01-01"), "end": mjd("2026-06-30"), "statistic": "median", "baseline": list(y25), "op": "<", "value": 0.1},

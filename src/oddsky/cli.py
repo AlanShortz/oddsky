@@ -210,6 +210,41 @@ def check_cmd(case: str):
             typer.echo(f"{p.id} [{r['outcome']}] p={p.probability:.2f} {p.statement}  ({r['note']})")
 
 
+@app.command("twice-seen")
+def twice_seen(truth: Annotated[Path, typer.Argument(help="The deeper or sharper catalogue (csv or parquet).")],
+               test: Annotated[Path, typer.Argument(help="The catalogue to be graded (csv or parquet).")],
+               ra: Annotated[str, typer.Option(help="Right ascension column, degrees (both files).")] = "ra",
+               dec: Annotated[str, typer.Option(help="Declination column, degrees (both files).")] = "dec",
+               truth_mag: Annotated[str, typer.Option(help="Magnitude column of the truth catalogue.")] = "mag",
+               test_mag: Annotated[str, typer.Option(help="Magnitude column of the test catalogue (same band).")] = "mag",
+               radius: Annotated[float, typer.Option(help="Match radius in arcsec, after the catalogues are tied.")] = 0.07,
+               footprint: Annotated[str, typer.Option(help="'hull' for single pointings, 'cells' for a stitched test catalogue.")] = "hull",
+               out: Annotated[Path | None, typer.Option(help="Write the full table here as csv.")] = None) -> None:
+    """Grade one star catalogue against a deeper one of the same sky: completeness, offset, scatter and gross errors by
+    magnitude and crowding. The part of an artificial-star test the sky has already run."""
+    import pandas as pd
+
+    from .analysis import twiceseen
+
+    def load(path: Path, mag: str):
+        df = pd.read_parquet(path) if path.suffix == ".parquet" else pd.read_csv(path)
+        return df.rename(columns={ra: "ra", dec: "dec", mag: "mag"})[["ra", "dec", "mag"]].dropna().reset_index(drop=True)
+
+    q = twiceseen.quality(load(truth, truth_mag), load(test, test_mag), radius=radius, footprint=footprint)
+    t = q["table"]
+    typer.echo(f"{q['n_truth_common']} truth stars in the common sky, {q['n_matched']} found; tie {q['tie_rms_arcsec'] * 1000:.0f} mas rms; "
+               f"zero point {q['zero_point']:+.3f} mag removed; truth trusted to {q['horizon']:.2f}")
+    typer.echo(f"{'mag':>7} {'n':>6} {'found':>7} {'offset':>7} {'scatter':>7} {'gross':>6}   (rows marked * are beyond what the truth catalogue can judge)")
+    for r in t[t.crowding == "all"].itertuples():
+        typer.echo(f"{r.mag:7.2f} {r.n:6d} {r.completeness:7.3f} {r.offset:7.3f} {r.scatter:7.3f} {r.gross:6.3f} {'' if r.valid else '*'}")
+    for cls in ("all", "isolated", "crowded"):
+        lim = twiceseen.limit(t, 0.5, cls)
+        if lim["mag"] is not None:
+            typer.echo(f"half of the {cls} stars are recovered at {lim['mag']:.2f}" + ("" if lim["valid"] else " (beyond the truth catalogue's horizon: a lower bound on depth, not a measurement)"))
+    if out:
+        t.to_csv(out, index=False)
+
+
 @app.command("paper-check")
 def paper_check_cmd(claims: Path, final: bool = False):
     """Recompute every number in a document from the data (the claims file next to it declares how) and fail on

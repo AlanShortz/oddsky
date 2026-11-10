@@ -15,7 +15,7 @@ Tag = Literal["observed", "computed", "inferred", "speculated"]
 Ladder = Literal["observation", "anomaly", "reproduced", "interpreted", "validated", "artifact", "closed"]
 HypStatus = Literal["live", "favored", "disfavored", "rejected"]
 
-# The Strange Stars taxonomy (v0, for the advisor to revise; see docs/OPEN_QUESTIONS.md).
+# The Strange Stars taxonomy (v0, for an astronomer to revise; see docs/OPEN_QUESTIONS.md).
 CLASSES = {
     "dust_occultation": "Circumstellar dust passes in front of the star (debris, disk warp, clump).",
     "dust_formation": "The star makes its own dust (R CrB-like declines, AGB/post-AGB episodes).",

@@ -1,0 +1,10 @@
+name,box,n,hcv_var,big,both,f_big_given_var,f_var_given_big,med_numlc
+IC0010,agb,736,39,19,0,0.0,0.0,5.0
+IC0010,agb_bright,109,7,4,1,0.143,0.25,5.0
+IC0010,rgb,1204,73,10,3,0.041,0.3,5.0
+LeoA,agb,24,5,1,1,0.2,1.0,10.0
+LeoA,agb_bright,5,0,0,0,0.0,0.0,10.0
+LeoA,rgb,54,2,0,0,0.0,0.0,10.0
+Sag dIr,agb,55,3,1,1,0.333,1.0,5.0
+Sag dIr,agb_bright,30,2,0,0,0.0,0.0,5.0
+Sag dIr,rgb,66,1,0,0,0.0,0.0,5.0
