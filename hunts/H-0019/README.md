@@ -5,11 +5,20 @@ catalogues are "tragically underused", and that most AGB stars in other galaxies
 that's not enough to say much about them". This hunt takes the second sentence as a question about populations instead of
 stars, and uses the first as the data.
 
-**Correction pending (2026-11-10).** The Hubble Source Catalog client used for everything below lost rows whenever a
-query ran past one page of 50,000 (the service's paging has no stable order): about a fifth of the catalogue in the
-larger galaxies, at random. It was found by `hunts/H-0020` and is fixed in `oddsky.data.hsc`. Every catalogue is being
-fetched again and the numbers on this page will be recomputed; until this notice is replaced, treat the sample sizes as
-too small and the statistics as provisional.
+**Correction (2026-11-10).** The Hubble Source Catalog client used for this hunt lost rows whenever a query ran past
+one page of 50,000 (the service's paging has no stable order): about a fifth of the catalogue in the larger galaxies, at
+random. It was found by `hunts/H-0020` and is fixed in `oddsky.data.hsc`. Every catalogue except M31's was fetched again
+and the registered measurement and tests re-run (`work/galaxies.csv`, `work/tests.json`, `work/refetch_comparison.csv`):
+
+- 21,494 stars in 14 galaxies (NGC 3077 now qualifies) in place of 15,145 in 13. Pooled E₀.₃ = 0.0341 ± 0.0017 (20.7σ);
+  it was 0.0343 ± 0.0020. No galaxy moved by more than its error.
+- T1, T2 and T4 pass as before. T3 now passes (0.0012 ± 0.0007). T5 still fails (0.0338 ± 0.0019 against 0.0338 ± 0.0035).
+- Five clean fields: 0.0466 ± 0.0025 (was 0.0437 ± 0.0028). M33's Miras: 76 of 107 change by more than 0.3 mag (was 65 of 91).
+- Large single-star changes: 399 (was 282); the Librarian has only seen the first 282.
+
+The text below has **not** been rewritten: its numbers are from the first, incomplete fetch, and the referees' numbers
+likewise. Conclusions are unchanged. M31 (section 6) was not re-fetched: the disk was nearly full, and its numbers are
+from the incomplete download.
 
 **Status.** A measurement and a tool, not a discovery. Preregistered (`PREREGISTRATION.md`, committed as `3cc2f73` before any
 long-lag pair above the tip was computed). An independent referee (`reviews/claude-referee-2026-11-09.md`) reproduced the

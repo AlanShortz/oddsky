@@ -28,7 +28,14 @@ B = [("NGC0300", ["10915-ngc0300-wide%d_f606w-f814w" % i for i in (1, 2, 3)]), (
 
 
 def angst(tag):
-    d = pd.read_parquet(RUN / f"angst/{tag}.parquet")
+    f = RUN / f"angst/{tag}_full.parquet"           # H-0019 cached these catalogues cut at F814W < 27; here the full depth is needed
+    if not f.exists():
+        import io, httpx
+        from astropy.io import fits
+        r = httpx.get(f"https://archive.stsci.edu/hlsps/angst/acs/hlsp_angst_hst_acs-wfc_{tag}_v1_gst.fits", timeout=900, follow_redirects=True); r.raise_for_status()
+        t = fits.open(io.BytesIO(r.content))[1].data
+        pd.DataFrame({k.lower(): np.asarray(t[k]).astype("f8") for k in ("RA", "DEC", "MAG1_ACS", "MAG2_ACS", "MAG2_ERR", "CROWD2", "SHARP2", "SNR2")}).to_parquet(f)
+    d = pd.read_parquet(f)
     return d.rename(columns={"mag2_acs": "mag"})[["ra", "dec", "mag", "snr2", "crowd2"]]
 
 

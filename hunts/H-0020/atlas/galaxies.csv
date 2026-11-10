@@ -1,0 +1,43 @@
+galaxy,dist_mpc,tip_ab_aper,tip_predicted,tip_source,tip_soft,colour_band,n_stars,n_above_tip,n_with_long_pair,quality_from
+MESSIER032,0.49,20.19,20.19,predicted,False,A_F555W,76,25,76,pooled over five galaxies
+NGC6822,0.5,20.63,20.56,edge,False,A_F475W,125,45,105,pooled over five galaxies
+NGC0185,0.61,20.89,20.89,predicted,False,A_F606W,49,9,0,pooled over five galaxies
+And II,0.65,20.81,20.81,predicted,False,A_F475W,32,6,0,pooled over five galaxies
+And XXVIII,0.65,20.85,20.85,predicted,False,A_F475W,20,9,0,pooled over five galaxies
+IC0010,0.66,22.74,22.26,edge,True,A_F606W,3345,1422,3087,pooled over five galaxies
+IC1613,0.73,20.99,20.99,predicted,False,A_F475W,107,36,0,pooled over five galaxies
+And I,0.73,21.04,21.04,predicted,False,A_F475W,47,15,0,pooled over five galaxies
+And III,0.75,21.05,21.05,predicted,False,A_F475W,21,4,0,pooled over five galaxies
+Pegasus,0.76,21.15,21.15,predicted,False,A_F475W,183,54,0,pooled over five galaxies
+And XV,0.76,21.12,21.12,predicted,False,A_F475W,17,9,0,pooled over five galaxies
+Cetus,0.78,21.14,21.14,predicted,False,A_F475W,26,3,22,pooled over five galaxies
+LeoA,0.81,21.21,21.21,predicted,False,A_F475W,109,41,84,pooled over five galaxies
+MESSIER033,0.85,21.58,21.35,edge,True,A_F606W,17511,6496,11872,pooled over five galaxies
+Tucana,0.88,21.41,21.41,predicted,False,A_F475W,34,8,20,pooled over five galaxies
+DDO210,0.94,21.59,21.59,predicted,False,A_F475W,58,25,0,pooled over five galaxies
+WLM,0.97,21.63,21.63,predicted,False,A_F475W,274,93,0,pooled over five galaxies
+Sag dIr,1.04,21.93,21.93,predicted,False,A_F606W,249,152,236,pooled over five galaxies
+ESO294-010,1.92,23.05,23.05,predicted,False,A_F606W,223,42,0,pooled over five galaxies
+ESO410-005,1.92,23.05,23.07,edge,False,A_F606W,315,83,0,pooled over five galaxies
+LeoP,2.0,23.18,23.18,predicted,False,A_F475W,20,10,0,pooled over five galaxies
+NGC0300,2.15,23.19,23.32,edge,False,A_F606W,14547,5571,13842,this galaxy
+DDO190,2.74,23.91,23.84,edge,False,A_F606W,87,30,87,pooled over five galaxies
+NGC4163,2.94,23.98,24.01,edge,False,A_F606W,1247,358,1247,this galaxy
+NGC2403,3.18,24.19,24.22,edge,False,A_F606W,6422,4387,6362,pooled over five galaxies
+NGC2366,3.19,24.24,24.22,edge,False,A_F555W,1098,603,0,pooled over five galaxies
+HolmII,3.39,24.31,24.34,edge,False,A_F555W,4602,2292,4365,pooled over five galaxies
+KKH37,3.39,24.39,24.42,edge,False,A_F606W,368,90,368,this galaxy
+ESO540-032,3.42,24.46,24.34,edge,False,A_F606W,445,74,0,pooled over five galaxies
+NGC2976,3.56,24.54,24.51,edge,False,A_F606W,332,94,0,pooled over five galaxies
+HolmIX,3.61,24.56,24.56,predicted,False,A_F555W,49,36,49,pooled over five galaxies
+NGC0247,3.65,24.5,24.48,edge,False,A_F606W,1160,555,0,pooled over five galaxies
+NGC5128,3.75,24.34,24.71,edge,True,A_F606W,2744,763,0,pooled over five galaxies
+GARLAND,3.82,24.69,24.66,edge,False,A_F606W,761,199,761,this galaxy
+NGC3077,3.82,24.64,24.66,edge,False,A_F606W,711,179,711,pooled over five galaxies
+NGC7793,3.91,24.5,24.62,edge,False,A_F555W,445,273,445,pooled over five galaxies
+NGC0253,3.94,24.52,24.64,edge,False,A_F606W,1142,677,0,pooled over five galaxies
+IC2574,4.02,24.64,24.72,edge,False,A_F555W,567,330,567,this galaxy
+NGC1313,4.07,24.85,24.88,edge,False,A_F555W,8795,6991,8795,pooled over five galaxies
+Sc22,4.21,24.78,24.78,predicted,False,A_F606W,250,59,0,pooled over five galaxies
+NGC4449,4.21,24.81,24.79,edge,False,A_F555W,6291,4450,0,pooled over five galaxies
+NGC4244,4.49,24.9,24.93,edge,False,A_F606W,2082,1213,2082,pooled over five galaxies
