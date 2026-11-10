@@ -10,7 +10,8 @@ long-lag pair above the tip was computed). An independent referee (`reviews/clau
 pooled measurement exactly, found the first M33 test invalid (a 0.48" offset between catalogues; fixed below), and showed
 that the comparisons between galaxies and with the Magellanic Clouds do not yet support any statement about galaxies. This
 page is the version after that report and after the experiment it asked for (the reference rebuilt from real OGLE light
-curves, 2026-11-09, section 3), which has not itself been refereed. Nothing here has been sent anywhere.
+curves, section 3), which a second referee pass reproduced (`reviews/claude-referee-note-2026-11-09.md`) while showing
+that "the pooled value matches the LMC" was not a like-for-like comparison. Nothing here has been sent anywhere.
 
 ## Abstract
 
@@ -18,9 +19,10 @@ Stars Hubble visited only a few times are left out of the Hubble Catalog of Vari
 galaxies within 4.5 Mpc I take the red stars with a measured colour, 0 to 1 mag above the red-giant tip, that have two
 clean ACS/WFC F814W visits at least 100 days apart in the Hubble Source Catalog (15,145 stars; 72% have exactly two clean
 visits), and count how many changed by more than 0.3 mag, minus the same count for stars just below the tip in the same
-images. The excess is 3.4 ± 0.2% (17.5σ). Published Miras in M33, never shown to the pipeline, are recovered: 65 of 91
+images. The excess is 3.4 ± 0.2% (17.5σ). Published Miras in M33, not used in building the pipeline, are recovered: 65 of 91
 change by more than 0.3 mag, against 2.9% of other stars of the same brightness. The same statistic computed from real
-OGLE-III light curves of the LMC is 3.6 ± 0.2%, and of the SMC 2.4%: the Hubble galaxies pooled look like the LMC. (My
+OGLE-III light curves of the LMC is 3.7 ± 0.1%, and of the SMC 2.4 ± 0.2%: the Hubble values are in the range the LMC
+gives and above the SMC, though not equal to it once the noise is matched (pooled: 2.0σ below; clean fields: 2.3σ above). (My
 first reference, sums of sinusoids, gave 2.7% and 1.4% and was too low; an apparent excess in M33 and NGC 300 came from
 it.) The preregistered prediction that luminous galaxies would score higher than faint ones failed (3.41 ± 0.22% against
 3.38 ± 0.40%). Its premise, the SMC scoring below the LMC, is mostly where a fixed colour cut falls on a bluer giant
@@ -129,14 +131,17 @@ and the referee's report):
 - Galaxies are not all alike: χ² = 55.9 for 12 degrees of freedom. The five fields with control scatter under 0.05 mag (a
   cut chosen after the data: M33 at 0.048 is in, KKH 37 at 0.052 is out) are consistent with one value (χ² = 7.5 for 4;
   mean 0.043).
-- **The reference from real light curves** (`13_ogle_real.py`, `14_reference_real.py`, run after the referee, not yet
-  refereed). Pairs of actual OGLE-III I-band observations 150 to 2,500 days apart, for all 22,564 LMC and 9,092 SMC
-  variables in the boxes, constants as before, noise matched to the clean Hubble fields (0.043 mag): LMC 0.0366, SMC
-  0.0244, the same at every lag to 0.002. The sinusoid version gave 0.0272 and 0.0138. With V−I > 1.6 the LMC gives 0.042.
-- Against that reference (error 0.002 from the referee's bootstrap): all galaxies pooled, 0.0343 ± 0.0020, is 0.8σ below
-  the LMC. M33 (4.4 ± 0.5%) is 1.3σ above and NGC 300 (4.9 ± 0.4%) 2.6σ above; NGC 300's excess is in its centre (7.4 ±
-  0.9% inside 1.37', 4.0 ± 0.4% outside, referee D3). The five clean fields average 0.043 ± 0.003, between the LMC's
-  value for all red stars and for its redder ones.
+- **The reference from real light curves** (`13_ogle_real.py`, `14_reference_real.py`, run after the first referee report
+  and reproduced by the second). Pairs of actual OGLE-III I-band observations 150 to 2,500 days apart, for all 22,564 LMC
+  and 9,092 SMC variables in the boxes, constants as before. With 0.043 mag of noise, which matches the five clean Hubble
+  fields: LMC 0.0366 ± 0.0013, SMC 0.0244 ± 0.0015 (star-level bootstrap, referee), steady with lag to 0.002 (LMC) and
+  0.003 (SMC). The sinusoid version gave 0.0272 and 0.0138. OGLE-III spans 2,780 days, short of M33's median lag of 4,592.
+- Like for like: the five clean fields give 0.0437 ± 0.0028, 2.3σ above the LMC at their noise. All 13 pooled give
+  0.0343 ± 0.0020; at those galaxies' own, larger noise the LMC gives 0.039, so the pool is 2.0σ below (crowding). M33
+  (4.4 ± 0.5%) is 1.4σ above the LMC and NGC 300 (4.9 ± 0.4%) 2.8σ above; NGC 300's excess is in its centre (7.4 ± 0.9%
+  inside 1.37', 4.0 ± 0.4% outside, referee D3).
+- The reference moves with its own choices: tip ±0.1 mag gives 0.034, ±0.2 gives 0.026 to 0.029; noise from 0.03 to 0.09
+  gives 0.036 to 0.045; boxing on the first visit alone gives 0.033; V−I > 1.6 gives 0.042.
 - With lag: inside NGC 300 the excess is 0.049, 0.050, 0.053 from 400 to 6,000 days, and 0.108 ± 0.024 in one image pair
   at 10 to 100 days. Pooled over galaxies it rises from 0.017 (100 to 300 d) to 0.048 (1,000 to 2,000 d), but different
   galaxies fill different bins.
@@ -153,7 +158,7 @@ and the referee's report):
 ## 4. Analysis: why none of this is yet about galaxies
 
 - **The SMC's lower value is mostly colour mix.** From real light curves the raw fraction above the tip changing by
-  more than 0.3 mag is 4.4% (LMC) and 3.0% (SMC) for V−I > 1.2, and 5.1% in both for V−I > 1.6. Stars with V−I between
+  more than 0.3 mag is 4.5% (LMC) and 3.1% (SMC) for V−I > 1.2, and 5.2% in both for V−I > 1.6. Stars with V−I between
   1.2 and 1.6 rarely vary that much; they are 13% of the LMC box and 40% of the SMC box. The T5 prediction was built on
   this.
 - **The first reference was wrong by a third.** Sinusoids of the catalogued amplitudes understate real stars: 0.027
@@ -177,15 +182,15 @@ two-visit mean. The referee put about 80% on the differences between galaxies an
 ## 5. Conclusions
 
 1. Two archival Hubble visits detect the variability of a galaxy's AGB population, at 17.5σ pooled, and recover published
-   Miras blind. In clean fields no star above the tip changes by 0.3 mag in under 10 days, so the changes are not
+   Miras. In clean fields no star above the tip changes by 0.3 mag in under 10 days, so the changes are not
    photometric noise.
 2. Among red stars up to 1 mag above the tip, 2 to 5% change by more than 0.3 mag between two visits, after subtracting
-   the stars just below it. Pooled, the 13 galaxies give 3.4 ± 0.2%; the LMC, measured the same way from OGLE light
-   curves, gives 3.6 ± 0.2%.
+   the stars just below it. Pooled, the 13 galaxies give 3.4 ± 0.2% and the five clean fields 4.4 ± 0.3%; the LMC,
+   measured as nearly the same way as OGLE allows, gives 3.7 ± 0.1% and the SMC 2.4 ± 0.2%.
 3. The preregistered trend with luminosity is not seen. The SMC-to-LMC difference that motivated it is mostly a
    colour-cut effect. Nothing here confirms or contradicts Goldman et al. 2019.
 4. The apparent excess of M33 and NGC 300 over the LMC came from a reference that was too low. With the real one, M33 is
-   consistent and NGC 300 is 2.6σ high, driven by its central field.
+   consistent (1.4σ) and NGC 300 is 2.8σ high, driven by its central field.
 
 **The next decisive experiment.** The one the referee asked for is done (section 3) and removed the anomaly. What would
 now turn this into a measurement of how pulsation depends on the galaxy: box the Clouds and each Hubble field by the same
