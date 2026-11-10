@@ -13,7 +13,9 @@ plt.rcParams.update({"font.size": 10, "axes.spines.top": False, "axes.spines.rig
                      "axes.labelcolor": INK, "xtick.color": INK, "ytick.color": INK, "figure.facecolor": "#fcfcfb", "axes.facecolor": "#fcfcfb",
                      "savefig.dpi": 170, "savefig.bbox": "tight"})
 gal = pd.read_csv(HERE / "work/galaxies.csv"); tests = json.loads((HERE / "work/tests.json").read_text())
-ref = tests["reference"]["E03"]
+rr = pd.read_csv(HERE / "work/reference_real.csv"); rr = rr[(rr.noise == 0.043) & (rr.vi_min == 1.2)].groupby("cloud").E03.mean()
+ref = {"lmc": float(rr["lmc"]), "smc": float(rr["smc"])}   # from real OGLE light curves (14_reference_real.py)
+RUN = pathlib.Path.home() / "oddsky-runs/h0019"
 
 # Figure 1: one number per galaxy
 g = gal.sort_values("E03").reset_index(drop=True)
@@ -22,7 +24,7 @@ y = np.arange(len(g))
 clean = g.sd_long_rgb < 0.05
 ax.axvspan(tests["T1"]["E03"] - tests["T1"]["se"], tests["T1"]["E03"] + tests["T1"]["se"], color=COBALT, alpha=0.10, lw=0)
 for name, v in (("LMC", ref["lmc"]), ("SMC", ref["smc"])):
-    ax.axvline(v, color=ORANGE, lw=1.2); ax.text(v + 0.0008, -0.75, name + " (OGLE)", color=INK, ha="left", va="center", fontsize=8.5)
+    ax.axvline(v, color=ORANGE, lw=1.2); ax.text(v + (0.0008 if name == "LMC" else -0.0008), -0.75, name + (" (from OGLE light curves)" if name == "LMC" else ""), color=INK, ha="left" if name == "LMC" else "right", va="center", fontsize=8.5)
 ax.axvline(0, color="#9aa0a6", lw=0.8)
 ax.errorbar(g.E03[clean], y[clean], xerr=g.eE03[clean], fmt="o", color=COBALT, ms=6, lw=1.5, label="clean fields (control scatter < 0.05 mag)")
 ax.errorbar(g.E03[~clean], y[~clean], xerr=g.eE03[~clean], fmt="o", mfc="#fcfcfb", color=COBALT, ms=6, lw=1.5, label="crowded or noisy fields")
@@ -45,15 +47,21 @@ ax.plot(xs, tail(L[L.box == "agb"].d), color=COBALT, lw=2); ax.plot(xs, tail(L[L
 ax.plot(xs, tail(S[S.box == "agb"].d), color=GREY, lw=1.2, ls=":")
 import sys; sys.path.insert(0, str(HERE.parents[1] / "src"))
 from oddsky.analysis import twopoint
+rng = np.random.default_rng(2)
 for cloud, tip, ls in (("lmc", 14.60, "-"), ("smc", 15.00, "--")):
-    pop = pd.read_csv(HERE / f"work/{cloud}_population.csv")
-    mean, d = twopoint.simulate_two_visits(pop.I.values, pop[["P1", "P2", "P3"]].values, pop[["A1", "A2", "A3"]].values, 1000.0, seed=5)
-    sel = (mean - tip >= -1) & (mean - tip < 0)
-    ax.plot(xs, [(np.abs(d[sel]) > x).mean() for x in xs], color=ORANGE, lw=1.4, ls=ls)
-    ax.text(1.0, (np.abs(d[sel]) > 1.0).mean() * (1.25 if cloud == "lmc" else 0.62), f"{cloud.upper()}, above tip" + (" (dashed)" if cloud == "smc" else ""), color=ORANGE, fontsize=8.5)
+    pop = pd.read_csv(HERE / f"work/{cloud}_population.csv", dtype={"star": str})
+    pr = pd.read_parquet(RUN / f"ogle_pairs_{cloud}.parquet"); pr = pr[pr.lag == 1000]
+    const = pop[pop.star.isna()].I.values
+    m1 = np.r_[pr.m1.values, np.repeat(const, 12)]; m2 = np.r_[pr.m2.values, np.repeat(const, 12)]
+    m1 = m1 + rng.normal(0, 0.03, len(m1)); m2 = m2 + rng.normal(0, 0.03, len(m2))
+    w = np.r_[1 / pr.groupby("star").m1.transform("size").values, np.full(12 * len(const), 1 / 12)]
+    sel = ((m1 + m2) / 2 - tip >= -1) & ((m1 + m2) / 2 - tip < 0); d = np.abs(m2 - m1)[sel]; w = w[sel]
+    cur = [float((w * (d > x)).sum() / w.sum()) for x in xs]
+    ax.plot(xs, cur, color=ORANGE, lw=1.4, ls=ls)
+    ax.text(0.2 if cloud == "smc" else 0.33, cur[int(np.argmin(np.abs(xs - (0.2 if cloud == "smc" else 0.33))))] * (0.42 if cloud == "smc" else 0.50), f"{cloud.upper()} (OGLE light curves)" + (", dashed" if cloud == "smc" else ""), color=ORANGE, fontsize=8.5)
 ax.set_yscale("log"); ax.set_ylim(5e-4, 0.5); ax.set_xlim(0.1, 1.2)
 ax.text(0.62, tail(L[L.box == "agb"].d)[28] * 1.6, "Hubble, above the tip, visits > 100 d apart", color=COBALT, fontsize=9)
-ax.text(0.30, 1.5e-3, "Hubble, just below the tip, same images (grey)", color=INK, fontsize=9)
+ax.text(0.45, 3.2e-3, "Hubble, just below the tip, same images (grey)", color=INK, fontsize=9)
 ax.text(0.12, 7e-4, "above the tip, visits < 10 d apart (dotted)", color=INK, fontsize=8.5)
 ax.set_xlabel("change between two visits exceeds x (mag)"); ax.set_ylabel("fraction of stars")
 ax.set_title(f"Clean fields pooled: {', '.join(sorted(CLEAN))}", loc="left", color=INK, fontsize=10)

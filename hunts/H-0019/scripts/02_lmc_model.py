@@ -63,14 +63,14 @@ def main():
     print("I - RP fit:", np.round(cI, 4), "scatter", round(float(np.std(res)), 3))
     gb = (g.phot_bp_mean_mag - g.phot_rp_mean_mag).values
     pop = pd.DataFrame({"I": g.phot_rp_mean_mag.values + np.polyval(cI, gb), "VI": np.polyval(cVI, gb),
-                        "P1": np.nan, "A1": 0.0, "P2": np.nan, "A2": 0.0, "P3": np.nan, "A3": 0.0, "type": "const", "spt": ""})
-    for col in ["I", "P1", "A1", "P2", "A2", "P3", "A3", "type", "spt"]:
+                        "P1": np.nan, "A1": 0.0, "P2": np.nan, "A2": 0.0, "P3": np.nan, "A3": 0.0, "type": "const", "spt": "", "star": ""})
+    for col in ["I", "P1", "A1", "P2", "A2", "P3", "A3", "type", "spt", "star"]:
         pop.loc[idx[ok], col] = og.loc[ok, col].values
     vi = (og.V - og.I).values
     pop.loc[idx[ok], "VI"] = np.where(np.isfinite(vi[ok]), vi[ok], pop.loc[idx[ok], "VI"])
     extra = og[~ok].copy()
     extra["VI"] = (extra.V - extra.I).fillna(9.9)   # no V: too red for OGLE's V
-    pop = pd.concat([pop, extra[["I", "VI", "P1", "A1", "P2", "A2", "P3", "A3", "type", "spt"]]], ignore_index=True)
+    pop = pd.concat([pop, extra[["I", "VI", "P1", "A1", "P2", "A2", "P3", "A3", "type", "spt", "star"]]], ignore_index=True)
     pop = pop[(pop.I < I_TRGB_LMC + 1.0) & (pop.VI > 1.2)].reset_index(drop=True)
     pop["rel"] = pop.I - I_TRGB_LMC
     # tip check: steepest rise of the luminosity function of all red members
