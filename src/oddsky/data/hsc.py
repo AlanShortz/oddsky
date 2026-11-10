@@ -40,6 +40,11 @@ def _pages(table: str, params: dict, max_rows: int | None = None, pause: float =
         r = request("GET", f"{API}/{table}/magaper2.csv", params={**params, "pagesize": PAGE, "page": page}, timeout=600.0,
                     retries=4)
         text = r.text
+        if not text.strip() and frames and len(frames[-1]) == PAGE:
+            # a full page followed by nothing is either the true end or a dropped reply: ask once more before believing it
+            time.sleep(3)
+            text = request("GET", f"{API}/{table}/magaper2.csv", params={**params, "pagesize": PAGE, "page": page}, timeout=600.0,
+                           retries=4).text
         if not text.strip():
             break
         df = pd.read_csv(io.StringIO(text))

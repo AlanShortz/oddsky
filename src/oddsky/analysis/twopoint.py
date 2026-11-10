@@ -20,7 +20,8 @@ LONG_DAYS, SHORT_DAYS = 100.0, 10.0
 
 def tip_edge(mag: np.ndarray, predicted: float, half_window: float = 0.5, step: float = 0.05) -> tuple[float, float]:
     """Sobel edge of a luminosity function within `half_window` of the predicted tip: (magnitude, significance).
-    Returns (nan, 0) with fewer than 200 stars."""
+    Returns (nan, 0) with fewer than 200 stars, and significance 0 when the edge falls in the first or last bin of the
+    window: the function is then still rising at the limit and no tip was located."""
     bins = np.arange(predicted - 1.5, predicted + 1.3, step)
     h, e = np.histogram(mag, bins=bins)
     if h.sum() < 200:
@@ -31,6 +32,9 @@ def tip_edge(mag: np.ndarray, predicted: float, half_window: float = 0.5, step: 
     c = (e[:-1] + e[1:]) / 2
     ok = np.abs(c - predicted) <= half_window
     i = int(np.argmax(np.where(ok, sob, -9)))
+    inside = np.where(ok)[0]
+    if i in (inside[0], inside[-1]):   # an edge in the outermost bin is the window, not a tip (H-0019: M31, M81, IC 10)
+        return float(c[i]), 0.0
     return float(c[i]), float(sob[i])
 
 

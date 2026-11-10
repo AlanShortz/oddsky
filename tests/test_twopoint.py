@@ -57,3 +57,12 @@ def test_hsc_pairs_averages_split_detections_and_orders_by_time():
     det = _detections(5)
     p = hsc.pairs(det, min_lag_days=100)
     assert len(p) == 10 and (p.lag > 100).all() and (p.mjd2 > p.mjd1).all()
+
+
+def test_tip_edge_refuses_an_edge_at_the_limit_of_its_window():
+    rng = np.random.default_rng(2)
+    # the step sits just outside the window, so the response is still climbing in the window's last bin
+    mag = np.concatenate([rng.uniform(22.0, 24.5, 500), rng.uniform(23.36, 24.5, 20000)])
+    edge, sig = twopoint.tip_edge(mag, predicted=23.0, half_window=0.3)
+    assert edge > 23.25
+    assert sig == 0.0

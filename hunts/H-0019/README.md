@@ -12,7 +12,8 @@ that the comparisons between galaxies and with the Magellanic Clouds do not yet 
 page is the version after that report and after the experiment it asked for (the reference rebuilt from real OGLE light
 curves, section 3), which a second referee pass reproduced (`reviews/claude-referee-note-2026-11-09.md`) while showing
 that "the pooled value matches the LMC" was not a like-for-like comparison. Section 6 (PSF photometry, M81,
-M31, the Librarian check) was added on 2026-11-10 and has not been refereed. Nothing here has been sent anywhere.
+M31, the Librarian check) was added on 2026-11-10 and rewritten after a third referee report, which found that M31's
+tip was misplaced and that its number cannot be compared with the other galaxies'. Nothing here has been sent anywhere.
 
 ## Abstract
 
@@ -201,11 +202,14 @@ PSF photometry (DOLPHOT catalogues exist for most of these fields) so that crowd
 **What is reusable.** `oddsky.data.hsc` (the Hubble Source Catalog, visit by visit), `oddsky.analysis.twopoint` (pairs,
 zero points, the excess statistic, the two-visit simulator; `tests/test_twopoint.py`), the Cloud reference populations, and
 a forecast method for any telescope that will visit nearby galaxies a few times, which is what Roman will do. Owed to the
-tools (referee): positional matches should fit and remove a bulk offset and report a shifted-position chance rate;
+tools (referees): `tip_edge` must refuse an edge in the outermost bin of its window (it misplaced M31's, M81's and
+probably IC 10's tip); `hsc._pages` should not stop on a page of exactly 50,000 rows; `04_measure.py` should report the
+share of stars dropped for lack of a colour; positional matches should fit and remove a bulk offset and report a
+shifted-position chance rate;
 `tip_edge` should flag an edge in the outermost bin of its window; the reference builder needs a bootstrap error and a
 colour-matched option.
 
-## 6. Follow-ups (2026-11-10; exploratory, not refereed)
+## 6. Follow-ups (2026-11-10; exploratory; this is the text after `reviews/claude-referee-section6-2026-11-10.md`)
 
 ### PSF photometry (`16_psf.py`, `work/psf.csv`)
 
@@ -215,60 +219,80 @@ matches. "Same stars" are the Hubble Source Catalog stars of sections 2 and 3, w
 
 | galaxy | stars above tip (PSF) | E₀.₃, PSF, own boxes | same stars: catalogue | same stars: PSF | large changes confirmed |
 |---|---|---|---|---|---|
-| NGC 300 (inner fields) | 5,072 | 0.064 ± 0.004 | 0.063 ± 0.008 | 0.069 ± 0.008 | 61 of 89 |
+| NGC 300 (inner fields; a third of the same stars end at a later epoch in the catalogue than ANGST reduced) | 5,072 | 0.064 ± 0.004 | 0.063 ± 0.008 | 0.069 ± 0.008 | 61 of 89 |
 | Garland | 282 | 0.102 ± 0.020 | 0.079 ± 0.025 | 0.098 ± 0.026 | 15 of 15 |
 | KKH 37 | 89 | 0.076 ± 0.029 | 0.057 ± 0.030 | 0.076 ± 0.033 | 4 of 4 |
 | NGC 4163 | 569 | 0.025 ± 0.008 | 0.025 ± 0.011 | 0.019 ± 0.010 | 7 of 9 |
 | IC 2574 | 384 | 0.046 ± 0.011 | 0.020 ± 0.014 | 0.029 ± 0.017 | 2 of 2 |
-| M81 (outer deep field) | 164 | 0.094 ± 0.027 | not in the catalogue sample | | |
 
-- PSF photometry confirms 89 of the 119 large changes (over 0.3 mag) the catalogue found above the tip in these fields.
-- It does not lower the excess. In four of five galaxies it raises it, as expected if aperture blends dilute changes.
+- Where the two measurements cover the same epochs, PSF photometry confirms 77 of 90 large changes (86%) and changes
+  the excess by 0.000 ± 0.004 (paired, same stars). In NGC 300 a third of the matched stars have a last catalogue epoch
+  in 2012 or 2014 that ANGST never reduced; they are excluded from that comparison (with them: 89 of 119). PSF
+  photometry neither lowers nor raises the excess.
 - The galaxies still differ under PSF photometry (χ² = 28.2 for 5): NGC 4163 at 2.5% against NGC 300's inner fields at
   6.4%. In these fields crowding is not what makes them differ. Age and colour mix remain (section 4), and these boxes
   use DOLPHOT's "good star" lists and Vega colour cuts moved over from the catalogue cuts, so they are not like for like
   with the LMC reference either.
-- M81's tip edge landed 0.28 mag from the prediction, at the edge of the search window; 164 stars.
+- M81: one outer field, 164 stars. Its tip was not located (the edge finder stopped in the last bin of its window), so
+  no value is quoted.
 - **Not done:** NGC 2403, NGC 1313, NGC 4244 and NGC 7793, the four most crowded discs. ANGST has only one of their two
   visits. They need DOLPHOT run on the images, which was not attempted here.
 
-### M31 (`17_m31.py`, `work/m31.json`)
+### M31 (`17_m31.py`, `work/m31.json`; numbers marked R are the referee's)
 
 The MAST observation list gives 189 fields where ACS F814W came back more than 100 days later (before the catalogue's
-2017 end). All were fetched (9.3 million detections, 489 images) and measured with the registered code, unchanged. M31
-is not added to the registered tests.
+2017 end). All were fetched (9.3 million detections, 489 images; three tiles probably truncated at 50,000 rows) and
+measured with the registered code, unchanged. M31 is not added to the registered tests.
 
-- 55,598 red stars 0 to 1 mag above the tip have a long pair: 9.6% change by more than 0.3 mag, against 2.8% just below
-  the tip. E₀.₃ = 0.068 ± 0.001. 2,658 dimmed and 2,681 brightened.
-- Short pairs: 67 of 91,747 above the tip exceed 0.3 mag (0.07%).
-- **The tip is soft.** The edge lands at 21.65, 0.47 mag fainter than the catalogue distance predicts and at the limit
-  of the search window (metal-rich giants have a fainter tip in I, so the direction is expected, but it was not checked
-  against published M31 values). Placing it anywhere from the prediction to the edge gives 0.068 to 0.094. None of those
-  is near the LMC's 0.037.
-- With lag: 0.054 at 100 to 250 days, then 0.078, 0.071, 0.072 out to 6,000 days.
-- With distance from the centre: 0.075 ± 0.002 inside 0.25°, 0.069, 0.059, and 0.058 ± 0.005 beyond 1°. Crowding would
-  push the inner fields down, not up.
-- By colour: the bluest third of the red stars 0.023, the middle 0.035, the reddest 0.105.
-- Field to field it scatters more than binomial: 112 image pairs, χ² = 164.9, from 0.007 to 0.159.
+- **The registered code misplaces M31's tip.** The edge finder returns 21.65, at the limit of its window. The published
+  tip (I about 20.54, from memory, to be checked) is 21.2 in this system, the prediction was 21.18, and the fraction of
+  stars changing by more than 0.3 mag drops at 21.15 to 21.2 (R). 83% of the registered box is below the true tip. The
+  registered number, 0.068 ± 0.002 from 55,598 stars, is therefore not comparable with any other galaxy's.
+- With the tip at 21.18, 16% of red stars above it change by more than 0.3 mag (LMC: 4.5%) and 7.7% just below it
+  (LMC: 0.9%). The control is contaminated, so E (0.085) is not a clean statistic here. E runs from −0.07 to +0.094 for
+  tips from 20.6 to 22.0 (R).
+- **M31 has no single value** (R, tip at 21.18):
 
-**What the follow-ups add up to (my reading, exploratory, not refereed).** Where the photometry is clean or PSF-based,
-the values now line up: SMC 0.024, NGC 4163 0.025, LMC 0.037, M33 0.044, IC 2574 0.046, NGC 300 0.049 to 0.064, M31 0.068,
-with Garland, KKH 37 and M81's one field higher and uncertain. That is the direction the failed registered test
-predicted, and inside M31 the value falls outward as metallicity does. It is not yet evidence for a metallicity effect:
-the statistic follows giant-branch colour, redder giants are both more metal-rich and (in star-forming discs) mixed with
-different ages, the tips of M31, M81 and IC 10 are soft, the ordering was noticed after the fact, and Garland and KKH 37
-do not fit it. A fair test needs measured metallicities and boxes drawn at matched intrinsic colour.
+  | distance from centre | 0–0.25° | 0.25–0.6° | 0.6–1.0° | 1.0–2.0° |
+  |---|---|---|---|---|
+  | fraction above tip changing > 0.3 mag, all red stars | 23% | 16% | 10% | 9% |
+  | same, stars of ordinary giant colour (1.9 to 2.8) | 17% | 10% | 3.6% | 3.7% |
+
+  The inner galaxy (bulge) is three to five times the LMC. The outer disc at ordinary colours is at the LMC's level.
+- The variability itself looks real: 67 of 91,747 stars above the registered tip exceed 0.3 mag at short lag (0.07%);
+  2,658 dimmed and 2,681 brightened; no dependence on chip position or programme (R). One caveat: short pairs share a
+  roll angle and long pairs mostly do not.
+- With lag: 0.054 at 100 to 250 days, then 0.078, 0.071, 0.072 out to 6,000 days (registered boxes). The step is 6.8σ
+  with errors from image pairs and present at every radius; the LMC reference is flat with lag (R).
+- 11.6% of stars above the registered tip have no F475W, are dropped, and change more often than the stars kept (R).
+- Field to field it scatters more than binomial: 112 image pairs, χ² = 164.9.
+
+**What the follow-ups add up to (after the referee).** Seven of the values, taken from four different measurements,
+can be put in an order that resembles metallicity (Spearman ρ = 0.82, n = 7, p = 0.02, chosen after the fact); adding
+the three values I had set aside gives ρ = 0.16 (R; metallicities from memory, to be checked). M31's value is not
+comparable (its tip), IC 2574's is 0.027, 0.029 or 0.046 depending on the measurement, and inside M31 the statistic
+changes by a factor of several between bulge and outer disc. This is not evidence for a metallicity effect. What M31
+does show is that the inner, old, metal-rich population varies far more by this measure than the LMC, and that could be
+age, or the I-band amplitudes of late-M oxygen-rich stars (TiO) against the LMC's carbon stars, as easily as
+metallicity acting on pulsation. The referee puts about 65% on the M31 excess over the LMC being astrophysical and no
+more than 20 to 25% on it being a metallicity effect on pulsation.
+
+**Decisive next steps (the referee's).** Redo M31 with the tip fixed at the published value as a function of colour,
+and report the raw fraction above the tip by radius and colour instead of E. Build one LMC reference in an equivalent
+colour, split into oxygen-rich and carbon stars (OGLE's flag is already in `work/lmc_population.csv`). Compare M32 and
+the M31 bulge with OGLE's Galactic-bulge variables, an old metal-rich reference.
 
 ### The 282 single-star candidates (`15_librarian.py`, `work/candidates_librarian.csv`)
 
 The Librarian at 1" on each: 173 unlisted, 75 catalogued, 30 mentioned, 4 studied. For 115 (70 in NGC 300) VSX could
 not be reached on two passes, so those verdicts rest on SIMBAD, NED, ADS and the shelves.
 
-- Known variables re-found: 31 of M33's 87 (30 in published Mira lists, 28 of them matched to Yuan et al. 2017
-  directly), and the one Sagittarius dIrr candidate (a long-period variable of the INT monitoring survey).
-- Contaminants: one catalogued Cepheid in M33 and one in NGC 300 sit in the box above the tip.
+- Known variables re-found: in M33, 28 Miras of Yuan et al. 2017 and 2 DIRECT variables of unstated type, plus a
+  catalogued Cepheid; and the one Sagittarius dIrr candidate (a long-period variable of the INT monitoring survey).
+- Contaminants: that M33 Cepheid and one in NGC 300 sit in the box above the tip.
 - The NGC 2403 "studied" is the Librarian matching the galaxy, not the star.
-- For the other 245 or so, no variability literature was found. That is a search result. At I of 22 to 24 the general
+- For the other 249, no variability literature was found, and 112 of those were never checked against a variable-star
+  index (70 of NGC 300's 83). That is a search result. At I of 22 to 24 the general
   catalogues would not hold them, and none should be called new without the galaxy-specific variable lists being read.
 
 ## What the advisor said, and what was done with it
