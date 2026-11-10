@@ -1,4 +1,4 @@
-# For the advisor: decisions only an astronomer should make
+# Open questions: decisions only an astronomer should make
 
 Everything scientific in Oddsky v0.1 is a default chosen by a non-astronomer and an AI, written
 down so you can overrule it quickly. In rough priority order:
@@ -22,8 +22,6 @@ down so you can overrule it quickly. In rough priority order:
    a professional review committed to the case. Should a single astronomer's review be enough?
 6. **Trial design.** Hindsight cut dates, whether Gaia context should be shown in blind mode (it
    narrows the field a lot), and which famous stars are too recognisable to count.
-7. **STScI.** Whether and how your name and affiliation appear, and any clearance needed before
-   this is public. Nothing goes public until you say so.
 
 ## What Trial 001 taught us (decisions for you)
 

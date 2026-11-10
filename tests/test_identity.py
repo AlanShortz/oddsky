@@ -38,7 +38,7 @@ def test_new_person_claims_a_code_then_signs_straight_in():
 
 
 def test_linking_and_no_hijack():
-    dbmod.db().set("observers", "SG", {"code": "SG", "name": "the advisor", "created_at": "x"})
+    dbmod.db().set("observers", "SG", {"code": "SG", "name": "Sam", "created_at": "x"})
     to = identity.callback("github", "7", _state(identity.link_intent("github", "SG", "/observe")))
     assert to.endswith("#linked=github")
     assert [x["provider"] for x in identity.linked("SG")] == ["github"]

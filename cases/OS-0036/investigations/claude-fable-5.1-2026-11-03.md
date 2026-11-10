@@ -1,6 +1,6 @@
 # HM Sge, fifty years on: the fade that Goldman et al. (2022) caught starting
 
-Investigator: Claude Fable 5.1 through the Oddsky tools, 2026-11-03. Asked by the advisor via Alan: "anything interesting on
+Investigator: Claude Fable 5.1 through the Oddsky tools, 2026-11-03. Asked by an astronomer advising the project, via Alan: "anything interesting on
 HM Sagittae?" Case opened by coordinates (SIMBAD at CDS was down); data: AAVSO (B, V, R, I, visual, 1977-2026), Gaia DR3 epoch
 photometry (2014-17), ZTF g (saturated in r), NEOWISE (saturated, useless), AllWISE (saturated); ATLAS and TESS were still
 queued when this was written. Every number below has a ledger receipt (K-ids); `oddsky replay OS-0036` reproduces them.
@@ -67,7 +67,7 @@ band also carries the nebula's Hα.
 - P3 (0.6): the I-band maximum near 2027 Jun 19 makes the 2027 May-Aug I median > 0.3 mag brighter than 2026 Oct-Dec. **Superseded
   by P4** (0.65): timed from the observed 2023.15 and 2026.11 maxima the next one falls in 2027 Jun-Sep, window 2027 Jun 1 - Oct 1.
 
-## For the advisor
+## For the astronomer who asked
 
 The AAVSO B/V/R/I series from 2021 on are dominated by a few observers (DFS, GZN, PYG, BRJ; 89 contributors overall), so the
 wavelength dependence rests on their filter calibrations; the Skeptic finds all bands moving together. The one measurement that

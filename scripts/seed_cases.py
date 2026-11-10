@@ -1,4 +1,4 @@
-"""Open the seed cases and fetch their data. the advisor will veto and replace these (docs/OPEN_QUESTIONS.md).
+"""Open the seed cases and fetch their data. An astronomer will veto and replace these (docs/OPEN_QUESTIONS.md).
 
 Run: python scripts/seed_cases.py [name ...]
 """

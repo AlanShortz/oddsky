@@ -1,4 +1,4 @@
-# For the advisor: a G dwarf that vanished for three months (Oddsky OS-0014)
+# For review: a G dwarf that vanished for three months (Oddsky OS-0014)
 
 **One line.** Gaia DR3 6733428488637673984 (2MASS J18330620−3607130, TIC 313603515; J2000 18:33:06.21
 −36:07:13.05; G = 12.46, BP−RP = 0.80, ~420–426 pc, M_G ≈ 4.3, Teff ≈ 6000 K) was occulted in spring 2017.
@@ -43,6 +43,6 @@ stayed so to 2024. As far as we can find, nobody has reported either.
    2–3 RV epochs (the binary).
 2. Mid-IR or SPHEREx spectra of the infrared change; Gaia DR4 (Dec 2026) epoch photometry and RVs cover 2017 directly.
 3. A look at the 1924 DASCH plates (ax 488, 528, 535) by someone who knows plate defects.
-4. Co-authorship on the draft Research Note (`docs/papers/RNAAS_OS-0014_draft.md`), and whether STScI needs to clear it.
+4. Co-authorship on the draft Research Note (`docs/papers/RNAAS_OS-0014_draft.md`), and whether your institute needs to clear it.
 
 The second, weaker candidate is OS-0013, a K3 dwarf whose ~1000 K infrared excess appeared abruptly in 2018; see its case.

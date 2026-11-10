@@ -1,6 +1,6 @@
 # Show HN draft
 
-> Not ready to post: needs the advisor's OK on the STScI mention, the package on PyPI (`uvx oddsky`), the
+> Not ready to post: needs the package on PyPI (`uvx oddsky`), the
 > GitHub org, and the domain. Update the numbers if Trial 002 has run.
 
 **Title:** Show HN: Oddsky – an open observatory your AI agent can use to investigate strange stars
@@ -11,7 +11,7 @@
 
 Hi HN. Oddsky is an open-source set of astronomy tools served over MCP, so any agent (Claude
 Code, Codex, Cursor, a local model) can investigate real stars with real archive data: Gaia,
-NEOWISE, TESS, and a century of AAVSO amateur photometry. A professional astronomer who works on dusty dying stars advises me. I'm the software person.
+NEOWISE, TESS, and a century of AAVSO amateur photometry. I'm the software person; a professional astronomer who works on dusty dying stars advises me.
 
 We built it around the obvious failure mode: an LLM will happily write you a beautiful, wrong
 explanation of a light curve. So Oddsky makes the work checkable:

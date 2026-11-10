@@ -1,9 +1,15 @@
 # H-0019: two points per star
 
-Opened 2026-11-09, the day the advisor said two things on a call: that Hubble's automatic multi-visit photometry
+Opened 2026-11-09, the day an astronomer who advises the project said two things on a call: that Hubble's automatic multi-visit photometry
 catalogues are "tragically underused", and that most AGB stars in other galaxies have "two data points for each of them, and
 that's not enough to say much about them". This hunt takes the second sentence as a question about populations instead of
 stars, and uses the first as the data.
+
+**Correction pending (2026-11-10).** The Hubble Source Catalog client used for everything below lost rows whenever a
+query ran past one page of 50,000 (the service's paging has no stable order): about a fifth of the catalogue in the
+larger galaxies, at random. It was found by `hunts/H-0020` and is fixed in `oddsky.data.hsc`. Every catalogue is being
+fetched again and the numbers on this page will be recomputed; until this notice is replaced, treat the sample sizes as
+too small and the statistics as provisional.
 
 **Status.** A measurement and a tool, not a discovery. Preregistered (`PREREGISTRATION.md`, committed as `3cc2f73` before any
 long-lag pair above the tip was computed). An independent referee (`reviews/claude-referee-2026-11-09.md`) reproduced the

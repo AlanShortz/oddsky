@@ -5,7 +5,7 @@ description = "An open observatory your AI agent can use. The universe is an ope
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11,<3.15"
-authors = [{ name = "Alan Shortz" }, { name = "the advisor" }]
+authors = [{ name = "Alan Shortz" }]
 dependencies = [
   "astropy>=6",
   "astroquery>=0.4.7",
