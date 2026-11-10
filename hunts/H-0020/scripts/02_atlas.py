@@ -13,7 +13,7 @@ from oddsky.analysis import twiceseen
 
 RUN = pathlib.Path.home() / "oddsky-runs/h0019"; HERE = pathlib.Path(__file__).resolve().parents[1]; H19 = HERE.parent / "H-0019"
 meas = pd.read_csv(H19 / "work/measure.csv").set_index("name")
-card = pd.read_csv(HERE / "work/hsc_quality.csv"); card = card[(card.hsc == "all sources") & card.crowding.isin(["isolated", "crowded"])]
+card = pd.read_csv(HERE / "work/hsc_quality.csv"); card = card[card.hsc.str.startswith("point-like") & card.crowding.isin(["isolated", "crowded"])]   # atlas stars passed the same CI cut
 pooled = card.groupby(["range", "crowding"]).apply(lambda g: pd.Series({c: np.average(g[c], weights=g.n) for c in ("completeness", "offset", "scatter", "gross")}), include_groups=False)
 own = card.groupby(["galaxy", "range", "crowding"]).apply(lambda g: pd.Series({c: np.average(g[c], weights=g.n) for c in ("completeness", "offset", "scatter", "gross")}), include_groups=False)
 off = json.loads((H19 / "work/rediscovery_m33.json").read_text())["offset_arcsec"]

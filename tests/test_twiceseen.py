@@ -66,3 +66,30 @@ def test_chance_matches_in_a_dense_field_do_not_inflate_completeness_at_the_fain
     t = twiceseen.quality(truth, test)["table"]
     faint = t[(t.crowding == "all") & (t.mag > 24.5) & (t.mag < 25.3)]
     assert (faint.raw_recovered > faint.completeness).all() and faint.completeness.max() < 0.03
+
+
+def test_a_mirrored_field_is_refused_because_its_matches_are_no_better_than_chance():
+    truth, test = _field(n=20000)
+    test = test.assign(ra=2 * 150.0 - test.ra)
+    try:
+        twiceseen.quality(truth, test)
+    except ValueError:
+        return
+    raise AssertionError("expected a refusal")
+
+
+def test_a_star_seen_but_moved_is_counted_as_displaced_not_lost():
+    truth, test = _field(n=8000, m50=30.0)
+    rng = np.random.default_rng(5)
+    moved = rng.uniform(size=len(test)) < 0.2
+    test.loc[moved, "dec"] += 0.15 / 3600
+    t = twiceseen.quality(truth, test)["table"]
+    row = t[(t.crowding == "all") & (t.mag < 24)]
+    assert abs(np.average(row.displaced, weights=row.n) - 0.2) < 0.04 and abs(np.average(row.completeness, weights=row.n) - 0.8) < 0.04
+
+
+def test_fainter_truth_stars_still_count_as_neighbours_when_only_bright_ones_are_graded():
+    truth, test = _field(n=60000)
+    full = twiceseen.quality(truth, test, mag_max=24.5)["stars"]
+    cut = twiceseen.quality(truth[truth.mag < 24.5].reset_index(drop=True), test)["stars"]
+    assert (full.crowd > 0).mean() > (cut.crowd > 0).mean() + 0.03

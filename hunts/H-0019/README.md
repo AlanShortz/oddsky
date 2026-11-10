@@ -11,7 +11,8 @@ random. It was found by `hunts/H-0020` and is fixed in `oddsky.data.hsc`. Every 
 and the registered measurement and tests re-run (`work/galaxies.csv`, `work/tests.json`, `work/refetch_comparison.csv`):
 
 - 21,494 stars in 14 galaxies (NGC 3077 now qualifies) in place of 15,145 in 13. Pooled E₀.₃ = 0.0341 ± 0.0017 (20.7σ);
-  it was 0.0343 ± 0.0020. No galaxy moved by more than its error.
+  it was 0.0343 ± 0.0020. The largest move is NGC 300, by 1.2 times its error. Tips were re-measured on the complete
+  catalogues; NGC 3077's moved by 0.35 mag, which is why it now qualifies.
 - T1, T2 and T4 pass as before. T3 now passes (0.0012 ± 0.0007). T5 still fails (0.0338 ± 0.0019 against 0.0338 ± 0.0035).
 - Five clean fields: 0.0466 ± 0.0025 (was 0.0437 ± 0.0028). M33's Miras: 76 of 107 change by more than 0.3 mag (was 65 of 91).
 - Large single-star changes: 399 (was 282); the Librarian has only seen the first 282.

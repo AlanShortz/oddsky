@@ -11,11 +11,15 @@ found them or did not.
 test catalogue, by magnitude and by local crowding: the fraction recovered, the median offset, the scatter and the rate of
 gross errors. `limit(table)` reads off the magnitude where recovery falls to one half.
 
+Known gaps in the tool itself (hunts/H-0020 referee): matching is by position only, with no magnitude tolerance, so in
+dense fields a wrong neighbour can stand in for a lost star; there is no colour axis, so a catalogue that requires a
+second filter loses red or blue stars in a way this table averages over; and detector gaps are removed by a heuristic.
+
 What this is not. It measures the test catalogue relative to the truth catalogue, so it is only valid well above the
 truth catalogue's own limit (`horizon`, by default one magnitude brighter than the peak of the truth luminosity function);
 fainter than that the table is marked `valid = False`. It cannot see stars both catalogues miss. Two catalogues of equal
-depth give P(found in one | found in the other), which overstates completeness because the same crowding hides a star
-from both. And the truth stars follow the real luminosity function and the real spatial distribution: that is the right
+resolution overstate completeness, however deep the truth is, because the same blend hides a star from both (in
+simulation by 2.5 points for bright stars and 6 to 8 points a magnitude above the limit). And the truth stars follow the real luminosity function and the real spatial distribution: that is the right
 weighting for the stars that are there, and the wrong one for a population that is not (a real artificial-star test can
 ask about any star anywhere). Nothing here calls the network.
 """
@@ -123,36 +127,61 @@ def crowding(xy: np.ndarray, mag: np.ndarray, radius: float = 0.5, fainter_by: f
     return out
 
 
-def horizon(truth_mag: np.ndarray, margin: float = 1.0, step: float = 0.1) -> float:
-    """The faintest magnitude at which the truth catalogue can be trusted as truth: `margin` mag brighter than the peak of
-    its luminosity function."""
+def horizon(truth_mag: np.ndarray, margin: float = 1.0, step: float = 0.1, snr: np.ndarray | None = None, min_snr: float = 10.0) -> float:
+    """The faintest magnitude at which the truth catalogue can be trusted as truth. With the truth's signal-to-noise:
+    the faintest 0.25-mag bin whose median S/N is at least `min_snr`. Without it: `margin` mag brighter than the peak of
+    its luminosity function, which is a guess (in a galaxy the peak can be the red clump, not the catalogue's limit)."""
+    if snr is not None:
+        b = np.floor(np.asarray(truth_mag) / 0.25) * 0.25
+        med = pd.Series(np.asarray(snr)).groupby(b).median()
+        good = med[med >= min_snr]
+        if len(good):
+            return float(good.index.max() + 0.25)
     h, e = np.histogram(truth_mag, bins=np.arange(np.nanmin(truth_mag), np.nanmax(truth_mag) + step, step))
     return float(e[np.argmax(h)] - margin)
 
 
 def quality(truth: pd.DataFrame, test: pd.DataFrame, mag_step: float = 0.25, radius: float = MATCH_ARCSEC,
             crowd_radius: float = 0.5, zero_point: bool = True, gross: float = 0.3, footprint: str = "hull",
-            cell: float = 8.0) -> dict:
+            cell: float = 8.0, mag_max: float | None = None, displaced_radius: float = 0.25, gaps: bool = True) -> dict:
     """The test catalogue measured against the truth catalogue. Both need columns `ra`, `dec`, `mag` (same band).
 
     Returns `table` (one row per magnitude bin and crowding class: n, completeness corrected for chance matches (the raw
     recovered fraction and the chance rate are kept beside it) and its binomial error, median offset
     test minus truth, robust scatter, fraction of gross errors beyond `gross` mag, `valid`), `stars` (the truth stars in the
-    common sky with `found`, `dmag`, `crowd`), and the tie's numbers. `footprint="hull"` takes the common sky as the two
+    common sky with `found`, `displaced`, `dmag`, `crowd`), and the tie's numbers. `mag_max` grades only truth stars
+    brighter than it while still counting fainter ones as neighbours (cutting the truth catalogue first undercounts
+    crowding: hunts/H-0020, referee). An optional truth column `snr` sets the horizon. `footprint="hull"` takes the common sky as the two
     catalogues' convex hulls (one pointing each); `"cells"` takes it from where the test catalogue has stars, in squares of
     `cell` arcsec (a stitched or patchy test catalogue). Crowding classes: "all", "isolated" (no disturbing
     neighbour within `crowd_radius`), "crowded" (one or more).
     """
     ra0, dec0 = float(truth.ra.median()), float(truth.dec.median())
     t_xy, s_xy = plane(truth.ra, truth.dec, ra0, dec0), plane(test.ra, test.dec, ra0, dec0)
-    fit = tie(s_xy, test.mag.values, t_xy, radius=radius)
+    # tie on truth stars the test catalogue could have seen: a truth catalogue three magnitudes deeper is so dense that
+    # any position finds a faint star by chance
+    comparable = np.zeros(len(truth), bool)
+    comparable[np.argsort(truth.mag.values)[:3 * len(test)]] = True        # by rank: no zero point is known yet
+    fit = tie(s_xy, test.mag.values, t_xy[comparable] if comparable.sum() >= 30 else t_xy, radius=radius)
     if fit is None:
         raise ValueError("the catalogues do not overlap or could not be tied")
     s_on_t = fit["a_on_b"]
+    if len(fit["ia"]) < 3 * max(fit["n_chance"], 1):
+        raise ValueError(f"only {len(fit['ia'])} matches against {fit['n_chance']} expected by chance: not the same sky, or mirrored")
     common = covered(t_xy, s_on_t, cell) if footprint == "cells" else inside(t_xy, s_on_t) & inside(t_xy, t_xy)
     tree = cKDTree(s_on_t)
     d, j = tree.query(t_xy, distance_upper_bound=radius)
     found = np.isfinite(d)
+    d_any, _ = tree.query(t_xy)
+    # a truth star with no test source at `radius` but one within `displaced_radius` was seen and moved (a blend's centroid),
+    # not missed: counted apart
+    displaced = ~found & (d_any <= displaced_radius)
+    if gaps:
+        # holes in the test catalogue's coverage (a detector gap is a 2.5" empty strip): truth stars much farther from any
+        # test star than test stars are from each other are outside its sky. This cannot tell a gap from a region where the
+        # test catalogue lost everything, so it can only raise completeness.
+        dd, _ = tree.query(s_on_t, k=2)
+        common &= d_any <= max(1.0, 6.0 * float(np.median(dd[:, 1])))
     # chance: a truth star moved 3 arcsec away still "finds" a test star this often (it grows with the test density)
     dc, _ = tree.query(t_xy + [3.0, 0.0], distance_upper_bound=radius)
     chance = np.isfinite(dc)
@@ -160,8 +189,10 @@ def quality(truth: pd.DataFrame, test: pd.DataFrame, mag_step: float = 0.25, rad
     dmag[found] = test.mag.values[j[found]] - truth.mag.values[found]
     crowd = crowding(t_xy, truth.mag.values, crowd_radius)
     stars = pd.DataFrame({"ra": truth.ra.values, "dec": truth.dec.values, "mag": truth.mag.values, "found": found, "dmag": dmag,
-                          "crowd": crowd, "chance": chance})[common].reset_index(drop=True)
-    hz = horizon(truth.mag.values[common])
+                          "crowd": crowd, "chance": chance, "displaced": displaced})[common].reset_index(drop=True)
+    hz = horizon(truth.mag.values[common], snr=truth.snr.values[common] if "snr" in truth else None)
+    if mag_max is not None:      # grade only these; fainter truth stars were still counted as neighbours above
+        stars = stars[stars.mag < mag_max].reset_index(drop=True)
     zp = 0.0
     if zero_point:
         ref = stars[stars.found & (stars.crowd == 0) & (stars.mag < np.nanpercentile(stars.mag[stars.found], 25))]
@@ -178,7 +209,7 @@ def quality(truth: pd.DataFrame, test: pd.DataFrame, mag_step: float = 0.25, rad
             p = float(g.chance.mean())                      # chance-match probability in this bin
             c = float(np.clip((k / n - p) / (1 - p), 0.0, 1.0)) if p < 0.9 else np.nan
             dm = g.dmag[g.found]
-            rows.append({"crowding": cls, "mag": round(float(m), 3), "n": n, "completeness": c, "raw_recovered": k / n, "chance": p, "e_completeness": float(np.sqrt(max(c * (1 - c), 1.0 / n) / n)),
+            rows.append({"crowding": cls, "mag": round(float(m), 3), "n": n, "completeness": c, "raw_recovered": k / n, "chance": p, "displaced": float(g.displaced.mean()), "e_completeness": float(np.sqrt(max(c * (1 - c), 1.0 / n) / n)),
                          "offset": float(dm.median()) if k >= 5 else np.nan,
                          "scatter": float(1.4826 * np.median(np.abs(dm - dm.median()))) if k >= 5 else np.nan,
                          "gross": float((dm.abs() > gross).mean()) if k >= 5 else np.nan, "valid": bool(m <= hz)})
