@@ -204,6 +204,33 @@ tools (referee): positional matches should fit and remove a bulk offset and repo
 `tip_edge` should flag an edge in the outermost bin of its window; the reference builder needs a bootstrap error and a
 colour-matched option.
 
+## 6. Follow-ups (2026-11-10; exploratory, not refereed)
+
+### PSF photometry (`16_psf.py`, `work/psf.csv`)
+
+ANGST (Dalcanton et al. 2009) published DOLPHOT PSF photometry for both visits of fields in six of these galaxies. Each
+pair of fields was tied with an affine fit (6 to 17 mas rms) and matched at 0.07"; shifted positions give 2% chance
+matches. "Same stars" are the Hubble Source Catalog stars of sections 2 and 3, with their change re-measured by DOLPHOT.
+
+| galaxy | stars above tip (PSF) | E₀.₃, PSF, own boxes | same stars: catalogue | same stars: PSF | large changes confirmed |
+|---|---|---|---|---|---|
+| NGC 300 (inner fields) | 5,072 | 0.064 ± 0.004 | 0.063 ± 0.008 | 0.069 ± 0.008 | 61 of 89 |
+| Garland | 282 | 0.102 ± 0.020 | 0.079 ± 0.025 | 0.098 ± 0.026 | 15 of 15 |
+| KKH 37 | 89 | 0.076 ± 0.029 | 0.057 ± 0.030 | 0.076 ± 0.033 | 4 of 4 |
+| NGC 4163 | 569 | 0.025 ± 0.008 | 0.025 ± 0.011 | 0.019 ± 0.010 | 7 of 9 |
+| IC 2574 | 384 | 0.046 ± 0.011 | 0.020 ± 0.014 | 0.029 ± 0.017 | 2 of 2 |
+| M81 (outer deep field) | 164 | 0.094 ± 0.027 | not in the catalogue sample | | |
+
+- PSF photometry confirms 89 of the 119 large changes (over 0.3 mag) the catalogue found above the tip in these fields.
+- It does not lower the excess. In four of five galaxies it raises it, as expected if aperture blends dilute changes.
+- The galaxies still differ under PSF photometry (χ² = 28.2 for 5): NGC 4163 at 2.5% against NGC 300's inner fields at
+  6.4%. In these fields crowding is not what makes them differ. Age and colour mix remain (section 4), and these boxes
+  use DOLPHOT's "good star" lists and Vega colour cuts moved over from the catalogue cuts, so they are not like for like
+  with the LMC reference either.
+- M81's tip edge landed 0.28 mag from the prediction, at the edge of the search window; 164 stars.
+- **Not done:** NGC 2403, NGC 1313, NGC 4244 and NGC 7793, the four most crowded discs. ANGST has only one of their two
+  visits. They need DOLPHOT run on the images, which was not attempted here.
+
 ## What the advisor said, and what was done with it
 
 | on the call | here |

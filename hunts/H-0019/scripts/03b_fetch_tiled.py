@@ -1,7 +1,7 @@
 """Large galaxies whose single-cone query times out: fetch the same data in small tiles.
 
 A hexagonal grid of 0.05-degree cones out to RMAX degrees from the centre (not complete coverage; it does not need to be).
-Usage: 03b_fetch_tiled.py NAME [RMAX=0.2]
+Usage: 03b_fetch_tiled.py NAME [RMAX=0.2] [tiles.csv with ra,dec]
 """
 import sys, math, time, pathlib
 import pandas as pd
@@ -29,6 +29,8 @@ for i in range(-n, n + 1):
         x, y = step * (i + 0.5 * (j % 2)), step * j * 0.866
         if math.hypot(x, y) <= rmax:
             tiles.append((row["ra"] + x / math.cos(math.radians(row["dec"])), row["dec"] + y))
+if len(sys.argv) > 3:      # a list of tile centres (fields with a revisit, from the MAST observation list) replaces the grid
+    tiles = [tuple(x) for x in pd.read_csv(sys.argv[3])[["ra", "dec"]].values]
 print(name, len(tiles), "tiles, lim", round(lim, 2), flush=True)
 S, D = [], []
 cols = SUMCOLS + [c for b in COLOUR for c in (b, b + "_N")]
@@ -41,6 +43,9 @@ for k, (ra, dec) in enumerate(tiles):
         print(" tile", k, "failed", repr(e)[:100], flush=True); continue
     S.append(s); D.append(d)
     print(f" tile {k}: sum={len(s)} det={len(d)} [{time.time()-t:.0f}s]", flush=True)
+    if k % 20 == 19 and any(len(x) for x in D):
+        pd.concat([x for x in S if len(x)], ignore_index=True).drop_duplicates("MatchID").to_parquet(RUN / f"hsc/{name.replace(' ', '_')}_sum.partial.parquet")
+        pd.concat([x for x in D if len(x)], ignore_index=True).drop_duplicates(["MatchID", "SourceID", "ImageID"]).to_parquet(RUN / f"hsc/{name.replace(' ', '_')}_det.partial.parquet")
 key = name.replace(" ", "_")
 S = pd.concat([x for x in S if len(x)], ignore_index=True).drop_duplicates("MatchID")
 D = pd.concat([x for x in D if len(x)], ignore_index=True).drop_duplicates(["MatchID", "SourceID", "ImageID"])
