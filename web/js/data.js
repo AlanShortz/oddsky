@@ -50,6 +50,7 @@ export async function loadCase(id) {
 
 /** data/hunts.json and data/docket.json are written by site/build.py; plain web/ has neither. */
 export const loadHunts = () => getJSON('data/hunts.json').catch(() => ({ hunts: [], wrong: [] }));
+export const loadTonight = () => getJSON('data/tonight.json').catch(() => ({ targets: [] }));
 export const loadDocket = () => getJSON('data/docket.json').catch(() => ({ items: [] }));
 /** data/trials.json (oddsky export-web): each trial's premise, revealed key and the held-back light curves. */
 export const loadTrials = () => getJSON('data/trials.json').catch(() => ({ trials: [] }));

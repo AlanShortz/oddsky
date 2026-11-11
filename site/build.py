@@ -208,6 +208,126 @@ def build_docket(index: dict, cases: dict) -> list:
     return items
 
 
+# ---- tonight: what an observation would settle ---------------------------------------------------
+
+GROUND = ("AAVSO", "ZTF", "ATLAS", "ASAS-SN")
+AAVSO_BANDS = ("V", "CV", "TG", "Vis.", "R", "I", "B")
+REACH_MAG = 16.5     # fainter than this a backyard CCD cannot follow it
+
+
+def build_tonight(index: dict, cases: dict, asks: dict, now_mjd: float | None = None) -> dict:
+    """For every case a small telescope can reach and where watching would help: where it is, the last measurement in our
+    copy of the archives (with the day that copy was read), who supplied the AAVSO record, and which sealed predictions
+    are graded on photometry that amateurs file. Every number comes from the exported case; `asks` (site/tonight.json)
+    adds words, and an ephemeris whose numbers must appear in the claim it cites."""
+    now = now_mjd if now_mjd is not None else (datetime.now(timezone.utc) - datetime(1858, 11, 17, tzinfo=timezone.utc)).total_seconds() / 86400
+    out = []
+    for cid, payload in cases.items():
+        c, series = payload.get("case", {}), payload.get("series") or {}
+        t = c.get("target") or {}
+        if t.get("ra") is None or (c.get("title") or "").startswith("Control"):
+            continue
+        ground = {}
+        for key, sv in series.items():
+            survey, _, band = key.partition(":")
+            if survey not in GROUND or not sv.get("t") or sv.get("unit", "mag") != "mag" or (survey == "AAVSO" and band not in AAVSO_BANDS):
+                continue
+            ground[key] = sv
+        if not ground:
+            continue
+        key_latest = max(ground, key=lambda k: ground[k]["t"][-1])
+        newest = ground[key_latest]["t"][-1]     # prefer a V-like band when it is nearly as fresh: it is what observers compare
+        for band in ("V", "CV", "TG"):
+            k = f"AAVSO:{band}"
+            if k in ground and newest - ground[k]["t"][-1] <= 30:
+                key_latest = k
+                break
+        latest = ground[key_latest]
+        recent = sorted(latest["mag"][-30:])
+        typical = recent[len(recent) // 2]         # one band, the one shown: not a mix of filters
+        prov = payload.get("provenance") or {}
+        aav = prov.get("aavso") or {}
+        observers = None
+        for note in aav.get("notes") or []:
+            if note.startswith("observers (good points):"):
+                pairs = [x.strip().rsplit(":", 1) for x in note.split(":", 1)[1].split(",") if ":" in x]
+                counts = [(k.strip(), int(v)) for k, v in pairs if v.strip().isdigit()]
+                total = aav.get("rows_kept") or sum(v for _, v in counts)     # the note lists only the twelve busiest observers
+                if counts and total:
+                    observers = {"listed": len(counts), "more": len(counts) >= 12, "top": counts[0][0], "top_points": counts[0][1],
+                                 "points": total, "top_share": round(min(counts[0][1] / total, 1.0), 3)}
+        judged = []
+        for p in c.get("predictions") or []:
+            ch, r = p.get("check") or {}, p.get("resolution") or {}
+            survey, _, band = (ch.get("series") or "").partition(":")
+            if survey not in GROUND or "start" not in ch or r.get("outcome", "pending") != "pending":
+                continue
+            sv = series.get(ch["series"]) or {"t": []}
+            base = ch.get("baseline")
+            judged.append({"id": p.get("id"), "statement": p.get("statement"), "probability": p.get("probability"), "survey": survey, "band": band,
+                           "window": [mjd_to_date(ch["start"]).isoformat(), mjd_to_date(ch["end"]).isoformat()],
+                           "baseline": [mjd_to_date(base[0]).isoformat(), mjd_to_date(base[1]).isoformat()] if base else None,
+                           "in_baseline": sum(1 for x in sv["t"] if base[0] <= x <= base[1]) if base else None,
+                           "resolve_by": p.get("resolve_by"), "in_window": sum(1 for x in sv["t"] if ch["start"] <= x <= ch["end"]),
+                           "copy_ends": mjd_to_date(sv["t"][-1]).isoformat() if sv["t"] else None, "amateur": survey == "AAVSO",
+                           "href": f"/case/{cid}#pred-{p.get('id')}"})
+        ask = dict(asks.get(cid) or {})
+        eph = ask.get("ephemeris")
+        if eph:
+            claim = next((x.get("text", "") for x in c.get("claims") or [] if x.get("id") == eph["claim"]), "")
+            if str(eph["period_d"]) not in claim or str(eph["t0_mjd"]) not in claim:
+                raise ValueError(f"{cid}: ephemeris {eph['period_d']}, {eph['t0_mjd']} is not in claim {eph['claim']}")
+        has_aavso = any(k.startswith("AAVSO") for k in ground)
+        if typical > REACH_MAG or not (ask or judged or has_aavso):     # nothing to ask and no observers' record: not listed
+            continue
+        survey_latest = key_latest.partition(":")[0]
+        read = (prov.get({"AAVSO": "aavso", "ZTF": "ztf", "ATLAS": "atlas", "ASAS-SN": "asassn"}[survey_latest]) or {}).get("retrieved_at", "")[:10] or None
+        out.append({
+            "case": cid, "name": t.get("name"), "title": c.get("title"), "ra": t.get("ra"), "dec": t.get("dec"),
+            "aavso": ask.get("aavso") or (t.get("name") if has_aavso else None),     # a star with an AAVSO record is filed under its name
+            "latest": {"series": key_latest, "mjd": latest["t"][-1], "date": mjd_to_date(latest["t"][-1]).isoformat(), "mag": round(latest["mag"][-1], 2),
+                       "archive_read": read},
+            "typical_mag": round(typical, 1), "typical_band": key_latest.partition(":")[2], "observers": observers, "has_aavso_record": has_aavso,
+            "judged": judged, "ephemeris": eph,
+            "ask": {k: ask[k] for k in ("bands", "cadence", "settles", "note") if k in ask} or None,
+        })
+    today = mjd_to_date(now).isoformat()
+
+    def urgency(x):     # a baseline that is open now, then the soonest window, then what is asked, then brightness
+        js = [j for j in x["judged"] if j["amateur"]]
+        open_base = any(j["baseline"] and j["baseline"][0] <= today <= j["baseline"][1] for j in js)
+        nxt = min((j["window"][0] for j in js if j["window"][1] >= today), default="9999")
+        return (not js, not open_base, nxt, not x["ask"], x["typical_mag"])
+
+    out.sort(key=urgency)
+    return {"built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"), "built_mjd": round(now, 2), "reach_mag": REACH_MAG, "targets": out}
+
+
+def tonight_markdown(tn: dict) -> str:
+    lines = ["# Tonight: stars a small telescope can reach, and what watching them would help settle", "",
+             "From the Oddsky casebook. Observations go to the AAVSO, as for any variable star, not to Oddsky; Oddsky reads them from there.",
+             "Positions are J2000 degrees; dates are UTC.", ""]
+    for x in tn["targets"]:
+        lines.append(f"## {x['name']} ({x['case']})")
+        lines.append(f"- position: RA {x['ra']:.5f}, Dec {x['dec']:+.5f}; about magnitude {x['typical_mag']} in {x['typical_band']}")
+        lines.append(f"- last in our copy of the archives: {x['latest']['mag']} in {x['latest']['series']} on {x['latest']['date']}"
+                     + (f" (archive read {x['latest']['archive_read']})" if x["latest"]["archive_read"] else ""))
+        lines.append(f"- AAVSO name: {x['aavso']}" if x["aavso"] else "- not in the AAVSO Variable Star Index: observations cannot be submitted yet")
+        if x["ask"]:
+            lines.append(f"- wanted: {x['ask'].get('bands', '')}; {x['ask'].get('cadence', '')}. {x['ask'].get('settles', '')}")
+            if x["ask"].get("note"):
+                lines.append(f"- note: {x['ask']['note']}")
+        if x["ephemeris"]:
+            e = x["ephemeris"]
+            lines.append(f"- {e['what']}: MJD {e['t0_mjd']} + {e['period_d']} E (case claim {e['claim']})")
+        for j in x["judged"]:
+            base = f"; compared with {j['baseline'][0]} to {j['baseline'][1]}" if j["baseline"] else ""
+            lines.append(f"- sealed {x['case']} {j['id']} ({pct(j['probability'])}), checked on {j['survey']} {j['band']} between {j['window'][0]} and {j['window'][1]}{base}: {j['statement']}")
+        lines.append(f"- case: {SITE_URL}/case/{x['case']}")
+        lines.append("")
+    return "\n".join(lines)
+
+
 def ics_escape(s: str) -> str:
     return str(s).replace("\\", "\\\\").replace(";", r"\;").replace(",", r"\,").replace("\n", r"\n")
 
@@ -380,9 +500,11 @@ def llms_txt(index: dict, cases: dict, hunts: list, docket: list) -> str:
     for hu in hunts:
         L.append(f"- [{hu['id']}: {hu['title']}]({SITE_URL}/hunt/{hu['id']}.md): {hu['verdict']}")
     pending = [d for d in docket if d["outcome"] == "pending"]
+    lines_tonight = (f"Observers: {SITE_URL}/tonight.md lists the casebook stars a small telescope can reach, what a measurement of each would settle, "
+                     f"and which sealed predictions are graded on AAVSO photometry (JSON: {SITE_URL}/data/tonight.json).")
     L += ["", "## The Docket", "",
           f"{len(pending)} sealed predictions are waiting for the sky: {SITE_URL}/data/docket.json "
-          f"(calendar: {SITE_URL}/docket.ics).", "",
+          f"(calendar: {SITE_URL}/docket.ics).", "", lines_tonight, "",
           "## Optional", "",
           *([f"- [How Oddsky keeps itself honest]({REPO}/blob/main/docs/EPISTEMICS.md)",
              f"- [Manifesto]({REPO}/blob/main/docs/MANIFESTO.md)"] if REPO_PUBLIC else []),
@@ -464,6 +586,10 @@ def build(out: Path = DIST) -> None:
     write(out / "data" / "docket.json", json.dumps({"built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                                                     "items": docket}, ensure_ascii=False, indent=1))
     write(out / "docket.ics", build_ics(docket))
+    asks = json.loads((ROOT / "site" / "tonight.json").read_text()).get("asks", {})
+    tonight = build_tonight(index, cases, asks)
+    write(out / "data" / "tonight.json", json.dumps(tonight, ensure_ascii=False, indent=1))
+    write(out / "tonight.md", tonight_markdown(tonight))
     write(out / "data" / "sky" / "cases.json", json.dumps(sky_cases(index, cases), separators=(",", ":")))
     write(out / "llms.txt", llms_txt(index, cases, hunts, docket))
 
@@ -502,6 +628,12 @@ def build(out: Path = DIST) -> None:
                    f"{len(pending)} sealed predictions waiting for the sky, each with a probability and a date. Subscribe and your calendar tells you when the universe grades us.",
                    og("home"), prerender_list("The Docket", "Every sealed prediction, and the day the sky answers it.",
                                               [(d["href"], f"{d.get('case') or d.get('packet')} {d['id']} ({pct(d['probability'])}, {d['outcome']}, {d.get('resolve_by') or ''})", d["statement"]) for d in docket]), None))
+    judged_n = sum(1 for x in tonight["targets"] for j in x["judged"] if j["amateur"])
+    routes.append(("/tonight", "Tonight — Oddsky",
+                   f"{len(tonight['targets'])} stars in the casebook that a small telescope can reach, and what watching each would help settle. "
+                   f"{judged_n} sealed predictions will be checked on photometry that amateur observers file with the AAVSO.",
+                   og("home"), prerender_list("Tonight", "Stars a small telescope can reach, and what watching them would help settle.",
+                                              [(f"/case/{x['case']}", f"{x['name']} ({x['case']})", (x["ask"] or {}).get("settles")) for x in tonight["targets"]]), "/tonight.md"))
     routes.append(("/trials", "Trials — Oddsky", "Strange Stars Trials 001 and 002: three AI models as blind investigators of real stars, answer keys sealed by hash, forecasts graded against held-back data.",
                    og("home"), prerender_list("Trials", "Blind and hindsight trials with sealed answers.", []), None))
     routes.append(("/agents", "For agents — Oddsky", "Point any AI agent at Oddsky: a zero-install path through llms.txt and per-case dossiers, and an MCP server for the full observatory.",

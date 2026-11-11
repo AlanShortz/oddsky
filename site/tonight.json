@@ -1,0 +1,30 @@
+{
+  "_about": "What watching a star would help settle, per case. Words only, except `ephemeris`, whose numbers site/build.py checks against the cited claim in the case. Every other number on the Tonight page is computed from the case data. `aavso` is the name the star is filed under in the AAVSO Variable Star Index; absent means it has no entry, so observations cannot be submitted yet.",
+  "asks": {
+    "OS-0036": {"aavso": "HM Sge", "bands": "V and I, the same night", "cadence": "weekly; I-band now counts toward the baseline of sealed prediction P3",
+      "settles": "Whether the fade continues, and whether the Mira keeps its pulsation clock through it. V is mostly the nebula's light and I is mostly the Mira, so the two bands follow different parts of the system.",
+      "note": "The Mira pulsates, so single points mislead: a season of them is what counts."},
+    "OS-0001": {"aavso": "ASASSN-21qj", "bands": "V", "cadence": "weekly while it is up",
+      "settles": "Whether the debris from the suspected planetary collision has cleared for good, or still crosses the star.",
+      "note": "The two median predictions rest on one observer's consistent series, and their margins are smaller than the zero-point difference between two telescopes. New V data serve best as an independent check and as cover for a new dip (P3), which needs no fine calibration. Use the AAVSO comparison sequence."},
+    "OS-0003": {"aavso": "EE Cep", "bands": "V and I", "cadence": "monthly, between eclipses",
+      "settles": "How steady the star is outside eclipse, which is what the next eclipse's depth will be judged against. It is already well watched."},
+    "OS-0007": {"aavso": "AA Tau", "bands": "V and I, the same night", "cadence": "every week or two",
+      "settles": "Whether the disc that dimmed the star in 2011 still hides it, or it has begun to come back. Colour separates more dust from a change in the star.",
+      "note": "Much fainter in V than in I."},
+    "OS-0015": {"bands": "r, R or clear", "cadence": "weekly through its observing season",
+      "settles": "Whether the star stays quiet between eclipses, as sealed prediction P2 says.",
+      "note": "The next eclipses fall too close to the Sun to observe; the panel below shows the first within reach from your place. The sealed checks run on the ZTF survey, so other photometry would be reported beside the verdict, not as the verdict. Keep your measurements until the star is in the index.",
+      "ephemeris": {"period_d": 385.7, "t0_mjd": 58702.2, "claim": "C21", "what": "eclipse", "half_width_h": 168}},
+    "OS-0011": {"aavso": "Gaia DR3 2037357495383317504", "bands": "CV (clear, V zero point) or any filter", "cadence": "one long run across a predicted eclipse",
+      "settles": "A modern eclipse time for a binary the Variable Star Index lists under the wrong period. It would confirm the period found here and anchor the ephemeris for a revision of that entry.",
+      "note": "Times are predicted from survey data and could be off by half an hour or more: start early.",
+      "ephemeris": {"period_d": 2.52961, "t0_mjd": 57377.958, "claim": "C2", "what": "primary eclipse", "half_width_h": 3}},
+    "OS-0012": {"aavso": "Gaia DR3 4482344869315388928", "bands": "CV (clear, V zero point) or any filter", "cadence": "one run across a predicted eclipse",
+      "settles": "Eclipse times for an ordinary pair of K dwarfs (a closed case: nothing strange remains), to keep its ephemeris from drifting.",
+      "note": "Times are predicted from survey data and could be off by half an hour or more: start early.",
+      "ephemeris": {"period_d": 11.900804, "t0_mjd": 57099.3619, "claim": "C20", "what": "primary eclipse", "half_width_h": 2.5}},
+    "OS-0010": {"aavso": "NSV 1302", "bands": "V, and I if you can", "cadence": "weekly",
+      "settles": "Whether the irregular dips continue, and how deep they go in V: the record a classification in the Variable Star Index needs."}
+  }
+}
