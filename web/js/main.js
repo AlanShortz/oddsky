@@ -6,7 +6,8 @@
 
 import { h, PATH_MODE, link } from './util.js';
 import { parseRoute } from './routes.js';
-import { loadIndex, loadCase, loadHunts, loadDocket, loadTrials, FIXTURE } from './data.js';
+import { loadIndex, loadCase, loadHunts, loadDocket, loadTonight, loadTrials, FIXTURE } from './data.js';
+import { renderTonight } from './tonight.js';
 import { renderCase } from './case.js';
 import { renderCases, renderTrials, renderAbout, renderNotFound, renderError, renderPrivacy, renderTerms } from './pages.js';
 import { renderHome, renderHunts, renderHunt, renderDocket, renderAgents } from './front.js';
@@ -56,6 +57,7 @@ async function route() {
       const hu = hunts.hunts.find((x) => x.id === r.id);
       view = hu ? renderHunt(hu, index) : renderNotFound(`Hunt ${r.id}`); title = hu ? `${hu.title} — ${hu.id}` : 'Not found';
     } else if (r.name === 'docket') { const [d, live] = await Promise.all([loadDocket(), liveDocket()]); view = renderDocket(d, live); title = 'The Docket'; }
+    else if (r.name === 'tonight') { view = renderTonight(await loadTonight()); title = 'Tonight'; }
     else if (r.name === 'observe') { view = renderObserve(route); title = 'Observe'; }
     else if (r.name === 'ledger') { view = await renderLedger(); title = 'The Sky Ledger'; }
     else if (r.name === 'notebook') { view = await renderNotebook(r.id); title = 'Notebook'; }

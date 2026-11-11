@@ -1615,3 +1615,41 @@ html, body { overflow-x: clip; }
 .after-list { max-width: 820px; margin: 0; }
 .after-list dt { font-weight: 600; font-size: 16px; margin-top: 12px; }
 .after-list dd { margin: 2px 0 0; font-size: 15.5px; color: var(--ink-2); }
+
+
+/* ---- Tonight: what an observation would settle ---------------------------------------------- */
+.tn-place { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 0 0 8px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+.tn-place-label { color: var(--muted); }
+.tn-place-now { font-size: 13px; }
+.tn-presets { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+.tn-privacy { font-size: 12.5px; }
+.tn-list, .tn-cards, .tn-judgedlist { list-style: none; margin: 0; padding: 0; }
+.tn-group { padding: 30px 0 4px; }
+.tn-group-lede { margin: -4px 0 14px; max-width: 760px; }
+.tn-cards { align-items: start; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 430px), 1fr)); gap: 18px; }
+.tn-card { border: 1px solid var(--rule); border-top: 3px solid var(--accent); padding: 16px 18px 12px; background: var(--paper-2, transparent); }
+.tn-head h3 { margin: 0; font-size: 21px; line-height: 1.2; }
+.tn-sub { margin: 3px 0 10px; color: var(--muted); font-size: 14px; }
+.tn-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; margin: 0 0 10px; font-size: 12.5px; }
+.tn-facts dt { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.tn-facts dd { margin: 1px 0 0; }
+.tn-sky { margin: 0 0 10px; padding: 7px 10px; font-size: 14px; border-left: 3px solid var(--rule); }
+.tn-sky.is-up { border-left-color: var(--ok); }
+.tn-sky.is-down { color: var(--muted); }
+.tn-ask { margin: 0 0 10px; }
+.tn-label { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.tn-settles { margin: 0 0 4px; font-size: 16px; line-height: 1.45; }
+.tn-want { margin: 0; font-size: 12.5px; }
+.tn-note { margin: 4px 0 0; font-size: 13.5px; }
+.tn-judged { border-top: 1px solid var(--rule); padding: 9px 0 3px; }
+.tn-j-head { margin: 0; font-size: 12px; color: var(--muted); }
+.tn-j-say { margin: 3px 0; font-size: 14.5px; line-height: 1.4; }
+.tn-j-judge { margin: 0 0 4px; font-size: 13.5px; color: var(--ink-2, var(--ink)); }
+.tn-links { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 8px 0 0; padding-top: 9px; border-top: 1px solid var(--rule); font-size: 13.5px; }
+.tn-how { max-width: 760px; }
+.tn-eph { margin: 0 0 10px; padding: 8px 10px; border: 1px dashed var(--rule); }
+.tn-ephlist { list-style: none; margin: 2px 0 4px; padding: 0; font-size: 13px; }
+.tn-now strong { color: var(--accent); }
+.tonight { overflow-wrap: anywhere; }
+.tn-facts { min-width: 0; }
+@media (max-width: 520px) { .tn-facts { grid-template-columns: 1fr; } .tn-card { padding: 14px 12px 10px; } }

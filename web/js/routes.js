@@ -2,7 +2,7 @@
 // tests/test_web_routes.py). Anything that isn't one of these belongs to the server
 // (/api/oauth/github/start, /api/ledger?format=jsonl, /mcp, /authorize …) and gets a real page load.
 
-const PAGES = ['cases', 'trials', 'about', 'hunts', 'docket', 'agents', 'observe', 'ledger', 'privacy', 'terms'];
+const PAGES = ['cases', 'trials', 'about', 'hunts', 'docket', 'tonight', 'agents', 'observe', 'ledger', 'privacy', 'terms'];
 
 /** '/case/OS-0001' or 'case/OS-0001' → { name: 'case', id: 'OS-0001' }; unknown → { name: 'notfound' }. */
 export function parseRoute(path) {
