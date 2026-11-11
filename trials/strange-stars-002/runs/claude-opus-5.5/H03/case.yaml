@@ -1,0 +1,255 @@
+id: H03
+title: Trial star H03
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 1168.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: 'Gaia: G=12.46, BP-RP=0.80, Teff~6000 K, abs G=4.3 at 426 pc, RUWE 1.15, non_single_star=0: a
+    single-looking F/G main-sequence (slightly evolved) dwarf, not a giant.'
+  tag: observed
+  calls:
+  - K1
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:04+00:00'
+- id: C2
+  text: 'Before day ~1084 the star is flat: ASAS-SN V 12.70 with no excursions and no change between days
+    40-400 and 700-1083 (-0.006 mag, 1.3 sigma); NEOWISE W1 flat at 11.06 for six visits; no IR excess
+    (W1 +0.5%, W2 -2%) and W1-W2 ~ -0.01.'
+  tag: computed
+  calls:
+  - K9
+  - K12
+  - K13
+  - K17
+  - K5
+  - K6
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:06+00:00'
+- id: C3
+  text: 'A sudden deep dimming begins between day 1081.8 (V=12.69) and 1084.8 (V=12.82); V=15.46 at day
+    1090.8; NEOWISE single exposures catch the ingress in the IR: W1 12.21->14.71 and W2 11.50->13.12
+    between days 1093.3 and 1094.3 (baseline 11.06/11.09).'
+  tag: observed
+  calls:
+  - K9
+  - K10
+  - K11
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:07+00:00'
+- id: C4
+  text: Four independent instruments (ASAS-SN, NEOWISE, ATLAS o and c, SkyMapper v) record the faint state;
+    ATLAS o ~18.0 and c ~18.6 over days 1109-1165 (depth ~5.7-6.0 mag vs ATLAS baselines 12.33/12.63)
+    and SkyMapper v 19.65 at day 1152 (depth ~5.9). Not an instrumental artifact.
+  tag: observed
+  calls:
+  - K2
+  - K3
+  - K4
+  - K7
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:08+00:00'
+- id: C5
+  text: 'The extinction is chromatic but far greyer than interstellar dust: during the IR ingress W1 fell
+    3.6 mag and W2 2.0 mag while the optical eventually reached ~6 mag; ATLAS c (bluer) is only ~0.3 mag
+    deeper than o. Implies an optically thick and/or large-grain occulter covering most of the star, not
+    ISM-like small grains.'
+  tag: inferred
+  calls:
+  - K3
+  - K4
+  - K10
+  - K11
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:09+00:00'
+- id: C6
+  text: 'No IR excess before the event and no IR brightening as the event began (W1 and W2 both dim):
+    no sign of warm dust emission from a newly made debris cloud or from the star making dust.'
+  tag: computed
+  calls:
+  - K14
+  - K17
+  - K10
+  - K11
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:11+00:00'
+- id: C7
+  text: Gaia neighbours at 4.4-7.5 arcsec (G 19.0-20.1) total ~0.6% of the target flux (combined G~18.0),
+    comparable to the ATLAS faint-state level; the ATLAS ~18 floor and the 0.34 mag brightening at day
+    1163 may be partly neighbour light, so the true depth may exceed 6 mag (SkyMapper v 19.65 supports
+    this).
+  tag: inferred
+  calls:
+  - K2
+  - K15
+  - K16
+  - K7
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:12+00:00'
+- id: C8
+  text: The occulter is likely a large structure (disk around a companion or a massive dust clump) crossing
+    the star; ingress ~1 week from onset to >3 mag sets the edge crossing time.
+  tag: speculated
+  calls:
+  - K9
+  - K10
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:13+00:00'
+hypotheses:
+- id: H1
+  klass: eclipse_companion
+  statement: A long-period companion surrounded by an opaque dusty disk passes in front of the star, producing
+    a sudden, deep, nearly grey, months-long eclipse with a sharp ingress.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C8
+  conflicts: []
+  would_falsify: Rapid irregular recovery within weeks with large chromatic flicker; or no repeat and
+    no RV/astrometric companion; or a slow, ragged egress inconsistent with a disk edge.
+  status: live
+  confidence: 0.45
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:25+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: An optically thick circumstellar dust clump/structure (not bound to a companion disk) crosses
+    the line of sight.
+  supports:
+  - C3
+  - C4
+  - C5
+  - C6
+  conflicts: []
+  would_falsify: A smooth symmetric egress and later strictly periodic repeat (favouring a companion disk);
+    or W1-W2 reddening from dust emission.
+  status: live
+  confidence: 0.33
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:26+00:00'
+- id: H3
+  klass: collision_debris
+  statement: Debris from a planetary collision orbits the star and occults it.
+  supports:
+  - C4
+  - C5
+  conflicts:
+  - C2
+  - C6
+  would_falsify: Continued absence of any IR excess after recovery.
+  status: live
+  confidence: 0.08
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:27+00:00'
+- id: H4
+  klass: yso_dipper
+  statement: A young star with an inner-disk extinction event.
+  supports: []
+  conflicts:
+  - C2
+  - C6
+  would_falsify: No youth indicators and no IR excess.
+  status: live
+  confidence: 0.04
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:28+00:00'
+- id: H5
+  klass: dust_formation
+  statement: The star itself ejects dust (R CrB-like).
+  supports: []
+  conflicts:
+  - C1
+  - C6
+  would_falsify: Dwarf luminosity and no IR excess already argue against it; a spectrum showing normal
+    abundances would settle it.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:29+00:00'
+- id: H6
+  klass: artifact_blend
+  statement: The faint-state levels are contaminated by neighbours.
+  supports:
+  - C7
+  conflicts:
+  - C4
+  would_falsify: High-resolution imaging of the faint state isolating the target.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:30+00:00'
+- id: H7
+  klass: artifact_instrumental
+  statement: Pipeline or detector problem.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: Already strongly disfavoured by four instruments agreeing.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:31+00:00'
+- id: H8
+  klass: eruptive
+  statement: Some eruptive/accretion-related change causing obscuration.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  would_falsify: Absence of emission lines or brightening episodes.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:32+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'Still deep shortly after cutoff: ATLAS o median between days 1170 and 1250 is fainter than
+    16.0.'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 1170.0
+    end: 1250.0
+    statistic: median
+    op: '>'
+    value: 16.0
+  probability: 0.85
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:09:38+00:00'
+- id: P2
+  hypothesis: H1
+  statement: 'Near 50/50: the star is still dimmed by more than ~2.7 mag (ATLAS o median > 15.0) between
+    days 1300 and 1400.'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 1300.0
+    end: 1400.0
+    statistic: median
+    op: '>'
+    value: 15.0
+  probability: 0.5
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:09:40+00:00'
+- id: P3
+  hypothesis: H1
+  statement: 'Recovery within ~2 years of onset: ATLAS o median between days 1600 and 1800 is brighter
+    than 13.0.'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 1600.0
+    end: 1800.0
+    statistic: median
+    op: <
+    value: 13.0
+  probability: 0.6
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:09:42+00:00'
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

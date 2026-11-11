@@ -1,0 +1,24 @@
+agent: claude-fable-5.2
+model_id: claude-fable-5-2
+harness: Claude Code subagents (4 parallel, 2 packets each, one blind and one hindsight), Oddsky CLI in blind mode
+run_at: '2026-11-10'
+prompt: trials/strange-stars-002/INVESTIGATOR_PROMPT.md
+tools: oddsky 0.3.1, installed outside the repository
+notes: >
+  Honour-system blinding (CLI, not MCP); packets were copied outside the repository. The run was interrupted:
+  the machine's disk filled about two minutes in and every command failed. At that point T02 and T04 were complete;
+  T01 had its claims but no hypotheses; T03, H01 and H03 had tool calls but no claims, hypotheses or forecasts;
+  H02 and H04 were unopened. Space was freed and the same four investigators were resumed; three picked up where they stopped.
+  No hypothesis or forecast recorded before the interruption was changed afterwards. One breach after the
+  restart: the H03 investigator had lost its command line, listed the repository's top level and the trial
+  directory (file names only) and re-read the prompt, then redid H03 from the start in the repository's copy
+  of the packet (author strings "probe" and "claude-fable-5-2" in that ledger). It reports opening no answer,
+  case or data file, which cannot be verified; nothing of its forecasts was on record before the interruption. The 14 calls from
+  before the interruption are kept in H03-interrupted/. Other self-reported deviations: output trimmed with
+  tr, head, cut, grep and sed, and shell loops for repeated calls, no analysis scripts; T02's confidences sum
+  to 0.97 because one hypothesis call was refused. Tool problem: lens_fit and eclipse_period reject a series
+  given as a plain string; Fable found the list form on T01, T03 and H02 but not on H01, where it ran no lens
+  fit. Recognised (self-reported): none of the scored stars. It thought H04, an open-question packet, was
+  possibly ASASSN-21qj and says that coloured its forecast probabilities there. It is not that star.
+recognised: {T01: no, T02: no, T03: no, T04: no, H01: no, H02: no, H03: no, H04: no}
+wrong_guesses: {H04: ASASSN-21qj}

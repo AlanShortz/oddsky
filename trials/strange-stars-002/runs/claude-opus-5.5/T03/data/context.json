@@ -1,0 +1,142 @@
+{
+  "gaia": {
+    "G": 14.148685,
+    "bp_rp": 1.2305641,
+    "parallax_over_error": 104.67689,
+    "ruwe": 1.0517759,
+    "teff_gspphot": 4983.241,
+    "non_single_star": 0,
+    "distance_pc": 521.1991411256193,
+    "abs_G": 5.563666543123354
+  },
+  "neighbors": [
+    {
+      "sep_arcsec": 7.4181,
+      "phot_g_mean_mag": 20.7145,
+      "bp_rp": 2.3039,
+      "dG": 6.5658,
+      "flux_ratio_G": 0.0024,
+      "ruwe": 1.1159
+    },
+    {
+      "sep_arcsec": 10.9498,
+      "phot_g_mean_mag": 20.0945,
+      "bp_rp": 1.2985,
+      "dG": 5.9458,
+      "flux_ratio_G": 0.0042,
+      "ruwe": 0.9446
+    },
+    {
+      "sep_arcsec": 12.04,
+      "phot_g_mean_mag": 20.9116,
+      "bp_rp": NaN,
+      "dG": 6.7629,
+      "flux_ratio_G": 0.002,
+      "ruwe": NaN
+    },
+    {
+      "sep_arcsec": 15.9752,
+      "phot_g_mean_mag": 17.7447,
+      "bp_rp": 1.571,
+      "dG": 3.596,
+      "flux_ratio_G": 0.0364,
+      "ruwe": 1.0298
+    },
+    {
+      "sep_arcsec": 16.5495,
+      "phot_g_mean_mag": 19.6925,
+      "bp_rp": 0.9644,
+      "dG": 5.5438,
+      "flux_ratio_G": 0.0061,
+      "ruwe": 0.9532
+    },
+    {
+      "sep_arcsec": 18.5988,
+      "phot_g_mean_mag": 19.5273,
+      "bp_rp": 2.4993,
+      "dG": 5.3786,
+      "flux_ratio_G": 0.0071,
+      "ruwe": 1.1123
+    },
+    {
+      "sep_arcsec": 19.8778,
+      "phot_g_mean_mag": 19.0217,
+      "bp_rp": 1.0913,
+      "dG": 4.8731,
+      "flux_ratio_G": 0.0112,
+      "ruwe": 0.9772
+    },
+    {
+      "sep_arcsec": 24.4329,
+      "phot_g_mean_mag": 20.0832,
+      "bp_rp": 0.6758,
+      "dG": 5.9345,
+      "flux_ratio_G": 0.0042,
+      "ruwe": 1.0289
+    },
+    {
+      "sep_arcsec": 24.809,
+      "phot_g_mean_mag": 19.6846,
+      "bp_rp": 1.6167,
+      "dG": 5.5359,
+      "flux_ratio_G": 0.0061,
+      "ruwe": 0.9055
+    },
+    {
+      "sep_arcsec": 25.5244,
+      "phot_g_mean_mag": 20.8152,
+      "bp_rp": 1.8551,
+      "dG": 6.6665,
+      "flux_ratio_G": 0.0022,
+      "ruwe": 1.1093
+    },
+    {
+      "sep_arcsec": 25.6562,
+      "phot_g_mean_mag": 13.9714,
+      "bp_rp": 1.3844,
+      "dG": -0.1772,
+      "flux_ratio_G": 1.1773,
+      "ruwe": 0.9642
+    },
+    {
+      "sep_arcsec": 28.0511,
+      "phot_g_mean_mag": 19.5388,
+      "bp_rp": 0.7874,
+      "dG": 5.3901,
+      "flux_ratio_G": 0.007,
+      "ruwe": 1.0667
+    },
+    {
+      "sep_arcsec": 28.0983,
+      "phot_g_mean_mag": 20.0176,
+      "bp_rp": 1.3483,
+      "dG": 5.8689,
+      "flux_ratio_G": 0.0045,
+      "ruwe": 0.9417
+    },
+    {
+      "sep_arcsec": 28.8158,
+      "phot_g_mean_mag": 20.9712,
+      "bp_rp": 0.4454,
+      "dG": 6.8225,
+      "flux_ratio_G": 0.0019,
+      "ruwe": NaN
+    }
+  ],
+  "gaia_variability": {
+    "summary": {
+      "num_selected_g_fov": 39,
+      "mean_mag_g_fov": 14.200094,
+      "std_dev_mag_g_fov": 0.19781156,
+      "range_mag_g_fov": 0.900612,
+      "skewness_mag_g_fov": 4.0773506,
+      "in_vari_long_period_variable": false,
+      "in_vari_eclipsing_binary": false,
+      "in_vari_rrlyrae": false,
+      "in_vari_cepheid": false,
+      "in_vari_short_timescale": true,
+      "in_vari_agn": false,
+      "in_vari_classification_result": false
+    }
+  }
+}

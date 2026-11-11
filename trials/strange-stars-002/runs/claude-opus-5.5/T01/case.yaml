@@ -1,0 +1,153 @@
+id: T01
+title: Trial star T01
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: 'A single brightening: ATLAS o is 0.95 mag above its 15.23 baseline at day 1977 (first point after
+    a seasonal gap), then declines smoothly back to baseline by ~day 2200; find_excursions finds no other
+    brightening in ATLAS o or c over ~4100 days.'
+  tag: observed
+  calls:
+  - K10
+  - K11
+  - K12
+  - K13
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:51+00:00'
+- id: C2
+  text: 'The event is achromatic from optical to mid-IR: NEOWISE W1 and W2 both brighten by ~0.77 mag
+    at day 2006 with unchanged W1-W2 (-0.08), matching ATLAS o (~0.75 mag) at day 2005; ATLAS c vs o slope
+    1.08, r=0.97; ZTF g and ATLAS o both ~0.13-0.14 mag above baseline near day 2075.'
+  tag: computed
+  calls:
+  - K3
+  - K4
+  - K5
+  - K7
+  - K8
+  - K10
+  - K15
+  - K16
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:52+00:00'
+- id: C3
+  text: 'A static point-source point-lens fit with blending across ATLAS o/c and ZTF g/r gives t0=1987
+    (95%: 1986-1988), tE=102 d (89-116), u0=0.145, chi2/dof=330/384, with similar source fractions in
+    all bands (0.25-0.35); the peak itself fell in the seasonal gap.'
+  tag: computed
+  calls:
+  - K17
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:53+00:00'
+- id: C4
+  text: 'Not a blend: no Gaia source within the WISE (6.1 arcsec), ATLAS or ZTF beams; nearest neighbour
+    is 4.5 mag fainter at 9.7 arcsec, far too faint to produce a 0.8 mag rise. RUWE=1.00.'
+  tag: computed
+  calls:
+  - K2
+  - K20
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:54+00:00'
+- id: C5
+  text: Baseline before (days 300-1860) and after (2400-4400) the event agree to 0.002 mag; star is otherwise
+    quiet (ZTF r robust std 0.011 mag), Gaia Teff ~5800 K, W1-W2 ~ -0.08 (no warm dust). An achromatic,
+    smooth, single, non-repeating rise on a quiet dust-free star points to microlensing rather than an
+    outburst.
+  tag: inferred
+  calls:
+  - K5
+  - K6
+  - K18
+  - K1
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:55+00:00'
+- id: C6
+  text: Minor features (ATLAS o 0.14 mag dip days 378-386; ZTF r 0.07 mag dip days 2192-2206; 354 d and
+    1133 d periods) are at the survey-window/noise level and are probably instrumental.
+  tag: inferred
+  calls:
+  - K2
+  - K11
+  - K19
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:56+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A single blended point-lens microlensing event peaking near day 1987 with tE~100 d; achromatic
+    from g to W2 and fit well by a PSPL model.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  conflicts: []
+  would_falsify: Any repeat brightening in later data; a significant colour change during the event (e.g.
+    W1-W2 or g-r shifting); spectroscopy showing emission lines or a nova/accretion signature; strong
+    deviation of the rise phase from PSPL symmetry.
+  status: live
+  confidence: 0.86
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:09+00:00'
+- id: H2
+  klass: eruptive
+  statement: An intrinsic outburst (e.g. slow accretion or nova-like event) whose decline happened to
+    be grey and smooth.
+  supports:
+  - C1
+  conflicts:
+  - C2
+  - C3
+  - C5
+  would_falsify: Outbursts are usually bluer when brighter and show IR colour changes; achromaticity to
+    W2 and PSPL fit already argue against it. A recurrence or emission lines would support it.
+  status: live
+  confidence: 0.06
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:10+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: Photometric pipeline error producing a spurious brightening.
+  supports: []
+  conflicts:
+  - C2
+  - C4
+  would_falsify: 'Already strongly disfavoured: the brightening appears in three independent facilities
+    (ATLAS, ZTF, NEOWISE) with consistent amplitudes.'
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:11+00:00'
+- id: H4
+  klass: artifact_blend
+  statement: The brightening belongs to an unresolved neighbour or a transient superposed on the star.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: High-resolution imaging showing the brightened source offset from the star; a chromatic
+    event would also favour a distinct transient.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:13+00:00'
+- id: H5
+  klass: normal
+  statement: Nothing to explain.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  would_falsify: The multi-survey 0.9 mag brightening already falsifies this unless all three surveys
+    are wrong.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:14+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

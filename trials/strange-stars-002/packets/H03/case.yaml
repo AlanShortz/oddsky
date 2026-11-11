@@ -1,0 +1,14 @@
+id: H03
+title: Trial star H03
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 1168.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims: []
+hypotheses: []
+predictions: []
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

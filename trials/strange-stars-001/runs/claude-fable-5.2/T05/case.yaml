@@ -1,0 +1,190 @@
+id: T05
+title: Trial star T05
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: 'TESS photometry over 953 days (13290 points, several sectors) is flat: robust scatter 0.44 mmag,
+    equal to the median error 0.5 mmag; 2-98% range 2 mmag; no level change (0.8 sigma).'
+  tag: observed
+  calls:
+  - K1
+  - K3
+  - K10
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:14+00:00'
+- id: C2
+  text: No dips or brightenings in TESS down to a 0.5 mmag / 4 sigma threshold at 0.02 d binning; 5-day
+    bins all within 0.1 mmag of zero except sector-edge bins.
+  tag: computed
+  calls:
+  - K4
+  - K11
+  - K10
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:26+00:00'
+- id: C3
+  text: The strongest TESS periodogram peak (5.60 d) has power 0.007, i.e. explains under 1% of variance;
+    any rotational modulation is below about 0.1 mmag. The formal FAP is not meaningful for per-sector-normalised
+    data.
+  tag: computed
+  calls:
+  - K5
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:27+00:00'
+- id: C4
+  text: NEOWISE W1 is constant to 1.5 mmag robust scatter over 10.4 yr (22 visits, hundreds of exposures
+    per visit, so the star lies near an ecliptic pole).
+  tag: observed
+  calls:
+  - K1
+  - K9
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:28+00:00'
+- id: C5
+  text: W2 fades by about 0.015 mag over the mission with an alternating even/odd-visit pattern, while
+    W1 does not move; the final W2 point (9.419) rests on only 7 exposures. This is the pattern of the
+    known NEOWISE W2 scan-direction / long-term calibration systematics, not of the star.
+  tag: inferred
+  calls:
+  - K6
+  - K7
+  - K9
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:28+00:00'
+- id: C6
+  text: 'Gaia: G=10.54, BP-RP=0.71, Teff about 6040 K, M_G=3.15 at 301 pc: a late-F/early-G star about
+    1.2 mag above the main sequence (turn-off/subgiant or an unresolved pair). RUWE 1.07, but non_single_star=2
+    flags a spectroscopic-binary solution. No neighbour within 24 arcsec; neighbours give under 1% of
+    the TESS flux.'
+  tag: observed
+  calls:
+  - K1
+  - K8
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:29+00:00'
+- id: C7
+  text: W1-W2 is about -0.04, a bare photosphere; there is no infrared excess and no warm dust.
+  tag: computed
+  calls:
+  - K7
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:29+00:00'
+- id: C8
+  text: If the Gaia spectroscopic-binary flag is right, the companion does not eclipse and produces no
+    detectable ellipsoidal or reflection signal in TESS; photometrically this is an ordinary constant
+    star.
+  tag: inferred
+  calls:
+  - K1
+  - K3
+  - K5
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:30+00:00'
+hypotheses:
+- id: H1
+  klass: normal
+  statement: A quiet late-F/early-G turn-off star (possibly a non-eclipsing spectroscopic binary) with
+    nothing to explain at sub-mmag optical and mmag infrared precision.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C6
+  - C7
+  - C8
+  conflicts: []
+  would_falsify: A repeatable dip or modulation above 1 mmag in TESS, or a W1 change above 0.02 mag confirmed
+    in both WISE bands.
+  status: live
+  confidence: 0.8
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:03+00:00'
+- id: H2
+  klass: artifact_instrumental
+  statement: The only variation present, the slow W2 fade with alternating visits and the faint last W2
+    point, is NEOWISE calibration/scan-direction systematics.
+  supports:
+  - C4
+  - C5
+  conflicts: []
+  would_falsify: W1 showing the same fade, or the W2 change appearing in an independent mid-IR instrument.
+  status: live
+  confidence: 0.06
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:04+00:00'
+- id: H3
+  klass: rotation_spots
+  statement: Very low-amplitude spot modulation near 5.6 d, under 0.1 mmag, largely removed by per-sector
+    detrending.
+  supports:
+  - C3
+  conflicts:
+  - C1
+  would_falsify: The 5.6 d peak not recurring in independent sectors, or being absent in less aggressively
+    detrended photometry.
+  status: live
+  confidence: 0.05
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:05+00:00'
+- id: H4
+  klass: eclipse_companion
+  statement: The Gaia spectroscopic companion eclipses or will eclipse at a phase or period not sampled
+    by TESS.
+  supports:
+  - C6
+  conflicts:
+  - C2
+  - C8
+  would_falsify: Continuous photometry covering a full orbital period with no eclipse deeper than 1 mmag.
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:06+00:00'
+- id: H5
+  klass: pulsation
+  statement: Low-amplitude pulsation (gamma Dor / solar-like) below the TESS detection level.
+  supports: []
+  conflicts:
+  - C1
+  - C3
+  would_falsify: No coherent peak above 0.1 mmag at periods under 3 d in short-cadence data.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:07+00:00'
+- id: H6
+  klass: artifact_blend
+  statement: Any residual signal comes from one of the three faint neighbours at 24-26 arcsec inside the
+    TESS pixel.
+  supports: []
+  conflicts:
+  - C6
+  would_falsify: Neighbours contribute under 1% of flux, so any signal above 1% cannot be theirs; no signal
+    seen at all.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:08+00:00'
+- id: H7
+  klass: dust_occultation
+  statement: Rare dust or exocomet transits outside the sampled windows; also stands in for the remaining
+    dusty/eruptive classes, none of which has any support.
+  supports: []
+  conflicts:
+  - C2
+  - C7
+  would_falsify: No dip deeper than 1 mmag in further photometry and continued absence of infrared excess.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:09+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

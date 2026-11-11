@@ -1,0 +1,151 @@
+id: T04
+title: Trial star T04
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: 'TESS photometry over 352 days (12979 points) is flat: robust scatter 0.0007 mag equals the median
+    error 0.0008 mag; 2-day bins stay within +-0.0003 mag.'
+  tag: observed
+  calls:
+  - K1
+  - K3
+  - K10
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:13+00:00'
+- id: C2
+  text: No dips or brightenings above 4 sigma / 1 mmag in TESS; at 3 sigma the only event is a 1-hour
+    2.5 mmag brightening at day 2227.75, at the restart of data after an orbit gap (2-day bin at 2227.86
+    has only 39 points), consistent with a ramp/scattered-light systematic.
+  tag: computed
+  calls:
+  - K6
+  - K12
+  - K10
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:15+00:00'
+- id: C3
+  text: Strongest TESS periodogram peak near 6.0 d has power 0.004; folding at 6.008 d gives phase-bin
+    amplitude <=0.0001 mag, i.e. any rotational modulation is below ~0.1 mmag. No eclipse or transit at
+    that period (primary and secondary depth 0.0000+-0.0001).
+  tag: computed
+  calls:
+  - K7
+  - K11
+  - K14
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:16+00:00'
+- id: C4
+  text: 'Gaia: G=11.46, BP-RP=0.85, Teff~5760 K, M_G=4.81 at 215 pc, RUWE 0.91, no non-single-star flag:
+    a solar-type main-sequence dwarf with single-star astrometry.'
+  tag: observed
+  calls:
+  - K1
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:19+00:00'
+- id: C5
+  text: NEOWISE W1 is constant over 10.4 years (scatter 0.003 mag, below the 0.005 error). W1-W2 = -0.055,
+    photospheric, no warm-dust excess.
+  tag: observed
+  calls:
+  - K4
+  - K8
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:21+00:00'
+- id: C6
+  text: W2 shows a ~0.012 mag fainter step after day ~1500 that alternates visit to visit (odd visits
+    ~10.04, even ~10.024) in step with the alternating number of exposures per visit (~430 vs ~210), and
+    a final 0.07-fainter point built from only 74 exposures. W1 does not follow. This six-month alternation
+    tied to scan geometry is an instrumental/seasonal systematic, not the star.
+  tag: inferred
+  calls:
+  - K5
+  - K13
+  - K4
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:22+00:00'
+- id: C7
+  text: 'No blending concern: nearest Gaia neighbours are 17 and 24 arcsec away and contribute <=0.4%
+    of the flux; TESS CROWDSAP 0.98.'
+  tag: computed
+  calls:
+  - K2
+  - K9
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:23+00:00'
+hypotheses:
+- id: H1
+  klass: normal
+  statement: A quiet solar-type main-sequence star with no variability at the precision of TESS (sub-mmag)
+    or NEOWISE W1.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C7
+  conflicts: []
+  would_falsify: A repeatable dip or modulation >0.5 mmag in TESS, or a W1 change >0.02 mag coherent with
+    W2.
+  status: live
+  confidence: 0.8
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:24+00:00'
+- id: H2
+  klass: artifact_instrumental
+  statement: The only features in the data (alternating W2 offsets, faint last W2 visit, one-hour TESS
+    blip at an orbit restart) are instrumental; the star itself is normal.
+  supports:
+  - C2
+  - C6
+  conflicts: []
+  would_falsify: W1 showing the same alternation or fading as W2 at matching epochs.
+  status: live
+  confidence: 0.1
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:25+00:00'
+- id: H3
+  klass: rotation_spots
+  statement: Very low-amplitude (<0.1 mmag) spot modulation near 6 d could be present but is not established;
+    per-sector normalisation would hide slower rotation.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: The 6-d peak not recurring in independent sectors.
+  status: live
+  confidence: 0.04
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:26+00:00'
+- id: H4
+  klass: eclipse_companion
+  statement: A shallow transit or long-period eclipse missed by the searches (eclipse_period tool failed)
+    cannot be excluded.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: No periodic dip >0.3 mmag in a dedicated box search of the TESS data.
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:27+00:00'
+- id: H5
+  klass: dust_occultation
+  statement: The slow W2-only fading could in principle be real circumstellar change, but W1 and colour
+    level argue against.
+  supports: []
+  conflicts:
+  - C5
+  - C6
+  would_falsify: W1 remaining flat while W2 alternation tracks exposure count.
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:28+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

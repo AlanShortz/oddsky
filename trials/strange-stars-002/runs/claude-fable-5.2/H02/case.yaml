@@ -1,0 +1,279 @@
+id: H02
+title: Trial star H02
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 2955.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: Three deep, short dips are seen in ZTF r at days ~1956, ~2342 and ~2727-2729 (depth 1.5-1.65 mag),
+    separated by 386 and ~386 days; ATLAS o independently records the third (1.5 mag at day 2729) and
+    the egress of the second (day 2346).
+  tag: observed
+  calls:
+  - K3
+  - K5
+  - K6
+  - K7
+  - K9
+  - K10
+  - K14
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:35+00:00'
+- id: C2
+  text: The well-sampled dip (day 1949-1958) has a ~7 day ingress, a rounded/flat bottom of ~4-5 days
+    near 16.2-16.4 in r, and total duration ~12-14 days; out of eclipse the star is steady to ~0.02-0.04
+    mag.
+  tag: observed
+  calls:
+  - K7
+  - K6
+  - K22
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:36+00:00'
+- id: C3
+  text: 'The dip is deeper in the blue: 2.1 mag in ZTF g versus 1.5-1.65 mag in r and ~1.5 in ATLAS o,
+    so the light that is removed is bluer than the light that remains.'
+  tag: computed
+  calls:
+  - K4
+  - K8
+  - K3
+  - K5
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:37+00:00'
+- id: C4
+  text: 'Period is ~385.6 d (fold: 45 in-eclipse points, median depth 1.38 mag, nothing at phase 0.5).
+    The eclipse search returned 192.3 d, but points at half-period phase (ATLAS o day 2530.5, ATLAS c
+    day 2924.0, ZTF r day 2925.3, all within ~5 d of where a 193-d eclipse would centre) are at normal
+    brightness, so the true period is the ~386 d one.'
+  tag: inferred
+  calls:
+  - K18
+  - K22
+  - K27
+  - K36
+  - K37
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:38+00:00'
+- id: C5
+  text: ATLAS o at day 1575 is ~0.2 mag faint and recovering by day 1577-1583, consistent with the egress
+    of an earlier eclipse predicted at day ~1570 by the 385.6 d ephemeris.
+  tag: inferred
+  calls:
+  - K11
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:38+00:00'
+- id: C6
+  text: After the day-1956 eclipse the star stays 0.05 mag fainter (7.8 sigma) and fades to +0.12 mag
+    by day 2030-2053 before returning to baseline next season; smaller post-eclipse deficits (0.03-0.10
+    mag) follow the other two eclipses. Something extended trails the occulter.
+  tag: computed
+  calls:
+  - K19
+  - K6
+  - K22
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:39+00:00'
+- id: C7
+  text: The object is very red and infrared-bright (G=14.8, BP-RP=2.0, W1~8.0, W2~7.3, so W1-W2~0.7 from
+    separate exposures) with slow 0.15 mag W2 drift; WISE is near saturation and 94% of exposures were
+    cut, so the IR colour is uncertain. RUWE=1.81 suggests an unresolved companion. A G=18.5 neighbour
+    at 3.0 arcsec (3% flux) cannot produce 1.6 mag dips.
+  tag: observed
+  calls:
+  - K1
+  - K2
+  - K16
+  - K17
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:40+00:00'
+- id: C8
+  text: A strictly periodic, short (3% of the period), deep, blue-deeper eclipse with a dusty IR-bright
+    system is best read as a long-period eclipsing binary in which the hotter component is hidden by a
+    cooler giant companion or by an opaque dusty disk around a companion.
+  tag: inferred
+  calls:
+  - K22
+  - K8
+  - K16
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:41+00:00'
+hypotheses:
+- id: H1
+  klass: eclipse_companion
+  statement: 'A ~385.6-day eclipsing binary: every orbit the hotter, brighter component is hidden for
+    ~12 days by a cooler giant companion or by a dusty disk around the companion, removing ~78% of the
+    r light and ~86% of the g light; dusty material trails the occulter.'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  - C7
+  - C8
+  conflicts: []
+  would_falsify: No dip of > 0.5 mag within 5 days of day 3112.5 (and of day 3498) when sampled; dips
+    at irregular times or with strongly varying depth.
+  status: live
+  confidence: 0.74
+  author: claude-fable-5.2
+  at: '2026-11-11T00:15:04+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: An orbiting circumstellar dust clump or disk warp (no stellar-mass companion) crosses the
+    star every ~386 days.
+  supports:
+  - C1
+  - C3
+  - C6
+  - C7
+  conflicts:
+  - C2
+  would_falsify: Depth and duration identical from cycle to cycle over many orbits; radial velocities
+    showing a stellar-mass companion on a 386 d orbit.
+  status: live
+  confidence: 0.12
+  author: claude-fable-5.2
+  at: '2026-11-11T00:15:07+00:00'
+- id: H3
+  klass: yso_dipper
+  statement: A young disk-bearing star with periodic occultations by inner-disk structure (IR excess,
+    red colour).
+  supports:
+  - C3
+  - C7
+  conflicts:
+  - C2
+  - C4
+  would_falsify: Strict 386 d periodicity with constant depth; no irregular dipping out of eclipse; no
+    youth indicators in a spectrum.
+  status: live
+  confidence: 0.05
+  author: claude-fable-5.2
+  at: '2026-11-11T00:15:08+00:00'
+- id: H4
+  klass: dust_formation
+  statement: Self-made dust episodes (R CrB / DY Per-like) that happen to be evenly spaced.
+  supports:
+  - C3
+  - C7
+  conflicts:
+  - C1
+  - C2
+  - C4
+  would_falsify: A fourth dip on the 385.6 d ephemeris with the same symmetric 12-day shape.
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:15:09+00:00'
+- id: H5
+  klass: pulsation
+  statement: Long-period variable with sharp minima.
+  supports: []
+  conflicts:
+  - C2
+  - C4
+  would_falsify: Flat light curve between 12-day dips (already seen).
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:15:09+00:00'
+- id: H6
+  klass: artifact_blend
+  statement: The eclipses belong to a blended neighbour.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: Dips of 1.6 mag exceed what a 3% or even 29% neighbour can cause (already seen); no Gaia
+    source within 2 arcsec.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:15:10+00:00'
+- id: H7
+  klass: artifact_instrumental
+  statement: Instrumental artifact.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: ZTF and ATLAS agree on the same dips (already seen).
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:15:11+00:00'
+- id: H8
+  klass: microlensing
+  statement: Not a brightening; included only for completeness.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: Repeating dimmings (already seen).
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:15:12+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'An eclipse recurs near day 3112.5: the faintest ZTF r point between days 3105 and 3120 is
+    fainter than 15.3.'
+  check:
+    series: ZTF:ZTF_r
+    start: 3105.0
+    end: 3120.0
+    statistic: faintest
+    op: '>'
+    value: 15.3
+  probability: 0.78
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:15:13+00:00'
+- id: P2
+  hypothesis: H1
+  statement: 'Before the next eclipse the star is quiet: median ZTF r between days 3040 and 3100 lies
+    brighter than 14.85.'
+  check:
+    series: ZTF:ZTF_r
+    start: 3040.0
+    end: 3100.0
+    statistic: median
+    op: <
+    value: 14.85
+  probability: 0.9
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:15:14+00:00'
+- id: P3
+  hypothesis: H1
+  statement: 'Post-eclipse trailing dimming recurs: median ZTF r between days 3125 and 3165 is fainter
+    than 14.80 (baseline ~14.76).'
+  check:
+    series: ZTF:ZTF_r
+    start: 3125.0
+    end: 3165.0
+    statistic: median
+    op: '>'
+    value: 14.8
+  probability: 0.5
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:15:14+00:00'
+- id: P4
+  hypothesis: H1
+  statement: 'The eclipse is also caught by ATLAS: the faintest ATLAS o point between days 3105 and 3120
+    is fainter than 15.1 (baseline ~14.58).'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3105.0
+    end: 3120.0
+    statistic: faintest
+    op: '>'
+    value: 15.1
+  probability: 0.65
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:15:15+00:00'
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

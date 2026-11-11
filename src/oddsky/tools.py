@@ -240,6 +240,7 @@ class Toolbox:
         does. Combine instruments (e.g. ["ZTF:ZTF_r", "GAIA:G"]) for a long-baseline ephemeris."""
         s = self.store(case)
         dims, quiets, t_all = [], [], []
+        series = [series] if isinstance(series, str) else list(series)  # one name is fine; Trial 002 showed a bare string was read letter by letter
         for ser in series:
             df = self._frame(s, ser)
             if df.empty:
@@ -349,6 +350,7 @@ class Toolbox:
         much the parallax model improves on the static one. A static fit much worse than the parallax fit means the light curve
         is asymmetric; a peak with no points means t0 and A_max rest on the wings. Microlensing is achromatic: fit the bands
         together and compare their residuals."""
+        series = [series] if isinstance(series, str) else list(series)
         s = self.store(case)
         c = s.load()
         a, b = self._t(start), self._t(end, end=True)

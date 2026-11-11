@@ -1,0 +1,177 @@
+id: T01
+title: Trial star T01
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: 'For ~1850 days before and ~2200 days after one event the star is constant: ZTF g/r robust scatter
+    0.010-0.014 mag, ATLAS o median identical before (d300-1850) and after (d2400-4400) to 0.002 mag,
+    no excursions after day 2300.'
+  tag: computed
+  calls:
+  - K1
+  - K16
+  - K20
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:43+00:00'
+- id: C2
+  text: 'A single brightening: ATLAS o is 0.97 mag above baseline at day 1977 (first point after a seasonal
+    gap from day 1858) and declines smoothly and monotonically back to baseline by about day 2200; ATLAS
+    c, ZTF g and r show the same decline. The peak itself fell in the gap.'
+  tag: observed
+  calls:
+  - K5
+  - K6
+  - K9
+  - K10
+  - K11
+  - K12
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:45+00:00'
+- id: C3
+  text: The NEOWISE visit at day 2006 is brighter by 0.74 mag in W1 and 0.73 mag in W2, matching ATLAS
+    o (0.75 mag brighter) at the same date; W1-W2 colour at that visit (-0.078) equals the median (-0.078).
+    No warm-dust colour change.
+  tag: computed
+  calls:
+  - K3
+  - K4
+  - K9
+  - K15
+  - K21
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:50+00:00'
+- id: C4
+  text: 'The last pre-gap points hint the rise had begun: ZTF r at days 1844-1849 is 0.035 mag brighter
+    than its baseline (3.9 sigma), ZTF g ~0.02-0.03 brighter.'
+  tag: computed
+  calls:
+  - K17
+  - K11
+  - K12
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:54+00:00'
+- id: C5
+  text: 'One point-source point-lens curve fits ATLAS o+c, ZTF g+r and W1 jointly with chi2/dof = 366/389:
+    t0 ~ day 1987, tE ~ 94 d (82-106), u0 ~ 0.17, with a similar blended source fraction (0.28-0.38) in
+    all five bands, i.e. the event is achromatic from g to 4.6 micron. ATLAS c vs o slope during the decline
+    is 1.10 (r=0.97).'
+  tag: computed
+  calls:
+  - K23
+  - K22
+  - K18
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:57+00:00'
+- id: C6
+  text: No Gaia neighbour within 9.7 arcsec, all skeptic blend/saturation checks pass, RUWE 1.00; three
+    independent instruments (ATLAS, ZTF, WISE) saw the event, so it is not an artifact or a neighbour.
+  tag: inferred
+  calls:
+  - K2
+  - K14
+  author: claude-fable-5.2
+  at: '2026-11-11T00:11:00+00:00'
+- id: C7
+  text: The source is a distant (parallax/error ~1), reddened G-type star of G=15.4; a smooth, symmetric-model,
+    achromatic, non-repeating ~1 mag brightening lasting ~1 year on such a star is best explained by gravitational
+    microlensing with a long timescale (possibly a massive or slow lens).
+  tag: inferred
+  calls:
+  - K1
+  - K23
+  author: claude-fable-5.2
+  at: '2026-11-11T00:11:02+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A single long-timescale (tE ~ 60-105 d) microlensing event peaking near day 1985 in a seasonal
+    gap, magnifying a distant reddened G-type source by a factor >= 2.5; achromatic from g to W2.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  - C7
+  conflicts: []
+  would_falsify: A second brightening at any later date; a chromatic peak (colour change > 0.1 mag between
+    optical and W1/W2 at the same epoch); emission lines or outburst spectrum; residuals from a point-lens
+    (with parallax) curve well above the noise.
+  status: live
+  confidence: 0.86
+  author: claude-fable-5.2
+  at: '2026-11-11T00:12:36+00:00'
+- id: H2
+  klass: eruptive
+  statement: A single slow outburst (e.g. Be-star disk episode or accretion event) that happens to be
+    nearly achromatic from g to 4.6 micron and fits a lens curve.
+  supports:
+  - C2
+  conflicts:
+  - C3
+  - C5
+  - C1
+  would_falsify: No repeat outburst in a decade of further monitoring; no emission lines in a spectrum;
+    colour constant through any future event.
+  status: live
+  confidence: 0.07
+  author: claude-fable-5.2
+  at: '2026-11-11T00:12:37+00:00'
+- id: H3
+  klass: artifact_blend
+  statement: The brightening belongs to an unresolved or nearby variable (e.g. a transient within the
+    beams) rather than the Gaia star.
+  supports: []
+  conflicts:
+  - C6
+  - C5
+  would_falsify: Difference-image centroid of the event coincident with the target; equal fractional brightening
+    in beams of 2 to 8 arcsec (already seen).
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:12:38+00:00'
+- id: H4
+  klass: artifact_instrumental
+  statement: Pipeline or detector artifact.
+  supports: []
+  conflicts:
+  - C6
+  would_falsify: Three independent instruments agree on the same curve (already seen).
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:12:40+00:00'
+- id: H5
+  klass: dust_occultation
+  statement: The baseline is an obscured state and the event a temporary clearing of circumstellar dust.
+  supports: []
+  conflicts:
+  - C3
+  - C5
+  - C1
+  would_falsify: Achromatic change including 3.4-4.6 micron (already seen); flat baseline for years on
+    both sides.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:12:41+00:00'
+- id: H6
+  klass: pulsation
+  statement: A long-period or irregular intrinsic variation.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: No repeat; constant to 0.01 mag outside the event.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:12:42+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

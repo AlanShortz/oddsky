@@ -1,0 +1,170 @@
+id: T01
+title: Trial star T01
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: 'Visual brightness ranges ~6.6 to ~13.9 mag (2-98%: 7.3 mag) over a 63,610-day (174 yr) record
+    from 500+ independent observers; V, B, R, I, TG CCD series show the same multi-magnitude swings.'
+  tag: observed
+  calls:
+  - K1
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:05+00:00'
+- id: C2
+  text: Dominant period is 427.7 d in the visual series (power 0.65) and ~434 d in the shorter V series;
+    it is flagged as matching a spectral-window peak only because the star itself imposes the observing
+    cadence (more observers near maximum), and the cycle is directly visible in the light curve.
+  tag: computed
+  calls:
+  - K4
+  - K5
+  - K14
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:06+00:00'
+- id: C3
+  text: 'Recent cycles show a sawtooth Mira shape: slow ~250-d decline to ~14.3 and a fast ~100-d rise;
+    successive maxima alternate bright (~7.2-7.3) and faint (~8.8-9.0).'
+  tag: observed
+  calls:
+  - K14
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:06+00:00'
+- id: C4
+  text: The single V dip flagged by find_excursions (depth 6.3 mag near day 58680) is an ordinary pulsation
+    minimum (V~14.9) followed by the normal rise to V~7.4, confirmed by many visual observers; it is not
+    a discrete event.
+  tag: inferred
+  calls:
+  - K9
+  - K12
+  - K13
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:07+00:00'
+- id: C5
+  text: All optical bands move together (dB/dV=1.07, r=0.98; dR/dV=0.76; dI/dV=0.58), amplitude decreasing
+    to the red as expected for a cool pulsator whose visual light is modulated by temperature and molecular
+    opacity.
+  tag: computed
+  calls:
+  - K2
+  - K7
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:08+00:00'
+- id: C6
+  text: 'Gaia: extremely red (BP-RP=6.0), G range 3.95 mag over 31 transits, classified long-period variable,
+    d~600 pc, M_G~0.4 (uncorrected, strongly underestimating bolometric luminosity): a cool AGB giant.
+    RUWE 1.42 is plausibly photocentre motion of a large variable star.'
+  tag: inferred
+  calls:
+  - K1
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:09+00:00'
+- id: C7
+  text: 'No blend: neighbours within 42 arcsec contribute <0.2% of G flux; TESS dips mostly coincide with
+    momentum dumps/sector edges and TESS short periods (7.5 d, power 0.07) are weak, consistent with systematics
+    on a slowly varying giant.'
+  tag: computed
+  calls:
+  - K2
+  - K6
+  - K8
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:10+00:00'
+- id: C8
+  text: The late record (days 43000-63610) has a median 0.8 mag fainter than the first 20000 days and
+    a changepoint is reported near day 20929; this most likely reflects changed sampling (early observers
+    followed only the bright phase; later ones reach minimum) rather than a secular fade, though real
+    slow changes of mean light cannot be excluded.
+  tag: inferred
+  calls:
+  - K3
+  - K11
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:11+00:00'
+hypotheses:
+- id: H1
+  klass: pulsation
+  statement: Mira-type AGB long-period variable pulsating with P~427 d, ~7 mag visual amplitude, alternating
+    bright/faint maxima; stable over 174 years.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  - C7
+  conflicts: []
+  would_falsify: Loss of the ~427 d periodicity in future data; a spectrum of a hot or non-giant star;
+    amplitude not decreasing toward the infrared.
+  status: live
+  confidence: 0.9
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:30+00:00'
+- id: H2
+  klass: dust_formation
+  statement: AGB dust-formation episodes superimposed on the pulsation contribute to the alternating depth
+    of maxima or to the fainter late-epoch median.
+  supports:
+  - C8
+  conflicts: []
+  would_falsify: Mean light and maxima, phased on the 427 d cycle, show no secular trend once sampling
+    near minimum is accounted for; no infrared colour change accompanying faint maxima.
+  status: live
+  confidence: 0.04
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:50+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: An unresolved companion (hinted by RUWE 1.42) modulates the light on top of pulsation.
+  supports:
+  - C6
+  conflicts: []
+  would_falsify: No periodic residual after removing the pulsation; Gaia DR4 astrometry shows no orbital
+    solution.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:51+00:00'
+- id: H4
+  klass: artifact_instrumental
+  statement: The apparent long-term change of median (0.8 mag fainter late) and the TESS short-timescale
+    dips are sampling/instrument artifacts; nothing beyond pulsation is real.
+  supports:
+  - C7
+  - C8
+  conflicts: []
+  would_falsify: Secular change persists in maxima-only and minima-only comparisons across epochs.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:54+00:00'
+- id: H5
+  klass: eruptive
+  statement: Symbiotic-type accretion outbursts from a hot companion add to the light.
+  supports: []
+  conflicts: []
+  would_falsify: No brightening departing from the 427 d cycle; colours stay red at all phases.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:55+00:00'
+- id: H6
+  klass: normal
+  statement: Nothing to explain.
+  supports: []
+  conflicts: []
+  would_falsify: The 7-mag periodic variation seen by 500 observers already falsifies this.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:57+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

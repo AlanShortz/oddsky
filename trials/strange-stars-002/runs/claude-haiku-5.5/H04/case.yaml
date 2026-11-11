@@ -1,0 +1,277 @@
+id: H04
+title: Trial star H04
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 1730.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: 'ASAS-SN V is flat through the data: robust std 0.036 mag, slope -0.003 mag/yr, no excursion above
+    4 sigma or 0.05 mag in 1-day bins; a 0.05 mag brightening step near MJD 1513 is significant at 7 sigma
+    but small.'
+  tag: computed
+  calls:
+  - K3
+  - K4
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:22+00:00'
+- id: C2
+  text: Gaia G is flat at 13.52 mag across 2014-2017 (robust std 0.010 mag, no excursions), RUWE 1.02,
+    single-star-like astrometry.
+  tag: observed
+  calls:
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:23+00:00'
+- id: C3
+  text: 'Before MJD 1460 the mid-infrared is photospheric: NEOWISE W1-W2 is about -0.07 mag over nine
+    visits and no positive W1/W2 excess is found over MJD 200-1730 excluding the last visit.'
+  tag: computed
+  calls:
+  - K5
+  - K6
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:24+00:00'
+- id: C4
+  text: 'At the final visit (MJD 1621) the star is brighter in the mid-infrared: W1 10.99 (+0.20 mag vs
+    baseline 11.19) and W2 10.82 (+0.45 mag), so W1-W2 rises from about -0.07 to +0.17; the excess has
+    a two-band colour temperature near 990 K.'
+  tag: observed
+  calls:
+  - K9
+  - K10
+  - K14
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:25+00:00'
+- id: C5
+  text: 'The mid-IR brightening is sustained over at least 9 days: 18 single exposures from MJD 1620.5
+    to 1629.8 stay at W1 about 10.97 to 11.02 and W2 about 10.80 to 10.85, so it is not a single bad exposure.'
+  tag: observed
+  calls:
+  - K11
+  - K12
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:26+00:00'
+- id: C6
+  text: 'The optical does not dim during the infrared brightening: ASAS-SN V in MJD 1600-1660 is 0.04
+    mag brighter than in MJD 1000-1500 (4 sigma); no optical extinction has appeared by the cutoff.'
+  tag: computed
+  calls:
+  - K13
+  - K15
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:27+00:00'
+- id: C7
+  text: No Gaia source lies within the 6.1 arcsec WISE beam, so the late infrared brightening cannot be
+    a neighbour inside the same WISE beam; the neighbours inside the 16 arcsec ASAS-SN beam contribute
+    about 20 percent of the optical flux, which dilutes optical amplitudes.
+  tag: computed
+  calls:
+  - K2
+  - K7
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:28+00:00'
+- id: C8
+  text: The star is a cool main-sequence or subgiant-like K star (Teff about 4770 K, absolute G 6.55,
+    about 250 pc) with no AGB or luminous-star signature, so a dust-producing AGB or post-AGB episode
+    is unlikely.
+  tag: inferred
+  calls:
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:29+00:00'
+hypotheses:
+- id: H1
+  klass: collision_debris
+  statement: 'A collision produced warm dust: an IR excess (about 990 K) appeared near MJD 1460-1620,
+    and optical extinction by the dust is expected to follow later.'
+  supports:
+  - C4
+  - C5
+  - C7
+  conflicts: []
+  would_falsify: No optical dimming over the next few years while the IR excess fades, or the excess disappearing
+    within weeks.
+  status: live
+  confidence: 0.45
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:39+00:00'
+- id: H2
+  klass: eruptive
+  statement: An IR flare or outburst (accretion or flare-driven) brightened the star in the mid-infrared
+    at MJD 1621, with no lasting optical change.
+  supports:
+  - C4
+  - C5
+  conflicts:
+  - C3
+  would_falsify: Persistent warm excess (rather than a decaying pulse) in later NEOWISE visits.
+  status: live
+  confidence: 0.12
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:41+00:00'
+- id: H3
+  klass: yso_dipper
+  statement: A young disk-bearing star whose inner-disk emission brightened in the IR; the Gaia colour
+    is consistent with a young K star.
+  supports:
+  - C4
+  conflicts:
+  - C7
+  would_falsify: No further warm excess or a lack of youth indicators.
+  status: live
+  confidence: 0.09
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:42+00:00'
+- id: H4
+  klass: artifact_instrumental
+  statement: The final NEOWISE visit has a pipeline or detector problem; the 18 exposures agree with each
+    other but share the same visit systematics.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: Another visit with the same excess after the cutoff.
+  status: live
+  confidence: 0.08
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:43+00:00'
+- id: H5
+  klass: dust_formation
+  statement: The star itself is forming dust, as in an R CrB or AGB-like episode.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: Absence of an optical decline; a K-type main-sequence-like star is unlikely to be a dust
+    maker.
+  status: live
+  confidence: 0.07
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:44+00:00'
+- id: H6
+  klass: dust_occultation
+  statement: Circumstellar dust passing in front would dim the star optically; it has not.
+  supports: []
+  conflicts:
+  - C5
+  would_falsify: Optical dimming in later ASAS-SN data.
+  status: live
+  confidence: 0.04
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:45+00:00'
+- id: H7
+  klass: artifact_blend
+  statement: A neighbour inside the ASAS-SN beam causes the optical signal; the IR brightening belongs
+    to a neighbour outside the WISE beam.
+  supports:
+  - C6
+  conflicts:
+  - C4
+  would_falsify: A neighbour identified as the IR source in higher-resolution data.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:46+00:00'
+- id: H8
+  klass: eclipse_companion
+  statement: A companion disk eclipses the star at intervals; no optical signal has appeared.
+  supports: []
+  conflicts:
+  - C5
+  would_falsify: Optical dips at a regular period.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:47+00:00'
+- id: H9
+  klass: normal
+  statement: The late IR change is noise or a systematic and the star is ordinary.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: Repeat of the IR excess in later visits.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:48+00:00'
+- id: H10
+  klass: rotation_spots
+  statement: Starspots would not raise mid-IR flux; rotation is a weak explanation.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: Optical rotation modulation at amplitude above the flat ASAS-SN level.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:49+00:00'
+- id: H11
+  klass: pulsation
+  statement: Pulsation is unlikely for a K dwarf with a flat optical light curve and no IR excess before
+    the event.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: Coherent optical period above 0.1 mag.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:50+00:00'
+- id: H12
+  klass: microlensing
+  statement: A lens passing in front would be achromatic and optical; the IR change is not.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: Optical brightening in the same window matching an IR shape.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:51+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'The median of NEOWISE:W1 between MJD 1730 and 2100 is below 11.10 mag: the mid-IR excess
+    persists at or above the level seen at MJD 1621.'
+  check:
+    series: NEOWISE:W1
+    start: 1730.0
+    end: 2100.0
+    statistic: median
+    op: <
+    value: 11.1
+  probability: 0.5
+  author: claude-haiku-5.5
+  registered_at: '2026-11-11T00:09:56+00:00'
+- id: P2
+  hypothesis: H1
+  statement: 'The median of ASAS-SN:V between MJD 1730 and 2100 is fainter than 13.42 mag: optical extinction
+    begins after the IR excess, as a collision-debris picture expects.'
+  check:
+    series: ASAS-SN:V
+    start: 1730.0
+    end: 2100.0
+    statistic: median
+    op: '>'
+    value: 13.42
+  probability: 0.3
+  author: claude-haiku-5.5
+  registered_at: '2026-11-11T00:10:00+00:00'
+- id: P3
+  hypothesis: H1
+  statement: 'The median of NEOWISE:W2 between MJD 1730 and 2100 is below 11.05 mag: the W2 excess stays
+    well above the photospheric level.'
+  check:
+    series: NEOWISE:W2
+    start: 1730.0
+    end: 2100.0
+    statistic: median
+    op: <
+    value: 11.05
+  probability: 0.35
+  author: claude-haiku-5.5
+  registered_at: '2026-11-11T00:10:01+00:00'
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

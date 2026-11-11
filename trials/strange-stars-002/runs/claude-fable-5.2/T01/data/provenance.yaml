@@ -1,0 +1,48 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  rows_raw: 11
+  rows_kept: 11
+  cuts: []
+  status: ok
+gaia_epoch:
+  archive: ESA Gaia epoch photometry (datalink; DR4 if published, else DR3)
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  status: empty
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  rows_raw: 268
+  rows_kept: 40
+  cuts:
+  - 'W1: qual_frame > 0 removed 7'
+  - 'W1: saa_sep > 0 removed 53'
+  - 'W1: moon_masked == ''00'' removed 29'
+  - 'W2: qual_frame > 0 removed 7'
+  - 'W2: saa_sep > 0 removed 53'
+  - 'W2: moon_masked == ''00'' removed 29'
+  status: ok
+neowise_exp:
+  archive: IRSA Gator neowiser_p1bs_psd (single exposures)
+  rows_raw: 268
+  rows_kept: 358
+  cuts:
+  - 'W1: qual_frame > 0 removed 7'
+  - 'W1: saa_sep > 0 removed 53'
+  - 'W1: moon_masked == ''00'' removed 29'
+  - 'W2: qual_frame > 0 removed 7'
+  - 'W2: saa_sep > 0 removed 53'
+  - 'W2: moon_masked == ''00'' removed 29'
+  status: ok
+ztf:
+  archive: IRSA ZTF light curve service
+  rows_raw: 770
+  rows_kept: 770
+  cuts: []
+  status: ok
+atlas:
+  archive: ATLAS forced photometry (fallingstar-data.com), reduced images
+  rows_raw: 3943
+  rows_kept: 3271
+  cuts: []
+  status: ok

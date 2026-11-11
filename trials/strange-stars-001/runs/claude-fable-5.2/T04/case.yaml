@@ -1,0 +1,214 @@
+id: T04
+title: Trial star T04
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: The record spans 88,494 days (~242 years) with 307,358 visual estimates from over 1,300 observers.
+    The star normally sits near visual magnitude 6.0 and stays there for years at a time.
+  tag: observed
+  calls:
+  - K3
+  - K4
+  - K5
+  - K10
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:20+00:00'
+- id: C2
+  text: 'It drops at irregular intervals by 1 to 8+ magnitudes: 173 flagged excursions, the deepest ~6-7
+    mag in visual and to V ~15 in CCD data. Declines are fast (typically 20-45 days to minimum), recoveries
+    slower (40-200 days). Intervals between declines range from under a year to ~10 years of unbroken
+    maximum (e.g. days ~51100-54900).'
+  tag: computed
+  calls:
+  - K5
+  - K7
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:22+00:00'
+- id: C3
+  text: A prolonged deep minimum began at day ~81460 (V 5.8 to 14 in ~100 days), lasted about 3,500 days
+    with several partial recoveries and re-fadings, and the star only returned to V ~6.2 around day 85700-86500.
+    The Gaia mean (G 8.8, red BP-RP 1.68) was taken during this minimum and does not describe the star's
+    normal state.
+  tag: observed
+  calls:
+  - K6
+  - K3
+  - K4
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:23+00:00'
+- id: C4
+  text: 'The fades are nearly grey across optical bands: dB/dV 1.05, dR/dV 0.97, dI/dV 0.88 with r=0.99,
+    flatter than interstellar reddening. That points to large grains or optically thick clumps covering
+    the star rather than thin small-grain dust.'
+  tag: computed
+  calls:
+  - K4
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:24+00:00'
+- id: C5
+  text: 'At maximum the star is not constant: a ~0.3 mag wave lasting ~25 days is seen simultaneously
+    in visual, V and TESS near day 86110-86137, and V periodogram at maximum has power near 100 d (not
+    a clean period). This is low-amplitude semi-regular pulsation of a luminous star. The TESS amplitude
+    (1.1 mag) is larger than ground-based (0.3 mag) and is not trusted; one TESS dip sits on a sector
+    edge.'
+  tag: inferred
+  calls:
+  - K8
+  - K9
+  - K11
+  - K12
+  - K4
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:26+00:00'
+- id: C6
+  text: NEOWISE is saturated in all visits and 99% of exposures were cut, so no infrared conclusion is
+    drawn. Gaia RUWE 12.8 is explained by huge variability during the Gaia epoch rather than requiring
+    a companion. Neighbours contribute ~0% of the flux; blends are excluded.
+  tag: inferred
+  calls:
+  - K4
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:27+00:00'
+- id: C7
+  text: 'Fast, irregular, non-periodic, very deep declines from a stable maximum with slow recoveries,
+    in a luminous star (too bright in absolute terms even using the dimmed Gaia magnitude: M_G -0.4 at
+    minimum implies about -4 or brighter at maximum, though parallax is poor), are the defining behaviour
+    of R Coronae Borealis stars: carbon soot condensing in puffs ejected toward us. Maximum ~6.0, minimum
+    ~15, a ~240-year visual record and a decade-long minimum ending recently match R CrB itself.'
+  tag: inferred
+  calls:
+  - K3
+  - K5
+  - K6
+  - K7
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:27+00:00'
+hypotheses:
+- id: H1
+  klass: dust_formation
+  statement: 'R Coronae Borealis type star: the star ejects puffs of carbon-rich gas that condense into
+    soot along our line of sight, causing sudden deep fades and slow recoveries at random intervals.'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C7
+  conflicts: []
+  would_falsify: Fades shown to be strictly periodic; spectrum hydrogen-rich and oxygen-rich with no carbon;
+    fades absent at minimum in infrared-corrected bolometric light being due to the star itself cooling.
+  status: live
+  confidence: 0.93
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:28+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: Dust orbiting the star (not freshly made by it) passes in front.
+  supports:
+  - C4
+  conflicts:
+  - C2
+  would_falsify: Declines show no orbital periodicity over 242 years and have the fast-in/slow-out shape
+    of forming and dispersing dust.
+  status: live
+  confidence: 0.025
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:29+00:00'
+- id: H3
+  klass: pulsation
+  statement: A large-amplitude pulsator such as a Mira.
+  supports:
+  - C5
+  conflicts:
+  - C1
+  - C2
+  would_falsify: No regular period; years of flat maximum.
+  status: live
+  confidence: 0.015
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:31+00:00'
+- id: H4
+  klass: yso_dipper
+  statement: A young star with variable circumstellar extinction (UX Ori-like).
+  supports:
+  - C4
+  conflicts:
+  - C7
+  would_falsify: Luminosity far above a young dwarf; 8 mag depth is beyond UX Ori behaviour.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:32+00:00'
+- id: H5
+  klass: eclipse_companion
+  statement: Eclipses by a companion or its disk.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: No periodicity; variable depth and duration.
+  status: live
+  confidence: 0.005
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:33+00:00'
+- id: H6
+  klass: eruptive
+  statement: An eruptive variable seen mostly in outburst.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: Bright state is the stable one for decades; events are fades.
+  status: live
+  confidence: 0.005
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:35+00:00'
+- id: H7
+  klass: artifact_blend
+  statement: Neighbour.
+  supports: []
+  conflicts:
+  - C6
+  would_falsify: No neighbour with measurable flux.
+  status: live
+  confidence: 0.003
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:36+00:00'
+- id: H8
+  klass: artifact_instrumental
+  statement: Instrumental.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: 1,352 independent observers over 242 years.
+  status: live
+  confidence: 0.003
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:37+00:00'
+- id: H9
+  klass: rotation_spots
+  statement: Spots.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: 8 mag amplitude.
+  status: live
+  confidence: 0.002
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:38+00:00'
+- id: H10
+  klass: normal
+  statement: Nothing to explain.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: 8 mag fades.
+  status: live
+  confidence: 0.002
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:39+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

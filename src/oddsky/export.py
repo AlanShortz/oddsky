@@ -128,4 +128,10 @@ def export_web(out: Path | None = None) -> list[str]:
     for f in sorted(trials.glob("*/results/*.json")) if trials.exists() else []:
         scorecards.append(json.loads(f.read_text()))
     (out / "index.json").write_text(json.dumps({"cases": index, "scorecards": scorecards}, default=_jsonable, indent=1))
+    from .trials.sky import trial_payload
+
+    page = json.loads((trials / "page.json").read_text()) if (trials / "page.json").exists() else {}
+    payloads = [trial_payload(m.parent) for m in sorted(trials.glob("*/manifest.json"))] if trials.exists() else []
+    (out / "trials.json").write_text(json.dumps(_clean(json.loads(json.dumps({"trials": payloads, "page": page}, default=_jsonable))),
+                                                allow_nan=False, separators=(",", ":")))
     return [i["id"] for i in index]

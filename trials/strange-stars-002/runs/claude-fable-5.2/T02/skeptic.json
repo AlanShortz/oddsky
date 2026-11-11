@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-11-11T00:09:24+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "0 fail, 3 warn, 9 pass, 1 skipped",
+  "counts": {
+    "fail": 0,
+    "warn": 3,
+    "pass": 9,
+    "skip": 1
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "pass",
+      "finding": "no Gaia source within 6.1\"",
+      "numbers": {
+        "radius_arcsec": 6.1
+      }
+    },
+    {
+      "id": "blend_tess",
+      "title": "Neighbours inside the TESS beam (42.0\")",
+      "status": "pass",
+      "finding": "6 Gaia source(s) within 42.0\"; brightest contributes 0.8% of the target's G flux at 13.4\"",
+      "numbers": {
+        "radius_arcsec": 42.0,
+        "n_inside": 6,
+        "total_flux_ratio_G": 0.0115,
+        "brightest_flux_ratio": 0.008,
+        "brightest_sep": 13.4382
+      }
+    },
+    {
+      "id": "blend_ztf",
+      "title": "Neighbours inside the ZTF beam (2.0\")",
+      "status": "pass",
+      "finding": "no Gaia source within 2.0\"",
+      "numbers": {
+        "radius_arcsec": 2.0
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "276 exposures; cuts removed up to 28 (10%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 276,
+        "removed_per_band": {
+          "W1": 28,
+          "W2": 26
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "warn",
+      "finding": "optical data from 1 independent source(s): ZTF (483). One instrument or observer is a single point of failure; seek a second. TESS is not counted: it is normalised per sector, so it confirms an event only if a sector overlaps it, and never its absolute depth.",
+      "numbers": {
+        "n_sources": 2,
+        "top_sources": {
+          "TESS": 3166,
+          "ZTF": 483
+        }
+      }
+    },
+    {
+      "id": "alias_gaia_epoch_G",
+      "title": "Periodicity vs survey rhythms (GAIA_EPOCH G)",
+      "status": "pass",
+      "finding": "strongest period 200.56 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 200.55871939271998,
+        "power": 0.6190920799813571
+      }
+    },
+    {
+      "id": "alias_tess_TESS",
+      "title": "Periodicity vs survey rhythms (TESS TESS)",
+      "status": "pass",
+      "finding": "strongest period 2.19 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 2.1938323782802676,
+        "power": 0.10853361145168702
+      }
+    },
+    {
+      "id": "alias_ztf_ZTF_g",
+      "title": "Periodicity vs survey rhythms (ZTF ZTF_g)",
+      "status": "warn",
+      "finding": "strongest period 0.99 d coincides with: matches spectral-window peak at 1.00 d; sidereal day; solar day; best period above 2 d: 179.9 d (half year (NEOWISE cadence); matches spectral-window peak at 181.78 d; matches spectral-window peak at 184.01 d)",
+      "numbers": {
+        "top_period_days": 0.9917812464369463,
+        "power": 0.0620300326167495
+      }
+    },
+    {
+      "id": "tess_sys_Sa",
+      "title": "TESS dips vs spacecraft events (Sa)",
+      "status": "pass",
+      "finding": "3 dip(s); 0 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 3,
+        "n_suspect": 0
+      }
+    },
+    {
+      "id": "tess_sys_Sb",
+      "title": "TESS dips vs spacecraft events (Sb)",
+      "status": "warn",
+      "finding": "4 dip(s); 1 sit within 0.3 d of a momentum dump or 1 d of a sector/orbit edge",
+      "numbers": {
+        "n_dips": 4,
+        "n_suspect": 1
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 0.99 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 0.9906906
+      }
+    },
+    {
+      "id": "allwise_fit",
+      "title": "AllWISE profile-fit photometry",
+      "status": "skip",
+      "finding": "no AllWISE catalogue row in the context",
+      "numbers": {}
+    }
+  ]
+}

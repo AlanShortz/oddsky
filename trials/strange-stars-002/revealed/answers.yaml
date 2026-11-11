@@ -1,0 +1,74 @@
+trial: strange-stars-002
+salt: 818583bf1b391c941150e59181a19a6b
+classes:
+- dust_occultation
+- dust_formation
+- collision_debris
+- eclipse_companion
+- yso_dipper
+- pulsation
+- eruptive
+- rotation_spots
+- microlensing
+- artifact_instrumental
+- artifact_blend
+- normal
+packets:
+  T01:
+    case: OS-0017
+    truth: microlensing
+    t0_mjd: 56942.6620328
+    cutoff_mjd: null
+    why: halo giant lensed in March 2020; the peak itself fell in a data gap
+    truth_source: reproduced in a second survey; two independent reviews
+  T02:
+    case: OS-0010
+    truth: yso_dipper
+    t0_mjd: 56707.257668625
+    cutoff_mjd: null
+    why: 'a suspected variable nobody had classified: a young dipper'
+    truth_source: Oddsky's refereed conclusion (0.85)
+  T03:
+    case: OS-0012
+    truth: eclipse_companion
+    t0_mjd: 56738.92486212
+    cutoff_mjd: null
+    why: new eclipsing binary; a P/5 alias once made it look like an invisible companion
+    truth_source: Oddsky's refereed conclusion (0.97)
+  T04:
+    case: OS-0008
+    truth: normal
+    t0_mjd: 56687.510356465
+    cutoff_mjd: null
+    why: quiet control star in the TESS continuous viewing zone, nothing planted this
+      time
+    truth_source: control
+  H01:
+    case: OS-0018
+    truth: microlensing
+    t0_mjd: 56741.9569027
+    cutoff_mjd: 59775
+    why: cut on the rise, about two months before the peak of a fivefold brightening
+    truth_source: reproduced in a second survey; reviewed
+  H02:
+    case: OS-0015
+    truth: null
+    t0_mjd: 56745.11794049
+    cutoff_mjd: 59700
+    why: 'three eclipses seen; the 2022 and 2023 ones are held back. Eclipse by a
+      companion or a young star''s disk: undecided'
+    truth_source: open question
+  H03:
+    case: OS-0014
+    truth: null
+    t0_mjd: 56746.57048397
+    cutoff_mjd: 57915
+    why: cut while the star was 5 magnitudes down; does it come back?
+    truth_source: open question
+  H04:
+    case: OS-0013
+    truth: null
+    t0_mjd: 56720.23994785
+    cutoff_mjd: 58450
+    why: cut one visit after an infrared excess appeared; does it stay?
+    truth_source: open question

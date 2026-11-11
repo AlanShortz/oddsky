@@ -1,0 +1,303 @@
+id: H03
+title: Trial star H03
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 1168.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: 'Gaia context: solar-type dwarf, Teff about 6000 K, absolute G 4.3, 426 pc, RUWE 1.15, not flagged
+    as non-single.'
+  tag: observed
+  calls:
+  - K2
+  author: claude-fable-5-2
+  at: '2026-11-11T00:14:33+00:00'
+- id: C2
+  text: 'ASAS-SN V is flat at 12.70 (robust scatter 0.015 mag) from day 45 to day 1082 with no excursions
+    found, then 12.82 on day 1084.8 and 15.46 on day 1090.8: a 2.8 mag fade in six days.'
+  tag: observed
+  calls:
+  - K2
+  - K5
+  - K15
+  author: claude-fable-5-2
+  at: '2026-11-11T00:14:34+00:00'
+- id: C3
+  text: 'NEOWISE single exposures catch the ingress: W1 falls 12.20 to 14.71 and W2 11.50 to 13.12 between
+    days 1093.3 and 1094.3, against baselines of 11.06 and 11.10. Six earlier visits (days 0-901) are
+    constant with photospheric W1-W2 about -0.03, so there is no infrared brightening before the fade.'
+  tag: observed
+  calls:
+  - K6
+  - K9
+  - K10
+  - K16
+  author: claude-fable-5-2
+  at: '2026-11-11T00:14:35+00:00'
+- id: C4
+  text: 'The infrared fade is larger in W1 than in W2: 3.65 vs 2.03 mag at day 1094.3 (ratio 1.8), and
+    1.14 vs 0.40 at day 1093.3. Both bands fade, so the red W1-W2 colour is extinction, not added warm
+    emission (the wise_color reading of warm dust does not apply).'
+  tag: computed
+  calls:
+  - K6
+  - K9
+  - K10
+  - K16
+  author: claude-fable-5-2
+  at: '2026-11-11T00:14:36+00:00'
+- id: C5
+  text: 'The star stays 5.5-6 mag down for at least 75 days: ATLAS o about 18.0 on days 1109-1165 (12.33
+    on day 731), ATLAS c 18.3-18.8 on days 1149-1157, SkyMapper v 19.1-19.7 on day 1152 (13.71 on days
+    127-135).'
+  tag: observed
+  calls:
+  - K3
+  - K4
+  - K11
+  - K12
+  author: claude-fable-5-2
+  at: '2026-11-11T00:14:36+00:00'
+- id: C6
+  text: 'The fade is real and on the target: ASAS-SN, ATLAS, SkyMapper and WISE all see it, and the Gaia
+    neighbours inside each beam total under 1 percent of the target flux (brightest 0.2 percent at 4.4
+    arcsec). Skeptic: 0 fail, 2 warn (period aliases only).'
+  tag: inferred
+  calls:
+  - K13
+  - K14
+  author: claude-fable-5-2
+  at: '2026-11-11T00:14:37+00:00'
+- id: C7
+  text: The neighbours inside the 8 arcsec ATLAS beam total 0.63 percent of the target G flux, about G
+    18.0, which matches the ATLAS floor. The floor may therefore be neighbour light, and the target itself
+    may be fainter still (occultation close to total).
+  tag: inferred
+  calls:
+  - K13
+  - K14
+  - K3
+  author: claude-fable-5-2
+  at: '2026-11-11T00:14:38+00:00'
+- id: C8
+  text: 'Weak recovery hint: ATLAS c is 0.40 mag brighter on day 1157 than on days 1149-1153 (3.7 sigma)
+    and ATLAS o 0.29 mag brighter on days 1161-1165 than on days 1109-1145 (1.6 sigma). If the floor is
+    neighbour light this could be seeing-dependent contamination rather than egress.'
+  tag: computed
+  calls:
+  - K7
+  - K8
+  author: claude-fable-5-2
+  at: '2026-11-11T00:14:39+00:00'
+- id: C9
+  text: A W1/W2 extinction ratio near 1.8 is what small interstellar-like grains give; an opaque screen
+    of large grains would be grey. With A_W1 of 3.65 mag the optical extinction would be tens of magnitudes,
+    so the occulter is extremely optically thick and has a steep edge (column rising from A_V about 0.1
+    to total in ten days).
+  tag: inferred
+  calls:
+  - K5
+  - K6
+  - K9
+  author: claude-fable-5-2
+  at: '2026-11-11T00:14:40+00:00'
+hypotheses:
+- id: H1
+  klass: dust_occultation
+  statement: An extremely optically thick circumstellar dust cloud with a steep edge and small grains
+    moved in front of a previously quiet solar-type dwarf, hiding it almost totally for at least 75 days.
+  supports:
+  - C2
+  - C3
+  - C4
+  - C5
+  - C9
+  conflicts: []
+  would_falsify: A grey (colour-independent) fade once both infrared bands are measured in the floor;
+    infrared excess emission appearing; a strictly symmetric flat-bottomed event that repeats on a fixed
+    period.
+  status: live
+  confidence: 0.4
+  author: claude-fable-5-2
+  at: '2026-11-11T00:14:55+00:00'
+- id: H2
+  klass: eclipse_companion
+  statement: 'A wide companion carrying an opaque disk or dusty envelope is eclipsing the star: a long,
+    deep, nearly total eclipse with a fast ingress.'
+  supports:
+  - C2
+  - C3
+  - C5
+  - C7
+  conflicts:
+  - C9
+  would_falsify: No return to the full pre-event brightness with a roughly symmetric egress; persistent
+    irregular dimming for years; new warm infrared excess after the event.
+  status: live
+  confidence: 0.36
+  author: claude-fable-5-2
+  at: '2026-11-11T00:14:56+00:00'
+- id: H3
+  klass: collision_debris
+  statement: Debris from a planetary collision has spread across the line of sight.
+  supports:
+  - C5
+  conflicts:
+  - C3
+  would_falsify: 'Already disfavoured: no infrared brightening in the 1090 days before the fade. Confirmed
+    false if the star returns to exactly its old optical and infrared levels.'
+  status: live
+  confidence: 0.06
+  author: claude-fable-5-2
+  at: '2026-11-11T00:14:57+00:00'
+- id: H4
+  klass: dust_formation
+  statement: The star or its close surroundings produced the dust itself (R CrB-like decline).
+  supports:
+  - C2
+  - C5
+  conflicts:
+  - C1
+  would_falsify: A 6000 K main-sequence dwarf with no prior variability is the wrong kind of star; falsified
+    by a clean symmetric egress with no infrared excess.
+  status: live
+  confidence: 0.05
+  author: claude-fable-5-2
+  at: '2026-11-11T00:15:01+00:00'
+- id: H5
+  klass: yso_dipper
+  statement: A young star with an inner disk suffering a very deep extinction event.
+  supports:
+  - C4
+  - C5
+  conflicts:
+  - C1
+  - C2
+  - C3
+  would_falsify: No infrared excess and 1040 days of flat photometry before the event argue against a
+    disk-bearing young star; falsified if no excess ever appears.
+  status: live
+  confidence: 0.04
+  author: claude-fable-5-2
+  at: '2026-11-11T00:15:05+00:00'
+- id: H6
+  klass: artifact_instrumental
+  statement: The fade is produced by the surveys or pipelines, not the sky.
+  supports: []
+  conflicts:
+  - C6
+  would_falsify: Already contradicted by four independent instruments; revived only if later data from
+    all surveys show the star at its old brightness inside days 1090-1165.
+  status: live
+  confidence: 0.03
+  author: claude-fable-5-2
+  at: '2026-11-11T00:15:07+00:00'
+- id: H7
+  klass: eruptive
+  statement: The apparent fade is the aftermath of an eruptive or accretion event.
+  supports: []
+  conflicts:
+  - C2
+  - C3
+  would_falsify: No brightening is seen in any band before or during the fade; falsified by a simple return
+    to baseline.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5-2
+  at: '2026-11-11T00:15:08+00:00'
+- id: H8
+  klass: artifact_blend
+  statement: A neighbour is responsible for the signal.
+  supports:
+  - C7
+  conflicts:
+  - C6
+  would_falsify: The neighbours are 6.5 mag fainter and cannot remove 99 percent of the flux; only the
+    floor level can belong to them.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5-2
+  at: '2026-11-11T00:15:09+00:00'
+- id: H9
+  klass: normal
+  statement: Nothing to explain.
+  supports: []
+  conflicts:
+  - C2
+  - C3
+  - C5
+  would_falsify: Contradicted by a 6 mag fade seen by four instruments.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5-2
+  at: '2026-11-11T00:15:10+00:00'
+- id: H10
+  klass: microlensing
+  statement: A lensing event.
+  supports: []
+  conflicts:
+  - C2
+  - C5
+  would_falsify: Lensing brightens; this is a fade.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5-2
+  at: '2026-11-11T00:15:11+00:00'
+predictions:
+- id: P1
+  statement: 'The star is still deeply faded just after the cutoff: median ATLAS o over days 1168-1230
+    is fainter than 15.0.'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 1168.0
+    end: 1230.0
+    statistic: median
+    op: '>'
+    value: 15.0
+  probability: 0.72
+  author: claude-fable-5-2
+  registered_at: '2026-11-11T00:15:15+00:00'
+- id: P2
+  statement: 'The next NEOWISE visit still finds the star dimmed: median NEOWISE W1 over days 1240-1310
+    is fainter than 11.5 (baseline 11.06).'
+  check:
+    series: NEOWISE:W1
+    start: 1240.0
+    end: 1310.0
+    statistic: median
+    op: '>'
+    value: 11.5
+  probability: 0.5
+  author: claude-fable-5-2
+  registered_at: '2026-11-11T00:15:22+00:00'
+- id: P3
+  statement: 'The event ends: median ATLAS o over days 1500-1900 is brighter than 12.8 (pre-event 12.33).'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 1500.0
+    end: 1900.0
+    statistic: median
+    op: <
+    value: 12.8
+  probability: 0.6
+  author: claude-fable-5-2
+  registered_at: '2026-11-11T00:15:22+00:00'
+- id: P4
+  statement: 'After the event the star shows no lasting infrared dimming or deep extinction: median NEOWISE
+    W1 over days 1600-2000 is brighter than 11.3.'
+  check:
+    series: NEOWISE:W1
+    start: 1600.0
+    end: 2000.0
+    statistic: median
+    op: <
+    value: 11.3
+  probability: 0.62
+  author: claude-fable-5-2
+  registered_at: '2026-11-11T00:15:23+00:00'
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

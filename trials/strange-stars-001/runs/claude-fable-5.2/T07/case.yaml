@@ -1,0 +1,265 @@
+id: T07
+title: Trial star T07
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: The star is a single-looking F-type main-sequence star (G=11.76, BP-RP=0.78, M_G=3.5 at 444 pc,
+    RUWE 0.82); neighbours inside the photometric apertures contribute under 1 percent of the flux.
+  tag: observed
+  calls:
+  - K1
+  - K2
+  - K14
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:32+00:00'
+- id: C2
+  text: 'TESS shows one isolated dip centred near day 1936.7: about 1.3-1.5 percent deep, about 0.6-0.7
+    d long, smooth ingress and egress, not near a momentum dump or sector edge; flat to about 0.1 percent
+    on either side.'
+  tag: observed
+  calls:
+  - K23
+  - K25
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:32+00:00'
+- id: C3
+  text: Ground-based V (several independent observers per night) is about 0.02-0.03 mag fainter on days
+    1934-1937 than on days 1930-1933 and 1940-1941, so the TESS dip is plausibly accompanied by a broader
+    shallow dimming seen independently; observer zero-point scatter of about 0.02 mag makes this suggestive
+    only.
+  tag: inferred
+  calls:
+  - K26
+  - K25
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:34+00:00'
+- id: C4
+  text: The V median is 0.017-0.022 mag fainter after day 1150 than in days 500-1100 (B +0.032, I +0.032);
+    formally very significant, but the observer mix changes and the level changepoints differ by band
+    (V day 961, B 1390, I 3291, R 2545), so the size and colour of any secular fading are not trustworthy
+    at the 0.01 mag level.
+  tag: computed
+  calls:
+  - K18
+  - K19
+  - K20
+  - K21
+  - K3
+  - K4
+  - K5
+  - K6
+  - K17
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:35+00:00'
+- id: C5
+  text: No ground-based excursion over 0.05 mag in V in 4000 days at 4 sigma; the three roughly 0.18 mag
+    B dips near days 2221-2474 rest on 1-3 observers and have no V counterpart in the 60-day bins, so
+    are probably observer artifacts.
+  tag: computed
+  calls:
+  - K9
+  - K16
+  - K22
+  - K17
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:36+00:00'
+- id: C6
+  text: 'Mid-infrared is flat: W1 varies by 0.02 mag over 3650 days, W1-W2 is about -0.03 (photospheric)
+    throughout, with no warm-dust excess and no colour-brightness correlation.'
+  tag: observed
+  calls:
+  - K8
+  - K11
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:37+00:00'
+- id: C7
+  text: TESS shows no strong periodicity (top peak 15.9 d with power 0.027, surrounded by window aliases);
+    rotation or pulsation at the 0.1 percent level is not established.
+  tag: computed
+  calls:
+  - K12
+  - K7
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:38+00:00'
+- id: C8
+  text: A brief, isolated, aperiodic 1 percent dip on an otherwise quiet, IR-quiet F dwarf, with a possible
+    small long-term fade, is the signature of small amounts of circumstellar material crossing the line
+    of sight rather than of the star itself; a single transit by a companion cannot be excluded from one
+    event.
+  tag: inferred
+  calls:
+  - K25
+  - K11
+  - K19
+  - K12
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:39+00:00'
+- id: C9
+  text: The combination (F dwarf, V about 11.85, about 440 pc, faint neighbour at 1.8 arcsec, huge amateur
+    campaign, isolated percent-level dips) matches the well-known irregular dipper KIC 8462852; this recognition
+    is not used as evidence.
+  tag: speculated
+  calls:
+  - K1
+  - K14
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:40+00:00'
+hypotheses:
+- id: H1
+  klass: dust_occultation
+  statement: Small clumps of circumstellar dust or debris cross the line of sight to an otherwise ordinary
+    F dwarf, giving isolated aperiodic percent-level dips and possibly a slow fade; the dust is too sparse
+    or too cool to show in W1/W2.
+  supports:
+  - C2
+  - C3
+  - C4
+  - C8
+  conflicts:
+  - C6
+  would_falsify: Dips that are strictly periodic with identical shape (a companion), or achromatic to
+    high precision across B to I, or shown to coincide with spacecraft or pipeline events.
+  status: live
+  confidence: 0.55
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:54+00:00'
+- id: H2
+  klass: normal
+  statement: 'An ordinary F dwarf: the ground-based level shifts are observer zero-points and the single
+    TESS dip is not astrophysically significant.'
+  supports:
+  - C5
+  - C6
+  - C7
+  conflicts:
+  - C2
+  - C3
+  would_falsify: Further dips of 1 percent or more confirmed by independent instruments.
+  status: live
+  confidence: 0.13
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:55+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: The TESS dip is a single transit or eclipse by a companion or its disk on a long orbit.
+  supports:
+  - C2
+  conflicts:
+  - C4
+  - C1
+  would_falsify: No recurrence at a fixed period; dips of differing depth and shape; chromatic depth.
+  status: live
+  confidence: 0.1
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:56+00:00'
+- id: H4
+  klass: artifact_instrumental
+  statement: The TESS dip is a systematics residual (scattered light, pointing) and the ground-based shifts
+    are calibration.
+  supports:
+  - C4
+  - C5
+  conflicts:
+  - C2
+  - C3
+  would_falsify: The dip appearing in simultaneous independent ground photometry at matching depth.
+  status: live
+  confidence: 0.07
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:57+00:00'
+- id: H5
+  klass: collision_debris
+  statement: Debris from a recent collision or disrupted body (comet family) produces the dips.
+  supports:
+  - C2
+  - C8
+  conflicts:
+  - C6
+  would_falsify: No infrared excess ever appearing and no clustering of dips in time.
+  status: live
+  confidence: 0.04
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:58+00:00'
+- id: H6
+  klass: rotation_spots
+  statement: Spot evolution causes the slow level changes.
+  supports:
+  - C4
+  conflicts:
+  - C7
+  - C2
+  would_falsify: No rotational modulation in space photometry; dip too short and sharp for spots.
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:59+00:00'
+- id: H7
+  klass: artifact_blend
+  statement: A faint neighbour (1.8 arcsec, 0.5 percent of the flux) or a star in the TESS pixel varies.
+  supports: []
+  conflicts:
+  - C1
+  - C3
+  would_falsify: 'Neighbours too faint: a 1.3 percent dip needs more flux than the 1.8 arcsec neighbour
+    has; on-target ground confirmation.'
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:59+00:00'
+- id: H8
+  klass: yso_dipper
+  statement: Inner-disk extinction in a young star.
+  supports:
+  - C2
+  conflicts:
+  - C6
+  - C1
+  would_falsify: No infrared excess and main-sequence position.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:01+00:00'
+- id: H9
+  klass: eruptive
+  statement: Flares or accretion events.
+  supports: []
+  conflicts:
+  - C5
+  - C2
+  would_falsify: No brightenings seen.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:02+00:00'
+- id: H10
+  klass: pulsation
+  statement: Intrinsic pulsation.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: No coherent period.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:04+00:00'
+- id: H11
+  klass: dust_formation
+  statement: Star makes its own dust.
+  supports: []
+  conflicts:
+  - C6
+  - C1
+  would_falsify: F dwarf with no IR excess.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:06+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'

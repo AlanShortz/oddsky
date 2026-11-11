@@ -1,0 +1,154 @@
+id: T02
+title: Trial star T02
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: ZTF g shows a bright ceiling near 13.0-13.1 mag with frequent, irregular, short fadings of 0.3-1.1
+    mag lasting days; no outbursts above the ceiling. Gaia G skewness +3.0 (dip-dominated).
+  tag: observed
+  calls:
+  - K11
+  - K3
+  - K1
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:11+00:00'
+- id: C2
+  text: 'TESS resolves individual dips: 2.57 mag deep over 0.69 d (day ~2089), 1.33 mag over 0.19 d (day
+    ~3936), several ~0.8-1.0 mag dips of 0.06-0.1 d; Skeptic finds only 1 of 7 TESS dips near a momentum
+    dump/edge, so they are not spacecraft systematics.'
+  tag: computed
+  calls:
+  - K12
+  - K14
+  - K2
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:12+00:00'
+- id: C3
+  text: 'Fadings are reddening: Gaia dBP/dRP = 1.32 (r=0.996, 34 pairs), ZTF dg/di = 1.48 (r=0.999, 5
+    pairs) vs ISM expectation 1.98 -> extinction by dust somewhat greyer than ISM (grain growth).'
+  tag: computed
+  calls:
+  - K15
+  - K16
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:13+00:00'
+- id: C4
+  text: 'Strong infrared excess: W1-W2 median 0.43 for a Teff~5270 K photosphere (expected ~0.05); W1
+    varies 0.5 mag and W1-W2 is redder when W1 is fainter (corr 0.76): hot inner-disk dust, itself variable.'
+  tag: computed
+  calls:
+  - K9
+  - K17
+  - K1
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:16+00:00'
+- id: C5
+  text: 'No blend risk: no Gaia source within the WISE (6.1") or ZTF (2") beams; neighbours within 42"
+    contribute 1.2% of flux, far too little for 2.5-mag TESS dips. RUWE 0.99.'
+  tag: computed
+  calls:
+  - K2
+  - K10
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:18+00:00'
+- id: C6
+  text: abs G 4.6 at Teff 5270 K is ~1 mag above a K-dwarf main sequence, consistent with a pre-main-sequence
+    (T Tauri) star; together with a hot-dust excess and aperiodic, chromatic, hours-to-days dips this
+    matches the YSO dipper phenomenon. TESS periodogram peaks (2.18, 5.5-6.2 d) are weak and broad, consistent
+    with quasi-periodic inner-disk structure/rotation, not a strict eclipse.
+  tag: inferred
+  calls:
+  - K1
+  - K13
+  - K12
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:19+00:00'
+hypotheses:
+- id: H1
+  klass: yso_dipper
+  statement: Young K-type T Tauri star whose inner disk produces aperiodic, chromatic extinction dips
+    of up to 2.5 mag on hours-to-days timescales.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  conflicts: []
+  would_falsify: Spectroscopy showing no youth indicators (no Li 6708, no H-alpha emission) and a main-sequence
+    age; or dips found to be strictly periodic with flat-bottom eclipse shapes; or achromatic dips.
+  status: live
+  confidence: 0.8
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:30+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: Circumstellar dust clumps (e.g. debris or disk in an older star) transiting the star; not
+    specifically a young accreting disk.
+  supports:
+  - C2
+  - C3
+  - C4
+  conflicts:
+  - C6
+  would_falsify: Confirmed youth/accretion (would move it to yso_dipper) or achromatic dips.
+  status: live
+  confidence: 0.1
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:32+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: Dips caused by a companion with circumstellar material on an orbit.
+  supports:
+  - C2
+  conflicts:
+  - C1
+  - C6
+  would_falsify: No coherent period from eclipse_period/fold over the long ZTF baseline.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:33+00:00'
+- id: H4
+  klass: eruptive
+  statement: Accretion-driven variability rather than extinction.
+  supports: []
+  conflicts:
+  - C1
+  - C3
+  would_falsify: Fadings remain the dominant mode with dust-like colour slope.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:35+00:00'
+- id: H5
+  klass: rotation_spots
+  statement: Spot modulation.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: 2.5 mag in 0.7 d is impossible for spots.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:36+00:00'
+- id: H6
+  klass: artifact_instrumental
+  statement: Pipeline artifacts.
+  supports: []
+  conflicts:
+  - C2
+  - C3
+  would_falsify: Dips seen consistently in Gaia, ZTF and TESS with reddening; already argues against.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:07:37+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

@@ -386,7 +386,7 @@ def llms_txt(index: dict, cases: dict, hunts: list, docket: list) -> str:
           "## Optional", "",
           *([f"- [How Oddsky keeps itself honest]({REPO}/blob/main/docs/EPISTEMICS.md)",
              f"- [Manifesto]({REPO}/blob/main/docs/MANIFESTO.md)"] if REPO_PUBLIC else []),
-          f"- [Strange Stars Trial 001 scorecards]({SITE_URL}/trials)",
+          f"- [Strange Stars Trial 001 and 002 scorecards]({SITE_URL}/trials)",
           *([f"- [Source code]({REPO})"] if REPO_PUBLIC else []), ""]
     return "\n".join(L)
 
@@ -502,7 +502,7 @@ def build(out: Path = DIST) -> None:
                    f"{len(pending)} sealed predictions waiting for the sky, each with a probability and a date. Subscribe and your calendar tells you when the universe grades us.",
                    og("home"), prerender_list("The Docket", "Every sealed prediction, and the day the sky answers it.",
                                               [(d["href"], f"{d.get('case') or d.get('packet')} {d['id']} ({pct(d['probability'])}, {d['outcome']}, {d.get('resolve_by') or ''})", d["statement"]) for d in docket]), None))
-    routes.append(("/trials", "Trials — Oddsky", "Strange Stars Trial 001: blind and hindsight trials of AI investigators, answers sealed by hash before anyone ran.",
+    routes.append(("/trials", "Trials — Oddsky", "Strange Stars Trials 001 and 002: three AI models as blind investigators of real stars, answer keys sealed by hash, forecasts graded against held-back data.",
                    og("home"), prerender_list("Trials", "Blind and hindsight trials with sealed answers.", []), None))
     routes.append(("/agents", "For agents — Oddsky", "Point any AI agent at Oddsky: a zero-install path through llms.txt and per-case dossiers, and an MCP server for the full observatory.",
                    og("home"), prerender_list("For agents", "Start at /llms.txt.", [("/llms.txt", "llms.txt", None)]), "/llms.txt"))

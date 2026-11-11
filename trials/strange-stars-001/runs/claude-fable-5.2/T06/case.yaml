@@ -1,0 +1,202 @@
+id: T06
+title: Trial star T06
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: V alternates between a faint state near 11.9-12.1 and maxima near 8.5-8.7; 165 brightenings over
+    60 yr of V data, typical amplitude 3.5-3.8 mag, duration 7-17 d, seen by up to 5-6 independent observers
+    per day and in B, V, R, I and unfiltered CCD.
+  tag: observed
+  calls:
+  - K1
+  - K5
+  - K6
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:03+00:00'
+- id: C2
+  text: 'Events are brightenings from a stable faint floor, not dips from a bright state: fast rise (2-6
+    d) and slower decline (8-13 d), with long and short outbursts alternating (e.g. about 16 d wide near
+    day 47025-47040 versus about 8 d near day 47078).'
+  tag: observed
+  calls:
+  - K5
+  - K6
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:05+00:00'
+- id: C3
+  text: 'Recurrence is quasi-periodic, not strict: AAVSO V gives 55.7 d with comparable peaks at 48-50
+    d, TESS gives 50.4 d; power is spread over 40-70 d, as for a relaxation cycle rather than a clock.'
+  tag: computed
+  calls:
+  - K4
+  - K11
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:07+00:00'
+- id: C4
+  text: 'Around day 47100-47550 the behaviour changed: the faint-state level rose from 11.9 to about 11.0-11.2,
+    outbursts became frequent and low (maxima 9.0-9.5), with a plateau near V=10.0 around day 47930-47970.
+    Median V 11.91 (days 44000-47000) versus 10.73 (days 47550-48100). Normal deep quiescence (11.7-12.0)
+    and 8.5-8.7 maxima returned by about day 48600.'
+  tag: computed
+  calls:
+  - K3
+  - K6
+  - K7
+  - K8
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:08+00:00'
+- id: C5
+  text: All optical bands move together (r=0.98); the colour slopes are close to grey-to-blue rather than
+    strongly reddened in the faint state, and the star is hotter/bluer at maximum; this is a change of
+    emitting source, not extinction by dust.
+  tag: inferred
+  calls:
+  - K2
+  - K10
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:09+00:00'
+- id: C6
+  text: 'NEOWISE W1/W2 vary by 0.7-1.0 mag with W1-W2 about 0.09 and no redder-when-brighter trend: the
+    infrared follows the outbursts with photospheric/disk colours; no warm circumstellar dust.'
+  tag: computed
+  calls:
+  - K1
+  - K9
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:09+00:00'
+- id: C7
+  text: 'Gaia: 113 pc, M_G=6.4, BP-RP=1.18 (2014-17 mean, mostly quiescence): a K-dwarf-like faint state;
+    outburst reaches M_V about +3.3. RUWE 2.33 is expected from a strongly variable source or binary.
+    Only a 1% neighbour at 5.3 arcsec: the 3.5 mag outbursts cannot be a blend.'
+  tag: inferred
+  calls:
+  - K1
+  - K2
+  - K12
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:10+00:00'
+- id: C8
+  text: 'The system is a dwarf nova of the U Gem (SS Cyg) subtype: a K dwarf donor feeding an accretion
+    disk around a white dwarf, with thermal-instability outbursts every roughly 50 d; the day 47100-48500
+    episode is an anomalous, standstill-like high-quiescence state. The data match SS Cygni itself (distance,
+    magnitude range, bimodal outbursts, enormous AAVSO coverage, and its anomalous 2021 episode).'
+  tag: inferred
+  calls:
+  - K1
+  - K5
+  - K6
+  - K7
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:11+00:00'
+hypotheses:
+- id: H1
+  klass: eruptive
+  statement: 'Dwarf nova (U Gem / SS Cyg type): recurrent 3.5 mag accretion-disk outbursts every ~50 d
+    from a K-dwarf + white-dwarf binary, with an anomalous elevated-quiescence episode around days 47100-48500.'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  - C7
+  - C8
+  conflicts: []
+  would_falsify: A strictly periodic recurrence with fixed phase, events that are fadings from a bright
+    baseline, or a spectrum lacking Balmer/He emission in quiescence and broad absorption in outburst.
+  status: live
+  confidence: 0.9
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:12+00:00'
+- id: H2
+  klass: pulsation
+  statement: Large-amplitude pulsation with a ~50 d period.
+  supports:
+  - C3
+  conflicts:
+  - C2
+  - C4
+  - C7
+  would_falsify: Unstable recurrence times and bimodal widths (already seen); a 113 pc K dwarf of M_G
+    6.4 cannot be a long-period pulsator.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:12+00:00'
+- id: H3
+  klass: rotation_spots
+  statement: Spot or ellipsoidal modulation of the K-dwarf donor contributes small quiescent variability,
+    but not the outbursts.
+  supports:
+  - C7
+  conflicts:
+  - C1
+  - C2
+  would_falsify: No modulation at the orbital period in quiescent photometry.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:13+00:00'
+- id: H4
+  klass: eclipse_companion
+  statement: Binary-geometry effects (eclipses of or by a disk) drive the variability.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  - C3
+  would_falsify: Events are brightenings of 3.5 mag with variable spacing; eclipses cannot brighten a
+    system.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:15+00:00'
+- id: H5
+  klass: dust_occultation
+  statement: The faint state is extinction by circumstellar dust and the bright state is the unobscured
+    star (also covers yso_dipper, dust_formation, collision_debris).
+  supports: []
+  conflicts:
+  - C2
+  - C5
+  - C6
+  - C7
+  would_falsify: Faint state is the stable floor matching a K dwarf at the Gaia distance; no IR excess;
+    fast-rise/slow-decline brightenings.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:17+00:00'
+- id: H6
+  klass: artifact_instrumental
+  statement: Instrumental or reduction artefact (TESS edge dips, WISE saturation).
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: Hundreds of independent observers and several instruments see the same events.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:18+00:00'
+- id: H7
+  klass: artifact_blend
+  statement: A neighbour is the variable.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: Neighbours within 6 arcsec carry 1% of the flux; a 3.5 mag brightening of the total cannot
+    come from them.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:19+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'

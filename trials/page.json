@@ -1,0 +1,69 @@
+{
+ "title": {
+  "strange-stars-002": "No famous stars this time."
+ },
+ "standing_note": [
+  [
+   "What the two trials say together.",
+   " On well-known stars the two larger models cannot be separated: each said it recognised, with more or less confidence, all eight packets that held a famous star, so Trial 001 cannot tell skill from memory. On obscure stars both matched our answer on all five scored packets, and the smallest model on two of five (it had five of ten in Trial 001)."
+  ],
+  [
+   "",
+   "The forecasts separate them a little. By Brier score, where always saying 50% earns 0.25, Fable 5.2 scored 0.17, Opus 5.5 0.23 and Haiku 5.5 0.25. Each model wrote its own forecasts, so these are not the same questions, and forecasts about one star stand or fall together. One run each: a first measurement, not a ranking."
+  ]
+ ],
+ "sub": {
+  "strange-stars-002": "obscure stars",
+  "strange-stars-001": "famous stars and two controls"
+ },
+ "lede": {
+  "strange-stars-002": "Trial 001 taught us that a well-read model can recognise a famous star from its data alone. So this time every star comes from Oddsky’s own casebook. None is famous. Several sit in catalogues, one as a decades-old suspected variable, one as a “dubious” candidate, one as a long-period variable, but we know of no paper that describes what any of them does. Eight packets, names and dates removed, answers sealed (sha256) before any model ran. Same tool version, same prompt, three models; Fable’s run started a few minutes after the other two and was interrupted (see below).",
+  "strange-stars-001": "Ten packets of real data, names and dates removed. Answers sealed (sha256) before the first two models ran and revealed after; Fable ran two weeks later, after the reveal (see below). Each model got the same packets, the same prompt and the same version of the tools."
+ },
+ "answer_source": {
+  "strange-stars-002": {
+   "T01": "reproduced in a second survey",
+   "T02": "Oddsky’s own conclusion",
+   "T03": "Oddsky’s own conclusion, reviewed",
+   "T04": "control star",
+   "H01": "reproduced in a second survey"
+  }
+ },
+ "guess_note": {
+  "strange-stars-002": "Every guess was wrong, and all were on the open-question packets, where no class is scored. The forecasts there are scored, and Fable says its guess shaped its probabilities on H04."
+ },
+ "after": {
+  "strange-stars-002": [
+   [
+    "The numbers are small.",
+    "Five scored packets and seven to fifteen gradable forecasts per model, one run each. Forecasts on the same star are not independent. Five of Fable’s fifteen were graded on the minimum of three measurements, and three come from the packet with the rules breach described below (without that packet: 11 of 12 came true). Opus and Fable differ by less than a rerun might."
+   ],
+   [
+    "The answer key is ours, and one contestant helped write it.",
+    "For the five scored packets the key is Oddsky’s own: four are our conclusions about our own stars, two of them reproduced in a second survey, and one is a quiet control. Nobody outside Oddsky has checked them. They were reached with the same toolkit the investigators used, plus checks outside it and data the investigators did not have, and Opus 5.5, one of the three models under test, worked on all four of those cases. Agreement with the key is consistency, not independent confirmation. The forecasts need no class key, only the held-back data and the grader."
+   ],
+   [
+    "Two grader rules changed after the reveal.",
+    "A forecast window opening on the cutoff day was being thrown out as “before the cutoff”, because packets state the cutoff to the whole day; it is now graded from the cutoff. That turned one Fable forecast (H03 P1) from invalid into a miss. And forecasts about a survey that had already ended were shown as still sealed; they are now graded on whatever data exist, which for these three (Haiku H04 P2, Opus H04 P3 and P4) is none. Four verdicts changed in all; none became a hit."
+   ],
+   [
+    "Eleven forecasts could not be graded.",
+    "The grader needs three measurements in a window. NEOWISE visits a star twice a year, one optical survey had already ended, and another has seasonal gaps, so some windows held too little data. Haiku and Opus lost five forecasts each this way and Fable one: part of Fable’s lead is that it asked questions the archive could answer. Ungradable forecasts are listed, not counted."
+   ],
+   [
+    "A tool bug kept the smallest model from two tools.",
+    "The lens-fit and eclipse-period tools rejected a series named as plain text and wanted a list. Opus got past it on four packets and Fable on three; Haiku’s record shows neither tool run on any star. It still named both lensing events; of its three misses, at most the eclipsing binary could plausibly have gone differently. The bug is fixed now."
+   ],
+   [
+    "Fable’s run was interrupted.",
+    "The machine’s disk filled about two minutes in. Two of its packets were finished, none of the rest had a hypothesis or a forecast on record yet, and the investigators were resumed with what they had already seen. One could not pick up where it stopped and redid its packet (H03) from the start, working inside the repository, which the rules forbid: the answer file and the held-back data were a directory away. It reports opening only the prompt, and we cannot verify that. H03 has no scored class; its three graded forecasts (two true, one false) are in Fable’s totals."
+   ]
+  ],
+  "strange-stars-001": [
+   [
+    "Fable ran two weeks after the others.",
+    "Same packets, same prompt, and the same version of the tools the first two used. By then the answer key had been revealed in the repository. The investigators worked on copies outside it and were told not to look, as before; that is a weaker guarantee than a sealed key."
+   ]
+  ]
+ }
+}

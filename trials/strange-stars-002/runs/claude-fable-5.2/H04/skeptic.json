@@ -1,0 +1,127 @@
+{
+  "generated_at": "2026-11-11T00:13:27+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "0 fail, 5 warn, 5 pass, 1 skipped",
+  "counts": {
+    "fail": 0,
+    "warn": 5,
+    "pass": 5,
+    "skip": 1
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "pass",
+      "finding": "no Gaia source within 6.1\"",
+      "numbers": {
+        "radius_arcsec": 6.1
+      }
+    },
+    {
+      "id": "blend_asas-sn",
+      "title": "Neighbours inside the ASAS-SN beam (16.0\")",
+      "status": "warn",
+      "finding": "3 Gaia source(s) within 16.0\"; brightest contributes 11.3% of the target's G flux at 13.4\"",
+      "numbers": {
+        "radius_arcsec": 16.0,
+        "n_inside": 3,
+        "total_flux_ratio_G": 0.1958,
+        "brightest_flux_ratio": 0.113,
+        "brightest_sep": 13.3576
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "426 exposures; cuts removed up to 13 (3%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 426,
+        "removed_per_band": {
+          "W1": 13,
+          "W2": 8
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "warn",
+      "finding": "optical data from 1 independent source(s): ASASSN (215). One instrument or observer is a single point of failure; seek a second.",
+      "numbers": {
+        "n_sources": 1,
+        "top_sources": {
+          "ASASSN": 215
+        }
+      }
+    },
+    {
+      "id": "baseline_asassn",
+      "title": "Does ASASSN start at the star's normal brightness?",
+      "status": "warn",
+      "finding": "first 60 days of V: median 13.42; Gaia DR3 (2014-17 mean) implies V = 13.86; difference -0.44 mag. The series begins mid-event: its own median is not the star's normal state.",
+      "numbers": {
+        "v_first": 13.416,
+        "v_gaia": 13.858,
+        "delta": -0.442
+      }
+    },
+    {
+      "id": "alias_asassn_V",
+      "title": "Periodicity vs survey rhythms (ASASSN V)",
+      "status": "warn",
+      "finding": "strongest period 1.00 d coincides with: matches spectral-window peak at 1.00 d; sidereal day; solar day; best period above 2 d: 3.3 d",
+      "numbers": {
+        "top_period_days": 1.0005675839252766,
+        "power": 0.0967988629965817
+      }
+    },
+    {
+      "id": "alias_gaia_epoch_G",
+      "title": "Periodicity vs survey rhythms (GAIA_EPOCH G)",
+      "status": "pass",
+      "finding": "strongest period 1.53 d is not a known survey/Earth rhythm (not yet evidence it is real)",
+      "numbers": {
+        "top_period_days": 1.5258734634603441,
+        "power": 0.5644292744007671
+      }
+    },
+    {
+      "id": "alias_neowise_exp_W2",
+      "title": "Periodicity vs survey rhythms (NEOWISE_EXP W2)",
+      "status": "warn",
+      "finding": "strongest period 185.19 d coincides with: half year (NEOWISE cadence); matches spectral-window peak at 181.07 d",
+      "numbers": {
+        "top_period_days": 185.1861882039575,
+        "power": 0.7457617551435964
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 1.02 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 1.0216122
+      }
+    },
+    {
+      "id": "allwise_fit",
+      "title": "AllWISE profile-fit photometry",
+      "status": "skip",
+      "finding": "no AllWISE catalogue row in the context",
+      "numbers": {}
+    }
+  ]
+}

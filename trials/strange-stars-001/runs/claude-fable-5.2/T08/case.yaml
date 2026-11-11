@@ -1,0 +1,252 @@
+id: T08
+title: Trial star T08
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: 'A red, low-luminosity star (G=14.4, BP-RP=2.54, M_G=8.8 at 135 pc) that is very bright in the
+    mid-infrared: all 42 NEOWISE visits are saturated (W1<8), so no usable IR light curve, but the brightness
+    itself implies a large infrared excess for a star this faint in the optical. No Gaia neighbour within
+    24 arcsec.'
+  tag: inferred
+  calls:
+  - K1
+  - K2
+  - K11
+  author: claude-fable-5.2
+  at: '2026-11-11T00:07:59+00:00'
+- id: C2
+  text: V varies irregularly between about 14.0 and 16.6 over 5100 days, with bright states (V about 14.0-14.6
+    near days 780-850, 1120, 1730-1760, 3720, 4000) and faint states lasting hundreds of days (V 16.0-16.6
+    near days 2080-2290, 3016, 4290-4450); seen by 11+ independent observers. Gaia itself recorded a 2.3
+    mag range.
+  tag: observed
+  calls:
+  - K3
+  - K4
+  - K1
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:00+00:00'
+- id: C3
+  text: 'No strict long period: the best V periods (1116 d, 778 d) have modest power on red-noise-like
+    data, and the level changes are not repeatable in shape; the excursion finder returns nothing because
+    the variability is the baseline.'
+  tag: computed
+  calls:
+  - K7
+  - K5
+  - K4
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:01+00:00'
+- id: C4
+  text: 'The changes are nearly grey: dI/dV about 0.85-0.93, dR/dV 0.99, dB/dV 0.83-0.95, i.e. much flatter
+    than interstellar reddening (I would be 0.59, B 1.32). That points to occultation by large grains
+    or optically thick material with a scattered-light floor, not small-grain dust or temperature change.'
+  tag: computed
+  calls:
+  - K2
+  - K8
+  - K9
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:02+00:00'
+- id: C5
+  text: 'On short timescales TESS shows continuous 0.1-0.3 mag quasi-periodic modulation with a preferred
+    timescale of about 4.2 d (other peaks 3.5 and 5.7 d, so not coherent), plus discrete events: a 0.8
+    mag dip lasting 1.3 d near day 5056 and 0.5 mag swings within a quarter of a day near day 5065.'
+  tag: observed
+  calls:
+  - K6
+  - K12
+  - K13
+  - K14
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:03+00:00'
+- id: C6
+  text: Dense ground V data (days 1340-1480) show 0.5-1 mag changes within 3-10 days on top of the slow
+    state changes, confirming the TESS-type activity independently and at absolute scale.
+  tag: observed
+  calls:
+  - K15
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:03+00:00'
+- id: C7
+  text: 'Low-mass star + strong IR excess + large, irregular, grey dimmings on day-to-year timescales
+    + few-day quasi-periodic dips: a young disk-bearing star seen through its own inner disk, with long
+    faint states when more disk material (a warp or raised rim) enters the line of sight.'
+  tag: inferred
+  calls:
+  - K1
+  - K4
+  - K8
+  - K13
+  - K14
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:04+00:00'
+- id: C8
+  text: High RUWE (3.3) could be a companion or a photocentre disturbed by variability and scattered light;
+    it does not identify a blend, since no neighbour lies in the aperture.
+  tag: inferred
+  calls:
+  - K2
+  - K11
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:05+00:00'
+- id: C9
+  text: Distance (about 135 pc), colour, brightness range and the pattern of extended deep faint states
+    resemble the classical T Tauri star AA Tau after its 2011 fade; recognition is not used as evidence.
+  tag: speculated
+  calls:
+  - K1
+  - K4
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:06+00:00'
+hypotheses:
+- id: H1
+  klass: yso_dipper
+  statement: 'A young low-mass star with a disk seen at high inclination: variable extinction by inner-disk
+    material gives few-day quasi-periodic dips and year-long grey faint states.'
+  supports:
+  - C1
+  - C2
+  - C4
+  - C5
+  - C6
+  - C7
+  conflicts: []
+  would_falsify: No infrared excess in unsaturated IR data, no youth indicators (emission lines, lithium),
+    or dimmings that redden like ISM dust with a strict period.
+  status: live
+  confidence: 0.72
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:06+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: Circumstellar dust clumps or a disk warp occult a star that need not be young (generic occultation
+    rather than an inner-disk YSO dipper).
+  supports:
+  - C2
+  - C4
+  conflicts:
+  - C5
+  would_falsify: Spectroscopic youth and accretion signatures, which would put it in the YSO class.
+  status: live
+  confidence: 0.08
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:07+00:00'
+- id: H3
+  klass: eruptive
+  statement: Variable accretion (bursts and lulls) rather than extinction drives most of the brightness
+    changes.
+  supports:
+  - C5
+  - C6
+  conflicts:
+  - C4
+  would_falsify: Star reddens or stays grey when faint with no blue excess when bright; brightenings not
+    accompanied by stronger emission lines.
+  status: live
+  confidence: 0.07
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:08+00:00'
+- id: H4
+  klass: rotation_spots
+  statement: Hot or cool spots rotating with a period near 4.2 d explain the short-term modulation.
+  supports:
+  - C5
+  conflicts:
+  - C2
+  - C3
+  would_falsify: Amplitudes above about 0.5 mag and incoherent period, which spots cannot give.
+  status: live
+  confidence: 0.04
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:08+00:00'
+- id: H5
+  klass: eclipse_companion
+  statement: A companion with a disk (suggested by RUWE) periodically eclipses the star.
+  supports:
+  - C8
+  conflicts:
+  - C3
+  would_falsify: No repeatable period or eclipse shape.
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:09+00:00'
+- id: H6
+  klass: dust_formation
+  statement: The star makes its own dust.
+  supports: []
+  conflicts:
+  - C1
+  - C5
+  would_falsify: A dwarf-luminosity star cannot drive a dusty wind.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:10+00:00'
+- id: H7
+  klass: pulsation
+  statement: Long-period pulsation.
+  supports: []
+  conflicts:
+  - C1
+  - C3
+  would_falsify: M_G 8.8 is far too faint for a pulsating giant; no stable period.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:11+00:00'
+- id: H8
+  klass: collision_debris
+  statement: Debris from a collision.
+  supports: []
+  conflicts:
+  - C5
+  would_falsify: Persistent few-day quasi-periodicity tied to the inner disk.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:12+00:00'
+- id: H9
+  klass: artifact_blend
+  statement: A neighbour varies.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  would_falsify: No neighbour within 24 arcsec.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:13+00:00'
+- id: H10
+  klass: artifact_instrumental
+  statement: Instrumental.
+  supports: []
+  conflicts:
+  - C2
+  - C6
+  would_falsify: Eleven observers plus Gaia and TESS agree.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:14+00:00'
+- id: H11
+  klass: normal
+  statement: Nothing to explain.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: 2.6 mag of confirmed variability.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:14+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'

@@ -1,0 +1,248 @@
+id: H01
+title: Trial star H01
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 3033.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: 'ATLAS o is quiet near 16.93-17.00 (10-d bins) over days 2200-2800, then brightens smoothly and
+    with accelerating rate: 16.84 (day ~2915), 16.74 (~2953), 16.66 (~2984), 16.55 (~3005), 16.36 at the
+    cutoff (day 3028). The rise is still steepening when the data stop.'
+  tag: observed
+  calls:
+  - K4
+  - K5
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:19+00:00'
+- id: C2
+  text: 'The brightening is near-achromatic: day 2990-3033 vs 2200-2800, ATLAS o -0.45 mag and ATLAS c
+    -0.49 mag; at day ~2917, ATLAS o -0.115 mag, NEOWISE W1 -0.153 (11 sigma), W2 -0.138 (6.7 sigma).
+    ZTF r independently confirms: 17.37-17.40 (days 1851-1876) vs 16.95 (day 3009).'
+  tag: computed
+  calls:
+  - K15
+  - K16
+  - K17
+  - K18
+  - K19
+  - K7
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:20+00:00'
+- id: C3
+  text: 'Point-lens fits are unconstrained because no peak or decline is observed: unblended fit gives
+    t0 ~3150 (95%: 3106-3184), tE ~190 d with u0 at the grid edge; blended o+c fit gives t0 ~3069 (3040-3089),
+    tE open-ended 570-2240 d, source fraction ~0.02. Both place the peak after the cutoff.'
+  tag: computed
+  calls:
+  - K11
+  - K12
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:21+00:00'
+- id: C4
+  text: 'Crowded field: 44 Gaia sources within 30"; a G=18.1 neighbour (37% of target flux) at 6.1" sits
+    inside the ATLAS (8") and WISE beams; negative parallax and BP-RP 3.15 imply a distant, heavily reddened
+    star, likely in a dense Galactic field. ZTF (2" beam, no neighbour) also shows the brightening, so
+    it belongs to the target or a <2" companion.'
+  tag: computed
+  calls:
+  - K2
+  - K10
+  - K1
+  - K7
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:22+00:00'
+- id: C5
+  text: 'Earlier history is not flat: ATLAS o drifts from ~17.2 (days 500-900) to ~16.95 (day 2000+) and
+    periodogram shows weak 427/321 d power, so the star (or calibration in a crowded field) has low-level
+    long-term variability; this weakens but does not exclude microlensing, which predicts a flat baseline.'
+  tag: inferred
+  calls:
+  - K4
+  - K3
+  - K14
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:23+00:00'
+- id: C6
+  text: An achromatic, smooth, accelerating rise in a dense, reddened field with no prior comparable event
+    is the textbook signature of a microlensing event caught on the rise; a YSO/EXor outburst or a giant
+    LPV/symbiotic brightening would usually be strongly chromatic.
+  tag: speculated
+  calls:
+  - K9
+  - K15
+  - K17
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:24+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A foreground lens is magnifying the (blended) source; the event was caught on the rise and
+    peaks after day 3033.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C6
+  conflicts:
+  - C5
+  would_falsify: Strongly chromatic behaviour after the cutoff, an asymmetric light curve (fast rise/slow
+    decay or vice versa beyond parallax), a non-return to baseline, or a repeat brightening.
+  status: live
+  confidence: 0.62
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:40+00:00'
+- id: H2
+  klass: eruptive
+  statement: An outburst of the target (YSO/EXor/FUor-like accretion event, symbiotic or slow nova-like
+    brightening) in a reddened field.
+  supports:
+  - C1
+  conflicts:
+  - C2
+  would_falsify: Achromatic symmetric rise and fall back to baseline within ~1 yr.
+  status: live
+  confidence: 0.14
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:42+00:00'
+- id: H3
+  klass: pulsation
+  statement: A reddened giant/LPV in a brighter phase or long-term cycle (427-d power, earlier drift).
+  supports:
+  - C5
+  conflicts:
+  - C2
+  would_falsify: Brightening exceeding the previous cycle amplitude by several times and achromatic.
+  status: live
+  confidence: 0.07
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:43+00:00'
+- id: H4
+  klass: artifact_blend
+  statement: The variable is a close neighbour (inside 2") rather than the catalogued target.
+  supports:
+  - C4
+  conflicts: []
+  would_falsify: Difference imaging centroid on the target.
+  status: live
+  confidence: 0.05
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:44+00:00'
+- id: H5
+  klass: artifact_instrumental
+  statement: Photometric calibration drift in a crowded field.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: 'Already argued against: ZTF and NEOWISE confirm independently.'
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:45+00:00'
+- id: H6
+  klass: dust_occultation
+  statement: Clearing of foreground circumstellar dust brightening the star.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: Achromatic change (dust clearing should be chromatic).
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:46+00:00'
+- id: H7
+  klass: yso_dipper
+  statement: Young star variability.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: No youth signatures; smooth achromatic event.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:47+00:00'
+- id: H8
+  klass: eclipse_companion
+  statement: End of a long eclipse/ brightening from a companion.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: Brightening above long-term baseline cannot be an eclipse egress.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:48+00:00'
+- id: H9
+  klass: rotation_spots
+  statement: Spot evolution.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: 0.6 mag smooth accelerating rise is far beyond spots.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:49+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'The star keeps brightening or stays near its cutoff level: median ATLAS o in days 3040-3110
+    is brighter than 16.45.'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3040.0
+    end: 3110.0
+    statistic: median
+    op: <
+    value: 16.45
+  probability: 0.75
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:09:59+00:00'
+- id: P2
+  hypothesis: H1
+  statement: 'The event peaks well above the cutoff level: median ATLAS o in days 3040-3150 is brighter
+    than 16.10.'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3040.0
+    end: 3150.0
+    statistic: median
+    op: <
+    value: 16.1
+  probability: 0.35
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:10:00+00:00'
+- id: P3
+  hypothesis: H1
+  statement: 'Near 50/50: the star is still at least 0.1 mag brighter than its 2200-2800 baseline (16.96)
+    in days 3250-3420, i.e. median ATLAS o < 16.85.'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3250.0
+    end: 3420.0
+    statistic: median
+    op: <
+    value: 16.85
+  probability: 0.5
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:10:01+00:00'
+- id: P4
+  hypothesis: H1
+  statement: 'The brightening is transient (microlensing returns to baseline): median ATLAS o in days
+    3600-3800 is fainter than 16.85.'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3600.0
+    end: 3800.0
+    statistic: median
+    op: '>'
+    value: 16.85
+  probability: 0.65
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:10:02+00:00'
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

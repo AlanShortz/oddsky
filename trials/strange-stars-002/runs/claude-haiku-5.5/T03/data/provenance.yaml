@@ -1,0 +1,46 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  rows_raw: 15
+  rows_kept: 15
+  cuts: []
+  status: ok
+gaia_epoch:
+  archive: ESA Gaia DR3 epoch photometry (datalink)
+  rows_raw: 120
+  rows_kept: 116
+  cuts: []
+  status: ok
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  rows_raw: 321
+  rows_kept: 42
+  cuts:
+  - 'W1: qual_frame > 0 removed 3'
+  - 'W1: cc_flags[0] == ''0'' removed 23'
+  - 'W1: w1rchi2 < 5x source median removed 1'
+  - 'W2: qual_frame > 0 removed 3'
+  - 'W2: ph_qual[1] in (A,B) removed 1'
+  status: ok
+ztf:
+  archive: IRSA ZTF light curve service
+  rows_raw: 1780
+  rows_kept: 1776
+  cuts: []
+  status: ok
+tess:
+  archive: MAST TESS light curves via lightkurve
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  status: empty
+neowise_exp:
+  archive: IRSA Gator neowiser_p1bs_psd (single exposures)
+  rows_raw: 321
+  rows_kept: 611
+  cuts:
+  - 'W1: qual_frame > 0 removed 3'
+  - 'W1: cc_flags[0] == ''0'' removed 23'
+  - 'W1: w1rchi2 < 5x source median removed 1'
+  - 'W2: qual_frame > 0 removed 3'
+  - 'W2: ph_qual[1] in (A,B) removed 1'
+  status: ok

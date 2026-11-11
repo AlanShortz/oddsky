@@ -1,0 +1,16 @@
+agent: claude-fable-5.2
+model_id: claude-fable-5-2
+harness: Claude Code subagents (5 parallel, 2 packets each), Oddsky CLI in blind mode
+run_at: '2026-11-10'
+prompt: trials/strange-stars-001/INVESTIGATOR_PROMPT.md
+tools: oddsky 0.2.0 at commit eac42b3, the code the first two investigators ran (installed outside the repository)
+notes: >
+  Run two weeks after the first two investigators, on the same packets, prompt and tool version. The answers
+  were already revealed in the repository by then; the investigators worked on copies of the packets outside it
+  and were told not to read anything else (honour system, as before). Self-reported deviations: shell text
+  filters (grep, head, cut) and two python one-liners to trim JSON output for reading, no analysis; deliberately
+  invalid calls to discover argument names; one harness-saved output file of its own tool output read back (T01);
+  one tool output redirected to a scratch file (T06); T05 and T06 bundle several low-probability classes into one
+  entry. Recognised (self-reported): R Cyg (T01, probable), ASASSN-21qj (T03, probable), R CrB (T04), SS Cyg
+  (T06 and H02, probable), Boyajian's Star (T07, probable), AA Tau (T08, possible), EE Cep (H01, probable).
+recognised: {T01: probable, T02: no, T03: probable, T04: yes, T05: no, T06: probable, T07: probable, T08: possible, H01: probable, H02: probable}

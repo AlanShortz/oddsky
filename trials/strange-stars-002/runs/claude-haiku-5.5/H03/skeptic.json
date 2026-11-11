@@ -1,0 +1,135 @@
+{
+  "generated_at": "2026-11-11T00:07:38+00:00",
+  "oddsky_version": "0.3.1",
+  "summary": "0 fail, 2 warn, 8 pass, 1 skipped",
+  "counts": {
+    "fail": 0,
+    "warn": 2,
+    "pass": 8,
+    "skip": 1
+  },
+  "checks": [
+    {
+      "id": "blend_neowise",
+      "title": "Neighbours inside the NEOWISE beam (6.1\")",
+      "status": "pass",
+      "finding": "3 Gaia source(s) within 6.1\"; brightest contributes 0.2% of the target's G flux at 4.4\"",
+      "numbers": {
+        "radius_arcsec": 6.1,
+        "n_inside": 3,
+        "total_flux_ratio_G": 0.0054,
+        "brightest_flux_ratio": 0.0024,
+        "brightest_sep": 4.4255
+      }
+    },
+    {
+      "id": "blend_asas-sn",
+      "title": "Neighbours inside the ASAS-SN beam (16.0\")",
+      "status": "pass",
+      "finding": "7 Gaia source(s) within 16.0\"; brightest contributes 0.2% of the target's G flux at 4.4\"",
+      "numbers": {
+        "radius_arcsec": 16.0,
+        "n_inside": 7,
+        "total_flux_ratio_G": 0.0095,
+        "brightest_flux_ratio": 0.0024,
+        "brightest_sep": 4.4255
+      }
+    },
+    {
+      "id": "blend_atlas",
+      "title": "Neighbours inside the ATLAS beam (8.0\")",
+      "status": "pass",
+      "finding": "4 Gaia source(s) within 8.0\"; brightest contributes 0.2% of the target's G flux at 4.4\"",
+      "numbers": {
+        "radius_arcsec": 8.0,
+        "n_inside": 4,
+        "total_flux_ratio_G": 0.0063,
+        "brightest_flux_ratio": 0.0024,
+        "brightest_sep": 4.4255
+      }
+    },
+    {
+      "id": "wise_saturation",
+      "title": "WISE saturation",
+      "status": "pass",
+      "finding": "all visits fainter than the W1/W2 saturation limits",
+      "numbers": {
+        "saturated_visits": 0
+      }
+    },
+    {
+      "id": "wise_cuts",
+      "title": "NEOWISE single-exposure quality cuts",
+      "status": "pass",
+      "finding": "298 exposures; cuts removed up to 105 (35%) per band; 0 visits kept with fewer than 3 exposures",
+      "numbers": {
+        "exposures": 298,
+        "removed_per_band": {
+          "W1": 105,
+          "W2": 102
+        },
+        "thin_visits": 0
+      }
+    },
+    {
+      "id": "confirmation",
+      "title": "Independent optical confirmation",
+      "status": "pass",
+      "finding": "optical data from 2 independent source(s): ASASSN (173), ATLAS (26)",
+      "numbers": {
+        "n_sources": 2,
+        "top_sources": {
+          "ASASSN": 173,
+          "ATLAS": 26
+        }
+      }
+    },
+    {
+      "id": "baseline_asassn",
+      "title": "Does ASASSN start at the star's normal brightness?",
+      "status": "pass",
+      "finding": "first 60 days of V: median 12.71; Gaia DR3 (2014-17 mean) implies V = 12.60; difference +0.11 mag",
+      "numbers": {
+        "v_first": 12.714,
+        "v_gaia": 12.601,
+        "delta": 0.113
+      }
+    },
+    {
+      "id": "alias_asassn_V",
+      "title": "Periodicity vs survey rhythms (ASASSN V)",
+      "status": "warn",
+      "finding": "strongest period 0.99 d coincides with: matches spectral-window peak at 0.97 d; matches spectral-window peak at 1.00 d; sidereal day; solar day; best period above 2 d: 53.2 d",
+      "numbers": {
+        "top_period_days": 0.986234382450496,
+        "power": 0.011281235462028168
+      }
+    },
+    {
+      "id": "alias_neowise_exp_W2",
+      "title": "Periodicity vs survey rhythms (NEOWISE_EXP W2)",
+      "status": "warn",
+      "finding": "strongest period 60.12 d coincides with: matches spectral-window peak at 60.78 d",
+      "numbers": {
+        "top_period_days": 60.11654605272554,
+        "power": 0.7428542110531273
+      }
+    },
+    {
+      "id": "ruwe",
+      "title": "Gaia astrometric wobble (RUWE)",
+      "status": "pass",
+      "finding": "RUWE = 1.15 (single-star-like astrometry)",
+      "numbers": {
+        "ruwe": 1.1475564
+      }
+    },
+    {
+      "id": "allwise_fit",
+      "title": "AllWISE profile-fit photometry",
+      "status": "skip",
+      "finding": "no AllWISE catalogue row in the context",
+      "numbers": {}
+    }
+  ]
+}

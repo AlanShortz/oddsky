@@ -1,0 +1,224 @@
+id: H02
+title: Trial star H02
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 49788.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: 'The star repeatedly brightens by ~3-3.7 mag (V ~11.5-12 to ~8.5-9.1) for 1-2 weeks: fast rise
+    (1-3 d), slower decline (~10 d); 158 brightening events flagged over ~21700 d, recurring every ~25-80
+    d (periodogram peaks 48-56 d, not strictly periodic).'
+  tag: computed
+  calls:
+  - K4
+  - K5
+  - K9
+  - K15
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:23+00:00'
+- id: C2
+  text: 'Outbursts come in two kinds: wide ones peaking near V 8.5 (e.g. days 49309-49318, 49457-49467,
+    49640-49653) and narrow ones peaking near 8.9-9.4 (e.g. 49497, 49583, 49607).'
+  tag: observed
+  calls:
+  - K5
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:24+00:00'
+- id: C3
+  text: 'The outbursts are seen by 200+ independent observers in all optical bands moving together (dB/dV
+    1.18, dI/dV 0.67: bluer when brighter in the sense of larger amplitude at short wavelengths); no neighbour
+    inside 5 arcsec, nearest is 1% of the flux, so the signal is the target.'
+  tag: computed
+  calls:
+  - K2
+  - K16
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:24+00:00'
+- id: C4
+  text: Gaia places the star at 113 pc with abs G ~6.4 in the (mostly quiescent) mean state and RUWE 2.3;
+    outburst therefore reaches M_V ~3.3. A K-dwarf-like quiescent luminosity with 3.5-mag recurrent outbursts
+    is the signature of a dwarf nova (accretion-disk instability in a cataclysmic binary).
+  tag: inferred
+  calls:
+  - K1
+  - K2
+  - K5
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:25+00:00'
+- id: C5
+  text: 'Around days 47900-48060 the star was in an anomalous state: quiescence disappeared (V median
+    10.17, never fainter than 11.19) with low-amplitude oscillations 9.3-10.8, then returned to normal
+    (median 11.0, faintest 12.0).'
+  tag: computed
+  calls:
+  - K8
+  - K12
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:26+00:00'
+- id: C6
+  text: In the last ~500 d before cutoff the outburst interval shortened (77, 72, 39, 44, 42, 24, 33,
+    41, 36, 28 d) and the inter-outburst level brightened (median V 11.40 -> 11.17); the final 30 d of
+    sparse data wander between 10.7 and 11.6 instead of sitting at 11.7-11.9.
+  tag: computed
+  calls:
+  - K5
+  - K6
+  - K7
+  - K11
+  - K14
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:26+00:00'
+- id: C7
+  text: NEOWISE W1-W2 is ~0.09 and stable; no warm-dust signature; IR varies only ~0.7 mag and does not
+    track V in non-simultaneous pairs.
+  tag: computed
+  calls:
+  - K10
+  - K17
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:27+00:00'
+- id: C8
+  text: Distance, magnitude range (8.5-12.1), ~50 d mean cycle, bimodal outburst widths and the anomalous
+    episode match SS Cyg; the star may be drifting toward another anomalous episode at cutoff.
+  tag: speculated
+  calls:
+  - K1
+  - K5
+  - K8
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:27+00:00'
+hypotheses:
+- id: H1
+  klass: eruptive
+  statement: 'Dwarf nova (U Gem / SS Cyg type): recurrent accretion-disk outbursts of ~3.5 mag every ~1-2
+    months; probably SS Cyg itself.'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  conflicts: []
+  would_falsify: No outburst brighter than V 9.6 in the 110 d after cutoff; or outbursts found to be strictly
+    periodic/colourless.
+  status: live
+  confidence: 0.94
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:28+00:00'
+- id: H2
+  klass: pulsation
+  statement: Long-period pulsator with ~50 d cycle.
+  supports: []
+  conflicts:
+  - C1
+  - C4
+  would_falsify: Irregular intervals, fast-rise outburst shape, dwarf luminosity (already seen).
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:29+00:00'
+- id: H3
+  klass: rotation_spots
+  statement: Flares/spot activity on a K dwarf.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: 3.5 mag week-long events are far beyond spot or flare behaviour.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:29+00:00'
+- id: H4
+  klass: eclipse_companion
+  statement: Eclipses in a binary produce the faint state.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  would_falsify: Aperiodic recurrence and outburst shape.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:30+00:00'
+- id: H5
+  klass: artifact_blend
+  statement: Variability belongs to a neighbour.
+  supports: []
+  conflicts:
+  - C3
+  would_falsify: No neighbour bright enough (shown).
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:31+00:00'
+- id: H6
+  klass: artifact_instrumental
+  statement: Instrumental.
+  supports: []
+  conflicts:
+  - C3
+  would_falsify: 200+ independent observers agree (shown).
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:08:31+00:00'
+predictions:
+- id: P1
+  statement: 'At least one outburst follows: brightest AAVSO:V between days 49790 and 49900 is brighter
+    than 9.6.'
+  check:
+    series: AAVSO:V
+    start: 49790.0
+    end: 49900.0
+    statistic: brightest
+    op: <
+    value: 9.6
+  probability: 0.95
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:08:32+00:00'
+- id: P2
+  statement: 'A wide/bright outburst occurs: brightest AAVSO:V between days 49790 and 49900 is brighter
+    than 8.6.'
+  check:
+    series: AAVSO:V
+    start: 49790.0
+    end: 49900.0
+    statistic: brightest
+    op: <
+    value: 8.6
+  probability: 0.55
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:08:33+00:00'
+- id: P3
+  statement: 'The brightened inter-outburst level persists: median AAVSO:V between days 49800 and 50000
+    is brighter than 11.25.'
+  check:
+    series: AAVSO:V
+    start: 49800.0
+    end: 50000.0
+    statistic: median
+    op: <
+    value: 11.25
+  probability: 0.5
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:08:34+00:00'
+- id: P4
+  statement: 'A full anomalous (no-quiescence) state develops: median AAVSO:V between days 49800 and 50000
+    is brighter than 10.6.'
+  check:
+    series: AAVSO:V
+    start: 49800.0
+    end: 50000.0
+    statistic: median
+    op: <
+    value: 10.6
+  probability: 0.12
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:08:35+00:00'
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'

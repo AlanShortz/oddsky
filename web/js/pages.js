@@ -1,6 +1,7 @@
 // #/cases, #/trials, #/about and the error states.
 
 import { h, s, arr, fmtDate, fmtInt, fmtNum, pct, klassLabel, mjdToYear, mjdToIso, copyText, link } from './util.js';
+import { skyChart } from './trialsky.js';
 import { loadCase } from './data.js';
 import { ladder, emptyNote, MCP_CMD, REPO, REPO_PUBLIC, stamp } from './components.js';
 
@@ -109,8 +110,8 @@ const verdictText = { true: 'came true', false: 'did not happen', unresolvable: 
 
 /** Per-agent tallies used by the page and by the home teaser. */
 export function tally(sc) {
-  const cases = arr(sc.cases);
-  const n = sc.summary?.n ?? cases.length;
+  const cases = arr(sc.cases).filter((c) => c.truth != null); // open questions are forecast-only
+  const n = cases.length;
   const top1 = cases.filter((c) => c.top1).length;
   const rec = cases.filter((c) => recog(c.recognised));
   const unrec = cases.filter((c) => !recog(c.recognised));
@@ -119,15 +120,22 @@ export function tally(sc) {
   return {
     n, top1, rec, unrec, unrecTop1: unrec.filter((c) => c.top1).length, preds, resolved,
     trueN: resolved.filter((p) => p.outcome === 'true').length, pending: preds.filter((p) => p.outcome === 'pending').length,
+    ungradable: preds.filter((p) => p.outcome === 'unresolvable' || p.outcome === 'invalid').length,
   };
 }
 
-export function renderTrials(index) {
-  const cards = [...index.scorecards].sort((a, b) => (b.summary?.top1 ?? 0) - (a.summary?.top1 ?? 0) || String(a.agent).localeCompare(String(b.agent)));
+// columns run small model to large, the same order in every trial
+const agentRank = (name) => { const i = ['haiku', 'sonnet', 'opus', 'fable', 'mythos'].findIndex((k) => String(name).toLowerCase().includes(k)); return i < 0 ? 9 : i; };
+const trialNo = (trial) => String(trial ?? '').replace(/^strange-stars-/, '');
+
+export function renderTrials(index, trialData) {
+  const cards = [...index.scorecards].sort((a, b) => agentRank(a.agent) - agentRank(b.agent) || String(a.agent).localeCompare(String(b.agent)));
+  const metas = new Map(arr(trialData?.trials).map((t) => [t.trial, t]));
+  PAGE = trialData?.page ?? {};
   const page = h('article', { class: 'page trials' });
   if (!cards.length) {
     page.append(h('header', { class: 'page-head' }, h('p', { class: 'kicker' }, 'Keeping ourselves honest'), h('h1', null, 'Trials'),
-      h('p', { class: 'page-lede' }, 'An agent that sounds convincing is not the same as one that is right. So Oddsky tests the investigators on stars whose answers we already know, with the answers sealed before the run.')),
+      h('p', { class: 'page-lede' }, 'An agent that sounds convincing is not the same as one that is right. So Oddsky tests AI models as blind investigators on stars whose answers we already know, with the answers sealed before the run.')),
     h('section', { class: 'trials-empty' },
       h('div', { class: 'envelope is-sealed big' }, h('div', { class: 'env-flap', 'aria-hidden': 'true' }),
         h('div', { class: 'env-paper' },
@@ -138,14 +146,48 @@ export function renderTrials(index) {
   }
   const byTrial = new Map();
   for (const sc of cards) { const k = sc.trial ?? 'trial'; if (!byTrial.has(k)) byTrial.set(k, []); byTrial.get(k).push(sc); }
-  for (const [trial, scs] of byTrial) page.append(trialSection(trial, scs, index));
+  const order = [...byTrial.keys()].sort().reverse(); // newest trial first
+  page.append(standings(order, byTrial));
+  for (const trial of order) page.append(trialSection(trial, byTrial.get(trial), index, metas.get(trial) ?? {}));
   page.append(howTrialsWork());
   return page;
 }
 
-function trialSection(trial, scs, index) {
+// Ledes that say what each trial was for. Anything not listed gets the generic sentence.
+
+
+/** The whole page in one table: every model, every trial. */
+function standings(order, byTrial) {
+  const agents = [...new Set(order.flatMap((t) => byTrial.get(t).map((sc) => sc.agent)))].sort((a, b) => agentRank(a) - agentRank(b));
+  const cell = (trial, agent) => {
+    const sc = byTrial.get(trial).find((x) => x.agent === agent);
+    if (!sc) return [h('td', { class: 'st-none', colspan: 3 }, 'did not run')];
+    const t = tally(sc);
+    return [
+      h('td', null, h('span', { class: 'st-v mono' }, `${t.top1}/${t.n}`)),
+      h('td', null, h('span', { class: 'st-v mono' }, t.resolved.length ? `${t.trueN}/${t.resolved.length}` : '–')),
+      h('td', null, h('span', { class: 'st-v mono' }, fmtNum(sc.summary?.prediction_brier, 2))),
+    ];
+  };
+  return h('section', { class: 'standings' },
+    h('header', { class: 'page-head' }, h('p', { class: 'kicker' }, 'Keeping ourselves honest'), h('h1', null, 'Trials'),
+      h('p', { class: 'page-lede' }, 'An agent that sounds convincing is not the same as one that is right. So Oddsky tests AI models as blind investigators on real stars, with the answers sealed before the first run, and publishes every scorecard, failures included.')),
+    h('div', { class: 'table-scroll' }, h('table', { class: 'st-table' },
+      h('thead', null,
+        h('tr', null, h('th', { rowspan: 2 }, ''), order.map((t) => h('th', { colspan: 3, class: 'st-trial' }, h('a', { href: `#trial-${t}`, onclick: (e) => { e.preventDefault(); document.getElementById(`trial-${t}`)?.scrollIntoView({ behavior: 'smooth' }); } }, `Trial ${trialNo(t)}`), h('span', { class: 'st-sub' }, PAGE.sub?.[t] ?? '')))),
+        h('tr', null, order.map(() => [h('th', { class: 'st-col' }, 'named it'), h('th', { class: 'st-col' }, 'forecasts true'), h('th', { class: 'st-col' }, 'forecast Brier')]))),
+      h('tbody', null, agents.map((a) => h('tr', null, h('th', { scope: 'row' }, h('span', { class: 'cmp-name' }, agentShort(a)), h('span', { class: 'mono muted' }, a)), order.map((t) => cell(t, a))))))),
+    h('p', { class: 'cmp-legend muted' }, 'Named it: the answer key’s explanation was the agent’s first choice. Forecast Brier: squared error of the stated probabilities, lower is better; always saying 50% scores 0.25.'),
+    arr(PAGE.standing_note).length ? h('div', { class: 'st-note' }, PAGE.standing_note.map(([k, v]) => h('p', null, k ? h('strong', null, k) : null, v))) : null);
+}
+let PAGE = {}; // trials/page.json: the hand-written sentences, kept in one file so `oddsky paper-check` can recompute their numbers
+
+function trialSection(trial, scs, index, meta) {
   const caseMap = new Map(index.cases.map((c) => [c.id, c]));
-  const n = scs[0].summary?.n ?? arr(scs[0].cases).length;
+  const n = arr(scs[0].cases).length;
+  const nOpen = arr(scs[0].cases).filter((c) => c.truth == null).length;
+  const NUM = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+  const word = (k, cap) => { const w = NUM[k] ?? fmtInt(k); return cap ? w[0].toUpperCase() + w.slice(1) : w; };
   const modes = [...new Set(scs.flatMap((sc) => arr(sc.cases).map((c) => c.mode)).filter(Boolean))];
   const sha = scs.find((sc) => sc.answers_sha256)?.answers_sha256;
   const verify = `oddsky trial verify trials/${trial}`;
@@ -153,36 +195,40 @@ function trialSection(trial, scs, index) {
   copy.addEventListener('click', () => copyText(verify, copy));
   const sec = h('section', { class: 'trial', id: `trial-${trial}` },
     h('header', { class: 'trial-head' },
-      h('p', { class: 'kicker' }, `Strange Stars · ${trial}${modes.length ? ` · ${modes.join(' + ')}` : ''}`),
-      h('h1', { class: 'trial-title' }, 'Same tools, different minds.'),
-      h('p', { class: 'page-lede' }, `${n === 10 ? 'Ten' : fmtInt(n)} packets of real data, names and dates removed. Answers sealed (sha256) before any agent ran; revealed after. Each agent got the same packets, the same tools and the same prompt.`)),
+      h('p', { class: 'kicker' }, `Strange Stars · Trial ${trialNo(trial)}${modes.length ? ` · ${modes.join(' + ')}` : ''}`),
+      h('h1', { class: 'trial-title' }, PAGE.title?.[trial] || meta.title || 'Same tools, different minds.'),
+      h('p', { class: 'page-lede' }, PAGE.lede?.[trial] ?? `${word(n, true)} packets of real data, names and dates removed. Answers sealed (sha256) before any agent ran; revealed after. Each agent got the same packets, the same tools and the same prompt.`),
+      nOpen ? h('p', { class: 'trial-open muted' }, `${word(nOpen, true)} of the ${word(n)} are open questions: nobody knows what those stars are, so there is no class to score. Their forecasts are still graded against the held-back data.`) : null),
     sha ? h('div', { class: 'seal-row' },
       h('div', { class: 'seal-badge', 'aria-hidden': 'true' }, h('span', null, 'sealed')),
       h('div', { class: 'seal-text' },
         h('p', { class: 'sha' }, h('span', { class: 'sha-k' }, 'answer key sha256'), h('code', { class: 'sha-v' }, sha)),
         h('div', { class: 'copy-row verify' }, h('code', { class: 'cmd' }, h('span', { class: 'cmd-dollar', 'aria-hidden': 'true' }, '$ '), verify), copy),
         h('p', { class: 'muted small' }, 'Hash the revealed answer file and compare: if the key had been edited after the run to flatter an agent, the hash would not match.'))) : null,
-    compareAgents(scs),
+    compareAgents(scs, meta),
     contamination(scs, caseMap),
-    matrix(scs, caseMap),
-    hindsight(scs, caseMap),
+    matrix(scs, caseMap, meta),
+    hindsight(scs, caseMap, meta),
     erratum(scs),
+    afterReveal(trial),
     processNotes(scs),
   );
   return sec;
 }
 
 // side-by-side metrics, each with the uniform-guess reference mark
-function compareAgents(scs) {
+function compareAgents(scs, meta = {}) {
   const base = baseline(scs[0]);
+  const nk = meta.n_classes || Math.round(1 / base.top1);
+  const anyRec = scs.some((sc) => tally(sc).rec.length);
   const rows = [
-    { k: 'Top-1 correct', note: 'the truth was its first choice', get: (sc, t) => ({ v: `${t.top1}/${t.n}`, f: t.n ? t.top1 / t.n : 0, ref: base.top1 }) },
-    { k: 'Top-1, stars it did not recognise', note: 'the cleaner measure', get: (sc, t) => ({ v: t.unrec.length ? `${t.unrecTop1}/${t.unrec.length}` : '–', f: t.unrec.length ? t.unrecTop1 / t.unrec.length : 0, ref: base.top1 }) },
+    { k: 'Top-1 correct', note: 'the answer key’s explanation was its first choice', get: (sc, t) => ({ v: `${t.top1}/${t.n}`, f: t.n ? t.top1 / t.n : 0, ref: base.top1 }) },
+    anyRec && { k: 'Top-1, stars it did not recognise', note: 'the cleaner measure', get: (sc, t) => ({ v: t.unrec.length ? `${t.unrecTop1}/${t.unrec.length}` : '–', f: t.unrec.length ? t.unrecTop1 / t.unrec.length : 0, ref: base.top1 }) },
     { k: 'Mean p(truth)', note: 'probability it gave the right answer', get: (sc) => ({ v: pct(sc.summary?.mean_p_truth), f: sc.summary?.mean_p_truth ?? 0, ref: base.top1 }) },
-    { k: 'Brier score', note: 'probability error over the 11 classes; lower is better', get: (sc) => ({ v: fmtNum(sc.summary?.brier, 2), f: (sc.summary?.brier ?? 0) / 2, ref: base.brier / 2, lowerBetter: true }) },
-    { k: 'Hindsight forecasts', note: 'sealed predictions that came true', get: (sc, t) => ({ v: t.resolved.length ? `${t.trueN}/${t.resolved.length}` : '–', f: t.resolved.length ? t.trueN / t.resolved.length : 0, ref: null, extra: t.pending ? `${t.pending} still sealed` : null }) },
+    { k: 'Brier score', note: `probability error over the ${nk} classes; lower is better`, get: (sc) => ({ v: fmtNum(sc.summary?.brier, 2), f: (sc.summary?.brier ?? 0) / 2, ref: base.brier / 2, lowerBetter: true }) },
+    { k: 'Hindsight forecasts', note: 'sealed predictions that came true', get: (sc, t) => ({ v: t.resolved.length ? `${t.trueN}/${t.resolved.length}` : '–', f: t.resolved.length ? t.trueN / t.resolved.length : 0, ref: null, extra: [t.pending ? `${t.pending} still sealed` : null, t.ungradable ? `${t.ungradable} could not be graded` : null].filter(Boolean).join(', ') || null }) },
     { k: 'Forecast Brier', note: 'lower is better; always saying 50% scores 0.25', get: (sc) => ({ v: fmtNum(sc.summary?.prediction_brier, 3), f: Math.min(1, (sc.summary?.prediction_brier ?? 0) / 0.5), ref: 0.25 / 0.5, lowerBetter: true }) },
-  ];
+  ].filter(Boolean);
   const ts = scs.map((sc) => tally(sc));
   const bar = (x) => {
     const svg = s('svg', { class: 'cmp-bar', viewBox: '0 0 100 10', preserveAspectRatio: 'none', 'aria-hidden': 'true' },
@@ -197,7 +243,7 @@ function compareAgents(scs) {
       h('tbody', null, rows.map((r) => h('tr', null,
         h('th', { scope: 'row' }, h('span', { class: 'cmp-k' }, r.k), h('span', { class: 'cmp-note' }, r.note)),
         scs.map((sc, i) => { const x = r.get(sc, ts[i]); return h('td', null, h('span', { class: 'cmp-v mono' }, x.v), x.extra ? h('span', { class: 'cmp-extra muted' }, ` ${x.extra}`) : null, bar(x)); })))))),
-    h('p', { class: 'cmp-legend muted' }, h('span', { class: 'cmp-ref-key', 'aria-hidden': 'true' }), ` reference: uniform guessing over 11 classes (top-1 ${pct(base.top1)}, Brier ${fmtNum(base.brier, 2)}); for forecasts, always saying 50%.`));
+    h('p', { class: 'cmp-legend muted' }, h('span', { class: 'cmp-ref-key', 'aria-hidden': 'true' }), ` reference: uniform guessing over ${nk} classes (top-1 ${pct(base.top1)}, Brier ${fmtNum(base.brier, 2)}); for forecasts, always saying 50%.`));
 }
 
 function contamination(scs, caseMap) {
@@ -205,21 +251,32 @@ function contamination(scs, caseMap) {
     const t = tally(sc);
     const who = agentShort(sc.agent);
     const named = t.rec.map((c) => `${caseMap.get(c.real_case)?.target ?? c.case}${recog(c.recognised) !== 'yes' ? ` (“${recog(c.recognised)}”)` : ''}`);
-    return h('li', null, h('strong', null, who), ` said it recognised ${t.rec.length} of ${t.n} stars`,
+    return h('li', null, h('strong', null, who), ` said it recognised ${t.rec.length} of ${t.n} packets`,
       t.rec.length && t.rec.length <= 3 ? ` (${named.join(', ')})` : '', ` and named ${t.top1}/${t.n} correctly. `,
       t.unrec.length ? ['On the ', h('strong', null, `${t.unrec.length}`), ` it did not recognise: `, h('strong', null, `${t.unrecTop1}/${t.unrec.length}`), '.'] : 'It recognised every star.');
   });
   const note = scs.find((sc) => sc.summary?.contamination_note)?.summary.contamination_note;
+  if (!scs.some((sc) => tally(sc).rec.length)) {
+    // guesses the agents volunteered and got wrong are part of the record too
+    const wrong = scs.flatMap((sc) => Object.entries(sc.agent_meta?.wrong_guesses ?? {}).map(([pk, name]) => `${agentShort(sc.agent)} thought ${pk} might be ${name}`));
+    return h('aside', { class: 'callout contamination is-clean' },
+      h('span', { class: 'stamp stamp-callout', style: { '--rot': '-2.5deg' } }, 'no memory'),
+      h('div', null,
+        h('h2', { class: 'callout-h' }, 'Nobody recognised a star.'),
+        h('p', null, 'We asked each agent the same question as in Trial 001: do you recognise this star? None of them recognised one. We know of no paper describing what these stars do, so there was little to recognise, and an answer had to be worked out from the data.'),
+        wrong.length ? h('p', null, `They did try. ${wrong.join('; ')}. `, PAGE.guess_note?.[scs[0].trial] ?? 'Every guess was wrong.') : null,
+        h('p', { class: 'muted small' }, 'Self-reported, as before. The price of obscure stars is that their answers are our own conclusions, not the literature’s; each row below says where its answer comes from.')));
+  }
   return h('aside', { class: 'callout contamination' },
     h('span', { class: 'stamp stamp-callout', style: { '--rot': '-2.5deg' } }, 'contamination'),
     h('div', null,
       h('h2', { class: 'callout-h' }, 'Famous stars leak through blinding.'),
-      h('p', null, 'Removing names and dates does not stop a well-read model from recognising a light curve it has seen in papers. We asked each agent to say, honestly, whether it recognised the star. A perfect score on recognised stars is partly a memory test.'),
+      h('p', null, 'Removing names and dates does not stop a well-read model from recognising a star it has read about. We asked each agent to say, honestly, whether it recognised the star. A perfect score on recognised stars is partly a memory test.'),
       h('ul', { class: 'callout-list' }, lines),
       note ? h('p', { class: 'muted small' }, note.charAt(0).toUpperCase() + note.slice(1)) : null));
 }
 
-function matrix(scs, caseMap) {
+function matrix(scs, caseMap, meta = {}) {
   const packets = [...new Set(scs.flatMap((sc) => arr(sc.cases).map((c) => c.case)))];
   const rows = [];
   for (const id of packets) {
@@ -241,19 +298,27 @@ function matrix(scs, caseMap) {
         if (ps.length) notes.push(`${agentShort(sc.agent)}'s forecasts: ${res.length ? `${res.filter((p) => p.outcome === 'true').length}/${res.length} came true` : 'none resolved yet'}${ps.length > res.length ? `, ${ps.length - res.length} still sealed` : ''}.`);
       });
     }
-    const highlight = per.some((c) => c && !c.top1) && per.some((c) => c?.top1) && (any?.mode === 'hindsight' || notes.some((n) => n.includes('nearly')));
+    const open = any?.truth == null;
+    const pk = meta.packets?.[id] ?? {};
+    const split = !open && per.some((c) => c && !c.top1) && per.some((c) => c?.top1);
+    const highlight = split && (any?.mode === 'hindsight' || scs.length > 2 || notes.some((n) => n.includes('nearly')));
     rows.push(h('tr', { class: highlight ? 'is-highlight' : '' },
       h('th', { scope: 'row', class: 'mx-packet' }, h('span', { class: 'mono' }, id), any?.mode ? h('span', { class: `mode-chip mode-${any.mode}` }, any.mode) : null),
       h('td', { class: 'mx-truth' },
-        h('span', { class: 'klass' }, klassLabel(any?.truth)),
+        h('span', { class: `klass${open ? ' is-open' : ''}` }, open ? 'open question' : klassLabel(any?.truth)),
         real ? h('a', { class: 'mx-real', href: link(`case/${real.id}`), title: real.hook ?? '' }, h('span', { class: 'mono' }, `→ ${real.id}`), ` ${real.target}`) : any?.real_case ? h('span', { class: 'mono muted' }, `→ ${any.real_case}`) : null,
-        real?.title ? h('span', { class: 'mx-title' }, real.title) : null),
-      per.map((c, i) => h('td', { class: `mx-cell ${c ? (c.top1 ? 'is-right' : 'is-wrong') : ''}`, 'data-agent': agentShort(scs[i].agent) }, c ? [
+        pk.why ? h('span', { class: 'mx-title' }, pk.why) : real?.title ? h('span', { class: 'mx-title' }, real.title) : null,
+        (PAGE.answer_source?.[scs[0].trial]?.[id] ?? pk.truth_source) && !open ? h('span', { class: 'mx-source mono' }, `answer: ${PAGE.answer_source?.[scs[0].trial]?.[id] ?? pk.truth_source}`) : null),
+      per.map((c, i) => h('td', { class: `mx-cell ${c ? (open ? 'is-open' : c.top1 ? 'is-right' : 'is-wrong') : ''}`, 'data-agent': agentShort(scs[i].agent) }, c ? (open ? [
+        h('div', { class: 'mx-top' }, h('span', { class: 'mx-klass' }, klassLabel(arr(c.ranked)[0]?.klass)), h('span', { class: 'mono muted' }, fmtNum(arr(c.ranked)[0]?.p, 2))),
+        arr(c.ranked)[1] ? h('div', { class: 'mx-second mono muted' }, `then ${klassLabel(c.ranked[1].klass)} ${fmtNum(c.ranked[1].p, 2)}`) : null,
+        h('span', { class: 'mx-unscored mono' }, 'not scored'),
+      ] : [
         h('div', { class: 'mx-top' }, h('span', { class: `mark ${c.top1 ? 'ok' : 'no'}`, title: c.top1 ? 'first choice was right' : 'first choice was wrong' }, c.top1 ? '✓' : '✗'),
           h('span', { class: 'mx-klass' }, klassLabel(arr(c.ranked)[0]?.klass))),
         h('div', { class: 'mx-p' }, h('span', { class: 'rk-bar' }, h('span', { style: { width: `${Math.max(0, Math.min(1, c.p_truth ?? 0)) * 100}%` } })), h('span', { class: 'mono' }, `p(truth) ${fmtNum(c.p_truth, 2)}`)),
         recog(c.recognised) ? h('span', { class: 'recog', title: 'the agent said it recognised this star (self-reported)' }, recog(c.recognised) === 'yes' ? 'recognised' : `recognised? ${recog(c.recognised)}`) : null,
-      ] : '–')),
+      ]) : '–')),
     ));
     if (highlight && notes.length) rows.push(h('tr', { class: 'mx-note-row' }, h('td', { colspan: 2 + scs.length }, h('p', { class: 'mx-note' }, real?.hook && /planted|control/i.test(`${real.title} ${real.hook}`) ? h('em', null, `${real.hook} `) : null, notes.join(' ')))));
   }
@@ -265,7 +330,7 @@ function matrix(scs, caseMap) {
       h('tbody', null, rows))));
 }
 
-function hindsight(scs, caseMap) {
+function hindsight(scs, caseMap, meta = {}) {
   const packets = [...new Set(scs.flatMap((sc) => arr(sc.predictions).map((p) => p.case)))];
   if (!packets.length) return null;
   const sec = h('section', { class: 'sec hs' },
@@ -274,15 +339,27 @@ function hindsight(scs, caseMap) {
   for (const id of packets) {
     const c0 = scs.map((sc) => arr(sc.cases).find((c) => c.case === id)).find(Boolean);
     const real = caseMap.get(c0?.real_case);
+    const pk = meta.packets?.[id] ?? {};
     sec.append(h('h3', { class: 'hs-packet' }, h('span', { class: 'mono' }, id), real ? [' → ', h('a', { href: link(`case/${real.id}`) }, real.target)] : null,
-      c0?.truth ? h('span', { class: 'klass' }, klassLabel(c0.truth)) : null));
+      h('span', { class: 'klass' }, c0?.truth ? klassLabel(c0.truth) : 'open question')));
+    if (pk.why) sec.append(h('p', { class: 'hs-why' }, pk.why.charAt(0).toUpperCase() + pk.why.slice(1), /[.?!]$/.test(pk.why) ? '' : '.'));
+    const chart = pk.sky?.t?.length ? skyChart(pk.sky, scs.map((sc) => sc.agent_meta?.agent ?? sc.agent), real?.target) : null;
+    if (chart) sec.append(chart);
+    const hot = (el, key) => {
+      if (!chart) return el;
+      el.addEventListener('pointerenter', () => chart.highlight(key));
+      el.addEventListener('pointerleave', () => chart.highlight(null));
+      el.addEventListener('focusin', () => chart.highlight(key));
+      el.addEventListener('focusout', () => chart.highlight(null));
+      return el;
+    };
     sec.append(h('div', { class: 'hs-cols' }, scs.map((sc) => {
       const ps = arr(sc.predictions).filter((p) => p.case === id);
       const v1 = new Map(arr(sc.grader_v1?.predictions).map((p) => [`${p.case}/${p.id}`, p]));
       const c = arr(sc.cases).find((x) => x.case === id);
       return h('div', { class: 'hs-col' },
-        h('p', { class: 'hs-agent' }, h('strong', null, agentShort(sc.agent)), c ? h('span', { class: 'muted' }, ` · called it ${klassLabel(arr(c.ranked)[0]?.klass)} ${c.top1 ? '✓' : '✗'}`) : null),
-        ps.length ? ps.map((p) => miniEnvelope(p, v1.get(`${p.case}/${p.id}`))) : h('p', { class: 'muted' }, 'No forecasts.'));
+        h('p', { class: 'hs-agent' }, h('strong', null, agentShort(sc.agent)), c ? h('span', { class: 'muted' }, ` · called it ${klassLabel(arr(c.ranked)[0]?.klass)}${c.truth == null ? '' : c.top1 ? ' ✓' : ' ✗'}`) : null),
+        ps.length ? ps.map((p) => hot(miniEnvelope(p, v1.get(`${p.case}/${p.id}`)), `${sc.agent_meta?.agent ?? sc.agent}/${p.id}`)) : h('p', { class: 'muted' }, 'No forecasts.'));
     })));
   }
   return sec;
@@ -338,6 +415,15 @@ function erratum(scs) {
     h('p', { class: 'muted small' }, `Both gradings are published. The fix was made after the answers were revealed, so you should weigh it accordingly. Scorecards now record their grader: ${scs[0].grader ?? 'v2'}.`));
 }
 
+// What we changed or learned once the answers were out. Said here so nobody has to find it in the git log.
+function afterReveal(trial) {
+  const notes = PAGE.after?.[trial];
+  if (!notes) return null;
+  return h('section', { class: 'sec after' },
+    h('header', { class: 'section-head' }, h('h2', null, 'What to hold against this trial')),
+    h('dl', { class: 'after-list' }, notes.map(([k, v]) => [h('dt', null, k), h('dd', null, v)])));
+}
+
 function processNotes(scs) {
   return h('section', { class: 'sec process' },
     h('header', { class: 'section-head' }, h('h2', null, 'How each agent ran'),
@@ -363,8 +449,10 @@ function howTrialsWork() {
 
 /** One-line strip for the home page. */
 export function trialTeaser(index) {
-  const scs = [...arr(index?.scorecards)].filter((sc) => arr(sc.cases).length).sort((a, b) => (b.summary?.top1 ?? 0) - (a.summary?.top1 ?? 0));
-  if (!scs.length) return null;
+  const all = arr(index?.scorecards).filter((sc) => arr(sc.cases).length);
+  if (!all.length) return null;
+  const latest = all.map((sc) => String(sc.trial ?? '')).sort().pop();
+  const scs = all.filter((sc) => String(sc.trial ?? '') === latest).sort((a, b) => agentRank(a.agent) - agentRank(b.agent));
   const caseMap = new Map(arr(index.cases).map((c) => [c.id, c]));
   const parts = scs.map((sc) => {
     const t = tally(sc);

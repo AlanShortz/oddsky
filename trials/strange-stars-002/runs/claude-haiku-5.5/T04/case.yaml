@@ -1,0 +1,241 @@
+id: T04
+title: Trial star T04
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: 'NEOWISE W1 is flat over 3804 d: median 9.969, robust std 0.003 mag, 2-98 amplitude 0.008 mag,
+    slope 0.0004 mag/yr, no significant step.'
+  tag: observed
+  calls:
+  - K4
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:06:51+00:00'
+- id: C2
+  text: 'TESS is quiet at the 0.07 percent level: robust std 0.0007, 2-98 amplitude 0.36 percent, and
+    no dip or brightening passes the 4-sigma / 0.05 mag excursion test.'
+  tag: computed
+  calls:
+  - K3
+  - K6
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:06:53+00:00'
+- id: C3
+  text: W1-W2 is constant at about -0.055 mag across 17 visits (range 0.028 mag), and the excess-over-baseline
+    test gives zero excess in both bands. No warm dust signature.
+  tag: computed
+  calls:
+  - K7
+  - K8
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:06:55+00:00'
+- id: C4
+  text: TESS periodogram peaks at 6.01 d (power 0.0038, white-noise FAP 7e-8), but the folded light curve
+    at that period shows only about 0.0002 mag of phase structure against 0.0007 scatter, so the periodicity
+    is marginal in amplitude and the FAP assumes white noise.
+  tag: computed
+  calls:
+  - K5
+  - K10
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:06:57+00:00'
+- id: C5
+  text: 'Skeptic checks pass: no Gaia neighbour inside the 6.1 arcsec NEOWISE beam, brightest TESS-beam
+    neighbour contributes 0.35 percent of G flux, CROWDSAP 0.98, no WISE saturation, RUWE 0.91. The only
+    warning is that no second optical instrument confirms the signal.'
+  tag: computed
+  calls:
+  - K2
+  - K9
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:06:58+00:00'
+- id: C6
+  text: 'Gaia gives G 11.46, BP-RP 0.85, Teff about 5760 K, distance about 215 pc, absolute G about 4.8:
+    a Sun-like main-sequence dwarf with no sign of non-single-star behaviour.'
+  tag: inferred
+  calls:
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:06:59+00:00'
+- id: C7
+  text: If the 6-day TESS peak is real, a spot-modulated Sun-like dwarf is the ordinary reading; the folded
+    amplitude is far below the 0.36 percent 2-98 range, so the modulation is speculated, not measured.
+  tag: speculated
+  calls:
+  - K5
+  - K10
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:01+00:00'
+- id: C8
+  text: No dust, no eclipse-like events and no achromatic brightening appear in either the optical or
+    the infrared data, so the dust, eruptive and microlensing classes have no positive support.
+  tag: inferred
+  calls:
+  - K3
+  - K6
+  - K8
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:03+00:00'
+hypotheses:
+- id: H1
+  klass: rotation_spots
+  statement: A Sun-like dwarf with starspots carried around by rotation, giving the marginal 6-day TESS
+    signal at a very small amplitude; NEOWISE shows nothing.
+  supports:
+  - C4
+  - C5
+  - C7
+  conflicts: []
+  would_falsify: The 6-day signal fails to recur coherently across independent TESS sectors, or it is
+    not reproduced by a second optical instrument or a pixel-level re-extraction.
+  status: live
+  confidence: 0.53
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:16+00:00'
+- id: H2
+  klass: normal
+  statement: 'Nothing to explain at the precision of the data: the star is flat in W1 and TESS, and the
+    6-day peak is noise or red-noise at this level.'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C5
+  conflicts:
+  - C4
+  would_falsify: A coherent periodic signal above the TESS noise that recurs in every sector after detrending.
+  status: live
+  confidence: 0.2
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:19+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: The 6-day TESS peak is a spacecraft, detector or pipeline systematic rather than stellar.
+  supports:
+  - C4
+  conflicts:
+  - C5
+  would_falsify: The signal persists after pixel-level or sector-by-sector re-extraction with no link
+    to pointing, momentum dumps or detector positions.
+  status: live
+  confidence: 0.08
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:20+00:00'
+- id: H4
+  klass: artifact_blend
+  statement: The TESS signal belongs to a neighbour inside the 42 arcsec TESS aperture, not to the target.
+  supports:
+  - C5
+  conflicts:
+  - C2
+  would_falsify: The signal amplitude does not track aperture-centroid motion toward or away from the
+    24 arcsec neighbour.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:21+00:00'
+- id: H5
+  klass: pulsation
+  statement: Intrinsic pulsation with a period near the 6-day peak; amplitude far too small to be seen
+    in W1.
+  supports:
+  - C4
+  conflicts:
+  - C1
+  would_falsify: A periodic brightness signal in W1 at a fixed period, or a pulsation-shaped TESS fold
+    with a sharper profile than a sinusoid.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:23+00:00'
+- id: H6
+  klass: eclipse_companion
+  statement: A companion or its disk eclipses the star at long period, undetected because the eclipses
+    are shallow or rare.
+  supports: []
+  conflicts:
+  - C2
+  - C6
+  would_falsify: Any dip of 0.05 mag or more in TESS or NEOWISE, or a dusty IR excess.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:24+00:00'
+- id: H7
+  klass: microlensing
+  statement: A foreground lens passing almost exactly in front, producing an achromatic brightening; none
+    found so far.
+  supports: []
+  conflicts:
+  - C1
+  - C6
+  would_falsify: A smooth achromatic brightening of several tenths of a magnitude with a microlensing-shaped
+    light curve, in TESS or NEOWISE.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:25+00:00'
+- id: H8
+  klass: eruptive
+  statement: Outburst, flare or accretion event; none seen in the TESS excursion search.
+  supports: []
+  conflicts:
+  - C6
+  would_falsify: A brightening above 4 sigma and 0.05 mag in TESS, or any repeat in NEOWISE.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:26+00:00'
+- id: H9
+  klass: dust_occultation
+  statement: Circumstellar dust passing in front of the star; no infrared excess or colour change seen.
+  supports: []
+  conflicts:
+  - C3
+  - C7
+  would_falsify: A W1 dimming accompanied by W1-W2 reddening in any visit.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:28+00:00'
+- id: H10
+  klass: dust_formation
+  statement: The star makes its own dust; no infrared excess or colour change seen.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: W1 brightening with W1-W2 becoming redder over the visits.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:29+00:00'
+- id: H11
+  klass: collision_debris
+  statement: Debris from a collision giving an infrared excess that has not yet reached the optical.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: Any IR excess above the photosphere in NEOWISE at any epoch.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:31+00:00'
+- id: H12
+  klass: yso_dipper
+  statement: Young star with variable extinction from an inner disk; the Gaia position and colour look
+    like a main-sequence dwarf, not a young star.
+  supports: []
+  conflicts:
+  - C3
+  would_falsify: Aperiodic dimming events of 0.1 mag or more, or a Gaia colour/absolute magnitude that
+    places the star on the pre-main-sequence.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:33+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

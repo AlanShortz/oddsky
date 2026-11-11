@@ -6,7 +6,7 @@
 
 import { h, PATH_MODE, link } from './util.js';
 import { parseRoute } from './routes.js';
-import { loadIndex, loadCase, loadHunts, loadDocket, FIXTURE } from './data.js';
+import { loadIndex, loadCase, loadHunts, loadDocket, loadTrials, FIXTURE } from './data.js';
 import { renderCase } from './case.js';
 import { renderCases, renderTrials, renderAbout, renderNotFound, renderError, renderPrivacy, renderTerms } from './pages.js';
 import { renderHome, renderHunts, renderHunt, renderDocket, renderAgents } from './front.js';
@@ -62,7 +62,7 @@ async function route() {
     else if (r.name === 'observer') { view = await renderObserver(r.id); title = `Observer ${r.id}`; }
     else if (r.name === 'agents') { view = renderAgents(await loadIndex()); title = 'For agents'; }
     else if (r.name === 'cases') { view = renderCases(await loadIndex()); title = 'Cases'; }
-    else if (r.name === 'trials') { view = renderTrials(await loadIndex()); title = 'Trials'; }
+    else if (r.name === 'trials') { const [index, trialData] = await Promise.all([loadIndex(), loadTrials()]); view = renderTrials(index, trialData); title = 'Trials'; }
     else if (r.name === 'privacy') { view = renderPrivacy(); title = 'Privacy'; }
     else if (r.name === 'terms') { view = renderTerms(); title = 'Terms'; }
     else if (r.name === 'about') { view = renderAbout(); title = 'About'; }

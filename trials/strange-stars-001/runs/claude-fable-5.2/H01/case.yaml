@@ -1,0 +1,238 @@
+id: H01
+title: Trial star H01
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 19798.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: Seven discrete fadings are seen, minima near days 5840, 7890, 9939 (visual), ~11992 (visual),
+    14039, 16092, 18127 (CCD V/B/I); spacings 2050, 2049, 2053, 2047, 2053, 2035 d, i.e. a strict ~2048
+    d period.
+  tag: computed
+  calls:
+  - K4
+  - K6
+  - K7
+  - K14
+  - K15
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:26+00:00'
+- id: C2
+  text: 'Each fading lasts ~25-47 d with ingress slower than egress; depth varies from event to event:
+    V 0.38 (day 14039), 0.64 (16092), 0.42 (18127) mag; older visual events appear deeper (1.1-1.8 mag,
+    low-precision visual estimates).'
+  tag: computed
+  calls:
+  - K4
+  - K11
+  - K12
+  - K13
+  - K14
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:08+00:00'
+- id: C3
+  text: 'The fadings are nearly grey: dB/dV=1.04, dR/dV=0.91, dI/dV=0.84, much flatter than interstellar-type
+    dust; all bands move together, confirmed by dozens of independent observers.'
+  tag: computed
+  calls:
+  - K2
+  - K6
+  - K7
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:09+00:00'
+- id: C4
+  text: 'Outside the events the star is steady: V median 10.805 vs 10.804 in two consecutive ~700 d windows,
+    robust scatter ~0.05 mag.'
+  tag: computed
+  calls:
+  - K18
+  - K3
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:11+00:00'
+- id: C5
+  text: The star is luminous and blue-ish (Gaia abs G about -1.2 at ~2.3 kpc, BP-RP 0.66 probably reddened),
+    with single-star-like RUWE 1.28; no neighbour within the AAVSO or TESS beams is bright enough to produce
+    0.4-0.7 mag fadings.
+  tag: inferred
+  calls:
+  - K1
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:14+00:00'
+- id: C6
+  text: TESS shows a low-amplitude (~0.01 mag) ~1.98 d modulation, plausibly rotation/pulsation of a hot
+    star or a contaminant (CROWDSAP 0.84); unrelated to the 2048 d events.
+  tag: inferred
+  calls:
+  - K16
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:15+00:00'
+- id: C7
+  text: Strictly periodic, weeks-long, grey, variable-depth, asymmetric eclipses every ~5.6 yr indicate
+    an extended semi-opaque body (a disk around a companion, changing projection e.g. by precession) transiting
+    a hot star. This matches the known system EE Cep.
+  tag: inferred
+  calls:
+  - K19
+  - K4
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:16+00:00'
+- id: C8
+  text: The next eclipse should be centred near day 20175 (18127+2048; plausible range 20160-20185), after
+    the data cutoff at 19798.
+  tag: inferred
+  calls:
+  - K19
+  - K1
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:17+00:00'
+hypotheses:
+- id: H1
+  klass: eclipse_companion
+  statement: A companion surrounded by an extended, inclined, semi-opaque disk eclipses a hot (Be-type)
+    star every ~2048 d; changing disk projection gives variable depth. Probably EE Cep.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C7
+  conflicts: []
+  would_falsify: No fading within +-25 d of day 20175, or fadings at non-periodic times.
+  status: live
+  confidence: 0.9
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:18+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: An orbiting circumstellar dust clump/structure (not bound to a companion) occults the star
+    each ~2048 d orbit.
+  supports:
+  - C1
+  - C3
+  conflicts:
+  - C2
+  would_falsify: Stable eclipse phase and disk-like shape over many cycles; spectroscopic companion signature.
+  status: live
+  confidence: 0.05
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:19+00:00'
+- id: H3
+  klass: pulsation
+  statement: Intrinsic variability mimicking periodic dips.
+  supports: []
+  conflicts:
+  - C1
+  - C4
+  would_falsify: Flat light curve between strictly periodic dips (already seen).
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:20+00:00'
+- id: H4
+  klass: dust_formation
+  statement: Episodic self-made dust.
+  supports: []
+  conflicts:
+  - C1
+  - C3
+  would_falsify: Strict periodicity and grey colour (already seen).
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:21+00:00'
+- id: H5
+  klass: yso_dipper
+  statement: Young star with periodic inner-disk extinction.
+  supports: []
+  conflicts:
+  - C1
+  - C4
+  would_falsify: Quiet light curve between events; 5.6 yr period.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:23+00:00'
+- id: H6
+  klass: artifact_blend
+  statement: The dips belong to a neighbour.
+  supports: []
+  conflicts:
+  - C5
+  would_falsify: No neighbour bright enough (already shown).
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:24+00:00'
+- id: H7
+  klass: artifact_instrumental
+  statement: Observer/pipeline artefacts.
+  supports: []
+  conflicts:
+  - C3
+  would_falsify: Many independent observers agree (already shown).
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:06:25+00:00'
+predictions:
+- id: P1
+  statement: 'An eclipse occurs on schedule: the faintest AAVSO:V point between days 20150 and 20200 is
+    fainter than 11.05.'
+  check:
+    series: AAVSO:V
+    start: 20150.0
+    end: 20200.0
+    statistic: faintest
+    op: '>'
+    value: 11.05
+  probability: 0.9
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:06:26+00:00'
+- id: P2
+  statement: 'Eclipse is centred near day 20175: median AAVSO:V between days 20170 and 20180 is fainter
+    than 10.95.'
+  check:
+    series: AAVSO:V
+    start: 20170.0
+    end: 20180.0
+    statistic: median
+    op: '>'
+    value: 10.95
+  probability: 0.78
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:06:27+00:00'
+- id: P3
+  statement: 'The next eclipse is a deeper one: faintest AAVSO:V point between days 20150 and 20200 is
+    fainter than 11.35 (depth > ~0.55 mag).'
+  check:
+    series: AAVSO:V
+    start: 20150.0
+    end: 20200.0
+    statistic: faintest
+    op: '>'
+    value: 11.35
+  probability: 0.5
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:06:28+00:00'
+- id: P4
+  statement: 'Out of eclipse the star stays at its normal level: median AAVSO:V between days 19850 and
+    20100 is brighter than 10.90.'
+  check:
+    series: AAVSO:V
+    start: 19850.0
+    end: 20100.0
+    statistic: median
+    op: <
+    value: 10.9
+  probability: 0.93
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:06:29+00:00'
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:26+00:00'

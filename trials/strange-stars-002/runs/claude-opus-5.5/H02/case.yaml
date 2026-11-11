@@ -1,0 +1,257 @@
+id: H02
+title: Trial star H02
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 2955.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: 'Three deep, short fadings are seen: ZTF r ~1.5-1.6 mag near days 1949-1965 and 2721-2743, and
+    a single 16.34 point at day 2342 (ATLAS o also faint at 2346); each lasts ~10-16 days with the star
+    at a steady ~14.76 in between.'
+  tag: observed
+  calls:
+  - K3
+  - K4
+  - K5
+  - K6
+  - K7
+  - K11
+  - K12
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:49+00:00'
+- id: C2
+  text: 'The fadings are strictly periodic: eclipse_period across ZTF r/g and ATLAS o gives P=387.3 d
+    (score 0.89, 92% of dim points within 0.04 phase, <1% of quiet points in the core, 4 cycles sampled);
+    fold shows primary depth 1.38 mag (median) and no secondary at phase 0.5 (0.008+-0.017 mag).'
+  tag: computed
+  calls:
+  - K8
+  - K9
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:50+00:00'
+- id: C3
+  text: 'The eclipse is chromatic, deeper in the blue: ZTF g fell ~2.05 mag (to 18.07) vs ~1.5 mag in
+    r in the day-2721-2743 event; g vs r slope 1.30, r=0.99.'
+  tag: computed
+  calls:
+  - K11
+  - K12
+  - K13
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:51+00:00'
+- id: C4
+  text: 'Strong infrared excess / heavy reddening: NEOWISE W1~8.0, W2~7.3 against Gaia G=14.76 (G-W1 ~6.7,
+    W1-W2 ~0.7); NEOWISE photometry is near saturation and 94% of exposures fail quality cuts, so WISE
+    colours are only indicative.'
+  tag: computed
+  calls:
+  - K1
+  - K2
+  - K14
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:52+00:00'
+- id: C5
+  text: 'Not a blend: no Gaia source in the 2 arcsec ZTF beam; the only source within 8 arcsec contributes
+    3.3% of G flux, far too little to produce 75% dimming. RUWE 1.81 hints at an unresolved companion
+    or photocentre motion.'
+  tag: computed
+  calls:
+  - K2
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:53+00:00'
+- id: C6
+  text: A cool, luminous (IR-bright) star with a hotter companion eclipsed every ~387 d (deeper in g)
+    — e.g. a symbiotic-like or dusty long-period eclipsing binary — fits the strict periodicity, single
+    eclipse per cycle and blue-deeper depth better than aperiodic YSO dipping or dust occultation.
+  tag: inferred
+  calls:
+  - K8
+  - K9
+  - K13
+  - K1
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:54+00:00'
+- id: C7
+  text: Out of eclipse the star varies slowly at the 0.1 mag level (ATLAS o step brighter by 0.15 mag
+    at day 1463; ZTF r 14.72-14.89); periodogram peaks (77, 20, 43 d) are weak and likely red noise.
+  tag: computed
+  calls:
+  - K3
+  - K15
+  - K16
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:55+00:00'
+hypotheses:
+- id: H1
+  klass: eclipse_companion
+  statement: 'A long-period (P~387 d) eclipsing binary: a hotter component is eclipsed for ~2 weeks each
+    orbit by a cool, IR-bright companion (possibly with circumstellar dust), giving deep blue-deeper eclipses
+    and no detectable secondary.'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C5
+  - C6
+  conflicts: []
+  would_falsify: No eclipse in the predicted window ~day 3106-3120 (and ~3490-3515) when the star is observed;
+    eclipses drifting in phase or changing depth/duration erratically; a grey (achromatic) eclipse would
+    argue for dust rather than a stellar eclipser.
+  status: live
+  confidence: 0.76
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:10+00:00'
+- id: H2
+  klass: yso_dipper
+  statement: A young star with a warped/precessing inner disk producing periodic extinction dips (KH 15D-like),
+    consistent with the IR excess.
+  supports:
+  - C1
+  - C2
+  - C4
+  conflicts:
+  - C6
+  would_falsify: Dips that are perfectly repeatable in shape and depth over many cycles favour a stellar
+    eclipse; a dip deepening/evolving cycle to cycle or non-strict timing would favour this.
+  status: live
+  confidence: 0.08
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:12+00:00'
+- id: H3
+  klass: dust_occultation
+  statement: A dust clump or disk orbiting with the binary/star occults it once per 387 d orbit.
+  supports:
+  - C1
+  - C2
+  - C4
+  conflicts: []
+  would_falsify: Reddening law of the dip (g/r slope ~1.3 is ISM-like, consistent with dust too); changing
+    depth over cycles would support; constant depth and duration supports a stellar eclipser.
+  status: live
+  confidence: 0.07
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:13+00:00'
+- id: H4
+  klass: dust_formation
+  statement: Episodic dust formation by an evolved IR-bright star causing the fades.
+  supports:
+  - C4
+  conflicts:
+  - C2
+  would_falsify: Strict periodicity already argues strongly against; any future unperiodic decline would
+    support.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:14+00:00'
+- id: H5
+  klass: pulsation
+  statement: Fadings are a pulsation feature of an evolved star.
+  supports: []
+  conflicts:
+  - C2
+  - C1
+  would_falsify: The ~10-day-wide dips on a flat 387-d baseline are not pulsation-shaped; a smooth sinusoidal
+    component would support.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:16+00:00'
+- id: H6
+  klass: artifact_instrumental
+  statement: Pipeline/detector artefact.
+  supports: []
+  conflicts:
+  - C1
+  - C3
+  would_falsify: The eclipse appears in ZTF g, ZTF r and ATLAS o simultaneously; already disfavoured.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:19+00:00'
+- id: H7
+  klass: artifact_blend
+  statement: The eclipses belong to a neighbour.
+  supports: []
+  conflicts:
+  - C5
+  would_falsify: The only neighbour within 8 arcsec is 3% of the flux and none is in the ZTF beam; already
+    disfavoured.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:21+00:00'
+- id: H8
+  klass: eruptive
+  statement: Fadings relate to accretion/eruptive behaviour of an interacting binary.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: Strictly periodic narrow dips are eclipses, not eruptions; an outburst in future data
+    would raise this.
+  status: live
+  confidence: 0.01
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:22+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'The next eclipse recurs near day 3113 (P~386-387 d): the faintest ZTF r point between days
+    3103 and 3123 is fainter than 15.5 mag.'
+  check:
+    series: ZTF:ZTF_r
+    start: 3103.0
+    end: 3123.0
+    statistic: faintest
+    op: '>'
+    value: 15.5
+  probability: 0.75
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:10:36+00:00'
+- id: P2
+  hypothesis: H1
+  statement: 'Out of eclipse the star stays near its quiet level: median ZTF r between days 2960 and 3090
+    is brighter than 14.85 mag.'
+  check:
+    series: ZTF:ZTF_r
+    start: 2960.0
+    end: 3090.0
+    statistic: median
+    op: <
+    value: 14.85
+  probability: 0.85
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:10:37+00:00'
+- id: P3
+  statement: 'Near-coin-flip on slow out-of-eclipse drift: median ZTF r between days 2960 and 3090 is
+    brighter than 14.760 mag.'
+  check:
+    series: ZTF:ZTF_r
+    start: 2960.0
+    end: 3090.0
+    statistic: median
+    op: <
+    value: 14.76
+  probability: 0.5
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:10:38+00:00'
+- id: P4
+  hypothesis: H1
+  statement: 'The eclipse after next (near day 3499) is seen by ATLAS: faintest ATLAS o point between
+    days 3488 and 3510 is fainter than 15.2 mag (risky: near the end of the observing season).'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3488.0
+    end: 3510.0
+    statistic: faintest
+    op: '>'
+    value: 15.2
+  probability: 0.4
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:10:39+00:00'
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

@@ -1,0 +1,148 @@
+id: T03
+title: Trial star T03
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: Gaia G is flat at 14.15 (robust std 0.006) except two isolated deep points ~0.87 mag fainter (day
+    360.43 and 872.17); 1.8 h after the first, G is still 0.19 mag faint, i.e. a short event of hours
+    with ingress/egress.
+  tag: observed
+  calls:
+  - K5
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:12+00:00'
+- id: C2
+  text: The deep points in ZTF r, ZTF g and Gaia G all fold to one phase at P = 2.38016 d (96% of 72 dim
+    points within 0.04 phase, 1.2% of quiet points in core), across ~4000 days and 21 sampled cycles.
+  tag: computed
+  calls:
+  - K8
+  - K7
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:13+00:00'
+- id: C3
+  text: Folded at 2.38016 d, ZTF r primary eclipse reaches 0.92 mag with no detectable secondary at phase
+    0.5 (0.007 +/- 0.004 mag); out-of-eclipse scatter is 0.012 mag.
+  tag: computed
+  calls:
+  - K12
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:14+00:00'
+- id: C4
+  text: A primary depth of 0.92 mag exceeds the 0.75 mag maximum possible for two equal stars, so the
+    4.76 d doubled period with twin eclipses is disfavoured; P = 2.38 d with a much fainter (cooler) companion
+    is the natural reading. Gaia BP dims slightly more than RP (0.94 vs 0.83 mag), as expected when a
+    cooler body covers a warmer star.
+  tag: inferred
+  calls:
+  - K12
+  - K13
+  - K1
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:16+00:00'
+- id: C5
+  text: 'No extended dips or brightenings beyond the eclipses: running-baseline excursion search finds
+    none in ZTF r or g, NEOWISE W1/W2 are flat to ~0.01 mag over 10 years, and no IR change; no Gaia neighbour
+    inside the ZTF or NEOWISE beams, RUWE 1.05.'
+  tag: computed
+  calls:
+  - K3
+  - K4
+  - K1
+  - K2
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:17+00:00'
+- id: C6
+  text: Host is a K-type star (Teff ~4980 K, M_G 5.6 at 521 pc); Gaia flagged it as short-timescale variable
+    with skewness 4.1, consistent with rare short faint points.
+  tag: observed
+  calls:
+  - K1
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:18+00:00'
+hypotheses:
+- id: H1
+  klass: eclipse_companion
+  statement: 'Detached eclipsing binary: a K star eclipsed every 2.38 d (or a small multiple) by a fainter,
+    cooler stellar companion; 0.9 mag deep, hours-long eclipses, no secondary detected.'
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C6
+  conflicts: []
+  would_falsify: Future ZTF/other photometry showing no dimming at predicted eclipse times, or dips at
+    random phases; deep events appearing in only one instrument.
+  status: live
+  confidence: 0.88
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:29+00:00'
+- id: H2
+  klass: artifact_blend
+  statement: The eclipses belong to an unresolved neighbour diluted into the photometry.
+  supports: []
+  conflicts:
+  - C5
+  - C4
+  would_falsify: Depth of 0.9 mag requires the blend to dominate the light; Gaia shows no source within
+    2 arcsec and RUWE is normal; would need a hidden close companion.
+  status: live
+  confidence: 0.04
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:30+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: Deep points are bad photometry.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: 'Already strongly disfavoured: independent Gaia and ZTF points phase up at one period
+    over 11 years.'
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:31+00:00'
+- id: H4
+  klass: dust_occultation
+  statement: Periodic occultation by an orbiting dust clump.
+  supports: []
+  conflicts:
+  - C3
+  - C4
+  would_falsify: Repeatable, stable-depth eclipses at fixed phase argue for a solid body; variable depth/shape
+    would revive it.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:32+00:00'
+- id: H5
+  klass: rotation_spots
+  statement: Spot modulation only.
+  supports: []
+  conflicts:
+  - C3
+  would_falsify: 0.9 mag hours-long dips are not spots; out-of-eclipse modulation is ~0.01 mag.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:33+00:00'
+- id: H6
+  klass: normal
+  statement: Nothing beyond an ordinary star.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  would_falsify: Eclipses are clearly present.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:08:34+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

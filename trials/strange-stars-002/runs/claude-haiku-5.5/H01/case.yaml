@@ -1,0 +1,264 @@
+id: H01
+title: Trial star H01
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 3033.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: The ATLAS o-band median is 16.99 with robust scatter 0.125; the series has a changepoint at MJD
+    1973 where it steps 0.16 mag brighter (18.6 sigma), then fades slowly to about 16.94 before brightening
+    again.
+  tag: computed
+  calls:
+  - K3
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:10+00:00'
+- id: C2
+  text: ATLAS c and o track each other (Pearson r = 0.73, slope 1.05, 89 pairs within 1 day), so the variability
+    is roughly achromatic across the two bands.
+  tag: computed
+  calls:
+  - K9
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:11+00:00'
+- id: C3
+  text: At the end of the data the ATLAS o series brightens by about 0.35 mag from about 16.7 at MJD 2990
+    to 16.35 at MJD 3025 (a 146-point window median of 16.63 against 16.96 before 2900), and the last
+    point is 16.39 at MJD 3028; the rise is still in progress at the cutoff.
+  tag: observed
+  calls:
+  - K11
+  - K5
+  - K13
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:12+00:00'
+- id: C4
+  text: NEOWISE W1-W2 is about -0.16 with no trend (range 0.10 mag) and W1 and W2 are flat across 2917
+    days; the excess above the photosphere is about 1.4 percent, not significant, so no infrared dust
+    signature is seen.
+  tag: computed
+  calls:
+  - K7
+  - K8
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:13+00:00'
+- id: C5
+  text: A Gaia source 6.1 arcsec away (G = 18.09) supplies 37 percent of the target G flux and the 8 arcsec
+    ATLAS aperture contains two Gaia sources, so the variability may partly belong to a neighbour; the
+    target is blended.
+  tag: computed
+  calls:
+  - K2
+  - K6
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:14+00:00'
+- id: C6
+  text: The 1.00 d periodogram peak coincides with the survey window and the longer peaks (about 410 d,
+    794 d) are aliases of that 1-day window, so no reliable period is established.
+  tag: computed
+  calls:
+  - K10
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:15+00:00'
+- id: C7
+  text: 'Whether the late brightening is smooth and achromatic like a lens passage or a neighbour-driven
+    or systematic change cannot be decided from these tools: the lens_fit call failed with a data-key
+    error.'
+  tag: inferred
+  calls:
+  - K3
+  - K9
+  - K5
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:16+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: 'A foreground lens brightens the blended star: an achromatic, smooth rise now in progress
+    at the cutoff, following the earlier achromatic step.'
+  supports:
+  - C2
+  - C3
+  conflicts:
+  - C4
+  would_falsify: A peak and symmetric decline in ATLAS o and c over the next months, or a colour-dependent
+    amplitude, or a neighbour-only signal once the blend is modelled.
+  status: live
+  confidence: 0.28
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:25+00:00'
+- id: H2
+  klass: artifact_blend
+  statement: A variable neighbour inside the 6 to 8 arcsec apertures produces the brightening, since 42
+    percent of the flux comes from Gaia neighbours.
+  supports:
+  - C5
+  conflicts: []
+  would_falsify: Resolved photometry showing the target itself changing with the neighbour constant.
+  status: live
+  confidence: 0.22
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:26+00:00'
+- id: H3
+  klass: artifact_instrumental
+  statement: Pipeline or detector systematics in ATLAS (67 flagged points in o, 71 in c) produce the step
+    and the late rise.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: Brightening that appears in an independent optical series such as ZTF i at the same epoch.
+  status: live
+  confidence: 0.1
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:27+00:00'
+- id: H4
+  klass: pulsation
+  statement: Intrinsic semi-regular variability of a cool red star (Gaia Teff about 4770 K).
+  supports:
+  - C1
+  conflicts:
+  - C7
+  would_falsify: A stable pulsation period in the ATLAS or NEOWISE data.
+  status: live
+  confidence: 0.1
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:28+00:00'
+- id: H5
+  klass: eruptive
+  statement: A slow accretion or outburst brightening.
+  supports:
+  - C3
+  conflicts:
+  - C2
+  would_falsify: A sharp outburst with a colour change, or a fast rise and decline.
+  status: live
+  confidence: 0.08
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:29+00:00'
+- id: H6
+  klass: rotation_spots
+  statement: Starspots carried around by rotation.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: A coherent period near a plausible rotation period.
+  status: live
+  confidence: 0.06
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:30+00:00'
+- id: H7
+  klass: dust_occultation
+  statement: Dust passes in front of the star.
+  supports: []
+  conflicts:
+  - C2
+  - C4
+  would_falsify: A reddened dip with W1-W2 change.
+  status: live
+  confidence: 0.04
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:31+00:00'
+- id: H8
+  klass: dust_formation
+  statement: The star makes dust.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: Any IR excess rising over time.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:32+00:00'
+- id: H9
+  klass: eclipse_companion
+  statement: A companion eclipses the star.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: A stable eclipse period.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:33+00:00'
+- id: H10
+  klass: yso_dipper
+  statement: Variable extinction from an inner disk in a young star.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: Reddening during dips.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:34+00:00'
+- id: H11
+  klass: collision_debris
+  statement: Debris from a collision.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: Absence of IR excess.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:35+00:00'
+- id: H12
+  klass: normal
+  statement: Nothing to explain at the precision of the data.
+  supports: []
+  conflicts:
+  - C3
+  would_falsify: Any excursion beyond noise that persists in both ATLAS bands.
+  status: live
+  confidence: 0.04
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:37+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: The median ATLAS o magnitude over MJD 3040 to 3100 is fainter than 16.60 (the late rise has
+    peaked and begun to fade).
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3040.0
+    end: 3100.0
+    statistic: median
+    op: '>'
+    value: 16.6
+  probability: 0.5
+  author: claude-haiku-5.5
+  registered_at: '2026-11-11T00:09:38+00:00'
+- id: P2
+  hypothesis: H1
+  statement: The median ATLAS o magnitude over MJD 3100 to 3300 is fainter than 16.80, so the brightening
+    has reverted toward the pre-event level.
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3100.0
+    end: 3300.0
+    statistic: median
+    op: '>'
+    value: 16.8
+  probability: 0.25
+  author: claude-haiku-5.5
+  registered_at: '2026-11-11T00:09:44+00:00'
+- id: P3
+  hypothesis: H1
+  statement: The median ATLAS o magnitude over MJD 3034 to 3080 is brighter than 16.50, so the rise continues
+    through the first weeks after the cutoff.
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3034.0
+    end: 3080.0
+    statistic: median
+    op: <
+    value: 16.5
+  probability: 0.6
+  author: claude-haiku-5.5
+  registered_at: '2026-11-11T00:09:45+00:00'
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

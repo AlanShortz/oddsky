@@ -1,0 +1,244 @@
+id: T03
+title: Trial star T03
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: NEOWISE W1 and W2 were flat for the first ~1280 days (W1 11.65, W2 11.73), then jumped between
+    day 1284 and 1439 by 0.34 mag in W1 and 0.78 mag in W2, stayed bright to day ~2170, and decayed back
+    to the original level by day ~3265.
+  tag: observed
+  calls:
+  - K3
+  - K4
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:39+00:00'
+- id: C2
+  text: 'The infrared brightening is red: W1-W2 goes from -0.07 to +0.35 and tracks W1 (r=-0.98); the
+    excess has a two-band colour temperature near 1000 K and equals ~45% (W1) and ~110% (W2) of the photosphere.
+    This is new warm dust emission, not a brighter star.'
+  tag: computed
+  calls:
+  - K5
+  - K12
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:40+00:00'
+- id: C3
+  text: Optical monitoring starts at day 2666, about 1230-1380 days after the infrared jump, and finds
+    the star already ~1.15 mag fainter in V than its Gaia-era brightness, with deep irregular dips (up
+    to ~1.8 mag in V, 2.5 mag in B) lasting days to weeks. The start of the optical dimming is not covered.
+  tag: observed
+  calls:
+  - K2
+  - K6
+  - K1
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:41+00:00'
+- id: C4
+  text: 'The optical dimming ended: the V baseline recovered from ~14.2 (days 2666-2940) to 13.50 (days
+    3500-4550), 0.74 mag brighter at 29 sigma, and has been flat within ~0.03 mag since about day 3300.'
+  tag: computed
+  calls:
+  - K7
+  - K9
+  - K13
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:41+00:00'
+- id: C5
+  text: 'The dimming is chromatic: dB/dV = 1.4-1.55 and dI/dV = 0.46, deeper in the blue, as for extinction
+    by small dust grains (somewhat steeper than interstellar in B).'
+  tag: computed
+  calls:
+  - K2
+  - K10
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:42+00:00'
+- id: C6
+  text: 'The host looks like an ordinary solar-type main-sequence star: Teff ~5760 K, absolute G 4.6,
+    precise parallax (567 pc), RUWE 1.10. It is not a giant, so pulsation and R CrB-like dust formation
+    do not fit. TESS shows only ~1% variability with a 4.1 d period, plausibly rotation.'
+  tag: inferred
+  calls:
+  - K1
+  - K11
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:42+00:00'
+- id: C7
+  text: A 3.8 arcsec neighbour gives only 3.8% of the G flux; it cannot produce 1.8 mag optical dips,
+    and a 110% W2 excess would need it to brighten enormously. All optical data come from one observer,
+    so the dip depths have no independent check, but the Gaia-vs-AAVSO offset and the NEOWISE event are
+    independent of that observer.
+  tag: inferred
+  calls:
+  - K2
+  - K8
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:43+00:00'
+- id: C8
+  text: 'Sequence: warm dust appears abruptly, stays ~2 years, then the star is found dimmed by clumpy
+    chromatic extinction for at least ~300 days while the infrared fades, then both return to normal.
+    The simplest reading is a single dust-producing event (a collision between large bodies) whose debris
+    cloud later crossed the line of sight. I recognise this pattern as matching ASASSN-21qj.'
+  tag: inferred
+  calls:
+  - K3
+  - K5
+  - K9
+  - K12
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:44+00:00'
+hypotheses:
+- id: H1
+  klass: collision_debris
+  statement: A collision between large bodies around a solar-type star made hot dust (infrared jump),
+    and the expanding debris cloud later crossed our line of sight, dimming the star with clumpy chromatic
+    extinction; both have since cleared.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  - C8
+  conflicts: []
+  would_falsify: Optical dimming shown to have begun before the infrared jump; a stable pre-existing infrared
+    excess or youth indicators (disk, accretion lines); the same dips recurring periodically.
+  status: live
+  confidence: 0.74
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:57+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: Circumstellar dust clumps (e.g. disrupted comets or planetesimals) passed in front of the
+    star, with the infrared brightening from the same material but no single giant collision implied.
+  supports:
+  - C3
+  - C5
+  - C4
+  conflicts:
+  - C1
+  would_falsify: A demonstrated causal delay and energy budget requiring a giant impact; no dust left
+    in transit geometry.
+  status: live
+  confidence: 0.1
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:58+00:00'
+- id: H3
+  klass: yso_dipper
+  statement: A young star whose inner disk both flared in the infrared and occulted the star.
+  supports:
+  - C3
+  - C5
+  conflicts:
+  - C2
+  - C6
+  - C4
+  would_falsify: No infrared excess before the event (baseline colour W1-W2 = -0.07 is photospheric);
+    no lithium, accretion or association membership.
+  status: live
+  confidence: 0.06
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:59+00:00'
+- id: H4
+  klass: eclipse_companion
+  statement: A companion with a dusty disk eclipsed the star.
+  supports:
+  - C3
+  conflicts:
+  - C1
+  - C2
+  would_falsify: No repeat of the event; infrared brightening preceding the eclipse by years is not expected
+    from an eclipse.
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:04:59+00:00'
+- id: H5
+  klass: eruptive
+  statement: An accretion or outburst event heated dust and the optical fading followed.
+  supports:
+  - C1
+  conflicts:
+  - C5
+  - C6
+  would_falsify: Optical never brighter than normal; no emission lines.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:00+00:00'
+- id: H6
+  klass: dust_formation
+  statement: The star made its own dust.
+  supports:
+  - C2
+  - C5
+  conflicts:
+  - C6
+  would_falsify: Host is a main-sequence G star, not a cool giant or R CrB star.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:00+00:00'
+- id: H7
+  klass: artifact_blend
+  statement: A neighbour produced the signal.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: The 3.8 arcsec neighbour has 3.8% of the flux; cannot give 1.8 mag dips.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:01+00:00'
+- id: H8
+  klass: artifact_instrumental
+  statement: Single-observer calibration or NEOWISE pipeline problem.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: Two independent facilities plus the Gaia offset agree on the event.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:02+00:00'
+- id: H9
+  klass: rotation_spots
+  statement: Spots.
+  supports: []
+  conflicts:
+  - C3
+  would_falsify: Amplitude of 1.8 mag is far too large; only the 1% TESS signal is spot-like.
+  status: live
+  confidence: 0.005
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:02+00:00'
+- id: H10
+  klass: pulsation
+  statement: Pulsation.
+  supports: []
+  conflicts:
+  - C6
+  would_falsify: Main-sequence host, aperiodic one-off event.
+  status: live
+  confidence: 0.003
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:03+00:00'
+- id: H11
+  klass: normal
+  statement: Nothing to explain.
+  supports: []
+  conflicts:
+  - C1
+  - C4
+  would_falsify: 29 sigma level change and 0.8 mag W2 jump.
+  status: live
+  confidence: 0.002
+  author: claude-fable-5.2
+  at: '2026-11-11T00:05:04+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-10-27T06:14:25+00:00'

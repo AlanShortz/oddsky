@@ -1,0 +1,205 @@
+id: T02
+title: Trial star T02
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: 'Gaia context: Teff~5270 K, abs G~4.6 at 389 pc, RUWE 0.99, no neighbour contributing more than
+    0.8% of flux within 42 arcsec; the variability belongs to the target.'
+  tag: observed
+  calls:
+  - K1
+  - K2
+  - K13
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:10+00:00'
+- id: C2
+  text: Gaia G shows irregular fadings of 0.2-1.2 mag from a bright level near 12.38-12.5 (e.g. 13.66
+    at day 1069.6, back to 12.59 by day 1120), with intra-day changes of 0.05-0.15 mag; distribution strongly
+    skewed to faint (skewness 3.0).
+  tag: observed
+  calls:
+  - K1
+  - K8
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:11+00:00'
+- id: C3
+  text: 'Gaia BP and RP fade together (r=0.996) with dBP/dRP=1.32: the star reddens when it fades, as
+    for extinction by dust (somewhat greyer than ISM).'
+  tag: computed
+  calls:
+  - K11
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:12+00:00'
+- id: C4
+  text: 'ZTF g, years later, shows the same behaviour: dips of 0.3-0.9 mag lasting a few days recurring
+    every ~1-3 weeks without a stable period (best >1.5 d peak 15.1 d, FAP 0.05; no significant periodicity).'
+  tag: computed
+  calls:
+  - K3
+  - K18
+  - K19
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:13+00:00'
+- id: C5
+  text: 'TESS resolves the dips: asymmetric fadings of 0.3-0.65 mag lasting 1-3 days in both sectors,
+    aperiodic/quasi-periodic (weak peaks at 2.2 and ~5.7 d), on a flat-topped bright state.'
+  tag: observed
+  calls:
+  - K9
+  - K15
+  - K17
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:15+00:00'
+- id: C6
+  text: 'NEOWISE W1-W2 is ~0.43 at every visit over 10 years: a persistent warm-dust infrared excess (inner
+    disk). W1 varies by 0.5 mag irregularly with no secular trend.'
+  tag: computed
+  calls:
+  - K7
+  - K14
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:17+00:00'
+- id: C7
+  text: The very narrow (0.04-0.1 d), very deep (0.7-2.7 mag) TESS spikes, e.g. at day 2089.47, sit on
+    top of real dips but are too short and sharp for the dust events seen elsewhere; many TESS points
+    are flagged, so these are probably instrumental (scattered light/background or a passing asteroid
+    in the aperture) and I do not rely on them.
+  tag: inferred
+  calls:
+  - K10
+  - K16
+  - K1
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:19+00:00'
+- id: C8
+  text: A solar-type star with persistent warm IR excess and aperiodic, reddening, day-long dips over
+    >10 years is a young disk-bearing star seen at high inclination whose inner disk (warp/accretion streams)
+    intermittently occults it.
+  tag: inferred
+  calls:
+  - K7
+  - K11
+  - K15
+  - K19
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:21+00:00'
+hypotheses:
+- id: H1
+  klass: yso_dipper
+  statement: Young disk-bearing (T Tauri / UX Ori-like) star seen near edge-on; inner-disk dust intermittently
+    occults it, giving aperiodic reddening dips of days duration.
+  supports:
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  - C8
+  conflicts: []
+  would_falsify: A spectrum with no youth indicators (no Li, no H-alpha emission) and an old kinematic
+    age; or dips becoming strictly periodic with constant shape; or disappearance of the W1-W2 excess.
+  status: live
+  confidence: 0.7
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:38+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: 'Not a classical young disk: circumstellar debris/clumps (e.g. disrupted planetesimals, RZ
+    Psc-like) orbiting a more evolved star occult it irregularly.'
+  supports:
+  - C2
+  - C3
+  - C5
+  - C6
+  conflicts: []
+  would_falsify: Clear accretion signatures and membership of a star-forming region (then yso_dipper);
+    or achromatic dips.
+  status: live
+  confidence: 0.15
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:39+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: A companion with a dusty disk or a circumbinary structure eclipses the star.
+  supports:
+  - C3
+  conflicts:
+  - C4
+  - C5
+  would_falsify: No strict period in dip times over many cycles (currently none found).
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:41+00:00'
+- id: H4
+  klass: eruptive
+  statement: Variable accretion (bursts) rather than extinction drives the changes; the bright state is
+    the anomaly.
+  supports: []
+  conflicts:
+  - C2
+  - C3
+  would_falsify: Star redder when fainter with a flat-topped bright level and faint-skewed distribution
+    (as observed) argues against.
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:42+00:00'
+- id: H5
+  klass: rotation_spots
+  statement: Large spots on a rapidly rotating young star (2.2 d or 5.7 d) contribute part of the modulation.
+  supports: []
+  conflicts:
+  - C2
+  - C4
+  would_falsify: Amplitudes above ~0.5 mag and aperiodic dips cannot be spots; a stable phase-coherent
+    period would support it.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:43+00:00'
+- id: H6
+  klass: artifact_instrumental
+  statement: The variability is instrumental.
+  supports: []
+  conflicts:
+  - C2
+  - C4
+  - C5
+  would_falsify: Three independent instruments (Gaia, ZTF, TESS) seeing the same kind of dips (already
+    the case) falsifies it for the main signal; only the narrow TESS spikes may be artifacts.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:44+00:00'
+- id: H7
+  klass: dust_formation
+  statement: The star ejects its own dust (R CrB-like).
+  supports: []
+  conflicts:
+  - C1
+  - C5
+  would_falsify: Dwarf-like luminosity and day-scale dips (observed) are inconsistent with R CrB declines.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:10:45+00:00'
+- id: H8
+  klass: collision_debris
+  statement: Debris from a recent planetary collision produces both the IR excess and the dips.
+  supports: []
+  conflicts:
+  - C6
+  would_falsify: IR excess constant for 10 years with no rise or decay (already largely the case); dips
+    present before any IR brightening.
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:11:04+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

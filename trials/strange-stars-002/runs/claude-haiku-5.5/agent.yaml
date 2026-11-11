@@ -1,0 +1,14 @@
+agent: claude-haiku-5.5
+model_id: claude-haiku-5-5
+harness: Claude Code subagents (4 parallel, 2 packets each, one blind and one hindsight), Oddsky CLI in blind mode
+run_at: '2026-11-10'
+prompt: trials/strange-stars-002/INVESTIGATOR_PROMPT.md
+tools: oddsky 0.3.1, installed outside the repository
+notes: >
+  Honour-system blinding (CLI, not MCP); packets were copied outside the repository. Self-reported deviations:
+  output trimmed with head, tail, grep and tr; a shell loop to register five same-template hypotheses (H04);
+  several first calls failed at the shell and recorded nothing; one prediction (H03 P3) attached to the wrong
+  hypothesis. Tool problem that mattered: lens_fit and eclipse_period reject a series given as a plain string
+  and need a list; Haiku never found the list form, so it ran neither a lens fit nor an eclipse-period search
+  on any packet. Recognised (self-reported): none.
+recognised: {T01: no, T02: no, T03: no, T04: no, H01: no, H02: no, H03: no, H04: no}

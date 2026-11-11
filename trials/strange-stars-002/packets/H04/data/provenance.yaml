@@ -1,0 +1,55 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  rows_raw: 21
+  rows_kept: 21
+  cuts: []
+  status: ok
+gaia_epoch:
+  archive: ESA Gaia DR3 epoch photometry (datalink)
+  rows_raw: 128
+  rows_kept: 125
+  cuts: []
+  status: ok
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  rows_raw: 426
+  rows_kept: 42
+  cuts:
+  - 'W1: qual_frame > 0 removed 5'
+  - 'W1: cc_flags[0] == ''0'' removed 5'
+  - 'W1: w1rchi2 < 5x source median removed 3'
+  - 'W2: qual_frame > 0 removed 5'
+  - 'W2: cc_flags[1] == ''0'' removed 1'
+  - 'W2: w2rchi2 < 5x source median removed 2'
+  status: ok
+neowise_exp:
+  archive: IRSA Gator neowiser_p1bs_psd (single exposures)
+  rows_raw: 426
+  rows_kept: 831
+  cuts:
+  - 'W1: qual_frame > 0 removed 5'
+  - 'W1: cc_flags[0] == ''0'' removed 5'
+  - 'W1: w1rchi2 < 5x source median removed 3'
+  - 'W2: qual_frame > 0 removed 5'
+  - 'W2: cc_flags[1] == ''0'' removed 1'
+  - 'W2: w2rchi2 < 5x source median removed 2'
+  status: ok
+tess:
+  archive: MAST TESS light curves via lightkurve
+  rows_raw: 66022
+  rows_kept: 23390
+  cuts:
+  - binned to 10-min medians per sector (good and flagged cadences kept apart)
+  status: ok
+asassn:
+  archive: ASAS-SN photometry database (OSU), via referee agent
+  rows_raw: 215
+  rows_kept: 215
+  cuts: []
+  status: ok
+skymapper:
+  archive: SkyMapper DR4 per-visit photometry, via referee agent
+  rows_raw: 71
+  rows_kept: 33
+  cuts: []
+  status: ok

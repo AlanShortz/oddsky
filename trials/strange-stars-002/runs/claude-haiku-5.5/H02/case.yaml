@@ -1,0 +1,265 @@
+id: H02
+title: Trial star H02
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 2955.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: ZTF_r sits near 14.75 to 14.80 for most of the record, with two deep fades. The first bottoms
+    at about 16.41 on day 1956 (about 1.6 mag), falls over about 7 days and recovers by about day 1970.
+    The second is seen in ATLAS_o at day 2729 (1.52 mag) and in ZTF_r at day 2733 (15.05). Data stop at
+    day 2955.
+  tag: observed
+  calls:
+  - K4
+  - K10
+  - K13
+  - K12
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:30+00:00'
+- id: C2
+  text: 'find_excursions finds two fainter events in ZTF_r: 1.64 mag over 9 days (day 1949) and 1.53 mag
+    over 6 days (day 2729). In ZTF_g it finds one 2.1 mag, 10-day fainter event (day 2723 to 2733). The
+    g event is deeper than the r event, as expected for extinction.'
+  tag: computed
+  calls:
+  - K4
+  - K6
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:31+00:00'
+- id: C3
+  text: 'ZTF_g against ZTF_r over 123 near-simultaneous pairs: Pearson r 0.98, slope 1.26. The g band
+    falls about 1.26 times as much as r. That is close to the colour law for dust extinction, so the star
+    reddens when it fades.'
+  tag: computed
+  calls:
+  - K7
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:32+00:00'
+- id: C4
+  text: Gaia gives RUWE 1.81, above the 1.4 threshold (possible unresolved companion or variability-shifted
+    photocentre). The star is at about 2.4 kpc with absolute G 2.86 and BP-RP 2.01, consistent with a
+    reddened, intrinsically luminous star. Gaia gives no Teff.
+  tag: computed
+  calls:
+  - K1
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:33+00:00'
+- id: C5
+  text: The two deep fades are 773 days apart. One data point of each is in the record, so I cannot tell
+    whether they are periodic. eclipse_period errored on every series key, so no period was tested. The
+    two events could be unrelated.
+  tag: inferred
+  calls:
+  - K4
+  - K13
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:34+00:00'
+- id: C6
+  text: WISE is unusable here. Four of 20 visits are saturated (W1 below 8), the cuts remove 94 percent
+    of exposures, and too few visits have both W1 and W2 for wise_color or ir_excess to run. The infrared
+    dust test cannot be done.
+  tag: observed
+  calls:
+  - K2
+  - K8
+  - K9
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:35+00:00'
+- id: C7
+  text: The skeptic finds no blend capable of 1.5 to 2 mag dips. One Gaia source lies at 3.0 arcsec with
+    3.3 percent of the target G flux, inside the ATLAS and NEOWISE beams. ZTF has no source inside 2 arcsec.
+    Two optical sources (ZTF and ATLAS) confirm the fades.
+  tag: computed
+  calls:
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:37+00:00'
+hypotheses:
+- id: H1
+  klass: dust_occultation
+  statement: Dust clumps in front of the star cause the two 1.5 to 2 mag fades, and the colour reddening
+    fits extinction. The rest of the time the star is quiet.
+  supports:
+  - C1
+  - C2
+  - C3
+  conflicts: []
+  would_falsify: A colour that does not redden on fading, or a stable infrared excess that rises during
+    the fades, would count against it. Two fades that are not occultation-shaped would also count against
+    it.
+  status: live
+  confidence: 0.4
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:56+00:00'
+- id: H2
+  klass: dust_formation
+  statement: The star makes its own dust, R CrB-like. Each fade is a dust-formation episode that drives
+    the star fainter and reddens it.
+  supports:
+  - C2
+  - C3
+  conflicts:
+  - C5
+  would_falsify: Fades that are short and symmetric with no sign of dust forming (no infrared excess)
+    would count against it. Absence of a dusty infrared signal is a conflict as well.
+  status: live
+  confidence: 0.25
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:57+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: A dusty companion or disk eclipses the star. The two fades 773 days apart could be a period;
+    the next would fall near day 3500.
+  supports:
+  - C1
+  - C5
+  conflicts: []
+  would_falsify: A third fade at a time that breaks the 773-day spacing, or a clear non-periodic pattern,
+    would count against it. A period found by a clean fold would support it.
+  status: live
+  confidence: 0.14
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:58+00:00'
+- id: H4
+  klass: collision_debris
+  statement: Debris from a collision creates the dust. The infrared excess would come first and optical
+    extinction later.
+  supports: []
+  conflicts:
+  - C6
+  would_falsify: No infrared excess when WISE is available would count against it.
+  status: live
+  confidence: 0.04
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:59+00:00'
+- id: H5
+  klass: yso_dipper
+  statement: A young star with variable extinction from an inner disk. Unlikely for a star this luminous
+    and with no Teff, but not ruled out.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: An absolute magnitude that puts the star on the main sequence and a clean dip pattern
+    would argue against it.
+  status: live
+  confidence: 0.04
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:10:00+00:00'
+- id: H6
+  klass: artifact_blend
+  statement: A neighbour causes the fades. The only close source is at 3.0 arcsec and holds 3.3 percent
+    of the target flux, so it cannot make 1.5 to 2 mag dips.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: A neighbour inside the beam that brightens by more than the target flux would support
+    it.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:10:01+00:00'
+- id: H7
+  klass: artifact_instrumental
+  statement: The pipeline produced the fades. Two independent optical surveys see them, so this is unlikely.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: Fades seen in only one camera or pipeline would support it.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:10:02+00:00'
+- id: H8
+  klass: pulsation
+  statement: Intrinsic pulsation. The fades are not sinusoidal, and no periodicity beyond aliases is established.
+  supports: []
+  conflicts:
+  - C5
+  would_falsify: A stable period that survives alias checks would support it.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:10:03+00:00'
+- id: H9
+  klass: eruptive
+  statement: An outburst or flare. The fades are dimming, not brightening, and the reddening argues against
+    it.
+  supports: []
+  conflicts:
+  - C3
+  would_falsify: A brightening, or a blue colour change, would support it.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:10:05+00:00'
+- id: H10
+  klass: rotation_spots
+  statement: Starspots. A spot cannot cause 1.5 to 2 mag fades with reddening, so this is very unlikely.
+  supports: []
+  conflicts:
+  - C3
+  would_falsify: A periodic signal at a rotation period would support it.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:10:06+00:00'
+- id: H11
+  klass: normal
+  statement: Nothing physical occurred at the precision of the data. The fades are far above the noise,
+    so this is unlikely.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: Any fade above 4 sigma that recurs would count against it.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:10:07+00:00'
+predictions:
+- id: P1
+  statement: The median of ZTF:ZTF_r between day 2960 and day 3600 is fainter than 14.85 mag.
+  check:
+    series: ZTF:ZTF_r
+    start: 2960.0
+    end: 3600.0
+    statistic: median
+    op: '>'
+    value: 14.85
+  probability: 0.2
+  author: claude-haiku-5.5
+  registered_at: '2026-11-11T00:10:12+00:00'
+- id: P2
+  statement: The median of ZTF:ZTF_r between day 2960 and day 3300 is fainter than 14.80 mag. This is
+    close to a coin flip, since the quiet level sits at about 14.77.
+  check:
+    series: ZTF:ZTF_r
+    start: 2960.0
+    end: 3300.0
+    statistic: median
+    op: '>'
+    value: 14.8
+  probability: 0.5
+  author: claude-haiku-5.5
+  registered_at: '2026-11-11T00:10:20+00:00'
+- id: P3
+  hypothesis: H3
+  statement: The median of ZTF:ZTF_r between day 3490 and day 3515, the window where a 773-day repeat
+    of the second fade would fall, is fainter than 14.95 mag.
+  check:
+    series: ZTF:ZTF_r
+    start: 3490.0
+    end: 3515.0
+    statistic: median
+    op: '>'
+    value: 14.95
+  probability: 0.15
+  author: claude-haiku-5.5
+  registered_at: '2026-11-11T00:10:21+00:00'
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

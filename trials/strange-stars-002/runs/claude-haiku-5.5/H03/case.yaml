@@ -1,0 +1,308 @@
+id: H03
+title: Trial star H03
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 1168.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: ASAS-SN V sits flat at a median of 12.70 (robust std 0.015 mag) for about 1000 days; the only
+    point after that is a single 15.46 at day 1090.8, and the series ends there.
+  tag: observed
+  calls:
+  - K1
+  - K12
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:35+00:00'
+- id: C2
+  text: NEOWISE W1 is flat at about 11.06 over six visits (days 0 to 901). In the last visit, at day 1093.3
+    to 1094.3, nine single exposures fade from 12.2 to 14.7 in W1 and from 11.5 to 13.1 in W2 within about
+    one day.
+  tag: observed
+  calls:
+  - K3
+  - K8
+  - K13
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:36+00:00'
+- id: C3
+  text: ATLAS c and o are both about 12.3 to 12.6 at day 731, and both are 17.7 to 18.8 from day 1109
+    to 1165, a sustained drop of roughly 5 to 6 magnitudes that lasts through the last point before the
+    cutoff.
+  tag: computed
+  calls:
+  - K10
+  - K14
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:38+00:00'
+- id: C4
+  text: 'W1-W2 was -0.03 mag through six visits and reached +0.885 in the last visit, so the IR colour
+    turns sharply red as the star fades. The fade is larger in W1 than in W2, but not by the grey-extinction
+    ratio: the optical fades about 5 mag while W1 fades about 2.5 mag within one day.'
+  tag: computed
+  calls:
+  - K4
+  - K8
+  - K13
+  - K12
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:39+00:00'
+- id: C5
+  text: Gaia gives G 12.46, BP-RP 0.80, Teff about 6000 K, distance about 426 pc, RUWE 1.15, and no non-single-star
+    flag. The brightest neighbour inside the ASAS-SN beam contributes 0.24 percent of G flux, and the
+    two G near 16.5 neighbours sit at 21 to 23 arcsec, outside that beam, so a neighbour cannot supply
+    a 5-magnitude fade.
+  tag: computed
+  calls:
+  - K1
+  - K2
+  - K7
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:42+00:00'
+- id: C6
+  text: 'The optical drop starts before the IR drop: ASAS-SN is 2.8 mag fainter at day 1090.8, and NEOWISE
+    is about 1.1 mag fainter in W1 three days later, so the event starts within roughly a week before
+    the cutoff and deepens over days.'
+  tag: inferred
+  calls:
+  - K9
+  - K8
+  - K12
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:44+00:00'
+- id: C7
+  text: The late optical and infrared fade looks like a dust-driven event, either a dust clump occulting
+    the star or a fresh dust episode; the data so far cannot separate these, and the one-day IR fade is
+    fast enough that a detector or pipeline issue cannot be ruled out yet.
+  tag: speculated
+  calls:
+  - K8
+  - K10
+  - K4
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:45+00:00'
+- id: C8
+  text: No positive infrared excess appears in the 200 to 1100 day window (W1 and W2 both slightly negative),
+    and find_excursions finds no events in ASAS-SN with its 300-day baseline. The late fade is visible
+    only because it sits outside the baseline window of the tools, with just one optical point before
+    the drop.
+  tag: computed
+  calls:
+  - K5
+  - K6
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:51+00:00'
+hypotheses:
+- id: H1
+  klass: dust_occultation
+  statement: A dust clump or cloud passes in front of the star from about day 1085, dimming the optical
+    by about 5 mag and the IR by about 2.5 mag in W1, with the IR reddening.
+  supports:
+  - C3
+  - C4
+  - C7
+  conflicts: []
+  would_falsify: The star recovers toward 12.7 in ASAS-SN and ATLAS with W1-W2 back near -0.03 while the
+    dimming is still under way, or the IR fade is shown to be only a pipeline artefact.
+  status: live
+  confidence: 0.33
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:03+00:00'
+- id: H2
+  klass: dust_formation
+  statement: 'An R CrB-like decline: the star makes dust that obscures the photosphere in the optical,
+    and the newly formed shell should later brighten in the infrared.'
+  supports:
+  - C3
+  - C4
+  - C7
+  conflicts:
+  - C2
+  would_falsify: No infrared brightening above the 11.06 baseline appears in the next visits while the
+    optical stays faint.
+  status: live
+  confidence: 0.27
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:04+00:00'
+- id: H3
+  klass: eclipse_companion
+  statement: A dusty companion or its disk eclipses the star, producing a long, deep fade that began near
+    day 1085 and is not yet over.
+  supports:
+  - C3
+  conflicts: []
+  would_falsify: A fade that ends with a symmetric recovery, or a second fade with the same shape at a
+    predictable period.
+  status: live
+  confidence: 0.1
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:06+00:00'
+- id: H4
+  klass: collision_debris
+  statement: 'Debris from a collision: infrared excess should come first and optical extinction later,
+    so an early IR excess after the fade is possible.'
+  supports:
+  - C4
+  conflicts:
+  - C2
+  would_falsify: Any IR excess above the 11.06 baseline in W1 or W2 at later epochs, or the IR fade simply
+    tracking the optical.
+  status: live
+  confidence: 0.06
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:07+00:00'
+- id: H5
+  klass: artifact_instrumental
+  statement: The last NEOWISE visit (nine exposures over about one day) is a detector or pipeline effect,
+    and the optical fade is a separate issue or a survey artefact.
+  supports:
+  - C2
+  conflicts:
+  - C3
+  would_falsify: A third independent instrument or a re-reduction of the NEOWISE single exposures that
+    confirms the W1 and W2 fade with the same timing.
+  status: live
+  confidence: 0.05
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:09+00:00'
+- id: H6
+  klass: eruptive
+  statement: An outburst or accretion event that ends in a fade, with the fade itself unusual; no brightening
+    has been seen before the drop.
+  supports: []
+  conflicts:
+  - C1
+  - C3
+  would_falsify: A brightening of 1 mag or more before day 1085 in any series, or a fade that does not
+    deepen as an outburst would.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:10+00:00'
+- id: H7
+  klass: yso_dipper
+  statement: Variable extinction from an inner disk around a young star; the reddening during the fade
+    fits, but the Gaia colour and absolute magnitude argue against a young star.
+  supports:
+  - C4
+  conflicts:
+  - C5
+  would_falsify: Irregular short dips of 0.1 mag or more recurring before day 1085, or a Gaia colour and
+    absolute magnitude that place the star on the pre-main-sequence.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:11+00:00'
+- id: H8
+  klass: artifact_blend
+  statement: A neighbour inside the aperture is responsible for the late fade; the Gaia neighbours are
+    too faint and too far to account for a 5-magnitude drop.
+  supports: []
+  conflicts:
+  - C5
+  would_falsify: A neighbour inside the ASAS-SN or ATLAS beam that fades by several magnitude over the
+    same days.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:12+00:00'
+- id: H9
+  klass: rotation_spots
+  statement: Starspots on a Sun-like star; spots cannot dim a star by 5 magnitudes, so this class is kept
+    only for the earlier flat-but-noisy phase.
+  supports: []
+  conflicts:
+  - C3
+  would_falsify: A fade of more than about 0.3 mag that is attributed to spots would already be ruled
+    out by the magnitude alone.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:14+00:00'
+- id: H10
+  klass: normal
+  statement: 'Nothing to explain: the star stays near 12.7 in the optical and 11.06 in W1, and the late
+    points are noise or survey artefacts.'
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  - C3
+  would_falsify: A return to about 12.7 in ASAS-SN or ATLAS, or any further sustained fade in the next
+    data.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:15+00:00'
+- id: H11
+  klass: pulsation
+  statement: Intrinsic pulsation with a long period; no periodicity is clear in the data, and a 5-magnitude
+    drop does not fit a regular pulsator.
+  supports: []
+  conflicts:
+  - C1
+  - C3
+  would_falsify: A periodic brightness signal with a repeating light curve shape across the flat epochs.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:17+00:00'
+- id: H12
+  klass: microlensing
+  statement: A lens passing in front would brighten achromatically; the observed fade is red and not smooth,
+    so this class is kept only at a low level.
+  supports: []
+  conflicts:
+  - C2
+  - C4
+  would_falsify: A smooth achromatic brightening of several tenths of a magnitude in any series.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:09:18+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: The median of ATLAS:ATLAS_o between days 1170 and 1400 is fainter than 16.0 mag.
+  check:
+    series: ATLAS:ATLAS_o
+    start: 1170.0
+    end: 1400.0
+    statistic: median
+    op: '>'
+    value: 16.0
+  probability: 0.5
+  author: claude-haiku-5.5
+  registered_at: '2026-11-11T00:09:25+00:00'
+- id: P2
+  hypothesis: H1
+  statement: The median of NEOWISE:W1 between days 1170 and 1500 is fainter than 11.5 mag.
+  check:
+    series: NEOWISE:W1
+    start: 1170.0
+    end: 1500.0
+    statistic: median
+    op: '>'
+    value: 11.5
+  probability: 0.7
+  author: claude-haiku-5.5
+  registered_at: '2026-11-11T00:09:26+00:00'
+- id: P3
+  hypothesis: H5
+  statement: The median of NEOWISE:W1 between days 1170 and 1600 is brighter than 11.3 mag, meaning the
+    IR has largely recovered.
+  check:
+    series: NEOWISE:W1
+    start: 1170.0
+    end: 1600.0
+    statistic: median
+    op: <
+    value: 11.3
+  probability: 0.25
+  author: claude-haiku-5.5
+  registered_at: '2026-11-11T00:09:27+00:00'
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

@@ -1,0 +1,69 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  rows_raw: 52
+  rows_kept: 52
+  cuts: []
+  status: ok
+gaia_epoch:
+  archive: ESA Gaia DR3 epoch photometry (datalink)
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  status: empty
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  rows_raw: 298
+  rows_kept: 42
+  cuts:
+  - 'W1: qual_frame > 0 removed 3'
+  - 'W1: saa_sep > 0 removed 68'
+  - 'W1: moon_masked == ''00'' removed 28'
+  - 'W1: nb == 1 (no blending) removed 1'
+  - 'W1: w1rchi2 < 5x source median removed 5'
+  - 'W2: qual_frame > 0 removed 3'
+  - 'W2: saa_sep > 0 removed 68'
+  - 'W2: moon_masked == ''00'' removed 28'
+  - 'W2: nb == 1 (no blending) removed 1'
+  - 'W2: w2rchi2 < 5x source median removed 2'
+  status: ok
+neowise_exp:
+  archive: IRSA Gator neowiser_p1bs_psd (single exposures)
+  rows_raw: 298
+  rows_kept: 389
+  cuts:
+  - 'W1: qual_frame > 0 removed 3'
+  - 'W1: saa_sep > 0 removed 68'
+  - 'W1: moon_masked == ''00'' removed 28'
+  - 'W1: nb == 1 (no blending) removed 1'
+  - 'W1: w1rchi2 < 5x source median removed 5'
+  - 'W2: qual_frame > 0 removed 3'
+  - 'W2: saa_sep > 0 removed 68'
+  - 'W2: moon_masked == ''00'' removed 28'
+  - 'W2: nb == 1 (no blending) removed 1'
+  - 'W2: w2rchi2 < 5x source median removed 2'
+  status: ok
+tess:
+  archive: MAST TESS light curves via lightkurve
+  rows_raw: 35748
+  rows_kept: 9772
+  cuts:
+  - binned to 10-min medians per sector (good and flagged cadences kept apart)
+  status: ok
+asassn:
+  archive: ASAS-SN photometry database (OSU), via referee agent
+  rows_raw: 252
+  rows_kept: 235
+  cuts: []
+  status: ok
+skymapper:
+  archive: SkyMapper DR4 per-visit photometry, via referee agent
+  rows_raw: 60
+  rows_kept: 55
+  cuts: []
+  status: ok
+atlas:
+  archive: ATLAS forced photometry (fallingstar-data.com), reduced images
+  rows_raw: 4184
+  rows_kept: 227
+  cuts: []
+  status: ok

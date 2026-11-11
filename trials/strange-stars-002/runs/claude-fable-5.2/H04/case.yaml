@@ -1,0 +1,277 @@
+id: H04
+title: Trial star H04
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 1730.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: 'NEOWISE visit means were flat for nine visits over 1458 d (W1 11.18-11.20, W2 11.24-11.28), then
+    at day 1621 W1 = 10.985 and W2 = 10.817: brighter by 0.20 and 0.44 mag. All 18 single exposures of
+    that visit agree (W2 10.79-10.91), plus one 8 d later.'
+  tag: observed
+  calls:
+  - K3
+  - K4
+  - K7
+  - K8
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:25+00:00'
+- id: C2
+  text: 'The brightening is red: W1-W2 goes from -0.07 to +0.17; the excess is 21% (W1) and 50% (W2) of
+    the photosphere, two-band colour temperature ~1000 K (+/- a few hundred).'
+  tag: computed
+  calls:
+  - K6
+  - K11
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:26+00:00'
+- id: C3
+  text: 'The optical did not dim through the IR rise: ASAS-SN V over days 1560-1660 is 0.05 mag BRIGHTER
+    than days 300-1300 (5 sigma, single survey, 16 arcsec beam with 20% neighbour light), having peaked
+    ~0.10 mag bright near day 1580-1586.'
+  tag: computed
+  calls:
+  - K5
+  - K9
+  - K10
+  - K2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:27+00:00'
+- id: C4
+  text: The star is a main-sequence K dwarf (Teff ~4770 K, abs G 6.55, 248 pc, RUWE 1.02), optically quiet
+    at the 0.01-0.03 mag level in Gaia G over days 179-1158. No Gaia source inside the 6.1 arcsec WISE
+    beam; nearest are at 7.0 and 7.9 arcsec (1% and 7% of target G flux).
+  tag: observed
+  calls:
+  - K1
+  - K2
+  - K12
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:28+00:00'
+- id: C5
+  text: 'New ~1000 K emission equal to half the photosphere at 4.6 micron, appearing in under ~165 d around
+    a previously excess-free mature-looking K dwarf with no optical dimming, is best explained by a large
+    mass of freshly made warm dust at a few tenths of an au: the aftermath of a collision between planetary
+    bodies, with the cloud not (yet) on our line of sight.'
+  tag: inferred
+  calls:
+  - K3
+  - K4
+  - K11
+  - K10
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:29+00:00'
+- id: C6
+  text: If this is collision debris, the cloud may shear around its orbit and cross the line of sight
+    months to years later, producing irregular deep optical dips while the IR excess persists. The small
+    optical brightening near the IR rise could be scattered light or an accretion/eruptive component;
+    it rests on one survey.
+  tag: speculated
+  calls:
+  - K9
+  - K10
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:29+00:00'
+- id: C7
+  text: ASAS-SN V sits 0.44 mag brighter than the Gaia-implied V from the start of the series; with 20%
+    neighbour flux in the beam and a constant offset throughout, I read this as blend plus colour-transformation
+    zero point, not a mid-event start.
+  tag: inferred
+  calls:
+  - K2
+  - K5
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:30+00:00'
+hypotheses:
+- id: H1
+  klass: collision_debris
+  statement: 'A collision between planetary bodies made a cloud of ~1000 K dust: IR excess first (day
+    ~1621), optical extinction possibly later as the cloud spreads across the line of sight.'
+  supports: []
+  conflicts: []
+  would_falsify: IR returning to the photospheric level within one or two visits (flare-like), or the
+    excess being traced to a neighbour; no persistent excess after the cutoff.
+  status: live
+  confidence: 0.62
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:47+00:00'
+- id: H2
+  klass: eruptive
+  statement: An accretion or outburst event heats circumstellar material; the 0.05-0.10 mag optical brightening
+    near day 1585 is part of it.
+  supports: []
+  conflicts: []
+  would_falsify: No optical brightening in other surveys; IR excess persisting for years at constant ~1000
+    K with later dimming.
+  status: live
+  confidence: 0.1
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:48+00:00'
+- id: H3
+  klass: artifact_blend
+  statement: The IR brightening belongs to one of the neighbours at 7-8 arcsec (or an unseen background
+    source such as an AGN/flare) partly in the WISE beam.
+  supports: []
+  conflicts: []
+  would_falsify: WISE centroid staying on the target during the bright visit; later optical dips of the
+    target itself.
+  status: live
+  confidence: 0.08
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:48+00:00'
+- id: H4
+  klass: dust_occultation
+  statement: Circumstellar dust clump of other origin (e.g. disrupted comet/planetesimal), seen in emission
+    now and occultation later.
+  supports: []
+  conflicts: []
+  would_falsify: No optical dips ever; or dust mass requiring a planet-scale collision.
+  status: live
+  confidence: 0.06
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:49+00:00'
+- id: H5
+  klass: yso_dipper
+  statement: Young star with an inner disk whose emission and extinction vary.
+  supports: []
+  conflicts: []
+  would_falsify: No pre-event IR excess (W1-W2 = -0.07) and a main-sequence position argue against; lithium/youth
+    indicators absent.
+  status: live
+  confidence: 0.04
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:50+00:00'
+- id: H6
+  klass: dust_formation
+  statement: The star makes its own dust.
+  supports: []
+  conflicts: []
+  would_falsify: It is a K dwarf, not an evolved star.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:51+00:00'
+- id: H7
+  klass: eclipse_companion
+  statement: A companion or its disk is involved.
+  supports: []
+  conflicts: []
+  would_falsify: No eclipses seen; IR emission, not dimming.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:52+00:00'
+- id: H8
+  klass: artifact_instrumental
+  statement: WISE pipeline or detector artifact at the last visit.
+  supports: []
+  conflicts: []
+  would_falsify: 18 exposures in two bands over two days agree, plus one 8 d later; later visits also
+    elevated.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:53+00:00'
+- id: H9
+  klass: rotation_spots
+  statement: Spots explain the optical wiggles; IR is something else.
+  supports: []
+  conflicts: []
+  would_falsify: Spots cannot give +0.44 mag at 4.6 micron.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:54+00:00'
+- id: H10
+  klass: pulsation
+  statement: Intrinsic pulsation.
+  supports: []
+  conflicts: []
+  would_falsify: K dwarf; flat for 1458 d then a step.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:54+00:00'
+- id: H11
+  klass: microlensing
+  statement: Lensing event.
+  supports: []
+  conflicts: []
+  would_falsify: The brightening is strongly chromatic (W2 twice W1; optical 0.05).
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:55+00:00'
+- id: H12
+  klass: normal
+  statement: Nothing to explain.
+  supports: []
+  conflicts: []
+  would_falsify: 0.44 mag W2 rise at >40 sigma.
+  status: live
+  confidence: 0.01
+  author: claude-fable-5.2
+  at: '2026-11-11T00:14:56+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'The IR excess persists: median NEOWISE W2 between days 1750 and 2200 is brighter than 11.10
+    (pre-event level 11.26).'
+  check:
+    series: NEOWISE:W2
+    start: 1750.0
+    end: 2200.0
+    statistic: median
+    op: <
+    value: 11.1
+  probability: 0.8
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:14:57+00:00'
+- id: P2
+  hypothesis: H1
+  statement: 'The excess keeps growing: median NEOWISE W2 between days 1750 and 2200 is brighter than
+    10.82 (the level at the last visit before cutoff).'
+  check:
+    series: NEOWISE:W2
+    start: 1750.0
+    end: 2200.0
+    statistic: median
+    op: <
+    value: 10.82
+  probability: 0.45
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:15:02+00:00'
+- id: P3
+  hypothesis: H1
+  statement: 'The excess is long-lived: median NEOWISE W2 between days 2400 and 3000 is still brighter
+    than 11.10.'
+  check:
+    series: NEOWISE:W2
+    start: 2400.0
+    end: 3000.0
+    statistic: median
+    op: <
+    value: 11.1
+  probability: 0.6
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:15:05+00:00'
+- id: P4
+  hypothesis: H1
+  statement: 'The excess stays red: median NEOWISE W1 between days 1750 and 2200 is brighter than 11.12
+    (pre-event 11.19).'
+  check:
+    series: NEOWISE:W1
+    start: 1750.0
+    end: 2200.0
+    statistic: median
+    op: <
+    value: 11.12
+  probability: 0.7
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:15:07+00:00'
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

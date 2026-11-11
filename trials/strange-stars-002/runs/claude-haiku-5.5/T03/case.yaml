@@ -1,0 +1,251 @@
+id: T03
+title: Trial star T03
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: Gaia G is flat at about 14.15 mag over 39 epochs (2014-2017), robust std 0.006 mag, apart from
+    two single-epoch faint excursions near MJD 360 and 872 (G about 15.02 and 15.04).
+  tag: observed
+  calls:
+  - K1
+  - K5
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:31+00:00'
+- id: C2
+  text: 'The two Gaia dips are present in all three bands: dG about 0.87, dBP about 0.93, dRP about 0.82
+    mag; BP-RP is about 0.1 mag redder during the dip than at baseline.'
+  tag: computed
+  calls:
+  - K5
+  - K9
+  - K10
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:33+00:00'
+- id: C3
+  text: Each Gaia dip recovers within about 0.07 to 0.2 d (the 360 event is still partly faint at 360.51;
+    the 872 event is back to baseline by 872.34), so the dips last hours, not weeks.
+  tag: observed
+  calls:
+  - K5
+  - K9
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:35+00:00'
+- id: C4
+  text: 'The mid-infrared colour is photospheric: NEOWISE W1-W2 is -0.06 mag (range 0.05) across 21 visits
+    over about 10 years, with no IR excess and no warm-dust signature.'
+  tag: computed
+  calls:
+  - K7
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:36+00:00'
+- id: C5
+  text: ZTF r (1215 points, 2752 d) and NEOWISE single exposures show no excursions at the 1-day binning
+    used by find_excursions, and ZTF r has no significant long-term trend (slope -0.001 mag/yr; one 3.9
+    sigma step of 0.004 mag, too small to matter).
+  tag: computed
+  calls:
+  - K3
+  - K4
+  - K12
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:37+00:00'
+- id: C6
+  text: The star is a single, K-type (Teff about 4980 K, BP-RP 1.23, G 14.15, distance about 520 pc) with
+    RUWE 1.05 and no Gaia variability class other than short-timescale.
+  tag: computed
+  calls:
+  - K1
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:38+00:00'
+- id: C7
+  text: The Skeptic finds no Gaia source within the WISE (6.1 arcsec) or ZTF (2.0 arcsec) beams and no
+    WISE saturation, so the dips are not blended with a neighbour inside the beam; the nearest bright
+    neighbour (G about 13.97) is 25.7 arcsec away, so a blend from it cannot be fully excluded for Gaia.
+  tag: computed
+  calls:
+  - K2
+  - K11
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:39+00:00'
+- id: C8
+  text: Periodogram of Gaia G (0.5 to 479 d) finds peaks at 2.78 d and 7.5 d (power about 0.25) with false-alarm
+    probability about 1 under a white-noise assumption; no period is credible given two isolated events.
+  tag: computed
+  calls:
+  - K6
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:40+00:00'
+- id: C9
+  text: Two isolated sub-day dips of about 0.9 mag in 39 Gaia epochs are not a periodic eclipse pattern,
+    and the Gaia tool-based eclipse and microlensing fits could not be run on the Gaia series (series
+    naming error).
+  tag: inferred
+  calls:
+  - K5
+  - K6
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:41+00:00'
+hypotheses:
+- id: H1
+  klass: artifact_instrumental
+  statement: Both dips are Gaia pipeline or detector artefacts (two bad transit epochs out of 39, achromatic-ish
+    in all three bands), and the star is otherwise flat.
+  supports:
+  - C1
+  - C3
+  - C4
+  conflicts: []
+  would_falsify: A dip appearing in an independent photometric survey at the same brightness and duration,
+    or a third Gaia-like dip in a fresh Gaia epoch set.
+  status: live
+  confidence: 0.3
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:51+00:00'
+- id: H2
+  klass: eclipse_companion
+  statement: A small compact companion or its dusty disk transits the star every so often, giving brief
+    deep dips; the two events are the only ones sampled.
+  supports:
+  - C2
+  - C3
+  conflicts:
+  - C5
+  would_falsify: Dips found at a regular period in dense ZTF r data at the depth seen in Gaia, or an absence
+    of dips in ZTF covering the Gaia-era epochs at the expected rate.
+  status: live
+  confidence: 0.22
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:52+00:00'
+- id: H3
+  klass: dust_occultation
+  statement: A clump of circumstellar dust crosses the line of sight, reddening the star briefly.
+  supports:
+  - C2
+  conflicts:
+  - C4
+  would_falsify: Warm dust IR excess in NEOWISE during the dip epochs; W1-W2 is photospheric, which weakens
+    this class.
+  status: live
+  confidence: 0.13
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:53+00:00'
+- id: H4
+  klass: artifact_blend
+  statement: A neighbour, most likely the G 13.97 star 25.7 arcsec away, contaminates the Gaia aperture,
+    so the real dips belong to another star.
+  supports:
+  - C8
+  conflicts:
+  - C7
+  would_falsify: Gaia dips that do not appear in the blended neighbour, or no dip signal in the neighbour
+    light curves.
+  status: live
+  confidence: 0.08
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:55+00:00'
+- id: H5
+  klass: normal
+  statement: The dips are noise or an unmodelled systematic and the star is ordinary, with nothing to
+    explain at this precision.
+  supports:
+  - C1
+  - C6
+  conflicts: []
+  would_falsify: A third dip in future data, or a dip confirmed by an independent survey.
+  status: live
+  confidence: 0.08
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:57+00:00'
+- id: H6
+  klass: eruptive
+  statement: 'Low-probability class kept open: brief dips are not a typical signature of eruptive.'
+  supports: []
+  conflicts:
+  - C4
+  - C5
+  would_falsify: Brightenings, a sustained change in level, or an IR excess appearing at the dip epochs.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:58+00:00'
+- id: H7
+  klass: rotation_spots
+  statement: 'Low-probability class kept open: brief dips are not a typical signature of rotation_spots.'
+  supports: []
+  conflicts:
+  - C4
+  - C5
+  would_falsify: Brightenings, a sustained change in level, or an IR excess appearing at the dip epochs.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:00+00:00'
+- id: H8
+  klass: pulsation
+  statement: 'Low-probability class kept open: brief dips are not a typical signature of pulsation.'
+  supports: []
+  conflicts:
+  - C4
+  - C5
+  would_falsify: Brightenings, a sustained change in level, or an IR excess appearing at the dip epochs.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:01+00:00'
+- id: H9
+  klass: dust_formation
+  statement: 'Low-probability class kept open: brief dips are not a typical signature of dust_formation.'
+  supports: []
+  conflicts:
+  - C4
+  - C5
+  would_falsify: Brightenings, a sustained change in level, or an IR excess appearing at the dip epochs.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:02+00:00'
+- id: H10
+  klass: collision_debris
+  statement: 'Low-probability class kept open: brief dips are not a typical signature of collision_debris.'
+  supports: []
+  conflicts:
+  - C4
+  - C5
+  would_falsify: Brightenings, a sustained change in level, or an IR excess appearing at the dip epochs.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:03+00:00'
+- id: H11
+  klass: yso_dipper
+  statement: Variable extinction from an inner disk, but the photospheric W1-W2 colour argues against
+    a disk.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: NEOWISE W1-W2 rising above about 0.3 mag at any epoch.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:04+00:00'
+- id: H12
+  klass: microlensing
+  statement: A foreground remnant passes in front of the star, giving two short achromatic events.
+  supports:
+  - C2
+  conflicts:
+  - C3
+  would_falsify: Any second event or a repeat within a few hundred days, which the class description rules
+    out for microlensing.
+  status: live
+  confidence: 0.05
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:11+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

@@ -1,0 +1,110 @@
+{
+  "gaia": {
+    "G": 12.559925,
+    "bp_rp": 1.1884165,
+    "parallax_over_error": 156.72293,
+    "ruwe": 0.9906906,
+    "teff_gspphot": 5265.815,
+    "non_single_star": 0,
+    "distance_pc": 388.80853951458755,
+    "abs_G": 4.611246025527478
+  },
+  "neighbors": [
+    {
+      "sep_arcsec": 13.4382,
+      "phot_g_mean_mag": 17.7978,
+      "bp_rp": 2.5739,
+      "dG": 5.2379,
+      "flux_ratio_G": 0.008,
+      "ruwe": 0.956
+    },
+    {
+      "sep_arcsec": 15.5364,
+      "phot_g_mean_mag": 20.0809,
+      "bp_rp": 1.7583,
+      "dG": 7.521,
+      "flux_ratio_G": 0.001,
+      "ruwe": 1.0214
+    },
+    {
+      "sep_arcsec": 19.0138,
+      "phot_g_mean_mag": 20.2949,
+      "bp_rp": 1.4773,
+      "dG": 7.735,
+      "flux_ratio_G": 0.0008,
+      "ruwe": 1.0442
+    },
+    {
+      "sep_arcsec": 24.8896,
+      "phot_g_mean_mag": 20.2757,
+      "bp_rp": 2.0658,
+      "dG": 7.7157,
+      "flux_ratio_G": 0.0008,
+      "ruwe": 0.9642
+    },
+    {
+      "sep_arcsec": 27.0394,
+      "phot_g_mean_mag": 20.9517,
+      "bp_rp": 1.4386,
+      "dG": 8.3918,
+      "flux_ratio_G": 0.0004,
+      "ruwe": NaN
+    },
+    {
+      "sep_arcsec": 27.1048,
+      "phot_g_mean_mag": 20.7206,
+      "bp_rp": 2.0882,
+      "dG": 8.1607,
+      "flux_ratio_G": 0.0005,
+      "ruwe": 1.0408
+    }
+  ],
+  "gaia_variability": {
+    "summary": {
+      "num_selected_g_fov": 49,
+      "mean_mag_g_fov": 12.58415,
+      "std_dev_mag_g_fov": 0.26122692,
+      "range_mag_g_fov": 1.286036,
+      "skewness_mag_g_fov": 3.0496166,
+      "in_vari_long_period_variable": false,
+      "in_vari_eclipsing_binary": false,
+      "in_vari_rrlyrae": false,
+      "in_vari_cepheid": false,
+      "in_vari_short_timescale": false,
+      "in_vari_agn": false,
+      "in_vari_classification_result": true
+    }
+  },
+  "tess": {
+    "sectors": {
+      "a": {
+        "crowdsap": null,
+        "exptime": 1800.0,
+        "desat_mjd": [
+          2087.195956513846,
+          2091.446055085493,
+          2100.2378526009634,
+          2104.7378582512974
+        ]
+      },
+      "b": {
+        "crowdsap": null,
+        "exptime": 200.0,
+        "desat_mjd": [
+          3928.504094783777,
+          3928.506409591624,
+          3928.5087243994712,
+          3935.2124127443894,
+          3935.2147275466486,
+          3935.217042348442,
+          3942.0664827670917,
+          3942.068797522319,
+          3942.0711122775465,
+          3948.283922270035,
+          3948.286237021537,
+          3948.288551773505
+        ]
+      }
+    }
+  }
+}

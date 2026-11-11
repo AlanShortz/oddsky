@@ -142,14 +142,15 @@ the same tools and the same prompt:
 |---|---|---|---|---|
 | claude-opus-5.5 | **10/10** | **0.10** | 0.77 | 7 of 8 true (the miss was rated 8%); Brier 0.09 |
 | claude-haiku-5.5 | 5/10 | 0.71 | 0.38 | 2 of 3 resolved true; 3 still pending |
+| claude-fable-5.2 (run 2026-11-10, after the reveal) | 9/10 | 0.20 | 0.75 | 5 of 8 true; Brier 0.11 |
 | uniform guessing | 0.9/10 | 0.91 | 0.09 | |
 
 What's worth knowing, including the parts that don't flatter anyone:
 
-- **Opus recognised 8 of the 10 stars** (self-reported, tagged as speculation): R CrB, SS Cyg,
+- **Opus recognised 8 of the 10 packets** (self-reported, tagged as speculation): R CrB, SS Cyg,
   EE Cep, ASASSN-21qj and others. Blinding hides names, not physics. On the two packets it did not
-  recognise (the ordinary star and the salted one) it went 2/2. Trial 002 needs stars nobody has
-  written about, chosen by a professional astronomer.
+  recognise (the ordinary star and the salted one) it went 2/2. Trial 002 (below) was built
+  to have no famous stars.
 - **EE Cep, from data cut a year before its 2025 eclipse:** Opus timed the next eclipse from the
   previous six (period 2048 d) and registered four forecasts. All four came true, including the one
   it had rated at 45%. Haiku called the star a pulsator.
@@ -161,8 +162,29 @@ What's worth knowing, including the parts that don't flatter anyone:
   uses nightly medians. Because the change came after the reveal, both gradings are published in
   [the scorecards](trials/strange-stars-001/results).
 
+- **Fable 5.2, two weeks later:** same packets, prompt and tool version. It said it recognised the same
+  eight packets and missed one: it saw that every dip in the salted packet sat on a momentum dump and
+  then called the star normal (0.80) instead of an instrumental artifact (0.10).
+
 Every claim, hypothesis and prediction the agents made is in `trials/strange-stars-001/runs/`, and
 every tool call in it replays.
+
+## Strange Stars Trial 002
+
+Trial 001 could not tell skill from memory, so Trial 002 uses eight stars from Oddsky's own casebook:
+none famous, several catalogued, none with a paper describing what it does. Five have a scored answer
+(Oddsky's own, and Opus 5.5 contributed to the casebook it comes from); three are open questions where
+only the forecasts are graded, against held-back data. Sealed `sha256 acd28697…` in `00d4310`.
+
+| | matched the key | Brier | forecasts true | forecast Brier |
+|---|---|---|---|---|
+| claude-haiku-5.5 | 2/5 | 0.71 | 2 of 7 | 0.25 |
+| claude-opus-5.5 | 5/5 | 0.06 | 8 of 10 | 0.23 |
+| claude-fable-5.2 | 5/5 | 0.08 | 13 of 15 | 0.17 |
+
+One run each, forecasts on the same star are not independent, Fable's run was interrupted by a full
+disk, and two grader rules changed after the reveal. All of that, and every number above, is on the
+[Trials page](https://oddsky.ai/trials) and recomputed by `oddsky paper-check trials/page_claims.py`.
 
 ## Run it locally
 

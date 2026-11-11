@@ -1,0 +1,28 @@
+# Strange Stars Trial 002. This file names the real stars, so it is NOT given to investigators;
+# they only see packets/<id>/. Answers are sealed (sealed/answers.sha256) when packets are built.
+name: strange-stars-002
+title: No famous stars this time
+description: >
+  Eight packets of real archive data with identity, coordinates and dates scrubbed, all from
+  Oddsky's own casebook: obscure stars, several catalogued but none with a paper describing what it does.
+  Four blind (name the explanation), with answers that are Oddsky's own conclusions
+  rather than literature, including one ordinary star. Four hindsight (data cut at a date;
+  forecast what happens next, graded against what the sky did). Three of the hindsight stars are
+  open questions: nobody knows what they are, so their class is not scored, only their forecasts.
+packets:
+  - {id: T01, case: OS-0017, truth: microlensing, truth_source: "reproduced in a second survey; two independent reviews",
+     why: "halo giant lensed in March 2020; the peak itself fell in a data gap"}
+  - {id: T02, case: OS-0010, truth: yso_dipper, truth_source: "Oddsky's refereed conclusion (0.85)",
+     why: "a suspected variable nobody had classified: a young dipper"}
+  - {id: T03, case: OS-0012, truth: eclipse_companion, truth_source: "Oddsky's refereed conclusion (0.97)",
+     why: "new eclipsing binary; a P/5 alias once made it look like an invisible companion"}
+  - {id: T04, case: OS-0008, truth: normal, truth_source: "control",
+     why: "quiet control star in the TESS continuous viewing zone, nothing planted this time"}
+  - {id: H01, case: OS-0018, truth: microlensing, cutoff_mjd: 59775, truth_source: "reproduced in a second survey; reviewed",
+     why: "cut on the rise, about two months before the peak of a fivefold brightening"}
+  - {id: H02, case: OS-0015, truth: null, cutoff_mjd: 59700, truth_source: "open question",
+     why: "three eclipses seen; the 2022 and 2023 ones are held back. Eclipse by a companion or a young star's disk: undecided"}
+  - {id: H03, case: OS-0014, truth: null, cutoff_mjd: 57915, truth_source: "open question",
+     why: "cut while the star was 5 magnitudes down; does it come back?"}
+  - {id: H04, case: OS-0013, truth: null, cutoff_mjd: 58450, truth_source: "open question",
+     why: "cut one visit after an infrared excess appeared; does it stay?"}

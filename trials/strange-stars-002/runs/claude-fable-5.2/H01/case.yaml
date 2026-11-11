@@ -1,0 +1,240 @@
+id: H01
+title: Trial star H01
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 3033.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: 'Very red (BP-RP 3.15), faint (G 17.0) star with no measurable parallax in a crowded field (44
+    Gaia sources within 30 arcsec; a neighbour with 37% of its G flux at 6.1 arcsec sits in the ATLAS
+    and WISE beams): a distant reddened giant-like source, with blending diluting any amplitude.'
+  tag: observed
+  calls:
+  - K1
+  - K15
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:22+00:00'
+- id: C2
+  text: 'ATLAS o was near 16.95 from day ~2200 to ~2800, then brightened smoothly and at an accelerating
+    rate: 16.85 (day 2915), 16.66 (2985), 16.36 (3027), still rising ~0.012 mag/day at the cutoff. No
+    earlier excursion in 2500 days.'
+  tag: observed
+  calls:
+  - K10
+  - K12
+  - K16
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:23+00:00'
+- id: C3
+  text: 'The rise is seen independently in ATLAS c (-0.38+/-0.04 mag at days 2960-3000 vs 2500-2800, against
+    -0.29 in o), in ZTF r (16.95 at day 3009 vs 17.39 near day 1860) and in NEOWISE W1 (-0.15 mag, 10
+    sigma, at day 2917): real, and broad-band from 0.5 to 4.6 micron.'
+  tag: computed
+  calls:
+  - K14
+  - K18
+  - K19
+  - K20
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:23+00:00'
+- id: C4
+  text: 'W1-W2 stays near -0.16 throughout including the last brightened visit: no warm dust and no IR
+    colour change during the rise.'
+  tag: computed
+  calls:
+  - K21
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:24+00:00'
+- id: C5
+  text: Before the event ATLAS o and c brightened slowly by ~0.2-0.3 mag between days ~500 and ~2200;
+    this may be an early-ATLAS systematic in a crowded field, intrinsic slow variability, or the far wing
+    of a very long event.
+  tag: observed
+  calls:
+  - K9
+  - K10
+  - K11
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:25+00:00'
+- id: C6
+  text: A single smooth, accelerating, nearly achromatic brightening of a previously quiet distant star
+    in a crowded field is best explained as a microlensing event in progress; the slightly larger blue
+    amplitude is as expected if redder neighbours dilute the o band more, but an outburst (hotter when
+    brighter) is not excluded.
+  tag: inferred
+  calls:
+  - K16
+  - K18
+  - K19
+  - K20
+  - K21
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:26+00:00'
+- id: C7
+  text: lens_fit could not be run (tool error), so no Einstein time or peak date is computed; the forecast
+    peak is a judgement from the rise shape only.
+  tag: observed
+  calls:
+  - K16
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:27+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A foreground lens is magnifying a distant red star; the event was still rising at the cutoff
+    and will peak, then decline symmetrically (possibly distorted by parallax) back to baseline and never
+    repeat.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C6
+  conflicts: []
+  would_falsify: Asymmetric fast-rise/slow-decline or plateau lasting years; strong colour change at peak;
+    a second brightening later; star not returning to ~16.95 in o.
+  status: live
+  confidence: 0.62
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:40+00:00'
+- id: H2
+  klass: eruptive
+  statement: 'An outburst (accretion event, symbiotic/nova-like or young-star outburst) is under way:
+    intrinsic brightening, bluer when brighter.'
+  supports:
+  - C2
+  - C3
+  - C5
+  conflicts:
+  - C4
+  would_falsify: A time-symmetric, achromatic light curve returning exactly to the pre-event level.
+  status: live
+  confidence: 0.2
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:41+00:00'
+- id: H3
+  klass: pulsation
+  statement: A long-period/irregular red giant variable brightening on a long secondary timescale.
+  supports:
+  - C1
+  - C5
+  conflicts:
+  - C2
+  would_falsify: No periodicity and a single symmetric event; amplitude equal from optical to 4.6 micron.
+  status: live
+  confidence: 0.06
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:42+00:00'
+- id: H4
+  klass: artifact_blend
+  statement: The brightening belongs to one of the neighbours within 6 arcsec (the 37% flux neighbour
+    or the 2.5 arcsec one), not the target.
+  supports:
+  - C1
+  conflicts: []
+  would_falsify: Resolved photometry (ZTF 2 arcsec beam, Gaia) placing the brightening on the target;
+    ZTF r already hints so.
+  status: live
+  confidence: 0.05
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:43+00:00'
+- id: H5
+  klass: dust_occultation
+  statement: The star was dimmed by dust earlier and is now clearing (brightening = end of a long obscuration).
+  supports:
+  - C5
+  conflicts:
+  - C3
+  - C4
+  would_falsify: Equal amplitude in W1 and optical, and rising above any earlier level, argue against;
+    a plateau at a new bright level would support it.
+  status: live
+  confidence: 0.03
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:44+00:00'
+- id: H6
+  klass: artifact_instrumental
+  statement: Pipeline or reference-image artefact.
+  supports: []
+  conflicts:
+  - C3
+  would_falsify: Three independent instruments see it (already the case).
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:45+00:00'
+- id: H7
+  klass: normal
+  statement: Nothing unusual.
+  supports: []
+  conflicts:
+  - C2
+  - C3
+  would_falsify: The 0.6 mag multi-instrument rise.
+  status: live
+  confidence: 0.02
+  author: claude-fable-5.2
+  at: '2026-11-11T00:13:45+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'Still brighter than the last pre-cutoff level shortly after the cutoff: median ATLAS o between
+    days 3040 and 3100 is brighter than 16.36.'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3040.0
+    end: 3100.0
+    statistic: median
+    op: <
+    value: 16.36
+  probability: 0.7
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:13:46+00:00'
+- id: P2
+  hypothesis: H1
+  statement: 'High-magnification peak (near 50/50): median ATLAS o between days 3060 and 3130 is brighter
+    than 16.0.'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3060.0
+    end: 3130.0
+    statistic: median
+    op: <
+    value: 16.0
+  probability: 0.45
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:13:53+00:00'
+- id: P3
+  hypothesis: H1
+  statement: 'The event is over two seasons later: median ATLAS o between days 3620 and 3880 is fainter
+    than 16.75 (back near the 16.95 baseline).'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3620.0
+    end: 3880.0
+    statistic: median
+    op: '>'
+    value: 16.75
+  probability: 0.62
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:13:54+00:00'
+- id: P4
+  hypothesis: H1
+  statement: 'No lasting new bright state: median ATLAS o in the next season (days 3260-3510) is fainter
+    than 16.5, i.e. already declining from peak.'
+  check:
+    series: ATLAS:ATLAS_o
+    start: 3260.0
+    end: 3510.0
+    statistic: median
+    op: '>'
+    value: 16.5
+  probability: 0.55
+  author: claude-fable-5.2
+  registered_at: '2026-11-11T00:13:55+00:00'
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

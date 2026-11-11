@@ -1,0 +1,187 @@
+id: T01
+title: Trial star T01
+hook: ''
+status: observation
+summary: Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean.
+claims:
+- id: C1
+  text: ATLAS_o shows one brightening of about 0.8 to 1.0 mag (14.26 vs baseline 15.22 near day 1977)
+    that decays back to baseline by about day 2180. The onset falls in a data gap, so the rise is not
+    seen.
+  tag: observed
+  calls:
+  - K7
+  - K8
+  - K14
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:50+00:00'
+- id: C2
+  text: 'find_excursions finds exactly two events in ATLAS_o: the brightening (0.82 mag, 92 d, 18 bins,
+    4 sigma) and a short 0.14 mag fainter dip of 8 days near day 380 seen in only 3 bins.'
+  tag: computed
+  calls:
+  - K7
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:51+00:00'
+- id: C3
+  text: ATLAS_c and ATLAS_o track each other over days 1800 to 2300 (Pearson r 0.97, slope 1.08, 79 pairs).
+    The brightening has about the same amplitude in both bands, which is achromatic.
+  tag: computed
+  calls:
+  - K19
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:52+00:00'
+- id: C4
+  text: Two ZTF_g points at days 2075 and 2106 are 0.13 to 0.14 mag above the ZTF_g median, and ATLAS_c
+    and ATLAS_o show the same level offset at day 2074 (0.13 to 0.15 mag). This fits a single achromatic
+    brightening with a tail that is still decaying. ZTF has no coverage at the onset.
+  tag: computed
+  calls:
+  - K10
+  - K4
+  - K11
+  - K8
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:54+00:00'
+- id: C5
+  text: 'No infrared excess: the W1 excess over the photosphere is 1.5 percent, and the W1-W2 colour stays
+    near -0.08 (range 0.13) across all 20 visits with no trend against W1 brightness. This argues against
+    warm dust.'
+  tag: computed
+  calls:
+  - K15
+  - K16
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:55+00:00'
+- id: C6
+  text: 'The skeptic checks pass: no Gaia source inside the ATLAS, ZTF or NEOWISE beams, no WISE saturation,
+    RUWE 1.00 and no non-single-star flag. The nearest neighbours are at 9.7 and 17.8 arcsec, outside
+    all beams, and the 17.8 arcsec one contributes 7 percent of target flux. Two independent ATLAS cameras
+    (01a and 02a) both show the brightening.'
+  tag: computed
+  calls:
+  - K2
+  - K17
+  - K18
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:56+00:00'
+- id: C7
+  text: The periodogram peaks (354 d in ATLAS_o, 1133 d in ZTF_r) coincide with survey window or year
+    aliases. There is no evidence of a stable intrinsic period. The brightening occurs once in 4000 days
+    and does not repeat.
+  tag: inferred
+  calls:
+  - K2
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:07:57+00:00'
+hypotheses:
+- id: H1
+  klass: microlensing
+  statement: A foreground lens passed almost exactly in front of the star around day 1977. The brightening
+    is achromatic, smooth and single, and it does not repeat.
+  supports:
+  - C1
+  - C3
+  - C4
+  - C5
+  - C7
+  conflicts: []
+  would_falsify: A second achromatic event in the 4000-day record, a colour change in the brightening,
+    or an IR excess would count against it. A rise and fall that is not symmetric within the lens model
+    would also count against it.
+  status: live
+  confidence: 0.78
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:05+00:00'
+- id: H2
+  klass: eruptive
+  statement: A non-classical outburst or flare on the star. It would need a blue colour change or spectral
+    signature, which is not seen here, so it is weak.
+  supports:
+  - C1
+  conflicts:
+  - C3
+  would_falsify: An achromatic light curve with a fixed shape and no colour change, as seen here, argues
+    against it.
+  status: live
+  confidence: 0.05
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:07+00:00'
+- id: H3
+  klass: artifact_blend
+  statement: A neighbour star produced the brightening. The 17.8 arcsec neighbour is outside all beams
+    and holds about 7 percent of target flux, so it could not produce a 0.8 mag rise.
+  supports: []
+  conflicts:
+  - C6
+  would_falsify: A neighbour inside the beam that brightens by more than the target flux would support
+    it.
+  status: live
+  confidence: 0.05
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:07+00:00'
+- id: H4
+  klass: artifact_instrumental
+  statement: The detector or pipeline produced the brightening. Two independent ATLAS cameras and ZTF
+    tail data agree, which makes this unlikely.
+  supports: []
+  conflicts:
+  - C6
+  would_falsify: A detection in only one camera or pipeline would support it.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:08+00:00'
+- id: H5
+  klass: normal
+  statement: Nothing physical occurred, at the precision of the data. The event is far above the noise
+    (about 9 sigma), so this is unlikely.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: Any achromatic brightening above 4 sigma would count against it.
+  status: live
+  confidence: 0.03
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:09+00:00'
+- id: H6
+  klass: pulsation
+  statement: Intrinsic pulsation. No stable period beyond survey aliases, and the event is one-off, so
+    this is unlikely.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: A stable period that survives alias checks would support it.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:11+00:00'
+- id: H7
+  klass: rotation_spots
+  statement: Starspots carried around the star. No periodicity and no slow-rotation signal, and a single
+    0.8 mag event is far above spot amplitudes.
+  supports: []
+  conflicts:
+  - C7
+  would_falsify: A periodic signal consistent with a rotation period would support it.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:12+00:00'
+- id: H8
+  klass: dust_formation
+  statement: The star made its own dust. This would show a warm-dust IR excess, which is absent here,
+    so it is weak.
+  supports: []
+  conflicts:
+  - C5
+  would_falsify: A rising W1 excess with a reddening colour would support it.
+  status: live
+  confidence: 0.02
+  author: claude-haiku-5.5
+  at: '2026-11-11T00:08:13+00:00'
+predictions: []
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

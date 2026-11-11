@@ -29,6 +29,10 @@ def scrub_series(df: pd.DataFrame, t0: float, cutoff: float | None, pseudonyms: 
     if "camera" in df and (df.survey == "TESS").any():
         sectors = {s: f"S{chr(97 + i)}" for i, s in enumerate(sorted(df.camera.unique()))}
         df["camera"] = df["camera"].map(sectors)
+    if "camera" in df and (df.survey == "ZTF").any():
+        # ZTF's camera is field:readout-channel, which places the star on the sky to a few degrees.
+        fields = {s: f"F{chr(97 + i)}" for i, s in enumerate(sorted(df.camera.astype(str).unique()))}
+        df["camera"] = df["camera"].astype(str).map(fields)
     return df
 
 
@@ -102,15 +106,19 @@ def build(spec_path: Path) -> dict:
     for p in spec["packets"]:
         src = CaseStore.find(p["case"])
         info = build_packet(src, trial / "packets" / p["id"], p["id"], p.get("cutoff_mjd"), p.get("salt"))
-        answers["packets"][p["id"]] = {"case": p["case"], "truth": p["truth"], "t0_mjd": info["t0"],
+        # truth: null marks an open question: nobody knows the class, so only the forecasts are graded.
+        answers["packets"][p["id"]] = {"case": p["case"], "truth": p.get("truth"), "t0_mjd": info["t0"],
                                        "cutoff_mjd": p.get("cutoff_mjd"), "why": p.get("why", "")}
         if p.get("salt"):
             answers["packets"][p["id"]]["salt"] = {**p["salt"], "planted_mjd": info["planted_mjd"]}
+        if p.get("truth_source"):
+            answers["packets"][p["id"]]["truth_source"] = p["truth_source"]
         built.append({"packet": p["id"], "mode": "hindsight" if p.get("cutoff_mjd") else "blind"})
     (trial / "sealed").mkdir(exist_ok=True)
     (trial / "sealed" / "answers.yaml").write_text(yaml.safe_dump(answers, sort_keys=False))
     h = seal(trial)
     (trial / "manifest.json").write_text(json.dumps({
-        "trial": spec["name"], "description": spec.get("description", ""), "answers_sha256": h,
+        "trial": spec["name"], "title": spec.get("title", ""), "description": spec.get("description", ""),
+        "answers_sha256": h,
         "classes": CLASSES, "packets": built}, indent=2))
     return {"trial": spec["name"], "answers_sha256": h, "packets": built}

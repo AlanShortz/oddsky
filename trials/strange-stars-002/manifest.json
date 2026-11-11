@@ -1,0 +1,54 @@
+{
+  "trial": "strange-stars-002",
+  "title": "No famous stars this time",
+  "description": "Eight packets of real archive data with identity, coordinates and dates scrubbed, all from Oddsky's own casebook: obscure stars, several catalogued but none with a paper describing what it does. Four blind (name the explanation), with answers that are Oddsky's own conclusions rather than literature, including one ordinary star. Four hindsight (data cut at a date; forecast what happens next, graded against what the sky did). Three of the hindsight stars are open questions: nobody knows what they are, so their class is not scored, only their forecasts.\n",
+  "answers_sha256": "acd28697c351ed90cdd3617d4a48f1756a0ab279bbe5c56c2ce5c705164d1a86",
+  "classes": {
+    "dust_occultation": "Circumstellar dust passes in front of the star (debris, disk warp, clump).",
+    "dust_formation": "The star makes its own dust (R CrB-like declines, AGB/post-AGB episodes).",
+    "collision_debris": "Debris from a collision: IR excess first, optical extinction later.",
+    "eclipse_companion": "A companion or its disk eclipses the star (long-period, often dusty).",
+    "yso_dipper": "Young star with variable extinction from an inner disk.",
+    "pulsation": "Intrinsic pulsation (Miras, semiregulars, long-period variables).",
+    "eruptive": "Outbursts, flares, accretion events, novae.",
+    "rotation_spots": "Starspots carried around by rotation.",
+    "microlensing": "A foreground star or remnant passes almost exactly in front: achromatic, smooth, never repeats.",
+    "artifact_instrumental": "The spacecraft, detector or pipeline did it.",
+    "artifact_blend": "A neighbour did it: the signal is real but belongs to another star.",
+    "normal": "Nothing to explain at the precision of the data."
+  },
+  "packets": [
+    {
+      "packet": "T01",
+      "mode": "blind"
+    },
+    {
+      "packet": "T02",
+      "mode": "blind"
+    },
+    {
+      "packet": "T03",
+      "mode": "blind"
+    },
+    {
+      "packet": "T04",
+      "mode": "blind"
+    },
+    {
+      "packet": "H01",
+      "mode": "hindsight"
+    },
+    {
+      "packet": "H02",
+      "mode": "hindsight"
+    },
+    {
+      "packet": "H03",
+      "mode": "hindsight"
+    },
+    {
+      "packet": "H04",
+      "mode": "hindsight"
+    }
+  ]
+}

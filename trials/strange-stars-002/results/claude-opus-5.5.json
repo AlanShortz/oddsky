@@ -1,0 +1,542 @@
+{
+  "grader": "v2 (extremes = nightly medians)",
+  "trial": "strange-stars-002",
+  "agent": "claude-opus-5.5",
+  "agent_meta": {
+    "agent": "claude-opus-5.5",
+    "model_id": "claude-opus-5-5",
+    "harness": "Claude Code subagents (4 parallel, 2 packets each, one blind and one hindsight), Oddsky CLI in blind mode",
+    "run_at": "2026-11-10",
+    "prompt": "trials/strange-stars-002/INVESTIGATOR_PROMPT.md",
+    "tools": "oddsky 0.3.1, installed outside the repository",
+    "notes": "Honour-system blinding (CLI, not MCP); packets were copied outside the repository. Self-reported deviations: python one-liners, grep, head, tr and cut to trim tool output for reading, no analysis; some first calls failed at the shell and recorded nothing; T04 and H03 leave off classes it judged ruled out. Tool problem: lens_fit and eclipse_period reject a series given as a plain string; Opus found that a list works. Recognised (self-reported): none of the scored stars. It offered two guesses on open-question packets, tagged as guesses and not used as evidence: ASASSN-24fw for H03 and ASASSN-21qj for H04. Both are wrong.\n",
+    "recognised": {
+      "T01": false,
+      "T02": false,
+      "T03": false,
+      "T04": false,
+      "H01": false,
+      "H02": false,
+      "H03": false,
+      "H04": false
+    },
+    "wrong_guesses": {
+      "H03": "ASASSN-24fw",
+      "H04": "ASASSN-21qj"
+    }
+  },
+  "run_at": "2026-11-10",
+  "scored_at": "2026-11-11T00:30:08+00:00",
+  "answers_sha256": "acd28697c351ed90cdd3617d4a48f1756a0ab279bbe5c56c2ce5c705164d1a86",
+  "summary": {
+    "n": 5,
+    "n_packets": 8,
+    "n_open_questions": 3,
+    "top1": 1.0,
+    "top2": 1.0,
+    "brier": 0.062,
+    "mean_p_truth": 0.796,
+    "predictions": 15,
+    "predictions_resolved": 10,
+    "predictions_true": 8,
+    "prediction_brier": 0.228,
+    "n_unrecognised": 5,
+    "top1_unrecognised": 1.0,
+    "contamination_note": "self-reported: did the investigator think it recognised the star? Famous stars leak through blinding; scores on unrecognised packets are the cleaner measure.",
+    "baseline_note": "uniform guessing over 12 classes: top1 0.083, brier 0.917"
+  },
+  "cases": [
+    {
+      "case": "T01",
+      "truth": "microlensing",
+      "ranked": [
+        {
+          "klass": "microlensing",
+          "p": 0.86
+        },
+        {
+          "klass": "eruptive",
+          "p": 0.06
+        },
+        {
+          "klass": "artifact_instrumental",
+          "p": 0.03
+        },
+        {
+          "klass": "artifact_blend",
+          "p": 0.03
+        },
+        {
+          "klass": "normal",
+          "p": 0.02
+        }
+      ],
+      "top1": true,
+      "top2": true,
+      "brier": 0.025,
+      "p_truth": 0.86,
+      "n_claims": 6,
+      "claims_by_tag": {
+        "observed": 1,
+        "computed": 3,
+        "inferred": 2
+      },
+      "mode": "blind",
+      "real_case": "OS-0017",
+      "truth_source": "reproduced in a second survey; two independent reviews",
+      "recognised": "False"
+    },
+    {
+      "case": "T02",
+      "truth": "yso_dipper",
+      "ranked": [
+        {
+          "klass": "yso_dipper",
+          "p": 0.8
+        },
+        {
+          "klass": "dust_occultation",
+          "p": 0.1
+        },
+        {
+          "klass": "eclipse_companion",
+          "p": 0.03
+        },
+        {
+          "klass": "eruptive",
+          "p": 0.03
+        },
+        {
+          "klass": "rotation_spots",
+          "p": 0.02
+        }
+      ],
+      "top1": true,
+      "top2": true,
+      "brier": 0.053,
+      "p_truth": 0.8,
+      "n_claims": 6,
+      "claims_by_tag": {
+        "observed": 1,
+        "computed": 4,
+        "inferred": 1
+      },
+      "mode": "blind",
+      "real_case": "OS-0010",
+      "truth_source": "Oddsky's refereed conclusion (0.85)",
+      "recognised": "False"
+    },
+    {
+      "case": "T03",
+      "truth": "eclipse_companion",
+      "ranked": [
+        {
+          "klass": "eclipse_companion",
+          "p": 0.88
+        },
+        {
+          "klass": "artifact_blend",
+          "p": 0.04
+        },
+        {
+          "klass": "artifact_instrumental",
+          "p": 0.02
+        },
+        {
+          "klass": "dust_occultation",
+          "p": 0.02
+        },
+        {
+          "klass": "rotation_spots",
+          "p": 0.02
+        }
+      ],
+      "top1": true,
+      "top2": true,
+      "brier": 0.018,
+      "p_truth": 0.88,
+      "n_claims": 6,
+      "claims_by_tag": {
+        "observed": 2,
+        "computed": 3,
+        "inferred": 1
+      },
+      "mode": "blind",
+      "real_case": "OS-0012",
+      "truth_source": "Oddsky's refereed conclusion (0.97)",
+      "recognised": "False"
+    },
+    {
+      "case": "T04",
+      "truth": "normal",
+      "ranked": [
+        {
+          "klass": "normal",
+          "p": 0.82
+        },
+        {
+          "klass": "rotation_spots",
+          "p": 0.07
+        },
+        {
+          "klass": "artifact_instrumental",
+          "p": 0.05
+        },
+        {
+          "klass": "eclipse_companion",
+          "p": 0.02
+        },
+        {
+          "klass": "dust_occultation",
+          "p": 0.02
+        }
+      ],
+      "top1": true,
+      "top2": true,
+      "brier": 0.041,
+      "p_truth": 0.82,
+      "n_claims": 6,
+      "claims_by_tag": {
+        "observed": 1,
+        "computed": 3,
+        "inferred": 2
+      },
+      "mode": "blind",
+      "real_case": "OS-0008",
+      "truth_source": "control",
+      "recognised": "False"
+    },
+    {
+      "case": "H01",
+      "truth": "microlensing",
+      "ranked": [
+        {
+          "klass": "microlensing",
+          "p": 0.62
+        },
+        {
+          "klass": "eruptive",
+          "p": 0.14
+        },
+        {
+          "klass": "pulsation",
+          "p": 0.07
+        },
+        {
+          "klass": "artifact_blend",
+          "p": 0.05
+        },
+        {
+          "klass": "artifact_instrumental",
+          "p": 0.03
+        }
+      ],
+      "top1": true,
+      "top2": true,
+      "brier": 0.174,
+      "p_truth": 0.62,
+      "n_claims": 6,
+      "claims_by_tag": {
+        "observed": 1,
+        "computed": 3,
+        "inferred": 1,
+        "speculated": 1
+      },
+      "mode": "hindsight",
+      "real_case": "OS-0018",
+      "truth_source": "reproduced in a second survey; reviewed",
+      "recognised": "False"
+    },
+    {
+      "case": "H02",
+      "truth": null,
+      "ranked": [
+        {
+          "klass": "eclipse_companion",
+          "p": 0.76
+        },
+        {
+          "klass": "yso_dipper",
+          "p": 0.08
+        },
+        {
+          "klass": "dust_occultation",
+          "p": 0.07
+        },
+        {
+          "klass": "dust_formation",
+          "p": 0.02
+        },
+        {
+          "klass": "pulsation",
+          "p": 0.02
+        }
+      ],
+      "top1": null,
+      "top2": null,
+      "brier": null,
+      "p_truth": null,
+      "open_question": true,
+      "n_claims": 7,
+      "claims_by_tag": {
+        "observed": 1,
+        "computed": 5,
+        "inferred": 1
+      },
+      "mode": "hindsight",
+      "real_case": "OS-0015",
+      "truth_source": "open question",
+      "recognised": "False"
+    },
+    {
+      "case": "H03",
+      "truth": null,
+      "ranked": [
+        {
+          "klass": "eclipse_companion",
+          "p": 0.455
+        },
+        {
+          "klass": "dust_occultation",
+          "p": 0.333
+        },
+        {
+          "klass": "collision_debris",
+          "p": 0.081
+        },
+        {
+          "klass": "yso_dipper",
+          "p": 0.04
+        },
+        {
+          "klass": "dust_formation",
+          "p": 0.03
+        }
+      ],
+      "top1": null,
+      "top2": null,
+      "brier": null,
+      "p_truth": null,
+      "open_question": true,
+      "n_claims": 8,
+      "claims_by_tag": {
+        "observed": 3,
+        "computed": 2,
+        "inferred": 2,
+        "speculated": 1
+      },
+      "mode": "hindsight",
+      "real_case": "OS-0014",
+      "truth_source": "open question",
+      "recognised": "False"
+    },
+    {
+      "case": "H04",
+      "truth": null,
+      "ranked": [
+        {
+          "klass": "collision_debris",
+          "p": 0.55
+        },
+        {
+          "klass": "dust_occultation",
+          "p": 0.1
+        },
+        {
+          "klass": "artifact_blend",
+          "p": 0.08
+        },
+        {
+          "klass": "eruptive",
+          "p": 0.07
+        },
+        {
+          "klass": "yso_dipper",
+          "p": 0.05
+        }
+      ],
+      "top1": null,
+      "top2": null,
+      "brier": null,
+      "p_truth": null,
+      "open_question": true,
+      "n_claims": 7,
+      "claims_by_tag": {
+        "observed": 3,
+        "computed": 2,
+        "inferred": 2
+      },
+      "mode": "hindsight",
+      "real_case": "OS-0013",
+      "truth_source": "open question",
+      "recognised": "False"
+    }
+  ],
+  "predictions": [
+    {
+      "case": "H01",
+      "id": "P1",
+      "statement": "The star keeps brightening or stays near its cutoff level: median ATLAS o in days 3040-3110 is brighter than 16.45.",
+      "probability": 0.75,
+      "outcome": "true",
+      "observed": 15.509222592385083,
+      "n_points": 132,
+      "brier": 0.062,
+      "note": "median over window = 15.509 (132 points, 30 nights)"
+    },
+    {
+      "case": "H01",
+      "id": "P2",
+      "statement": "The event peaks well above the cutoff level: median ATLAS o in days 3040-3150 is brighter than 16.10.",
+      "probability": 0.35,
+      "outcome": "true",
+      "observed": 15.49757029068516,
+      "n_points": 181,
+      "brier": 0.423,
+      "note": "median over window = 15.498 (181 points, 40 nights)"
+    },
+    {
+      "case": "H01",
+      "id": "P3",
+      "statement": "Near 50/50: the star is still at least 0.1 mag brighter than its 2200-2800 baseline (16.96) in days 3250-3420, i.e. median ATLAS o < 16.85.",
+      "probability": 0.5,
+      "outcome": "false",
+      "observed": 16.887948303197092,
+      "n_points": 187,
+      "brier": 0.25,
+      "note": "median over window = 16.888 (187 points, 45 nights)"
+    },
+    {
+      "case": "H01",
+      "id": "P4",
+      "statement": "The brightening is transient (microlensing returns to baseline): median ATLAS o in days 3600-3800 is fainter than 16.85.",
+      "probability": 0.65,
+      "outcome": "true",
+      "observed": 16.995180403948677,
+      "n_points": 361,
+      "brier": 0.122,
+      "note": "median over window = 16.995 (361 points, 80 nights)"
+    },
+    {
+      "case": "H02",
+      "id": "P1",
+      "statement": "The next eclipse recurs near day 3113 (P~386-387 d): the faintest ZTF r point between days 3103 and 3123 is fainter than 15.5 mag.",
+      "probability": 0.75,
+      "outcome": "true",
+      "observed": 16.2739944,
+      "n_points": 8,
+      "brier": 0.062,
+      "note": "faintest over window = 16.274 (8 points, 8 nights)"
+    },
+    {
+      "case": "H02",
+      "id": "P2",
+      "statement": "Out of eclipse the star stays near its quiet level: median ZTF r between days 2960 and 3090 is brighter than 14.85 mag.",
+      "probability": 0.85,
+      "outcome": "true",
+      "observed": 14.74428655,
+      "n_points": 32,
+      "brier": 0.023,
+      "note": "median over window = 14.744 (32 points, 30 nights)"
+    },
+    {
+      "case": "H02",
+      "id": "P3",
+      "statement": "Near-coin-flip on slow out-of-eclipse drift: median ZTF r between days 2960 and 3090 is brighter than 14.760 mag.",
+      "probability": 0.5,
+      "outcome": "true",
+      "observed": 14.74428655,
+      "n_points": 32,
+      "brier": 0.25,
+      "note": "median over window = 14.744 (32 points, 30 nights)"
+    },
+    {
+      "case": "H02",
+      "id": "P4",
+      "statement": "The eclipse after next (near day 3499) is seen by ATLAS: faintest ATLAS o point between days 3488 and 3510 is fainter than 15.2 mag (risky: near the end of the observing season).",
+      "probability": 0.4,
+      "outcome": "unresolvable",
+      "observed": null,
+      "n_points": 2,
+      "brier": null,
+      "note": "fewer than 3 points in the window"
+    },
+    {
+      "case": "H03",
+      "id": "P1",
+      "statement": "Still deep shortly after cutoff: ATLAS o median between days 1170 and 1250 is fainter than 16.0.",
+      "probability": 0.85,
+      "outcome": "false",
+      "observed": 13.283100802282716,
+      "n_points": 12,
+      "brier": 0.722,
+      "note": "median over window = 13.283 (12 points, 6 nights)"
+    },
+    {
+      "case": "H03",
+      "id": "P2",
+      "statement": "Near 50/50: the star is still dimmed by more than ~2.7 mag (ATLAS o median > 15.0) between days 1300 and 1400.",
+      "probability": 0.5,
+      "outcome": "unresolvable",
+      "observed": null,
+      "n_points": 2,
+      "brier": null,
+      "note": "fewer than 3 points in the window"
+    },
+    {
+      "case": "H03",
+      "id": "P3",
+      "statement": "Recovery within ~2 years of onset: ATLAS o median between days 1600 and 1800 is brighter than 13.0.",
+      "probability": 0.6,
+      "outcome": "true",
+      "observed": 12.307552291576183,
+      "n_points": 9,
+      "brier": 0.16,
+      "note": "median over window = 12.308 (9 points, 3 nights)"
+    },
+    {
+      "case": "H04",
+      "id": "P1",
+      "statement": "The W2 IR excess persists into the next NEOWISE visit: median NEOWISE:W2 between day 1730 and 1900 is brighter than 11.15 (baseline 11.26).",
+      "probability": 0.7,
+      "outcome": "unresolvable",
+      "observed": null,
+      "n_points": 1,
+      "brier": null,
+      "note": "fewer than 3 points in the window"
+    },
+    {
+      "case": "H04",
+      "id": "P2",
+      "statement": "The excess is long-lived: median NEOWISE:W2 over days 1730-3300 is brighter than 11.15.",
+      "probability": 0.55,
+      "outcome": "true",
+      "observed": 10.905,
+      "n_points": 9,
+      "brier": 0.202,
+      "note": "median over window = 10.905 (9 points, 9 nights)"
+    },
+    {
+      "case": "H04",
+      "id": "P3",
+      "statement": "Optical dimming follows the IR rise: median ASAS-SN:V between day 1730 and 2800 is fainter than 13.47 (pre-event median 13.416). Near 50/50.",
+      "probability": 0.45,
+      "outcome": "unresolvable",
+      "observed": null,
+      "n_points": 0,
+      "brier": null,
+      "note": "fewer than 3 points in the window"
+    },
+    {
+      "case": "H04",
+      "id": "P4",
+      "statement": "A deep optical dip occurs: the faintest ASAS-SN:V point between day 1730 and 3000 is fainter than 13.9 (about 0.5 mag below normal).",
+      "probability": 0.4,
+      "outcome": "unresolvable",
+      "observed": null,
+      "n_points": 0,
+      "brier": null,
+      "note": "fewer than 3 points in the window"
+    }
+  ]
+}

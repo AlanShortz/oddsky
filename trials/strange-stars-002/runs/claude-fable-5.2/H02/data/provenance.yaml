@@ -1,0 +1,66 @@
+gaia:
+  archive: ESA Gaia TAP gaiadr3.gaia_source
+  rows_raw: 31
+  rows_kept: 31
+  cuts: []
+  status: ok
+gaia_epoch:
+  archive: ESA Gaia DR3 epoch photometry (datalink)
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  status: empty
+neowise:
+  archive: IRSA Gator neowiser_p1bs_psd
+  rows_raw: 289
+  rows_kept: 21
+  cuts:
+  - 'W1: qual_frame > 0 removed 6'
+  - 'W1: saa_sep > 0 removed 47'
+  - 'W1: moon_masked == ''00'' removed 25'
+  - 'W1: cc_flags[0] == ''0'' removed 194'
+  - 'W2: qual_frame > 0 removed 6'
+  - 'W2: saa_sep > 0 removed 47'
+  - 'W2: moon_masked == ''00'' removed 25'
+  - 'W2: cc_flags[1] == ''0'' removed 192'
+  status: ok
+neowise_exp:
+  archive: IRSA Gator neowiser_p1bs_psd (single exposures)
+  rows_raw: 289
+  rows_kept: 36
+  cuts:
+  - 'W1: qual_frame > 0 removed 6'
+  - 'W1: saa_sep > 0 removed 47'
+  - 'W1: moon_masked == ''00'' removed 25'
+  - 'W1: cc_flags[0] == ''0'' removed 194'
+  - 'W2: qual_frame > 0 removed 6'
+  - 'W2: saa_sep > 0 removed 47'
+  - 'W2: moon_masked == ''00'' removed 25'
+  - 'W2: cc_flags[1] == ''0'' removed 192'
+  status: ok
+aavso:
+  archive: AAVSO International Database (VSX api.delim)
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  status: ok
+ztf:
+  archive: IRSA ZTF light curve service
+  rows_raw: 934
+  rows_kept: 932
+  cuts: []
+  status: ok
+tess:
+  archive: MAST TESS light curves via lightkurve
+  rows_raw: 0
+  rows_kept: 0
+  cuts: []
+  status: empty
+atlas:
+  archive: ATLAS forced photometry (fallingstar-data.com), reduced images
+  rows_raw: 4918
+  rows_kept: 613
+  cuts:
+  - 'ATLAS: err flag / chi2 per dof > 10 / unknown filter / brighter than saturation flagged 4272'
+  - 'ATLAS: SNR < 3 kept as 5-sigma upper limits 32'
+  status: ok

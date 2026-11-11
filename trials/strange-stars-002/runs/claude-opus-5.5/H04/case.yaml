@@ -1,0 +1,267 @@
+id: H04
+title: Trial star H04
+hook: ''
+status: observation
+summary: 'Identity, coordinates and calendar dates are hidden; times are days since the first observation.
+  Observers are pseudonymous. Gaia DR3 context is the 2014-2017 mean. HINDSIGHT: data stop at day 1730.
+  Register predictions (register_prediction) about later times; they will be graded against what actually
+  happened.'
+claims:
+- id: C1
+  text: NEOWISE W1 and W2 are flat (W1 11.18-11.20, W2 11.24-11.28) for nine visits from day 0 to day
+    1458, then at day 1621 jump brighter by 0.20 mag (W1) and 0.44 mag (W2).
+  tag: observed
+  calls:
+  - K3
+  - K4
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:40+00:00'
+- id: C2
+  text: The day-1621 brightening is present in every single exposure of the visit (19 W1, 18 W2 exposures
+    over ~9 days, W2 10.79-10.91 vs 11.18-11.32 one visit earlier), so it is not a single bad frame or
+    passing asteroid.
+  tag: observed
+  calls:
+  - K6
+  - K7
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:42+00:00'
+- id: C3
+  text: 'The IR brightening is red: W1-W2 goes from -0.07 (photospheric, stable for 8 visits) to +0.17;
+    the excess is 21% of the photosphere in W1 and 50% in W2, with a two-band colour temperature ~1000
+    K, i.e. warm dust appearing near the star.'
+  tag: computed
+  calls:
+  - K5
+  - K8
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:43+00:00'
+- id: C4
+  text: 'Optical V shows no dimming up to day 1658 (last ASAS-SN point): no excursions at 3 sigma; the
+    last 180 days are if anything 0.05 mag brighter than before (5 sigma, possibly calibration/seasonal).
+    Gaia G was flat to 0.01 mag (days 179-1158).'
+  tag: computed
+  calls:
+  - K9
+  - K10
+  - K11
+  - K14
+  - K1
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:44+00:00'
+- id: C5
+  text: Host is a main-sequence K dwarf (Teff ~4770 K, M_G 6.55 at 248 pc, RUWE 1.02). No Gaia source
+    within 6.1 arcsec; nearest are G=18.5 at 7.0 arcsec (1% flux) and G=16.4 at 7.9 arcsec (7%), partly
+    inside the WISE PSF.
+  tag: observed
+  calls:
+  - K1
+  - K13
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:45+00:00'
+- id: C6
+  text: A sudden ~1000 K IR excess on a previously photospheric main-sequence K dwarf, with no optical
+    change yet, matches the pattern expected for a fresh collisional debris cloud (IR first, possible
+    optical extinction later as the cloud transits); it is not what a YSO, AGB or pulsating star does
+    from a long flat photospheric state.
+  tag: inferred
+  calls:
+  - K5
+  - K8
+  - K11
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:46+00:00'
+- id: C7
+  text: The ASAS-SN vs Gaia V offset flagged by the Skeptic (-0.44 mag) is more plausibly a photometric-system/blend
+    offset (three neighbours inside the 16 arcsec ASAS-SN beam, ~20% of G flux) than a real event, since
+    ASAS-SN itself is flat for 4 years.
+  tag: inferred
+  calls:
+  - K2
+  - K9
+  author: claude-opus-5.5
+  at: '2026-11-11T00:09:47+00:00'
+hypotheses:
+- id: H1
+  klass: collision_debris
+  statement: A planetary-scale collision produced a warm (~1000 K) dust cloud around the K dwarf, seen
+    first as an IR excess at day 1621; optical dimming may follow when the debris crosses the line of
+    sight.
+  supports:
+  - C1
+  - C2
+  - C3
+  - C4
+  - C5
+  - C6
+  conflicts: []
+  would_falsify: IR excess vanishing at the very next NEOWISE visit with no decay; the excess traced to
+    the 7.9 arcsec neighbour; or a periodic/recurrent IR pattern typical of a YSO.
+  status: live
+  confidence: 0.55
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:02+00:00'
+- id: H2
+  klass: dust_occultation
+  statement: Circumstellar dust structure (disk warp/clump) seen in IR emission before or during an optical
+    occultation; optical dips to come.
+  supports:
+  - C3
+  conflicts:
+  - C4
+  would_falsify: No optical dimming over several years after the IR rise.
+  status: live
+  confidence: 0.1
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:04+00:00'
+- id: H3
+  klass: artifact_blend
+  statement: The IR brightening belongs to a neighbour at 7-8 arcsec (e.g. a variable/YSO/AGN) leaking
+    into the WISE PSF.
+  supports:
+  - C5
+  conflicts:
+  - C2
+  would_falsify: The neighbour (7% of G flux) would need to brighten by a factor of several in W2; resolved
+    imaging showing the excess centred on the target.
+  status: live
+  confidence: 0.08
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:05+00:00'
+- id: H4
+  klass: eruptive
+  statement: An outburst (accretion or giant flare) heating circumstellar material.
+  supports: []
+  conflicts:
+  - C4
+  would_falsify: No optical brightening accompanies it; persistence over many months.
+  status: live
+  confidence: 0.07
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:06+00:00'
+- id: H5
+  klass: yso_dipper
+  statement: A young K star with an inner disk whose IR emission varies.
+  supports: []
+  conflicts:
+  - C1
+  would_falsify: Eight photospheric W1-W2 visits argue against a pre-existing disk; youth indicators absent.
+  status: live
+  confidence: 0.05
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:08+00:00'
+- id: H6
+  klass: dust_formation
+  statement: The star forms its own dust episodically.
+  supports: []
+  conflicts:
+  - C5
+  would_falsify: Main-sequence K dwarfs are not dust formers; would need an evolved star.
+  status: live
+  confidence: 0.04
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:09+00:00'
+- id: H7
+  klass: artifact_instrumental
+  statement: Bad photometry in the last NEOWISE visit.
+  supports: []
+  conflicts:
+  - C2
+  would_falsify: Consistent across all exposures over 9 days; later visits staying bright would rule it
+    out.
+  status: live
+  confidence: 0.04
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:10+00:00'
+- id: H8
+  klass: eclipse_companion
+  statement: A long-period companion with a dusty disk; IR from the disk.
+  supports: []
+  conflicts: []
+  would_falsify: No optical eclipse.
+  status: live
+  confidence: 0.03
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:11+00:00'
+- id: H9
+  klass: normal
+  statement: Nothing to explain.
+  supports: []
+  conflicts:
+  - C1
+  - C2
+  would_falsify: The IR jump is real.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:12+00:00'
+- id: H10
+  klass: microlensing
+  statement: Lensing magnification.
+  supports: []
+  conflicts:
+  - C3
+  would_falsify: The brightening is strongly chromatic and absent in optical, unlike lensing.
+  status: live
+  confidence: 0.02
+  author: claude-opus-5.5
+  at: '2026-11-11T00:10:13+00:00'
+predictions:
+- id: P1
+  hypothesis: H1
+  statement: 'The W2 IR excess persists into the next NEOWISE visit: median NEOWISE:W2 between day 1730
+    and 1900 is brighter than 11.15 (baseline 11.26).'
+  check:
+    series: NEOWISE:W2
+    start: 1730.0
+    end: 1900.0
+    statistic: median
+    op: <
+    value: 11.15
+  probability: 0.7
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:10:24+00:00'
+- id: P2
+  hypothesis: H1
+  statement: 'The excess is long-lived: median NEOWISE:W2 over days 1730-3300 is brighter than 11.15.'
+  check:
+    series: NEOWISE:W2
+    start: 1730.0
+    end: 3300.0
+    statistic: median
+    op: <
+    value: 11.15
+  probability: 0.55
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:10:25+00:00'
+- id: P3
+  hypothesis: H1
+  statement: 'Optical dimming follows the IR rise: median ASAS-SN:V between day 1730 and 2800 is fainter
+    than 13.47 (pre-event median 13.416). Near 50/50.'
+  check:
+    series: ASAS-SN:V
+    start: 1730.0
+    end: 2800.0
+    statistic: median
+    op: '>'
+    value: 13.47
+  probability: 0.45
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:10:26+00:00'
+- id: P4
+  hypothesis: H1
+  statement: 'A deep optical dip occurs: the faintest ASAS-SN:V point between day 1730 and 3000 is fainter
+    than 13.9 (about 0.5 mag below normal).'
+  check:
+    series: ASAS-SN:V
+    start: 1730.0
+    end: 3000.0
+    statistic: faintest
+    op: '>'
+    value: 13.9
+  probability: 0.4
+  author: claude-opus-5.5
+  registered_at: '2026-11-11T00:10:32+00:00'
+literature: []
+featured: false
+created_at: '2026-11-11T00:04:25+00:00'

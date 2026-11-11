@@ -57,3 +57,31 @@ def test_salted_packet_plants_dips_on_momentum_dumps(dusty_case, tmp_path):
     tess = CaseStore(tmp_path / "pk").series("tess")
     assert tess.mag.max() > 0.009
     assert "desat_mjd" in str(CaseStore(tmp_path / "pk").context())
+
+
+def test_open_question_packet_is_forecast_only(dusty_case, tmp_path):
+    """truth: null marks a star nobody can classify yet: the ranking is recorded, only forecasts are graded."""
+    import shutil
+
+    trial = tmp_path / "trials" / "t"
+    trial.mkdir(parents=True)
+    (trial / "spec.yaml").write_text(yaml.safe_dump({"name": "t", "packets": [
+        {"id": "H01", "case": "OS-0001", "truth": None, "cutoff_mjd": 59450, "truth_source": "open question"},
+        {"id": "T01", "case": "OS-0001", "truth": "dust_occultation"}]}))
+    build(trial / "spec.yaml")
+    t0 = yaml.safe_load((trial / "sealed" / "answers.yaml").read_text())["packets"]["H01"]["t0_mjd"]
+    for pid in ("H01", "T01"):
+        run = trial / "runs" / "bot" / pid
+        shutil.copytree(trial / "packets" / pid, run)
+        tb = Toolbox(mode="blind", blind_root=run, author="bot")
+        tb.add_hypothesis(".", "pulsation", "pulses", confidence=0.9)
+    Toolbox(mode="blind", blind_root=trial / "runs" / "bot" / "H01", author="bot").register_prediction(
+        ".", "the dip deepens", 0.9, "AAVSO:V", 59520 - t0, 59540 - t0, ">", 12.3)
+    (trial / "revealed").mkdir()
+    shutil.copy(trial / "sealed" / "answers.yaml", trial / "revealed" / "answers.yaml")
+    card = score(trial, "bot")
+    h01 = next(c for c in card["cases"] if c["case"] == "H01")
+    assert h01["open_question"] and h01["top1"] is None and h01["brier"] is None
+    # the open question does not count for or against the class score; its forecast still does
+    assert card["summary"]["n"] == 1 and card["summary"]["n_open_questions"] == 1 and card["summary"]["top1"] == 0.0
+    assert card["predictions"][0]["outcome"] == "true"
