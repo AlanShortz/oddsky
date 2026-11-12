@@ -45,8 +45,11 @@ export function renderCase(payload, { home = false, index = null } = {}) {
   );
 
   // ---- figure ----
-  const fig = createFigure(payload, { annotations, caseId: id });
-  const table = figureTable(payload);
+  // A case with no survey light curves (a transient in another galaxy, say) shows its own figures here.
+  const images = arr(payload.figures);
+  const imageOnly = images.length > 0 && !Object.keys(payload.series ?? {}).length;
+  const fig = imageOnly ? null : createFigure(payload, { annotations, caseId: id });
+  const table = imageOnly ? null : figureTable(payload);
   const csvBtn = h('button', { type: 'button', class: 'linkish' }, 'Download all points (CSV)');
   csvBtn.addEventListener('click', () => {
     const blob = new Blob([seriesCsv(payload)], { type: 'text/csv' });
@@ -55,8 +58,7 @@ export function renderCase(payload, { home = false, index = null } = {}) {
     setTimeout(() => URL.revokeObjectURL(a.href), 2000);
   });
   const figSection = h('section', { class: 'case-fig', id: 'figure', 'aria-label': 'Light curves' },
-    fig,
-    h('figcaption', { class: 'fig-caption' }, caption(payload, credits, annotations)),
+    ...(imageOnly ? imageFigures(id, images) : [fig, h('figcaption', { class: 'fig-caption' }, caption(payload, credits, annotations))]),
     table ? h('details', { class: 'fig-table' }, h('summary', null, 'Data as a table'), table, h('p', null, csvBtn)) : null,
     facts(payload),
   );
@@ -82,6 +84,16 @@ export function renderCase(payload, { home = false, index = null } = {}) {
   );
 
   return h('article', { class: 'case' }, h('div', { class: 'case-grid' }, head, figSection, rail, body));
+}
+
+// ---- figures that are images (cases/<id>/figures/index.yaml) ---------------------------------
+function imageFigures(id, images) {
+  return images.map((f, i) => {
+    const src = new URL(`../data/figures/${id}/${encodeURIComponent(f.file)}`, import.meta.url).href;
+    return h('figure', { class: 'fig fig-image' },
+      h('a', { href: src, title: 'Open the full-size image' }, h('img', { src, alt: f.alt || f.caption || '', loading: i ? 'lazy' : 'eager' })),
+      h('figcaption', { class: 'fig-caption' }, h('span', { class: 'fig-num' }, `Figure ${i + 1}.`), ' ', inline(f.caption || '')));
+  });
 }
 
 // ---- figure caption -------------------------------------------------------------------------
@@ -177,7 +189,7 @@ function describeStar(g) {
 
 function toc(c, payload) {
   const items = [
-    ['figure', 'Light curves'],
+    ['figure', arr(payload.figures).length && !Object.keys(payload.series ?? {}).length ? 'Figures' : 'Light curves'],
     ['claims', 'Claims', arr(c.claims).length],
     ['hypotheses', 'Hypotheses', arr(c.hypotheses).length],
     ['predictions', 'Predictions', arr(c.predictions).length],

@@ -1,0 +1,10 @@
+# Images shown on the case page, in this order (oddsky export-web). Unlisted files are not published.
+- file: summary.png
+  caption: "Every measurement of the source on one time axis, as flux density on a logarithmic scale. Downward triangles are upper limits; the other symbols are detections. WISE difference photometry shows nothing before the flare of 2020 November; Hubble's faint optical counterpart in 2021 February and JWST's dust source in 2024 lie far below the WISE peak, and ATLAS saw nothing in the optical around the event."
+  alt: "Flux density against time for WISE, ATLAS, Hubble, JWST and Spitzer measurements of the NGC 3239 transient."
+- file: jwst_stamps.png
+  caption: "The same 4-arcsecond patch of NGC 3239 in Hubble (2021 February) and JWST (2024 April and May) images. The orange circle marks the Hubble source: faint in 2021, absent at 1.5 µm in 2024, and bright at 3.0 and 3.35 µm, as cooling dust would be."
+  alt: "Seven image cutouts: two Hubble filters from 2021 and five JWST images from 2024, centred on the transient."
+- file: hst_stamps.png
+  caption: "Hubble images of the position (top two rows) and differences between epochs (bottom two rows). The green cross is the WISE position, with 0.3 and 0.6 arcsecond circles; the orange circle is the point source present in 2021 and gone in 2022 and 2025."
+  alt: "Grid of Hubble image cutouts and difference images at the position of the transient."

@@ -258,6 +258,10 @@ button { font: inherit; color: inherit; }
 
 /* ---- figure --------------------------------------------------------------------------------- */
 .fig { margin: 0; }
+.fig-image + .fig-image { margin-top: 28px; }
+.fig-image a { display: block; background: #fff; border: 1px solid var(--rule); border-radius: 6px; padding: 10px; }
+.fig-image img { display: block; width: 100%; height: auto; }
+.is-card .fig-image + .fig-image { display: none; }
 .fig-controls { display: flex; flex-direction: column; gap: 8px; margin-bottom: 0; }
 .fig-controls-below { margin-top: 6px; }
 .fig-legend { display: flex; flex-wrap: wrap; gap: 2px 4px; }
