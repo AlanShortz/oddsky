@@ -40,6 +40,10 @@ oddsky = "oddsky.cli:app"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+# The source distribution is the package, not the repository (cases, hunts and site are 200 MB and live on GitHub).
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/README.md", "/LICENSE", "/pyproject.toml"]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/oddsky"]
 
