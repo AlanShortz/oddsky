@@ -1,0 +1,4 @@
+# Images shown on the case page, in this order (oddsky export-web). Unlisted files are not published.
+- file: spitzer_MESSIER081_1507p696_6.png
+  caption: "WISE (blue) and Spitzer/IRAC (red) brightness changes at 3.4/3.6 µm (top) and 4.6/4.5 µm (bottom). The curves are the recurrence detector's model; with only two eruptions seen, a period is not established. Centre: the Spitzer median image and the bright-minus-faint difference, in which the variable is a point source. Right: how much the fit improves against trial period. This is the hunt's working diagnostic plot, shown as produced."
+  alt: "WISE and Spitzer light curves showing two eruptions, with image cutouts and a period scan."

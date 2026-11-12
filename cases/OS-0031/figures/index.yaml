@@ -1,0 +1,7 @@
+# Images shown on the case page, in this order (oddsky export-web). Unlisted files are not published.
+- file: spitzer_ngc2403.png
+  caption: "Spitzer/IRAC brightness at the source's position, 2004 to 2019, relative to its median (3.6 µm above, 4.5 µm below), with outbursts in 2007, 2012 and 2018. Right: the median image, the difference between bright and faint epochs, and the peak epoch; the variable is a point source at the WISE position."
+  alt: "Spitzer light curves in two bands with image cutouts of the source in NGC 2403."
+- file: lead_NGC2403_obs50.png
+  caption: "WISE difference photometry, 2010 to 2024, with the 2017-18 and 2023 outbursts (W1 blue, W2 red; filled and open symbols are the two visit seasons each year). This is the hunt's working diagnostic plot, shown as produced."
+  alt: "WISE difference light curves in two bands with reference and difference image cutouts."

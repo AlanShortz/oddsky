@@ -1,0 +1,4 @@
+# Images shown on the case page, in this order (oddsky export-web). Unlisted files are not published.
+- file: spitzer_NGC4945_1974m500_13.png
+  caption: "WISE (blue) and Spitzer/IRAC (red) brightness changes at 3.4/3.6 µm (top) and 4.6/4.5 µm (bottom). The curves are the fitted recurring outburst, with a period of 5.4 years; vertical lines mark the fitted outburst times. Centre: the Spitzer median image and the bright-minus-faint difference, in which the variable is a point source. Right: how much the fit improves against trial period. This is the hunt's working diagnostic plot, shown as produced."
+  alt: "WISE and Spitzer light curves with a repeating sawtooth model, image cutouts and a period scan."

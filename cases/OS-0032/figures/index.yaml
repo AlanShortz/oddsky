@@ -1,0 +1,4 @@
+# Images shown on the case page, in this order (oddsky export-web). Unlisted files are not published.
+- file: lead_NGC55_fsn7.png
+  caption: "WISE difference photometry of the source, 2010 to 2024 (W1 blue, W2 red; filled and open symbols are the two visit seasons each year): a steady fade in both bands. Right: the reference image and difference images, in which the source is a negative (blue) point. This is the hunt's working diagnostic plot, shown as produced."
+  alt: "WISE difference light curves in two bands, both declining, with reference and difference image cutouts."

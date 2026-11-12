@@ -128,3 +128,26 @@ def test_fetch_does_not_overwrite_claims_recorded_during_a_long_fetch(dusty_case
     monkeypatch.setattr(fetch_mod.neowise, "lightcurve", slow_lightcurve)
     fetch_mod.fetch(store, ("neowise",))
     assert [c.id for c in store.load().claims] == ["C1"]
+
+
+def test_listed_case_figures_are_exported(dusty_case):
+    import json
+
+    import pytest
+
+    from oddsky.export import export_web
+
+    figs = dusty_case.path / "figures"
+    figs.mkdir(exist_ok=True)
+    (figs / "shown.png").write_bytes(b"png")
+    (figs / "working.png").write_bytes(b"png")
+    (figs / "index.yaml").write_text("- file: shown.png\n  caption: What it shows.\n")
+    out = dusty_case.path.parent.parent / "web" / "data"
+    export_web(out)
+    payload = json.loads((out / "cases" / "OS-0001.json").read_text())
+    assert payload["figures"] == [{"file": "shown.png", "caption": "What it shows.", "alt": ""}]
+    assert (out / "figures" / "OS-0001" / "shown.png").read_bytes() == b"png"
+    assert not (out / "figures" / "OS-0001" / "working.png").exists()
+    (figs / "index.yaml").write_text("- file: gone.png\n")
+    with pytest.raises(FileNotFoundError):
+        export_web(out)

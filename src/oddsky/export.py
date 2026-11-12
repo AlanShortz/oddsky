@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 import json
+import shutil
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
+import yaml
 
 from .analysis.stats import daily_bins
 from .case.store import CaseStore, _jsonable
@@ -70,6 +72,21 @@ def series_payload(df: pd.DataFrame) -> dict[str, dict]:
     return out
 
 
+def case_figures(store: CaseStore) -> list[dict]:
+    """Images listed in cases/<id>/figures/index.yaml (file, caption, alt), in that order. Only listed files are
+    published: a case whose evidence is not a survey light curve (a transient in another galaxy, say) shows these
+    where the interactive figure would be."""
+    idx = store.path / "figures" / "index.yaml"
+    if not idx.exists():
+        return []
+    out = []
+    for item in yaml.safe_load(idx.read_text()) or []:
+        if not (store.path / "figures" / item["file"]).is_file():
+            raise FileNotFoundError(f"{idx}: {item['file']} is listed but missing")
+        out.append({"file": item["file"], "caption": item.get("caption", ""), "alt": item.get("alt", "")})
+    return out
+
+
 def case_payload(store: CaseStore) -> dict:
     case = store.load()
     series = {}
@@ -93,6 +110,7 @@ def case_payload(store: CaseStore) -> dict:
     return {
         "case": case.model_dump(mode="json", exclude_none=True),
         "series": series,
+        "figures": case_figures(store),
         "context": ctx,
         "provenance": store.provenance(),
         "skeptic": json.loads(skeptic.read_text()) if skeptic.exists() else None,
@@ -113,6 +131,12 @@ def export_web(out: Path | None = None) -> list[str]:
         payload = case_payload(store)
         payload = _clean(json.loads(json.dumps(payload, default=_jsonable)))
         (out / "cases" / f"{d.name}.json").write_text(json.dumps(payload, allow_nan=False, separators=(",", ":")))
+        fig_out = out / "figures" / d.name
+        if fig_out.exists():
+            shutil.rmtree(fig_out)
+        for f in payload["figures"]:
+            fig_out.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(d / "figures" / f["file"], fig_out / f["file"])
         c = payload["case"]
         index.append({
             "id": c["id"], "title": c["title"], "hook": c.get("hook", ""), "status": c["status"],
