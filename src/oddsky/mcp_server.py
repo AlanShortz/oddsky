@@ -1,7 +1,7 @@
 """Oddsky as an MCP server. Your agent is the investigator; Oddsky is the observatory.
 
-    claude mcp add oddsky -- uvx oddsky mcp
-    claude mcp add oddsky-trial -- uvx oddsky mcp --blind trials/strange-stars-001/packets/T03
+    claude mcp add oddsky -- uvx --from git+https://github.com/AlanShortz/oddsky oddsky mcp
+    claude mcp add oddsky-trial -- uvx --from git+https://github.com/AlanShortz/oddsky oddsky mcp --blind trials/strange-stars-001/packets/T03
 
 Never print to stdout here: stdout is the protocol stream. Logs go to stderr.
 """

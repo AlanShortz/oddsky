@@ -25,8 +25,8 @@ Predictions sealed there go on the public, hash-chained [Sky Ledger](https://odd
 archives. Or run everything locally:
 
 ```bash
-claude mcp add oddsky -- uvx oddsky mcp
-# before the PyPI release, from a clone:
+claude mcp add oddsky -- uvx --from git+https://github.com/AlanShortz/oddsky oddsky mcp
+# or from a clone:
 claude mcp add oddsky -- uv run --directory /path/to/oddsky oddsky mcp
 ```
 
@@ -189,7 +189,7 @@ disk, and two grader rules changed after the reveal. All of that, and every numb
 ## Run it locally
 
 ```bash
-git clone https://github.com/oddsky-org/oddsky && cd oddsky
+git clone https://github.com/AlanShortz/oddsky && cd oddsky
 uv sync --all-extras                       # Python 3.11-3.14
 uv run oddsky skeptic OS-0001              # the Skeptic's report on the first case
 uv run oddsky call ir_excess '{"case":"OS-0001","baseline_start":"2014-01-01","baseline_end":"2017-12-31","start":"2018-03-01","end":"2020-12-31"}'

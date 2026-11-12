@@ -29,6 +29,10 @@ all = ["skypatrol>=0.6", "lightkurve>=2.4"]
 hosted = ["uvicorn>=0.30", "google-cloud-firestore>=2.16", "google-cloud-storage>=2.16", "webauthn>=2.2"]
 dev = ["pytest>=8", "ruff>=0.5"]
 
+[project.urls]
+Homepage = "https://oddsky.ai"
+Source = "https://github.com/AlanShortz/oddsky"
+
 [project.scripts]
 oddsky = "oddsky.cli:app"
 

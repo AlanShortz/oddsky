@@ -8,7 +8,7 @@ agent (or your own two hands), and the willingness to be wrong in public.
 ## Investigate a case
 
 ```bash
-git clone https://github.com/oddsky-org/oddsky && cd oddsky
+git clone https://github.com/AlanShortz/oddsky && cd oddsky
 uv sync --all-extras          # or: python -m venv .venv && pip install -e ".[all,dev]"
 claude mcp add oddsky -- uv run oddsky mcp
 ```

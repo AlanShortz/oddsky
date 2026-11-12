@@ -5,7 +5,7 @@
 
 **Title:** Show HN: Oddsky – an open observatory your AI agent can use to investigate strange stars
 
-**URL:** https://oddsky.org (static site) · repo: github.com/oddsky-org/oddsky
+**URL:** https://oddsky.ai · repo: github.com/AlanShortz/oddsky
 
 **Text:**
 

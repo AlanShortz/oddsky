@@ -53,11 +53,9 @@ export function statusPill(status) {
 }
 
 // ---- "Investigate this with your agent" -------------------------------------------------------
-export const MCP_CMD = 'claude mcp add oddsky -- uvx oddsky mcp';
-export const REPO = 'https://github.com/oddsky-org/oddsky';
-// The repository is private until the first public release. Flip this (and REPO_PUBLIC in site/build.py,
-// and the footer line in index.html) when it opens, and every "on GitHub" link comes back.
-export const REPO_PUBLIC = false;
+export const MCP_CMD = 'claude mcp add oddsky -- uvx --from git+https://github.com/AlanShortz/oddsky oddsky mcp';
+export const REPO = 'https://github.com/AlanShortz/oddsky';
+export const REPO_PUBLIC = true;
 export const HOSTED_CMD = 'claude mcp add --transport http oddsky https://oddsky.ai/mcp';
 export const starterPrompt = (id) => `Open Oddsky case ${id}. Run the skeptic first, then try to break the leading hypothesis. Tag every claim honestly.`;
 

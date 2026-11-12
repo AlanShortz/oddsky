@@ -35,9 +35,9 @@ ROOT = Path(__file__).resolve().parent.parent
 WEB = ROOT / "web"
 DIST = ROOT / "dist"
 SITE_URL = os.environ.get("ODDSKY_SITE_URL", "https://oddsky.ai").rstrip("/")
-REPO = "https://github.com/oddsky-org/oddsky"
-REPO_PUBLIC = False  # the repository is private until the first public release; GitHub links are left out until then
-MCP_CMD = "claude mcp add oddsky -- uvx oddsky mcp"
+REPO = "https://github.com/AlanShortz/oddsky"
+REPO_PUBLIC = True
+MCP_CMD = "claude mcp add oddsky -- uvx --from git+https://github.com/AlanShortz/oddsky oddsky mcp"
 TAGLINE = "The universe is an open question."
 DEFAULT_DESC = ("An open discovery platform for the time-domain sky: discovery engines that sweep whole surveys, "
                 "findings anyone can check (every claim tagged, every number with a receipt), and predictions sealed "
